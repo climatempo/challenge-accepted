@@ -10,7 +10,7 @@ ___
 ## Processo de recrutamento
 
 Olá desenvolvedor, pronto para participar do nosso
-processo de recrutamento para vaga de Full-stack Junior (CLT)?
+processo de recrutamento para vaga de Full-stack (CLT)?
 
 ### Requisitos
 

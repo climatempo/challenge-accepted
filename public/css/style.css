@@ -1,0 +1,62 @@
+/* Style for application */
+
+body {
+	background-color: #d8d8d8;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+p {
+	margin: 0;
+}
+
+input {
+	font-size: 2.5ch !important;
+	padding: 2% !important;
+	color: #c9c9c9 !important;
+	border-radius: 0px !important;
+	border: 0 !important;
+}
+
+p.bg-danger{
+	font-size: 2ch;
+	padding: 2%;
+}
+
+.mg-sm {
+	margin: 4%;
+}
+
+.pd-sm {
+	padding: 10px;
+}
+
+.bg-peace {
+	background-color: white;
+	color: #000;
+}
+
+.bg-icon {
+	background-image: url('/images/icons/search.png');
+	background-repeat: no-repeat;
+	background-size: 2ch;
+	background-position: 98%;
+}
+
+.header-background {
+	background-image: url('/images/logo-white.png');
+	background-position: center;
+	background-size: 35%;
+	background-repeat: no-repeat;
+	padding: 3%;
+}
+
+.card {
+	margin-top: 8% !important;
+	height: 5%;
+}
+
+.wrapper-card {
+	max-width: 100vw;
+	margin: 0px;
+	margin-bottom: 5%;
+}

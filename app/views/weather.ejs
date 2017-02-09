@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- include with public references-->
+	<% include head %>
+
+</head>
+<body>
+
+	<div class="bg-primary header-background">
+		&nbsp
+	</div>
+
+	<div class="bg-peace">
+
+		<form action="/search" method="GET">
+
+	  		<div class="form-group">
+	      		<input type="text" class="form-control bg-icon" name="locale" placeholder="Digite aqui a cidade" 
+	      			value="<%= ( weatherDB.locale ? weatherDB.locale.name : '') %>" required>
+		  	</div>
+
+		</form>
+
+	</div>
+
+
+	<!-- if has data from database -->
+	<%if(weatherDB.locale){%>
+
+		<div class="container-fluid">
+			<h3>Previsão para <%= weatherDB.locale.name  %> - <%= weatherDB.locale.state %></h3>
+		</div>
+
+		<div class="row wrapper-card">
+			<%for (var i = 0; i < weatherDB.weather.length; i++){%>
+			
+				<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="max-width: 768px;">
+					<div class="card">
+						
+						<div class="bg-peace container-fluid">
+							<label><%= moment(weatherDB.weather[i].date).format('DD/MM/YYYY') %></label>
+							<p><%= weatherDB.weather[i].text %></p>
+						</div>
+
+						<div class="text-center pd-sm" style="background-color: #f7f7f7;">
+							<div class="row">
+								<div class="col-xs-6">
+
+									<div>
+										<img class="mg-sm" src="images/icons/upload.png">
+										<label class="text-primary"><%=weatherDB.weather[i].temperature.max%>ºC</label>
+									</div>
+									<div class="">
+										<img class="mg-sm" src="images/icons/raindrop-close-up.png">
+										<label><%=weatherDB.weather[i].rain.precipitation%>mm</label>
+									</div>
+								</div> 
+								
+								<div class="col-xs-6">
+
+									<div class="">
+										<img class="mg-sm" src="images/icons/download.png">
+										<label class="text-danger"><%=weatherDB.weather[i].temperature.min%>ºC</label>
+										<br>
+										<img class="mg-sm" src="images/icons/umbrella.png">
+										<label><%=weatherDB.weather[i].rain.probability%>%</label>
+									</div>
+
+								</div>	
+							</div>	
+						</div>			
+
+					</div>
+				</div>
+			
+			<%}%>
+		</div>
+	<%} else if (error != "") {%>
+		<div class="container-fluid">
+			<p class="bg-danger text-white"><%= error %></p>
+		</div>
+	<%}%>
+
+</body>
+</html>

@@ -5,13 +5,16 @@
 const express = require("express"),
 	  app = express(),
 	  path = require("path"),
-	  locale = require("../db/locale.js");
+	  weather = require("../db/weather.js");
 
 /**
- *  Pegar todas as localidades
+ *  Pegar previsao de uma localidade
  */
 app.get("/", function(req, res) {
-    res.json(locale.locale);
+    var name = req.query.name;
+    console.log(name);
+    var data = weather.findByName(name);
+    res.json(data);
 });
 
 

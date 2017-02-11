@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/guvitorino/challenge-accepted#readme",
   "dependencies": {
+    "body-parser": "^1.16.0",
     "express": "^4.14.1",
-    "moment": "^2.17.1"
+    "moment": "^2.17.1",
+    "nodemon": "^1.11.0"
   }
 }

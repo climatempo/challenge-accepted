@@ -12,7 +12,11 @@ $(function() {
 	    	}
 	    }
 	});
+	console.log(locales);
     $('input.autocomplete').autocomplete({
-        data: locales
+        data: {
+        	"Osasco" : null,
+        	"São Paulo" : null
+        }
     });
 });

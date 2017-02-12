@@ -3,93 +3,9 @@
   <link rel="icon" href="/logo.png">
 </head>
 <body>
-  <header class="clearfix">
-    <img src="/logo-white.png" class="img-responsive" />
-  </header>
+  {{> header}}
   <div class="container">
-    <div class="col-sm-12 col-md-12 col-lg-12">
-      <form class="well">
-        <div class="form-group">
-          <label for="search">
-            Digite sua cidade para buscar
-            <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-          </label>
-          <div class="input-group">
-            <input type="text" class="form-control search" placeholder="São Paulo">
-            <div class="input-group-addon">
-              <button class="btn btn-primary btn-lg" type="submit" >
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-    <h2 class="text-center">Previsao para {} - {}</h2>
-    <div class="col-sm-12 col-md-12 col-lg-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">{dia}</h3>
-          <p>{frase}</p>
-        </div>
-        <div class="panel-body text-center">
-          <div class="row">
-            <img src="/icons/upload.png" />
-            <h3>
-              <span class="label label-info">30 ºC</span>
-            </h3>
-            <img src="/icons/download.png" />
-            <h3>
-              <span class="label label-warning">30 ºC</span>
-            </h3>
-          </div>
-          <div class="row">
-            <img src="/icons/raindrop-close-up.png" />
-            <h3>
-              <span class="label label-default">30 mm</span>
-            </h3>
-            <img src="/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" />
-            <h3>
-              <span class="label label-default">30 %</span>
-            </h3>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-12 col-lg-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">{dia}</h3>
-          <p>{frase}</p>
-        </div>
-        <div class="panel-body text-center">
-          <div class="row">
-            <img src="/icons/upload.png" />
-            <h3>
-              <span class="label label-info">30 ºC</span>
-            </h3>
-            <img src="/icons/download.png" />
-            <h3>
-              <span class="label label-warning">30 ºC</span>
-            </h3>
-          </div>
-          <div class="row">
-            <img src="/icons/raindrop-close-up.png" />
-            <h3>
-              <span class="label label-default">30 mm</span>
-            </h3>
-            <img src="/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" />
-            <h3>
-              <span class="label label-default">30 %</span>
-            </h3>
-          </div>
-        </div>
-      </div>
-    </div>
+    {{> bodyapp}}
   </div>
-  <footer>
-    <p class="bg-primary text-center">&copy; copyright CLIMATEMPO</p>
-  </footer>
+  {{> footer}}
 </body>
-<template name="cities">
-</template>

@@ -10,6 +10,9 @@ header > img {
     display: block;
     margin: 10px auto;
 }
+footer {
+    height: 100px;
+}
 label{
     font-size: 16px;
 }

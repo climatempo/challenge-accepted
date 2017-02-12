@@ -4,19 +4,35 @@
 /**
  *  Gerencia as requisições de previsao para cidade
  */
-import { Meteor } from 'meteor/meteor';
-
 import { Simple } from 'meteor/simple:rest';
 
 /**
- * @param {String}
+ * File System node lib
  */
-JsonRoutes.add("get", "/cities/:name", (req, res, next) => {
-	let name = req.params.name;
+const fs = Npm.require("fs");
 
-	JsonRoutes.sendResult(res, {
-		data: {
-			"teste": name
+/**
+ * Lista as cidades com o nome proximo a esse
+ * @param {String} str
+ */
+JsonRoutes.add('GET', 'cities/:str', (req, res) => {
+  let weather = JSON.parse(fs.readFileSync('../../../../../base/weather.json', 'utf8')),
+			dataResp = [],
+			strSearch = req.params.str;
+
+	weather.map((index) => {
+		let indexSt = (index.locale.name + index.locale.state).toLowerCase();
+		if (indexSt.search(strSearch.toLowerCase().trim()) != -1) {
+			dataResp.push(index);
 		}
 	});
+	JsonRoutes.sendResult(res, { data: { response: dataResp } });
+});
+
+/**
+ * Lista a previsão das cidades
+ */
+JsonRoutes.add('GET', '/cities/', (req, res) => {
+	let weather = JSON.parse(fs.readFileSync("../../../../../base/weather.json", "utf8"));
+	JsonRoutes.sendResult(res, { data: { response: weather } });
 });

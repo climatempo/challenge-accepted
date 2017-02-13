@@ -91,7 +91,7 @@ Template.bodyapp.events({
 		event.preventDefault();
 		const text = $("#search").val();
 		let templateStr = ``,
-			dataWeather = [];
+				dataWeather = [];
 		$.get("cities/"+text, (data) => {
 			dataWeather = data.response;
 		}).done(() => {

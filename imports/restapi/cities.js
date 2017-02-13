@@ -16,7 +16,7 @@ const fs = Npm.require("fs");
  * @param {String} str
  */
 JsonRoutes.add('GET', '/cities/:str', (req, res) => {
-  let weather = JSON.parse(fs.readFileSync('../../../../../base/weather.json', 'utf8')),
+	let weather = JSON.parse(fs.readFileSync('../web.browser/app/base/weather.json', 'utf8')),
 			dataResp = [],
 			strSearch = req.params.str;
 
@@ -33,6 +33,6 @@ JsonRoutes.add('GET', '/cities/:str', (req, res) => {
  * Lista a previsão das cidades
  */
 JsonRoutes.add('GET', '/cities/', (req, res) => {
-	let weather = JSON.parse(fs.readFileSync("../../../../../base/weather.json", "utf8"));
+	let weather = JSON.parse(fs.readFileSync("../web.browser/app/base/weather.json", "utf8"));
 	JsonRoutes.sendResult(res, { data: { response: weather } });
 });

@@ -7,16 +7,11 @@
 import { Simple } from 'meteor/simple:rest';
 
 /**
- * File System node lib
- */
-const fs = Npm.require("fs");
-
-/**
  * Lista as cidades com o nome proximo a esse
  * @param {String} str
  */
 JsonRoutes.add('GET', '/cities/:str', (req, res) => {
-	let weather = JSON.parse(fs.readFileSync('../web.browser/app/base/weather.json', 'utf8')),
+	let weather = require("../../public/base/weather.json"),
 			dataResp = [],
 			strSearch = req.params.str;
 
@@ -33,6 +28,6 @@ JsonRoutes.add('GET', '/cities/:str', (req, res) => {
  * Lista a previsão das cidades
  */
 JsonRoutes.add('GET', '/cities/', (req, res) => {
-	let weather = JSON.parse(fs.readFileSync("../web.browser/app/base/weather.json", "utf8"));
+	let weather = require("../../public/base/weather.json");
 	JsonRoutes.sendResult(res, { data: { response: weather } });
 });

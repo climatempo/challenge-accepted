@@ -1,6 +1,10 @@
 /**
   * Style da pagina principal
   */
+
+body {
+    font-family: "Khmer OS System";
+}
 header, footer{
     background-color: #1565c0;
 }
@@ -11,7 +15,7 @@ header > img {
     margin: 10px auto;
 }
 footer {
-    height: 100px;
+    height: 70px;
 }
 label{
     font-size: 16px;
@@ -24,10 +28,15 @@ label{
 }
 .panel-body h3 {
     display: inline;
-    margin-left:30px;
-    margin-right:30px;
+    margin-left:10px;
+    margin-right:10px;
 }
 .panel-body .row {
     margin: 12px;
+}
+.panel-heading p{
+    font-size: 19px;
+    font-weight: bold;
+    text-align:center;
 }
 

@@ -15,7 +15,7 @@ const fs = Npm.require("fs");
  * Lista as cidades com o nome proximo a esse
  * @param {String} str
  */
-JsonRoutes.add('GET', 'cities/:str', (req, res) => {
+JsonRoutes.add('GET', '/cities/:str', (req, res) => {
   let weather = JSON.parse(fs.readFileSync('../../../../../base/weather.json', 'utf8')),
 			dataResp = [],
 			strSearch = req.params.str;

@@ -1,6 +1,6 @@
 ## Challenge App
 
-Ola esta aplicação reprenta o resultado do challenge App.
+Olá esta aplicação reprenta o resultado do challenge App.
 
 ### Requisitos
 
@@ -8,7 +8,7 @@ Esta aplicação necessita do [Meteor Framework](https://meteor.com).  framework
  
 ### Execução
 
-Instalar as dependÊncias 
+Instalar as dependências 
 ```bash
 meteor npm install
 ```
@@ -23,6 +23,6 @@ meteor test --driver-package practicalmeteor:mocha
 ```
 
 ### Melhorias a serem feitas (TODO) :|
-##### Teste de renderização de recursos na view
-##### Teste para validar renderição da busca
+##### Teste de renderização de recursos ao inicilizar
+##### Teste para validar renderização da busca
 ##### Teste para RestAPI

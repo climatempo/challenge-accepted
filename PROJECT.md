@@ -8,7 +8,7 @@ Esta aplicação necessita do [Meteor Framework](https://meteor.com).  framework
  
 ### Execução
 
-Instalar as dependencias 
+Instalar as dependÊncias 
 ```bash
 meteor npm install
 ```
@@ -24,5 +24,5 @@ meteor test --driver-package practicalmeteor:mocha
 
 ### Melhorias a serem feitas (TODO) :|
 ##### Teste de renderização de recursos na view
-##### Teste para validar rendericao enquanto o teste
+##### Teste para validar renderição da busca
 ##### Teste para RestAPI

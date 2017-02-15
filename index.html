@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="static/css/style.css" media="screen,projection" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climatempo - Desafio aceito!</title>
+</head>
+
+<body>
+  <nav class="blue darken-4">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">CLIMATEMPO</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#about">Sobre</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">search</i>
+          <input id="search" type="text" class="validate autocomplete">
+          <label for="search">Buscar local</label>
+        </div>
+      </div>
+    </div>
+
+    <section id="results">
+      <h4 id="locale-title" class="center-align"></h4>
+      <div class="row">
+        <div class="col hide-on-small-only m2 l3"></div>
+        <div class="col s12 m8 l6" id="results-target">
+
+        </div>
+        <div class="col hide-on-small-only m2 l3"></div>
+      </div>
+    </section>
+
+
+  </div>
+
+  <div style="display: none" id="results-template">
+    {{#items}}
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{date}}</span>
+        <div class="section">
+          <p>{{text}}</p>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <div class="row">
+            <div class="col s6">
+              <p class="center-align"><strong>Temperatura</strong></p>
+              <div class="center-align weather-value"><img src="static/img/icons/upload.png"> {{temperature.max}}°C</div>
+              <div class="center-align weather-value"><img src="static/img/icons/download.png"> {{temperature.min}}°C</div>
+            </div>
+            <div class="col s6">
+              <p class="center-align"><strong>Chuva</strong></p>
+              <div class="center-align weather-value"><img src="static/img/icons/raindrop-close-up.png"> {{rain.probability}}%</div>
+              <div class="center-align weather-value"><img src="static/img/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png"> {{rain.precipitation}}mm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/items}}
+  </div>
+
+
+
+  <div id="about" class="modal">
+    <div class="modal-content">
+      <h4>Climatempo - Desafio aceito!</h4>
+      <p>Desenvolvido com muito ♥ pelo Higor Silva Rosa</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
+    </div>
+  </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="static/js/materialize.min.js"></script>
+  <script type="text/javascript" src="static/js/mustache.min.js"></script>
+  <script type="text/javascript" src="static/js/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="static/js/script.js"></script>
+</body>
+
+</html>

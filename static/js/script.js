@@ -48,6 +48,10 @@ function showWeather() {
                     item.date = moment(itemData.date).locale('pt-br').format('LL');
                     item.text = itemData.text;
                     item.temperature = itemData.temperature;
+                    item.hotDay = false;
+                    if ( itemData.temperature.max >= 30){
+                        item.hotDay = true;
+                    }
                     item.rain = itemData.rain;
                     items.push(item);
                 }

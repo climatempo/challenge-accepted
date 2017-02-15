@@ -42,7 +42,11 @@ O frontend é um pouco mais elaborado pois ele utiliza alguns frameworks e bibli
 - MomentJs - Uma biblioteca para manipulação e formatação de datas.
 - Mustache - Uma biblioteca para trabalhar com renderização de templates no JS.
 
-Eu coloquei um detalhe legal. Se a temperatura máxima for maior de 30°C, o card fica vermelho!
+### Testes
+
+Os testes foram feitos utilizando uma biblioteca para NodeJS chamada SuperTest https://github.com/visionmedia/supertest. Essa biblioteca faz testes em requisições HTTP. Eu utilizei ela para testar todas as urls acessíveis do projeto.
+
+Eu coloquei um detalhe legal. Se a temperatura máxima for maior ou igual à 30°C, o card fica vermelho!
 
 ## Considerações finais!
 

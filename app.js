@@ -1,4 +1,5 @@
 var express = require('express');
+const request = require('supertest');
 var path = require("path");
 var fs = require('fs');
 
@@ -44,6 +45,27 @@ app.get('/api/weather/:localeId', function (req, res) {
         res.send(JSON.stringify(responseWeather));
     });
 });
+
+request(app)
+  .get('/')
+  .expect(200)
+  .end(function(err, res) {
+    if (err) throw err;
+  });
+
+request(app)
+  .get('/api/locales')
+  .expect(200)
+  .end(function(err, res) {
+    if (err) throw err;
+  });
+
+request(app)
+  .get('/api/weather/3477')
+  .expect(200)
+  .end(function(err, res) {
+    if (err) throw err;
+  });
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');

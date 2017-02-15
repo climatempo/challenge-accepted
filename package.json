@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/HigorSilvaRosa/challenge-accepted#readme",
   "dependencies": {
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "supertest": "^3.0.0"
   }
 }

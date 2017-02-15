@@ -19,10 +19,15 @@ Requisitos para a vaga, bons conhecimentos em:
 - HTML
 - CSS
 - Javascript
+- NodeJS
 - PHP
 - SQL
 - NoSQL
 - RESTful
+
+IMPORTANTE:
+
+- Residir em: Jacarei, Caçapava, Taubaté ou São José dos Campos
 
 
 ### O Desafio

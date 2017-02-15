@@ -42,7 +42,7 @@ IMPORTANTE:
 
 ### O Desafio
 
-Um usuário quer saber informações de como vai ficar o 
+Um usuário quer saber como vai ficar o 
 tempo para os próximos dias em Osasco e São Paulo utilizando
 seu smartphone. 
 

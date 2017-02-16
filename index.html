@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="climatempo" ng-cloak>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="product" content="px-project">
+    <meta name="description" content="Phoenix Project">
+    <meta name="author" content="Weslei Freitas, weslei.rfreitas@gmail.com">
+    <title>Climatempo</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="app.css" type="text/css">
+</head>
+
+<body ng-controller="ClimatempoCtrl as vm">
+
+    <div layout="row" layout-align="center center" layout-padding>
+        <div layout="colum" layout-align="center center" flex="50" flex-xs="100">
+            <div flex>
+                <md-toolbar class="md-hue-2">
+                    <div class="md-toolbar-tools" layout-align="center center">
+                        <img src="images/logo-white.png" class="logo"></img>
+                    </div>
+                </md-toolbar>
+
+                <md-autocomplete class="md-autocomplete-icon-search" md-input-minlength="1" md-search-text-change="" md-selected-item-change="vm.localeChange(item)" md-selected-item="addsetor.filters.cidade" md-search-text="vm.searchText" md-items="item in vm.getLocales(vm.searchText)"
+                    md-item-text="item.name" placeholder="Digite sua cidade">
+                    <md-item-template>
+                        <span md-highlight-text="vm.searchText" md-highlight-flags="gi">{{item.name}}</span>
+                    </md-item-template>
+                    <md-not-found>
+                        Ops! Não encontramos a cidade digitada... <i class="fa fa-frown-o"></i>
+                    </md-not-found>
+                </md-autocomplete>
+
+                <div ng-if="vm.locale !== ''" layout-padding>
+                    <h2>Previsão para {{vm.locale.name}} - {{vm.locale.state}}</h2>
+                </div>
+
+                <md-whiteframe class="weather-item md-whiteframe-1dp" layout="column" ng-repeat="item in vm.weather.weather" layout-padding>
+                    <div>
+                        {{item.date | date:'dd/MM/yyyy'}}
+                    </div>
+                    <md-divider></md-divider>
+                    <div>
+                        {{item.text}}
+                    </div>
+                    <div class="weather-item-detail" layout="column">
+                        <div layout="row" layout-align="space-around center">
+                            <div layout="row" layout-align="center center" flex="50" class="temperature-max" layout-padding>
+                                <div>
+                                    <i class="fa fa-thermometer-three-quarters"></i>
+                                </div>
+                                <div>
+                                    {{item.temperature.max}}ºC
+                                </div>
+                            </div>
+                            <div layout="row" layout-align="center center" flex="50" class="temperature-min" layout-padding>
+                                <div>
+                                    <i class="fa fa-thermometer-quarter"></i>
+                                </div>
+                                <div>
+                                    {{item.temperature.min}}ºC
+                                </div>
+                            </div>
+                        </div>
+
+                        <div layout="row" layout-align="space-around center">
+                            <div layout="row" layout-align="center center" flex="50" layout-padding>
+                                <div>
+                                    <i class="fa fa-tint" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    {{item.rain.precipitation}}mm
+                                </div>
+                            </div>
+                            <div layout="row" layout-align="center center" flex="50" layout-padding>
+                                <div>
+                                    <i class="fa fa-umbrella" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    {{item.rain.probability}} %
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </md-whiteframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="js/controller/main.js"></script>
+    <script src="js/service/climatempo.js"></script>
+    <script src="js/core.js"></script>
+</body>
+
+</html>

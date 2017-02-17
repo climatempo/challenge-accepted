@@ -6,9 +6,6 @@
     "react-scripts": "0.9.0"
   },
   "dependencies": {
-    "json-loader": "^0.5.4",
-    "jsonfile": "^2.4.0",
-    "load-json-file": "^2.0.0",
     "pubsub-js": "^1.5.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

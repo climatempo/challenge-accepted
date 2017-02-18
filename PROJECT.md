@@ -6,6 +6,8 @@
 
 #challenge-accepted
 
+Para o desafio foi utilizado Angular(Javascript) e NodeJS.
+
 ## Building
 
 Para testar a aplicação siga os passos a seguir.

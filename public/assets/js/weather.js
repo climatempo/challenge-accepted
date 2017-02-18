@@ -11,8 +11,8 @@
    * by other methods
    */
   var Weather = function () {
-  	this.$listWeather = $('.list-weather');
-  	this.$cardWeather = $('.card-weather').remove().clone();
+    this.$listWeather = $('.list-weather');
+    this.$cardWeather = $('.card-weather').remove().clone();
   };
 
   /*
@@ -33,24 +33,24 @@
    * card at the end of a div element
    */
   Weather.prototype.loadCardsFromLocale = function (localeId) {
-  	var $this = this;
-  	$this.$listWeather.html('');
-  	
-  	$this.getByLocaleId(localeId).done(function (res) {
-  		if (res.data.length == 0) {
-  			return;
-  		}
-  		
-  		res.data[0].forEach(function (weather) {
-	  		$this.$cardWeather.find('.weather-date'       ).text(moment(weather.date).format('DD/MM/YYYY'));
-	  		$this.$cardWeather.find('.weather-description').text(weather.text);
-	  		$this.$cardWeather.find('.text-up'            ).text(weather.temperature.max + '°C');
-	  		$this.$cardWeather.find('.text-down'          ).text(weather.temperature.min + '°C');
-	  		$this.$cardWeather.find('.text-prec'          ).text(weather.rain.precipitation + 'mm');
-	  		$this.$cardWeather.find('.text-rain'          ).text(weather.rain.probability + '%');
-	      
-	  		$this.$listWeather.append($this.$cardWeather.html());
-  		});
+    var $this = this;
+    $this.$listWeather.html('');
+    
+    $this.getByLocaleId(localeId).done(function (res) {
+      if (res.data.length == 0) {
+        return;
+      }
+      
+      res.data[0].forEach(function (weather) {
+        $this.$cardWeather.find('.weather-date'       ).text(moment(weather.date).format('DD/MM/YYYY'));
+        $this.$cardWeather.find('.weather-description').text(weather.text);
+        $this.$cardWeather.find('.text-up'            ).text(weather.temperature.max + '°C');
+        $this.$cardWeather.find('.text-down'          ).text(weather.temperature.min + '°C');
+        $this.$cardWeather.find('.text-prec'          ).text(weather.rain.precipitation + 'mm');
+        $this.$cardWeather.find('.text-rain'          ).text(weather.rain.probability + '%');
+        
+        $this.$listWeather.append($this.$cardWeather.html());
+      });
     });
   };
   

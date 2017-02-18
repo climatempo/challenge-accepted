@@ -10,7 +10,7 @@
    * that will be used by other methods
    */
   var Locale = function () {
-  	this.$weather        = $.Weather;
+    this.$weather        = $.Weather;
     this.$searchInput    = $('input[name=search]');
     this.$rowSearch      = $('.row-search');
     this.$selectedLocale = $('.selected-locale');
@@ -35,8 +35,8 @@
    * be passed by parameter
    */
   Locale.prototype.addAutocompleteToSearchInput = function (data) {
-  	var $this = this;
-  	$this.$searchInput.typeahead({
+    var $this = this;
+    $this.$searchInput.typeahead({
       source: data,
       display: 'name',
       onSelect: function (item) {
@@ -58,7 +58,7 @@
   Locale.prototype.attachEventGetLocaleToSearchInput = function (data) {
     var $this = this;
     $this.$searchInput.on('keyup', function () {
-    	$this.addLocalesToAutocomplete();
+      $this.addLocalesToAutocomplete();
     });
   };
 
@@ -69,7 +69,7 @@
   Locale.prototype.addLocalesToAutocomplete = function () {
     var $this = this;
     $this.getBySimilarName($this.$searchInput.val()).done(function (res) {
-    	$this.addAutocompleteToSearchInput(res.data);
+      $this.addAutocompleteToSearchInput(res.data);
     });
   };
   

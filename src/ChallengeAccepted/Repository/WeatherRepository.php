@@ -9,11 +9,10 @@ interface WeatherRepository
 {
 
     /**
-     * Return an array with all weather forecast
-     * for an specified localeId by parameter;
-     * if it has no data an empty array is returned;
-     * parameters that is not an int type will throw
-     * an exception
+     * Return an array with the weather forecast for an 
+     * specified localeId passed by parameter; f it has 
+     * no data, an empty array is returned; parameters 
+     * that is not an int type will throw an exception
      *
      * @param int $name
      * @throws InvalidArgumentException

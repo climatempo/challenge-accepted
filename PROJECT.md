@@ -106,7 +106,7 @@ Aplicação web responsiva para permitir consulta de previsão do tempo nos pró
       ```
  
   - ### Todo
-    - [ ] Manter cobertura de testes maior que 90%
+    - [ ] Cobertura de testes maior que 90%
 
   - ## Interface gráfica do usuário
     - Página principal após selecionar uma localidade

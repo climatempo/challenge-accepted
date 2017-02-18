@@ -1,0 +1,3 @@
+[submodule "climate-api"]
+	path = climate-api
+	url = https://github.com/viniciusps2/climate-api.git

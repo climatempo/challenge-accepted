@@ -1,0 +1,39 @@
+{
+    "name": "climatempo/challenge-accepted",
+    "description": "Challenge accepted Climatempo project",
+    "keywords": ["climatempo", "project"],
+    "authors": [
+        {
+            "name": "Lucas de Oliveira",
+            "email": "94oliveira.lucas@gmail.com",
+            "homepage": "http://www.deoliveiralucas.net/"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "slim/slim": "^3.1",
+        "slim/php-view": "^2.0",
+        "monolog/monolog": "^1.17",
+        "slim/twig-view": "^2.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=4.8 < 6.0",
+        "mikey179/vfsStream": "^1.6",
+        "mockery/mockery": "^0.9.8"
+    },
+    "autoload": {
+    	"psr-4": {
+            "ChallengeAccepted\\": "src/ChallengeAccepted"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Functional\\ChallengeAccepted\\": "tests/Functional/ChallengeAccepted",
+            "Unit\\ChallengeAccepted\\": "tests/Unit/ChallengeAccepted"
+        }
+    },
+	"scripts": {
+        "start": "php -S 0.0.0.0:8080 -t public public/index.php",
+        "test": "phpunit"
+	}
+}

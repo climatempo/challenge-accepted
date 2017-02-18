@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Challenge Accepted</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/style-climatempo.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <nav class="navbar navbar-blue navbar-fixed-top">
+      <div class="container text-center">
+	     <img src="images/logo-white.png" class="navbar-logo" height="20px" />
+      </div>
+    </nav>
+    <nav class="navbar navbar-fixed-top subnavbar">
+      <div class="input-group">
+        <input type="text" class="form-control input-lg input-search" name="search" placeholder="Selecione a localidade">
+        <span class="input-group-addon input-search" id="basic-addon1">
+          <i class="fa fa-lg fa-search"></i>
+        </span>
+      </div>
+    </nav>
+    
+    <div class="container container-padding">
+      <div class="row row-search" style="display: none">
+	    <h4>Previsão para <span class="selected-locale"></span></h4>
+      </div>
+      
+      <div class="list-weather">
+        <div class="row card-weather">
+          <div class="panel panel-default panel-no-radius">
+            <div class="panel-heading panel-heading-white">
+              <h5 class="weather-date">01/02/2017</h5>
+              <small class="weather-description">Sol com muitas nuvens durante o dia. Período de nublado, com chuva a qualquer hora.</small>
+            </div>
+            <div class="panel-body panel-body-gray">
+              <div class="row">
+                <div class="col-xs-2">
+                  <img src="images/icons/upload.png" />
+                </div>
+                <div class="col-xs-4 text-center">
+                  <span class="text-card text-up">20°C</span>
+                </div>
+                <div class="col-xs-2">
+                  <img src="images/icons/download.png" />
+                </div>
+                <div class="col-xs-4 text-center">
+                  <span class="text-card text-down">20°C</span>
+                </div>
+              </div>
+            </div>
+            <div class="panel-body panel-body-gray">
+              <div class="row">
+                <div class="col-xs-2">
+                  <img src="images/icons/raindrop-close-up.png" />
+                </div>
+                <div class="col-xs-4 text-center">
+                  <span class="text-card text-prec">10mm</span>
+                </div>
+                <div class="col-xs-2">
+                  <img src="images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" />
+                </div>
+                <div class="col-xs-4 text-center">
+                  <span class="text-card text-rain">50%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/bootstrap-typeahead.min.js"></script>
+    <script type="text/javascript" src="assets/js/weather.js"></script>
+    <script type="text/javascript" src="assets/js/locale.js"></script>
+    
+    <script type="text/javascript">
+      $(document).ready(function () {
+      	$.Locale.attachEventGetLocaleToSearchInput();  
+      });
+    /*
+    (function ($) {
+      'use strict';
+      $.Locale.attachEventGetLocaleToSearchInput();
+    }(window.jQuery));
+      */
+    </script>
+  </body>
+</html>

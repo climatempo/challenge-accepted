@@ -15,9 +15,9 @@
 
 <body ng-controller="ClimatempoCtrl as vm">
 
-    <div layout="row" layout-align="center center" layout-padding>
+    <div layout="row" layout-align="center center">
         <div layout="colum" layout-align="center center" flex="50" flex-xs="100">
-            <div flex>
+            <div flex md-whiteframe="3">
                 <md-toolbar class="md-hue-2">
                     <div class="md-toolbar-tools" layout-align="center center">
                         <img src="images/logo-white.png" class="logo"></img>
@@ -34,58 +34,68 @@
                     </md-not-found>
                 </md-autocomplete>
 
-                <div ng-if="vm.locale !== ''" layout-padding>
-                    <h2>Previsão para {{vm.locale.name}} - {{vm.locale.state}}</h2>
+                <div class="header" ng-if="vm.locale !== ''">
+                    <h2>
+                        Previsão para {{vm.locale.name}} - {{vm.locale.state}}
+                    </h2>
+                    <h3>
+                        {{vm.data.period.begin | date:'dd/MM/yyyy'}} - {{vm.data.period.end | date:'dd/MM/yyyy'}}
+                    </h3>
                 </div>
 
-                <md-whiteframe class="weather-item md-whiteframe-1dp" layout="column" ng-repeat="item in vm.weather.weather" layout-padding>
-                    <div>
-                        {{item.date | date:'dd/MM/yyyy'}}
-                    </div>
-                    <md-divider></md-divider>
-                    <div>
-                        {{item.text}}
-                    </div>
-                    <div class="weather-item-detail" layout="column">
-                        <div layout="row" layout-align="space-around center">
-                            <div layout="row" layout-align="center center" flex="50" class="temperature-max" layout-padding>
-                                <div>
-                                    <i class="fa fa-thermometer-three-quarters"></i>
-                                </div>
-                                <div>
-                                    {{item.temperature.max}}ºC
-                                </div>
+                <div class="cards-content" layout-padding ng-if="vm.data.weather">
+                    <md-whiteframe class="weather-item md-whiteframe-1dp" layout="column" ng-repeat="item in vm.data.weather" layout-padding>
+                        <div class="card-header" layout-padding>
+                            <div>
+                                {{item.date | date:'dd/MM/yyyy'}}
                             </div>
-                            <div layout="row" layout-align="center center" flex="50" class="temperature-min" layout-padding>
-                                <div>
-                                    <i class="fa fa-thermometer-quarter"></i>
-                                </div>
-                                <div>
-                                    {{item.temperature.min}}ºC
-                                </div>
+                            <md-divider></md-divider>
+                            <div>
+                                {{item.text}}
                             </div>
                         </div>
 
-                        <div layout="row" layout-align="space-around center">
-                            <div layout="row" layout-align="center center" flex="50" layout-padding>
-                                <div>
-                                    <i class="fa fa-tint" aria-hidden="true"></i>
+                        <div class="weather-item-detail" layout="column">
+                            <div layout="row" layout-align="space-around center">
+                                <div layout="row" layout-align="center center" flex="50" class="temperature-max" layout-padding>
+                                    <div>
+                                        <i class="fa fa-thermometer-three-quarters"></i>
+                                    </div>
+                                    <div>
+                                        {{item.temperature.max}}ºC
+                                    </div>
                                 </div>
-                                <div>
-                                    {{item.rain.precipitation}}mm
+                                <div layout="row" layout-align="center center" flex="50" class="temperature-min" layout-padding>
+                                    <div>
+                                        <i class="fa fa-thermometer-quarter"></i>
+                                    </div>
+                                    <div>
+                                        {{item.temperature.min}}ºC
+                                    </div>
                                 </div>
                             </div>
-                            <div layout="row" layout-align="center center" flex="50" layout-padding>
-                                <div>
-                                    <i class="fa fa-umbrella" aria-hidden="true"></i>
+
+                            <div layout="row" layout-align="space-around center">
+                                <div layout="row" layout-align="center center" flex="50" layout-padding>
+                                    <div>
+                                        <i class="fa fa-tint" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        {{item.rain.precipitation}}mm
+                                    </div>
                                 </div>
-                                <div>
-                                    {{item.rain.probability}} %
+                                <div layout="row" layout-align="center center" flex="50" layout-padding>
+                                    <div>
+                                        <i class="fa fa-umbrella" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        {{item.rain.probability}} %
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </md-whiteframe>
+                    </md-whiteframe>
+                </div>
             </div>
         </div>
     </div>

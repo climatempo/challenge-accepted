@@ -21,6 +21,22 @@ html {
     color: #000000;
 }
 
+.header h2 {
+    padding-left: 15px;
+}
+
+.header h3 {
+    padding-left: 15px;
+}
+
+.cards-content {
+    background-color: #E0E0E0;
+}
+
+.cards-content .card-header {
+    background-color: #FFFFFF;
+}
+
 .weather-item {
     font-size: 1em;
     margin-top: 10px;

@@ -13,7 +13,7 @@
         vm.getLocales = getLocales;
         vm.localeChange = localeChange;
         vm.locale = '';
-        vm.weather = [];
+        vm.data = [];
 
 
         function getLocales(text) {
@@ -34,7 +34,7 @@
                 climatempoService.getWeather(item.id)
                     .then(function success(response) {
                         //console.info('success', response);
-                        vm.weather = response;
+                        vm.data = response;
                     }, function error(response) {
                         console.error('error', response);
                     });
@@ -45,7 +45,7 @@
 
         function reset() {
             vm.locale = '';
-            vm.weather = [];
+            vm.data = [];
         }
     }
 })();

@@ -19,5 +19,5 @@ $app->get('/api/locale/similarname/[{name}]', function ($request, $response, $ar
 $app->get('/api/locale/{id}/weather', function ($request, $response, $args) {
     $weather = $this->weatherLocaleApiService->getWeatherByLocaleId($args['id']);
     
-    return $response->withJson($weather, $locales['status_code']);
+    return $response->withJson($weather, $weather['status_code']);
 });

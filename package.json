@@ -4,7 +4,8 @@
   "description": "<p align=\"center\">   <a href=\"http://www.climatempo.com.br\">       <img src=\"http://i.imgur.com/Q9lCAMF.png\" alt=\"Climatempo\" width=\"300px\"/>   </a> </p>",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha ./test",
+    "cover": "istanbul cover _mocha -- ./test/* --recursive"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,10 @@
   "homepage": "https://github.com/1fabiopereira/challenge-accepted#readme",
   "dependencies": {
     "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "istanbul": "^0.4.5"
   }
 }

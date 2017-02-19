@@ -12,5 +12,13 @@
     "state": "SP",
     "latitude": -23.5480,
     "longitude": -46.6360
+  },
+
+  {
+    "id": 1234,
+    "name": "Lugar algum",
+    "state": "SN",
+    "latitude": 0,
+    "longitude": 0
   }
 ]

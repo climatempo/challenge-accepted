@@ -4,6 +4,21 @@ A solução foi desenvolvida como se este fosse o início de um projeto que ser�
 
 Segue alguns tópicos relevantes sobre o que foi feito:
 
+## Separação Backend e Frontend
+
+Foi criado 2 repositórios adicionais e configurados como sub módulo no git (git submodules), isso facilita o controle de versão, deploy, testes, integração contínua, e os membros da equipe pode trabalhar separado evitando conflitos no Git. 
+
+Não exige muito aprendizado sobre este recurso do Git pois é possível baixar separadamente os projetos: 
+
+- [climate-api](https://github.com/viniciusps2/climate-api);
+- [climate-ui](https://github.com/viniciusps2/climate-ui).
+
+Ou baixar o repositório principal, incluindo os submodulos:
+
+```sh
+git clone --recursive https://github.com/viniciusps2/challenge-accepted
+```
+
 ## Persistência
 
 No requisito foi solicitado somente a leitura de JSON em arquivo, mas como também é requisito a manutenabilidade e desempenho, foi observado os seguintes critérios:
@@ -19,15 +34,6 @@ Será definido novas regras de negócio que exigirá consultas de previsão mais
 O MongoDB foi escolhido por que a informação tem um formato adequado para NoSQL, já está desnormalizada, por exemplo os dados de localidade dentro do JSON de previsões (dados de localidade muda com pouquíssima frequência), evitando a consulta de 2 tabelas no modelo relacional. 
 
 Como descrito acima, é previsível que tenha lógica na consulta, ainda que a API pudesse acessar estas informações de outro serviço interno seria melhor persistir no banco de uma forma que facilite as consultas e evite dependências para garantir um bom desempenho.
-
-## Separação Backend e Frontend
-
-Foi criado 2 repositórios adicionais e configurados como sub módulo no git (git submodules), isso facilita o controle de versão, deploy, testes, integração contínua, e os membros da equipe pode trabalhar separado evitando conflitos no Git. 
-
-Não exige muito aprendizado sobre este recurso do Git pois é possível baixar separadamente os projetos: 
-
-- [climate-api](https://github.com/viniciusps2/climate-api);
-- [climate-ui](https://github.com/viniciusps2/climate-ui).
 
 ## Cobertura de testes e Integração contínua
 

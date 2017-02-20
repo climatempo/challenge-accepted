@@ -4,7 +4,7 @@
   "description": "<p align=\"center\">   <a href=\"http://www.climatempo.com.br\">       <img src=\"http://i.imgur.com/Q9lCAMF.png\" alt=\"Climatempo\" width=\"300px\"/>   </a> </p>",
   "main": "server.js",
   "scripts": {
-    "test": "istanbul cover _mocha -- -R spec -w",
+    "test": "istanbul cover _mocha -- -R spec",
     "start": "nodemon server.js",
     "test-unit": "NODE_ENV=test mocha '/**/*.test.js' -w"
   },

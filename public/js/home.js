@@ -92,6 +92,6 @@ const drawCards = (response)=> {
 
 
 const getPrevisao = () => {
-    httpRequest.getAsync('http://192.168.0.109:3000/previsao?q=' + $('#local').value, drawCards);
+    httpRequest.getAsync('http://localhost:3000/previsao?q=' + $('#local').value, drawCards);
 };
 

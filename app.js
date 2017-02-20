@@ -6,8 +6,9 @@ const indexRoutes = require('./routes/index');
 
 // Proxy reverso de arquivos estáticos
 app.use('/images', express.static(__dirname + '/public/images'));
-app.use('/css', express.static(__dirname + '/public/css'));
 app.use('/js', express.static(__dirname + '/public/js'));
+app.use('/css', express.static(__dirname + '/public/css'));
+app.use('/fonts', express.static(__dirname + '/public/fonts'));
 
 app.use('/', indexRoutes);
 

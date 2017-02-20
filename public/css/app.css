@@ -1,0 +1,17 @@
+.half-block, .card-wrapper .card-rain .precipitation, .card-wrapper .card-rain .probability, .card-wrapper .card-temperature .max, .card-wrapper .card-temperature .min {
+  float: left;
+  text-align: center;
+  width: 49%; }
+
+.card-wrapper {
+  border: 1px solid;
+  height: 125px;
+  padding: 15px; }
+  .card-wrapper .card-header {
+    line-height: 1.5; }
+  .card-wrapper .card-body {
+    line-height: 1.5;
+    background-color: #7f7f7f; }
+  .card-wrapper .card-date {
+    color: #000;
+    text-align: left; }

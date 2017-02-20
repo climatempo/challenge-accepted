@@ -7,6 +7,19 @@ const app = require('../app');
 
 chai.use(chaiHttp);
 
+describe('Render', () => {
+    it('Renderização da tela', (done) => {
+        chai.request(app)
+            .get('/')
+            .end((err, res) => {
+                expect(err).to.be.null;
+                expect(res).to.have.status(200);
+
+                done();
+            });
+    });
+});
+
 describe('API Localização', () => {
 
     it('Inexistente na base', (done) => {

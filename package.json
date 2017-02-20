@@ -4,9 +4,9 @@
   "description": "<p align=\"center\">   <a href=\"http://www.climatempo.com.br\">       <img src=\"http://i.imgur.com/Q9lCAMF.png\" alt=\"Climatempo\" width=\"300px\"/>   </a> </p>",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "istanbul cover _mocha -- -R spec -w",
     "start": "nodemon server.js",
-    "test-unit": "NODE_ENV=test mocha '/**/*.spec.js'"
+    "test-unit": "NODE_ENV=test mocha '/**/*.test.js' -w"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,12 @@
   },
   "homepage": "https://github.com/yesroh/challenge-accepted#readme",
   "devDependencies": {
+    "angular-cli": "^1.0.0-beta.28.3",
     "chai": "^3.5.0",
+    "codecov": "^1.0.1",
     "eslint": "^3.15.0",
+    "jasmine-core": "^2.5.2",
+    "jasmine-spec-reporter": "^3.2.0",
     "mocha": "^3.2.0"
   },
   "dependencies": {

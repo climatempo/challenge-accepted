@@ -11,14 +11,20 @@ import { Locale } from '../../providers/locales'
 })
 export class HomePage {
   localeWeather: Array<any>;
+  data: string;
 
   constructor(public navCtrl: NavController, public locale: Locale) {  }
 
   getItems(ev){
-    if (ev.target.value.length > 5 && ev.target.value.trim() !== '') {
+    this.data = ev.target.value;
+
+    if (ev.target.value.length > 3 && ev.target.value.trim() !== '') {
       this.locale.getLocale(ev.target.value).subscribe(data => {
+        if (data === 'Location not found') {
+          return '';
+        }
+
         this.localeWeather = data;
-        console.log(this.localeWeather);
       }, err => {
         console.log('error:', err);
       });

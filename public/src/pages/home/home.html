@@ -7,7 +7,7 @@
 <ion-content padding>
   <ion-searchbar padding (input)="getItems($event)" placeholder="Entre com a sua cidade..."></ion-searchbar>
 
-  <ion-title text-left>Previsao para </ion-title>
+  <ion-title text-left>Previsao para {{data}}</ion-title>
 
   <div *ngFor="let item of localeWeather">
 

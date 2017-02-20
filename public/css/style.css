@@ -1,0 +1,55 @@
+@CHARSET "ISO-8859-1";
+
+.img_responsive{
+	margin: 10px 10px 10px 10px;
+	width: 70%;
+	height: auto;
+}
+
+.input_img {
+    position:absolute;
+    bottom:5px;
+    right:5px;
+    width:24px;
+    height:23px;
+}
+
+.img_espace {
+	margin-right: 10px;
+}
+
+.centralizar {
+	text-align: center;
+}
+
+.alinhar_direita {
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+.alinhar_esquerda {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+input[type='text'] {
+	padding: 8px 35px 8px 8px;
+	margin-top: 8px;
+}
+
+/* FONTS */
+.font_azul{
+	font-size: 18px;
+	color: #0000FF;
+	text-align: center;
+}
+.font_vermelha{
+	font-size: 18px;
+	color: #FF0000;
+	text-align: center;
+}
+.font_preta{
+	font-size: 18px;
+	color: #000000;
+	text-align: center;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "api_nodejs",
+  "version": "1.0.0",
+  "description": "API desenvolvida em NodeJS para manipulação de json",
+  "main": "api.js",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "connect-multiparty": "^2.0.0",
+    "express": "^4.14.1",
+    "fs": "0.0.1-security",
+    "mongodb": "^2.2.24",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Willian M. Toledo",
+  "license": "ISC"
+}

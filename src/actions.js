@@ -16,13 +16,15 @@ function receiveWeatherInfo(city, json) {
   return {
     type: SUCCESS_WEATHER_INFO,
     city,
-    weather: json
+    weather: json.weather,
+    period: json.period,
+    locale: json.locale
   }
 }
 
 function errorWeatherInfo(json) {
   return {
-    type: ERROR_WEATHER_INFO
+    type: ERROR_WEATHER_INFO,
     err: json
   }
 }
@@ -32,12 +34,7 @@ export function fetchWeatherInfo(city) {
     dispatch(requestWeatherInfo(city));
     return fetch(`/api/weather/${city}`)
       .then(response => response.json())
-      .then(json => {
-      	if (!json.message)
-        	dispatch(receiveWeatherInfo(city, json))
-        else
-        	dispatch(errorWeatherInfo(json))
-      }
-    )
+      .then(json => dispatch(receiveWeatherInfo(city, json)))
+      .catch(err => dispatch(errorWeatherInfo(err)))
   }
 }

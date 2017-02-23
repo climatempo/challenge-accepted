@@ -17,8 +17,10 @@ export default function(state = {}, action) {
     return Object.assign({}, state, {
     	isFetching: false,
     	didInvalidate: false,
-    	city: action.city
-    	weather: action.weather
+    	city: action.city,
+    	weather: action.weather,
+      period: action.period,
+      locale: action.locale
     });
   default:
   	return state;

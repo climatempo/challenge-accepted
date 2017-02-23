@@ -28,7 +28,7 @@ class App extends Component {
 	}
 
   render() {
-  	const { weather } = this.props
+  	const { weather, locale } = this.props
     return (
       <div>
       	<Header />
@@ -39,6 +39,11 @@ class App extends Component {
 				      	handleCityChange={this.handleCityChange} 
 				      	handleSearch={this.handleSearch}
 				      />
+			      </Col>
+		      </Row>
+		      <Row>
+      			<Col xs={12} md={6} mdOffset={3}>
+				      {locale && <h4 className="text-center">{`Previsão para ${locale.name} - ${locale.state}`}</h4>}
 			      </Col>
 		      </Row>
 		      <Row>

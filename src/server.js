@@ -4,7 +4,7 @@ import path from 'path';
 import apiRoutes from './apiRoutes';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import App from './components/App';
+import {AppContainer} from './components/App';
 import configureStore from './configureStore';
 import {Provider} from 'react-redux';
 
@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/api', apiRoutes);
 app.get('/', function (req, res) {
 	const clientStore = configureStore();
-  const appString = renderToString(<Provider store={clientStore}><App /></Provider>);
+  const appString = renderToString(<Provider store={clientStore}><AppContainer /></Provider>);
   res.render('index', { markup: appString });
 });
 

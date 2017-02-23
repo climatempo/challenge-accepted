@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <div>
-        <h1>Hello world!</h1>
+        {JSON.stringify(this.props)}
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+  	isFetching: state.isFetching,
+  	didInvalidate: state.didInvalidate,
+    period: state.weather.period,
+    locale: state.weather.locale,
+    weather: state.weather.weather
+  };
+}
+
+export const AppContainer = connect(
+  mapStateToProps
+)(App);

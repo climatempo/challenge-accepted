@@ -23,8 +23,11 @@ class App extends Component {
 
 	handleSearch(e) {
 		e.preventDefault();
-		const { dispatch } = this.props
-		dispatch(fetchWeatherInfo(this.state.city));
+		if (!this.state.city) alert("Digite a cidade!");
+		else {
+			const { dispatch } = this.props
+			dispatch(fetchWeatherInfo(this.state.city));
+		}
 	}
 
   render() {

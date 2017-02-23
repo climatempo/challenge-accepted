@@ -10,10 +10,10 @@ String.prototype.latinize=String.prototype.latinise;
 
 router.get("/weather/:name", function(req, res) {
 	if (!req.params.name) res.status(400).send({message: "Empty city"});
-	const cleanName = req.params.name.split("+").join(" ").toLowerCase();
+	const cleanName = req.params.name.toLowerCase().trim().latinize();
 
 	const filteredWeather = weather.filter((data) => {
-		return data.locale.name.split("+").join(" ").toLowerCase().latinize() === cleanName;
+		return data.locale.name.toLowerCase().latinize() === cleanName;
 	})
 
 	if (filteredWeather.length > 0) {

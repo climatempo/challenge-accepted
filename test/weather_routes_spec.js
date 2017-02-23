@@ -40,7 +40,7 @@ describe('routes : weather', () => {
 
 	  it('should GET weather info from São Paulo', (done) => {
 	  	chai.request(server)
-		    .get('/api/weather/são+paulo')
+		    .get('/api/weather/são paulo')
 		    .end((err, res) => {
 		    	if (err) throw err;
 		    	res.should.have.status(200);
@@ -70,7 +70,7 @@ describe('routes : weather', () => {
 
 	  it('should return 404 for inexistent locale name', (done) => {
 	  	chai.request(server)
-	    .get('/api/weather/rio+de+janeiro')
+	    .get('/api/weather/rio de janeiro')
 	    .end((err, res) => {
 	    	res.should.have.status(404);
 				res.should.be.json;

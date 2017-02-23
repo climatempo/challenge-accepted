@@ -31,7 +31,7 @@ function errorWeatherInfo(json) {
 
 export function fetchWeatherInfo(city) {
   return function (dispatch) {
-    dispatch(requestWeatherInfo(city));
+    dispatch(requestWeatherInfo(city.trim()));
     return fetch(`/api/weather/${city}`)
       .then(response => response.json())
       .then(json => {

@@ -3,6 +3,7 @@ import { fetchWeatherInfo } from '../actions';
 import {connect} from 'react-redux';
 import Header from './Header';
 import SearchBox from './SearchBox';
+import WeatherCard from './WeatherCard';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 class App extends Component {
@@ -39,7 +40,9 @@ class App extends Component {
 			      </Col>
 		      </Row>
 		      <Row>
-			      
+		      	<Col xs={12} sm={6} md={4}>
+			      	<WeatherCard />
+			      </Col>
 		      </Row>
 	      </Grid>
       </div>

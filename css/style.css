@@ -5,3 +5,56 @@
 .navbar > .container {
 	text-align: center;
 }
+
+.navbar {
+	background-color: #1565C0;
+}
+
+body {
+	background-color: #F5F5F5;
+}
+
+.weather-card {
+	box-shadow: 10px 10px 5px #888888;
+	background-color: white;
+}
+
+.weather-card > div {
+	padding: 10px;
+}
+
+.subcard {
+	background-color: lightgrey;
+	text-align: center;
+}
+
+.subcard > div > div {
+	display: inline-block;
+}
+
+.subcard > div:nth-child(1){
+	margin-bottom: 20px;
+}
+
+.subcard > div > div:nth-child(1){
+	margin-right: 25px;
+}
+
+.subcard > div > div > span {
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+.color-blue {
+	color: #1565C0;
+}
+
+.color-red {
+	color: red;
+}
+
+@media (max-width: 767px) and (min-width: 550px) {
+  .weather-card {
+    margin: 0 100px 0 100px;
+  }
+}

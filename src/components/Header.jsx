@@ -7,7 +7,7 @@ export default class Header extends Component {
       <Navbar>
 		    <Navbar.Header>
 		      <Navbar.Brand>
-		        <img src="imgs/logo.png" />
+		        <img src="imgs/logo-white.png" />
 		      </Navbar.Brand>
 		    </Navbar.Header>
 		  </Navbar>

@@ -35,10 +35,10 @@ export function fetchWeatherInfo(city) {
     return fetch(`/api/weather/${city}`)
       .then(response => response.json())
       .then(json => {
-        if (json.status === 200)
+        if (!json.message)
           dispatch(receiveWeatherInfo(city, json))
         else
-          dispatch(errorWeatherInfo(err))
+          dispatch(errorWeatherInfo(json))
       })
       .catch(err => dispatch(errorWeatherInfo(err)))
   }

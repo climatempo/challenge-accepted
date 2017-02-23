@@ -27,6 +27,7 @@ class App extends Component {
 	}
 
   render() {
+  	const { weather } = this.props
     return (
       <div>
       	<Header />
@@ -40,9 +41,7 @@ class App extends Component {
 			      </Col>
 		      </Row>
 		      <Row>
-		      	<Col xs={12} sm={6} md={4}>
-			      	<WeatherCard />
-			      </Col>
+		      	{weather && weather.map((w) => <WeatherCard  weather={w}/>)}
 		      </Row>
 	      </Grid>
       </div>

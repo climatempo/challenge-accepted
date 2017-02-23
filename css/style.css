@@ -17,10 +17,15 @@ body {
 .weather-card {
 	box-shadow: 10px 10px 5px #888888;
 	background-color: white;
+	margin-bottom: 30px;
 }
 
 .weather-card > div {
 	padding: 10px;
+}
+
+.card-header {
+	height: 103px;
 }
 
 .subcard {
@@ -55,6 +60,6 @@ body {
 
 @media (max-width: 767px) and (min-width: 550px) {
   .weather-card {
-    margin: 0 100px 0 100px;
+    margin: 30px 100px 30px 100px;
   }
 }

@@ -3,6 +3,7 @@ import { fetchWeatherInfo } from '../actions';
 import {connect} from 'react-redux';
 import Header from './Header';
 import SearchBox from './SearchBox';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 class App extends Component {
 	constructor() {
@@ -28,10 +29,19 @@ class App extends Component {
     return (
       <div>
       	<Header />
-	      <SearchBox 
-	      	handleCityChange={this.handleCityChange} 
-	      	handleSearch={this.handleSearch}
-	      />
+      	<Grid>
+      		<Row>
+      			<Col xs={12} md={6} mdOffset={3}>
+				      <SearchBox 
+				      	handleCityChange={this.handleCityChange} 
+				      	handleSearch={this.handleSearch}
+				      />
+			      </Col>
+		      </Row>
+		      <Row>
+			      
+		      </Row>
+	      </Grid>
       </div>
     );
   }

@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import Header from './Header';
 import SearchBox from './SearchBox';
 import WeatherCard from './WeatherCard';
+import Footer from './Footer';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 class App extends Component {
@@ -44,6 +45,7 @@ class App extends Component {
 		      	{weather && weather.map((w) => <WeatherCard  weather={w}/>)}
 		      </Row>
 	      </Grid>
+	      <Footer />
       </div>
     );
   }

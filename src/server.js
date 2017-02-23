@@ -13,6 +13,8 @@ const server = http.createServer(app);
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static('dist'));
+app.use('/imgs', express.static('images'));
+app.use('/css', express.static('css'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 

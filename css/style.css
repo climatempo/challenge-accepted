@@ -1,0 +1,7 @@
+.navbar-header, .navbar-brand {
+	float: none;
+}
+
+.navbar > .container {
+	text-align: center;
+}

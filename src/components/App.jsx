@@ -1,34 +1,37 @@
 import React, { Component, PropTypes } from 'react';
-import { FormGroup, InputGroup, FormControl, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { fetchWeatherInfo } from '../actions';
 import {connect} from 'react-redux';
+import Header from './Header';
+import SearchBox from './SearchBox';
 
 class App extends Component {
 	constructor() {
 		super();
+		this.state = {
+			city: ''
+		}
 		this.handleSearch = this.handleSearch.bind(this);
+		this.handleCityChange = this.handleCityChange.bind(this);
+	}
+
+	handleCityChange(e) {
+		this.setState({city: e.target.value});
 	}
 
 	handleSearch(e) {
 		e.preventDefault();
 		const { dispatch } = this.props
-		const city = this.input.value;
-		dispatch(fetchWeatherInfo(city));
+		dispatch(fetchWeatherInfo(this.state.city));
 	}
 
   render() {
     return (
       <div>
-	      <form onSubmit={this.handleSearch}>
-			    <FormGroup>
-			      <InputGroup>
-			      	<FormControl inputRef={(input) => this.input = input} type="text" placeholder="Digite a cidade" />
-			        <InputGroup.Button>
-			          <Button type="submit">Search</Button>
-			        </InputGroup.Button>
-			      </InputGroup>
-			    </FormGroup>
-		    </form>
+      	<Header />
+	      <SearchBox 
+	      	handleCityChange={this.handleCityChange} 
+	      	handleSearch={this.handleSearch}
+	      />
       </div>
     );
   }

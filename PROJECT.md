@@ -19,6 +19,12 @@ Juntamento com `React`, foi utilizado `Redux` para estruturação do fluxo de da
 
 Para o visual da página, foi utilizado `Bootstrap` e CSS disponível em `css/style.css` para os retoques necessários.
 
+### Misc
+
+`babel` foi utilizado como transpiler pra traduzir a sintaxe ES6 do javascript para a versão atualmente suportada.
+
+`webpack` foi utilizado como bundler, permitindo fazer imports nos códigos React e transformando todo o javascript do client app em um único arquivo `bundle.js`.
+
 ## Rodando a aplicação
 
 Certifique-se de primeiro dar `npm install` para obter todas bibliotecas necessárias.

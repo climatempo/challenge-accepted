@@ -1,0 +1,26 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">   <a href=\"http://www.climatempo.com.br\">       <img src=\"http://i.imgur.com/Q9lCAMF.png\" alt=\"Climatempo\" width=\"300px\"/>   </a> </p>",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node_modules/.bin/babel-node --presets 'es2015' src/server.js",
+    "dev": "NODE_ENV=dev BABEL_DISABLE_CACHE=1 npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rghossi/challenge-accepted.git"
+  },
+  "author": "rghossi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rghossi/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/rghossi/challenge-accepted#readme",
+  "dependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1"
+  }
+}

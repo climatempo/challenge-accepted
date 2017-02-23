@@ -8,6 +8,7 @@ export default function(state = {}, action) {
     	didInvalidate: false
     });
   case ERROR_WEATHER_INFO:
+    alert("Cidade não encontrada! :(")
     return Object.assign({}, state, {
     	isFetching: false,
     	didInvalidate: true,

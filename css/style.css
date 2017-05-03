@@ -1,0 +1,122 @@
+body{
+    background-color: #e0e0e0;
+}
+.climatempo{
+    background-color: #1565c0;
+    border: none;
+}
+.navbar-header .logo{
+    padding: 10px;
+}.navbar-header .logo img{
+    max-height: 30px;
+}  
+#content{
+    max-width: 1240px;
+    margin:0 auto;
+}
+
+#previsao div.dias > div{
+    padding:5px 0 0;
+    background-color: #FFF;
+    -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.65);
+    -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.65);
+    box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.65);
+    margin-bottom: 20px;
+    position: relative;
+}#previsao div.dias > div .data{
+    padding: 10px;
+}#previsao div.dias > div .texto{
+    padding: 10px;
+    min-height: 80px;
+    max-height: 80px;
+}
+#previsao div.dias > div .temp, #previsao div.dias > div .chuva{
+    background-color: #eeeeee;
+    padding: 15px 0 10px;
+}
+
+#previsao div.dias > div .temp .max, #previsao div.dias > div .temp .min, #previsao div.dias > div .chuva .max, #previsao div.dias > div .chuva .min{
+    line-height: 10px;
+    font-size: 2em;
+}
+
+#previsao div.dias > div .temp .max{
+    color: #cd4b4b;
+}#previsao div.dias > div .temp .min{
+    color: #087abe;
+}
+
+
+@media (min-width: 768px) {
+    .navbar-header .logo{
+        float:left;
+    }  
+    .navbar-header .logo img{
+        min-height: 30px;
+    }  
+}
+
+@media (max-width: 767px) {
+    #formBusca{
+        padding-top: 0;
+        border: none;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+   .navbar-nav .open .dropdown-menu {
+       position: static;
+       float: none;
+       width: auto;
+       margin-top: 0;
+       background-color: transparent;
+       border: 0;
+       -webkit-box-shadow: none;
+       box-shadow: none;
+    }
+	.navbar-nav > li > a {
+    		line-height: 20px!important;
+	    padding-top: 10px!important;
+    		padding-bottom: 10px!important;
+	}
+	.navbar-brand>img { 
+	  position:absolute!important;
+	  top: 0px!important;
+	  padding: 0px!important;
+	}
+}
+
+.loading {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,.8) url(../images/pre-loading.gif) 50% 50% no-repeat;
+}

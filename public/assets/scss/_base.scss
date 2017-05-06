@@ -1,0 +1,56 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0; 
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+    
+    -moz-appearance: none;
+    -o-appearance: none;
+    -webkit-appearance: none;
+
+    outline: none;
+}
+
+@font-face {
+    font-family: $font-family-base, Arial;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: $light-gray;
+    font-family: $font-family-base;
+    font-size: $size-base;
+    padding-top: 50px;
+}
+
+h2 {
+    color: $black;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: $size-base * .8;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.light-blue {
+    color: $light-blue;
+}
+
+.red {
+    color: $red;
+}

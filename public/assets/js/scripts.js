@@ -61,7 +61,7 @@ $(document).ready(function() {
 													"<img src=\"assets/images/icons/download.png\" alt=\"Temperatura Mínima\">" +
 												"</div>" +
 												"<div class=\"col col-3\">" +
-													"<span class=\"red\" id=\"temperatureMax\">" + weather.temperature.min + "ºC</span>" +
+													"<span class=\"red\" id=\"temperatureMax\">" + weather.temperature.max + "ºC</span>" +
 												"</div>" +
 											"</div>" +
 											"<div class=\"row\">" +

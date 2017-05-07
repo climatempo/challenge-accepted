@@ -24,7 +24,7 @@ Desenvolvimento de uma página web responsiva que permite ao usuário saber como
 
 # api.php
   
-  Ao submeter o formulário, é feita uma requisição ajax para ***api.php***, que por sua vez é reponsável por obter e retornar os dados do JSON relativos a cidade digitada no input.
+  Ao submeter o formulário, é feita uma requisição ajax para ***api.php***, que por sua vez é reponsável por obter e retornar os dados do JSON relacionados a cidade buscada.
 
 # Interface
   

@@ -7,14 +7,13 @@ Desenvolvimento de uma página web responsiva que permite ao usuário saber como
   > Lembrando da necessidade de instalação e configuração do Composer para acesso global
 
   ```
-  $ git@github.com:denilsonraimundo/challenge-accepted.git
+  $ git clone git@github.com:denilsonraimundo/challenge-accepted.git
   $ cd challenge-accepted
   $ composer install
-  $ php -S localhost:8080 -t public
+  $ php -S localhost:9000 -t public
   ```    
----
 
-# Ferramentas e tecnologias utilizadas
+# Ferramentas utilizadas
 
   - ### Gulp
     - gulp-sass

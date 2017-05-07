@@ -43,6 +43,12 @@
 	}
 } 
 
+.no-results {
+	margin-top: 50px;
+	padding-top: 25px;
+	@extend %center;
+}
+
 .weather {
 	margin-top: 50px;
 	padding: 25px 25px 45px;
@@ -55,7 +61,7 @@
     	@extend %float-left;
     	@include box-shadow(5px, 5px, 5px, #CCC);
   
-    	&:nth-child(4n +1) {
+    	&:nth-child(4n) {
     		margin-right: 0;
     	}
 
@@ -99,5 +105,41 @@
 	    		}
     		}
     	}
+	}
+}
+
+.arrow-up {
+	background-color: $blue;
+	bottom: 15px;
+	cursor: pointer; 
+	height: 35px;
+	right: 25px;
+	width: 35px;
+	@extend %display-block;
+	@extend %fixed;
+	@include border-radius-all(100%);
+	@include box-shadow(5px, 5px, 5px, #CCC);
+
+	span {
+		background-color: $white;
+		height: 3px;
+		left: 6px;
+		top: 15px;
+		width: 15px;
+		@extend %display-block;
+		@extend %relative;
+		@include rotates(-60deg);	
+
+		&:before {
+			background-color: $white;
+			content: " ";
+			height: 3px;
+			left: 4px;
+			top: 6px;
+			width: 15px;
+			@extend %display-block;
+			@extend %relative;
+			@include rotates(110deg);		
+		}
 	}
 }

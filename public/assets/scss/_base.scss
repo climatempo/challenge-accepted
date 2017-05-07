@@ -54,3 +54,12 @@ p {
 .red {
     color: $red;
 }
+
+.hidden {
+    @extend %display-none;
+}
+
+.opacity {
+    opacity: 0;
+    @include transitions(all ,1s);
+}

@@ -3,7 +3,7 @@
 		margin-right: 5% !important; 
 		width: 30% !important;
 
-    	&:nth-child(3n+1) {
+    	&:nth-child(3n) {
     		margin-right: 0 !important;
     	}
     }
@@ -13,11 +13,11 @@
 	.card {
 		width: 47.5% !important;
 
-		&:nth-child(3n+1) {
+		&:nth-child(3n) {
     		margin-right: 5% !important;
     	}
 
-    	&:nth-child(2n+1) {
+    	&:nth-child(2n) {
     		margin-right: 0 !important;
     	}
     }

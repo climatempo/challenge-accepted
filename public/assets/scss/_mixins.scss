@@ -5,6 +5,13 @@
     -o-border-#{$direction}-radius: $radius;
 }
 
+@mixin border-radius-all($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+
 @mixin box-shadow($v1, $v2, $v3, $color) {
     box-shadow: $v1 $v2 $v3 $color;
     -webkit-box-shadow: $v1 $v2 $v3 $color;
@@ -16,4 +23,11 @@
     -webkit-transition: $property $time;
     -moz-transition: $property $time;
     -o-transition: $property $time;
+}
+
+@mixin rotates($deg) {
+    transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
 }

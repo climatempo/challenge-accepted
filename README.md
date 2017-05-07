@@ -144,6 +144,12 @@ O processo do desafio deve ser:
 
 
 ___
-
+ore sugar jar
 
 Qualquer dúvida entre em contato com nossa equipe.
+
+
+# Trás o JSON com as localizações
+http://localhost/challenge-accepted/index.php/api/query/locales
+
+

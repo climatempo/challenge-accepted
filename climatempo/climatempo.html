@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Climatempo</title>
+</head>
+<body>
+
+	<h1>Climatempo</h1>
+
+	<div class="previsoes"></div>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$.getJSON("https://raw.githubusercontent.com/climatempo/challenge-accepted/master/base/weather.json", function (localidades) {
+
+			$.each(localidades, function (chave, localidade) {
+
+				var previsao = [];
+
+				previsao.push('<h2>' + localidade.locale.name + '</h2>');
+
+				$.each(localidade.weather, function(chave, dia) {
+
+					previsao.push('<ul>')
+					previsao.push('<li>Previsão para o dia ' + dia.date + ': ' + dia.text + '</li>');
+					previsao.push('<li>Temperaturas entre ' + dia.temperature.min + ' e ' + dia.temperature.max + ' °C</li>');
+					previsao.push('<li>' + dia.rain.probability + '% de probabilidade de ' + dia.rain.precipitation + ' mm de chuva</li>');
+					
+
+				});
+				previsao.push('</ul>');
+				$(".previsoes").append(previsao);
+
+			})
+		});
+	</script>
+</body>
+</html>

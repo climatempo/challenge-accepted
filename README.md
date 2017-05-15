@@ -137,9 +137,6 @@ O processo do desafio deve ser:
 
 5. Envie um e-mail para fullstack@climatempo.com.br com seu **curriculo, pretensão salarial e o link do seu pull request**.
 
-5. Após avaliação vamos declinar o pull request e enviar um feedback.
-
-
 
 ___
 

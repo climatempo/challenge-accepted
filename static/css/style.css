@@ -1,0 +1,152 @@
+body {
+    background-color: #d0d0d0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#container {
+    margin: auto;
+    border: 1px solid #D0D0D0;
+    box-shadow: 0 0 8px #D0D0D0;
+    max-width: 768px;
+}
+button, input, select {
+    margin: 0;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    -webkit-font-smoothing: inherit;
+    background-image: none;
+}
+header{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    margin: 0;
+    max-width: 768px;
+}
+@media only screen and (max-width: 770px) {
+    header{
+        left:0;
+    }
+}
+section{
+    margin-top: 93px;
+}
+.btn-search{
+    background: transparent url('../image/search.png');
+    border: 0;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+header .logo{
+    background-color: #387ef5;
+    text-align: center;
+    padding: 10px 30px;
+}
+@media only screen and (min-width: 801px) {
+    header .logo img {
+        width: 30%;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 800px) {
+    header .logo img {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+.search{
+    position: relative;
+    padding: 5px;
+    height: 40px;
+    background-color: #fff;
+}
+.search input{
+    width: 90%;
+    margin: 0;
+    border: 0;
+    height: 20px;
+    padding: 10px 0px 10px 10px;
+    position: absolute;
+    font-size: 1em;
+}
+.search button{
+    width: 40px;
+    height: 40px;
+    right:5px;
+    position: absolute;
+}
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 5px;
+    width: 100%;
+}
+.col {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: block;
+    padding: 5px;
+    width: 100%;
+}
+#cards{
+    padding: 10px;
+}
+.card{
+    background-color: #dedede;
+    margin-bottom: 40px;
+    box-shadow: 0 0 9px #a5a5a5;
+}
+.card .title{
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+}
+.card .weather{
+    text-align: center;
+    font-size: 1.4em;
+    padding: 15px;
+}
+.icon-max-c:before{
+    background: url('../image/upload.png');
+    padding: 0px 16px;
+    content: close-quote;
+    background-repeat: no-repeat;
+}
+.icon-min-c:before{
+    background: url('../image/download.png');
+    padding: 0px 16px;
+    content: close-quote;
+    background-repeat: no-repeat;
+}
+.icon-waterdrop:before{
+    background: url('../image/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png');
+    padding: 0px 16px;
+    content: close-quote;
+    background-repeat: no-repeat;
+}
+.icon-umbrella:before{
+    background: url('../image/raindrop-close-up.png');
+    padding: 0px 16px;
+    content: close-quote;
+    background-repeat: no-repeat;
+}
+.assertive {
+    color: #ef473a;
+}
+.positive {
+    color: #387ef5;
+}
+.card{
+    display: none;
+}

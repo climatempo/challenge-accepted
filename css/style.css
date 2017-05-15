@@ -1,0 +1,78 @@
+.navbar-header, .navbar-brand {
+	float: none;
+}
+
+.navbar > .container {
+	text-align: center;
+}
+
+.navbar {
+	background-color: #1565C0;
+}
+
+body {
+	background-color: #F5F5F5;
+	margin-bottom: 52px;
+	margin-top: 70px;
+}
+
+.weather-card {
+	box-shadow: 10px 10px 5px #888888;
+	background-color: white;
+	margin-bottom: 30px;
+}
+
+.weather-card > div {
+	padding: 10px;
+}
+
+.card-header {
+	height: 103px;
+}
+
+.subcard {
+	background-color: lightgrey;
+	text-align: center;
+}
+
+.subcard > div > div {
+	display: inline-block;
+}
+
+.subcard > div:nth-child(1){
+	margin-bottom: 20px;
+}
+
+.subcard > div > div:nth-child(1){
+	margin-right: 25px;
+}
+
+.subcard > div > div > span {
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+.color-blue {
+	color: #1565C0;
+}
+
+.color-red {
+	color: red;
+}
+
+a { color: white; } 
+
+.navbar-header > a {
+	font-size: 36px;
+	margin-right: 10px;
+}
+
+.about > a:hover {
+	color: black;
+}
+
+@media (max-width: 767px) and (min-width: 550px) {
+  .weather-card {
+    margin: 30px 100px 30px 100px;
+  }
+}

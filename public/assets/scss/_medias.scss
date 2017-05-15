@@ -1,0 +1,42 @@
+@media screen and (max-width: 1280px) {
+	.card {
+		margin-right: 5% !important; 
+		width: 30% !important;
+
+    	&:nth-child(3n) {
+    		margin-right: 0 !important;
+    	}
+    }
+}
+
+@media screen and (max-width: 960px) {
+	.card {
+		width: 47.5% !important;
+
+		&:nth-child(3n) {
+    		margin-right: 5% !important;
+    	}
+
+    	&:nth-child(2n) {
+    		margin-right: 0 !important;
+    	}
+    }
+}
+
+@media screen and (max-width: 640px) {
+	.weather {
+		.card {
+			float: none;
+    		margin-right: 0 !important;
+			width: 100% !important;
+
+			.panel-top {
+				height: 40%;
+			}
+
+			.panel-bottom {
+				height: 60%;
+			}
+		}
+    }
+}

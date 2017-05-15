@@ -1,0 +1,145 @@
+.top {
+	background-color: $blue;
+	height: 50px; 
+	top: 0; 
+	width: 100%;
+	z-index: 99;
+	@extend %display-flex; 
+	@extend %justify-content;
+	@extend %align-items;  
+	@extend %fixed;
+
+	figure {
+		margin-top: 5px;
+		z-index: 99999999;
+		@extend %center;
+	}
+} 
+
+.form {
+	top: 50px;
+	width: 100%;
+	@extend %fixed;
+
+	input {
+		color: $gray;
+		font-family: $font-family-base;
+		font-size: $size-base * 1.2;
+		padding: 15px 25px;
+		width: 100%;
+	}
+
+	button {
+		background: url("../images/icons/search.png") center no-repeat;
+		height: 100%;
+		right: 25px;
+		top: 0;
+		width: 50px;
+		@extend %absolute;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+} 
+
+.no-results {
+	margin-top: 50px;
+	padding-top: 25px;
+	@extend %center;
+}
+
+.weather {
+	margin-top: 50px;
+	padding: 25px 25px 45px;
+
+	.card {
+		height: 230px;
+		margin-top: 30px;
+		margin-right: 2.66%;
+    	width: 23%;
+    	@extend %float-left;
+    	@include box-shadow(5px, 5px, 5px, #CCC);
+  
+    	&:nth-child(4n) {
+    		margin-right: 0;
+    	}
+
+    	.panel-top {
+    		background-color: $white;
+    		height: 35%;
+    		padding: 10px 15px 0 15px;
+    		@include border-radius(5px, top-left);
+    		@include border-radius(5px, top-right);
+    	}
+
+    	.panel-bottom {
+    		background-color: $very-light-gray;
+    		height: 65%;
+    		padding: 15px;
+    		@include border-radius(5px, bottom-left);
+    		@include border-radius(5px, bottom-right);
+
+    		.row {
+    			height: 50%;
+
+    			.col {
+    				height: 100%;
+    				@extend %float-left;
+    				@extend %display-flex; 
+					@extend %justify-content;
+					@extend %align-items; 
+
+	    			&.col-2 {
+	    				width: 20%;
+	    			}
+
+	    			&.col-3 {
+	    				width: 30%;
+	    			}
+
+	    			span {
+	    				font-size: $size-base * 1.2;
+	    				font-weight: bold;
+	    			}
+	    		}
+    		}
+    	}
+	}
+}
+
+.arrow-up {
+	background-color: $blue;
+	bottom: 15px;
+	cursor: pointer; 
+	height: 35px;
+	right: 25px;
+	width: 35px;
+	@extend %display-block;
+	@extend %fixed;
+	@include border-radius-all(100%);
+	@include box-shadow(5px, 5px, 5px, #CCC);
+
+	span {
+		background-color: $white;
+		height: 3px;
+		left: 6px;
+		top: 15px;
+		width: 15px;
+		@extend %display-block;
+		@extend %relative;
+		@include rotates(-60deg);	
+
+		&:before {
+			background-color: $white;
+			content: " ";
+			height: 3px;
+			left: 4px;
+			top: 6px;
+			width: 15px;
+			@extend %display-block;
+			@extend %relative;
+			@include rotates(110deg);		
+		}
+	}
+}

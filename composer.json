@@ -1,0 +1,18 @@
+{
+    "name": "climatempo",
+    "description": "Climatempo Challenge Accepted",
+    "keywords": ["challenge", "climatempo"],
+    "authors": [
+        {
+            "name": "Denilson Raimundo"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "autoload": {
+    	"psr-4": {
+            "Climatempo\\": "src/Climatempo"
+        }
+    }
+}

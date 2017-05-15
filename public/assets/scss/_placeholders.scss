@@ -1,0 +1,42 @@
+%display-block {
+	display: block;
+}
+
+%display-none {
+	display: none;
+}
+
+%display-flex {
+	display: flex; 
+	display: -webkit-flex;
+}
+
+%align-items {
+  	align-items: center;
+	-webkit-align-items: center;
+}
+
+%justify-content {
+  	-webkit-justify-content: center;
+  	justify-content: center;
+}
+
+%center {
+	text-align: center;
+}
+
+%fixed {
+	position: fixed;
+}
+
+%relative {
+	position: relative;
+}
+
+%absolute {
+	position: absolute;
+}
+
+%float-left {
+	float: left;
+}

@@ -1,0 +1,6 @@
+<div class="form-group">
+    <label>Escolha a cidade</label>
+    <select class="form-control" ng-model="filtro" ng-change="getweather()">
+        <option ng-repeat="local in locales" value="{{local.name}}">{{local.name}}</option>
+    </select>
+</div>

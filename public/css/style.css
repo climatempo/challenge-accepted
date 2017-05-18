@@ -1,0 +1,74 @@
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+
+body{
+    background-color: lightgray;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.fontdate {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.fontdetail{
+    font-size: .85em;
+}
+
+.cabecalho{
+    background-color: blue;
+    margin-bottom: 1px;
+}
+
+.cabecalho > p{
+    color:white;
+    margin: 0px !important;
+    font-size: 1.5em;
+}
+
+.pesq{
+    border : none;
+    background-color: white;
+    border-radius: 0px;
+    height: 34px;
+}
+
+.panel-heading{
+    min-height: 115px;
+}
+
+.panel-body{
+    background-color:#eee; 
+    font-size: 1.3em;
+}
+
+.col-xs-6{
+    padding: 5px;
+}
+
+.navbar{
+    margin-bottom: 0px;
+}
+
+i.fa{
+    float:right;
+}
+
+.alert{
+    text-align: center;
+}

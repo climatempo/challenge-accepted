@@ -3,8 +3,8 @@
 1- Instalar o Servidor Node (https://nodejs.org/en/)
 
 2- Acessar a pasta do projeto via linha de comando (CMD) e digitar:
-  >npm install -save express
-  >npm start
+  npm install -save express (enter)
+  npm start (enter)
 
 3- Acessar http://localhost:3000
 

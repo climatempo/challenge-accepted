@@ -1,0 +1,57 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    max-width: 50% !important;
+    height: auto;
+    display: block;
+}
+
+.md-autocomplete-icon-search md-autocomplete-wrap:after {
+    font-family: "FontAwesome";
+    content: "\f002";
+    line-height: 1;
+    padding: 8px 8px 0px 0px;
+    font-weight: normal;
+    font-size: 1.5em;
+    color: #000000;
+}
+
+.header h2 {
+    padding-left: 15px;
+}
+
+.header h3 {
+    padding-left: 15px;
+}
+
+.cards-content {
+    background-color: #E0E0E0;
+}
+
+.cards-content .card-header {
+    background-color: #FFFFFF;
+}
+
+.weather-item {
+    font-size: 1em;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.weather-item-detail {
+    background-color: #EEEEEE;
+    font-size: 1.5em;
+}
+
+.temperature-max {
+    color: #C83939;
+}
+
+.temperature-min {
+    color: #1B83C1;
+}

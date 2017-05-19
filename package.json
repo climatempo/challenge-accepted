@@ -1,0 +1,19 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "Sistema para Consulta de Previsão de Tempo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pedro Guerreiro",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.1",
+    "express-load": "^1.1.15",
+    "mocha": "^3.2.0",
+    "moment": "^2.17.1"
+  }
+}

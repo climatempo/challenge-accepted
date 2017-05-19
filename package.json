@@ -1,0 +1,30 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">   <a href=\"http://www.climatempo.com.br\">       <img src=\"http://i.imgur.com/Q9lCAMF.png\" alt=\"Climatempo\" width=\"300px\"/>   </a> </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guvitorino/challenge-accepted.git"
+  },
+  "author": "Gustavo Vitorino <gustavo.vittorino@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guvitorino/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/guvitorino/challenge-accepted#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "moment": "^2.17.1",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "mockery": "^2.0.0",
+    "sinon": "^1.17.7"
+  }
+}

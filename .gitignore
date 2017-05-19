@@ -13,6 +13,9 @@
 # Email spool folder
 /app/spool/*
 
+# Bower Components
+/public/bower_components/
+
 # Cache, session files and logs (Symfony3)
 /var/cache/*
 /var/logs/*

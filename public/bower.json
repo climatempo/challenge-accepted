@@ -1,0 +1,16 @@
+{
+  "name": "climatempo",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "materialize": "^0.98",
+    "highcharts": "^5.0.7",
+    "moment": "^2.17.1",
+    "datatables.net": "^1.10.12",
+    "fontawesome": "^4.7.0"
+  }
+}

@@ -1,0 +1,47 @@
+body{
+  background-color: #EEEEEE;
+
+}
+
+.input-field label {
+     color: #000;
+   }
+.input-field input[type=text]:focus + label {
+     color: #0D47A1;
+   }
+
+  /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #0D47A1;
+     box-shadow: 0 1px 0 0 #0D47A1;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #0D47A1;
+   }
+
+  .dropdown-content li>a, .dropdown-content li>span {
+    font-size: 16px;
+    color: #0D47A1;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+
+.weather-value{
+  font-size: 25px
+}
+
+.weather-value img{
+  max-height: 25px;
+}

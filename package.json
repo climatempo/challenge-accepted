@@ -1,0 +1,23 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "Desafio de recrutamento da Climatempo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HigorSilvaRosa/challenge-accepted.git"
+  },
+  "author": "Higor Silva Rosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HigorSilvaRosa/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/HigorSilvaRosa/challenge-accepted#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "supertest": "^3.0.0"
+  }
+}

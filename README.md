@@ -43,18 +43,18 @@ IMPORTANTE:
 
 ### O Desafio
 
-Um usuário quer saber como vai ficar o 
+Um usuário quer saber como vai ficar o
 tempo para os próximos dias em Osasco e São Paulo utilizando
-seu smartphone. 
+seu smartphone.
 
 O que esperamos:
- 
+
  - Uma página responsiva para mobile (Qualquer resolução);
  - Um campo para buscar localidades;
  - Um card para cada dia de previsão de chuva, temperatura e o texto para a localidade buscada;
  - Uma API com endpoints para buscar localidades e previsão fazendo leitura dos JSONs no diretório base;
  - Testes (Pode ser teste de unidade ou funcional).
- 
+
 Exemplo:
 
 <p align="center">
@@ -64,15 +64,15 @@ Exemplo:
 </p>
 
 **Atenção:**  Não se preocupe em reproduzir o exemplo, use apenas como referência.
- 
+
 ### Dados
 
 A API deve fazer a leitura dos dados dos JSONs no diretório base.
- 
+
 Localidades:
-    
+
     base/locales.json
- 
+
 | Propriedade   | Tipo   | Descrição                           |
 | ------------- |:------:| ------------------------------------|
 | `id`          | Number | Id da localidade                    |
@@ -80,25 +80,25 @@ Localidades:
 | `state`       | String | Sigla do estado da localidade       |
 | `latitude`    | Number | Latitude do centro da localidade    |
 | `longitude`   | Number | Longitude do centro da localidade   |
- 
- 
+
+
 Os dados de previsão estão no JSON:
- 
+
     base/weather.json
-    
+
 **period: Object**
- 
+
 | Propriedade        | Tipo   | Descrição                                  |
 | ------------------ |:------:| -------------------------------------------|
 | `period.begin`     | String | Data início da busca no formato AAAA-MM-DD |
 | `period.end `      | String | Data fim  da busca no formato AAAA-MM-DD   |
 
 **locale: Object**
- 
+
 Os mesmos dados do JSON de localidades.
- 
+
 **weather: Object**
- 
+
 | Propriedade                     | Tipo   | Descrição                                  |
 | ------------------------------- |:------:| -------------------------------------------|
 | `weather.date`                  | String | Data da previsão no formato AAAA-MM-DD     |

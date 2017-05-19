@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar color='light'>
+    <ion-title text-center><img src="../assets/images/logo.png" alt=""></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar padding (input)="getItems($event)" placeholder="Entre com a sua cidade..."></ion-searchbar>
+
+  <ion-title text-left>Previsao para {{data}}</ion-title>
+
+  <div *ngFor="let item of localeWeather">
+
+    <ion-card>
+      <ion-card-header>
+       {{ item.date | date: 'dd/MM/yyyy' }}
+      </ion-card-header>
+      <p margin>
+        {{ item.text}}
+      </p>
+
+
+      <ion-card-content>
+        <ion-row>
+          <ion-col padding>
+            <img src="../assets/images/icons/download.png" alt="">
+          </ion-col>
+          <ion-col padding>
+            <span margin class="blue">{{ item.temperature.max}}°C</span>
+          </ion-col>
+
+          <ion-col padding>
+            <img src="../assets/images/icons/upload.png" alt="">
+          </ion-col>
+          <ion-col padding>
+            <span margin class="red">{{ item.temperature.min}}°C</span>
+          </ion-col>
+        </ion-row>
+
+        <ion-row >
+          <ion-col padding>
+            <img src="../assets/images/icons/raindrop-close-up.png" alt="">
+          </ion-col>
+          <ion-col padding>
+            <span>{{ item.rain.precipitation}}mm</span>
+          </ion-col>
+
+          <ion-col padding>
+            <img src="../assets/images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" alt="">
+          </ion-col>
+          <ion-col padding>
+            <span>{{ item.rain.precipitation}}%</span>
+          </ion-col>
+        </ion-row>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

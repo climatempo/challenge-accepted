@@ -1,0 +1,30 @@
+{
+  "name": "challenge-accepted",
+  "version": "0.0.1",
+  "description": "<p align=\"center\">   <a href=\"http://www.climatempo.com.br\">       <img src=\"http://i.imgur.com/Q9lCAMF.png\" alt=\"Climatempo\" width=\"300px\"/>   </a> </p>",
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul cover _mocha -- -R spec",
+    "start": "./node_modules/.bin/nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yesroh/challenge-accepted.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yesroh/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/yesroh/challenge-accepted#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.15.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "express": "^4.14.1",
+    "nodemon": "^1.11.0"
+  }
+}

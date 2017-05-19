@@ -1,0 +1,46 @@
+{
+    "env": {
+        "browser": false,
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "globals": {
+      "console": true,
+      "__dirname": true,
+      "it": true,
+      "describe": true
+    },
+    "rules": {
+      "eqeqeq": ["error", "smart"],
+      "camelcase": ["off", {"properties": "always"}],
+      "semi": ["error","always"],
+      "curly": "error",
+      "prefer-const": "warn",
+      "no-const-assign": "error",
+      "no-console": "warn",
+      "no-var": "error",
+      "padded-blocks": ["off", "always"],
+      "operator-assignment": ["error", "always"],
+      "no-cond-assign": ["error","always"],
+      "key-spacing": [
+        "error",
+        {
+          "beforeColon": false,
+          "afterColon": true,
+          "mode": "minimum",
+          "align": "value"
+        }
+      ],
+      "no-multi-spaces": [
+        "error", {
+          "exceptions": {
+            "VariableDeclarator": true
+          }
+        }
+      ]
+    }
+}

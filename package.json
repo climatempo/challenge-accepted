@@ -1,0 +1,33 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">   <a href=\"http://www.climatempo.com.br\">       <img src=\"http://i.imgur.com/Q9lCAMF.png\" alt=\"Climatempo\" width=\"300px\"/>   </a> </p>",
+  "main": "app.js",
+  "scripts": {
+    "start": "node cluster.js",
+    "test": "mocha ./test",
+    "cover": "istanbul cover _mocha -- ./test/* --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1fabiopereira/challenge-accepted.git"
+  },
+  "author": "Fábio Pereira <fabio.pereira.gti@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1fabiopereira/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/1fabiopereira/challenge-accepted#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "istanbul": "^0.4.5"
+  }
+}

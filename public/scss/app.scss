@@ -1,0 +1,49 @@
+.half-block{
+  float: left;
+  text-align: center;
+  width: 49%;
+}
+
+.card-wrapper {
+  border: 1px solid;
+  height: 125px;
+  padding: 15px;
+
+  .card-header{
+    line-height: 1.5;
+  }
+
+  .card-body{
+    line-height: 1.5;
+    background-color: #7f7f7f;
+  }
+
+  .card-date {
+    color: #000;
+    text-align: left;
+  }
+
+  .card-text {
+
+  }
+
+  .card-rain {
+    .precipitation {
+      @extend .half-block
+    }
+
+    .probability {
+      @extend .half-block
+    }
+  }
+
+  .card-temperature {
+    .max {
+      @extend .half-block
+    }
+
+    .min {
+      @extend .half-block
+    }
+  }
+}

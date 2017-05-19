@@ -1,0 +1,6 @@
+[submodule "climate-api"]
+	path = climate-api
+	url = https://github.com/viniciusps2/climate-api.git
+[submodule "climate-ui"]
+	path = climate-ui
+	url = https://github.com/viniciusps2/climate-ui.git

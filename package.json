@@ -17,12 +17,7 @@
   },
   "homepage": "https://github.com/diegohideky/challenge-accepted#readme",
   "dependencies": {
-    "body-parser": "^1.16.0",
-    "cookie-parser": "^1.4.3",
-    "ejs": "^2.5.5",
-    "express": "^4.14.1",
-    "express-handlebars": "^3.0.0",
-    "moment": "^2.17.1",
-    "morgan": "^1.8.0"
+    "ejs": "^2.5.6",
+    "express": "^4.15.3"
   }
 }

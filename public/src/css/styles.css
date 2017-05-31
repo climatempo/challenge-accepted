@@ -1,0 +1,12 @@
+.nav-logo {
+    padding: 10px;
+    width: 250px;
+}
+
+.max > .fa {
+    color: #D32F2F;
+}
+
+.min > .fa {
+    color: #0059bc;
+}

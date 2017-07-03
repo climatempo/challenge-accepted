@@ -27,7 +27,7 @@ Na primeira vez que a página é carregada, ela busca a previsão do tempo para 
 ### Requisitos
 - Node js v4+
 - Meteor
-- Npm 
+- Npm
 
 ### Instalando o meteor
 - Basta seguir a instalação de acordo com o seu OS através deste [link](https://www.meteor.com/install)
@@ -50,7 +50,8 @@ a API  ja está rodando na porta 5000, mas ainda precisamos subir o meteor
 Navege até a pasta *app* e execute os seguintes comandos:
 ```sh
 $ meteor npm install --save moment
-$ meteor meteor add http && meteor add fortawesome:fontawesome && meteor meteor add session && meteor add mizzao:bootstrap-3    
+$ npm install --save babel-runtime
+$ meteor add http && meteor add fortawesome:fontawesome && meteor add session && meteor add mizzao:bootstrap-3    
 ```
 
 ```sh

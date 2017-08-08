@@ -1,0 +1,27 @@
+{
+  "name": "Climatempo",
+  "version": "1.0.0",
+  "description": "API Climatempo in NodeJS with RestifyJS.",  
+  "author": "Hugo Ferreira",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.8.1",
+    "express": "^4.15.2",
+    "passport": "^0.3.2",
+    "passport-accesstoken": "^0.1.0",
+    "restify": "^4.1.0"
+  },
+  "directories": {
+    "doc": "doc"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "null"
+  },
+  "keywords": [
+    "previsao",
+    "do",
+    "tempo"
+  ]
+}

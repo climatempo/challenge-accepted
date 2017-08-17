@@ -38,7 +38,6 @@ Requisitos para a vaga, bons conhecimentos em:
 IMPORTANTE:
 
 - Residir em Jacarei, Caçapava, Taubaté ou São José dos Campos
-- Ter pelo menos 1 ano de experiência comprovada
 
 
 ### O Desafio

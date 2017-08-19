@@ -1,7 +1,11 @@
 var _bscAjax = false;
 
 $(window).on("load", function() {
-    if ($('#txtBscCity').val()) $(".js-busca-ajax").trigger("submit");
+    if ($('#txtBscCity').val()) {
+        setTimeout(function() {
+            $(".js-busca-ajax").trigger("submit");
+        }, 250);
+    }
 });
 
 $(document).ready(function() {

@@ -11,15 +11,18 @@ Desenvolvimento de uma aplicação web/mobile que disponibiliza a previsão do t
 $ git clone https://github.com/LucasPortoDeDeus/challenge-accepted.git
 $ cd challenge-accepted
 $ composer install
-$ npm init
-$ gulp
+$ npm install
 $ php -S localhost:3000 -t public
 ```
+Após esses procedimentos é só acessar a rota <b>search-weather/</b>, ficando da seguinte forma: <strong>localhost:3000/search-weather/</strong>.
+É possível informa um terceiro parâmetro: <b>cidade</b> - Não obrigatório.
+Caso esse parâmetro exista a aplicação já realizará a busca logo ao acessar a página.
+Ex.: <strong>localhost:3000/search-weather/São Paulo</strong>
+
 
 ## Rodando o gulp
- > **Caso o servidor do php esteja em execução, será necessário abrir outro terminal.
+ > ** Talves seja necessário abrir outro terminal devido a execução do servido do php. Só será necessário o procedimento abaixo caso haja necessidade de modificação no estilo da aplicação.
 ```
-$ cd challenge-accepted
 $ gulp
 ```
 

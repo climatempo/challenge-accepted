@@ -14,10 +14,13 @@ $ composer install
 $ npm install
 $ php -S localhost:3000 -t public
 ```
+
+# Endpoint
 Após esses procedimentos é só acessar a rota <b>search-weather/</b>. Ficará da seguinte forma: <strong>localhost:3000/search-weather/</strong>.
-É possível informa um terceiro parâmetro: <b>cidade</b> *Não obrigatório.
+É possível informa um terceiro parâmetro: <b>cidade</b>. O parâmetro não é obrigatório.
 Caso esse parâmetro exista a aplicação já realizará a busca logo ao acessar a página.
 Ex.: <strong>localhost:3000/search-weather/São Paulo</strong>
+A busca é realizada através de uma requisição - POST - no seguinte endpoint: /search/weather
 
 
 ## Rodando o gulp
@@ -39,9 +42,6 @@ $ gulp
  - ### jQuery
     - moment
     - jQuery UI
-
-# Endpoint
-Ao acessar o endpoint 'search-weather/[city]' e passar a cidade a busca já será realiza no instante em que a página carregar, o parâmetro não é obrigatório. A busca é realizada através de uma requisição ajax - POST - no seguinte endpoint: /search/weather
 
 # Template
 A aplicação utiliza o PhpRenderer do Slim que facilitando a gestão do front-end.

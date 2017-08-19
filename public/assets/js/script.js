@@ -32,6 +32,7 @@ $(document).ready(function() {
 
                 if (response.error == true) {
                     $('.js-msg').text(response.message).fadeIn('fast');
+                    $('.js-dados-card').html('');// Limpar busca
                     return false;
                 }
 
@@ -43,6 +44,7 @@ $(document).ready(function() {
         .fail(function(error) {
             _bscAjax = false;
             loadDisable();
+            $('.js-dados-card').html('');// Limpar busca
             $('.js-msg').text('Falha de processamento da requisição. Tente novamente mais tarde.').fadeIn('fast');
             console.log(error);
         });

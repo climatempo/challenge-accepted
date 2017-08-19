@@ -92,4 +92,22 @@ class WeatherLocale extends FileReader
             }
         }
     }
+
+    /**
+     * @listCities
+     * @return array Retorna um array com as cidades.
+     */
+    public function listCities()
+    {
+        $data = parent::getDataFile();
+        $i    = 0;
+        $arr  = [];
+
+        foreach ($data as $obj) {
+            $arr[$i] = $obj->name;
+            ++$i;
+        }
+
+        return $arr;
+    }
 }

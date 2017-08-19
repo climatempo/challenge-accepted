@@ -2,9 +2,11 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Informações sobre o tempo nas cidade</title>
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="<?= ST_URL . '/public/assets/css/style.min.css';?>" />
 </head>
 <body>
@@ -16,7 +18,7 @@
         <form class="js-busca-ajax" action="<?= ST_URL . '/search/weather' ?>" method="POST" accept-charset="utf-8">
             <fieldset class="frm-busca">
                 <input type="hidden" name="path" id="path" value="<?= ST_URL;?>">
-                <input type="search" class="frm-txt" name="txtBscCity" id="txtBscCity" value="<?= $city; ?>" placeholder="Ex.: São Paulo" />
+                <input type="search" class="frm-txt" name="txtBscCity" id="txtBscCity" value="<?= $city; ?>" placeholder="Ex.: São Paulo" required />
                 <input type="submit" name="btnBsc" value="" />
             </fieldset>
         </form>
@@ -35,8 +37,16 @@
 
     <!-- Script -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/br.js"></script>
     <script src="<?= ST_URL . '/public/assets/js/script.js';?>"></script>
+
+    <script>
+        var arrCities = <?= isset($arrayCity) ? json_encode($arrayCity) : ''; ?>;
+        $("#txtBscCity").autocomplete({
+          source: arrCities
+        });
+    </script>
 </body>
 </html>

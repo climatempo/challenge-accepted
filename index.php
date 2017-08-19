@@ -14,6 +14,9 @@ $container['view'] = new \Slim\Views\PhpRenderer("./public/views/");
 $app->get('/search-weather/[{city}]', function ($request, $response) {
     $vars['city'] = Helpers::formatText($request->getAttribute('city'));
 
+    $objCity = new \model\WeatherLocale;
+    $vars['arrayCity'] = $objCity->listCities();
+
     $response = $this->view->render($response, 'search-weather.phtml', $vars);
 
     return $response;
@@ -22,6 +25,12 @@ $app->get('/search-weather/[{city}]', function ($request, $response) {
 $app->post('/search/weather', function ($request, $response) {
     $dataRequest = $request->getParsedBody();
     $city = Helpers::valorArray($dataRequest, 'txtBscCity');
+
+    if (!$city) {
+        $arrRet['error'] = true;
+        $arrRet['message'] = 'Por favor, informe uma cidade.';
+        Helpers::retornarAjax($arrRet);
+    }
 
     $locale = new \model\WeatherLocale;
     $locale->setName($city);

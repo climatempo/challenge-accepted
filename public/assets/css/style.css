@@ -64,6 +64,9 @@ p {
   width: 100%;
   font-size: 1.2em;
   color: #5e5e5e;
+  border-radius: none;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 .frm-busca [type='submit'] {
@@ -200,4 +203,21 @@ p {
   max-width: 18px;
   vertical-align: top;
   margin-left: 6px;
+}
+
+@media screen and (max-width: 1099px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  [class*="card-"] {
+    width: 100%;
+    margin-right: 0;
+  }
 }

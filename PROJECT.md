@@ -8,7 +8,7 @@ Desenvolvimento de uma aplicação web/mobile que disponibiliza a previsão do t
 > ** É necessário ter instalado o composer e node, dê preferencia a forma global.
 
 ```
-$ git clone git@github.com:LucasPortoDeDeus/challenge-accepted.git
+$ git clone https://github.com/LucasPortoDeDeus/challenge-accepted.git
 $ cd challenge-accepted
 $ composer install
 $ npm init

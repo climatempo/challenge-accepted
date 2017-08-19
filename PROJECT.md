@@ -14,14 +14,14 @@ $ composer install
 $ npm install
 $ php -S localhost:3000 -t public
 ```
-Após esses procedimentos é só acessar a rota <b>search-weather/</b>, ficando da seguinte forma: <strong>localhost:3000/search-weather/</strong>.
-É possível informa um terceiro parâmetro: <b>cidade</b> - Não obrigatório.
+Após esses procedimentos é só acessar a rota <b>search-weather/</b>. Ficará da seguinte forma: <strong>localhost:3000/search-weather/</strong>.
+É possível informa um terceiro parâmetro: <b>cidade</b> *Não obrigatório.
 Caso esse parâmetro exista a aplicação já realizará a busca logo ao acessar a página.
 Ex.: <strong>localhost:3000/search-weather/São Paulo</strong>
 
 
 ## Rodando o gulp
- > ** Talves seja necessário abrir outro terminal devido a execução do servido do php. Só será necessário o procedimento abaixo caso haja necessidade de modificação no estilo da aplicação.
+ > ** Talvez seja necessário abrir outro terminal devido a execução do servidor do php. Só será necessário o procedimento abaixo caso haja necessidade de modificação no estilo da aplicação.
 ```
 $ gulp
 ```

@@ -1,0 +1,24 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r   <a href=\"http://www.climatempo.com.br\">\r       <img src=\"http://i.imgur.com/Q9lCAMF.png\" alt=\"Climatempo\" width=\"300px\"/>\r   </a>\r </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasPortoDeDeus/challenge-accepted.git"
+  },
+  "author": "Lucas Porto de Deus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasPortoDeDeus/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/LucasPortoDeDeus/challenge-accepted#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "lukas/challenge-accepted",
+    "authors": [
+        {
+            "name": "Lucas Porto de Deus",
+            "email": "lukas_porto2@hotmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.8",
+        "slim/php-view": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "classes/"
+        }
+    }
+}

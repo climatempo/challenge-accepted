@@ -1,0 +1,4 @@
+
+@function calcCol($qtd) {
+    @return calc($qtd / 100%);
+}

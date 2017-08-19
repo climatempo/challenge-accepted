@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Informações sobre o tempo nas cidade</title>
+
+    <link rel="stylesheet" href="<?= ST_URL . '/public/assets/css/style.min.css';?>" />
+</head>
+<body>
+    <main>
+        <nav class="nav-top">
+            <a href="<?= ST_URL . '/search-weather/'; ?>" title="clima tempo"><img src="<?= ST_URL . '/images/logo-white.png' ?>" /></a>
+        </nav>
+
+        <form class="js-busca-ajax" action="<?= ST_URL . '/search/weather' ?>" method="POST" accept-charset="utf-8">
+            <fieldset class="frm-busca">
+                <input type="hidden" name="path" id="path" value="<?= ST_URL;?>">
+                <input type="search" class="frm-txt" name="txtBscCity" id="txtBscCity" value="<?= $city; ?>" placeholder="Ex.: São Paulo" />
+                <input type="submit" name="btnBsc" value="" />
+            </fieldset>
+        </form>
+
+        <div class="container" id="page-load">
+            <div class="content js-load">
+                <h1 class="js-msg"></h1>
+
+                <div class="js-dados-card"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="load"><span>Aguarde <img src="<?= ST_URL . '/images/loading.gif'; ?>" /></span></div>
+
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/br.js"></script>
+    <script src="<?= ST_URL . '/public/assets/js/script.js';?>"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700");
+html,
+body {
+  background: #e0e0e0;
+  font-family: 'Roboto', sans-serif, Arial;
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+p {
+  font-size: 1em;
+}
+
+.nav-top {
+  background-color: #1565c0;
+  display: block;
+  height: 65px;
+  padding: 12px;
+  width: 100%;
+}
+
+.nav-top a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-top a img {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.frm-busca {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.frm-busca .frm-txt {
+  background-color: #fff;
+  height: 50px;
+  padding: 10px 45px 10px 10px;
+  width: 100%;
+  font-size: 1.2em;
+  color: #5e5e5e;
+}
+
+.frm-busca [type='submit'] {
+  background: url("../../../images/icons/search.png") no-repeat center center;
+  background-size: cover;
+  right: 10px;
+  position: absolute;
+  top: 13px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.frm-busca [type='submit']:hover {
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.container {
+  display: block;
+  width: 100%;
+}
+
+.container .content {
+  display: block;
+  margin: 0 auto;
+  max-width: 984px;
+  width: 100%;
+}
+
+.container h1 {
+  padding: 10px 0;
+}
+
+[class*="card-"] {
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  float: left;
+  margin-bottom: 30px;
+  margin-right: 4%;
+  width: 48%;
+}
+
+[class*="card-"]:nth-child(even) {
+  margin-right: 0;
+}
+
+[class*="card-"] .title {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+}
+
+[class*="card-"] .title h5 {
+  color: #000;
+  font-size: 0.86em;
+  margin-bottom: 7px;
+}
+
+[class*="card-"] .title p {
+  color: #000;
+  font-size: 0.8em;
+}
+
+[class*="card-"] .content-card {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+[class*="card-"] .content-card .item {
+  float: left;
+  padding: 10px;
+}
+
+[class*="card-"] .content-card .icon {
+  margin-right: 15px;
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+}
+
+[class*="card-"] .content-card .icon img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+[class*="card-"] .content-card .text {
+  display: inline-block;
+  margin-top: 7px;
+  text-align: center;
+  vertical-align: top;
+  width: 30%;
+}
+
+[class*="card-"] .content-card .text.red {
+  color: #c62828;
+}
+
+[class*="card-"] .content-card .text.blue {
+  color: #0277bd;
+}
+
+[class*="card-"] .content-card .w-lg-50 {
+  width: 50%;
+}
+
+.load {
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #3984d9;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  display: none;
+  left: 50%;
+  margin-left: -53px;
+  position: fixed;
+  top: 40px;
+  width: 106px;
+}
+
+.load span {
+  display: block;
+  width: 100%;
+  font-size: 0.93em;
+  padding: 10px;
+  color: #3984d9;
+}
+
+.load span img {
+  display: inline-block;
+  max-width: 18px;
+  vertical-align: top;
+  margin-left: 6px;
+}

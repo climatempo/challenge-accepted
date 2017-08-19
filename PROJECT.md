@@ -44,4 +44,4 @@ $ gulp
     - jQuery UI
 
 # Template
-A aplicação utiliza o PhpRenderer do Slim que facilitando a gestão do front-end.
+A aplicação utiliza o PhpRenderer do Slim que facilita a gestão do front-end.

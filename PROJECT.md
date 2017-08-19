@@ -1,11 +1,11 @@
 # Climatempo Challenge Accepted
 
-Desenvolvimento de uma aplicação web/mobile que disponibiliza a previsão do tempo nas cidades de São Paulo e Osasco. Os dados são obtidos atráves de um arquivo JSON e processados pela aplicação e devolvido em forma gráfica, de modo a facilitar a leitura e compreensão do usuário, tornando sua experiência mais agradável.
-
+Desenvolvimento de uma aplicação web/mobile que disponibiliza a previsão do tempo em determinadas cidades - São Paulo e Osasco -. Os dados são obtidos atráves de um arquivo JSON e processados pela aplicação e devolvido em forma gráfica, de modo a facilitar a leitura e compreensão dos dados para o usuário, tornando sua experiência mais intuitiva e agradável.
 
 # Configuração e execução
 
-## Clone do projeto e instalação do composer
+## Clone do projeto e instalação das dependências via composer e instalação dos modulos do node
+> ** É necessário ter instalado o composer e node, dê preferencia a forma global.
 
 ```
 $ git clone git@github.com:LucasPortoDeDeus/challenge-accepted.git
@@ -35,6 +35,7 @@ $ gulp
     - slim/php-view
  - ### jQuery
     - moment
+    - jQuery UI
 
 # Endpoint
 Ao acessar o endpoint 'search-weather/[city]' e passar a cidade a busca já será realiza no instante em que a página carregar, o parâmetro não é obrigatório. A busca é realizada através de uma requisição ajax - POST - no seguinte endpoint: /search/weather

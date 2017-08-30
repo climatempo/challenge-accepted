@@ -1,10 +1,12 @@
 {
   "name": "challenge-accepted",
   "version": "1.0.0",
-  "description": "<p align=\"center\">   <a href=\"http://www.climatempo.com.br\">       <img src=\"http://i.imgur.com/Q9lCAMF.png\" alt=\"Climatempo\" width=\"300px\"/>   </a> </p>",
-  "main": "app.js",
+  "description": "Desafio Climatempo para criar um app de previsão do tempo",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/karma/bin/karma start karma.conf.js --single-run",
+    "climatempo": "gulp climatempo",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,27 @@
   },
   "homepage": "https://github.com/diegohideky/challenge-accepted#readme",
   "dependencies": {
-    "ejs": "^2.5.6",
     "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-csslint": "^1.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-usemin": "^0.3.28",
+    "jasmine-core": "^2.8.0",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-jasmine": "^1.1.0"
   }
 }

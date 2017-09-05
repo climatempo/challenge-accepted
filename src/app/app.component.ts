@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { WeatherService } from './climatempo/weather/weather.service';
@@ -10,7 +10,6 @@ import { WeatherService } from './climatempo/weather/weather.service';
 })
 export class AppComponent implements OnInit {
   locations: string[];
-  @ViewChild('searchInput') searchInput;
 
   constructor(private router: Router, private weatherService: WeatherService) { }
 

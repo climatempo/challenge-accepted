@@ -160,8 +160,6 @@ dist/
 # Flycheck
 flycheck_*.el
 
-# server auth directory
-/server/
 
 # projectiles files
 .projectile
@@ -446,4 +444,3 @@ composer.phar
 # composer.lock
 
 package-lock.json
-

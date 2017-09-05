@@ -38,4 +38,4 @@ app.set('port', port);
 const server = http.createServer(app);
 
 // recebe requisicoes
-server.listen(port, () => console.log(`Cimatempo Weather API listening @ localhost:${port}`));
+server.listen(port, () => console.log(`Climatempo Weather API listening @ localhost:${port}`));

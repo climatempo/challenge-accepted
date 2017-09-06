@@ -21,8 +21,7 @@
     },
     "autoload-dev": {
         "classmap": [
-            "tests/",
-            "database/"
+            "tests/"
         ]
     },
     "scripts": {
@@ -32,5 +31,8 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "optimize-autoloader": true
+    "optimize-autoloader": true,
+    "files": [
+        "bootstrap/helpers.php"
+    ]
 }

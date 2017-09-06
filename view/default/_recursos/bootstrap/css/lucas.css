@@ -1,0 +1,34 @@
+/* custom lucas */
+
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: #E0E0E0;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  padding: 9px 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.navbar-inverse {
+  background-color: #304FFE;
+}
+
+.navbar-brand {
+  padding: 11.5px 15px;
+  height: 46px;
+}
+.navbar {
+  min-height: 46px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 768px){
+  .navbar-nav > li > a {
+    padding: 11.5px 15px;
+  }
+}

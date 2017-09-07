@@ -40,7 +40,7 @@ A aplicação foi desenvolvida para a participação no processo de seleção do
 
 <p align="center">
   <a href="#">
-      <img src="https://i.imgur.com/drCtypb.png" alt="Climatempo" width="400px"/>
+      <img src="https://i.imgur.com/pj8Csof.png" alt="Climatempo" width="400px"/>
   </a>
 </p>
 

@@ -5819,6 +5819,10 @@ vue-loader@^12.1.1:
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.2.2"
 
+vue-search-select@^2.3.11:
+  version "2.3.11"
+  resolved "https://registry.yarnpkg.com/vue-search-select/-/vue-search-select-2.3.11.tgz#09a5578ee12cfb11c4bf0fafaca685e3100c27c4"
+
 vue-style-loader@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-3.0.1.tgz#c8b639bb2f24baf9d78274dc17e4f264c1deda08"

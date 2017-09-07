@@ -59,9 +59,9 @@ export default {
         display: inline-block;
         width: 75px;
         padding: 10px;
-        margin-top: 28px;
-        left: auto;
         text-align: center;
+        margin-top: 28px;
+        margin-left: 12px;
     }
 
     .card-temperature {

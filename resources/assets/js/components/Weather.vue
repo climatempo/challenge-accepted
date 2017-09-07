@@ -1,11 +1,11 @@
 <template>
     <div>
-        <h3 v-if="dataSearch.locale">Previsão para {{ dataSearch.locale.name }} - {{ dataSearch.locale.state }}</h3>
+        <h3 v-if="dataSearch.weather">Previsão para {{ dataSearch.locale.name }} - {{ dataSearch.locale.state }}</h3>
 
-        <div class="row">
-            <div class="col-xs-12 col-md-4">
-                <weather-card v-for="item in dataSearch.weather" :weather="item" :key="item.id"></weather-card>
-            </div>
+        <h3 class="text-center" v-else>Busque por uma cidade</h3>
+
+        <div class="row" v-show="dataSearch.weather">
+            <weather-card v-for="item in dataSearch.weather" :weather="item" :key="item.id"></weather-card>
         </div>
     </div>
 </template>

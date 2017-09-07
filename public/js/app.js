@@ -12229,7 +12229,7 @@ exports = module.exports = __webpack_require__(37)(undefined);
 
 
 // module
-exports.push([module.i, "\n.card-forecast-statistics {\n  display: inline-block;\n  width: 75px;\n  padding: 10px;\n  margin-top: 28px;\n  left: auto;\n  text-align: center;\n}\n.card-temperature {\n  width: 100px;\n  display: block;\n  position: relative;\n  margin-left: auto;\n  margin-right: auto;\n}\n.card-temperature span {\n    font-size: 2.5em;\n}\n", ""]);
+exports.push([module.i, "\n.cards {\n  border-radius: .8em;\n  transition: box-shadow 0.4s;\n}\n.cards:hover {\n    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);\n}\n.card-forecast-statistics {\n  display: inline-block;\n  width: 75px;\n  padding: 10px;\n  margin-top: 28px;\n  left: auto;\n  text-align: center;\n}\n.card-temperature {\n  width: 100px;\n  display: block;\n  position: relative;\n  margin-left: auto;\n  margin-right: auto;\n}\n.card-temperature span {\n    font-size: 2.5em;\n}\n", ""]);
 
 // exports
 
@@ -12609,6 +12609,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ["weather"],
@@ -12627,7 +12629,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "panel panel-default"
+    staticClass: "col-xs-12 col-md-4"
+  }, [_c('div', {
+    staticClass: "panel panel-default cards"
   }, [_c('div', {
     staticClass: "panel-body"
   }, [_c('span', {
@@ -12635,7 +12639,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v(_vm._s(_vm.formattedDate))]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
-    staticClass: "col-xs-6"
+    staticClass: "col-xs-7"
   }, [_c('div', {
     staticClass: "card-forecast-statistics"
   }, [_c('img', {
@@ -12643,22 +12647,22 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "src": "/images/icons/raindrop-close-up.png",
       "alt": ""
     }
-  }), _vm._v("\n                    " + _vm._s(_vm.weather.rain.precipitation) + "mm\n                ")]), _vm._v(" "), _c('div', {
+  }), _vm._v("\n                        " + _vm._s(_vm.weather.rain.precipitation) + "mm\n                    ")]), _vm._v(" "), _c('div', {
     staticClass: "card-forecast-statistics"
   }, [_c('img', {
     attrs: {
       "src": "/images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png",
       "alt": ""
     }
-  }), _vm._v("\n                    " + _vm._s(_vm.weather.rain.probability) + "%\n                ")])]), _vm._v(" "), _c('div', {
-    staticClass: "col-xs-6"
+  }), _vm._v("\n                        " + _vm._s(_vm.weather.rain.probability) + "%\n                    ")])]), _vm._v(" "), _c('div', {
+    staticClass: "col-xs-5"
   }, [_c('div', {
     staticClass: "card-temperature"
   }, [_c('i', {
     staticClass: "glyphicon glyphicon-arrow-up text-warning"
   }), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.weather.temperature.max) + "ºC")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('i', {
     staticClass: "glyphicon glyphicon-arrow-down text-info"
-  }), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.weather.temperature.min) + "ºC")])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.weather.text))])])])
+  }), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.weather.temperature.min) + "ºC")])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.weather.text))])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -12673,10 +12677,16 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [(_vm.dataSearch.locale) ? _c('h3', [_vm._v("Previsão para " + _vm._s(_vm.dataSearch.locale.name) + " - " + _vm._s(_vm.dataSearch.locale.state))]) : _vm._e(), _vm._v(" "), _c('div', {
+  return _c('div', [(_vm.dataSearch.weather) ? _c('h3', [_vm._v("Previsão para " + _vm._s(_vm.dataSearch.locale.name) + " - " + _vm._s(_vm.dataSearch.locale.state))]) : _c('h3', {
+    staticClass: "text-center"
+  }, [_vm._v("Busque por uma cidade")]), _vm._v(" "), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.dataSearch.weather),
+      expression: "dataSearch.weather"
+    }],
     staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-xs-12 col-md-4"
   }, _vm._l((_vm.dataSearch.weather), function(item) {
     return _c('weather-card', {
       key: item.id,
@@ -12684,7 +12694,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "weather": item
       }
     })
-  }))])])
+  }))])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

@@ -7,20 +7,26 @@
                 <div class="row">
                     <div class="col-xs-7">
                         <div class="card-forecast-statistics">
-                            <img src="/images/icons/raindrop-close-up.png" alt="">
-                            {{ weather.rain.precipitation }}mm
+                            <img src="/images/icons/raindrop-close-up.png" alt="Precipitação">
+                            <span>{{ weather.rain.precipitation }}mm</span>
                         </div>
 
                         <div class="card-forecast-statistics">
-                            <img src="/images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" alt="">
-                            {{ weather.rain.probability }}%
+                            <img src="/images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" alt="Probabilidade de chuva">
+                            <span>{{ weather.rain.probability }}%</span>
                         </div>
                     </div>
                     <div class="col-xs-5">
                         <div class="card-temperature">
-                            <i class="glyphicon glyphicon-arrow-up text-warning"></i> <span>{{ weather.temperature.max }}ºC</span>
-                            <br>
-                            <i class="glyphicon glyphicon-arrow-down text-info"></i> <span>{{ weather.temperature.min }}ºC</span>
+                            <p>
+                                <i class="glyphicon glyphicon-arrow-up text-warning"></i>
+                                <span>{{ weather.temperature.max }}ºC</span>
+                            </p>
+
+                            <p>
+                                <i class="glyphicon glyphicon-arrow-down text-info"></i>
+                                <span>{{ weather.temperature.min }}ºC</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -34,13 +40,15 @@
 </template>
 
 <script>
+import moment from 'moment'
+
 export default {
     props: [ "weather" ],
 
     computed: {
         formattedDate() {
-            let date = new Date(this.weather.date)
-            return `${date.getUTCDate()}/${date.getUTCMonth() + 1}/${date.getUTCFullYear()}`
+            moment.locale('pt-br')
+            return moment(this.weather.date).format('LLL')
         }
     }
 }
@@ -60,8 +68,13 @@ export default {
         width: 75px;
         padding: 10px;
         text-align: center;
-        margin-top: 28px;
+        margin-top: 20px;
         margin-left: 12px;
+
+        img {
+            width: 42px;
+            height: 42px;
+        }
     }
 
     .card-temperature {
@@ -70,6 +83,10 @@ export default {
         position: relative;
         margin-left: auto;
         margin-right: auto;
-        span { font-size: 2.5em; }
+        span { font-size: 2.2em; }
+
+        p {
+            margin-top: 3px;
+        }
     }
 </style>

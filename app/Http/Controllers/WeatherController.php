@@ -22,15 +22,35 @@ class WeatherController extends Controller
         $this->model = $weather;
     }
 
+    /**
+     * Return a index view
+     * @return \Illuminate\View\View
+     */
     public function index()
     {
         return view("index");
     }
 
+    /**
+     * Return all weather items
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function all()
     {
         return response()->json(
             $this->model->all()
+        );
+    }
+
+    /**
+     * Return a list of weather by locale id
+     * @param $locale_id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function byLocale($locale_id)
+    {
+        return response()->json(
+            $this->model->byLocale($locale_id)
         );
     }
 }

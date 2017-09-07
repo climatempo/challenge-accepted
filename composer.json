@@ -17,7 +17,10 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files": [
+            "bootstrap/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -31,8 +34,5 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "optimize-autoloader": true,
-    "files": [
-        "bootstrap/helpers.php"
-    ]
+    "optimize-autoloader": true
 }

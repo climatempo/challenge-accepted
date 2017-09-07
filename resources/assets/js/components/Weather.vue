@@ -55,7 +55,7 @@ export default {
 
     methods: {
         featWeatherByLocale(locale_id) {
-            axios.get(`/api/weather/search/locale/${locale_id}`)
+            axios.get(`/api/weather/locale/${locale_id}`)
                 .then(({ data }) => {
                     this.dataSearch = data;
                 })

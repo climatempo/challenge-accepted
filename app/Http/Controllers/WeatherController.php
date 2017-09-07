@@ -50,7 +50,7 @@ class WeatherController extends Controller
     public function byLocale($locale_id)
     {
         return response()->json(
-            $this->model->byLocale($locale_id)
+            $this->model->byLocale((int) $locale_id)
         );
     }
 }

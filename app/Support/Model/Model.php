@@ -39,8 +39,8 @@ class Model
     private function setFileSource()
     {
         $this->source_file = is_null($this->source_file) || empty($this->source_file)
-            ? $this->getPathOrigin() . "/" . SourceFile::generateNameFromClassName($this)
-            : $this->getPathOrigin() . "/" . $this->source_file;
+            ? $this->getPathOrigin() . SourceFile::generateNameFromClassName($this)
+            : $this->getPathOrigin() . $this->source_file;
 
         if (!file_exists($this->source_file))
             throw new \Exception("Source file {$this->source_file} not found in class " . get_class($this));
@@ -52,7 +52,7 @@ class Model
      */
     private function getPathOrigin()
     {
-        return base_path() . "/" . ltrim($this->path_origin, "/");
+        return base_path($this->path_origin) . "/";
     }
 
     /**
@@ -82,5 +82,14 @@ class Model
     public function __call($method, $arguments)
     {
         return call_user_func([&$this->data, $method], $arguments);
+    }
+
+    /**
+     * Return a data attribute
+     * @return Collection
+     */
+    public function getData()
+    {
+        return $this->data;
     }
 }

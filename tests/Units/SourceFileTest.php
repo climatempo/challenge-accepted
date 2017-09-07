@@ -7,11 +7,6 @@ use Test\TestCase;
 
 class SourceFileTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
     public function testParseJsonFile()
     {
         $result = SourceFile::parse(base_path("tests/fixtures/source_file.json"));

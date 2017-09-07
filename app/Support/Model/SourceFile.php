@@ -11,12 +11,13 @@ class SourceFile
     /**
      * Generate source file with class name
      * @param $class
+     * @param string $delimiter
      * @return string
      */
-    public static function generateNameFromClassName($class)
+    public static function generateNameFromClassName($class, $delimiter = "_")
     {
         $className = (new \ReflectionClass($class))->getShortName();
-        return Str::before(strtolower($className), ".php") . static::$file_extension;
+        return Str::before(snake_case($className, $delimiter), ".php") . static::$file_extension;
     }
 
     /**

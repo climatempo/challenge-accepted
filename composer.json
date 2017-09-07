@@ -20,9 +20,9 @@
         }
     },
     "autoload-dev": {
-        "classmap": [
-            "tests/"
-        ]
+        "psr-4": {
+            "Test\\": "tests/"
+        }
     },
     "scripts": {
         "post-root-package-install": [

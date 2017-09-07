@@ -21,6 +21,10 @@ class LocaleController extends Controller
         $this->model = $locale;
     }
 
+    /**
+     * Return all Locales
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function all()
     {
         return response()->json(

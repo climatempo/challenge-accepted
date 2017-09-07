@@ -2,9 +2,9 @@
 
 namespace App;
 
-use App\Support\Model\Model;
+use App\Support\Model\SourceData;
 
-class Weather extends Model
+class Weather extends SourceData
 {
     /**
      * Get weather by locale id

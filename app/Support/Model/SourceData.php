@@ -5,7 +5,7 @@ namespace App\Support\Model;
 
 use Illuminate\Support\Collection;
 
-class Model
+class SourceData
 {
     /**
      * Data source file

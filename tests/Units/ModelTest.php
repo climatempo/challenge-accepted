@@ -2,7 +2,7 @@
 
 namespace Test\Units;
 
-use App\Support\Model\Model;
+use App\Support\Model\SourceData;
 use Illuminate\Support\Collection;
 use Test\TestCase;
 
@@ -18,7 +18,7 @@ class ModelTest extends TestCase
 }
 
 
-class User extends Model {
+class User extends SourceData {
     protected $path_origin = "tests/fixtures";
 
     protected $source_file = "source_file.json";

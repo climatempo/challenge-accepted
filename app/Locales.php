@@ -2,9 +2,9 @@
 
 namespace App;
 
-use App\Support\Model\Model;
+use App\Support\Model\SourceData;
 
-class Locales extends Model
+class Locales extends SourceData
 {
 
 }

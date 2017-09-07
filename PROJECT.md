@@ -16,10 +16,11 @@ Clone o projeto
 ```
 git@github.com:Domeniqque/challenge-accepted.git
 ```
-Na pasta do projeto, copie o arquivo **.env.example**, instale as dependências com o Composer e inicie a aplicação
+Na pasta do projeto, copie o arquivo **.env.example**, instale as dependências do projeto e inicie a aplicação
 ```
 cp .env.example .env
 composer install
+npn install
 php artisan key:generate
 php -S localhost:8000 -t public
 ```
@@ -39,12 +40,14 @@ A aplicação foi desenvolvida para a participação no processo de seleção do
 
 <p align="center">
   <a href="#">
-      <img src="https://i.imgur.com/TlvarxA.png" alt="Climatempo" width="400px"/>
+      <img src="https://i.imgur.com/drCtypb.png" alt="Climatempo" width="400px"/>
   </a>
 </p>
 
 Ela possui como stack:
 * [Lumen](https://lumen.laravel.com/), um micro framework php versátil e performático.
 * [VueJs](https://vuejs.org/), biblioteca javascript para criação de interfaces usando componentes.
+
+Foi implementado alguns endpoints que são consumidos pela página inicial da própria aplicação.
 
 

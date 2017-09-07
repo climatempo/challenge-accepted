@@ -1,7 +1,7 @@
 # Documentação
 
 ## Locale
-* [Get Todas as Localizações](#get-todas-as-localizacoes)
+* [GET Todas as Localizações](#get-todas-as-localizacoes)
 
 ###  GET Todas as Localizações
 
@@ -36,7 +36,7 @@ curl -X GET 'http://localhost/api/locales'
 ```
 
 ## Weather
-* [Get Todas as Previsões](#get-todas-as-previsoes)
+* [GET Todas as Previsões](#get-todas-as-previsoes)
 
 ### GET Todas as Previsões
 

@@ -45,10 +45,11 @@ A aplicação foi desenvolvida para a participação no processo de seleção do
 </p>
 
 O backend foi desenvolvido com o [Lumen](https://lumen.laravel.com/), um micro framework php versátil e performático.
-A escolha dele se deu devido a sua estrutura agradável de se trabalhar e ao ambiente de testes de features ja configurados.
+A escolha dele se deu devido a sua performace, simplicidade, sua estrutura agradável de se trabalhar e ao ambiente 
+de testes de features já configurados.
 
 Para a interface foi usado o [VueJs](https://vuejs.org/), um biblioteca javascript para criação de interfaces baseado em componentes. Essa lib é de fácil entendimento e possibilita a criação de telas bem agradáveis e com uma boa manutenibilidade,
-devido aos uso de componentes.
+devido aos uso de componentes. Além de dar eficiência ao desenvolvimento.
 
 A interface consome alguns endpoints da própria aplicação. 
 

@@ -1,7 +1,8 @@
 # Documentação
 * [Locale](#locale)
 * [Weather](#weather)
-* [Estrutura e principais diretórios](#estrutura-e-principais-diretorios)
+* [Estrutura e principais diretórios](#estrutura-e-principais-diretórios)
+* [Principais Classes](#principais-classes)
 
 ## Locale
 
@@ -144,7 +145,7 @@ Os testes unitátios estão em `tests\Unit\` e os testes de recursos, em `tests\
 <img src="https://i.imgur.com/L5wYp64.png" alt="Climatempo" width="200px"/>
 
 ## Principais classes
-### SourceData::class
+### App\Support\Model\SourceData::class
 Essa classe é responsável por converter e possibilitar a interação das Models com os aquivos fonte de dados.
 
 Ao extender essa classe, sua model terá acesso ao seu arquivo que está no diretório `resources\base`. 

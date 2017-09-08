@@ -2,8 +2,8 @@
 Aplicação para consulta das previsões climáticas nos próximos dias. 
 
 ## Começando
-* [Pré-requisitos](#pre-requisitos)
-* [Instalação](#instalacao)
+* [Pré-requisitos](#pré-requisitos)
+* [Instalação](#instalação)
 * [Rodando os testes](#rodando-os-testes)
 
 ### Pré-requisitos
@@ -13,11 +13,11 @@ Aplicação para consulta das previsões climáticas nos próximos dias.
 
 ### Instalação
 Clone o projeto 
-```
+```bash
 git@github.com:Domeniqque/challenge-accepted.git
 ```
 Na pasta do projeto, copie o arquivo **.env.example**, instale as dependências do projeto e inicie a aplicação
-```
+```bash
 cp .env.example .env
 composer install
 npn install
@@ -27,7 +27,7 @@ php -S localhost:8000 -t public
 
 ### Rodando os Testes
 Para executar os testes:
-```
+```bash
 vendor/bin/phpunit
 ```
 
@@ -44,10 +44,12 @@ A aplicação foi desenvolvida para a participação no processo de seleção do
   </a>
 </p>
 
-Ela possui como stack:
-* [Lumen](https://lumen.laravel.com/), um micro framework php versátil e performático.
-* [VueJs](https://vuejs.org/), biblioteca javascript para criação de interfaces usando componentes.
+O backend foi desenvolvido com o [Lumen](https://lumen.laravel.com/), um micro framework php versátil e performático.
+A escolha dele se deu devido a sua estrutura agradável de se trabalhar e ao ambiente de testes de features ja configurados.
 
-Foi implementado alguns endpoints que são consumidos pela página inicial da própria aplicação.
+Para a interface foi usado o [VueJs](https://vuejs.org/), um biblioteca javascript para criação de interfaces baseado em componentes. Essa lib é de fácil entendimento e possibilita a criação de telas bem agradáveis e com uma boa manutenibilidade,
+devido aos uso de componentes.
+
+A interface consome alguns endpoints da própria aplicação. 
 
 

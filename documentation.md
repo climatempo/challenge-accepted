@@ -146,13 +146,21 @@ Os testes unitátios estão em `tests\Unit\` e os testes de recursos, em `tests\
 
 ## Principais classes
 ### App\Support\Model\SourceData::class
-Essa classe é responsável por converter e possibilitar a interação das Models com os aquivos fonte de dados.
+Essa classe é responsável por converter os aquivos fonte de dados e possibilitar a interação das Models com eles.
 
-Ao extender essa classe, sua model terá acesso ao seu arquivo que está no diretório `resources\base`. 
-Ela assume o arquivo  possui o mesmo nome da classe. Por exemplo, a model `ProductsAvailable.php` 
+Ao extender essa classe, sua model terá acesso aos dados do seu arquivo que está no diretório `resources\base`. 
+Ela assume que o arquivo possui o mesmo nome da classe. Por exemplo, a model `ProductsAvailable.php` 
 terá acesso aos dados de `products_available.json`. 
 
-Se desejar alterar o arquivo de origem acrescente em sua model a propriedade `protected $source_file="seu_arquivo.json";`. Caso queira alterar o diretório origem, `protected $path_origin = "outro/diretorio";`.
+Se desejar alterar o arquivo de origem acrescente em sua model a propriedade:
+```php
+protected $source_file="seu_arquivo.json";
+```
+Caso queira alterar o diretório origem, adicione 
+
+```php
+protected $path_origin = "outro/diretorio";
+```
 
 Os dados do arquivo fonte estarão disponíveis à model na propriedade `protected $data`, como uma instância de `Illuminate\Support\Collection`, para facilitar a interação com os dados. Seus métodos podem ser chamados dinâmicamente 
 da model, por exemplo:

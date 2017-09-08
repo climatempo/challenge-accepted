@@ -1,7 +1,6 @@
 # Documentação
 
 ## Locale
-* [GET Todas as Localizações](#get-todas-as-localizacoes)
 
 ###  GET Todas as Localizações
 
@@ -36,7 +35,6 @@ curl -X GET 'http://localhost/api/locales'
 ```
 
 ## Weather
-* [GET Todas as Previsões](#get-todas-as-previsoes)
 
 ### GET Todas as Previsões
 
@@ -96,6 +94,26 @@ curl -X GET 'http://localhost/api/weather'
   //Others periods
 ]  
 ```
+
+### GET Previsões por localidade
+___
+
+> http://localhost/api/weather/locale/{locale_id}
+
+Visualise os dados de um produto com seu id único como parâmetro.
+
+##### Request básico
+```bash
+curl -X GET 'http://localhost/api/products/1001'
+```
+
+##### Resposta
+```
+{
+  "period": {...},
+  "locale": {...},
+  "weather": {...}
+{
 
 
 

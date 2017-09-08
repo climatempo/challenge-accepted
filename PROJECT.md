@@ -24,6 +24,7 @@ npn install
 php artisan key:generate
 php -S localhost:8000 -t public
 ```
+A aplicação estará disponível na url `http://localhost:8000`.
 
 ### Rodando os Testes
 Para executar os testes:

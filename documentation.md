@@ -1,4 +1,7 @@
 # Documentação
+* [Locale](#locale)
+* [Weather](#weather)
+* [Estrutura e principais diretórios](#estrutura-e-principais-diretorios)
 
 ## Locale
 
@@ -120,7 +123,7 @@ curl -X GET 'http://localhost:8000/api/weather/locale/3735'
   },
   "weather": {...}
 {
-
+```
 ## Estrutura e principais diretórios
 ### App\
 Neste diretório se concentra as partes principais da aplicação, como as models e os controllers.

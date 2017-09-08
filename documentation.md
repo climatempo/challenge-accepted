@@ -100,7 +100,6 @@ curl -X GET 'http://localhost:8000/api/weather'
 ```
 
 ### GET Previsões por localidade
-___
 
 > http://localhost:8000/api/weather/locale/{locale_id}
 

@@ -15,8 +15,26 @@ body{
     margin:0 auto;
 }
 
+@media (max-width: 370px) {
+
+    #previsao div.dias{
+        width: 100%;
+    }
+}
+
+@media (min-width: 370px) and (max-width: 570px) {
+    
+    #previsao > div{
+        width: 100%;
+    }
+
+    .info, .temp, .chuva{
+        width: 50%;
+    }
+}
+
 #previsao div.dias > div{
-    padding:5px 0 0;
+    padding:0;
     background-color: #FFF;
     -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.65);
     -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.65);
@@ -40,6 +58,27 @@ body{
     font-size: 2em;
 }
 
+@media (min-width: 370px) and (max-width: 460px) {
+    
+    #previsao div.dias > div .temp .max, #previsao div.dias > div .temp .min, #previsao div.dias > div .chuva .max, #previsao div.dias > div .chuva .min{
+        line-height: 10px;
+        font-size: 1.5em;
+    }
+
+    #previsao div.dias > div .temp, #previsao div.dias > div .chuva {
+        background-color: #eeeeee;
+        padding: 22px 0 22px;
+    }
+
+    #previsao .glyphicon img{
+        width: 20px
+    }
+}
+
+#previsao .info{
+    padding: 5px 0 0 0;
+}
+
 #previsao div.dias > div .temp .max{
     color: #cd4b4b;
 }#previsao div.dias > div .temp .min{
@@ -57,6 +96,9 @@ body{
 }
 
 @media (max-width: 767px) {
+    #formBusca input, #formBusca button{
+        border-radius: 0;
+    }
     #formBusca{
         padding-top: 0;
         border: none;

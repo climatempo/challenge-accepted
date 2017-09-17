@@ -14,13 +14,13 @@ Aplicação para consulta das previsões climáticas nos próximos dias.
 ### Instalação
 Clone o projeto 
 ```bash
-git@github.com:Domeniqque/challenge-accepted.git
+git clone git@github.com:Domeniqque/challenge-accepted.git
 ```
 Na pasta do projeto, copie o arquivo **.env.example**, instale as dependências do projeto e inicie a aplicação
 ```bash
 cp .env.example .env
 composer install
-npn install
+npm install
 php artisan key:generate
 php -S localhost:8000 -t public
 ```

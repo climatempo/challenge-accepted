@@ -1,0 +1,10 @@
+<template name="locales">
+    <div class="form-group">
+          <select class="form-control" id="selectLocation">
+              <option value="null">Selecione uma Cidade</option>
+              {{#each locales}}
+                <option value="{{id}}">{{name}} - {{state}}</option>
+              {{/each}}
+          </select>
+        </div>
+</template>

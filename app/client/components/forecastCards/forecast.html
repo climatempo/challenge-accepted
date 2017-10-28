@@ -1,0 +1,23 @@
+<template name="forecast">
+    {{#each forecast}}
+    <header class="major">
+        <h2>Previsão do tempo para {{locale.name}} - {{locale.state}}</h2>
+    </header>
+    <ul class="features">
+        {{#each weather}}
+            <li style="box-shadow: 0px 0px 19px -5px rgba(136, 136, 136, 0.76); border-radius: 2%;">
+                <h5><strong>{{formatDate date}}</strong></h5>
+                <h3>{{temperature.max}}°
+                    <i class="fa fa-arrow-up" style="padding-right: 20px; -webkit-text-stroke: 3px white;"></i> &nbsp; {{temperature.min}}°
+                    <i class="fa fa-arrow-down" style="-webkit-text-stroke: 3px white;"></i>
+                </h3>
+                <h3>{{rain.precipitation}}mm
+                    <i class="fa fa-tint" style="padding-right: 20px; -webkit-text-stroke: 1px white;"></i> &nbsp; {{rain.probability}}%
+                    <i class="fa fa-umbrella" style="-webkit-text-stroke: 1px white;"></i>
+                </h3>   
+                <p style="font-size: smaller;">{{text}}</p>
+            </li>
+        {{/each}}
+    </ul>    
+    {{/each}}
+</template>

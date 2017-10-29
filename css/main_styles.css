@@ -63,6 +63,8 @@ body {
 #page-content
 {
 	padding: 15px;
+	overflow: hidden;
+	background-color: #f1f1f1;
 }
 
 .card
@@ -192,4 +194,13 @@ p.temperature-min {color: #3b7cde;}
 	font-weight: bold;
 	color: #fff;
 	border-radius: 2px;
+}
+
+#footer
+{
+	color: #888;
+	padding: 10px 0;
+}
+#footer p {
+	text-align: center;
 }

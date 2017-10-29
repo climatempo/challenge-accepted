@@ -32,32 +32,18 @@ $main = new Functions();
 	</section>
 
 	<section id="page-content">
-		<div class="card col-6">
-			<div class="card-content">
-				<div class="header">Previsão do tempo</div>
-				<div class="description">
-					<a href="#" data-city="Osasco">Osasco</a>
-					<i class="img-probability"></i>
-					<i class="img-precipitation"></i>
-				</div>
-			</div>
-		</div>
-		<div class="card col-6">
-			<div class="card-content">
-				<div class="header">Previsão do tempo</div>
-				<div class="description">
-					<a href="#" data-city="São Paulo">São Paulo</a>
-					<i class="img-probability"></i>
-					<i class="img-precipitation"></i>
-				</div>
-			</div>
-		</div>
+		
 	</section>
 
 	<div class="snack">
 		<p id="snack-message">asd</p>
 	</div>
 </div>
+<footer>
+	<div id="footer">
+		<p>&#169; 2017 Jason Davin</p>
+	</div>
+</footer>
 
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>

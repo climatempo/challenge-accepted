@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alterando</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <fieldset>
+        <legend>Alterar pessoa</legend>
+        <form method="POST" action="/alterar-pessoa?cpfAlteracao=<%= pessoa.cpf%>">
+            Nome: <input type="text" name="nome" value="<%= pessoa.nome %>"><p>
+            Sobrenome: <input type="text" name="sobrenome" value="<%= pessoa.sobrenome %>"><p>
+            CPF: <input type="text" name="cpf" readonly="true" value="<%= pessoa.cpf %>"><p>
+            <input type="submit" value="Alterar">
+        </form>
+    </fieldset>
+
+    <script type="text/javascript" src="/javascripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/dynamic.js"></script>
+  </body>
+</html>

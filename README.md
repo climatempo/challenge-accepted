@@ -37,7 +37,7 @@ Requisitos para a vaga, bons conhecimentos em:
 
 IMPORTANTE:
 
-- Residir em Jacarei, Caçapava, Taubaté ou São José dos Campos
+- Residir no vale do paraíba ou nas proximidades.
 
 
 ### O Desafio

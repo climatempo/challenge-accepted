@@ -18,7 +18,7 @@ processo de recrutamento para vaga de Full-stack (CLT)?
 - Cargo: Desenvolvedor Full-stack (CLT);
 - VR e VT;
 - Home Office após período de experiência;
-- Flexibilidade no horário de trabalho para acompanhar eventos de técnologia;
+- Flexibilidade no horário de trabalho para acompanhar eventos de tecnologia;
 - Local: Parque Tecnológico - São José dos Campos (http://www.pqtec.org.br/).
 
 

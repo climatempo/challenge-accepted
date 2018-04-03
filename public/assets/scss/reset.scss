@@ -1,0 +1,31 @@
+// Reset
+html,
+body {
+    background: #e0e0e0;
+    font-family: 'Roboto', sans-serif, Arial;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1em;
+}

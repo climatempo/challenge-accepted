@@ -1,0 +1,8 @@
+
+@mixin mTransition($tProperty, $tTime, $method) {
+    -webkit-transition: $tProperty $tTime $method;
+    -moz-transition:    $tProperty $tTime $method;
+    -ms-transition:     $tProperty $tTime $method;
+    -o-transition:      $tProperty $tTime $method;
+    transition:         $tProperty $tTime $method;
+}

@@ -1,0 +1,24 @@
+<div class="container-fluid p-0">
+
+  <header class="sticky-top">
+    <div class="row m-0 c-logo">
+      <div class="col-12 bg-info align-text-middle text-center p-3">
+        <img width="40%" src="/assets/logo-white.png" alt="Climatempo" />
+      </div>
+    </div>
+    <div class="row m-0 c-search">
+      <div class="col-12 input-group c-search-group">
+        <input class="form-control form-control-lg pl-2 c-search-input" type="text"
+          #searchInput (keyup.enter)="onSearch(searchInput.value)" id="searchInput" />
+        <span class="input-group-addon">
+          <i class="material-icons" (click)="onSearch(searchInput.value)">search</i>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="p-2">
+    <router-outlet></router-outlet>
+  </main>
+
+</div>

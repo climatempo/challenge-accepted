@@ -1,0 +1,13 @@
+// Define a cor para o ícone de temperatura máxima
+.max {
+  .fa {
+    color: $maxima-cor;
+  }
+}
+
+// Define a cor para o ícone de temperatura mínima
+.min {
+  .fa {
+    color: $minima-cor;
+  }
+}

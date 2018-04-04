@@ -13,6 +13,9 @@
 # Email spool folder
 /app/spool/*
 
+# Bower Components
+/public/bower_components/
+
 # Cache, session files and logs (Symfony3)
 /var/cache/*
 /var/logs/*
@@ -230,6 +233,9 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
+
+# Frontend dependencies
+app/bower_components
 
 # Optional npm cache directory
 .npm

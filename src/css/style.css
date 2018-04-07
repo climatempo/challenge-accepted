@@ -1,0 +1,64 @@
+.nav {
+  background-color: #1565c0;
+  display: block;
+  height: 65px;
+  padding: 12px;
+  width: 100%;
+} 
+
+.card-clima{
+  margin-top: 10px !important;
+}
+
+.icone-search{
+  margin: 3px;
+  margin-left: 20px;
+}
+
+.row-card{
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+.no-border{
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.background{
+  background-color: #DDDCDC;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.background-card{
+  background-color: #EEEEEE;
+}
+
+ .nav img {
+  display: block;
+  max-height: 50px;
+  max-width: 70%;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+.button-search{
+  background-color: white !important;
+}
+
+.busca {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.no-pading{
+  margin: 0;
+  padding: 0;
+}
+
+
+

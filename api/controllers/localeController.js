@@ -1,5 +1,5 @@
 import express from "express";
-import localeJson from "../../base/locales.json";
+import localeJson from "../base/locales.json";
 
 export async function findLocales(req, res) {
   try {

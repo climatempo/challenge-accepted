@@ -1,5 +1,5 @@
 import express from "express";
-import weatherJson from "../../base/weather.json";
+import weatherJson from "../base/weather.json";
 
 export async function findWeathers(req, res) {
   try {

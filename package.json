@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "api": "nodemon -w api --exec \"babel-node api --presets env\"",
     "react": "react-scripts start",
-    "start": "concurrently \"npm run api\" \"npm run react\""
+    "start": "concurrently \"npm run api\" \"npm run react\"",
+    "test": "babel-node ./api/test/test.js | tap-spec"
   },
   "keywords": [],
   "author": "",
@@ -28,5 +28,10 @@
     "redux-actions": "^2.3.0",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "supertest": "^3.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.9.0"
   }
 }

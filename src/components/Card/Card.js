@@ -22,7 +22,7 @@ class Card extends Component {
                 {weathers.weather ? <div>
                     {weathers.weather.map((weather, index) => {
                         let newDate = this.dateFormat(weather.date);
-                        return (<div key={index} className="card card-clima" >
+                        return (<div key={index} className="card card-weather" >
                             <div className="card-body m-0 pl-3 pr-3 pt-1 pb-0">
                                 <h5 className="card-title">{newDate}</h5>
                                 <p className="small">{weather.text}</p>

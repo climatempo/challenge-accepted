@@ -1,5 +1,5 @@
 @media (min-width:600px) and (max-width:1200px) {
-  .card-clima{
+  .card-weather{
     margin-left: 10% !important;
     margin-right: 10% !important;
     margin-top: 10px !important;
@@ -17,7 +17,7 @@
  }
 
  @media (min-width:1201px) and (max-width:2400px) {
-  .card-clima{
+  .card-weather{
     margin-left: 20% !important;
     margin-right: 20% !important;
     margin-top: 10px !important;
@@ -42,7 +42,7 @@
   width: 100%;
 } 
 
-.card-clima{
+.card-weather{
   margin-top: 10px !important;
   margin-bottom: 20px !important;
   box-shadow: 2px 3px #C9C9C9;
@@ -93,6 +93,7 @@
 
 .button-search{
   background-color: white !important;
+  border: white;
 }
 
 .item{
@@ -101,12 +102,6 @@
   height: auto;
   margin-left: auto;
   margin-right: auto;
-}
-
-.busca {
-  display: block;
-  width: 100%;
-  position: relative;
 }
 
 .no-pading{

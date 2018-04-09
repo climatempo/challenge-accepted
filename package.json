@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "api": "nodemon -w api --exec \"babel-node api --presets env\"",
+    "api": "babel-node ./api/index.js --exec \"babel-node api --presets env\"",
     "react": "react-scripts start",
     "start": "concurrently \"npm run api\" \"npm run react\"",
     "test": "babel-node ./api/test/test.js | tap-spec"

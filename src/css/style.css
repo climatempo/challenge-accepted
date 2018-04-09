@@ -1,0 +1,119 @@
+@media (min-width:600px) and (max-width:1200px) {
+  .card-weather{
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+    margin-top: 10px !important;
+    margin-bottom: 20px;
+    box-shadow: 2px 3px #C9C9C9;
+  }
+
+  .text-title{
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+ }
+
+ @media (min-width:1201px) and (max-width:2400px) {
+  .card-weather{
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+    margin-top: 10px !important;
+    margin-bottom: 20px;
+    box-shadow: 2px 3px #C9C9C9;
+  }
+
+  .text-title{
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+ }
+
+.nav {
+  background-color: #1565c0;
+  display: block;
+  height: 65px;
+  padding: 12px;
+  width: 100%;
+} 
+
+.card-weather{
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 2px 3px #C9C9C9;
+}
+
+.font{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17pt;
+  color: #BDBABA !important;
+}
+
+.row-card{
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.no-border{
+  box-shadow: 0 0 0 0 !important;
+  border: 0 none !important;
+  outline: 0;
+  border-color: white !important;
+}
+
+.background{
+  background-color: #DDDCDC;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.background-card{
+  background-color: #EEEEEE;
+}
+
+ .nav img {
+  display: block;
+  max-height: 50px;
+  max-width: 70%;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+.text-title{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.button-search{
+  background-color: white !important;
+  border: white;
+}
+
+.item{
+  display: block;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-pading{
+  margin: 0;
+  padding: 0;
+}
+
+.form-control::-webkit-input-placeholder { color: #BDBABA; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: #BDBABA; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: #BDBABA; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: #BDBABA; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: #BDBABA; }  /* Microsoft Edge */
+
+
+

@@ -4,7 +4,8 @@
 body { background: $gray-bg; }
 
 .logo {
-	@include px-em(60, height, $imp);
+	@include px-em(18, height, $imp);
+	@include px-em(18, top, $imp);
 }
 
 .m-0 {
@@ -13,6 +14,7 @@ body { background: $gray-bg; }
 
 .search-icon {
 	@include px-em(0.3, right, null)
+	@include px-em(9, margin-top, null)
 }
 
 .details {

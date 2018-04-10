@@ -6,15 +6,13 @@ var gulp        = require('gulp'),
     cleanCSS    = require('gulp-clean-css'),
     rename      = require("gulp-rename"),
     uglify      = require('gulp-uglify'),
-    util        = require('gulp-util'),
-    jsdoc       = require('gulp-jsdoc3'),
-    browserSync = require('browser-sync').create();
+    util        = require('gulp-util');
 
 
 // Compile SCSS
 gulp.task('scss', function() {
   return gulp.src([
-    './src/scss/**/*.scss',
+    './scss/**/*.scss',
     './node_modules/materialize-css/**/*.scss'
     ])
     .pipe(sass.sync({
@@ -31,8 +29,7 @@ gulp.task('scss:min', ['scss'], function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./css'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('./css'));
 });
 
 // CSS
@@ -41,8 +38,6 @@ gulp.task('css', ['scss', 'scss:min']);
 // Minify JavaScript
 gulp.task('js:min', function() {
   return gulp.src([
-      './src/js/*.js',
-      '!./src/js/*.min.js',
       './node_modules/materialize-css/dist/js/*.js'
     ])
     .pipe(concat('script.js'))
@@ -51,8 +46,7 @@ gulp.task('js:min', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./public/js'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('./public/js'));
 });
 
 // JS
@@ -61,30 +55,8 @@ gulp.task('js', ['js:min']);
 // Default task
 gulp.task('default', ['css', 'js']);
 
-// Documentation
-gulp.task('doc', function (cb) {
-  var config = require('./jsdoc.json');
-  gulp.src([
-  './controllers/*.js',
-  './models/*.js',
-  './routes/*.js'
-  ], {read: false})
-    .pipe(jsdoc(config, cb));
-});
-
-// Configure the browserSync task
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    }
-  });
-});
-
-
 // Dev task
 gulp.task('dev', ['css', 'js'], function() {
-  gulp.watch('./src/scss/*.scss', ['css']);
-  gulp.watch('./src/js/*.js', ['js']);
-  // gulp.watch('./*.jade', browserSync.reload);
+  gulp.watch('./scss/*.scss', ['css']);
+  gulp.watch('./**/*.js', ['js']);
 });

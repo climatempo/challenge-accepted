@@ -4,7 +4,8 @@
   "description": "Processo seletivo para climatempo",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "jasmine-node spec"
   },
   "repository": {
     "type": "git",
@@ -33,10 +34,11 @@
     "moment": "^2.22.0",
     "morgan": "^1.9.0",
     "request": "^2.85.0",
-    "static-favicon": "^2.0.0-alpha"
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",

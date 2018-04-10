@@ -1,13 +1,13 @@
-var express      = require('express'),
+let express      = require('express'),
 	path         = require('path'),
-	favicon      = require('static-favicon'),
+	favicon      = require('serve-favicon'),
 	logger       = require('morgan'),
 	cookieParser = require('cookie-parser'),
 	bodyParser   = require('body-parser'),
-	load 		 = require('express-load'),
+	load         = require('express-load'),
 	session      = require('express-session'),
-	flash 		 = require('express-flash'),
-	moment 		 = require('moment');
+	flash        = require('express-flash'),
+	moment       = require('moment');
 
 var app = express();
 
@@ -18,7 +18,7 @@ var erros = require('./middlewares/erros');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(favicon());
+app.use(favicon(path.join(__dirname, 'public/images/icons', 'favicon.ico')))
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
@@ -42,5 +42,5 @@ app.use(erros.serverError);
 const port = '3000'
 
 app.listen(port, function() {
-    console.log('Aplicação rodando na porta ' + port);
+	console.log('Aplicação rodando na porta ' + port);
 });

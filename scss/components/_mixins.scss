@@ -1,0 +1,10 @@
+@import 'variables.scss';
+
+/* Converte unidade px para em e verifica se a propriedade é !important */
+@mixin px-em($value, $property, $important) {
+	@if($important == $imp) {
+		#{$property}: unquote($value / $browser-em-base + 'em' + '!important');
+	} @else {
+		#{$property}: unquote($value / $browser-em-base + 'em');
+	}
+}

@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+	include ../partials/input
+	div(class="row")
+		div(class="col s12")
+			h3 Previsão do tempo para #{locale}
+	if messages.erro
+		div(id="modal", class="modal")
+			div(class="modal-content center-align")
+				p #{messages.erro}
+			div(class="modal-footer")
+				a(href="#!", class="modal-action modal-close waves-effect waves-green btn-flat center-align") OK
+	include ../partials/card

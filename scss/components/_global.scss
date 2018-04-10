@@ -1,0 +1,47 @@
+@import 'variables.scss';
+
+/* start:; Home */
+body { background: $gray-bg; }
+
+.logo {
+	@include px-em(60, height, $imp);
+}
+
+.m-0 {
+	margin: 0 $imp;
+}
+
+.search-icon {
+	@include px-em(0.3, right, null)
+}
+
+.details {
+	p {
+		@include px-em(10, margin-bottom, $imp);
+	}
+}
+
+.weather {
+	background-color: $gray-card;
+	margin: 0 -0.75em;
+	padding: 1.5em 0.66em 0.66em 0.66em ;
+	.row {
+		.col {
+			padding-left: 0;
+		}
+	}
+	i {
+		@include px-em(60, font-size, null);
+		@include px-em(5, margin-top, null);
+	}
+	& label {
+		@include px-em(60, font-size, null);
+	}
+}
+
+.card {
+	.card-content {
+		padding: 0.75em 0.75em 0 0.75em $imp;
+	}
+}
+/* end : Home */

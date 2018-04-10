@@ -28,7 +28,6 @@ Foi utilizada estrutura comum utilizada com express, possuindo a seguinte arquit
 - public
 	- css
 	- images
-		-icons
 	- js
 - routes
 - scss

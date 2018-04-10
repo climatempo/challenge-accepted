@@ -30,7 +30,7 @@ ___
 1. Ao acessar via Tablet ou Mobile, a página deve ser redimensionada, sendo responsiva;
 2. Ao realizar a busca por uma cidade que não está cadastrada no Json, o sistema não pode retornar erro;
 3. Ao realizar uma buscar em branco, o sistema deve zerar os resultados;
-4. Se for realizada uma busca utilizando números os caracteres especiais, o sistema não deve gerar erro;
+4. Se for realizada uma busca utilizando números ou caracteres especiais, o sistema não deve gerar erro;
 5. O sistema deve trazer as sugestões de autocomplete mesmo se a palavra não for digitada exatamente igual a que está cadastrada no Json (Letras maiúsculas e acentuação).
 
 - RESULTADOS OBTIDOS:

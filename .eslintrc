@@ -1,0 +1,14 @@
+{
+  "extends": ["airbnb-base"],
+  "plugins": ["import"],
+  "rules": {
+    "no-unused-expressions": "off",
+    "no-underscore-dangle": "off",
+    "array-callback-return": "off",
+    "no-param-reassign": "off",
+    "max-len": "off",
+    "class-methods-use-this": "off",
+    "linebreak-style": "off",
+    "no-use-before-define": "off"
+    }
+}

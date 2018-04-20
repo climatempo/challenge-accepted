@@ -1,0 +1,49 @@
+{
+  "name": "climatempo-test",
+  "version": "1.0.0",
+  "description": "Teste de recrutamento do climatempo",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests -name '*.spec.js' --recursive --timeout 120000 --require babel-register --exit",
+    "start-dev": "nodemon",
+    "test-dev": "npm test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johnys/challenge-accepted.git"
+  },
+  "keywords": [
+    "climatempo"
+  ],
+  "author": "Johnys",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Johnys/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/Johnys/challenge-accepted#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "moment": "^2.22.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "mocha": "^5.1.1",
+    "nodemon": "^1.17.3",
+    "sinon": "^4.5.0",
+    "sinon-chai": "^3.0.0",
+    "sinon-express-mock": "^2.0.0",
+    "sinon-stub-promise": "^4.0.0"
+  }
+}

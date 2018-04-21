@@ -9,6 +9,7 @@
     "max-len": "off",
     "class-methods-use-this": "off",
     "linebreak-style": "off",
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "experimentalDecorators": "off"
     }
 }

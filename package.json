@@ -5,8 +5,35 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha ./tests -name '*.spec.js' --recursive --timeout 120000 --require babel-register --exit",
-    "start-dev": "nodemon",
-    "test-dev": "npm test -- --watch"
+    "start": "npm run clear && npm run build && node index.js",
+    "clear": "rimraf src/public",
+    "build": "npm run build-css && npm run webpack && npm run copy-html && npm run copy-images",
+    "copy-html": "cpx src/view/**/*.html src/public -C",
+    "copy-images": "cpx src/view/**/*.png src/public -C",
+    "build-css": "node-sass --include-path src/view src/view/stylesheet/main.scss src/public/bundle.css",
+    "start-dev": "npm run clear && npm run build && node index.js",
+    "test-dev": "npm test -- --watch",
+    "watch": "npm-watch start-dev",
+    "webpack": "webpack --config webpack.config.js",
+    "coverage": "nyc npm test"
+  },
+  "nyc": {
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "exclude": [
+      "tests/**", "src/view/**", "src/public/**"
+    ]
+  },
+  "watch": {
+    "start-dev": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,html,scss",
+      "ignore": "src/public"
+    }
   },
   "repository": {
     "type": "git",
@@ -29,21 +56,33 @@
     "babel-register": "^6.26.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
+    "lodash": "^4.17.5",
     "moment": "^2.22.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "cpx": "^1.5.0",
+    "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-import": "^2.11.0",
     "mocha": "^5.1.1",
+    "node-sass": "^4.8.3",
     "nodemon": "^1.17.3",
+    "npm-watch": "^0.3.0",
+    "nyc": "^11.7.1",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.0.1",
     "sinon": "^4.5.0",
     "sinon-chai": "^3.0.0",
     "sinon-express-mock": "^2.0.0",
-    "sinon-stub-promise": "^4.0.0"
+    "sinon-stub-promise": "^4.0.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
   }
 }

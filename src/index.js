@@ -5,7 +5,7 @@ import routes from './routes';
 const app = new express();
 routes(app);
 
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 const port = process.env.port || '8080';
 

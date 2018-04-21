@@ -22,6 +22,7 @@ Na pasta raiz do projeto executar
 Acessar http://localhost:8080
 
 ## Executar testes de unidade
+Na pasta raiz do projeto executar
 ```powershell
 
   npm test

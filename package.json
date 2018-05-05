@@ -22,7 +22,7 @@
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --exit",
-    "pre-commit": "yarn test",
-    "pre-push": "yarn test"
+    "precommit": "yarn test",
+    "prepush": "yarn test"
   }
 }

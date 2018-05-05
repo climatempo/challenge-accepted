@@ -13,9 +13,11 @@ describe("Teste de funcionalidade do WeatherController", () => {
                 .get("/api/weathers")
                 .query({ city_id: 1 })
                 .then(res => {
-                    res.should.have.status(400)
+                    res.should.have.status(404)
                     res.should.be.a("object")
-                    res.body.message.should.be.eql("Cidade não encontrada")
+                    res.body.message.should.be.eql(
+                        "Informação climática não encontrada para essa cidade"
+                    )
                 })
                 .catch(err => console.error(err.message))
             done()
@@ -31,6 +33,22 @@ describe("Teste de funcionalidade do WeatherController", () => {
                     res.should.have.status(400)
                     res.should.be.a("object")
                     res.body.message.should.be.eql("Cidade não informada")
+                })
+                .catch(err => console.error(err.message))
+            done()
+        })
+    })
+
+    describe("[GET]: 'api/weathers?city_id=3735' - WeatherController", () => {
+        it("A API deve retornar um JSON com as informações meteorológicas encontradas", done => {
+            chai
+                .request(app)
+                .get("/api/weathers")
+                .query({ city_id: 3735 })
+                .then(res => {
+                    res.should.have.status(200)
+                    res.should.be.a("object")
+                    res.body.data.city.locale.id.should.be.eql(3735)
                 })
                 .catch(err => console.error(err.message))
             done()

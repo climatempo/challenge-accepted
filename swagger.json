@@ -1,0 +1,366 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "API RESTful para busca de dados meteorológicos. Somente 'Osasco' e 'São Paulo' estão disponíveis para pesquisa",
+    "version" : "1.0",
+    "title" : "Climatempo API",
+    "contact" : {
+      "email" : "giovanni.cruz97@hotmail.com"
+    },
+    "license" : {
+      "name" : "MIT",
+      "url" : "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/giovannicruz97/ClimatempoAPI/1.0",
+  "tags" : [ {
+    "name" : "Locais",
+    "description" : "Endpoint para busca de cidades"
+  }, {
+    "name" : "Dados meteorológicos",
+    "description" : "Endpoint para busca de dados meterológicos por cidade"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/locales/cities" : {
+      "get" : {
+        "tags" : [ "Locais" ],
+        "summary" : "Busca uma cidade específica pelo nome",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "city",
+          "in" : "query",
+          "description" : "Cidade para ser buscada",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Retorna dados de uma cidade específica",
+            "schema" : {
+              "$ref" : "#/definitions/City"
+            }
+          },
+          "400" : {
+            "description" : "Retorna uma mensagem de erro, pois a cidade não foi informada",
+            "schema" : {
+              "$ref" : "#/definitions/CityError1"
+            }
+          },
+          "404" : {
+            "description" : "Retorna uma mensagem de erro, pois a cidade não existe",
+            "schema" : {
+              "$ref" : "#/definitions/CityError2"
+            }
+          }
+        }
+      }
+    },
+    "/weathers" : {
+      "get" : {
+        "tags" : [ "Dados meteorológicos" ],
+        "summary" : "Busca os dados meteorológicos pelo o ID de uma cidade",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "city_id",
+          "in" : "query",
+          "description" : "ID da cidade",
+          "required" : false,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Retorna os dados meteorológicos de uma cidade",
+            "schema" : {
+              "$ref" : "#/definitions/Weather"
+            }
+          },
+          "400" : {
+            "description" : "Retorna uma mensagem de erro, pois a cidade não foi informada",
+            "schema" : {
+              "$ref" : "#/definitions/CityError1"
+            }
+          },
+          "404" : {
+            "description" : "Retorna uma mensagem de erro, pois a cidade não foi encontrada",
+            "schema" : {
+              "$ref" : "#/definitions/WeatherError1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "City" : {
+      "type" : "object",
+      "properties" : {
+        "data" : {
+          "$ref" : "#/definitions/City_data"
+        }
+      },
+      "example" : {
+        "data" : {
+          "city" : {
+            "latitude" : -23.532,
+            "name" : "Osasco",
+            "id" : 3735,
+            "state" : "SP",
+            "longitude" : -46.792
+          }
+        }
+      }
+    },
+    "CityError1" : {
+      "type" : "object",
+      "properties" : {
+        "message" : {
+          "type" : "string",
+          "example" : "Cidade não informada"
+        }
+      }
+    },
+    "CityError2" : {
+      "type" : "object",
+      "properties" : {
+        "message" : {
+          "type" : "string",
+          "example" : "Cidade não encontrada"
+        }
+      }
+    },
+    "Weather" : {
+      "type" : "object",
+      "properties" : {
+        "data" : {
+          "$ref" : "#/definitions/Weather_data"
+        }
+      },
+      "example" : {
+        "data" : {
+          "period" : {
+            "end" : "2017-02-07",
+            "begin" : "2017-02-01"
+          },
+          "weather" : [ {
+            "date" : "2017-02-01",
+            "rain" : {
+              "precipitation" : 20.0,
+              "probability" : 60.0
+            },
+            "temperature" : {
+              "min" : 20.0,
+              "max" : 28.0
+            },
+            "text" : "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora."
+          }, {
+            "date" : "2017-02-01",
+            "rain" : {
+              "precipitation" : 20.0,
+              "probability" : 60.0
+            },
+            "temperature" : {
+              "min" : 20.0,
+              "max" : 28.0
+            },
+            "text" : "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora."
+          } ],
+          "locale" : {
+            "latitude" : -23.532,
+            "name" : "Osasco",
+            "id" : 3735,
+            "state" : "SP",
+            "longitude" : -46.792
+          }
+        }
+      }
+    },
+    "WeatherError1" : {
+      "type" : "object",
+      "properties" : {
+        "message" : {
+          "type" : "string",
+          "example" : "Informação climática não encontrada para essa cidade"
+        }
+      }
+    },
+    "City_data_city" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "example" : 3735
+        },
+        "name" : {
+          "type" : "string",
+          "example" : "Osasco"
+        },
+        "state" : {
+          "type" : "string",
+          "example" : "SP"
+        },
+        "latitude" : {
+          "type" : "number",
+          "example" : -23.532
+        },
+        "longitude" : {
+          "type" : "number",
+          "example" : -46.792
+        }
+      },
+      "example" : {
+        "latitude" : -23.532,
+        "name" : "Osasco",
+        "id" : 3735,
+        "state" : "SP",
+        "longitude" : -46.792
+      }
+    },
+    "City_data" : {
+      "properties" : {
+        "city" : {
+          "$ref" : "#/definitions/City_data_city"
+        }
+      },
+      "example" : {
+        "city" : {
+          "latitude" : -23.532,
+          "name" : "Osasco",
+          "id" : 3735,
+          "state" : "SP",
+          "longitude" : -46.792
+        }
+      }
+    },
+    "Weather_data_period" : {
+      "properties" : {
+        "begin" : {
+          "type" : "string",
+          "example" : "2017-02-01"
+        },
+        "end" : {
+          "type" : "string",
+          "example" : "2017-02-07"
+        }
+      },
+      "example" : {
+        "end" : "2017-02-07",
+        "begin" : "2017-02-01"
+      }
+    },
+    "Weather_data_temperature" : {
+      "properties" : {
+        "min" : {
+          "type" : "number",
+          "example" : 20.0
+        },
+        "max" : {
+          "type" : "number",
+          "example" : 28.0
+        }
+      },
+      "example" : {
+        "min" : 20.0,
+        "max" : 28.0
+      }
+    },
+    "Weather_data_rain" : {
+      "properties" : {
+        "probability" : {
+          "type" : "number",
+          "example" : 60.0
+        },
+        "precipitation" : {
+          "type" : "number",
+          "example" : 20.0
+        }
+      },
+      "example" : {
+        "precipitation" : 20.0,
+        "probability" : 60.0
+      }
+    },
+    "Weather_data_weather" : {
+      "properties" : {
+        "date" : {
+          "type" : "string",
+          "example" : "2017-02-01"
+        },
+        "text" : {
+          "type" : "string",
+          "example" : "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora."
+        },
+        "temperature" : {
+          "$ref" : "#/definitions/Weather_data_temperature"
+        },
+        "rain" : {
+          "$ref" : "#/definitions/Weather_data_rain"
+        }
+      },
+      "example" : {
+        "date" : "2017-02-01",
+        "rain" : {
+          "precipitation" : 20.0,
+          "probability" : 60.0
+        },
+        "temperature" : {
+          "min" : 20.0,
+          "max" : 28.0
+        },
+        "text" : "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora."
+      }
+    },
+    "Weather_data" : {
+      "properties" : {
+        "period" : {
+          "$ref" : "#/definitions/Weather_data_period"
+        },
+        "locale" : {
+          "$ref" : "#/definitions/City_data_city"
+        },
+        "weather" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Weather_data_weather"
+          }
+        }
+      },
+      "example" : {
+        "period" : {
+          "end" : "2017-02-07",
+          "begin" : "2017-02-01"
+        },
+        "weather" : [ {
+          "date" : "2017-02-01",
+          "rain" : {
+            "precipitation" : 20.0,
+            "probability" : 60.0
+          },
+          "temperature" : {
+            "min" : 20.0,
+            "max" : 28.0
+          },
+          "text" : "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora."
+        }, {
+          "date" : "2017-02-01",
+          "rain" : {
+            "precipitation" : 20.0,
+            "probability" : 60.0
+          },
+          "temperature" : {
+            "min" : 20.0,
+            "max" : 28.0
+          },
+          "text" : "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora."
+        } ],
+        "locale" : {
+          "latitude" : -23.532,
+          "name" : "Osasco",
+          "id" : 3735,
+          "state" : "SP",
+          "longitude" : -46.792
+        }
+      }
+    }
+  }
+}

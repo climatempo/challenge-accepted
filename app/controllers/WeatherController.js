@@ -11,7 +11,7 @@ function getWeather(req, res) {
         })
     }
 
-    return res.status(400).json({
+    return res.status(404).json({
         message: "Informação climática não encontrada para essa cidade"
     })
 }

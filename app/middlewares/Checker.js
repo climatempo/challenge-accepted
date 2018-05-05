@@ -13,7 +13,7 @@ function checkCity(req, res, next) {
 }
 
 function checkCityId(req, res, next) {
-    if (req.query.city_id && !isNaN(req.query.city)) {
+    if (req.query.city_id && !isNaN(req.query.city_id)) {
         return next()
     }
 

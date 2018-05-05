@@ -13,7 +13,7 @@ describe("Teste de funcionalidades do LocaleController", () => {
                 .get("/api/locales/cities")
                 .query({ city: "Taubaté" })
                 .then(res => {
-                    res.should.have.status(400)
+                    res.should.have.status(404)
                     res.should.be.a("object")
                     res.body.message.should.be.eql("Cidade não encontrada")
                 })

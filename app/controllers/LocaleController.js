@@ -3,11 +3,9 @@ const Locale = require("../models/Locale")
 function getLocale(req, res) {
     const requestedCity = req.query.city
 
-    let foundCity = Locale.filter(locale => {
-        if (locale.name.toUpperCase() == requestedCity.toUpperCase()) {
-            return locale
-        }
-    })
+    let foundCity = Locale.filter(
+        locale => locale.name.toUpperCase() == requestedCity.toUpperCase()
+    )
 
     if (typeof foundCity !== "undefined" && foundCity.length > 0) {
         return res.json({

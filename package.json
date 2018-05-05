@@ -19,5 +19,10 @@
     "eslint": "^4.18.1",
     "husky": "^0.14.3",
     "mocha": "^5.0.1"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --exit",
+    "pre-commit": "yarn test",
+    "pre-push": "yarn test"
   }
 }

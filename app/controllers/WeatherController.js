@@ -3,11 +3,7 @@ const Weather = require("../models/Weather")
 function getWeather(req, res) {
     const cityId = req.query.city_id
 
-    let foundWeather = Weather.filter(data => {
-        if (data.locale.id == parseInt(cityId)) {
-            return data
-        }
-    })
+    let foundWeather = Weather.filter(data => data.locale.id == cityId)
 
     if (typeof foundWeather !== "undefined" && foundWeather.length > 0) {
         return res.json({

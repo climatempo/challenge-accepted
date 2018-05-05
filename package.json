@@ -1,0 +1,23 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "Desafio Fullstack do Climatempo",
+  "main": "app.js",
+  "repository": "https://github.com/giovannicruz97/challenge-accepted.git",
+  "author": "Giovanni Cruz <giovanni.cruz97@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "eslint": "^4.18.1",
+    "husky": "^0.14.3",
+    "mocha": "^5.0.1"
+  }
+}

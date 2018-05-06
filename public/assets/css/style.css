@@ -1,0 +1,17 @@
+body, button, input, p, a, h1, h2, h3, h4, div { margin:0; border:0;}
+
+div.top-bar {
+    background: #1565C0;
+    width: 100%;
+}
+
+img.top-image {
+    height: auto;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+button.search-button {
+    border: none;
+}

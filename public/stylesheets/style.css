@@ -2,3 +2,8 @@ body {
   margin-top: 100px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
+.weather-text {
+  margin: 10px;
+}
+

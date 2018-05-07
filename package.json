@@ -24,6 +24,8 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --exit",
     "attach": "docker exec -it climatempo_app /bin/bash",
+    "start": "docker-compose up -d",
+    "stop": "docker-compose stop",
     "precommit": "yarn test",
     "prepush": "yarn test"
   }

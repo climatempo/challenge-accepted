@@ -48,7 +48,14 @@ function getWeatherInfo(json) {
 
                 let dateSpan = document.createElement("span")
                 dateSpan.id = "date"
-                dateSpan.appendChild(document.createTextNode(weather.date))
+                dateSpan.appendChild(
+                    document.createTextNode(
+                        weather.date.replace(
+                            /(\d{4})-(\d{2})-(\d{2})/,
+                            "$3/$2/$1"
+                        )
+                    )
+                )
 
                 let descriptionSpan = document.createElement("span")
                 descriptionSpan.id = "description"

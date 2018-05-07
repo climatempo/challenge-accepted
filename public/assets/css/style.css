@@ -103,7 +103,7 @@ main {
     display: flex;
     justify-content: space-between;
     padding-top: 1rem;
-
+    align-items: center;
 }
 
 .warning {

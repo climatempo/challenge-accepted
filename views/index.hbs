@@ -1,0 +1,46 @@
+<nav class="navbar fixed-top navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="images/logo.png" width="150" height="30" class="d-inline-block align-top" alt="">
+    </a>
+</nav>
+
+<div class="row">
+    <div class="col-12">
+        <form action="/" method="POST">
+            <div class="form-group">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="city">
+            </div>           
+            <button type="submit" class="btn btn-outline-success">Search</button>
+        </form>
+
+        {{#if city}}
+        <div class="weather-text">
+            <h3>Previsão para {{city}}</h3>
+        </div>        
+        {{/if}} 
+
+        {{#each weathers}}
+        <div class="card border-dark mb-3" >
+            <div class="card-header">
+                <div class="row">{{date}}</div>
+                <div class="row" style="margin-top: 10px;">{{text}}</div>
+            </div>
+            <div class="card-body text-dark">  
+                <div class="row">
+                    <div class="col"><i class="fas fa-arrow-up"></i></div>
+                    <div class="col">{{temperature.max}} °C</div>
+                    <div class="col"><i class="fas fa-arrow-down"></i></div>
+                    <div class="col">{{temperature.min}} °C</div>
+                </div>
+                <div class="row">
+                    <div class="col"><i class="fas fa-tint"></i></div>
+                    <div class="col">{{rain.precipitation}} mm</div>
+                    <div class="col"><i class="fas fa-umbrella"></i></div>
+                    <div class="col">{{rain.probability}} %</div>
+                </div>
+            </div>
+        </div>
+        {{/each}}    
+    </div>
+</div>
+

@@ -5,15 +5,18 @@
 </nav>
 
 <div class="row">
-
-    <div class="col-12 text-center">
-        <form class="form-inline" action="/" method="POST">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="city">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <div class="col-12">
+        <form action="/" method="POST">
+            <div class="form-group">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="city">
+            </div>           
+            <button type="submit" class="btn btn-outline-success">Search</button>
         </form>
 
         {{#if city}}
-        <h3>Previsão para {{city}}</h3>
+        <div class="weather-text">
+            <h3>Previsão para {{city}}</h3>
+        </div>        
         {{/if}} 
 
         {{#each weathers}}
@@ -38,8 +41,6 @@
             </div>
         </div>
         {{/each}}    
-    </div>   
-
-
+    </div>
 </div>
 

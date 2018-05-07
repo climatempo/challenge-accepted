@@ -1,0 +1,2 @@
+const app = require("../app")
+app.listen(3000, () => console.log("Climatempo App running at 3000"))

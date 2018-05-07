@@ -1,0 +1,10 @@
+version: "2.2"
+services:
+  app:
+    container_name: climatempo_app
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: bash -c "yarn && nodemon ./bin/www"

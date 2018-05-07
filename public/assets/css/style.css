@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background-color: #E0E0E0;
+    font-family: 'Roboto', sans-serif;
+}
+
+input:required {
+    box-shadow:none;
+}
+
+main {
+    padding: 3%;
+}
+
+.top-bar {
+    background: #1565C0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+}
+
+.top-bar #topbar-logo {
+    height: 40%;
+    display: inline-flex;
+}
+
+.search {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    height: 35px;
+}
+
+.search-button {
+    display: inline-flex;
+    background-color: white;
+    justify-content: right;
+}
+
+.search-input {
+    display: inline-flex;
+    width: 100%;
+    padding-left: 3%;
+}
+
+.search-button #search-icon {
+    display: inline-flex;
+    justify-content: right;
+    width: 70%;
+}
+
+.weather-location {
+    display: inline-flex;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    font-size: 20px;
+}
+
+.card {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    display: flex;
+    width: 100%;
+    align-items: left;
+    justify-content: left;
+    background: white;
+    flex-flow: column;
+    margin-top: 5%;
+}
+
+.card #date {
+    display: inline-flex;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.card #description {
+    display: inline-flex;
+    width: 100%;
+    font-size: 13px;
+    padding-left: 0.5rem;
+    padding-bottom: 0.2rem;
+}
+
+.subcard {
+    background-color: #EEEEEE;
+    display: flex;
+    width: 100%;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 1rem
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+.warning {
+    color: #d32f2f;
+}
+
+.red {
+    color: #d32f2f;
+}
+
+.black {
+    color: black;
+}
+
+.blue {
+    color: #0D47A1;
+}

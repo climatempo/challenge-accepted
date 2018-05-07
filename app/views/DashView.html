@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Climatempo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <script src="/public/assets/js/main.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Logo Climatempo -->
+        <div class="top-bar">
+            <img id="topbar-logo" src="/public/assets/img/logo-white.png">
+        </div>
+
+        <!-- Flexbox de pesquisa -->
+        <div class="search">
+            <input class="search-input" type="text" name="city" id="city" placeholder="Busque uma cidade" required>
+            <button class="search-button" type="submit" onclick="findCity()"><img id="search-icon" src="/public/assets/icons/search.png"></button>
+        </div>
+    </header>
+    <!-- App -->
+    <main>
+        <div id="cards-section"></div>
+    <main>
+</body>
+</html>

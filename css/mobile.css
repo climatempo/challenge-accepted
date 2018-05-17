@@ -1,0 +1,106 @@
+body{
+  background-color: #f2f2f2;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+.container {
+  width: 100%;
+}
+
+.clima-logo{
+  /*padding: 15%;*/
+  margin: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+}
+
+.search-location{
+  position: relative;
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 15px;
+  background-color: white;
+}
+
+.search-location input[type=search]{
+  border: none;
+  border-color: transparent;
+  margin-top: 0px;
+  padding-top: 10px;
+  /*padding-bottom: 10px;*/
+  padding-right: 113px;
+  /*padding-left: 20px;*/
+  float: left;
+  font-size: 15px;
+  position: absolute;
+  margin: 0px;
+  background-color: transparent;
+}
+
+.search-location a{
+  position: relative;
+  text-align: center;
+  float: right;
+  background: transparent;
+  border-color: transparent;
+  /*padding-right: 20px;*/
+}
+
+.localidade-clima{
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+  /*text-align: center;*/
+}
+
+#cidade{
+  text-align: center;
+}
+
+.previsao-titulo h3{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: transparent;
+  border: none;
+  margin-left: 20%;
+  height: 60%;
+  margin-right: 20%;
+
+}
+.previsao .resumo{
+  position: static;
+  background-color: white;
+  padding: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin: 0px;
+  margin-top: 0px;
+  border: none;
+  float: left;
+  /*background-color: green;*/
+}
+.previsao .previsao-conteudo .info{
+  position: static;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 10px;
+  background-color: #A9A9A9;
+  text-align: center;
+}
+
+.previsao-conteudo{
+  margin-left: 10%;
+  height: 80%;
+  /*margin-right: 10%;*/
+}
+
+.conteudo{
+  margin-bottom: 30px;
+}

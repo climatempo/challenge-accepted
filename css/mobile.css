@@ -10,7 +10,6 @@ body{
 }
 
 .clima-logo{
-  /*padding: 15%;*/
   margin: 0px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -33,9 +32,7 @@ body{
   border-color: transparent;
   margin-top: 0px;
   padding-top: 10px;
-  /*padding-bottom: 10px;*/
   padding-right: 113px;
-  /*padding-left: 20px;*/
   float: left;
   font-size: 15px;
   position: absolute;
@@ -49,14 +46,12 @@ body{
   float: right;
   background: transparent;
   border-color: transparent;
-  /*padding-right: 20px;*/
 }
 
 .localidade-clima{
   margin: 0px;
   padding: 0px;
   background-color: transparent;
-  /*text-align: center;*/
 }
 
 #cidade{
@@ -84,7 +79,6 @@ body{
   margin-top: 0px;
   border: none;
   float: left;
-  /*background-color: green;*/
 }
 .previsao .previsao-conteudo .info{
   position: static;
@@ -96,9 +90,7 @@ body{
 }
 
 .previsao-conteudo{
-  margin-left: 10%;
-  height: 80%;
-  /*margin-right: 10%;*/
+  margin-left: 30px;
 }
 
 .conteudo{

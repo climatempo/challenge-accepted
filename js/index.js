@@ -1,17 +1,26 @@
-var locales = [];
 $(function(){
+  /* Executa a função para criar as tabelas de previsão */
   $('#searchCity').click(function(e){
     e.preventDefault();
     setWeaPage();
   });
+  /* Adiciona o caminho para a pagina principal caso a imagem seja clicada */
   $('#climatempo_logo').click(function(e){
     e.preventDefault();
     location.href = "index.php";
   });
+  /* Adiciona o autocomplete baseado no locales.json */
+  locales_request(function(e){
+    var locales = [];
+    for (i of e) {
+      locales.push(i['name']);
+    }
+    $("#search-city").autocomplete({source:locales});
+  });
+
 });
 
-
-
+/* Faz a requisição do locales.json */
 function locales_request(func) {
   $.ajax({
     type:'get',
@@ -22,6 +31,7 @@ function locales_request(func) {
   });
 }
 
+/* Faz a requisição do clima.php usando a localização como parametro */
 function clima_request(func,locale) {
   $.ajax({
     type:'get',
@@ -32,30 +42,10 @@ function clima_request(func,locale) {
   });
 }
 
+/* Cria as tabelas de previsão baseado na localização dada pelo usuário */
 function setWeaPage() {
   var locale_name = $('#search-city').val();
   clima_request(function(e){
     $('#previsao_pages').html(e);
   },locale_name);
-}
-
-function setWeatherPage() {
-  var locale_name = $('#search-city').val();
-  if (locale_name == "") {
-    location.href = "index.php";
-  }else {
-    locales_request(function(e){
-      var locExist = false;
-      for (i of e) {
-        if (i['name'] == locale_name) {
-          locExist = true;
-          location.href = "index.php?locale_id="+i['id'];
-          $('#search-city').val("");
-        }
-      }
-      if (locExist == false) {
-        location.href = "index.php?boo_location=false"
-      }
-    });
-  }
 }

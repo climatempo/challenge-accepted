@@ -1,9 +1,10 @@
 <?php
 
   class Climas{
-
+    /* Url dos dados de previsão */
     private $weatherUrl = "../base/weather.json";
 
+    /* Adciona os dados de previsão dentro da variável weather */
     public function __construct(){
     $weatherFile = fopen($this->weatherUrl, "r") or die("Unable to open file!");
     $weatherJson = fread($weatherFile,filesize($this->weatherUrl));
@@ -11,6 +12,7 @@
     $this->weather = json_decode($weatherJson);
     }
 
+    /* Retorna os dados de previsão por cidade */
     public function getJsoncityById($name){
       foreach ($this->weather as $i) {
         if ($i->locale->name == $name) {
@@ -19,13 +21,31 @@
       }
     }
 
+    /* Testa se a lozalização existe na base de dados */
+    public function locationExists($name){
+      foreach ($this->weather as $i) {
+        if ($i->locale->name == $name) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    public function getNoLocationPage(){
+      $html = '<div class="previsao-titulo">
+                  <h3>Localização não encontrada</h3>
+                </div>';
+      return $html;
+    }
+
+    /* Retorna uma pagina com tabelas de previsão */
     public function getWeatherPage($name){
       $html = "";
       $jsonW = $this->getJsoncityById($name);
-      $html = $html.'<div class="previsao-titulo">
-                    <h3>Previsão para '.$jsonW->locale->name.' - '.$jsonW->locale->state.'</h3>
-                  </div>
-                  <div class="previsao-conteudo">';
+      $html = '<div class="previsao-titulo">
+                  <h3>Previsão para '.$jsonW->locale->name.' - '.$jsonW->locale->state.'</h3>
+                </div>
+                <div class="previsao-conteudo">';
       foreach ($jsonW->weather as $i) {
         $html = $html.'<div class="conteudo">
                         <div class="resumo col-12">

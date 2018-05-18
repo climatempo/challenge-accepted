@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/bootstrap-waitingfor.min.js"></script>
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
@@ -18,12 +21,14 @@
           </a>
         </div>
         <div class="search-location container col-12">
-          <input type="search" placeholder="Localidade" id="search-city">
+          <div class="ui-widget">
+            <input  type="search" placeholder="Localidade" id="search-city">
+          </div>
           <a class="btn-search" id="searchCity" href="#">
              <img src="images/icons/search.png" class="bnt-image" height="32px" width="32px"/>
           </a>
         </div>
-        <div class="previsao" id="previsao_pages" >
+      <div class="previsao" align="center" id="previsao_pages" >
       </div>
     </div>
   </body>

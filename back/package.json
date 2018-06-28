@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "file-system": "^2.2.2"
+  }
+}

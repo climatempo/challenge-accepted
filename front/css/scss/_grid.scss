@@ -1,0 +1,108 @@
+@mixin d ($dispositivo) {
+    @if $dispositivo == tablet {
+        @media only screen and (min-width: 768px) and (max-width: 959px) {
+            @content;
+            }
+        }@else if $dispositivo == mobile {
+            @media only screen and (max-width: 767px) {
+                @content;
+            }
+        }
+}
+        
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+$container: 960;
+$gutter: 20;
+$colunas: 24;
+
+%grid {
+    float: left;
+    margin-left: ($gutter / 2) + px;
+    margin-right: ($gutter / 2) + px;
+}
+
+@for $i from 1 through $colunas {
+    $width: $container / $colunas * $i - $gutter;
+    .grid-#{$i} {
+        @extend %grid;
+        width: $width + px;
+    }
+}
+
+.grid-1-3 {
+    @extend %grid;
+    width: ($container/3) - $gutter + px;
+}
+
+.container {
+	width: $container + px;
+	margin: 0 auto;
+	padding: 0px;
+	position: relative;
+}
+
+.container:after, .container:before {
+	content: " ";
+	display: table;
+}
+
+
+.container:after {
+	clear: both;
+}
+
+
+
+@include d (tablet) {
+
+$container: 768;
+
+
+@for $i from 1 through $colunas {
+    $width: $container / $colunas * $i - $gutter;
+    .grid-#{$i} {
+        width: $width + px;
+    }
+}
+
+    
+.grid-1-3 {
+    width: ($container/3) - $gutter + px;
+}
+    
+.container {
+	width: $container + px;
+}
+
+}
+
+@include d (mobile) {
+
+$container: 300;
+    
+%mobile {
+    width: $container + px; 
+    margin: 0 0 20px 0;  
+    float: none;
+}
+@for $i from 1 through $colunas {
+    .grid-#{$i} {
+        @extend %mobile;
+    }
+}
+    
+.grid-1-3 {
+    @extend %mobile;
+}
+
+.container {
+	width: $container + px;
+}
+
+
+}

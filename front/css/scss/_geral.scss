@@ -1,0 +1,83 @@
+/* Estilos Gerais */
+body {
+	font-family: $font-1;
+}
+
+
+/* Header */
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: $primary-color; 
+	padding: 15px 0;
+	z-index: 10;
+    @include d (mobile) {
+        position: relative;
+	    padding-bottom: 0px;
+    }
+}
+
+
+.header img {
+    width: 100%;
+    @include d (mobile){
+        margin: 0 auto 10px auto;   
+    }
+}
+
+/* Form Search */
+.form-search{
+    float: right;
+    border: 3px solid $secondary-color;
+    background: $secondary-color;
+    width: 300px;
+    input, button{
+        background-color: $secondary-color;
+        border: 0 none;
+        outline: 0;
+    }
+    input {
+        width: 200px;
+        top: 10px;
+        bottom: 2px;
+        display: inline-block;
+        padding: 5px;
+        color: $tertiary-color;
+    }
+    button {
+        padding: 5px 10px;
+        float: right;
+   }
+}
+
+
+/* Name city */
+
+.title-city {
+    text-align: center;
+    font-family: $font-1;
+    margin: 150px 0 40px 0;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    
+}
+
+
+/* Description climatic */
+
+.description ul li p {
+    float: right;
+    color: $tertiary-color;
+}
+
+
+.footer {
+    background: $primary-color;
+    text-align: center;
+    padding: 60px 0;
+    font-size: 1.125em;
+    line-height: 1.4em;
+    margin-top: 80px;
+    color: $tertiary-color;
+}

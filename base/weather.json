@@ -6,7 +6,7 @@
     },
     "locale": {
       "id": 3735,
-      "name": "Osasco",
+      "name": "osasco",
       "state": "SP",
       "latitude": -23.5320,
       "longitude": -46.7920
@@ -105,7 +105,7 @@
     },
     "locale": {
       "id": 3477,
-      "name": "São Paulo",
+      "name": "são paulo",
       "state": "SP",
       "latitude": -23.5480,
       "longitude": -46.6360

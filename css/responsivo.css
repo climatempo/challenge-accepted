@@ -1,0 +1,87 @@
+@media only screen and (min-width: 550px) {
+    .capa_img {
+        margin: auto;
+        height: 55%;
+        width: 25%;
+
+    }
+
+    .buscador_tam {
+        width: 30vw;
+    }
+
+    .capa {
+        width: 100vw;
+        height: 10vh;
+        background-size: cover;
+        background: darkcyan;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .base_card {
+        height: 19vh;
+        text-align: left;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.1)
+    }
+}
+
+@media only screen and (max-width: 550px) and (max-height: 650px) {
+    .capa_img {
+        margin: auto;
+        height: 34%;
+        width: 43%;
+
+    }
+
+    .buscador_tam {
+        width: 70vw;
+    }
+
+    .capa {
+        width: 100vw;
+        height: 10vh;
+        background-size: cover;
+        background: darkcyan;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .base_card {
+        height: 19vh;
+        text-align: left;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.1)
+    }
+
+}
+
+@media only screen and (min-width: 400px) and (min-height: 800px) {
+    .capa {
+        width: 100vw;
+        height: 5vh;
+        background-size: cover;
+        background: darkcyan;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .base_card {
+        height: 9vh;
+        text-align: left;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.1)
+    }
+
+    .capa_img {
+        margin: auto;
+        height: 55%;
+        width: 25%;
+
+    }
+
+    .buscador_tam {
+        width: 30vw;
+    }
+}

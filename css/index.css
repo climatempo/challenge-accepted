@@ -1,0 +1,45 @@
+.btn_lupa {
+    border: 0;
+    background-color: white;
+}
+
+.f08 {
+    font-size: 0.8em;
+}
+
+.baixo_card {
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px
+}
+
+.justfy {
+    text-align: justify;
+}
+
+.cima_card {
+    height: 50%;
+    border-bottom: solid black 1px
+}
+
+.data_card {
+    border-radius: 65px;
+    margin-left: -20px
+}
+
+.vh8 {
+    height: 8vh;
+}
+
+.bradius {
+    border-radius: 65px;
+}
+.meio{
+    display: table-cell;
+    vertical-align: middle;
+}
+.nome{
+    padding-top: 10px;
+    font-size: 1.1em;
+    border-bottom: 1px solid;
+}

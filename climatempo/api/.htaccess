@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^control/([a-zA-Z_-]*)$ control.php?city=$1 [NC,L]

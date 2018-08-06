@@ -1,0 +1,44 @@
+
+/* Small tablet to big tablet: from 768 to 1023px */
+@media only screen and (max-width: 1023px) {
+  html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: #f4f4f4;
+  }
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+
+  .search-bar {
+    text-align: center;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search {
+    background: url('/resources/img/icons/search.png') no-repeat;
+    background-size: 24px;
+    background-position-x: 98%;
+    background-position-y: 4px;
+    height: 35px;
+    width: 100%;
+    border: 0;
+    outline:0;
+    -moz-outline:0;
+    cursor:text;
+    background-color: darkgray;
+  }
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+  html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-color: #f4f4f4;
+  }
+}
+

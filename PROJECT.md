@@ -78,7 +78,7 @@ Quanto à data, consideramos, à título de demonstração, que a data 'atual' �
 
 ## Agradecimentos
 
-Obrigado ao Giovani Cruz, que indiretamente nos trouxe a luz deste desafio.
+Obrigado ao Giovanni Cruz, que indiretamente nos trouxe a luz deste desafio.
 
 Atenciosamente,
 

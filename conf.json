@@ -1,0 +1,11 @@
+{
+    "project_name": "CLIMATEMPO::ABOX",
+    "http": "http:\/\/localhost\/chalenge-accepted",
+    "project_owner": "ABOXSOFT",
+    "theme": {
+        "light": "1",
+        "glass_effect": "1",
+        "background": "src\/img\/wallpapers\/AboxTheme.png",
+        "font": "#dc2431"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "project_name": "CLIMATEMPO::ABOX",
+    "http": "http:\/\/www.example.com",
+    "mysql_database": "defaultdb",
+    "mysql_host": "localhost",
+    "mysql_port": "3306",
+    "mysql_pswd": "pswd",
+    "mysql_user": "user",
+    "mail_check": "0",
+    "project_owner": "",
+    "enterprise": "Example INC"
+}

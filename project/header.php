@@ -61,7 +61,7 @@ namespace abox;?>
 				ab.body().addClass("-blur");
 				AB_BIND_DEFAULT_RESPONSE = "<div class='stretch'>\
 					<div class='dbar fg flt fgray'><icon class='flt disabled -op.8'>&#x51;</icon></div>\
-					<center class='fn spd'>Infelizmente não encontramos sua localização, entre com sua cidade no campo de pesquisa a cima... ={</center>\
+					<center class='fn spd'>Infelizmente não encontramos dados para sua localização, entre com sua cidade no campo de pesquisa a cima ou tente outra data... ={</center>\
 				</div>".toDOM();
 				ab.organize();
 				this.container.appear(120);

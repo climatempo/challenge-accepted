@@ -27,7 +27,7 @@ ABLIB é um framework que integra JavaScript e PHP, é de nossa autoria e pode s
 Nosso famework se baseia na filosofia SPA (Single Page Application), com implementação de <i>XMLHttpRequest</i>'s e algumas classes para tratamento de informações, formatação de elementos visuais e mapeamento de variáveis em tempo de execução.
 
 ## Estrutura dos arquivos do projeto (apenas os utilizados)
-<pre>
+
 |---------------------------|----------------------------------------------|
 | Arquivo                   | Descrição                                    |
 |---------------------------|----------------------------------------------|
@@ -46,8 +46,8 @@ Nosso famework se baseia na filosofia SPA (Single Page Application), com impleme
 | /var/.PROJ                | Nome do projeto                              |
 | /var/.HTTP                | URL do projeto                               |
 |---------------------------|----------------------------------------------|
-</pre>
-Nota: Há mais arquivos no arquivo, porém são dependências obrigatórias do ABLIB, mas não têm seus componentes utilizados neste projeto.
+
+Nota: Há mais arquivos, porém são dependências obrigatórias do ABLIB, mas não têm seus componentes utilizados neste projeto.
 
 ## Requisitos
 

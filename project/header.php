@@ -40,7 +40,7 @@ namespace abox;?>
 			, submit : function(c=0){
 				let
 				v = $('#{{#}} input:first').val(),
-				d = $('#{{#}} date:first').text();
+				d = !v?$('#{{#}} date:first').text():"04/02";
 				if(v) this.currentCity = v;
 				if(d) this.currentDate = d.split("/").reverse().join("");
 				this.data.load({ conf:"locale",load:true,data:{city:this.currentCity,date:this.currentDate,step:c} });

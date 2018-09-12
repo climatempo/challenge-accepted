@@ -33,7 +33,7 @@ Nosso famework se baseia na filosofia SPA (Single Page Application), com impleme
 | Arquivo                   | Descrição                                    |
 |---------------------------|----------------------------------------------|
 | /.ROOT                    | Indica o ponto de partida para o framework   |
-| /index.php                | <i>launcher</i>                              |
+| /index.php                | <i>launcher</i>                                     |
 | /etc/loader.php           | Carrega informações do servidor              |
 | /etc/loader.d/locale.conf | Arquivo de instrução para o loader.php       |
 | /lib/constants.php        | Constants do framework                       |
@@ -68,7 +68,7 @@ Com as ferramentas adequadas e os serviços listados ativos, basta clonar o repo
 
 ## Considerações
 
-Esperamos de coração que nossos esforços não tenham sido em vão, reafirmo que não temos como finalidade angariar a vaga de <i>fullstack</i> disponível, nossa priore é a criação de um vínculo que pode ser proveitoso tanto para a <b>CLIMATEMPO</b> quanto para nós da <i><b>Aboxsoft</b></i>, através de contratações pontuais ou participação de projetos, seja por contrato ou consultoria.
+Esperamos de coração que nossos esforços não tenham sido em vão, reafirmo que não temos como finalidade angariar a vaga de <i>fullstack</i> disponível, nossa priore é a criação de um vínculo que pode ser proveitoso tanto para a <b>CLIMATEMPO</b> quanto para nós da <i><b>ABOXSOFT</b></i>, através de contratações pontuais ou participação de projetos, seja por contrato ou consultoria.
 
 Não encontramos uma formula possível que sustentasse alguma coesão para que fosse possível carregar imagens de climas que tivessem relação com o descritivo de cada <i>text</i> no objeto <i>weather.json</i>, portanto ustilizamos uma única e ilustrativa. Também consideramos que ao serem duplicadas as informações do arquivo locales.json com weather.json, o documento com menor conteúdo poderia ser desprezado, uma vez que do ponto de vista de um desenvolvedor de banco de dados essa é uma relação insatisfatória.
 

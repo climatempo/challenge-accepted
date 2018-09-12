@@ -60,15 +60,19 @@ O projeto foi desenvolvido sob as condições abaixo descritas:
 - php-fpm -v: PHP 7.2.10 (fpm-fcgi) Zend Engine v3.2.0
 - google-chrome-unstable --version: Google Chrome 70.0.3538.9 dev
 
-Mas pode ser executado em quaquer <i>setup</i> qu inclui um servidor http e um interpretador PHP à partir de um navegador moderno, com as versões equivalentes às descritas a cima.
+Mas pode ser executado em quaquer <i>setup</i> qu inclui um servidor <i>http</i> e um interpretador PHP à partir de um navegador moderno, com as versões equivalentes às descritas a cima.
 
 ## Execução
 
-Com as ferramentas adequadas e os serviços listados ativos, basta clonar o repositório na pasta raiz do servidor http e acessá-lo através do navegador usando a URL: http://localhost/challenge-accepted.
+Com as ferramentas adequadas e os serviços listados ativos, basta clonar o repositório na pasta raiz do servidor <i>http</i> e acessá-lo através do navegador usando a URL: <i>http://localhost/challenge-accepted.</i>
 
 ## Considerações
 
-Esperamos de coração que nossos esforços não tenham sido em vão, reafirmo que não temos como finalidade angariar a vaga de fullstack disponível, nossa priore é a criação de um vínculo que pode ser proveitoso tanto para a CLIMATEMPO quanto para nós da Aboxsoft, através de contratações pontuais ou participação de projetos, seja por contrato ou consultoria.
+Esperamos de coração que nossos esforços não tenham sido em vão, reafirmo que não temos como finalidade angariar a vaga de <i>fullstack</i> disponível, nossa priore é a criação de um vínculo que pode ser proveitoso tanto para a <b>CLIMATEMPO</b> quanto para nós da <i><b>Aboxsoft</b></i>, através de contratações pontuais ou participação de projetos, seja por contrato ou consultoria.
+
+Poderíamos ter nos dedicado à equilibrar questões como o aspecto visual dos ícones fornecidos, tal qual sua coloração, que julgamos não adequada à proposta visual que escolhemos, porém, isso nos custaria um tempo que não temos.
+
+Quanto à data, consideramos, à título de demonstração, que a data 'atual' é 04/02, assim sendo, os elementos podem ser explorados com maior facilidade. Esta opção se dá com base no arquivo <i>json</i> fornecido, que traz um <i>range</i> específico de dias.
 
 ## Agradecimentos
 

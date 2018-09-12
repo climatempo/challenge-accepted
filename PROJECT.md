@@ -82,7 +82,7 @@ Obrigado ao Giovani Cruz, que indiretamente nos trouxe a luz deste desafio.
 
 Atenciosamente,
 
-Equipe Aboxsoft DEV Team.
+Equipe Aboxsoft DEV Team.<br>
 Email: <a href='malito:contato@aboxsoft.com.br'>contato@aboxsof.com.br</a> 
 
 <pre>

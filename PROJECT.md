@@ -28,6 +28,7 @@ Nosso famework se baseia na filosofia SPA (Single Page Application), com impleme
 
 ## Estrutura dos arquivos do projeto (apenas os utilizados)
 
+<pre>
 |---------------------------|----------------------------------------------|
 | Arquivo                   | Descrição                                    |
 |---------------------------|----------------------------------------------|
@@ -46,6 +47,7 @@ Nosso famework se baseia na filosofia SPA (Single Page Application), com impleme
 | /var/.PROJ                | Nome do projeto                              |
 | /var/.HTTP                | URL do projeto                               |
 |---------------------------|----------------------------------------------|
+</pre>
 
 Nota: Há mais arquivos, porém são dependências obrigatórias do ABLIB, mas não têm seus componentes utilizados neste projeto.
 

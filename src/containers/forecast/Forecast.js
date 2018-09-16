@@ -74,7 +74,6 @@ class Forecast extends Component {
             : null}
           <Col s={12}>
             <CardForecast
-              onFetchWeather={this.onFetchWeather}
               weather={weather}
             />
           </Col>

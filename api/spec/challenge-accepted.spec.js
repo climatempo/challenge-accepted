@@ -4,6 +4,9 @@ const locales = "locales";
 const weather = "weather/";
 const city = "Osasco";
 
+/**
+ * Testes unitários das chamadas da API
+ */
 
 describe("Challange-Accepted Climatempo Tests", function () {
 	describe("/locales", function () {

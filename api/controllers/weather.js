@@ -1,5 +1,9 @@
 const weather = require('../base/weather.json')
 
+/**
+ * Controller de previsão, retorna a previsão pesquisando pelo nome da localidade passada como parâmetro na requisição
+ */
+
 module.exports = function (app) {
 	let WeatherController = {
 		getByName: function (req, res) {

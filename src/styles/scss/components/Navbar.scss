@@ -1,0 +1,23 @@
+@import 'Variables';
+
+// Changing default propertie css of materialize-css
+.hide-on-med-and-down {
+  display: block !important;
+}
+#nav-mobile {
+  display: none;
+}
+.button-collapse {
+  display: none;
+}
+
+.navbar {
+  background-color: $blue;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  .logo {
+    height: 20px;
+    width: 120px;
+  }
+}

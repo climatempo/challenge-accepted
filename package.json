@@ -1,0 +1,28 @@
+{
+  "name": "wag-adm",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^1.5.0",
+    "@material-ui/icons": "^2.0.2",
+    "contentful": "^7.0.0",
+    "material-ui": "^0.20.2",
+    "moment": "^2.22.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-materialize": "^2.4.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-tap-event-plugin": "^3.0.3",
+    "superagent": "^3.8.3"
+  },
+  "scripts": {
+    "sass": "node-sass --watch src/styles/scss --output src/styles/css",
+    "sass:build": "node-sass — update src/styles/scss:src/styles/css",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

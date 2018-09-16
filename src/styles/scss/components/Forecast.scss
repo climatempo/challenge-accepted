@@ -1,0 +1,49 @@
+@import "Variables";
+
+// Changing default propertie css of materialize-css
+.card .card-content {
+  padding: 0 !important;
+}
+
+.container-cards {
+  padding: 10px 20px;
+}
+
+.label-forecast {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.container-forecast {
+  background-color: $gray;
+  margin-bottom: 0 !important;
+  padding-top: 30px;
+}
+
+.container-title-forecast {
+  padding-top: 20px;
+}
+
+.text {
+  font-size: 24px;
+  span {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .text {
+    font-size: 18px;
+    span {
+      font-size: 16px;
+    }
+  }
+}
+
+.autocomplete-content li img {
+  height: 0 !important;
+  margin: 0 !important;
+  overflow: hidden;
+  width: 0 !important;
+}

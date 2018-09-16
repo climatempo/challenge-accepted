@@ -1,0 +1,18 @@
+// Changing default propertie css of materialize-css
+.input-field {
+  margin-top: 0 !important;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+  text-align: center;
+}
+
+input:not([type]):focus:not([readonly]),input[type=text]:focus:not([readonly]),input[type=password]:focus:not([readonly]),input[type=email]:focus:not([readonly]),input[type=url]:focus:not([readonly]),input[type=time]:focus:not([readonly]),input[type=date]:focus:not([readonly]),input[type=datetime]:focus:not([readonly]),input[type=datetime-local]:focus:not([readonly]),input[type=tel]:focus:not([readonly]),input[type=number]:focus:not([readonly]),input[type=search]:focus:not([readonly]),textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid $blue;
+  box-shadow: 0 1px 0 0 $blue;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+  color: $blue;
+  text-align: center
+}

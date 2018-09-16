@@ -1,0 +1,17 @@
+.hide-on-med-and-down {
+  display: block !important; }
+
+#nav-mobile {
+  display: none; }
+
+.button-collapse {
+  display: none; }
+
+.navbar {
+  background-color: #1565c0;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle; }
+  .navbar .logo {
+    height: 20px;
+    width: 120px; }

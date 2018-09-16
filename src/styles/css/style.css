@@ -1,0 +1,67 @@
+.card .card-content {
+  padding: 0 !important; }
+
+.container-cards {
+  padding: 10px 20px; }
+
+.label-forecast {
+  color: black;
+  font-size: 20px;
+  font-weight: bold; }
+
+.container-forecast {
+  background-color: #eeeeee;
+  margin-bottom: 0 !important;
+  padding-top: 30px; }
+
+.container-title-forecast {
+  padding-top: 20px; }
+
+.text {
+  font-size: 24px; }
+  .text span {
+    font-size: 24px; }
+
+@media (max-width: 400px) {
+  .text {
+    font-size: 18px; }
+    .text span {
+      font-size: 16px; } }
+
+.autocomplete-content li img {
+  height: 0 !important;
+  margin: 0 !important;
+  overflow: hidden;
+  width: 0 !important; }
+
+.hide-on-med-and-down {
+  display: block !important; }
+
+#nav-mobile {
+  display: none; }
+
+.button-collapse {
+  display: none; }
+
+.navbar {
+  background-color: #1565c0;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle; }
+  .navbar .logo {
+    height: 20px;
+    width: 120px; }
+
+.input-field {
+  margin-top: 0 !important; }
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+  text-align: center; }
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #1565c0;
+  box-shadow: 0 1px 0 0 #1565c0; }
+
+.dropdown-content li > a, .dropdown-content li > span {
+  color: #1565c0;
+  text-align: center; }

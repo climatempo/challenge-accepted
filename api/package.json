@@ -1,0 +1,43 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "Processo seletivo para climatempo",
+  "main": "",
+  "scripts": {
+    "start": "nodemon app",
+    "test": "jasmine-node spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "\"api\"",
+    "\"rest\""
+  ],
+  "author": "Juliano dos Santos Bento",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-flash": "0.0.2",
+    "express-load": "^1.1.16",
+    "express-session": "^1.15.6",
+    "jade": "^1.11.0",
+    "jasmine": "^3.2.0",
+    "jsonwebtoken": "^8.3.0",
+    "moment": "^2.22.0",
+    "mongoose": "^5.2.1",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.1",
+    "request": "^2.85.0",
+    "serve-favicon": "^2.5.0"
+  }
+}

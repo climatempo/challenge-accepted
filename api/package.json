@@ -32,6 +32,7 @@
     "express-session": "^1.15.6",
     "jade": "^1.11.0",
     "jasmine": "^3.2.0",
+    "jasmine-node": "^1.16.2",
     "jsonwebtoken": "^8.3.0",
     "moment": "^2.22.0",
     "mongoose": "^5.2.1",

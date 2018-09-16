@@ -40,23 +40,23 @@ Arquitetura do projeto
 
 São necessárias as seguintes depências para inicializar o projeto:
 
-- **node v^9**
-- **react v^16**
+- `node v^9`
+- `react v^16`
 
 ## Inicialização
 
 Para inicializar o projeto, e rodar os testes automaticamente:
 
-- rode o comando **bash ./voltaFabinho.sh**
+- rode o comando `bash ./voltaFabinho.sh`
 
 ## Desenvolvimento
 
 Para modificar a aplicação:
 
-1. Rode o comando **bash ./voltaFabinho.sh** para inicializar instalar as dependências e subir a API em background
-2. Instale o node-sass global **npm i --g node-sass**
-4. Rode o comando **yarn run sass** em um terminal
-5. Modifique os arquivos dentro da pasta **styles/scss/components**
+1. Rode o comando `bash ./voltaFabinho.sh` para inicializar instalar as dependências e subir a API em background
+2. Instale o node-sass global `npm i --g node-sass`
+4. Rode o comando `yarn run sass` em um terminal
+5. Modifique os arquivos dentro da pasta `styles/scss/components`
 
 ## OBS
 

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="utf-8">
+      <title>Climatempo</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto+Condensed:300,400" rel="stylesheet">
+      <script src="js/jquery-3.3.1.js"></script>
+      <script src="js/main.js"></script>
+   </head>
+   <body>
+      <header class="header">
+         <div class="container">
+            <a href="" class="grid-4">
+            <img src="img/logo-white.png" alt="Portal ClimaTempo">
+            </a>
+            <nav class="grid-12 header_menu">
+               <form class="pesquisa-cidade" method="post" action="">
+                  <input id ="city" name="city" type="text">
+                  <button id="enviar" name="enviar" type="submit" class="btn">Enviar</button>
+               </form>
+            </nav>
+         </div>
+      </header>
+      <section class="cards container">
+         <h2 class="subtitulo"></h2>
+         <ul class="cards_lista">
+            <li class="grid-1-3">
+               <div class="cards_icone">
+                  <h3 id="data0"></h3>
+               </div>
+               <p id="texto0"></p>
+               <img src="img/upload.png" alt="Máxima">
+               <p id="maxima0"></p>
+               <img src="img/low.png" alt="Minima">
+               <p id="minima0"></p>
+               <img src="img/raindrop-close-up.png" alt="Preciptação de chuva">
+               <p id="possibilidade-chuva0"></p>
+               <img src="img/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" alt="Chance de chover"> 
+               <p id="precipitacao-chuva0"></p>
+            </li>
+            <li class="grid-1-3">
+               <div class="cards_icone">
+                  <h3 id="data1"></h3>
+               </div>
+               <p id="texto1"></p>
+               <img src="img/upload.png" alt="Máxima">
+               <p id="maxima1"></p>
+               <img src="img/low.png" alt="Minima">
+               <p id="minima1"></p>
+               <img src="img/raindrop-close-up.png" alt="Preciptação de chuva">
+               <p id="possibilidade-chuva1"></p>
+               <img src="img/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" alt="Chance de chover"> 
+               <p id="precipitacao-chuva1"></p>
+            </li>
+            <li class="grid-1-3">
+               <div class="cards_icone">
+                  <h3 id="data2"></h3>
+               </div>
+               <p id="texto2"></p>
+               <img src="img/upload.png" alt="Máxima">
+               <p id="maxima2"></p>
+               <img src="img/low.png" alt="Minima">
+               <p id="minima2"></p>
+               <img src="img/raindrop-close-up.png" alt="Preciptação de chuva">
+               <p id="possibilidade-chuva2"></p>
+               <img src="img/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" alt="Chance de chover"> 
+               <p id="precipitacao-chuva2"></p>
+            </li>
+            <li class="grid-1-3">
+               <div class="cards_icone">
+                  <h3 id="data3"></h3>
+               </div>
+               <p id="texto3"></p>
+               <img src="img/upload.png" alt="Máxima">
+               <p id="maxima3"></p>
+               <img src="img/low.png" alt="Minima">
+               <p id="minima3"></p>
+               <img src="img/raindrop-close-up.png" alt="Preciptação de chuva">
+               <p id="possibilidade-chuva3"></p>
+               <img src="img/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" alt="Chance de chover"> 
+               <p id="precipitacao-chuva3"></p>
+            </li>
+            <li class="grid-1-3">
+               <div class="cards_icone">
+                  <h3 id="data4"></h3>
+               </div>
+               <p id="texto4"></p>
+               <img src="img/upload.png" alt="Máxima">
+               <p id="maxima4"></p>
+               <img src="img/low.png" alt="Minima">
+               <p id="minima4"></p>
+               <img src="img/raindrop-close-up.png" alt="Preciptação de chuva">
+               <p id="possibilidade-chuva4"></p>
+               <img src="img/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" alt="Chance de chover"> 
+               <p id="precipitacao-chuva4"></p>
+            </li>
+            <li class="grid-1-3">
+               <div class="cards_icone">
+                  <h3 id="data5"></h3>
+               </div>
+               <p id="texto5"></p>
+               <img src="img/upload.png" alt="Máxima">
+               <p id="maxima5"></p>
+               <img src="img/low.png" alt="Minima">
+               <p id="minima5"></p>
+               <img src="img/raindrop-close-up.png" alt="Preciptação de chuva">
+               <p id="possibilidade-chuva5"></p>
+               <img src="img/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" alt="Chance de chover"> 
+               <p id="precipitacao-chuva5"></p>
+            </li>
+            <li class="grid-1-3">
+               <div class="cards_icone">
+                  <h3 id="data6"></h3>
+               </div>
+               <p id="texto6"></p>
+               <img src="img/upload.png" alt="Máxima">
+               <p id="maxima6"></p>
+               <img src="img/low.png" alt="Minima">
+               <p id="minima6"></p>
+               <img src="img/raindrop-close-up.png" alt="Preciptação de chuva">
+               <p id="possibilidade-chuva6"></p>
+               <img src="img/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" alt="Chance de chover"> 
+               <p id="precipitacao-chuva6"></p>
+            </li>
+         </ul>
+      </section>
+      <footer>
+         <div class="footer">
+            <h4>Desenvolvido por Marcos Vinicius</h4>
+         </div>
+      </footer>
+   </body>
+</html>

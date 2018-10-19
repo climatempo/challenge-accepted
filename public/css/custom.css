@@ -1,0 +1,123 @@
+/*!
+ * Custom style
+ * 
+ * @author Wolmer Pinto <wolmerwap@gmail.com>
+ */
+
+body {
+    background-color: #DFDFDF;
+}
+
+header {
+    background: #0181CC;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+header img {
+    margin: 10px 0;
+    max-height: 20px
+}
+
+header input[type='text']  {
+    width: 100%;
+    border: none;
+    font-size: 22px;
+    border-radius: 0;
+    background-image: url(/img/icons/search.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 98%;
+    padding: 7px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+main {
+    float: left;
+    width: 100%;
+    margin-top: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card {
+    float: left;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 50px 20px 0;
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-text {
+    font-size: 13px;
+}
+
+.row {
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.text-weather {
+    font-size: 27px;
+}
+
+.text-blue {
+    color: #1761A5;
+}
+
+.text-red {
+    color: #D21D1D;
+}
+
+.icon-weather {
+    float: left;
+    min-width: 32px;
+    min-height: 32px;
+    background-repeat: no-repeat;
+}
+
+.icon-up {
+    background-image: url(/img/icons/upload.png);
+}
+
+.icon-down {
+    background-image: url(/img/icons/download.png);
+}
+
+.icon-umbrella {
+    background-image: url(/img/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png);
+}
+
+.icon-waterdrop {
+    background-image: url(/img/icons/raindrop-close-up.png);
+}
+
+.ui-autocomplete {
+    position: absolute;
+    cursor: default;
+    z-index: 30 !important;
+    padding-left: 2px;
+}
+
+.ui-autocomplete li {
+    list-style-type: none;
+    border-bottom: 1px solid #898989;
+    background-color: #BBBBBB;
+    padding: 5px 5px 5px 8px;
+    font-size: 17px;
+}
+
+.ui-autocomplete li:hover {
+    background-color: #DDDDDD;
+    border-bottom: 1px solid #9A9A9A;
+}

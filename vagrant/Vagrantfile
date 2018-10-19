@@ -1,0 +1,41 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrant configuration file
+#
+# @package Vagrant
+# @author Wolmer Pinto <wolmerwap@gmail.com>
+
+Vagrant.configure("2") do |config|
+
+    # Box operation system
+    config.vm.box = "centos/7"
+
+    # Forwarded port mapping which allows access to a specific port
+    config.vm.network "forwarded_port", guest: 80, host: 8080
+    config.vm.network "forwarded_port", guest: 3306, host: 3306
+
+    # Private network, with a specific IP to access the machine
+    config.vm.network "private_network", ip: "192.168.10.10"
+
+    # Share an additional folder to the VM
+    config.vm.synced_folder "../", "/var/www/climatempo",
+        :owner=> 'vagrant', :group=>'vagrant'
+
+    # Removing SSH password
+    config.ssh.insert_key = false
+
+    # Provider-specific configuration 
+    config.vm.provider "virtualbox" do |vb|
+        vb.customize ["modifyvm", :id, "--name", "wolmer-challenge"]
+        vb.customize ["modifyvm", :id, "--memory", 512]
+        vb.customize ["modifyvm", :id, "--cpus", 1]
+    end
+
+    # Enable provisioning with a shell script to complete instalation
+    config.vm.provision :shell, path: "setup.sh"
+
+    # Enable provisioning with a shell script to complete instalation
+    config.vm.provision :shell, path: "bootstrap.sh"
+
+end

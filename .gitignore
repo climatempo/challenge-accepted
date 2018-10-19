@@ -296,7 +296,7 @@ public/storage
 storage/*.key
 .env.*.php
 .env.php
-.env
+#.env
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/

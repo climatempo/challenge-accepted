@@ -19,11 +19,11 @@ const InputText = styled.input`
 `;
 
 const IncoSearch = styled.button`
-		padding: 10px;
-    color: white;
-    min-width: 40px;
-    text-align: center;
-    background-image: url("../img/search.png'");
+		background-color: white;
+    border: none;
+    padding: 10px;
+    text-decoration: none !important;
+    margin: 4px 2px;
 `;
 
 
@@ -33,7 +33,9 @@ const Input = (props) =>  {
       <form onSubmit={props.getCity}>
 			<InputContainer>
 				<InputText type="text" name="cityName" placeholder="Digite a cidade..."  />
-				<IncoSearch />
+				<IncoSearch>
+          <img src={require('../img/search.png')}/>
+        </IncoSearch>
 			</InputContainer>
       </form>
 		);

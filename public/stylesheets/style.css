@@ -1,0 +1,108 @@
+ 
+  html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, header, nav, main {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+  }
+
+  body{
+    background-color: #BEBEBE;
+  }
+
+  .card{
+    margin: 0 auto;
+  }
+
+  .grid-4{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .grid-4 {
+    width: 140px;
+  }
+  
+  
+  
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .grid-4 {
+      width: 108px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .grid-4{
+      width: 300px;
+      margin: 0 0 20px 0;
+      float: none;
+    }
+  }
+  
+  .body {
+    font-family: "verdana", sans-serif;
+  }
+  
+  .header {
+    position: fixed;
+    width: 100%;
+    background: #1565c0;
+    padding: 15px 0;
+    z-index: 5;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .header {
+      position: relative;
+      padding-bottom: 0px;
+    }
+  }
+  
+  .header img {
+    width: 100%;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .header img {
+      margin: 0 auto 10px auto;
+    }
+  }
+  
+  .search {
+    float: right;
+    border: 3px solid #FFF;
+    background: #FFF;
+    width: 250px;
+  }
+
+  .search input, .search button {
+    background-color: #FFF;
+    border: 0 none;
+    outline: 0;
+  }
+
+  .search input {
+    width: 200px;
+    display: inline-block;
+    padding: 7px;
+    color: #000;
+  }
+  
+  .search button {
+    padding: 1px 5px;
+    float: right;
+  }
+  
+  .title {
+    text-align: center;
+    font-family: "PT Mono", monospace;
+    margin: 10px 0 10px 0;
+    letter-spacing: 0.1cm;
+    text-transform: uppercase;
+  }
+  
+  .description ul li p {
+    float: right;
+    color: #FFF;
+  }

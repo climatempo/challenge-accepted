@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = pt-br>
+    <head>
+        <title>Climatempo</title>
+        <meta name="charset" content="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        
+        <header class="header">
+            <div class="container">
+                <a class="grid-4">
+                    <img src="../images/logo-white.png" alt="Climatempo">
+                </a>
+                
+                <form class="search">
+                    <input type="text" placeholder="Digite uma cidade">
+                    <button class="btn btn-outline-secondary btn-search" type="submit"> <img src="../images/icons/search.png"></button>
+                </form>            
+            </div>
+               
+        </header>
+
+        <br><br><br><br>
+
+        <div class="title">
+            <b> <font size="5">Previsão para <%= local %> - SP </font></b>
+        </div>
+
+        <% for(var i = 0; i < date.length; i++){ %>
+            <div class="card" style="max-width: 30rem;">
+                    <div class="card-header bg-transparent"> <%= date[i] %> </div>
+                    <div class="card-body">
+                        <p class="card-text"> <%= text[i] %> </p>
+                    </div>
+                    <div class="card-footer bg-secondary">
+                        <ul>
+                            <li><img src="images/icons/upload.png" alt="Máxima"> <%= max[i] %> &nbsp; &nbsp; &nbsp; <img src="images/icons/download.png" alt="Mínima"> <%= min[i] %> </li>
+                            <li><img src="images/icons/raindrop-close-up.png" alt="Umidade"> <%= proba[i] %> &nbsp; &nbsp; &nbsp; <img src="images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" alt="Chuva"> <%= precip[i] %> </li>
+                        </ul>
+                    </div>
+                </div>
+        <% } %>
+        
+    </body>
+
+</html>

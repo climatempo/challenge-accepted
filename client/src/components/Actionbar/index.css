@@ -1,0 +1,31 @@
+@media (max-width: 600px) {
+  .logo-hide {
+    display: none !important;
+  }
+
+  .search-input-toggle {
+    display: none !important;
+  }
+
+  .show-icon {
+    display: block !important;
+  }
+}
+
+@media (min-width: 601px) {
+  .search-input-toggle {
+    display: flex !important;
+  }
+
+  .show-icon {
+    display: none !important;
+  }
+}
+
+.icon-click:hover {
+  cursor: pointer;
+}
+
+.show-flex {
+  display: flex !important;
+}

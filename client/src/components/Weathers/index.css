@@ -1,0 +1,12 @@
+.weathers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.weathers-element {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}

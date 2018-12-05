@@ -124,9 +124,9 @@ class App extends Component {
    * @param {Object} response - resposta do servidor
    */
   responseMessage = response => {
-    if (response.status === 400) {
+    if (response.statusCode === 400) {
       this.showSnackMessage("Erro nos dados enviados para o servidor");
-    } else if (response.status === 500) {
+    } else if (response.statusCode === 500) {
       this.showSnackMessage("Erro no servidor");
     }
   };

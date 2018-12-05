@@ -7,6 +7,10 @@ const controller = require("./controller");
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("API V1");
+});
+
 app.get(`${pathBase}/locale?:name`, (req, res) => {
   const { name } = req.query;
 

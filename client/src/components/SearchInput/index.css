@@ -1,0 +1,25 @@
+.searchinput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .searchinput {
+    width: 100%;
+  }
+}
+
+.close-icon {
+  margin-left: 4px;
+}
+
+.close-icon:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 601px) {
+  .close-icon {
+    display: none !important;
+  }
+}

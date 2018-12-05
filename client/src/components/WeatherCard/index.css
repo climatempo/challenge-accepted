@@ -1,0 +1,10 @@
+.weather-infos-container {
+  display: grid !important;
+  margin-top: 16px;
+  grid-template-columns: 10% 25% 10% 25%;
+  grid-template-rows: auto auto;
+  column-gap: 10%;
+  row-gap: 8px;
+  justify-items: center;
+  align-items: center;
+}

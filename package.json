@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "babel-node ./server.js",
-    "start:dev": "babel-watch ./server.js"
+    "start:dev": "babel-watch ./server.js",
+    "test": "NODE_ENV=test mocha --opts test/mocha.opts test/routes/**/*_spec.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,9 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-node6": "^11.0.0",
-    "babel-watch": "^2.0.7"
+    "babel-watch": "^2.0.7",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0"
   }
 }

@@ -1,6 +1,8 @@
+import path from 'path';
+
 const GlobalConfig = {
-    FILE_LOCALES: "./base/locales.json",
-    FILE_WEATHER: "./base/weather.json",
+    FILE_LOCALES: path.join('base', 'locales.json'),
+    FILE_WEATHER: path.join('base', 'weather.json'),
     PORT: 3000
 }
 

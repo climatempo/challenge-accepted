@@ -31,10 +31,6 @@ class LocaleController {
             });
         }
     }
-
-    testar() {
-        console.log('a');
-    }
 }
 
 export default LocaleController;

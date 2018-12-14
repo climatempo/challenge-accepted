@@ -1,12 +1,11 @@
 import express from 'express';
 import LocaleController from '../controllers/locale';
-import Locale from '../models/locale';
 
-const localeController = new LocaleController(Locale);
+const localeController = new LocaleController();
 
 const router = express.Router();
 
-router.get('/', localeController.get);
-router.get('/:nome', localeController.getByName);
+router.get('/', (req, res) => localeController.get(req, res));
+router.get('/:name', (req, res) => localeController.getByName(req, res));
 
 export default router;

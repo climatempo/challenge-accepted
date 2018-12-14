@@ -1,3 +1,7 @@
+/**
+ * Futura utilizacao
+ */
+
 class LocaleModel {
     constructor(body) {
         this.id = body.id;

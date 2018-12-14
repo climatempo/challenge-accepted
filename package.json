@@ -1,0 +1,30 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">   <a href=\"http://www.climatempo.com.br\">       <img src=\"http://i.imgur.com/Q9lCAMF.png\" alt=\"Climatempo\" width=\"300px\"/>   </a> </p>",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node ./server.js",
+    "start:dev": "babel-watch ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasondavindev/challenge-accepted.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasondavindev/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/jasondavindev/challenge-accepted#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "util": "^0.11.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-node6": "^11.0.0",
+    "babel-watch": "^2.0.7"
+  }
+}

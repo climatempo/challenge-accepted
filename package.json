@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jasondavindev/challenge-accepted#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "util": "^0.11.1"
   },

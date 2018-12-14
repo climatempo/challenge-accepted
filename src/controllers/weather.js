@@ -11,7 +11,7 @@ class WeatherController {
                 data: weathers
             });
         } catch (er) {
-            res.json({
+            res.status(500).json({
                 error: er.message
             });
         }
@@ -19,12 +19,21 @@ class WeatherController {
 
     async getByName(req, res) {
         try {
-            let weather = await this.getWeather(req.params.name);
-            res.json({
-                data: weather
-            });
+            const {
+                name
+            } = req.params;
+
+            let weather = await this.getWeather(name);
+
+            if (weather.locale) {
+                res.json({
+                    data: weather
+                });
+            } else {
+                res.status(400).json({ error: 'Cidade não encontrada.' });
+            }
         } catch (er) {
-            res.json({
+            res.status(500).json({
                 error: er.message
             });
         }
@@ -49,10 +58,10 @@ class WeatherController {
     async getWeather(localeName) {
         let weathers = await this.getWeathers();
 
-        for (let weather of weathers) {
-            if (Format.clearText(weather.locale.name) === Format.clearText(localeName))
-                return weather;
-        }
+        const i = weathers.findIndex(el => Format.clearText(el.locale.name) === Format.clearText(localeName));
+
+        if (i !== -1)
+            return weathers[i];
 
         return {};
     }

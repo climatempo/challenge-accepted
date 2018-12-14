@@ -11,7 +11,7 @@ class LocaleController {
                 data: locales
             });
         } catch (er) {
-            res.json({
+            res.status(500).json({
                 error: er.message
             });
         }
@@ -19,12 +19,21 @@ class LocaleController {
 
     async getByName(req, res) {
         try {
-            let locale = await this.getLocale(req.params.name);
-            res.json({
-                data: locale
-            });
+            const {
+                name
+            } = req.params;
+
+            let locale = await this.getLocale(name);
+
+            if (locale.id) {
+                res.json({
+                    data: locale
+                });
+            } else {
+                res.status(400).json({ error: 'Cidade não encontrada.' });
+            }
         } catch (er) {
-            res.json({
+            res.status(500).json({
                 error: er.message
             });
         }
@@ -49,10 +58,10 @@ class LocaleController {
     async getLocale(name) {
         let locales = await this.getLocales();
 
-        for (let locale of locales) {
-            if (Format.clearText(locale.name) === Format.clearText(name))
-                return locale;
-        }
+        const i = locales.findIndex(el => Format.clearText(el.name) === Format.clearText(name));
+
+        if (i !== -1)
+            return locales[i];
 
         return {};
     }

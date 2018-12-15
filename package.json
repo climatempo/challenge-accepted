@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "babel-node ./server.js",
-    "start:dev": "babel-watch ./server.js",
-    "test": "NODE_ENV=test mocha --opts test/mocha.opts test/routes/**/*_spec.js"
+    "start:build": "npm run build && babel-node ./server.js",
+    "dev": "nodemon --exec babel-node ./server.js",
+    "test": "NODE_ENV=test mocha --opts test/mocha.opts test/routes/**/*_spec.js",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -25,11 +27,24 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-node6": "^11.0.0",
-    "babel-watch": "^2.0.7",
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
     "chai": "^4.2.0",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-less": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
     "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
     "supertest": "^3.3.0"
   }
 }

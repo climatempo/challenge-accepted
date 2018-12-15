@@ -1,6 +1,6 @@
 import supertest from 'supertest';
 import chai from 'chai';
-import setupApp from '../src/app';
+import setupApp from '../server/app';
 
 global.setupApp = setupApp;
 global.supertest = supertest;

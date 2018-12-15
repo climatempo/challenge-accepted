@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    font-family: sans-serif;
+    background-color: #f7f7f7;
+}
+
+#logo {
+    padding: 10px 0;
+    background-color: #1565C0;
+}
+
+#logo-image {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+#search {
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    padding: 5px 7px;
+    overflow: hidden;
+}
+
+#input-search {
+    float: left;
+    width: 90%;
+    height: 32px;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #444;
+}
+
+#input-search::placeholder {
+    color: #999;
+}
+
+#input-search::-webkit-placeholder {
+    color: #999;
+}
+
+#btn-submit-search {
+    width: 10%;
+    height: 32px;
+    float: left;
+    background-image: url(/images/icons/search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#page-content {
+    padding: 15px;
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+
+.card {
+    display: block;
+    margin: 5px 0;
+    padding: 10px 10px 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 0;
+        padding-bottom: 20px;
+    }
+}
+
+.card-content {
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 1px 3px 0 #e3e8eb;
+    -webkit-box-shadow: 1px 3px 0 #e3e8eb;
+}
+
+.card-content .header {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.card-content .description {
+    padding: 10px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.card-content .description a {
+    display: block;
+    float: left;
+    font-size: 18px;
+    line-height: 42px;
+    color: #666;
+    text-decoration: none;
+}
+
+.card-content .description i {
+    width: 42px;
+    height: 42px;
+    display: block;
+    float: right;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.date-card {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+.message-card {
+    min-height: 42px;
+    padding: 5px 10px;
+    font-size: 17px;
+    color: #555;
+}
+
+.infos-card {
+    background-color: #F0F0F0;
+    display: table;
+    width: 100%;
+}
+
+.block-card {
+    display: table-row;
+}
+
+.block-card .cell-card {
+    display: table-cell;
+    width: 50%;
+    padding: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.block-card .image {
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    vertical-align: middle;
+}
+
+.block-card p {
+    display: inline-block;
+    line-height: 42px;
+    font-size: 24px;
+    margin: 0 auto;
+    padding-left: 32px;
+    vertical-align: middle;
+}
+
+.block-card p.temperature::after {
+    content: '\00BA C';
+}
+
+.block-card p.text-precipitation::after {
+    content: 'mm';
+}
+
+.block-card p.text-probability::after {
+    content: '\0025';
+}
+
+p.temperature-max {
+    color: #de3b3b;
+}
+
+p.temperature-min {
+    color: #3b7cde;
+}
+
+.img-max {
+    background-image: url(/images/icons/upload.png);
+}
+
+.img-min {
+    background-image: url(/images/icons/download.png);
+}
+
+.img-precipitation {
+    background-image: url(/images/icons/raindrop-close-up.png);
+}
+
+.img-probability {
+    background-image: url(/images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png);
+}
+
+#message-error {
+    padding: 20px;
+}
+
+#message-error .h2 {
+    font-size: 32px;
+}
+
+#message-error p {
+    margin-top: 10px;
+    font-size: 16px;
+}

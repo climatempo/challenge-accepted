@@ -1,5 +1,5 @@
-import setupApp from './src/app';
-import config from './src/configs/config'
+import setupApp from './server/app';
+import config from './server/configs/config'
 
 const port = process.env.PORT || config.PORT;
 

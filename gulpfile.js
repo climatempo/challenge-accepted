@@ -45,7 +45,7 @@ function watch() {
     gulp.watch(paths.styles.src, styles);
 }
 
-const build = gulp.series(clean, gulp.parallel(styles, scripts), watch);
+const build = gulp.series(clean, gulp.parallel(styles, scripts)/*, watch*/);
 
 gulp.task('build', build);
 

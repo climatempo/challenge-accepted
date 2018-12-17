@@ -1,0 +1,23 @@
+{
+  "name": "backend-teste",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "production": "pm2 start src/loader.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "express": "4.16.4",
+    "pm2": "2.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "nodemon": "1.11.0"
+  }
+}

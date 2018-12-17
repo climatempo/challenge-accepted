@@ -10,7 +10,6 @@ const reducer = {
   },
   getWeather: (state) => {
     moment.locale('pt-br')
-    console.log(state.data)
     const data = state.data
     for (let i = 0; i < data.weather.length; i++) {
       data.weather[i].dataFormat = moment(data.weather[i].date).format('DD/MM/YY')   

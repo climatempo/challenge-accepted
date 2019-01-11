@@ -1,0 +1,22 @@
+{
+    "name": "rafae/challenge-accepted",
+    "authors": [
+        {
+            "name": "RafaelGSS",
+            "email": "rafael.nunu@hotmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.11",
+        "illuminate/view": "^5.7",
+        "illuminate/filesystem": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "ClimaTempoCore\\": "core/"
+        },
+        "files":[
+            "helpers/common.php"
+        ]
+    }
+}

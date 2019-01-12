@@ -1,5 +1,5 @@
 <?php
 
 $router->get('/test', function(){
-    return view('teste', ['tt' => 'tt2']);
+    return view('pages.index');
 });

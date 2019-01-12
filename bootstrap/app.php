@@ -33,28 +33,23 @@ $container['illuminateContainer'] = function () use($illuminateContainer) {
 };
 //
 
+
 // Another ServiceProvider
 use Illuminate\Filesystem\Filesystem;
-
-$fileSystem = new Filesystem();
-$container['illuminateContainer']['files'] = function () use($fileSystem) {
-    return $fileSystem;
-};
-//
-
-
-// This can be sub by ServiceProvider
 use Illuminate\View\FileViewFinder;
 use Illuminate\View\Factory;
 use Illuminate\Events\Dispatcher;
 use Illuminate\View\Engines\EngineResolver;
 use Illuminate\View\Engines\PhpEngine;
+use Illuminate\View\Compilers\BladeCompiler;
+use Illuminate\View\Engines\CompilerEngine;
 
-$fs = $container['illuminateContainer']['files'];
+$fs = new Filesystem();
 
 $vf = new FileViewFinder($fs, [realpath(__DIR__.'/../views')],);
 $ed = new Dispatcher($container['illuminateContainer']);
 $vr = new EngineResolver();
+
 $vr->register('php', function (){
     return new PhpEngine();
 });

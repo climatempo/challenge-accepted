@@ -13,7 +13,8 @@
     },
     "autoload": {
         "psr-4": {
-            "ClimaTempoCore\\": "core/"
+            "ClimaTempoCore\\": "core/",
+            "ClimaTempo\\": "src/"
         },
         "files":[
             "helpers/common.php"

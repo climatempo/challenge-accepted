@@ -3,14 +3,18 @@
 ## Backend
 Bom, eu construi uma Api com expressJs para servir nos endpoints
 
-## `/locales`
-## `/wheather`
+```
+ /locales
+```
+```
+/wheather
+```
 
 utilizando um id passado pela query, caso **null** ele busca todos os resultados.
 
 ## Frontend
 Para o frontend eu resolvi desenvolver uma aplicação react, utilizei o create-react-app para fazer a base do projeto,
-utilizei também um template do html5Up só pra fica mais rápido, mas resolvi customizar tudo no final e acabou que nem usei
+utilizei também um template do html5Up só para ficar mais rápido, mas resolvi customizar tudo no final e acabou que nem usei
 muito do template.
 
 A utilização ficou simples, escreveu a cidade certo, aparece só ela, escreveu errado não filtra, apagou o input filtra para todos 
@@ -20,7 +24,7 @@ os resultados novamente.
 
 Para fazer a instalação do projeto basta seguir os passos:
 
-- Certifique-se de que tenhs instalado o nodeJS e o npm na máquina
+- Certifique-se de que tenha instalado o nodeJS e o npm na máquina
 - Faça o download da pasta do projeto como preferir (SSH, HTTPS, FORK...)
 - Acesse através do terminal as pastas do projeto:
 

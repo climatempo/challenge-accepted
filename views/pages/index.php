@@ -11,22 +11,10 @@
         crossorigin="anonymous">
 
     <link rel="stylesheet" href="assets/css/main.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <title>ClimaTempo - Homepage</title>
     <style>
-       @media only screen and (max-width: 767px) {
-            .row-responsive {
-                display: block;
-            }
-            .search {
-                padding-top: 1em;
-                max-width: 100%;
-            }
-            .logo {
-                max-width: 100%;
-                text-align: center;
-            }
-        }
+      
        
     </style>
 </head>
@@ -49,6 +37,52 @@
             </div>
         </div>
     </header>
+
+    <section>
+        <?php if(isset($search)) {?>
+            <h1>Procurou</h1>
+        <?php } else { ?>
+            <div class="title-forecast">
+                Faça uma busca para saber a previsão! <i class="fa fa-cloud" aria-hidden="true"></i>
+            </div>
+            <div class="container">
+                <div class="cards">
+                    <div class="card card-forecast">
+                        <img class="card-img-top" src="https://vignette.wikia.nocookie.net/tvpediabrasil/images/f/fb/Climatempo.png/revision/latest?cb=20160905205954&path-prefix=pt-br" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Desenvolvimento Agíl ?</h5>
+                            <p class="card-text">Sou um dos milhões seguidores do Método <a href="http://sou.gohorseprocess.com.br/extreme-go-horse-xgh/" target="_blank">Extreme Go Horse!</a> no qual faz sucesso entre os melhores programadores do mundo.</p>
+                        </div>
+                    </div>
+                    <div class="card card-forecast">
+                        <img class="card-img-top" src="http://www.meioemensagem.com.br/wp-content/uploads/2017/06/climatempo.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Projetos pessoais</h5>
+                            <p class="card-text">Apesar de ser adepto ao método <b>Go Horse</b>, prezo bastante pela qualidade de código.
+                                Veja no <a href="https://github.com/RafaelGSS" target="_blank">Github</a>
+                            </p>
+                            <p>
+                                Obs: Por favor, <b>não</b> leia meu primeiro projeto chamado <b>StudentRegistration</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card card-forecast">
+                        <img class="card-img-top" src="https://advisor.climatempo.com.br/landing/img/share-logo.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Quest</h5>
+                            <p class="card-text">
+                                Porque o programador atravessou a rua ?
+                            </p>
+                            <p style="text-align: end;">
+                                <del>Me contrate e saberá!</del>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </section>
+    
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>

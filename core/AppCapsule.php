@@ -5,7 +5,8 @@ namespace ClimaTempoCore;
 use Slim\App;
 use Illuminate\Container\Container as IlluminateContainer;
 use Illuminate\View\Factory;
-use Symfony\Component\HttpFoundation\Request;
+// use Symfony\Component\HttpFoundation\Request;
+use ClimaTempoCore\Request;
 use Slim\Interfaces\RouterInterface;
 
 class AppCapsule
@@ -75,15 +76,6 @@ class AppCapsule
     public static function request()
     {
         $container = self::getContainer();
-        return $container['httpRequest'];
-    }
-
-    /**
-     * @return RouterInterface
-     */
-    public static function router()
-    {
-        $container = self::getContainer();
-        return $container['router'];
+        return $container['customRequest'];
     }
 }

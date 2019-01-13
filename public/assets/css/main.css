@@ -60,25 +60,25 @@ body {
 .cards {
     display: inline-flex;
 }
- .card-forecast {
+.card-forecast {
     width: 100%;
     text-align: center;
     margin: 10px;
- }
+}
 
- .title-forecast {
+.title-forecast {
     font-size: 1.5em;
     text-align: center;
     padding: 10px;
     background-color: #344879;
     color: #fff;
- }
+}
 
- .card-img-top {
+.card-img-top {
     height: 225px;
- }
+}
 
- @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .row-responsive {
         display: block;
     }
@@ -96,5 +96,4 @@ body {
     .card-forecast {
         width: auto;
     }
-
 }

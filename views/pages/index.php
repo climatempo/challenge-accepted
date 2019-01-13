@@ -48,7 +48,7 @@
             <div class="container">
                 <div class="cards">
                     <div class="card card-forecast">
-                        <img class="card-img-top" src="https://vignette.wikia.nocookie.net/tvpediabrasil/images/f/fb/Climatempo.png/revision/latest?cb=20160905205954&path-prefix=pt-br" alt="Card image cap">
+                        <img class="card-img-top" src="http://www.brasilimoveismt.com.br/site/images/util_phones/climatempo.png" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Desenvolvimento Agíl ?</h5>
                             <p class="card-text">Sou um dos milhões seguidores do Método <a href="http://sou.gohorseprocess.com.br/extreme-go-horse-xgh/" target="_blank">Extreme Go Horse!</a> no qual faz sucesso entre os melhores programadores do mundo.</p>

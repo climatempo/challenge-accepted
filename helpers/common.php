@@ -13,17 +13,12 @@ if(! function_exists('view')){
     }
 }
 
-if(! function_exists('route')){
+if(! function_exists('request')){
     /**
-     * @param $routeName
-     * @param array $parameters
-     * @return string
-     */
-    function route($routeName, $parameters = [])
+    * @return \ClimaTempoCore\Request
+    */
+    function request()
     {
-        $router = \NPCore\AppCapsule::router();
-        $request = \NPCore\AppCapsule::request();
-
-        return (($request->isSecure()) ? 'https://' : 'http://').$request->server->get('HTTP_HOST').$router->pathFor($routeName, $parameters);
+        return \ClimaTempoCore\AppCapsule::request();
     }
 }

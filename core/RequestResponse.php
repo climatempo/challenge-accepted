@@ -23,6 +23,15 @@ class RequestResponse implements InvocationStrategyInterface
         array $routeArguments
     )
     {
+        $req = \ClimaTempoCore\Request::createFromSlimRequest($request, $routeArguments);
+        AppCapsule::getContainer()['customRequest'] = function () use($req) {
+            return $req;
+        };
+
+        // if(is_array($callable)){
+        //     $callable[0]($req);
+        // }
+
         $call = call_user_func($callable);
         
         if($call instanceof \Illuminate\View\View || is_string($call)) {

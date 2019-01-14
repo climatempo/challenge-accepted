@@ -11,7 +11,12 @@ use Slim\App;
 use Slim\Container;
 use ClimaTempoCore\AppCapsule;
 
-$container = new Container();
+$configuration = [
+    'settings' => [
+        'displayErrorDetails' => true,
+    ],
+];
+$container = new Container($configuration);
 // Another ServiceProvider
 $container['foundHandler'] = function() {
     return new \ClimaTempoCore\RequestResponse();

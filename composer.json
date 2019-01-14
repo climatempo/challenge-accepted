@@ -12,6 +12,9 @@
         "illuminate/filesystem": "^5.7",
         "guzzlehttp/guzzle": "^6.3"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    },
     "autoload": {
         "psr-4": {
             "ClimaTempoCore\\": "core/",

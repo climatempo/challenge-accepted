@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
 
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="https://www.climatempo.com.br/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <title>ClimaTempo - Homepage</title>
 </head>

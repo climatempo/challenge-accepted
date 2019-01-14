@@ -38,6 +38,11 @@ class RequestResponse implements InvocationStrategyInterface
             $response->getBody()->write((string) $call);
         }
 
+        if(is_array($call)) {
+            $response = $response->withHeader('Content-Type', 'application/json');
+            $response->getBody()->write(\GuzzleHttp\json_encode($call));
+        }
+        
         return $response;
     }
 }

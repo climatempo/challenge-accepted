@@ -34,4 +34,18 @@ class LocaleRepository extends Repository {
 
         return false;
     }
+
+    public function getByName($name)
+    {
+        $contents = $this->all();
+
+        foreach($contents as $content)
+        {
+            if($content->name == $name){
+                return $content;
+            }
+        }
+
+        return json_encode(json_decode("{}"));
+    }
 }

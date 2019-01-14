@@ -15,4 +15,20 @@ class LocaleRepository extends Repository {
     {
         return $this->getModel()->contents;
     }
+
+    public function getWeatherByPeriod($locale, $periodStart, $periodEnd)
+    {
+        // Uses periodStart and periodEnd for query in database
+        $contents = $this->all();
+
+        // This can be substituted by find on database
+        foreach($contents as $content)
+        {
+            if($content->locale->name == $locale){
+                return $content->weather;
+            }
+        }
+
+        return [];
+    }
 }

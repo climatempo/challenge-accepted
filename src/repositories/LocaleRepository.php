@@ -15,4 +15,23 @@ class LocaleRepository extends Repository {
     {
         return $this->getModel()->contents;
     }
+
+
+    /**
+     * @return bool
+     */
+    public function existByName($name)
+    {
+        $contents = $this->all();
+
+        // This can be substituted by find on database
+        foreach($contents as $content)
+        {
+            if($content->name == $name){
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

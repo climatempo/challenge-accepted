@@ -77,6 +77,11 @@ body {
 .card-img-top {
     height: 225px;
 }
+@media only screen and (min-width: 767px){
+    .owl-item {
+        margin: 5px;
+    }
+}
 
 @media only screen and (max-width: 767px) {
     .row-responsive {

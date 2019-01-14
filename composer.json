@@ -14,9 +14,7 @@
     "autoload": {
         "psr-4": {
             "ClimaTempoCore\\": "core/",
-            "ClimaTempo\\": "src/",
-            "ClimaTempo\\Models\\": "src/models",
-            "ClimaTempo\\Repositories\\": "src/repositories"
+            "ClimaTempo\\": "src/"
         },
         "files":[
             "helpers/common.php"

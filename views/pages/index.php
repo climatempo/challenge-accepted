@@ -9,6 +9,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
@@ -40,7 +41,41 @@
 
     <section>
         <?php if(isset($search)) {?>
-            <h1>Procurou</h1>
+            <div class="title-forecast">
+                <i class="fa fa-sun-o" aria-hidden="true"></i>
+                Previsão para <?php echo $city ?>
+                <i class="fa fa-cloud" aria-hidden="true"></i>
+            </div>
+            <div class="container">
+                <div class="cards" id="owl-weather">
+                    <?php foreach($weather as $w){ ?>
+                        <div class="card card-forecast">
+                            <img class="card-img-top" src="https://www.otaboanense.com.br/wp-content/uploads/2017/10/previsaotempo_clima.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo (new DateTime($w->date))->format('d-m-Y') ?></h5>
+                                <p class="card-text">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-6">
+                                            <img src="assets/images/icons/protect-rain.png" alt=""> <?php echo $w->rain->probability ?>%
+                                        </div>
+                                        <div class="col-xs-6 col-md-6">
+                                            <img src="assets/images/icons/raindrop-close-up.png" alt=""> <?php echo $w->rain->precipitation ?>mm
+                                        </div>
+                                    </div>
+                                </p>    
+                                <p>
+                                    <?php echo $w->text ?>
+                                </p>
+                                <p class="weather-info">
+                                    <b>Máxima de: </b><b style="color: red;"><?php echo $w->temperature->max ?>°C</b>
+                                    <hr>
+                                    <b>Minima de: </b><b style="color: blue;"><?php echo $w->temperature->min ?>°C</b>
+                                </p>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
         <?php } else { ?>
             <div class="title-forecast">
                 Faça uma busca para saber a previsão! <i class="fa fa-cloud" aria-hidden="true"></i>
@@ -86,6 +121,17 @@
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#owl-weather').owlCarousel({
+                navigation: true,
+                items: 4
+            });
+        });
+    </script>
 </body>
 
 </html>

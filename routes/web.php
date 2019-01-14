@@ -11,15 +11,16 @@ $router->get('/home', function() {
         return view('pages.index');
     }
 
-    // $repositoryLocale = new LocaleRepository();
-    // $weather = [];
-    $weather = json_decode(file_get_contents('../src/Models/base/weather.json'))[0]->weather;
+    $repositoryLocale = new LocaleRepository();
+    $weather = [];
 
-    // if($repositoryLocale->existByName($data['city'])){
-    //     $repositoryWeather = new WeatherRepository();
+    if($repositoryLocale->existByName($data['city'])){
+        $repositoryWeather = new WeatherRepository();
 
-    //     $weather = $repositoryWeather->getWeatherByPeriod($data['city'], '2017-02-01', '2017-02-07');
-    // }
+        $weather = $repositoryWeather->getWeatherByPeriod($data['city'], '2017-02-01', '2017-02-07');
+    }else {
+        $data['city'] = $data['city'] . ' <b>não</b> foi encontrada - Tente: "São Paulo" ou "Osasco"';
+    }
 
     return view('pages.index', ['search' => true, 'weather' => $weather, 'city' => $data['city']]);
 });

@@ -11,6 +11,6 @@ class Locale /*extends Model*/ {
     public $contents;
 
     public function __construct(){
-        $this->contents = json_decode(file_get_contents('./base/locales.json'));
+        $this->contents = json_decode(file_get_contents(realpath(__DIR__.'/base/locales.json')));
     }
 }

@@ -46,7 +46,7 @@ use Illuminate\View\Engines\CompilerEngine;
 
 $fs = new Filesystem();
 
-$vf = new FileViewFinder($fs, [realpath(__DIR__.'/../views')],);
+$vf = new FileViewFinder($fs, [realpath(__DIR__.'/../views')]);
 $ed = new Dispatcher($container['illuminateContainer']);
 $vr = new EngineResolver();
 

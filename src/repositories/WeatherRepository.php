@@ -5,7 +5,7 @@ namespace ClimaTempo\Repositories;
 use ClimaTempo\Repositories\Repository;
 use ClimaTempo\Models\Weather;
 
-class LocaleRepository extends Repository {
+class WeatherRepository extends Repository {
     public function getModel()
     {
         return (new Weather());

@@ -11,6 +11,6 @@ class Weather /*extends Model*/ {
     public $contents;
 
     public function __construct(){
-        $this->contents = json_decode(file_get_contents('./base/weather.json'));
+        $this->contents = json_decode(file_get_contents(realpath(__DIR__.'/base/weather.json')));
     }
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +13,6 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <title>ClimaTempo - Homepage</title>
-    <style>
-      
-       
-    </style>
 </head>
 
 <body>
@@ -25,15 +20,17 @@
         <div class="container">
             <div class="row row-responsive">
                 <div class="col-8 logo">
-                    <a href="" class="col">
+                    <a href="/home" class="col">
                         <img src="assets/images/logo.png" class="logo-header" alt="ClimaTempo Index">
                     </a>
                 </div>
                 <nav class="col-4 search">
-                    <input id="city" name="city" class="search-input" placeholder="Buscar cidade" type="text">
-                    <button class="btn btn-default">
-                        <i class="fas fa-search"></i>
-                    </button>
+                    <form action="/home" method="GET">
+                        <input id="city" name="city" class="search-input" placeholder="Buscar cidade" type="text">
+                        <button type="submit" class="btn btn-default">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
                 </nav>
             </div>
         </div>
@@ -43,7 +40,7 @@
         <?php if(isset($search)) {?>
             <div class="title-forecast">
                 <i class="fa fa-sun-o" aria-hidden="true"></i>
-                Previsão para <?php echo $city ?>
+                    Previsão para <?php echo $city ?>
                 <i class="fa fa-cloud" aria-hidden="true"></i>
             </div>
             <div class="container">
@@ -127,8 +124,8 @@
     <script>
         $(document).ready(function() {
             $('#owl-weather').owlCarousel({
-                navigation: true,
-                items: 4
+                navigation: false,
+                items: 4,
             });
         });
     </script>

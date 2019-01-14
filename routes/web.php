@@ -24,3 +24,7 @@ $router->get('/home', function() {
 
     return view('pages.index', ['search' => true, 'weather' => $weather, 'city' => $data['city']]);
 });
+
+$router->get('/', function(){
+    return '<h1> Go to <a href="/home">Home</a></h1>';
+});

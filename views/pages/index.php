@@ -50,7 +50,7 @@
                         <div class="card card-forecast">
                             <img class="card-img-top" src="https://www.otaboanense.com.br/wp-content/uploads/2017/10/previsaotempo_clima.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title"><?php echo (new DateTime($w->date))->format('d-m-Y') ?></h5>
+                                <h5 class="card-title"><?php echo (new DateTime($w->date))->format('d/m/Y') ?></h5>
                                 <p class="card-text">
                                     <div class="row">
                                         <div class="col-xs-6 col-md-6">

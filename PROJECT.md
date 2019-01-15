@@ -13,8 +13,10 @@ docker build -t climatempo-challenge .
 ```
 
 ```bash
-docker run -d -p 5000:80 -t climatempo-challenge
+docker run -p 5000:80 -t climatempo-challenge
 ```
+
+Aguarde até o boot do php-fpm...
 
 Pronto, basta acessar http://localhost:5000 no seu navegador.
 
@@ -25,7 +27,12 @@ Requisitos:
 - PHP7
 - Composer
 
-Após o clone do projeto, basta entrar na pasta de rodar
+Após o clone do projeto, instale as dependências com o composer.
+```bash
+composer install
+```
+
+Agora basta entrar na pasta de rodar
 ```bash
 php -S 0.0.0.0:5000 -t public/
 ```

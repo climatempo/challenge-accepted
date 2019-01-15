@@ -1,6 +1,6 @@
 <?php
 
-namespace ClimaTempoTest;
+namespace Demo\ClimaTempoTest;
 
 use Slim\App;
 use Slim\Http\Environment;

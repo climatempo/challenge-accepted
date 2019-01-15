@@ -39,6 +39,11 @@ php -S 0.0.0.0:5000 -t public/
 
 ## Rodando testes
 
+Basta entrar na pasta após o composer install e rodar:
+
+```bash
+composer test-api
+```
 
 ## Ecossistema do projeto
 

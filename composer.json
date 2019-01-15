@@ -23,5 +23,8 @@
         "files":[
             "helpers/common.php"
         ]
+    },
+    "scripts": {
+        "test-api": "./vendor/bin/phpunit tests/ApiTest.php"
     }
 }

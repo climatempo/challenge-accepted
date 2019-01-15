@@ -1,6 +1,8 @@
 <?php
 
-namespace Demo\ClimaTempoTest;
+namespace ClimaTempoTest;
+
+require_once __DIR__ . '/../bootstrap/app.php';
 
 use Slim\App;
 use Slim\Http\Environment;
@@ -21,7 +23,8 @@ abstract class BaseEndpointTest extends \PHPUnit\Framework\TestCase
   /** Sets the Slim app definition for each test */
   protected function setUp()
   {
-    $this->app = require __DIR__.'/../bootstrap/app.php';
+    global $app;
+    $this->app = $app;
   }
 
   /** Destroys local content of global vars */
@@ -46,8 +49,6 @@ abstract class BaseEndpointTest extends \PHPUnit\Framework\TestCase
 
     $app = $this->app;
     $this->response = $app($request, $response);
-    print_r($request);
-    // die();
   }
 
   /** Returns JSON decoded response body as array */
@@ -103,6 +104,11 @@ abstract class BaseEndpointTest extends \PHPUnit\Framework\TestCase
   protected function assertResponseContentType($expectedContentType)
   {
     $this->assertContains($expectedContentType, $this->response->getHeader('Content-Type'));
+  }
+
+  protected function assertJsonData(string $expectedJson)
+  {
+    $this->assertEquals($expectedJson, json_encode($this->responseData()));
   }
 
 }

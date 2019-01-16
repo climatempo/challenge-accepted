@@ -11,9 +11,27 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./src/css/main.css" />
+
+    <div class="header">
+        <div class="header-logo">
+            <img src="./images/logo-white.png" class="img-fluid">
+        </div>
+    </div>
 </head>
 <body>
-    <h1>Hello, world!</h1>
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Digite o nome da cidade" />
+        <div class="search-icon">
+            <img src="./images/icons/search.png" />
+        </div>
+    </div>
+
+    <div id="mainContent">
+        
+    </div>
+    
+    <!-- Dependencias -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
@@ -25,5 +43,11 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"
     ></script>
-    <script src="./src/main.js"></script>
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Script principal -->
+    <script src="./src/js/main.js"></script>
 </body>

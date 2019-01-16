@@ -1,0 +1,20 @@
+{
+  "name": "bruno-challeger",
+  "version": "1.0.0",
+  "description": "Aplicativo de desafio para vaga e Dev na Climatempo",
+  "main": "src/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunoclima/challenge-accepted.git"
+  },
+  "author": "Bruno Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunoclima/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/brunoclima/challenge-accepted#readme",
+  "dependencies": {}
+}

@@ -22,7 +22,10 @@ class App extends Component {
         `http://localhost:3050/weather/${encodeURI(this.state.searchField)}`
       )
         .then(response => response.json())
-        .then(result => this.setState({ weather: result }));
+        .then(result => this.setState({ weather: result }))
+        .catch(error => {
+          alert("Pesquisa inválida");
+        });
     }
   };
 

@@ -30,7 +30,7 @@ class App extends Component {
       <div>
         <Header />
         <SearchBox onSearchEnter={this.onSearchEnter} />
-        <CardList weather={this.state.weather} />
+        <CardList weather={this.state.weather[0]} />
       </div>
     );
   }

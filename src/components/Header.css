@@ -1,0 +1,16 @@
+@media screen and (min-width: 800px) {
+    div {
+        min-height: 90px
+    }
+
+    img {
+        width: 400px
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    img {
+        width: 35%
+    }
+}

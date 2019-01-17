@@ -3,9 +3,14 @@ import Card from "./Card";
 
 class CardList extends Component {
   render() {
+    const weatherJSON = this.props.weather;
     return (
       <div>
-        <Card />
+        {
+          weatherJSON.map(obj => {
+            return <Card key={obj.locale.id} name={obj.locale.name} />
+          })
+        }
       </div>
     );
   }

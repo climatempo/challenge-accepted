@@ -28,6 +28,8 @@ app.get("/weather/:locale", function(req, res) {
     return weather.locale.id === filteredLocale[0].id;
   });
 
+  res.status(500).send('Argumento de localidade inválido!');
+
   // Retorna somente o clima filtrado
   res.json(filteredWeather);
 });

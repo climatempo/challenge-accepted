@@ -3,6 +3,7 @@ import maxTemperature from "../images/icons/upload.png";
 import minTemperature from "../images/icons/download.png";
 import drop from '../images/icons/raindrop-close-up.png'
 import umbrella from '../images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png'
+import moment from 'moment';
 
 class Card extends Component {
   render() {
@@ -16,7 +17,7 @@ class Card extends Component {
         }}
       > 
         <div className="tl flex flex-column">{/* Data */}
-          <h3 className="fl">{this.props.date}</h3>
+          <h3 className="fl">{moment(this.props.date, "YYYY-MM-DD").format("DD/MM/YYYY")}</h3>
           <h4>{this.props.text}</h4>
         </div>
         <div className="flex w-100 justify-around items-center">

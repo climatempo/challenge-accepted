@@ -6,7 +6,7 @@ const SearchBox = ({ onSearchEnter }) => {
   return (
     <div
       className="dif flex-row p2 tc content-center"
-      style={{ backgroundColor: "white" }}
+      style={{ backgroundColor: "white", height: "50px" }}
     >
       <input
         className="pa3 ba bw0 w-80"

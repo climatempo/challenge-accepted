@@ -15,7 +15,7 @@ Este projeto foi criado com [Create React App](https://github.com/facebook/creat
 
 Na raiz do projeto, execute o seguinte comando:
 
-### `$ npm install`
+### `npm install`
 
 ## Comandos Disponíveis
 
@@ -28,6 +28,11 @@ Abra [http://localhost:3000](http://localhost:3000) para ver no navegador.
 
 A página vai recarregar caso você faça alterações.<br>
 Você também vai ver erros de código no console.
+
+### `node API/core.js`
+
+Executa a API para utilizar com o aplicativo.<br>
+Abre um listener no [http://localhost:3050](http://localhost:3050).
 
 ### `npm test`
 

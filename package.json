@@ -1,20 +1,25 @@
 {
-  "name": "bruno-challeger",
-  "version": "1.0.0",
-  "description": "Aplicativo de desafio para vaga e Dev na Climatempo",
-  "main": "src/js/main.js",
+  "name": "challenge-accepted",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "2.1.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brunoclima/challenge-accepted.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "author": "Bruno Ferreira",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/brunoclima/challenge-accepted/issues"
-  },
-  "homepage": "https://github.com/brunoclima/challenge-accepted#readme",
-  "dependencies": {}
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

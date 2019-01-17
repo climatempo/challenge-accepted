@@ -3,6 +3,7 @@ import "./App.css";
 import CardList from "../components/CardList";
 import Header from "../components/Header";
 import SearchBox from "../components/SearchBox";
+import Scroll from "../components/Scroll";
 
 class App extends Component {
   constructor() {
@@ -30,7 +31,9 @@ class App extends Component {
       <div>
         <Header />
         <SearchBox onSearchEnter={this.onSearchEnter} />
-        <CardList weather={this.state.weather[0]} />
+        <Scroll>
+          <CardList weather={this.state.weather[0]} />
+        </Scroll>
       </div>
     );
   }

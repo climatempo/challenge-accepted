@@ -1,0 +1,27 @@
+{
+  "name": "climatempo-challenge",
+  "version": "1.0.0",
+  "description": "Build API to Climatempo using Express.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/analimazn/challenge-accepted.git"
+  },
+  "keywords": [
+    "weatherapp",
+    "weather",
+    "climatempo"
+  ],
+  "author": "Ana Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/analimazn/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/analimazn/challenge-accepted#readme",
+  "dependencies": {
+    "hapi": "^18.0.0"
+  }
+}

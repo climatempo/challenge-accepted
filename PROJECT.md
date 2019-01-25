@@ -1,4 +1,18 @@
-Sistema de Busca de Localidades e Previsões
+## Sistema de Busca de Localidades e Previsões
+
+<p>Olá desenvolvedor, pronto para participar do nosso</p>
+<p>processo de recrutamento para vaga de Full-stack (CLT)?</p>
+
+### Sobre a Vaga
+
+- Empresa: Climatempo
+- Cargo: Desenvolvedor Full-stack (CLT);
+- VR e VT;
+- Home Office após período de experiência;
+- Flexibilidade no horário de trabalho para acompanhar eventos de tecnologia;
+- Local: Parque Tecnológico - São José dos Campos (http://www.pqtec.org.br/).
+
+
 
 Sobre:
   Tela inicial com um 'editable select' onde você busca a localidade que deseja.

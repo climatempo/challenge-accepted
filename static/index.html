@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-	Aerial by HTML5 UP
+	Highlights by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
@@ -10,30 +10,47 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="css/main.css" />
-		<noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 		<script src="/public/js/vue-clipboard.min.js"></script>
 	</head>
-	<body>
-		<div id="app">
-			<div id="bg"></div>
-			<div id="main">
+	<body class="is-preload">
 
-					<header id="header">
-					
-					</header>
-					<footer id="footer">
-						<span class="copyright">
-							<a href="https://www.climatempo.com.br/"><img src="images/logo.png" width=100 height=30></a>
-						</span>
-					</footer>
-			</div>
-		</div> 
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
+		<!-- Header -->
+			<section id="header">
+				<header class="major">
+					<h1>Climatempo</h1>
+				</header>
+				<div class="container">
+					<ul class="actions special">
+						<li>
+							<form class="example" action="">
+								<input type="text" 	placeholder="Digite uma cidade..." name="search">
+								<li><input type="submit" value="Buscar" class="primary" /></li>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main special">
+				<div class="container">
+					<div class="content">
+						<header class="major">
+						</header>
+						
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<section id="footer">
+				<footer>
+					<ul class="copyright">
+						<li><a href="https://www.climatempo.com.br">climatempo</a></li>
+					</ul>
+				</footer>
+			</section>
 	</body>
 </html>

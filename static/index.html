@@ -19,27 +19,32 @@
 		<!-- Header -->
 			<section id="header">
 				<header class="major">
-					<h1>Climatempo</h1>
+					<a href="https://www.climatempo.com.br"><h1>Climatempo</h1></a>
 				</header>
-				<div class="container">
-					<ul class="actions special">
-						<li>
-							<form class="example" action="">
-								<input type="text" 	placeholder="Digite uma cidade..." name="search">
-								<li><input type="submit" value="Buscar" class="primary" /></li>
-							</form>
-						</li>
-					</ul>
+			</section>
+
+		<!-- Search Locales -->
+			<section class="main special">
+				<div id="locale" class="container">
+					<div class="content">
+						<ul class="actions special">
+							<li>
+								<form>
+									<input type="text" 	id="locale" name="locale" v-model="locale" placeholder="Digite uma cidade..." name="search">
+									<li><input "type="submit" value="Buscar" class="primary"/></li>
+								</form>
+							</li>
+						</ul>
+						{{ message }}
+					</div>
 				</div>
 			</section>
 
-		<!-- Two -->
-			<section id="two" class="main special">
-				<div class="container">
+		<!-- Results of forecasts -->
+			<section class="main special">
+				<div id="forecasts" class="container">
 					<div class="content">
-						<header class="major">
-						</header>
-						
+						{{ message}}
 					</div>
 				</div>
 			</section>
@@ -48,9 +53,41 @@
 			<section id="footer">
 				<footer>
 					<ul class="copyright">
-						<li><a href="https://www.climatempo.com.br">climatempo</a></li>
+						<li><a href="https://www.linkedin.com/in/analimazn/">by: analima</a></li>
 					</ul>
 				</footer>
 			</section>
+			<script>
+				console.log();
+
+				const locale = new Vue({
+					el: "#locale",
+					data: {
+						text: ""
+					},
+					methods: {
+					}
+				})
+
+				const app = new Vue({
+					el: "body",
+					data: {
+						locale: ""
+					},
+					methods: {
+						getSearchResponse: () => {
+							console.log(this.locale)
+						}
+					}
+				})
+
+				const wheater = new Vue({
+					el: "#forecasts",
+					data: {
+						message: "Olá forecasts"
+					}
+				})
+
+		</script>
 	</body>
 </html>

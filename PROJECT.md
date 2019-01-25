@@ -1,7 +1,7 @@
 ## Sistema de Busca de Localidades e Previsões
 
-<p>Olá desenvolvedor, pronto para participar do nosso</p>
-<p>processo de recrutamento para vaga de Full-stack (CLT)?</p>
+Olá desenvolvedor, pronto para participar do nosso</p>
+processo de recrutamento para vaga de Full-stack (CLT)?
 
 ### Sobre a Vaga
 

@@ -1,7 +1,7 @@
 {
   "name": "climatempo-challenge",
   "version": "1.0.0",
-  "description": "Build API to Climatempo using Express.",
+  "description": "Build API to Climatempo using Hapi.js.",
   "main": "index.js",
   "scripts": {
     "test": "test"
@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/analimazn/challenge-accepted#readme",
   "dependencies": {
-    "hapi": "^18.0.0"
-  }
+    "hapi": "^18.0.0",
+    "inert": "^5.1.2"
+  },
+  "devDependencies": {}
 }

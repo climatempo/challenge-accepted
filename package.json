@@ -23,7 +23,8 @@
   "homepage": "https://github.com/analimazn/challenge-accepted#readme",
   "dependencies": {
     "hapi": "^18.0.0",
-    "inert": "^5.1.2"
+    "inert": "^5.1.2",
+    "remove-accents": "^0.4.2"
   },
   "devDependencies": {}
 }

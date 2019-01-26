@@ -2167,6 +2167,8 @@ input, select, textarea {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
+		height: 40;
+		width: 40;
 	}
 
 		.icon:before {
@@ -2200,7 +2202,6 @@ input, select, textarea {
 	}
 
 		.image:before {
-			background: url("images/overlay.png");
 			content: '';
 			display: block;
 			height: 100%;

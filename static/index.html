@@ -24,24 +24,39 @@
 
 		<!-- Search Locales -->
 			<section class="main special">
-				<div id="locale" class="container">
+				<div id="weather" class="container">
 					<div class="content">
+						<form v-on:submit.prevent>
+							<input type="text" placeholder="Digite uma cidade..." v-model="name">
+							<input type="submit" value="Buscar" v-on:click="getInputSearch"/>
+						</form>
+						{{ message }}
+					</div>
+					<div class="card" v-for="weather in weathers">
+						<h1> Previsão para {{ weather.locale.name }} - {{weather.locale.state}} </h1>
 						<ul class="actions special">
 							<li>
-								<form v-on:submit.prevent>
-									<input type="text" placeholder="Digite uma cidade..." v-model="name">
-									<input type="submit" value="Buscar" v-on:click="getInputSearch"/>
-								</form>
+								<div class="card"  v-for="forecasts in weather.weather">
+									<h3> {{ reverseDate(forecasts.date) }} </h3>	
+									<span> {{ forecasts.text }} </span>
+									<table>
+										<tr>
+											<th> {{ forecasts.temperature.min }} ºC  </th> 
+											<th><img src="images/icons/cold.png" height=40 width=40></th>
+											<th> {{ forecasts.temperature.max }} ºC </th>
+											<th> <img src="images/icons/hot.png" height=40 width=40"/> </th>	
+										</tr>
+										<tr>
+											<th> {{ forecasts.rain.precipitation }} mm </th>
+											<th><img src="images/icons/raindrop.png" height=40 width=40></th>
+											<th> {{ forecasts.rain.probability }} % </th>
+											<th><img src="images/icons/umbrella.png" height=40 width=40></th>
+										</tr>
+									</table>
+					
+								</div>
 							</li>
 						</ul>
-					</div>
-				</div>
-			</section>
-
-		<!-- Results of forecasts -->
-			<section class="main special">
-				<div class="container">
-					<div class="content">
 					</div>
 				</div>
 			</section>
@@ -55,31 +70,51 @@
 				</footer>
 			</section>
 			<script>
-				const locale = new Vue({
-					el: "#locale",
+				const weather = new Vue({
+					el: "#weather",
 					data: {
+						id: "",
 						name: "",
-						locale: {},
-						weather: [],
+						message: "",
+						status: "",
+						weathers: []
 					},
 					methods: {
-						getInputSearch: async function () {
-			                let locales = await axios
+						getInputSearch: async function() {
+			                await axios
 								.get( "http://localhost:5000/locales/" + this.name)
-								.then(res => res.data)
-							
-							let getWeatherForecasts = await axios
-								.get( "http://localhost:5000/weather-forecasts/" + locales[0].id)
-								.then(res => res.data)
-							
-							let weatherForecasts = getWeatherForecasts.map(weather => weather)
-							console.log(weatherForecasts)
+								.then(res => {
+									if(res.status == 200 && res.data.length) {
+										this.message = "";
+										this.id = res.data[0].id;
+									} else {
+										this.message = "Cidade não localizada."
+									}
+								})
+								.catch(err => {
+									console.log(err);
+									this.message = "Insira um valor válido."
+								});
 							this.name = "";
-							return weatherForecasts;
-						}
-					}
-				})
 
+							if (this.id) {
+								await axios
+									.get( "http://localhost:5000/weather-forecasts/" + this.id)
+									.then(res => {
+										this.status = "Sucesso"
+										this.weathers = res.data;
+									})
+									.catch(err => console.log(err));
+							} else {
+								this.status = "Sem previsões hoje"
+							}
+						},
+						reverseDate: function (date) {
+					     	let newDate = date.split('-').reverse()
+					     	return (newDate[0] + '/' + newDate[1] + '/' + newDate[2])
+					    }
+					}
+				});
 		</script>
 	</body>
 </html>

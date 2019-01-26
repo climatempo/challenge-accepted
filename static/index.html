@@ -18,21 +18,23 @@
 		<!-- Header -->
 			<section id="header">
 				<header class="major">
-					<a href="https://www.climatempo.com.br"><h1>Climatempo</h1></a>
+					<a href="https://www.climatempo.com.br">
+						<h1>Climatempo</h1>
+					</a>
+					<h3>O céu fala. A gente entende.</h3>	
 				</header>
 			</section>
 
-		<!-- Search Locales -->
-			<section class="main special">
-				<div id="weather" class="container">
-					<div class="content">
-						<form v-on:submit.prevent>
-							<input type="text" placeholder="Digite uma cidade..." v-model="name">
-							<input type="submit" value="Buscar" v-on:click="getInputSearch"/>
-						</form>
-						{{ message }}
-					</div>
-					<div class="card" v-for="weather in weathers">
+		<!-- Search Forecasts -->
+			<section id="weather" class="main special">
+				<div class="container">
+					<p>Deseja saber qual será a previsão para determinada cidade? Pesquise abaixo que lhe informaremos.</p>
+					<form v-on:submit.prevent>
+						<input type="text" placeholder="Digite uma cidade..." v-model="name">
+						<input type="submit" value="Buscar" v-on:click="getInputSearch"/>
+					</form>
+					{{ message }}
+					<div v-for="weather in weathers">
 						<h1> Previsão para {{ weather.locale.name }} - {{weather.locale.state}} </h1>
 						<ul class="actions special">
 							<li>
@@ -53,7 +55,6 @@
 											<th><img src="images/icons/umbrella.png" height=40 width=40></th>
 										</tr>
 									</table>
-					
 								</div>
 							</li>
 						</ul>
@@ -69,52 +70,6 @@
 					</ul>
 				</footer>
 			</section>
-			<script>
-				const weather = new Vue({
-					el: "#weather",
-					data: {
-						id: "",
-						name: "",
-						message: "",
-						status: "",
-						weathers: []
-					},
-					methods: {
-						getInputSearch: async function() {
-			                await axios
-								.get( "http://localhost:5000/locales/" + this.name)
-								.then(res => {
-									if(res.status == 200 && res.data.length) {
-										this.message = "";
-										this.id = res.data[0].id;
-									} else {
-										this.message = "Cidade não localizada."
-									}
-								})
-								.catch(err => {
-									console.log(err);
-									this.message = "Insira um valor válido."
-								});
-							this.name = "";
-
-							if (this.id) {
-								await axios
-									.get( "http://localhost:5000/weather-forecasts/" + this.id)
-									.then(res => {
-										this.status = "Sucesso"
-										this.weathers = res.data;
-									})
-									.catch(err => console.log(err));
-							} else {
-								this.status = "Sem previsões hoje"
-							}
-						},
-						reverseDate: function (date) {
-					     	let newDate = date.split('-').reverse()
-					     	return (newDate[0] + '/' + newDate[1] + '/' + newDate[2])
-					    }
-					}
-				});
-		</script>
+			<script type="text/javascript" src="js/vue.js"></script>
 	</body>
 </html>

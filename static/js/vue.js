@@ -5,17 +5,22 @@ const weather = new Vue({
 		name: "",
 		message: "",
 		status: "",
-		locale: {},
 		weathers: []
 	},
 	methods: {
 		getInputSearch: async function() {
+			this.id = "";
+			this.message = "";
+			this.status = "";
+			this.weathers = [];
+            
             await axios
 				.get( "http://localhost:5000/locales/" + this.name)
 				.then(res => {
 					if(res.status == 200 && res.data.length) {
-						this.message = "Busca realizada com sucesso.";
+						this.message = "";
 						this.id = res.data[0].id;
+
 					} else {
 						this.message = "Cidade não localizada."
 					}
@@ -24,6 +29,7 @@ const weather = new Vue({
 					console.log(err);
 					this.message = "Insira um valor válido."
 				});
+
 			this.name = "";
 
 			if (this.id) {
@@ -37,6 +43,10 @@ const weather = new Vue({
 			} else {
 				this.status = "Sem previsões hoje"
 			}
-		}
+		},
+		reverseDate: function (date) {
+	     	let newDate = date.split('-').reverse()
+	     	return (newDate[0] + '/' + newDate[1] + '/' + newDate[2])
+	    }
 	}
 });

@@ -12,7 +12,6 @@
 		<link rel="stylesheet" href="css/main.css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-		<script src="/public/js/vue-clipboard.min.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -29,22 +28,20 @@
 					<div class="content">
 						<ul class="actions special">
 							<li>
-								<form>
-									<input type="text" 	id="locale" name="locale" v-model="locale" placeholder="Digite uma cidade..." name="search">
-									<li><input "type="submit" value="Buscar" class="primary"/></li>
+								<form v-on:submit.prevent>
+									<input type="text" placeholder="Digite uma cidade..." v-model="name">
+									<input type="submit" value="Buscar" v-on:click="getInputSearch"/>
 								</form>
 							</li>
 						</ul>
-						{{ message }}
 					</div>
 				</div>
 			</section>
 
 		<!-- Results of forecasts -->
 			<section class="main special">
-				<div id="forecasts" class="container">
+				<div class="container">
 					<div class="content">
-						{{ message}}
 					</div>
 				</div>
 			</section>
@@ -58,33 +55,30 @@
 				</footer>
 			</section>
 			<script>
-				console.log();
-
 				const locale = new Vue({
 					el: "#locale",
 					data: {
-						text: ""
+						name: "",
+						response: {},
+						message : null
 					},
 					methods: {
-					}
-				})
+						getInputSearch: async function () {
+			                let getLocales = await axios
+								.get( "http://localhost:5000/locales/" + this.name)
+								.then(res => res.data)
+							
+							let id = getLocales.map(locale => locale.id)
 
-				const app = new Vue({
-					el: "body",
-					data: {
-						locale: ""
-					},
-					methods: {
-						getSearchResponse: () => {
-							console.log(this.locale)
+							let getWeatherForecasts = await axios
+								.get( "http://localhost:5000/weather-forecasts/" + id)
+								.then(res => res.data)
+							
+							let weatherForecasts = getWeatherForecasts.map(weather => weather)
+							console.log(weatherForecasts)
+							this.name = "";
+							return weatherForecasts;
 						}
-					}
-				})
-
-				const wheater = new Vue({
-					el: "#forecasts",
-					data: {
-						message: "Olá forecasts"
 					}
 				})
 

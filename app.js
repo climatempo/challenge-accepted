@@ -11,56 +11,58 @@ const server = new Hapi.Server({
 });
 
 async function api() {
-	await server.register(inert);
+    try {
+    	await server.register(inert);
 
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: (req, head) => {
-            return head.file('./static/index.html');
-        }
-    });
-
-    server.route({
-        method: 'GET',
-        path: '/js/{file*}',
-        handler:{
-            directory: {
-                path: 'static/js'
+        server.route({
+            method: 'GET',
+            path: '/',
+            handler: (req, head) => {
+                return head.file('./static/index.html');
             }
-        }
-    });
+        });
 
-    server.route({
-        method: 'GET',
-        path: '/css/{file*}',
-        handler:{
-        	directory: {
-        		path: 'static/css'
-        	}
-        }
-    });
+        server.route({
+            method: 'GET',
+            path: '/js/{file*}',
+            handler:{
+                directory: {
+                    path: 'static/js'
+                }
+            }
+        });
 
-    server.route({
-        method: 'GET',
-        path: '/images/{file*}',
-        handler:{
-        	directory: {
-        		path: 'static/images'
-        	}
-        }
-    });
+        server.route({
+            method: 'GET',
+            path: '/css/{file*}',
+            handler:{
+            	directory: {
+            		path: 'static/css'
+            	}
+            }
+        });
 
-	await server.start();
-	await routeLocale.getLocales(server);
-	await routeLocale.getLocaleByName(server);
-	await routeWeather.getWeather(server);
-	await routeWeather.getWeatherByLocale(server);
+        server.route({
+            method: 'GET',
+            path: '/images/{file*}',
+            handler:{
+            	directory: {
+            		path: 'static/images'
+            	}
+            }
+        });
 
-	process.on('unhandledRejection', (err) => {       
-		console.log(err); 
-		process.exit(1);    
-    });
+    	await server.start();
+    	await routeLocale.getLocaleByName(server);
+    	await routeWeather.getWeatherByLocale(server);
+
+    	process.on('unhandledRejection', (err) => {       
+    		throw err; 
+    		process.exit(1);    
+        });
+    } catch (err) {
+        return "Error on server."
+    }
 };
 
 api();

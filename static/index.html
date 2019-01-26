@@ -59,19 +59,17 @@
 					el: "#locale",
 					data: {
 						name: "",
-						response: {},
-						message : null
+						locale: {},
+						weather: [],
 					},
 					methods: {
 						getInputSearch: async function () {
-			                let getLocales = await axios
+			                let locales = await axios
 								.get( "http://localhost:5000/locales/" + this.name)
 								.then(res => res.data)
 							
-							let id = getLocales.map(locale => locale.id)
-
 							let getWeatherForecasts = await axios
-								.get( "http://localhost:5000/weather-forecasts/" + id)
+								.get( "http://localhost:5000/weather-forecasts/" + locales[0].id)
 								.then(res => res.data)
 							
 							let weatherForecasts = getWeatherForecasts.map(weather => weather)

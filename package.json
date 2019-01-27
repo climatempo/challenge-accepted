@@ -2,9 +2,10 @@
   "name": "climatempo-challenge",
   "version": "1.0.0",
   "description": "Build API to Climatempo using Hapi.js.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

@@ -2,6 +2,7 @@
 
 const modelWeather = require('../base/weather.json');
 
+//Route to find the specific weather forecasts using locale info.
 function getWeatherByLocale(server) {
 	try {
 		server.route({

@@ -3,10 +3,12 @@
 const modelLocale = require('../base/locales.json');
 const removeAccents = require('remove-accents');
 
+//Function to remove special characteres and spaces.
 function parseText(text) {
 	return removeAccents(String((text).replace(" ", "")).toLowerCase());
 }
 
+//Route to find the locale using the name that's passed.
 async function getLocaleByName(server) {
 	try {
 		server.route({

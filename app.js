@@ -1,24 +1,29 @@
 'use-strict';
 
 const Hapi = require('hapi');
+
+ //Routes
 const routeLocale = require('./routes/locales.js');
 const routeWeather = require('./routes/weather.js');
+
+//Helper of Hapi.js to listen static files.
 const inert = require('inert');
 
-const server = new Hapi.Server({
-	host: 'localhost',
-	port: 5000
-});
 
 async function api() {
     try {
+        const server = new Hapi.Server({
+            host: 'localhost',
+            port: 5000
+        });
+        
     	await server.register(inert);
 
         server.route({
             method: 'GET',
             path: '/',
-            handler: (req, head) => {
-                return head.file('./static/index.html');
+            handler: (req, h) => {
+                return h.file('./static/index.html');
             }
         });
 
@@ -52,17 +57,25 @@ async function api() {
             }
         });
 
-    	await server.start();
+        await server.start(err => {
+            if (err) {
+                server.log('error', 'failed to start server')
+                throw err
+            }
+        });
+
     	await routeLocale.getLocaleByName(server);
     	await routeWeather.getWeatherByLocale(server);
 
-    	process.on('unhandledRejection', (err) => {       
-    		throw err; 
-    		process.exit(1);    
-        });
+        return server;
     } catch (err) {
-        return "Error on server."
+        return ("Error on server.", err);
     }
 };
 
-api();
+api()
+    .then((server) => console.log('Server listening on', server.settings.port))
+    .catch((err) => {
+        console.error(err);
+        process.exit(1);
+    });

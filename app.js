@@ -1,14 +1,14 @@
 'use-strict';
 
+//Server
 const Hapi = require('hapi');
 
- //Routes
-const routeLocale = require('./routes/locales.js');
-const routeWeather = require('./routes/weather.js');
+//Routes
+const { getLocale }= require('./routes/locales.js');
+const { getWeather } = require('./routes/weather.js');
 
-//Helper of Hapi.js to listen static files.
+//Plugin of Hapi.js to send static files.
 const inert = require('inert');
-
 
 async function api() {
     try {
@@ -22,6 +22,9 @@ async function api() {
         server.route({
             method: 'GET',
             path: '/',
+            options: {
+                auth: false
+            },
             handler: (req, h) => {
                 return h.file('./static/index.html');
             }
@@ -64,8 +67,8 @@ async function api() {
             }
         });
 
-    	await routeLocale.getLocaleByName(server);
-    	await routeWeather.getWeatherByLocale(server);
+    	await getLocale(server);
+    	await getWeather(server);
 
         return server;
     } catch (err) {
@@ -74,7 +77,7 @@ async function api() {
 };
 
 api()
-    .then((server) => console.log('Server listening on', server.settings.port))
+    .then((server) => console.log("Server listening on port", server.settings.port))
     .catch((err) => {
         console.error(err);
         process.exit(1);

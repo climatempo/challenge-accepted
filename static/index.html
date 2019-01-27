@@ -21,16 +21,18 @@
 					<a href="https://www.climatempo.com.br">
 						<h1>Climatempo</h1>
 					</a>
-					<h3>O céu fala. A gente entende.</h3>	
+					<p>O céu fala. A gente entende.</p>	
 				</header>
 			</section>
 
 		<!-- Search Forecasts -->
 			<section id="weather" class="main special">
 				<div class="container">
+					<img src="images/icons/cloud-sun.png" height=100 width=100>
 					<p>Deseja saber qual será a previsão para determinada cidade? Pesquise abaixo que lhe informaremos.</p>
 					<form v-on:submit.prevent>
 						<input type="text" placeholder="Digite uma cidade..." v-model="name">
+						<br>
 						<input type="submit" value="Buscar" v-on:click="getInputSearch"/>
 					</form>
 					{{ message }}

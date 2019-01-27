@@ -4,7 +4,7 @@
   "description": "Build API to Climatempo using Hapi.js.",
   "main": "app.js",
   "scripts": {
-    "test": "test",
+    "test": "mocha",
     "start": "node app.js"
   },
   "repository": {
@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/analimazn/challenge-accepted#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "hapi": "^18.0.0",
     "inert": "^5.1.2",
+    "mocha": "^5.2.0",
     "remove-accents": "^0.4.2"
   },
   "devDependencies": {}

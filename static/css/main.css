@@ -257,6 +257,9 @@ input, select, textarea {
 
 	.container {
 		margin: 0 auto;
+		margin-bottom: 0 auto;
+		margin-top: 0 auto;
+		padding: 0 auto;
 		max-width: calc(100% - 4em);
 		width: 35em;
 	}
@@ -283,23 +286,6 @@ input, select, textarea {
 
 		.container.max {
 			width: 100%;
-		}
-
-		@media screen and (max-width: 980px) {
-
-			.container {
-				width: 80% !important;
-				max-width: 100% !important;
-			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			.container {
-				width: 100% !important;
-			}
-
 		}
 
 /* Row */

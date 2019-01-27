@@ -1,18 +1,22 @@
 'use-strict';
 
+//Base
 const modelWeather = require('../base/weather.json');
 
+//Controller
+const { getWeatherByIdLocale } = require('../controller/weather.js');
+
 //Route to find the specific weather forecasts using locale info.
-function getWeatherByLocale(server) {
+function getWeather(server) {
 	try {
 		server.route({
 			method: 'GET',
 			path: '/weather-forecasts/{id}',
+			options: {
+                auth: false
+            },
 			handler: (req, head) => {
-				let id = req.params.id;
-				return modelWeather.filter(data => {
-					return data.locale.id == id ? data.weather : null;
-				});
+				return getWeatherByIdLocale(req.params.id);
 			}
 		});
 	} catch (err) {
@@ -21,5 +25,5 @@ function getWeatherByLocale(server) {
 };
 
 module.exports = {
-	getWeatherByLocale
+	getWeather
 };

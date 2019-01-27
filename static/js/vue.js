@@ -44,7 +44,7 @@ const weather = new Vue({
 				this.status = "Sem previsões hoje"
 			}
 		},
-		reverseDate: function (date) {
+		reverseDate: function(date) {
 	     	let newDate = date.split('-').reverse()
 	     	return (newDate[0] + '/' + newDate[1] + '/' + newDate[2])
 	    }

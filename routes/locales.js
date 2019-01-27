@@ -1,32 +1,29 @@
 'use-strict';
 
+//Base
 const modelLocale = require('../base/locales.json');
-const removeAccents = require('remove-accents');
 
-//Function to remove special characteres and spaces.
-function parseText(text) {
-	return removeAccents(String((text).replace(" ", "")).toLowerCase());
-}
+//Controller
+const { getLocaleByName } = require('../controller/locales.js');
 
 //Route to find the locale using the name that's passed.
-async function getLocaleByName(server) {
+async function getLocale(server) {
 	try {
 		server.route({
 			method: 'GET',
 			path: '/locales/{name}',
+			options: {
+                auth: false
+            },
 			handler: (req, head) => {
-				let name = parseText(req.params.name);
-				return modelLocale.filter(data => {
-					let locale = parseText(data.name);
-					return locale == name ? data.id : null;
-				})
+				return getLocaleByName(req.params.name);
 			}
 		});
 	} catch (err) {
-		return "Error on server."
+		return ("Error to find locale", err);
 	}
 };
 
 module.exports = {
-	getLocaleByName
+	getLocale
 };

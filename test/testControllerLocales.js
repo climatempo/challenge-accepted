@@ -13,7 +13,7 @@ describe('Climatempo Tests', () => {
 			    longitude: -46.792 
 			}] 
 
-			const baseName = 'Osasco'
+			const baseName = 'Osasco';
 			const result = await getLocaleByName(baseName);
 			assert.deepEqual(result, expected);
 

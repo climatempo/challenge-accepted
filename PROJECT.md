@@ -71,7 +71,7 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | 
 
 <sub>O script clonará o repositório para `~/.nvm` é adicionará o comando ao seu perfil (`~/.bash_profile`, `~/.zshrc`, `~/.profile`, or `~/.bashrc`).</sub>
 
-#### Instalação das dependências
+### Instalação das dependências
 Navegue até o diretório em que o projeto foi clonado.
 
     $ cd ~/challenge-accepeted
@@ -90,11 +90,11 @@ ou:
 
 Acesse pela url [http://localhost:5000/](http://localhost:5000/) :)
 
-[Node]: (https://nodejs.org/en/)
-[nvm]: (https://github.com/creationix/nvm)
-[hapi.js]: (https://hapijs.com/)
-[Vue.js]: (https://vuejs.org/)
-[Axios]: (https://github.com/axios/axios)
-[html5up]: (https://html5up.net/)
-[flaticon]: (https://html5up.net/)
-[Mocha]: (https://mochajs.org/)
+[Node](https://nodejs.org/en/)
+[nvm](https://github.com/creationix/nvm)
+[hapi.js](https://hapijs.com/)
+[Vue.js](https://vuejs.org/)
+[Axios](https://github.com/axios/axios)
+[html5up](https://html5up.net/)
+[flaticon](https://www.flaticon.com/home)
+[Mocha](https://mochajs.org/)

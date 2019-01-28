@@ -7,19 +7,22 @@
 ```
 ### Sobre o desenvolvimento:
 Para desenvolver a aplicação dividi o projeto em 5 partes:
+```
 	> Base
 	> Controller
 	> Routes
 	> Static
 	> Test
+```
 Na Base ficam os .jsons utilizados como "database" para fornecer as informações que serão utilizadas.
 
 No Controller está a lógica que será utilizada pelas rotas para o retorno da requisição.
 
 Em Routes encontram-se as rotas utilizadas para acessar a API, sendo elas:
+```
 	> Rota de Weathers
 	> Rota de Locales
-
+```
 Em Static estão todos os meus arquivos estáticos (HTML, CSS, JS)  `¯\_(ツ)_/¯`
 
 Para o design do site foram utilizados ícones do [flaticon](https://www.flaticon.com/home) e um template do [html5up](https://html5up.net/).
@@ -91,8 +94,7 @@ Navegue até o diretório em que o projeto foi clonado.
 
 ou:
 
-```
-    $ [challenge-accepeted] $ node app.js
+```$ [challenge-accepeted] $ node app.js
 ```
 ### Testando a aplicação.
     $ [challenge-accepeted] $ npm test

@@ -46,6 +46,15 @@ A inicialização do servidor se dá pelo arquivo app.js localizado na raiz do p
 	Test
 	> * Mocha : 5.2.0
 
+> * [Node](https://nodejs.org/en/)
+> * [nvm](https://github.com/creationix/nvm)
+> * [hapi.js](https://hapijs.com/)
+> * [Vue.js](https://vuejs.org/)
+> * [Axios](https://github.com/axios/axios)
+> * [html5up](https://html5up.net/)
+> * [flaticon](https://www.flaticon.com/home)
+> * [Mocha](https://mochajs.org/)
+
 
 ### Instalação
 
@@ -89,12 +98,3 @@ ou:
     $ [challenge-accepeted] $ npm test
 
 Acesse pela url [http://localhost:5000/](http://localhost:5000/) :)
-
-> * [Node](https://nodejs.org/en/)
-> * [nvm](https://github.com/creationix/nvm)
-> * [hapi.js](https://hapijs.com/)
-> * [Vue.js](https://vuejs.org/)
-> * [Axios](https://github.com/axios/axios)
-> * [html5up](https://html5up.net/)
-> * [flaticon](https://www.flaticon.com/home)
-> * [Mocha](https://mochajs.org/)

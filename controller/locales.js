@@ -8,17 +8,16 @@ const removeAccents = require('remove-accents');
 
 //Function to remove special characteres and spaces.
 function parseText(text) {
-	return removeAccents((text.trim()).toLowerCase())
-	/*while(text.indexOf(" ") != -1)
+	while(text.indexOf(" ") != -1) {
 		text = text.replace(" ", "");
-	return removeAccents((text).toLowerCase());*/
-}
+	}
+	return removeAccents((text.trim()).toLowerCase());
+};
 
 //Find the locale using the name's passed.
 async function getLocaleByName(str) {
 	try {
 		let name = parseText(str);
-		
 		return modelLocale.filter(data => {
 			let locale = parseText(data.name);
 			return locale == name ? data.id : null;

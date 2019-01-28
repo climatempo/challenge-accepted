@@ -94,9 +94,8 @@ Navegue até o diretório em que o projeto foi clonado.
 
 ou:
 
-```
     $ [challenge-accepeted] $ node app.js
-```
+
 ### Testando a aplicação.
     $ [challenge-accepeted] $ npm test
 

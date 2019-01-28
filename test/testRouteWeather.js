@@ -8,14 +8,14 @@ describe('Climatempo Tests', () => {
 		const baseUrl = 'localhost:5000/weather-forecasts/'
 		const baseParams = 3735;
 
-	    it("returns status code 200", async () => {
+	    it("Returns status code 200", async () => {
 			await axios
 				.get(baseUrl)
 				.then(res => assert.equal(200, res.statusCode))
 				.catch(err => err)
 	    });
 
-	     it("returns data expected", async () => {
+	     it("Returns data expected to Osasco", async () => {
 	     	const expected = [{
 			    "period": {
 			      "begin": "2017-02-01",

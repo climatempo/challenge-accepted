@@ -9,7 +9,7 @@ describe('Climatempo Tests', () => {
 		const baseUrl = 'localhost:5000/locales/'
 		const baseParams = 'Osasco';
 		
-	    it("returns status code 200", async () => {
+	    it("Returns status code 200", async () => {
 			
 			await axios
 				.get(baseUrl)
@@ -19,7 +19,7 @@ describe('Climatempo Tests', () => {
 				.catch(err => err)
 	    });
 
-	     it("returns status data expected", async () => {
+	     it("Returns data expected to Osasco", async () => {
 			
 			const expected = [{ 
 				id: 3735,

@@ -8,7 +8,10 @@ const removeAccents = require('remove-accents');
 
 //Function to remove special characteres and spaces.
 function parseText(text) {
-	return removeAccents(String((text).replace(" ", "")).toLowerCase());
+	return removeAccents((text.trim()).toLowerCase())
+	/*while(text.indexOf(" ") != -1)
+		text = text.replace(" ", "");
+	return removeAccents((text).toLowerCase());*/
 }
 
 //Find the locale using the name's passed.

@@ -5,6 +5,11 @@ Arquivo compactado geoserver.rar
     - Iniciar Tomcat com porta :8080;
 
     - Acessar http://localhost:8080/geoserver para verificar se iniciou.
+    
+    Obs: 
+    
+    - Login: admin
+    - Senha: geoserver
 
 
 Caminho dos arquivos de horario e diário:

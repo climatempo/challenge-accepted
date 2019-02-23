@@ -19,7 +19,7 @@ class LocaleApiController
         $this->weatherLocaleService = $weatherLocaleService;
     }
 
-    public function findLocaleBySimilarName(string $name, Response $response, $args=[])
+    public function findLocaleBySimilarName(Response $response, string $name = '', $args = [])
     {
         $locales = $this->weatherLocaleService->getCityBySimilarName($name);
         return $response->withJson($locales, $locales['status']);

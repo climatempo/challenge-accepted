@@ -22,7 +22,7 @@ class JsonRepository
         return (string) file_get_contents($this->jsonFilePath);
     }
 
-    public function getAsArray(): array
+    public function getJsonContentAsArray(): array
     {
         return (array) json_decode($this->getAsString(), true);
     }

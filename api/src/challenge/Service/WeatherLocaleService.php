@@ -7,28 +7,33 @@ use src\challenge\Repository\IWeatherRepository;
 
 class WeatherLocaleService
 {
-    /** @var LocaleRepositoryJson 
-     * $localeRepositoryJson 
-     * Repositório para manipular os dados dos locais json 
-     */
-    private $localeRepositoryJson;
+    /** @var ILocaleRepository $localeRepository */
+    private $localeRepository;
 
     /** @var IWeatherRepository $weatherRepository */
     private $weatherRepository;
 
     public function __construct(
-        ILocaleRepository $localeRepositoryJson,
+        ILocaleRepository $localeRepository,
         IWeatherRepository $weatherRepository
     )
     {
-        $this->localeRepositoryJson = $localeRepositoryJson;
+        $this->localeRepository = $localeRepository;
         $this->weatherRepository = $weatherRepository;
     }
 
     public function getCityBySimilarName(string $cityName): array
     {
         try {
-            $locales = $this->localeRepositoryJson->getLocaleBySimilarName($cityName);
+            
+            if(empty($cityName)) {
+                return [
+                    'data' => $this->localeRepository->getAllCities(),
+                    'status' => 200
+                ];
+            }
+
+            $locales = $this->localeRepository->getLocaleBySimilarName($cityName);
             return [
                 'data' => $locales,
                 'status' => 200

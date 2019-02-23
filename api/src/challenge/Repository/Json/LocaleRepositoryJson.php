@@ -13,7 +13,7 @@ class LocaleRepositoryJson extends JsonRepository implements ILocaleRepository
     public function getLocaleBySimilarName(string $cityName): array
     {
         $localesFound = array();
-        foreach ($this->getAsArray() as $locale) {
+        foreach ($this->getJsonContentAsArray() as $locale) {
             if (strpos(strtolower($locale["name"]), strtolower($cityName)) !== false) {
                 $localesFound[] = $locale;
             }
@@ -26,6 +26,6 @@ class LocaleRepositoryJson extends JsonRepository implements ILocaleRepository
      */
     public function getAllCities(): array
     {
-        return $this->getAsArray();
+        return $this->getJsonContentAsArray();
     }
 }

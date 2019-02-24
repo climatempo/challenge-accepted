@@ -27,6 +27,9 @@ A API se encontra no diretório **challenge-accepted/api/**.
 - ### Execução
   Dentro do diretório `api`, execute o comando: `php -S localhost:8888 -t public/index.php`
 
+- ### Testes
+  Para executar os testes, dentro do diretório `api` execute `./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/WeatherLocaleApiTest.php`
+
 ## Site
 O site se encontra no diretório **challenge-accepted/site/**
 - ### Requisitos
@@ -68,5 +71,14 @@ O site se encontra no diretório **challenge-accepted/site/**
 
 ## Site
 - `src/components` - Componentes de interface reutilizáveis através da aplicação.
-- `src/containers` - Páginas principais da aplicação. Responsável pelas requisições Http e acessar a API. Irá renderiar os `components`, mas não possui implementação componentes de interface.
-- `helpers` - Classes utilitárias que podem ser reutilizadas.
+- `src/containers` - Páginas principais da aplicação. Responsável pelas requisições Http e acessar a API. Irá renderizar os `components`, mas não possui implementação componentes de interface.
+- `helpers` - Classes utilitárias conversão de valores, ou coisas mais genéricas durante a aplicação.
+
+# Sample
+## Mobile
+### Home com a previsão
+![alt text](images/mobile-sample.png "Mobile sample")
+### Página para quando nenhuma cidade for encontrada
+![alt text](images/not-found.png "Mobile sample")
+## Desktop
+![alt text](images/my-sample.png "Desktop sample")

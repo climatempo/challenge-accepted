@@ -3,15 +3,33 @@ import Navbar from "../../components/Navbar/Navbar";
 import Title from "../../components/Title/Title";
 import WeatherCards from "../../components/WeatherCards/WeatherCards";
 import axios from "../../axiosInstace";
+import { NotFound } from "../../components/NotFound/NotFound";
 
 class WeatherLocaleContainer extends Component {
   state = {
     selectedCity: null,
+    cityNotFound: false,
     cityName: "",
-    forecast: []
+    forecast: [],
+    cities: []
   };
 
-  componentDidMount() {}
+  constructor() {
+    super();
+    this.titleRef = React.createRef();
+  }
+
+  componentDidMount() {
+    axios
+      .get("/api/locale")
+      .then(res => {
+        this.setState({
+          ...this.state,
+          cities: res.data.data
+        });
+      })
+      .catch(err => console.log(err));
+  }
 
   onSubmitSearch = e => {
     e.preventDefault();
@@ -24,6 +42,18 @@ class WeatherLocaleContainer extends Component {
     axios
       .get(`/api/locale/${this.state.cityName}`)
       .then(res => {
+        // Check if not city was found
+        if (res.data.data.length === 0) {
+          return this.setState(
+            {
+              ...this.state,
+              cityNotFound: true,
+              forecast: []
+            },
+            () => (this.titleRef.current.innerHTML = "Ops...")
+          );
+        }
+
         const cityInfo = res.data.data[0];
         this.setState({
           ...this.state,
@@ -36,8 +66,15 @@ class WeatherLocaleContainer extends Component {
           .then(res => {
             this.setState({
               ...this.state,
-              forecast: res.data.data[0]
+              cityNotFound: false
             })
+            this.titleRef.current.innerHTML = `Previsão para ${
+              this.state.cityName
+            }`;
+            return this.setState({
+              ...this.state,
+              forecast: res.data.data[0]
+            });
           })
           .catch(err => console.log(err));
       })
@@ -59,11 +96,8 @@ class WeatherLocaleContainer extends Component {
   };
 
   render() {
-
-    let mainContent = <WeatherCards weatherForecast={this.state.forecast} />;
-
-    if (this.state.forecast.length === 0)
-      mainContent = <span>Loading...</span>;
+    // TODO: Ajustar esse loading
+    // if (this.state.forecast.length === 0) mainContent = <span>Loading...</span>;
 
     return (
       <React.Fragment>
@@ -72,11 +106,16 @@ class WeatherLocaleContainer extends Component {
           searchValue={this.state.cityName}
           selectValueHandler={this.onSelectValueHandler}
           onSearchSubmit={this.onSubmitSearch}
+          cities={this.state.cities}
         />
 
-        <Title city={this.state.cityName} />
+        <Title city={this.state.cityName} titleRef={this.titleRef} />
 
-        {mainContent}        
+        {this.state.cityNotFound && <NotFound />}
+
+        {this.state.forecast.length > 0 && (
+          <WeatherCards weatherForecast={this.state.forecast} />
+        )}
       </React.Fragment>
     );
   }

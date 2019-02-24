@@ -4,17 +4,20 @@ import classes from "./Navbar.sass";
 import AutoComplete from "react-autocomplete";
 
 const Navbar = props => {
+  const cities = props.cities.map(city => {
+    return {
+      id: city.id,
+      label: city.name
+    };
+  });
+
   return (
     <header className={classes.Navbar}>
       <div className={classes.LogoBar}>ClimaTempo</div>
       <form className={classes.SearchForm} onSubmit={props.onSearchSubmit}>
-
         <AutoComplete
           className={classes.SearchInput}
-          items={[
-            { id: 1, label: "Osasco" },
-            { id: 2, label: "São Paulo" }
-          ]}
+          items={cities}
           shouldItemRender={(item, value) =>
             item.label.toLowerCase().indexOf(value.toLowerCase()) > -1
           }
@@ -30,7 +33,7 @@ const Navbar = props => {
           value={props.searchValue}
           onChange={props.searchChangedHandler}
           onSelect={props.selectValueHandler}
-          wrapperStyle={{display: 'block'}}
+          wrapperStyle={{ display: "block" }}
         />
 
         <button className={classes.SearchButton}>

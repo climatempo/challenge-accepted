@@ -1,9 +1,9 @@
 <?php
 
-namespace src\challenge\Service;
+namespace src\Challenge\Service;
 
-use src\challenge\Repository\ILocaleRepository;
-use src\challenge\Repository\IWeatherRepository;
+use src\Challenge\Repository\ILocaleRepository;
+use src\Challenge\Repository\IWeatherRepository;
 
 class WeatherLocaleService
 {

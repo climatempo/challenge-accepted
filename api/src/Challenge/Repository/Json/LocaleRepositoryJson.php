@@ -1,8 +1,8 @@
 <?php
 
-namespace src\challenge\Repository\Json;
+namespace src\Challenge\Repository\Json;
 
-use src\challenge\Repository\ILocaleRepository;
+use src\Challenge\Repository\ILocaleRepository;
 
 
 class LocaleRepositoryJson extends JsonRepository implements ILocaleRepository

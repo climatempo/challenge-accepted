@@ -1,12 +1,12 @@
 <?php
 
-namespace src\challenge\Controllers;
+namespace src\Challenge\Controllers;
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\RequestInterface as Request;
-use src\challenge\Service\WeatherLocaleService;
-use src\challenge\Repository\ILocaleRepository;
-use src\challenge\Repository\Json\LocaleRepositoryJson;
+use src\Challenge\Service\WeatherLocaleService;
+use src\Challenge\Repository\ILocaleRepository;
+use src\Challenge\Repository\Json\LocaleRepositoryJson;
 
 class LocaleApiController
 {

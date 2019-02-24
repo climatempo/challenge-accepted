@@ -3,11 +3,11 @@
 use Psr\Http\Message\RequestInterface as Request;
 // use Psr\Http\Message\ResponseInterface as Reponse;
 use Slim\Http\Response;
-use src\challenge\Service\WeatherLocaleService;
 use Psr\Http\Message\ResponseInterface;
-use src\challenge\Controllers\LocaleApiController;
-use src\challenge\Repository\Json\LocaleRepositoryJson;
-use src\challenge\Controllers\WeatherApiController;
+use src\Challenge\Service\WeatherLocaleService;
+use src\Challenge\Controllers\LocaleApiController;
+use src\Challenge\Repository\Json\LocaleRepositoryJson;
+use src\Challenge\Controllers\WeatherApiController;
 
 // $app->add(new Tuupola\Middleware\CorsMiddleware());
 

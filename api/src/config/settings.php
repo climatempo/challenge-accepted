@@ -1,10 +1,10 @@
 <?php
 
-use src\challenge\Repository\ILocaleRepository;
-use src\challenge\Repository\IWeatherRepository;
-use src\challenge\Repository\Json\LocaleRepositoryJson;
+use src\Challenge\Repository\ILocaleRepository;
+use src\Challenge\Repository\IWeatherRepository;
+use src\Challenge\Repository\Json\LocaleRepositoryJson;
 use function \DI\get;
-use src\challenge\Repository\Json\WeatherRepositoryJson;
+use src\Challenge\Repository\Json\WeatherRepositoryJson;
 
 
 $localeJsonPath = __DIR__ . "/../../base/locales.json";

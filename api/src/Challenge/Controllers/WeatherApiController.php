@@ -1,7 +1,7 @@
 <?php
 
-namespace src\challenge\Controllers;
-use src\challenge\Service\WeatherLocaleService;
+namespace src\Challenge\Controllers;
+use src\Challenge\Service\WeatherLocaleService;
 use Psr\Http\Message\ResponseInterface;
 
 class WeatherApiController

@@ -53,12 +53,12 @@ O site se encontra no diretório **challenge-accepted/site/**
 - Arquivos de configuração no diretório `api/src/config`
   - `routes.php` - Configuração das rotas da API
   - `settings.php` - Configurações gerais da aplicação. Aqui estão as configurações das dependências, para aplicar o conteito de injeção de dependência.
-  - `src/challenge/Controllers` - Controllers da aplicação. São resposáveis por lidar com as requisições Http feitas à API.
-  - `src/challenge/Repository` - Design Pattern Repository aplicado para manipular os dados da aplicação.
+  - `src/Challenge/Controllers` - Controllers da aplicação. São resposáveis por lidar com as requisições Http feitas à API.
+  - `src/Challenge/Repository` - Design Pattern Repository aplicado para manipular os dados da aplicação.
     - `ILocaleRepository.php` e `IWeatherRepository.php` - *Interfaces* para abstrair a implementação da fonte de dados, para que a troca da fonte de consulta de dados seja mais fácil no futuro.
     - `Json/` - Implementação do *Repository* com a fonte de consulta de dados em Json
 
-  - `src/challenge/Services` - Serviço de previsão de tempo para as cidades de São Paulo e Osasco (SP).
+  - `src/Challenge/Services` - Serviço de previsão de tempo para as cidades de São Paulo e Osasco (SP).
 
   ### **Api Methods**
    | Method | Endpoint                       | Parameters       | Description                                                                                                                                          |
@@ -67,4 +67,6 @@ O site se encontra no diretório **challenge-accepted/site/**
    | `GET`  | */api/locale/:cityId/forecast* | *cityId:* `int`  | Busca a previsão do tempo de uma semana para uma determinada região.                                                                                 |
 
 ## Site
-- TODO: Document the folder structure of the site
+- `src/components` - Componentes de interface reutilizáveis através da aplicação.
+- `src/containers` - Páginas principais da aplicação. Responsável pelas requisições Http e acessar a API. Irá renderiar os `components`, mas não possui implementação componentes de interface.
+- `helpers` - Classes utilitárias que podem ser reutilizadas.

@@ -1,6 +1,6 @@
 <?php
 
-namespace src\challenge\Repository;
+namespace src\Challenge\Repository;
 
 interface IWeatherRepository
 {

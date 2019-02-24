@@ -25,7 +25,7 @@ A API se encontra no diretório **challenge-accepted/api/**.
     $ composer install
     ```
 - ### Execução
-  Dentro do diretório `api`, execute o comando: `php -S localhost:8888 -t public/index.php`
+  Dentro do diretório `api`, execute o comando: `php -S localhost:8888 -t public`
 
 - ### Testes
   Para executar os testes, dentro do diretório `api` execute `./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/WeatherLocaleApiTest.php`

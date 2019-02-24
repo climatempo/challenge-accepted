@@ -5,25 +5,33 @@ namespace src\challenge\Repository\Json;
 class JsonRepository
 {
     /** 
-     * @var string $jsonFilePath Caminho do arquivo Json 
-    */
+     * @var string $jsonFilePath - Path of the Json file that contains the data
+     */
     private $jsonFilePath;
 
     public function __construct(string $jsonFilePath)
     {
-        if (! file_exists($jsonFilePath)) {
+        if (!file_exists($jsonFilePath)) {
             throw new \InvalidArgumentException(sprintf('File %s not found', $jsonFilePath));
         }
         $this->jsonFilePath = $jsonFilePath;
     }
 
-    public function getAsString()
+    /**
+     * Returns the json file content as a string
+     * @return string
+     */
+    public function getJsonContentAsString() : string
     {
-        return (string) file_get_contents($this->jsonFilePath);
+        return (string)file_get_contents($this->jsonFilePath);
     }
 
-    public function getJsonContentAsArray(): array
+    /**
+     * Return the Json content as Array
+     * @return array
+     */
+    public function getJsonContentAsArray() : array
     {
-        return (array) json_decode($this->getAsString(), true);
+        return (array)json_decode($this->getJsonContentAsString(), true);
     }
 }

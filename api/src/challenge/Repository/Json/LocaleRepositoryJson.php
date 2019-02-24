@@ -8,7 +8,9 @@ use src\challenge\Repository\ILocaleRepository;
 class LocaleRepositoryJson extends JsonRepository implements ILocaleRepository
 {
     /**
-     * Obter o local com base na cidade desejada
+     * Get the locale that matches the city name you want
+     * @param string $cityName - Similar name of the city to search
+     * @return array - Locales found
      */
     public function getLocaleBySimilarName(string $cityName): array
     {
@@ -22,7 +24,8 @@ class LocaleRepositoryJson extends JsonRepository implements ILocaleRepository
     }
 
     /**
-     * Retorna todas as cidades
+     * Get all the cities
+     * @return array
      */
     public function getAllCities(): array
     {

@@ -1,4 +1,4 @@
- #Challenge Accepted
+forecast #Challenge Accepted
 Aplicação web responsiva para consulta de previsão do tempo para uma semana nas cidades de Osasco e São Paulo.
 
 # Arquitetura
@@ -50,5 +50,5 @@ O site se encontra no diretório **challenge-accepted/site/**
   ### **Api Methods**
    | Method | Endpoint | Parameters | Description |
     | ------ | ------ | ------ | ------ |
-    | `GET` | */api/locale/:name* | *name:* `string` | Consulta os locais com nome similar ao que foi passado como parâmetro. |
-    | `GET` | */api/locale/:cityId/weather* | *cityId:* `int` | Busca a previsão do tempo de uma semana para uma determinada região.
+    | `GET` | */api/locale/:name* | *name:* `string` | Consulta os locais com nome da cidade similar ao que foi passado como parâmetro. Se não for passado nenhuma cidade, todas as cidades são retornadas. |
+    | `GET` | */api/locale/:cityId/forecast* | *cityId:* `int` | Busca a previsão do tempo de uma semana para uma determinada região.

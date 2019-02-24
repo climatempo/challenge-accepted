@@ -17,4 +17,4 @@ $app->get('/', function (ResponseInterface $response) {
 });
 
 $app->get("/api/locale[/{name}]", [LocaleApiController::class, "findLocaleBySimilarName"]);
-$app->get("/api/locale/{cityId}/weather", [WeatherApiController::class, "findWeatherByCityId"]);
+$app->get("/api/locale/{cityId}/forecast", [WeatherApiController::class, "findWeatherByCityId"]);

@@ -16,17 +16,21 @@ class WeatherLocaleService
     public function __construct(
         ILocaleRepository $localeRepository,
         IWeatherRepository $weatherRepository
-    )
-    {
+    ) {
         $this->localeRepository = $localeRepository;
         $this->weatherRepository = $weatherRepository;
     }
 
-    public function getCityBySimilarName(string $cityName): array
+    /**
+     * Get the locale for a similar city name
+     * @param string $cityName - Name of the City / Locale
+     * @return array
+     */
+    public function getCityBySimilarName(string $cityName) : array
     {
         try {
-            
-            if(empty($cityName)) {
+
+            if (empty($cityName)) {
                 return [
                     'data' => $this->localeRepository->getAllCities(),
                     'status' => 200
@@ -38,14 +42,12 @@ class WeatherLocaleService
                 'data' => $locales,
                 'status' => 200
             ];
-        }
-        catch (\InvalidArgumentException $e) {
+        } catch (\InvalidArgumentException $e) {
             return [
                 'message' => $e->getMessage(),
                 'status' => 400
             ];
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             return [
                 'message' => 'Internal Error',
                 'status' => 500
@@ -53,7 +55,12 @@ class WeatherLocaleService
         }
     }
 
-    public function getWeatherByCityId(int $cityId)
+    /**
+     * Obtain the weather forecast for a given city ir
+     * @param int $cityId
+     * @return array
+     */
+    public function getWeatherByCityId(int $cityId) : array
     {
         try {
             $weather = $this->weatherRepository->getWeatherByCityId($cityId);
@@ -61,14 +68,12 @@ class WeatherLocaleService
                 'data' => $weather,
                 'status' => 200
             ];
-        }
-        catch (\InvalidArgumentException $e) {
+        } catch (\InvalidArgumentException $e) {
             return [
                 'message' => $e->getMessage(),
                 'status' => 400
             ];
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             return [
                 'message' => 'Internal Error',
                 'status' => 500

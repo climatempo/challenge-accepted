@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Navbar.sass";
+import logo from '../../images/logo.png';
 
 import AutoComplete from "react-autocomplete";
 
@@ -13,7 +14,7 @@ const Navbar = props => {
 
   return (
     <header className={classes.Navbar}>
-      <div className={classes.LogoBar}>ClimaTempo</div>
+      <div className={classes.LogoBar}><img src={logo} alt=""/></div>
       <form className={classes.SearchForm} onSubmit={props.onSearchSubmit}>
         <AutoComplete
           className={classes.SearchInput}

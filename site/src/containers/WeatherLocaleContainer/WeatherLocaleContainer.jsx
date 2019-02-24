@@ -67,7 +67,7 @@ class WeatherLocaleContainer extends Component {
             this.setState({
               ...this.state,
               cityNotFound: false
-            })
+            });
             this.titleRef.current.innerHTML = `Previsão para ${
               this.state.cityName
             }`;
@@ -96,9 +96,6 @@ class WeatherLocaleContainer extends Component {
   };
 
   render() {
-    // TODO: Ajustar esse loading
-    // if (this.state.forecast.length === 0) mainContent = <span>Loading...</span>;
-
     return (
       <React.Fragment>
         <Navbar

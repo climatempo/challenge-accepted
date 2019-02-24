@@ -26,8 +26,6 @@ A API se encontra no diretório **challenge-accepted/api/**.
     ```
 - ### Execução
   Dentro do diretório `api`, execute o comando: `php -S localhost:8888 -t public/index.php`
-- ### **Observação**
-  No arquivo `site/src/axiosInstance.js`, **definir a constante `baseUrl`** com a url em que está rodando o **servidor da API Rest.**
 
 ## Site
 O site se encontra no diretório **challenge-accepted/site/**
@@ -47,6 +45,8 @@ O site se encontra no diretório **challenge-accepted/site/**
 - ### Execução
   Dentro do diretório `site`, execute o comando `npm start`. Isso irá executar a aplicação no modo de desenvolvimento.
   Para visualizar, acesse: `http://localhost:3000`
+- ### **Observação**
+  No arquivo `site/src/axiosInstance.js`, **definir a constante `baseUrl`** com a url em que está rodando o **servidor da API Rest.**
 
 # Documentação
 ## API

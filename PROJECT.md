@@ -1,4 +1,4 @@
-#Challenge Accepted
+# Challenge Accepted
 Aplicação web responsiva para consulta de previsão do tempo para uma semana nas cidades de Osasco e São Paulo.
 
 # Arquitetura

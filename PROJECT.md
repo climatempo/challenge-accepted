@@ -1,4 +1,4 @@
-forecast #Challenge Accepted
+#Challenge Accepted
 Aplicação web responsiva para consulta de previsão do tempo para uma semana nas cidades de Osasco e São Paulo.
 
 # Arquitetura
@@ -12,15 +12,22 @@ A API se encontra no diretório **challenge-accepted/api/**.
 - ### Requisitos
     - PHP >= 7.2
     - [Composer](https://getcomposer.org/download/)
+
+- ### Ferramentas
+  - [Slim Framework 3](http://www.slimframework.com/docs/)
+  - [PHP-DI](http://php-di.org/doc/frameworks/slim.html)
+  - [Cors-Middleware](https://github.com/tuupola/cors-middleware)
   
 - ### Instalação
     ```
-    $ git clone git@github.com:LucasMallman/nchallenge-accepted.git
-    $ c dchallenge-accepted/api/
+    $ git clone git@github.com:LucasMallmann/challenge-accepted.git
+    $ cd challenge-accepted/api/
     $ composer install
     ```
 - ### Execução
-  Dentro do diretório **api**, execute o comando: `php -S localhost:8888 -t public/index.php`
+  Dentro do diretório `api`, execute o comando: `php -S localhost:8888 -t public/index.php`
+- ### **Observação**
+  No arquivo `site/src/axiosInstance.js`, **definir a constante `baseUrl`** com a url em que está rodando o **servidor da API Rest.**
 
 ## Site
 O site se encontra no diretório **challenge-accepted/site/**
@@ -32,8 +39,14 @@ O site se encontra no diretório **challenge-accepted/site/**
     $ cd challenge-accepted/site/
     $ npm install
     ```
+- ### Ferramentas
+  - [React](https://reactjs.org/)
+  - [CSS Modules](https://github.com/css-modules/css-modules)
+  - [Sass](https://sass-lang.com/)
+  - [Axios](https://github.com/axios/axios)
 - ### Execução
-  **Observação**: TODO: Colocar o global.js com as variáveis corretas.
+  Dentro do diretório `site`, execute o comando `npm start`. Isso irá executar a aplicação no modo de desenvolvimento.
+  Para visualizar, acesse: `http://localhost:3000`
 
 # Documentação
 ## API
@@ -48,7 +61,10 @@ O site se encontra no diretório **challenge-accepted/site/**
   - `src/challenge/Services` - Serviço de previsão de tempo para as cidades de São Paulo e Osasco (SP).
 
   ### **Api Methods**
-   | Method | Endpoint | Parameters | Description |
-    | ------ | ------ | ------ | ------ |
-    | `GET` | */api/locale/:name* | *name:* `string` | Consulta os locais com nome da cidade similar ao que foi passado como parâmetro. Se não for passado nenhuma cidade, todas as cidades são retornadas. |
-    | `GET` | */api/locale/:cityId/forecast* | *cityId:* `int` | Busca a previsão do tempo de uma semana para uma determinada região.
+   | Method | Endpoint                       | Parameters       | Description                                                                                                                                          |
+   | ------ | ------------------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | `GET`  | */api/locale/:name*            | *name:* `string` | Consulta os locais com nome da cidade similar ao que foi passado como parâmetro. Se não for passado nenhuma cidade, todas as cidades são retornadas. |
+   | `GET`  | */api/locale/:cityId/forecast* | *cityId:* `int`  | Busca a previsão do tempo de uma semana para uma determinada região.                                                                                 |
+
+## Site
+- TODO: Document the folder structure of the site

@@ -3,7 +3,12 @@
     "version": "1.0.0",
     "description": "Climatempo Challenge Accepted",
     "main": "index.js",
-    "dependencies": {},
+    "dependencies": {
+        "@nestjs/common": "^6.3.1",
+        "@nestjs/core": "^6.3.1",
+        "reflect-metadata": "^0.1.13",
+        "rxjs": "^6.5.2"
+    },
     "devDependencies": {
         "@commitlint/cli": "^8.0.0",
         "@commitlint/config-angular": "^8.0.0",

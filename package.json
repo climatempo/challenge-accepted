@@ -1,49 +1,76 @@
 {
-    "name": "challenge-accepted",
-    "version": "1.0.0",
-    "description": "Climatempo Challenge Accepted",
-    "main": "index.js",
-    "dependencies": {
-        "@nestjs/common": "^6.3.1",
-        "@nestjs/core": "^6.3.1",
-        "@nestjs/platform-express": "^6.3.1",
-        "@nestjs/swagger": "^3.0.2",
-        "@types/node": "^12.0.5",
-        "reflect-metadata": "^0.1.13",
-        "rxjs": "^6.5.2",
-        "slug": "^1.1.0",
-        "swagger-ui-express": "^4.0.6"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^8.0.0",
-        "@commitlint/config-angular": "^8.0.0",
-        "@types/jest": "^24.0.15",
-        "husky": "^2.4.1",
-        "jest": "^24.8.0",
-        "nodemon": "^1.19.1",
-        "ts-jest": "^24.0.2",
-        "ts-node": "^8.3.0",
-        "tsconfig-paths": "^3.8.0",
-        "tslint": "^5.17.0",
-        "typescript": "^3.5.2"
-    },
-    "scripts": {
-        "api:start": "nodemon --config api/nodemon.json",
-        "api:test": "jest --config api/jest.config.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/gvsouza/challenge-accepted.git"
-    },
-    "author": "Gabriel Veloso",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/gvsouza/challenge-accepted/issues"
-    },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
-    },
-    "homepage": "https://github.com/gvsouza/challenge-accepted#readme"
+  "name": "climatempo",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "nx lint && ng lint",
+    "e2e": "ng e2e",
+    "affected:apps": "nx affected:apps",
+    "affected:libs": "nx affected:libs",
+    "affected:build": "nx affected:build",
+    "affected:e2e": "nx affected:e2e",
+    "affected:test": "nx affected:test",
+    "affected:lint": "nx affected:lint",
+    "affected:dep-graph": "nx affected:dep-graph",
+    "affected": "nx affected",
+    "format": "nx format:write",
+    "format:write": "nx format:write",
+    "format:check": "nx format:check",
+    "update": "ng update @nrwl/workspace",
+    "update:check": "ng update",
+    "workspace-schematic": "nx workspace-schematic",
+    "dep-graph": "nx dep-graph",
+    "help": "nx help"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^8.0.0",
+    "@angular/common": "^8.0.0",
+    "@angular/compiler": "^8.0.0",
+    "@angular/core": "^8.0.0",
+    "@angular/forms": "^8.0.0",
+    "@angular/platform-browser": "^8.0.0",
+    "@angular/platform-browser-dynamic": "^8.0.0",
+    "@angular/router": "^8.0.0",
+    "core-js": "^2.5.4",
+    "rxjs": "~6.4.0",
+    "zone.js": "^0.9.1",
+    "@nestjs/common": "^6.2.4",
+    "@nestjs/core": "^6.2.4",
+    "@nestjs/platform-express": "^6.2.4",
+    "@nestjs/swagger": "^3.0.2",
+    "@nrwl/angular": "8.1.2",
+    "reflect-metadata": "^0.1.12",
+    "slug": "^1.1.0",
+    "swagger-ui-express": "^4.0.6"
+  },
+  "devDependencies": {
+    "jest-preset-angular": "7.0.0",
+    "@angular/compiler-cli": "^8.0.0",
+    "@angular/language-service": "^8.0.0",
+    "@angular-devkit/build-angular": "^0.800.0",
+    "codelyzer": "~5.0.1",
+    "@nrwl/node": "8.1.2",
+    "@nestjs/schematics": "^6.3.0",
+    "@nestjs/testing": "^6.2.4",
+    "@nrwl/nest": "8.1.2",
+    "cypress": "~3.3.1",
+    "@nrwl/cypress": "8.1.2",
+    "@nrwl/jest": "8.1.2",
+    "jest": "24.1.0",
+    "@types/jest": "24.0.9",
+    "ts-jest": "24.0.0",
+    "@nrwl/workspace": "8.1.2",
+    "@types/node": "~8.9.4",
+    "dotenv": "6.2.0",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.11.0",
+    "typescript": "~3.4.5",
+    "prettier": "1.16.4",
+    "@angular/cli": "8.0.0"
+  }
 }

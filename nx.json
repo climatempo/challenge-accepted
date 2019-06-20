@@ -1,0 +1,30 @@
+{
+  "npmScope": "climatempo",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "climatempo-e2e": {
+      "tags": []
+    },
+    "climatempo": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    },
+    "api-interface": {
+      "tags": []
+    },
+    "webapp-e2e": {
+      "tags": []
+    },
+    "webapp": {
+      "tags": []
+    }
+  }
+}

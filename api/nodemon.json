@@ -1,5 +1,0 @@
-{
-    "watch": ["api/src"],
-    "ext": "ts",
-    "exec": "ts-node -P api/tsconfig.json -r tsconfig-paths/register api/src/main.ts"
-}

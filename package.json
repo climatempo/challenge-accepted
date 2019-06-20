@@ -1,0 +1,23 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "Climatempo Challenge Accepted",
+  "main": "index.js",
+  "dependencies": {
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gvsouza/challenge-accepted.git"
+  },
+  "author": "Gabriel Veloso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gvsouza/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/gvsouza/challenge-accepted#readme"
+}

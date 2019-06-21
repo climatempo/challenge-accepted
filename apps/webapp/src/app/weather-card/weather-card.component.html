@@ -1,0 +1,30 @@
+<div class="weather-card">
+    <p class="card-date">{{ weather.date }}</p>
+    <p class="card-text">{{ weather.text }}</p>
+
+    <div class="row p-0">
+        <div class="col-6 text-center">
+            <p class="card-data text-danger">
+                <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                {{ weather.temperature.max }}º
+            </p>
+
+            <p class="card-data">
+                <i class="fa fa-tint" aria-hidden="true"></i>
+                {{ weather.rain.precipitation }}mm
+            </p>
+        </div>
+
+        <div class="col-6 text-center">
+            <p class="card-data text-primary">
+                <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                {{ weather.temperature.min }}º
+            </p>
+
+            <p class="card-data">
+                <i class="fa fa-umbrella" aria-hidden="true"></i>
+                {{ weather.rain.probability }}%
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<form class="searchbox">
+    <div *ngIf="err" class="alert alert-danger">
+        Ocorreu um erro ao pesquisar pela cidade
+    </div>
+    <mat-form-field style="width: 100%">
+        <input
+            type="text"
+            placeholder="Digite o nome da cidade"
+            aria-label="Description"
+            matInput
+            [formControl]="autocompleteControl"
+            [matAutocomplete]="auto"
+        />
+        <mat-autocomplete
+            autoActiveFirstOption
+            #auto="matAutocomplete"
+            [displayWith]="getLocaleName"
+            (optionSelected)="onAutocomplete()"
+        >
+            <mat-option *ngFor="let locale of (filteredLocales$ | async)" [value]="locale">
+                {{ locale.name }}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>

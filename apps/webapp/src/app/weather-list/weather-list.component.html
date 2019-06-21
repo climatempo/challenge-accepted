@@ -1,0 +1,8 @@
+<climatempo-search-box (onLocaleSelect)="updateCards($event)"></climatempo-search-box>
+
+<h2 *ngIf="selectedLocale">Previsão para {{ selectedLocale.name }} / {{ selectedLocale.state }}</h2>
+
+<climatempo-weather-card
+    *ngFor="let weather of (weather$ | async)"
+    [weather]="weather"
+></climatempo-weather-card>

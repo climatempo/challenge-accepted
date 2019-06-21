@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { Locale } from '@climatempo/api-interface';
 import { Observable } from 'rxjs';
 import { debounceTime, filter, switchMap } from 'rxjs/operators';
@@ -11,7 +11,10 @@ import { ApiService } from '../api.service';
     templateUrl: './search-box.component.html'
 })
 export class SearchBoxComponent implements OnInit {
-    public autocompleteControl = new FormControl();
+    public autocompleteControl = new FormControl(null, [
+        Validators.required,
+        Validators.minLength(3)
+    ]);
     public filteredLocales$: Observable<Locale[]>;
 
     @Output()
@@ -32,7 +35,11 @@ export class SearchBoxComponent implements OnInit {
     private setupAutocomplete() {
         this.filteredLocales$ = this.autocompleteControl.valueChanges.pipe(
             debounceTime(300),
-            filter(text => text.length >= 3),
+            filter(
+                () =>
+                    this.autocompleteControl.valid &&
+                    typeof this.autocompleteControl.value === 'string'
+            ),
             switchMap(text => this.api.filterLocales(text))
         );
     }

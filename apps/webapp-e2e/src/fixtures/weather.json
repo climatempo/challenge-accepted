@@ -1,0 +1,26 @@
+[
+    {
+        "date": "2017-02-01",
+        "text": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "temperature": {
+            "min": 20,
+            "max": 28
+        },
+        "rain": {
+            "probability": 60,
+            "precipitation": 20
+        }
+    },
+    {
+        "date": "2017-02-02",
+        "text": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "temperature": {
+            "min": 21,
+            "max": 30
+        },
+        "rain": {
+            "probability": 60,
+            "precipitation": 10
+        }
+    }
+]

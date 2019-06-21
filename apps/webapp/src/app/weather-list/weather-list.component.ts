@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Locale, Weather } from '@climatempo/api-interface';
 import { Observable } from 'rxjs';
 
@@ -8,11 +8,9 @@ import { ApiService } from '../api.service';
     selector: 'climatempo-weather-list',
     templateUrl: './weather-list.component.html'
 })
-export class WeatherListComponent implements OnInit {
+export class WeatherListComponent {
     public selectedLocale: Locale;
     public weather$: Observable<Weather[]>;
-
-    ngOnInit() {}
 
     public updateCards(locale: Locale) {
         this.selectedLocale = locale;

@@ -22,4 +22,13 @@
             </mat-option>
         </mat-autocomplete>
     </mat-form-field>
+
+    <div
+        class="alert alert-danger"
+        data-cy="searchBoxValidation"
+        *ngIf="autocompleteControl.dirty && autocompleteControl.errors as errors"
+    >
+        <span *ngIf="errors.required">Informe uma cidade</span>
+        <span *ngIf="errors.minlength">Digite no mínimo {{ errors.minlength.requiredLength }} caracteres</span>
+    </div>
 </form>

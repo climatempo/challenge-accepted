@@ -16,7 +16,7 @@ O projeto foi montado em um workspace do Nx, tomei essa decisão pois precisava 
 
 Aplicação NestJS contendo duas rotas:
 
-    /locales/filter/:text
+    /locale/filter/:text
 
 Filtra as localidades por nome, usando o slug para limpar o texto recebido e comparar de forma case-insensitive
 

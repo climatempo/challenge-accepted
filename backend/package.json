@@ -1,0 +1,24 @@
+{
+  "name": "backend-climatempo-teste",
+  "version": "1.0.0",
+  "description": "Backend para teste na Climatempo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest",
+    "dev": "nodemon src/server.js --ignore __tests__"
+  },
+  "keywords": [
+    "Teste",
+    "Climatempo"
+  ],
+  "author": "Evandro Neris",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  }
+}

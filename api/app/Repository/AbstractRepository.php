@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Cache;
  * Trait AbstractRepository
  *
  * Repositório abstrato para centralizar carregamento e persistência de objetos/entidades.
- * Utiliza Cache.
+ * Utiliza cacheamento definido na configuração do projeto [https://laravel.com/docs/5.8/cache]
  *
  *
  * @author Mauricio Ribeiro <mauricioribeiro1992@gmail.com>
@@ -22,8 +22,7 @@ trait AbstractRepository
     protected $entity = null;
 
     /**
-     * Retorna a lista de objetos representados pela propriedade $entity definido nas classes filhas
-     * Utiliza cache para o retorno.
+     * Retorna a lista de entidades representadas pela propriedade $entity
      *
      * @return array|mixed
      */
@@ -32,5 +31,22 @@ trait AbstractRepository
             return [];
 
         return Cache::get($this->entity);
+    }
+
+    /**
+     * Salva uma lista de entidades representadas pela propriedade $entity
+     *
+     * @param $entities
+     */
+    public function saveAll($entities) {
+        if($entities)
+            Cache::forever($this->entity, $entities);
+    }
+
+    /**
+     * Deleta todas entidades representadas pela propriedade $entity
+     */
+    public function deleteAll() {
+        Cache::forget($this->entity);
     }
 }

@@ -1,0 +1,32 @@
+{
+  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false
+  },
+  "root": true,
+  "rules": {
+    "strict": 0
+  },
+  "globals": {
+    "global": true,
+    "require": true,
+    "process": true,
+    "__dirname": true,
+    "__filename": true,
+    "Promise": true,
+    "setTimeout": true,
+    "setInterval": true,
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "module": true,
+    "beforeAll": true
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.js", "tests/**/*.js", "database/**/*.js"],
+    }
+  ]
+}

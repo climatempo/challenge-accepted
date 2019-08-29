@@ -1,0 +1,5 @@
+.git/
+tests/
+node_modules/
+.gitignore
+.env.example

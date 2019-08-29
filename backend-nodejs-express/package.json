@@ -1,0 +1,50 @@
+{
+  "name": "backend-nodejs-express",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Leonardo B. Castro",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js --inspect",
+    "prod": "NODE_ENV=production babel-node src/index.js",
+    "lint": "eslint .",
+    "test": "NODE_ENV=test jest --colors --testPathIgnorePatterns tests/test.js",
+    "envs:generate": "node scripts/create-envs.js"
+  },
+  "jest": {
+    "verbose": true,
+    "bail": 1,
+    "browser": false,
+    "collectCoverageFrom": [
+      "src/**/*.{js}",
+      "!**/node_modules/**"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@elastic/elasticsearch": "^7.3.0",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "helmet": "^3.12.1",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^24.9.0",
+    "eslint": "^4.19.1",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.1",
+    "redis-mock": "^0.46.0",
+    "supertest": "^4.0.2"
+  }
+}

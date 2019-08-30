@@ -7,5 +7,6 @@ export const getWeatherByLocaleId = async ({ localeId }) => {
   } catch (err) {
     global.console.error(err);
   }
-  return Promise.resolve(weathers ? weathers.find(weather => weather.locale.id === localeId) : {});
+
+  return Promise.resolve(weathers.find(weather => weather.locale.id === localeId) || { weather: null });
 };

@@ -7,7 +7,6 @@ import {
 import { getAllLocales } from '../src/services/region-search/model';
 
 export const populateES = async () => {
-  global.console.log('Running: populateES');
   const data = (await getAllLocales()).map(locale => ({
     id: locale.id,
     name: locale.name,
@@ -15,9 +14,14 @@ export const populateES = async () => {
   }));
   await createIndice('locales');
   return esBulkSync('locales', data).then((resp) => {
-    global.console.log('Finished: populateES');
     return resp;
   });
 };
 
-populateES().then(() => process.exit(0));
+global.console.log('Running: populateES ...');
+setInterval(() => {
+  populateES().then(() => {
+    global.console.log('Finished: populateES');
+    process.exit(0);
+  });
+}, 3000);

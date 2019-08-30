@@ -8,5 +8,4 @@ module.exports = {
   node: process.env.ES_HOST,
   maxRetries: 5,
   requestTimeout: 60000,
-  sniffOnStart: true,
 };

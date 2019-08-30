@@ -7,7 +7,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js --inspect",
-    "prod": "NODE_ENV=production babel-node src/index.js",
+    "prod": "babel-node src/index.js",
     "lint": "eslint .",
     "test": "NODE_ENV=test jest --colors --testPathIgnorePatterns tests/test.js",
     "envs:generate": "babel-node scripts/create-envs.js",

@@ -1,6 +1,4 @@
-import app, { isProductionMode } from './app';
-
-import cluster from './utils/cluster';
+import app from './app';
 
 const server = app => {
   const port = process.env.PORT || 4000;
@@ -11,5 +9,4 @@ const server = app => {
   };
 };
 
-if (isProductionMode) cluster(server(app()));
-else server(app())();
+server(app())();

@@ -1,16 +1,14 @@
-import path from 'path';
-
 import {
   createIndice,
   esBulkSync,
   removeAccents,
 } from '../src/utils/elasticsearch';
 
-const LOCALES = require(path.resolve(`${__dirname}/../../base/locales.json`));
+import { getAllLocales } from '../src/services/region-search/model';
 
 export const populateES = async () => {
   global.console.log('Running: populateES');
-  const data = LOCALES.map(locale => ({
+  const data = (await getAllLocales()).map(locale => ({
     id: locale.id,
     name: locale.name,
     key: removeAccents(locale.name),

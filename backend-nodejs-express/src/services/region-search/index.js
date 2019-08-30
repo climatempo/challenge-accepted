@@ -1,8 +1,8 @@
 import Controller from './controller';
 
 export default (app) => {
-  const base = '/api';
-  app.get(`${base}/v1/region`, Controller.index);
+  const BASE = '/api';
+  app.get(`${BASE}/v1/regions`, Controller.index);
 };
 
-export const weatherController = Controller;
+export const regionSearchController = Controller;

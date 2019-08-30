@@ -10,7 +10,8 @@
     "prod": "NODE_ENV=production babel-node src/index.js",
     "lint": "eslint .",
     "test": "NODE_ENV=test jest --colors --testPathIgnorePatterns tests/test.js",
-    "envs:generate": "node scripts/create-envs.js"
+    "envs:generate": "babel-node scripts/create-envs.js",
+    "es:populate": "babel-node scripts/es-sync.js"
   },
   "jest": {
     "verbose": true,

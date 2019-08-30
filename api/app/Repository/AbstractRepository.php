@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Repository;
+
 use Illuminate\Support\Facades\Cache;
 
 /**
@@ -13,13 +15,6 @@ use Illuminate\Support\Facades\Cache;
  */
 trait AbstractRepository
 {
-
-    /**
-     * Propriedade utilizada pela classe filha para dizer qual a entidade trafegada no repositório
-     *
-     * @var null|string
-     */
-    protected $entity = null;
 
     /**
      * Retorna a lista de entidades representadas pela propriedade $entity

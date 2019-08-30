@@ -20,5 +20,6 @@ Route::middleware('auth:api')->get('user', function (Request $request) {
 Route::prefix('locales')->group(function () {
 
     Route::get('', 'LocaleController@index');
+    Route::get('{id}/weather', 'LocaleController@weather');
 
 });

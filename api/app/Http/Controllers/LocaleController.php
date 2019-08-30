@@ -2,22 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
+use App\Repository\LocaleRepository;
+use App\Repository\WeatherRepository;
+use Illuminate\Support\Facades\Log;
 
 class LocaleController extends Controller
 {
     /**
-     * Lista as localizações através do json cacheado em "locales"
+     * Lista as localizações.
      *
-     * @param Request $request
+     * @param \App\Repository\LocaleRepository $repository
      * @return \Illuminate\Http\JsonResponse
      */
-    public function index(Request $request) {
-        $locales = Cache::get('locales');
+    public function index (LocaleRepository $repository) {
+        Log::info('Requisição feita para listar localizações');
 
-        return response()->json($locales ? $locales : []);
+        return response()->json($repository->findAll());
     }
 
+    /**
+     * Lista as previsões de uma determinada localização.
+     *
+     * @param \App\Repository\WeatherRepository $repository
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function weather (WeatherRepository $repository, $locale_id) {
+        Log::info('Requisição feita para listar previsões da localização '. $locale_id);
+
+        return response()->json($repository->findAllByLocale($locale_id));
+    }
 
 }

@@ -3,3 +3,6 @@ tests/
 node_modules/
 .gitignore
 .env.example
+.env.test.example
+.env
+.env.test

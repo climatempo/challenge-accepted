@@ -5,16 +5,17 @@ import { test } from '../../test';
 const baseUrl = '/api/v1/regions';
 
 describe('Region Search Service', () => {
-  it('Should returns array with data', () => {
-    return test(`${baseUrl}?name=`)
+  it('Should returns array containing fetched name', () => {
+    return test(`${baseUrl}?name=São Paulo`)
       .expect(({ body }) => {
         expect(body).toHaveProperty('locales');
         const { locales } = body;
         expect(locales).toBeDefined();
         expect(Array.isArray(locales)).toBeTruthy();
-        expect(locales).not.toHaveLength(0);
+        expect(locales).toHaveLength(1);
         expect(locales[0]).toHaveProperty('id');
         expect(locales[0]).toHaveProperty('name');
+        expect(locales[0]).toHaveProperty('name', 'São Paulo');
       });
   });
 
@@ -37,18 +38,6 @@ describe('Region Search Service', () => {
         expect(locales).toBeDefined();
         expect(Array.isArray(locales)).toBeTruthy();
         expect(locales).toHaveLength(0);
-      });
-  });
-
-  it('Should returns array containing fetched name', () => {
-    return test(`${baseUrl}?name=São Paulo`)
-      .expect(({ body }) => {
-        expect(body).toHaveProperty('locales');
-        const { locales } = body;
-        expect(locales).toBeDefined();
-        expect(Array.isArray(locales)).toBeTruthy();
-        expect(locales).toHaveLength(1);
-        expect(locales[0]).toHaveProperty('name', 'São Paulo');
       });
   });
 });

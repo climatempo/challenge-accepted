@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "d3ecd34c-2645-436a-bec7-796d55c3c800",
+		"name": "Climatempo API",
+		"description": "Collection documentando as endpoints da API do Climatempo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lista localizações",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{HOST}}/api/locales"
+			},
+			"response": []
+		},
+		{
+			"name": "Lista previsões de uma localização",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{HOST}}/api/locales/{{LOCALE_ID}}/weather"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fc12f6ae-8baf-424e-8c85-a80fb459ea8b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5afd5c7c-629e-4555-b3e2-45b03395d68d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "507d1af5-72d1-44b7-bc63-aa2a5c8feac0",
+			"key": "HOST",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"id": "e6351eba-473f-4806-b8e7-510537a49d78",
+			"key": "LOCALE_ID",
+			"value": "3735",
+			"type": "string"
+		},
+		{
+			"id": "62711709-4316-4ceb-9a98-e1ae1f159281",
+			"key": "SAO_PAULO_ID",
+			"value": "3477",
+			"type": "string"
+		},
+		{
+			"id": "866613ec-a612-46a7-bc03-0a6461f962f4",
+			"key": "OSASCO_ID",
+			"value": "3735",
+			"type": "string"
+		}
+	]
+}

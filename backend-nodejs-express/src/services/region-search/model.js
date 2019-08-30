@@ -1,9 +1,7 @@
-import path from 'path';
-
 let LOCALES = [];
 
 try {
-  LOCALES = require(path.resolve(`${__dirname}/../../../../base/locales.json`));
+  LOCALES = require('./locales.json');
 } catch (err) {
   global.console.error(err);
 }

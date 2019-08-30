@@ -32,9 +32,7 @@ client.flushAndQuit = () => {
 
 client.on('connect', () => {});
 client.on('reconnecting', () => {});
-client.on('error', (err) => {
-  global.console.error(err);
-});
+client.on('error', () => {});
 client.on('end', () => {});
 
 export default client;
@@ -42,12 +40,24 @@ export default client;
 export const getFromCacheIfExists = async (
   cacheKey, loader, params, expire,
 ) => {
-  let cache = await client.getAsync(cacheKey);
+  let cache = null;
+
+  try {
+    cache = await client.getAsync(cacheKey);
+  } catch (err) {
+    global.console.error(err);
+  }
 
   if (!cache) {
     const resp = await loader(params);
     cache = resp;
-    if (resp) client.set(cacheKey, JSON.stringify(resp), 'EX', expire);
+    if (resp) {
+      try {
+        client.set(cacheKey, JSON.stringify(resp), 'EX', expire);
+      } catch (err) {
+        global.console.error(err);
+      }
+    }
   } else {
     cache = JSON.parse(cache);
   }

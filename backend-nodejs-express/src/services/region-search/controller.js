@@ -1,5 +1,7 @@
 import { esGet } from '../../utils/elasticsearch';
 
+import { getLocalesByName } from './model';
+
 export default class Controller {
   static async index({ query }, res) {
     let locales = [];
@@ -13,11 +15,13 @@ export default class Controller {
       },
     };
 
-    const { body } = await esGet('locales', payload);
-
-    if (body) {
-      const { hits } = body.hits;
-      locales = hits.map(h => ({ ...h._source }));
+    try {
+      await esGet('locales', payload).then(({ body: { hits: { hits } } }) => {
+        locales = hits.map(({ _source: locale }) => ({ id: locale.id, name: locale.name }));
+      });
+    } catch (err) {
+      locales = await getLocalesByName(query.name);
+      global.console.error(err);
     }
 
     res.send({ locales });

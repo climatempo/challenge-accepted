@@ -39,11 +39,18 @@ client.on('end', () => {});
 
 export default client;
 
-export const loaderWithCache = async ({
-  cacheKey, apiInstance, params,
-}) => {
-  const resp = apiInstance.apply(this, params);
-  const cache = await client.getAsync(cacheKey);
-  if (!cache) client.set(cacheKey, JSON.stringify(await resp));
-  return Promise.race([Promise.resolve(JSON.parse(cache)), resp]);
+export const getFromCacheIfExists = async (
+  cacheKey, loader, params, expire,
+) => {
+  let cache = await client.getAsync(cacheKey);
+
+  if (!cache) {
+    const resp = await loader(params);
+    cache = resp;
+    if (resp) client.set(cacheKey, JSON.stringify(resp), 'EX', expire);
+  } else {
+    cache = JSON.parse(cache);
+  }
+
+  return Promise.resolve(cache);
 };

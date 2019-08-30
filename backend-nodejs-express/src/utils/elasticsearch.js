@@ -28,14 +28,14 @@ export const createIndice = (index) => {
 
 export const removeAccents = (value) => {
   return value.toLowerCase()
-    .replace(new RegExp(/[àáâãäå]/g), 'a')
-    .replace(new RegExp(/æ/g), 'ae')
-    .replace(new RegExp(/ç/g), 'c')
-    .replace(new RegExp(/[èéêë]/g), 'e')
-    .replace(new RegExp(/[ìíîï]/g), 'i')
-    .replace(new RegExp(/ñ/g), 'n')
-    .replace(new RegExp(/[òóôõö]/g), 'o')
-    .replace(new RegExp(/œ/g), 'oe')
-    .replace(new RegExp(/[ùúûü]/g), 'u')
-    .replace(new RegExp(/[ýÿ]/g), 'y');
+    .replace(/[àáâãäå]/g, 'a')
+    .replace(/æ/g, 'ae')
+    .replace(/ç/g, 'c')
+    .replace(/[èéêë]/g, 'e')
+    .replace(/[ìíîï]/g, 'i')
+    .replace(/ñ/g, 'n')
+    .replace(/[òóôõö]/g, 'o')
+    .replace(/œ/g, 'oe')
+    .replace(/[ùúûü]/g, 'u')
+    .replace(/[ýÿ]/g, 'y');
 };

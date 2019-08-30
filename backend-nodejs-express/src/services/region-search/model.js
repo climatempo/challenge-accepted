@@ -1,21 +1,17 @@
 import path from 'path';
 
+let LOCALES = [];
+
+try {
+  LOCALES = require(path.resolve(`${__dirname}/../../../../base/locales.json`));
+} catch (err) {
+  global.console.error(err);
+}
+
 export const getAllLocales = async () => {
-  let locales = [];
-  try {
-    locales = require(path.resolve(`${__dirname}/../../../../base/locales.json`));
-  } catch (err) {
-    global.console.error(err);
-  }
-  return Promise.resolve(locales);
+  return Promise.resolve(LOCALES);
 };
 
 export const getLocalesByName = async (name) => {
-  let locales = [];
-  try {
-    locales = require(path.resolve(`${__dirname}/../../../../base/locales.json`));
-  } catch (err) {
-    global.console.error(err);
-  }
-  return Promise.resolve(locales.filter(locale => locale.name.match(new RegExp(name, 'gi'))));
+  return Promise.resolve(LOCALES.filter(locale => locale.name.match(new RegExp(name, 'gi'))));
 };

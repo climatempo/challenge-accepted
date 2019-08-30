@@ -26,7 +26,7 @@ export default () => {
     optionsSuccessStatus: 200,
   }));
 
-  app.get('/api', (_, req) => req.send('ok'));
+  app.get('/api', (_, res) => res.send('ok'));
 
   services(app);
 

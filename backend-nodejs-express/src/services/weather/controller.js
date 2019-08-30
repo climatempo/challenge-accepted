@@ -10,7 +10,7 @@ export default class Controller {
     if (localeId) {
       weather = await getFromCacheIfExists(cacheKey, getWeatherByLocaleId, {
         localeId: parseInt(localeId, 10),
-      }, 60);
+      }, 60); // 60 >> seconds
     }
 
     res.send({ weather });

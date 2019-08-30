@@ -36,7 +36,7 @@ class WeatherRepository
 
         return array_map(function ($weather) {
             return $weather['weather'];
-        }, $weathers);
+        }, $weathers)[0];
     }
 
 }

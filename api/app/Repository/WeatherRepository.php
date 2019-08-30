@@ -4,7 +4,7 @@
  * Class WeatherRepository
  *
  * Repositório para carregamento e persistência de entidades Weather
- * Utiliza objetos cacheados a partir do arquivo ../base/weather.json
+ * Utiliza objetos cacheados ingeridos pelo comando \app\Console\Commands\IngerirCommand.phpphp
  *
  * @author Mauricio Ribeiro <mauricioribeiro1992@gmail.com>
  */

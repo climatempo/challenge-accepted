@@ -2,6 +2,8 @@
 
 namespace App\Repository;
 
+use Illuminate\Support\Facades\Log;
+
 /**
  * Class WeatherRepository
  *
@@ -28,9 +30,9 @@ class WeatherRepository
         if(!$locale_id)
             return [];
 
-        $weathers = array_filter($this->findAll(), function ($weather) use ($locale_id) {
+        $weathers = array_values(array_filter($this->findAll(), function ($weather) use ($locale_id) {
             return $weather['locale'] && $weather['locale']['id'] == $locale_id;
-        });
+        }));
 
         return array_map(function ($weather) {
             return $weather['weather'];

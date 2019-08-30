@@ -25,7 +25,9 @@ trait AbstractRepository
         if(!$this->entity)
             return [];
 
-        return Cache::get($this->entity);
+        $entities = Cache::get($this->entity);
+
+        return $entities ? $entities : [];
     }
 
     /**

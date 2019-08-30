@@ -1,0 +1,35 @@
+@import "../../../variables.sass"
+
+.WeatherInfo
+  text-align: center
+  width: 10rem
+  // vertical-align: middle
+  height: 4rem
+  padding-top: 20px
+  display: flex
+  align-items: center
+  justify-content: center
+
+  @media screen and (max-width: $break-small)
+    padding-top: 10px
+
+  img
+    display: inline-block
+    vertical-align: middle
+
+
+  span
+    font-size: 1.5rem
+    line-height: 2rem
+    margin-left: 1rem
+
+.WeatherInfoVerticalAlign
+  display: inline-block
+  height: 100%
+  vertical-align: middle
+
+.Blue
+  color: $blue-light
+
+.Red
+  color: $red

@@ -1,0 +1,14 @@
+@import "../../variables.sass"  
+  
+.WeatherCards
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  flex-wrap: wrap
+  padding: 0 1.2rem
+
+  @media screen and (min-width: $break-tablet)
+    flex-flow: row wrap
+    align-content: center
+    align-items: center
+    justify-content: space-between

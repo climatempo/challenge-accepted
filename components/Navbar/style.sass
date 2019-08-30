@@ -1,0 +1,56 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")  
+@import "../../variables.sass"  
+  
+.LogoBar
+  padding: 0.6rem 0
+  background: $main-blue
+  text-align: center
+  color: white
+  img
+    display: inline
+    height: 1.1rem
+
+.SearchForm
+  display: flex
+  align-content: center
+  justify-content: center
+  margin: 1rem
+
+  input
+    display: block
+    width: 17rem
+    height: 2rem
+    padding: 0 1.2rem
+    font-family: inherit
+    font-size: 1rem
+    border: 1px solid #bbb
+    outline: none
+    background-color: rgba(255, 255, 255, 0.8)
+    border-radius: 5px
+
+    @media screen and (max-width: $break-small)
+      width: 13rem
+
+    &:focus
+      border: 1px solid #ddd
+      outline: none
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+      transition: 0.2s ease
+
+
+  .SearchButton
+    outline: none
+    border: none
+    background: $grey-lighter
+    color: black
+    padding: 0 0.5rem
+    font-size: 1.4rem
+    text-align: center
+    border-radius: 5px
+    margin-left: 10px
+
+    @media screen and (max-width: $break-small)
+      margin-left: 5px
+
+    &:hover
+      cursor: pointer

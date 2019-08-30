@@ -1,0 +1,25 @@
+@import "../../variables.sass"  
+  
+.Card
+  width: 100%
+  background-color: white
+  border-radius: 0.25rem
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25)
+  margin: 2rem 0
+  width: 100%
+  height: 15rem
+  transition: 0.3s
+
+  &:hover
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+    cursor: pointer
+
+  @media screen and (min-width: $break-small)
+    width: 24rem
+    height: 17rem
+
+.WeatherInfoCard
+  display: flex
+  flex-wrap: wrap
+  align-content: center
+  justify-content: space-around

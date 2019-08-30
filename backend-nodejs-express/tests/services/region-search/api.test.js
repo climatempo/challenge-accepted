@@ -1,18 +1,12 @@
 import '@babel/polyfill';
 
-import test from '../../test';
+import { test } from '../../test';
 
 const baseUrl = '/api/v1/regions';
 
-const rsTest = (url) => {
-  return test().get(url)
-    .expect('Content-Type', 'application/json; charset=utf-8')
-    .expect(200);
-};
-
-describe('Region Search', () => {
+describe('Region Search Service', () => {
   it('Should returns array with data', () => {
-    return rsTest(`${baseUrl}?name=`)
+    return test(`${baseUrl}?name=`)
       .expect(({ body }) => {
         expect(body).toHaveProperty('locales');
         const { locales } = body;
@@ -25,7 +19,7 @@ describe('Region Search', () => {
   });
 
   it('Should returns empty array if name not finded', () => {
-    return rsTest(`${baseUrl}?name=foo`)
+    return test(`${baseUrl}?name=foo`)
       .expect(({ body }) => {
         expect(body).toHaveProperty('locales');
         const { locales } = body;
@@ -36,7 +30,7 @@ describe('Region Search', () => {
   });
 
   it('Should returns empty array if not exists name param', () => {
-    return rsTest(`${baseUrl}`)
+    return test(`${baseUrl}`)
       .expect(({ body }) => {
         expect(body).toHaveProperty('locales');
         const { locales } = body;
@@ -47,7 +41,7 @@ describe('Region Search', () => {
   });
 
   it('Should returns array containing fetched name', () => {
-    return rsTest(`${baseUrl}?name=São Paulo`)
+    return test(`${baseUrl}?name=São Paulo`)
       .expect(({ body }) => {
         expect(body).toHaveProperty('locales');
         const { locales } = body;

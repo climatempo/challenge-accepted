@@ -24,10 +24,16 @@
       </v-container>
     </v-app-bar>
 
-    <v-content class="weather-container">
-      <h1 v-if="selected" class="display-1 px-6 pb-2 text-center">Previsão para {{selected.name}}</h1>
+    <v-content class="weather-container" v-if="selected">
+      <h1 class="display-1 px-6 pb-2 text-center">Previsão para {{selected.name}}</h1>
       <Weather v-for="w in weather" :weather="w" class="col-lg-6"/>
     </v-content>
+
+    <v-content class="no-weather-container text-center" v-if="!selected">
+      <v-icon class="grey--text darken-1--text pb-4" size="80px">fa fa-cloud-sun-rain</v-icon>
+      <h1 class="headline grey--text darken-1--text">Selecione uma localização acima para ver as previsões</h1>
+    </v-content>
+
   </v-app>
 </template>
 
@@ -63,7 +69,7 @@ export default {
   .logo-row {
     margin-top: 22px;
   }
-  .weather-container {
+  .weather-container, .no-weather-container {
     margin-top: 70px;
   }
 </style>

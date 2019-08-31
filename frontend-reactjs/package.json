@@ -2,7 +2,7 @@
   "name": "frontend-reactjs",
   "version": "1.0.0",
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "REACT_APP_API_BASE_URL=http://localhost:4000/api node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --colors --coverage"
   },

@@ -28,7 +28,7 @@ Tal implementação do comando suportaria futuros dados podendo ser extendida pa
 
 Na camada de dados, decidi centralizar a interação dos objetos **locale** e **weather** em Repositories, pois, se um dia houvesse a necessidade de utilizar um banco, apenas a camada de repositório seria alterada.
 
-Foram criados um repositório para cada "entidade" (representada pelo _json_ cacheado), sendo [LocaleRepository](app/Repository/LocaleRepository.php) e [WeatherRepository]((app/Repository/WeatherRepository.php)). Prezando o reuso, criei o repositório abstrato [AbstractRepository](app/Repository/AbstractRepository.php) em que ambos os repositórios são herdados.
+Foram criados um repositório para cada "entidade" (representada pelo _json_ cacheado), sendo [LocaleRepository](app/Repository/LocaleRepository.php) e [WeatherRepository](app/Repository/WeatherRepository.php). Prezando o reuso, criei o repositório abstrato [AbstractRepository](app/Repository/AbstractRepository.php) em que ambos os repositórios são herdados.
 
 Referente a camada de [Controllers](app/Http/Controllers), organizei as endpoints da seguinte maneira:
 
@@ -61,20 +61,24 @@ Para mais informações, consulte: https://laravel.com/docs/5.8
 
 <p>
     <small>Informações comando criado</small>
+    <br>
     <img src="../images/prints/comando-ingerir-help.png"/>
 </p>
 
 <p>
     <small>Execução dos comandos de ingerir</small>
+    <br>
     <img src="../images/prints/comando-ingerir.png"/>
 </p>
 
 <p>
     <small>Requisição de localizações</small>
-    <img src="../images/prints/comando-ingerir.png"/>
+    <br>
+    <img src="../images/prints/requisicao-locales.png"/>
 </p>
 
 <p>
     <small>Requisição de previsões de uma localização</small>
-    <img src="../images/prints/comando-ingerir.png"/>
+    <br>
+    <img src="../images/prints/requisicao-weather.png"/>
 </p>

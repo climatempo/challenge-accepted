@@ -25,13 +25,8 @@
     </v-app-bar>
 
     <v-content class="weather-container">
-      <h1 v-if="selected" class="heading">Previsão para {{selected.name}}</h1>
-      <Weather/>
-      <Weather/>
-      <Weather/>
-      <Weather/>
-      <Weather/>
-      <Weather/>
+      <h1 v-if="selected" class="display-1 px-6 pb-2 text-center">Previsão para {{selected.name}}</h1>
+      <Weather v-for="w in weather" :weather="w" class="col-lg-6"/>
     </v-content>
   </v-app>
 </template>
@@ -49,9 +44,6 @@ export default {
       weather () { return this.$store.getters.weather },
   },
   methods: {
-    clearLocale () {
-        this.selected = null;
-    },
     changeLocale () {
         this.$store.dispatch('findAllWeatherByLocale', this.selected)
     }

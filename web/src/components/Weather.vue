@@ -3,8 +3,8 @@
     <v-card class="mx-auto" outlined>
       <v-list-item three-line>
         <v-list-item-content>
-            <v-list-item-title class="headline">27/08/2019</v-list-item-title>
-            <v-list-item-subtitle>Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.</v-list-item-subtitle>
+            <v-list-item-title class="headline">{{ weather.date }}</v-list-item-title>
+            <v-list-item-subtitle>{{ weather.text }}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
       <v-divider></v-divider>
@@ -15,7 +15,7 @@
               <v-card-text>
                 <v-layout row class="justify-space-between px-2">
                   <v-icon>fas fa-arrow-down</v-icon>
-                  <span class="title">19°</span>
+                  <span class="title">{{ weather.temperature.min }}°</span>
                 </v-layout>
               </v-card-text>
             </v-card>
@@ -25,7 +25,7 @@
               <v-card-text>
                 <v-layout row class="justify-space-between px-2">
                   <v-icon>fas fa-arrow-up</v-icon>
-                  <span class="title">27°</span>
+                  <span class="title">{{ weather.temperature.max }}°</span>
                 </v-layout>
               </v-card-text>
             </v-card>
@@ -35,7 +35,7 @@
               <v-card-text>
                 <v-layout row class="justify-space-between px-2">
                   <v-icon>fas fa-tint</v-icon>
-                  <span class="title">77mm</span>
+                  <span class="title">{{ weather.rain.probability }}mm</span>
                 </v-layout>
               </v-card-text>
             </v-card>
@@ -45,7 +45,7 @@
               <v-card-text>
                 <v-layout row class="justify-space-between px-2">
                   <v-icon>fas fa-umbrella</v-icon>
-                  <span class="title">25%</span>
+                  <span class="title">{{ weather.rain.precipitation }}%</span>
                 </v-layout>
               </v-card-text>
             </v-card>
@@ -58,6 +58,7 @@
 
 <script>
 export default {
-  name: 'Weather'
+  name: 'Weather',
+  props: ['weather']
 };
 </script>

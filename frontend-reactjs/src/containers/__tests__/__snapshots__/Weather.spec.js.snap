@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weather Container should correctly render 1`] = `
+<Fragment>
+  <Autocomplete
+    list={Array []}
+    onChange={[Function]}
+    onSearch={[Function]}
+    value=""
+  />
+  <Message />
+</Fragment>
+`;

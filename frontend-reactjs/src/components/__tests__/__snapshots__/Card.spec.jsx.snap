@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component should correctly render 1`] = `
+<Card>
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": true,
+            "lastClassName": "eUbZKV",
+            "rules": Array [
+              "
+  box-shadow: 0 5px 5px 1px rgba(0, 0, 0, .1);
+  min-height: 200px;
+  background-color: #eee;
+  margin: 10px 0;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="sc-bdVaJa eUbZKV"
+      >
+        <h1>
+          foo
+        </h1>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Card>
+`;

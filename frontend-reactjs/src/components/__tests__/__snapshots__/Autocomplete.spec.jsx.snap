@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Autocomplete Component Should correctly render 1`] = `
+<Autocomplete
+  list={
+    Array [
+      Object {
+        "id": 1,
+        "name": "foo",
+      },
+      Object {
+        "id": 2,
+        "name": "bar",
+      },
+    ]
+  }
+  onChange={[MockFunction]}
+  onSearch={[MockFunction]}
+  value="foo"
+>
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": true,
+            "lastClassName": "epvRUM",
+            "rules": Array [
+              "
+  height: 57px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, .1);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  & input[type=search] {
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    ::placeholder {
+      font-size: 1.2em;
+    }
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="sc-bdVaJa epvRUM"
+      >
+        <InputContainer
+          list={
+            Array [
+              Object {
+                "id": 1,
+                "name": "foo",
+              },
+              Object {
+                "id": 2,
+                "name": "bar",
+              },
+            ]
+          }
+          onChange={[MockFunction]}
+          value="foo"
+        >
+          <div
+            style={
+              Object {
+                "flexGrow": "1",
+              }
+            }
+          >
+            <input
+              list="ct_autocomplete_data"
+              onChange={[MockFunction]}
+              placeholder="Digite o nome da região"
+              type="search"
+              value="foo"
+            />
+            <datalist
+              id="ct_autocomplete_data"
+            >
+              <option
+                key="1"
+                value="foo"
+              >
+                foo
+              </option>
+              <option
+                key="2"
+                value="bar"
+              >
+                bar
+              </option>
+            </datalist>
+          </div>
+        </InputContainer>
+        <SearchButton
+          onSearch={[MockFunction]}
+        >
+          <div
+            onClick={[MockFunction]}
+            role="presentation"
+            style={
+              Object {
+                "padding": "15px",
+              }
+            }
+          >
+            <img
+              alt=""
+              src="http://localhost/images/icons/search.png"
+              style={
+                Object {
+                  "height": "23px",
+                }
+              }
+            />
+          </div>
+        </SearchButton>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Autocomplete>
+`;

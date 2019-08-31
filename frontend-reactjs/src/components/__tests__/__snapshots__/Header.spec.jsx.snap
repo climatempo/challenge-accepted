@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component should correctly render 1`] = `
+<_default>
+  <styled.header>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": true,
+            "lastClassName": "ixnIfc",
+            "rules": Array [
+              "
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  background-color: #1665c0;
+",
+            ],
+          },
+          "displayName": "styled.header",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "header",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <header
+        className="sc-bdVaJa ixnIfc"
+      >
+        <img
+          alt=""
+          src="http://localhost/images/logo-white.png"
+          style={
+            Object {
+              "height": "18px",
+            }
+          }
+        />
+      </header>
+    </StyledComponent>
+  </styled.header>
+</_default>
+`;

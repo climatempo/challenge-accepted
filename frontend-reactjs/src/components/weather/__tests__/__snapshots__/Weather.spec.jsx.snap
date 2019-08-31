@@ -1,0 +1,596 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weather Component should correctly render 1`] = `
+<Weather
+  weather={
+    Object {
+      "locale": Object {
+        "id": 3735,
+        "latitude": -23.532,
+        "longitude": -46.792,
+        "name": "Osasco",
+        "state": "SP",
+      },
+      "period": Object {
+        "begin": "2017-02-01",
+        "end": "2017-02-07",
+      },
+      "weather": Array [
+        Object {
+          "date": "2017-02-01",
+          "rain": Object {
+            "precipitation": 20,
+            "probability": 60,
+          },
+          "temperature": Object {
+            "max": 28,
+            "min": 20,
+          },
+          "text": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        },
+      ],
+    }
+  }
+>
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": true,
+            "lastClassName": "bYjhHy",
+            "rules": Array [
+              "
+  padding: 0 20px;
+  h3 {
+    font-size: 1.5em;
+    color: #262626;
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="sc-bwzfXH bYjhHy"
+      >
+        <h3>
+          Previsão para 
+          Osasco
+           - 
+          SP
+        </h3>
+        <WeatherCard
+          key="2017-02-01"
+          weather={
+            Object {
+              "date": "2017-02-01",
+              "rain": Object {
+                "precipitation": 20,
+                "probability": 60,
+              },
+              "temperature": Object {
+                "max": 28,
+                "min": 20,
+              },
+              "text": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+            }
+          }
+        >
+          <Card>
+            <styled.div>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bdVaJa",
+                      "isStatic": true,
+                      "lastClassName": "eUbZKV",
+                      "rules": Array [
+                        "
+  box-shadow: 0 5px 5px 1px rgba(0, 0, 0, .1);
+  min-height: 200px;
+  background-color: #eee;
+  margin: 10px 0;
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bdVaJa",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <div
+                  className="sc-bdVaJa eUbZKV"
+                >
+                  <styled.div>
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-htpNat",
+                            "isStatic": true,
+                            "lastClassName": "icdwWi",
+                            "rules": Array [
+                              "
+  background-color: #fff;
+  height: 80px;
+  padding: 10px;
+  span {
+    font-size: 1.2em;
+  }
+  small {
+    margin: 5px 0;
+  }
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-htpNat",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                    >
+                      <div
+                        className="sc-htpNat icdwWi"
+                      >
+                        <span />
+                        <small>
+                          Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.
+                        </small>
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                  <styled.div>
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bxivhb",
+                            "isStatic": true,
+                            "lastClassName": "hejrJk",
+                            "rules": Array [
+                              "
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 25px;
+  grid-template-columns: auto auto;
+  margin: auto;
+  width: 100%;
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bxivhb",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                    >
+                      <div
+                        className="sc-bxivhb hejrJk"
+                      >
+                        <InfoWithIcon
+                          color="blue"
+                          iconUrl="http://localhost/images/icons/upload.png"
+                          label="28°C"
+                        >
+                          <styled.div>
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-ifAKCX",
+                                    "isStatic": true,
+                                    "lastClassName": "bgixKH",
+                                    "rules": Array [
+                                      "
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.div",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-ifAKCX",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                            >
+                              <div
+                                className="sc-ifAKCX bgixKH"
+                              >
+                                <div>
+                                  <img
+                                    alt=""
+                                    src="http://localhost/images/icons/upload.png"
+                                    style={
+                                      Object {
+                                        "width": "30px",
+                                      }
+                                    }
+                                  />
+                                </div>
+                                <styled.div
+                                  color="blue"
+                                >
+                                  <StyledComponent
+                                    color="blue"
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-EHOje",
+                                          "isStatic": false,
+                                          "lastClassName": "bDzzqB",
+                                          "rules": Array [
+                                            "
+  padding: 0 10px;
+  color: ",
+                                            [Function],
+                                            ";
+",
+                                          ],
+                                        },
+                                        "displayName": "styled.div",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-EHOje",
+                                        "target": "div",
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                  >
+                                    <div
+                                      className="sc-EHOje dikMUi"
+                                      color="blue"
+                                    >
+                                      28°C
+                                    </div>
+                                  </StyledComponent>
+                                </styled.div>
+                              </div>
+                            </StyledComponent>
+                          </styled.div>
+                        </InfoWithIcon>
+                        <InfoWithIcon
+                          color="red"
+                          iconUrl="http://localhost/images/icons/download.png"
+                          label="20°C"
+                        >
+                          <styled.div>
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-ifAKCX",
+                                    "isStatic": true,
+                                    "lastClassName": "bgixKH",
+                                    "rules": Array [
+                                      "
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.div",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-ifAKCX",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                            >
+                              <div
+                                className="sc-ifAKCX bgixKH"
+                              >
+                                <div>
+                                  <img
+                                    alt=""
+                                    src="http://localhost/images/icons/download.png"
+                                    style={
+                                      Object {
+                                        "width": "30px",
+                                      }
+                                    }
+                                  />
+                                </div>
+                                <styled.div
+                                  color="red"
+                                >
+                                  <StyledComponent
+                                    color="red"
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-EHOje",
+                                          "isStatic": false,
+                                          "lastClassName": "bDzzqB",
+                                          "rules": Array [
+                                            "
+  padding: 0 10px;
+  color: ",
+                                            [Function],
+                                            ";
+",
+                                          ],
+                                        },
+                                        "displayName": "styled.div",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-EHOje",
+                                        "target": "div",
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                  >
+                                    <div
+                                      className="sc-EHOje iDzQFL"
+                                      color="red"
+                                    >
+                                      20°C
+                                    </div>
+                                  </StyledComponent>
+                                </styled.div>
+                              </div>
+                            </StyledComponent>
+                          </styled.div>
+                        </InfoWithIcon>
+                        <InfoWithIcon
+                          iconUrl="http://localhost/images/icons/raindrop-close-up.png"
+                          label="20mm"
+                        >
+                          <styled.div>
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-ifAKCX",
+                                    "isStatic": true,
+                                    "lastClassName": "bgixKH",
+                                    "rules": Array [
+                                      "
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.div",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-ifAKCX",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                            >
+                              <div
+                                className="sc-ifAKCX bgixKH"
+                              >
+                                <div>
+                                  <img
+                                    alt=""
+                                    src="http://localhost/images/icons/raindrop-close-up.png"
+                                    style={
+                                      Object {
+                                        "width": "30px",
+                                      }
+                                    }
+                                  />
+                                </div>
+                                <styled.div>
+                                  <StyledComponent
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-EHOje",
+                                          "isStatic": false,
+                                          "lastClassName": "bDzzqB",
+                                          "rules": Array [
+                                            "
+  padding: 0 10px;
+  color: ",
+                                            [Function],
+                                            ";
+",
+                                          ],
+                                        },
+                                        "displayName": "styled.div",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-EHOje",
+                                        "target": "div",
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                  >
+                                    <div
+                                      className="sc-EHOje bDzzqB"
+                                    >
+                                      20mm
+                                    </div>
+                                  </StyledComponent>
+                                </styled.div>
+                              </div>
+                            </StyledComponent>
+                          </styled.div>
+                        </InfoWithIcon>
+                        <InfoWithIcon
+                          iconUrl="http://localhost/images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png"
+                          label="60%"
+                        >
+                          <styled.div>
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-ifAKCX",
+                                    "isStatic": true,
+                                    "lastClassName": "bgixKH",
+                                    "rules": Array [
+                                      "
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.div",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-ifAKCX",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                            >
+                              <div
+                                className="sc-ifAKCX bgixKH"
+                              >
+                                <div>
+                                  <img
+                                    alt=""
+                                    src="http://localhost/images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png"
+                                    style={
+                                      Object {
+                                        "width": "30px",
+                                      }
+                                    }
+                                  />
+                                </div>
+                                <styled.div>
+                                  <StyledComponent
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-EHOje",
+                                          "isStatic": false,
+                                          "lastClassName": "bDzzqB",
+                                          "rules": Array [
+                                            "
+  padding: 0 10px;
+  color: ",
+                                            [Function],
+                                            ";
+",
+                                          ],
+                                        },
+                                        "displayName": "styled.div",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-EHOje",
+                                        "target": "div",
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                  >
+                                    <div
+                                      className="sc-EHOje bDzzqB"
+                                    >
+                                      60%
+                                    </div>
+                                  </StyledComponent>
+                                </styled.div>
+                              </div>
+                            </StyledComponent>
+                          </styled.div>
+                        </InfoWithIcon>
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </Card>
+        </WeatherCard>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Weather>
+`;

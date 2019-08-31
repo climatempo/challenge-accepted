@@ -1,36 +1,59 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
+    <v-app-bar class="blue darken-2 pa-2" app>
+      <v-container>
+        <v-row align="center" justify="center" class="logo-row pa-4">
+          <v-img :src="require('@/assets/climatempo.png')" max-width="180px"></v-img>
+        </v-row>
+        <v-row>
+          <v-toolbar dense floating>
+            <v-autocomplete
+                    label="Localização"
+                    :items="locales"
+                    item-text="name"
+                    full-width
+                    hide-details
+                    autofocus
+                    single-line
+                    clearable></v-autocomplete>
+          </v-toolbar>
+        </v-row>
+      </v-container>
     </v-app-bar>
 
-    <v-content>
-      <HelloWorld/>
+    <v-content class="weather-container">
+      <Weather/>
+      <Weather/>
+      <Weather/>
+      <Weather/>
+      <Weather/>
+      <Weather/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Weather from './components/Weather';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+      Weather,
   },
   data: () => ({
-    //
+    locales: [
+        {id: 1, name: 'São Paulo'},
+        {id: 2,  name: 'Osasco'}
+    ]
   }),
 };
 </script>
+
+<style>
+  .logo-row {
+    margin-top: 22px;
+  }
+  .weather-container {
+    margin-top: 70px;
+  }
+</style>

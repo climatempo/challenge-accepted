@@ -52,9 +52,3 @@ Para mais informações, consulte: https://www.npmjs.com/package/serve
     <br>
     <img src="../images/prints/pagina-previsoes-responsiva.png"/>
 </p>
-
-<p>
-    <small>Requisição de previsões de uma localização</small>
-    <br>
-    <img src="../images/prints/requisicao-weather.png"/>
-</p>

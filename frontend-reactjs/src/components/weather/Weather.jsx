@@ -18,9 +18,9 @@ const Weather = ({ weather }) => (
       <>
         <h3>
           Previsão para&nbsp;
-          {weather.locale.name}
+          {weather.locale && weather.locale.name}
           &nbsp;-&nbsp;
-          {weather.locale.state}
+          {weather.locale && weather.locale.state}
         </h3>
         {weather.weather && weather.weather.map((w) => (
           <WeatherCard key={w.date} weather={w} />

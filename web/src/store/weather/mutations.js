@@ -10,7 +10,7 @@ const mutations = {
      * @param state
      * @param weather
      */
-    setLocales (state, weather) {
+    setWeather (state, weather) {
         state.weather = weather;
     }
 };

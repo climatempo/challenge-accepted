@@ -1,5 +1,8 @@
 .DS_Store
 
+# Node Dependencies
+node_modules
+
 application/cache/*
 !application/cache/index.html
 

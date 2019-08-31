@@ -1,0 +1,26 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "Teste Climatempo - Previsao do tempo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavanettimatheus/challenge-accepted.git"
+  },
+  "author": "Matheus Medella Pavanetti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pavanettimatheus/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/pavanettimatheus/challenge-accepted#readme",
+  "devDependencies": {
+    "animate.css": "^3.7.2",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1",
+    "toastr": "^2.1.4"
+  }
+}

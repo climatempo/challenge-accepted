@@ -22,4 +22,6 @@ section,
 aside,
 footer {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }

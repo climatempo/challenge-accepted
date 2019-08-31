@@ -14,7 +14,7 @@ use Tests\TestCase;
  *
  * @author Mauricio Ribeiro <mauricioribeiro1992@gmail.com>
  */
-class LocaleTest extends TestCase
+class ApiTest extends TestCase
 {
 
     /**
@@ -29,13 +29,16 @@ class LocaleTest extends TestCase
      */
     protected $json = [];
 
+    /**
+     * Configura o ambiente de teste, ingerindo os dados da pasta base no cache da API.
+     */
     protected function setUp(): void
     {
         parent::setUp();
 
         foreach(['locales', 'weather'] as $entity) {
             Artisan::call('ingerir:json', ['arquivo' => $entity]);
-            $this->json[$entity] = json_decode(file_get_contents(LocaleTest::BASE_FOLDER . $entity . '.json'), true);
+            $this->json[$entity] = json_decode(file_get_contents(ApiTest::BASE_FOLDER . $entity . '.json'), true);
         }
     }
 

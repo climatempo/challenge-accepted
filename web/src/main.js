@@ -7,7 +7,7 @@ import Axios from 'axios';
 
 Vue.config.productionTip = false;
 
-Axios.defaults.baseURL = process.env.API_HOST || 'http://localhost:8080';
+Axios.defaults.baseURL = process.env.API_HOST || 'http://localhost:8000';
 
 new Vue({
   router,

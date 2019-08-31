@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 /**
  * Actions do store de localizações
  *
@@ -10,12 +12,17 @@ const actions = {
      * @param commit
      * @returns {Promise<any>}
      */
-    findAll({commit}) {
+    findAllLocales({commit}) {
         return new Promise((resolve, reject) => {
             // eslint-disable-next-line
             axios.get('api/locales')
-                .then(response => { resolve(response.data) })
-                .catch(error => { reject(error) })
+                .then(response => {
+                    commit('setLocales', response.data);
+                    resolve(response.data)
+                })
+                .catch(error => {
+                    reject(error)
+                })
         })
     }
 };

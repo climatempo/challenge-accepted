@@ -40,12 +40,12 @@ export default {
   components: {
       Weather,
   },
-  data: () => ({
-    locales: [
-        {id: 1, name: 'São Paulo'},
-        {id: 2,  name: 'Osasco'}
-    ]
-  }),
+  computed: {
+      locales () { return this.$store.getters.locales }
+  },
+  beforeCreate () {
+    this.$store.dispatch('findAllLocales');
+  }
 };
 </script>
 

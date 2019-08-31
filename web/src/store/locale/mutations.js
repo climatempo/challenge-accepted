@@ -10,7 +10,7 @@ const mutations = {
      * @param state
      * @param locale
      */
-    select (state, locale) {
+    selectLocale (state, locale) {
         if (locale)
             state.selected = locale
     },
@@ -19,8 +19,17 @@ const mutations = {
      *
      * @param state
      */
-    clear (state) {
+    clearSelectedLocale (state) {
         state.selected = {}
+    },
+    /**
+     * Seta localizações
+     *
+     * @param state
+     * @param locales
+     */
+    setLocales (state, locales) {
+        state.locales = locales;
     }
 };
 

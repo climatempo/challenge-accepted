@@ -5,7 +5,7 @@ import RegionSearchApi from '../services/region-search';
 import WeatherApi from '../services/weather';
 
 import Autocomplete from '../components/Autocomplete';
-import WeatherComponent, { Message } from '../components/weather/weather';
+import WeatherComponent, { Message } from '../components/weather/Weather';
 
 import throttle from '../utils/throttle';
 
@@ -23,27 +23,37 @@ export default class Weather extends Component {
   }
 
   getWeather() {
-    const { text, regions } = this.state;
-    let region = regions.find((r) => r.name === text);
-    region = region || regions.find((c) => c.name.match(new RegExp(text, 'gi'))); // Fix firefox bug with datalist
-    WeatherApi.getByLocaleId(region.id).then((resp) => {
-      const { weather } = resp.data;
-      weather.weather.forEach((w) => {
-        w.formatedDate = moment(w.date, 'YYYY-MM-DD').format('DD/MM/YYYY');
+    return new Promise((resolve) => {
+      const { text, regions } = this.state;
+      let region = regions.find((r) => r.name === text);
+      region = region || regions.find((c) => c.name.match(new RegExp(text, 'gi'))); // Fix firefox bug with datalist
+      WeatherApi.getByLocaleId(region.id).then((resp) => {
+        const { weather } = resp.data;
+        (weather.weather || []).forEach((w) => {
+          w.formatedDate = moment(w.date, 'YYYY-MM-DD').format('DD/MM/YYYY');
+        });
+        this.setState({ weather });
+        resolve(resp);
+      }).catch((err) => {
+        window.console.error(err);
       });
-      this.setState({ weather });
     });
   }
 
   search(value) {
-    this.setState({ text: value }, () => {
-      if (value && value.length) {
-        this.throttle(() => {
-          RegionSearchApi.searchByName(value).then((resp) => {
-            this.setState({ regions: resp.data.locales });
+    return new Promise((resolve) => {
+      this.setState({ text: value }, () => {
+        if (value && value.length) {
+          this.throttle(() => {
+            RegionSearchApi.searchByName(value).then((resp) => {
+              this.setState({ regions: resp.data.locales });
+              resolve(resp);
+            }).catch((err) => {
+              window.console.error(err);
+            });
           });
-        });
-      }
+        }
+      });
     });
   }
 

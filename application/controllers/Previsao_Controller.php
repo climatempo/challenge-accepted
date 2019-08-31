@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Previsao extends CI_Controller {
+class Previsao_Controller extends CI_Controller {
 
 	public function index()
 	{

@@ -7,11 +7,14 @@ const files = [
 ];
 
 for (let key in files) {
-  fs.copyFile(
-    path.resolve(`${process.cwd()}/${files[key].of}`),
-    path.resolve(`${process.cwd()}/${files[key].to}`),
-    (err) => {
-    if (err) throw err;
-  });
+  try {
+    fs.copyFile(
+      path.resolve(`${process.cwd()}/${files[key].of}`),
+      path.resolve(`${process.cwd()}/${files[key].to}`),
+      (err) => {
+      if (err) throw err;
+    });
+  } catch (err) {
+    global.console.error(err);
+  }
 }
-

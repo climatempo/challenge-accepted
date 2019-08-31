@@ -1,10 +1,10 @@
 import { esGet } from '../../utils/elasticsearch';
 
-import { getLocalesByName } from './model';
+import { getRegionsByName } from './model';
 
 export default class Controller {
   static async index({ query: { name } }, res) {
-    let locales = [];
+    let regions = [];
 
     if (name) {
       const payload = {
@@ -17,15 +17,15 @@ export default class Controller {
       };
 
       try {
-        await esGet('locales', payload).then(({ body: { hits: { hits } } }) => {
-          locales = hits.map(({ _source: locale }) => ({ id: locale.id, name: locale.name }));
+        await esGet('regions', payload).then(({ body: { hits: { hits } } }) => {
+          regions = hits.map(({ _source: region }) => ({ id: region.id, name: region.name }));
         });
       } catch (err) {
-        locales = await getLocalesByName(name);
+        regions = await getRegionsByName(name);
         global.console.error(err);
       }
     }
 
-    res.send({ locales });
+    res.send({ regions });
   }
 }

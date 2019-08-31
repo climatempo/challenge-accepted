@@ -2,7 +2,9 @@ import { Client } from '@elastic/elasticsearch';
 
 import esConfig from '../../config/elasticsearch';
 
-const client = new Client(esConfig);
+const client = esConfig.node ? new Client(esConfig) : {
+  search: () => Promise.resolve([]),
+};
 
 export default client;
 

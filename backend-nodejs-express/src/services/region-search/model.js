@@ -1,15 +1,15 @@
-let LOCALES = [];
+let REGIONS = [];
 
 try {
-  LOCALES = require('./locales.json');
+  REGIONS = require('./locales.json');
 } catch (err) {
   global.console.error(err);
 }
 
-export const getAllLocales = async () => {
-  return Promise.resolve(LOCALES);
+export const getAllRegions = async () => {
+  return Promise.resolve(REGIONS);
 };
 
-export const getLocalesByName = async (name) => {
-  return Promise.resolve(LOCALES.filter(locale => locale.name.match(new RegExp(name, 'gi'))));
+export const getRegionsByName = async (name) => {
+  return Promise.resolve(REGIONS.filter(region => region.name.match(new RegExp(name, 'gi'))));
 };

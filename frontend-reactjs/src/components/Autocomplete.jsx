@@ -20,7 +20,7 @@ const Container = styled.div`
   }
 `;
 
-const INPUT_ID = 'ct_autocomplete_data';
+export const INPUT_ID = 'ct_autocomplete_data';
 
 const Autocomplete = ({
   list, value, onSearch, onChange,

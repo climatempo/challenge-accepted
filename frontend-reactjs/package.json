@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-app-polyfill": "^1.0.2",
@@ -100,7 +101,7 @@
       "react-app-polyfill/jsdom"
     ],
     "setupFilesAfterEnv": [
-    "./node_modules/jest-enzyme/lib/index.js"
+      "./node_modules/jest-enzyme/lib/index.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",

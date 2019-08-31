@@ -5,24 +5,6 @@
  */
 const mutations = {
     /**
-     * Seleciona uma localização
-     *
-     * @param state
-     * @param locale
-     */
-    selectLocale (state, locale) {
-        if (locale)
-            state.selected = locale
-    },
-    /**
-     * Limpa localização selecionada
-     *
-     * @param state
-     */
-    clearSelectedLocale (state) {
-        state.selected = {}
-    },
-    /**
      * Seta localizações
      *
      * @param state

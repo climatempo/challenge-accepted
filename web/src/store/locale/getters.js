@@ -4,7 +4,6 @@
  * @type mixins
  */
 const getters = {
-    selected: state => state.selected,
     locales: state => state.locales
 };
 

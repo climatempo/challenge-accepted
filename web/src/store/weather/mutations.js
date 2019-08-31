@@ -5,6 +5,14 @@
  */
 const mutations = {
     /**
+     * Limpa as previsões
+     *
+     * @param state
+     */
+    clearWeather (state) {
+        state.weather = {}
+    },
+    /**
      * Seta previsões
      *
      * @param state

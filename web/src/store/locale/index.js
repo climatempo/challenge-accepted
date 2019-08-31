@@ -9,7 +9,6 @@ import getters from './getters'
  */
 const localeStore = {
     state: {
-        selected: {},
         locales: []
     },
     mutations: mutations,

@@ -10,11 +10,14 @@
             <v-autocomplete
                     label="Localização"
                     :items="locales"
+                    v-model="selected"
+                    v-on:change="changeLocale"
                     item-text="name"
                     full-width
                     hide-details
-                    autofocus
                     single-line
+                    return-object
+                    autofocus
                     clearable></v-autocomplete>
           </v-toolbar>
         </v-row>
@@ -22,6 +25,7 @@
     </v-app-bar>
 
     <v-content class="weather-container">
+      <h1 v-if="selected" class="heading">Previsão para {{selected.name}}</h1>
       <Weather/>
       <Weather/>
       <Weather/>
@@ -41,10 +45,24 @@ export default {
       Weather,
   },
   computed: {
-      locales () { return this.$store.getters.locales }
+      locales () { return this.$store.getters.locales },
+      weather () { return this.$store.getters.weather },
+  },
+  methods: {
+    clearLocale () {
+        this.selected = null;
+    },
+    changeLocale () {
+        this.$store.dispatch('findAllWeatherByLocale', this.selected)
+    }
   },
   beforeCreate () {
     this.$store.dispatch('findAllLocales');
+  },
+  data () {
+    return {
+        selected: null
+    }
   }
 };
 </script>

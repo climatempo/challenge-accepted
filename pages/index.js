@@ -1,17 +1,17 @@
-import React, { Component, Fragment } from 'react';
-import axios from 'axios';
-import styles from '../app.sass';
-import Navbar from '../components/Navbar';
-import Title from '../components/Title';
-import WeatherCards from '../components/WeatherCards';
-import NotFound from '../components/NotFound';
-import Layout from '../components/Layout';
+import React, { Component, Fragment } from "react";
+import axios from "axios";
+import styles from "../app.sass";
+import Navbar from "../components/Navbar";
+import Title from "../components/Title";
+import WeatherCards from "../components/WeatherCards";
+import NotFound from "../components/NotFound";
+import Layout from "../components/Layout";
 
 class WeatherLocaleContainer extends Component {
   state = {
     selectedCity: null,
     cityNotFound: false,
-    cityName: '',
+    cityName: "",
     forecast: [],
     cities: []
   };
@@ -23,7 +23,7 @@ class WeatherLocaleContainer extends Component {
 
   componentDidMount() {
     axios
-      .get('/api/locale')
+      .get("/api/locale")
       .then(res => {
         this.setState({
           ...this.state,
@@ -36,7 +36,7 @@ class WeatherLocaleContainer extends Component {
   onSubmitSearch = e => {
     e.preventDefault();
     if (!this.state.cityName) {
-      return alert('Preencha o campo da cidade');
+      return alert("Preencha o campo da cidade");
     }
 
     axios
@@ -49,7 +49,7 @@ class WeatherLocaleContainer extends Component {
               cityNotFound: true,
               forecast: []
             },
-            () => (this.titleRef.current.innerHTML = 'Ops...')
+            () => (this.titleRef.current.innerHTML = "Ops...")
           );
         }
 
@@ -81,7 +81,6 @@ class WeatherLocaleContainer extends Component {
   };
 
   render() {
-    if (!this.state.cities[0]) return <div>Carregando...</div>;
     return (
       <Layout>
         <div className={styles.App}>

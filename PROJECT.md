@@ -32,9 +32,9 @@ O projeto foi sepado em 2 partes, mas dentro de uma mesma aplicação.
    | Method | Endpoint                       | Parameters       | Description                                                                                     
    | `GET`  | */api/locale/:name*            | *name:* `string` | Lista as cidades que possuem dados, Se não for informado o nome de nenhuma cidade, todas as cidades são retornadas.
    
-   | `GET`  | */api/weather/:Id              | *Id:* `int`      | Busca a previsão do tempo para uma determinada cidade, id é obrigatorio informar. 
+   | `GET`  | */api/weather/:Id*             | *Id:* `int`      | Busca a previsão do tempo para uma determinada cidade, id é obrigatorio informar. 
 
 ## Telas
-![alt text](./images/telas/mobile.png)
-![alt text](./images/telas/tablet.png)
-![alt text](./images/telas/desktop.png)
+![](./images/telas/mobile.PNG)
+![](./images/telas/tablet.PNG)
+![](./images/telas/desktop.PNG)

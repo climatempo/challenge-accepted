@@ -5,7 +5,7 @@ import { shallow } from '../../tests-setup';
 
 jest.mock('../../services/region-search', () => ({
   searchByName: jest.fn().mockImplementation(() => Promise.resolve({
-    data: { locales: [{ id: 1, name: 'foo' }] },
+    data: { regions: [{ id: 1, name: 'foo' }] },
   })),
 }));
 

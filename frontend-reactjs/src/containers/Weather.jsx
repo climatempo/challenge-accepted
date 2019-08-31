@@ -26,7 +26,7 @@ export default class Weather extends Component {
     return new Promise((resolve) => {
       const { text, regions } = this.state;
       let region = regions.find((r) => r.name === text);
-      region = region || regions.find((c) => c.name.match(new RegExp(text, 'gi'))); // Fix firefox bug with datalist
+      region = region || regions.find((c) => c.name.match(new RegExp(text, 'gi'))); // TODO: Fix firefox bug with datalist
       WeatherApi.getByLocaleId(region.id).then((resp) => {
         const { weather } = resp.data;
         (weather.weather || []).forEach((w) => {
@@ -46,7 +46,7 @@ export default class Weather extends Component {
         if (value && value.length) {
           this.throttle(() => {
             RegionSearchApi.searchByName(value).then((resp) => {
-              this.setState({ regions: resp.data.locales });
+              this.setState({ regions: resp.data.regions });
               resolve(resp);
             }).catch((err) => {
               window.console.error(err);

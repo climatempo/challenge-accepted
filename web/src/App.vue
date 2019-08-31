@@ -6,7 +6,7 @@
           <v-img :src="require('@/assets/climatempo.png')" max-width="180px"></v-img>
         </v-row>
         <v-row>
-          <v-toolbar dense floating>
+          <v-toolbar dense >
             <v-autocomplete
                     label="Localização"
                     :items="locales"

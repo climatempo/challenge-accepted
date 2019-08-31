@@ -14,7 +14,7 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
   const server = express();
-  server.use(cors()); // { origin: "https://fretesbrasil.herokuapp.com" }
+  server.use(cors()); // { origin: "https://climatempo.herokuapp.com" }
   server.use(bodyParser.urlencoded({ extended: false }));
 
   server.use("/api", api);

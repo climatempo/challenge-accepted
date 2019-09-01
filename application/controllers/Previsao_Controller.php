@@ -120,9 +120,18 @@ class Previsao_Controller extends CI_Controller {
 	    $indexed[$object->name] = $object;
 	}
 
+	// Cerregando dados da model
+	$weather = $this->Model->weather();
+
+	// prepare once
+	$indexedWeather = array();
+	foreach ($weather as $objectWeather) {
+	    $indexedWeather[$objectWeather->locale->name] = $objectWeather;
+	}	
+
 	$response = array();
 	// lookup often
-	if (isset($indexed[$location])) {
+	if (isset($indexed[$location]) && isset($indexedWeather[$location])) {
 	   $response = array("status" => true, "msg" => 'Cidade encontrada com sucesso', "city" => $location);
 	} else {
 		$response = array("status" => false, "msg" => 'Não foi possivel encontrar esta cidade na nossa base de dados.', "city" => $location);
@@ -141,6 +150,16 @@ class Previsao_Controller extends CI_Controller {
 
 	}
 
+	public function locales() {
+	header('Content-type:application/json;charset=utf-8'); // Declarando header
 
+	// Cerregando dados da model
+	$weather = $this->Model->locales();
+
+	//	print_r($response);
+	$output = json_encode($weather, JSON_UNESCAPED_UNICODE);
+	print_r($output);
+
+	}
 
 }

@@ -54,5 +54,8 @@ $route['404_override'] = '';
 
 $route['previsao'] = 'Previsao_Controller';
 
+$route['query'] = 'Previsao_Controller/query';
+$route['locales'] = 'Previsao_Controller/locales';
+$route['result'] = 'Previsao_Controller/result';
 
 $route['translate_uri_dashes'] = FALSE;

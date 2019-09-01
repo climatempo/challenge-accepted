@@ -54,4 +54,93 @@ class Previsao_Controller extends CI_Controller {
 		$this->load->view('template/footer', $data);	
 		$this->load->view('Previsao_View');
 	}
+
+
+	public function result() {
+  	header('Content-type:application/json;charset=utf-8'); // Declarando header
+
+  	// Caso venha POST
+ 	 if(isset($_POST) && $_POST) { 
+  	// Caso venha o input location  
+  	if ($_POST['location']) {
+
+	// declarando variaveis 
+    $location = $_POST['location'];
+
+	// Cerregando dados da model
+	$weather = $this->Model->weather();
+
+	// prepare once
+	$indexed = array();
+	foreach ($weather as $object) {
+	    $indexed[$object->locale->name] = $object;
+	}
+
+	$response = array();
+	// lookup often
+	if (isset($indexed[$location])) {
+
+	   $response = $indexed[$location];
+
+	} else {
+		$response = array("status" => false, "msg" => 'Não foi possivel encontrar esta cidade na nossa base de dados.', "city" => $location);
+	}
+
+	//	print_r($response);
+	$output = json_encode($response, JSON_UNESCAPED_UNICODE);
+	print_r($output);
+
+	 }
+
+
+	 } else { // else $_POST
+	  echo "Não veio POST";
+	 }
+
+
+	}
+
+	public function query() {
+	header('Content-type:application/json;charset=utf-8'); // Declarando header
+
+  	// Caso venha POST
+  	if(isset($_POST) && $_POST) { 
+  	// Caso venha o input location  
+  	if ($_POST['location']) {
+
+	// declarando variaveis 
+    $location = $_POST['location'];
+
+    // Cerregando dados da model
+	$locales = $this->Model->locales();
+
+	// prepare once
+	$indexed = array();
+	foreach ($locales as $object) {
+	    $indexed[$object->name] = $object;
+	}
+
+	$response = array();
+	// lookup often
+	if (isset($indexed[$location])) {
+	   $response = array("status" => true, "msg" => 'Cidade encontrada com sucesso', "city" => $location);
+	} else {
+		$response = array("status" => false, "msg" => 'Não foi possivel encontrar esta cidade na nossa base de dados.', "city" => $location);
+	}
+
+	// Imprimindo result 
+	$output = json_encode($response, JSON_UNESCAPED_UNICODE);
+	print_r($output);
+
+ }
+
+
+ } else { // else $_POST
+  echo "Não veio POST";
+ }
+
+	}
+
+
+
 }

@@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</ul>
 		</code>
 
-		<p>Para instalar as dependências exigidas para o funcionamento do projeto, por gentileza, abre o prompt de comando e, execute o comando mostrado na caixa de texto a baixo, no diretório raiz do projeto.</p>
+		<p>Para instalar as dependências exigidas para o funcionamento do projeto, por gentileza, abra o prompt de comando e execute o comando mostrado na caixa de texto abaixo, no diretório raiz do projeto.</p>
 		<code><b>npm install</b></code>
 
 		<p>Caso você não tenha o NPM instalado no computador, faça o download do Node.js consequentemente o gerenciador de downloads NPM irá acompanhar o pacote, Faça o download neste link <a href="https://nodejs.org/en/" target="_blank">Clique Aqui</a>.</p>	

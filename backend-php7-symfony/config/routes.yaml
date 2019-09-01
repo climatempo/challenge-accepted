@@ -1,3 +1,14 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+app:
+    path:       /api
+    controller: App\Controller\AppController::index
+    methods:    GET
+
+region_search:
+    path:       /api/v1/regions
+    controller: App\Controller\RegionSearchController::index
+    methods:    GET
+
+weather:
+    path:       /api/v1/weather
+    controller: App\Controller\WeatherController::index
+    methods:    GET

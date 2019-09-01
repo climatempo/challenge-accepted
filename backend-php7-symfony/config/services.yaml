@@ -11,6 +11,9 @@ services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        bind:
+            $elasticsearch: '@App\Service\Elasticsearch'
+            $redisCache: '@App\Service\RedisCache'
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
@@ -26,3 +29,12 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Service\Elasticsearch:
+        arguments:
+            $hosts: ['%env(string:ES_HOST)%']
+
+    App\Service\RedisCache:
+        arguments:
+            $host: '%env(string:REDIS_HOST)%'
+            $port: '%env(int:REDIS_PORT)%'

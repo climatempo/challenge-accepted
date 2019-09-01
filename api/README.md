@@ -19,7 +19,7 @@ As dependências detalhadas do projeto podem ser encontradas no [composer.json](
 
 Visando performance, utilizei o [cache](https://laravel.com/docs/5.8/cache) do Laravel para consulta rápida dos _jsons_, assim descartando a implementação de uma camada Model e dispensando a necessidade de usar um banco de dados. 
 
-Para aproveitar os dados da pasta [base](../base), utilizei o recurso de [comandos](https://laravel.com/docs/5.8/artisan#generating-commands) do Laravel e criei um comando para ingerir os _jsons_ no cache da aplicação. A utilização é bem simples:
+Para aproveitar os dados da pasta [base](base), utilizei o recurso de [comandos](https://laravel.com/docs/5.8/artisan#generating-commands) do Laravel e criei um comando para ingerir os _jsons_ no cache da aplicação. A utilização é bem simples:
 
 > php artisan ingerir:json {nomedoarquivo} --pasta={pasta | opcional}
 

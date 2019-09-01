@@ -49,25 +49,25 @@
 	],
 	"variable": [
 		{
-			"id": "507d1af5-72d1-44b7-bc63-aa2a5c8feac0",
+			"id": "3f6bab4b-1816-45ae-a425-92cd05f979b8",
 			"key": "HOST",
-			"value": "http://localhost:8080",
+			"value": "http://localhost:8000",
 			"type": "string"
 		},
 		{
-			"id": "e6351eba-473f-4806-b8e7-510537a49d78",
+			"id": "b3d73c62-348d-4685-859f-a3d518876ff3",
 			"key": "LOCALE_ID",
 			"value": "3735",
 			"type": "string"
 		},
 		{
-			"id": "62711709-4316-4ceb-9a98-e1ae1f159281",
+			"id": "a9fc3b67-a291-4362-9ece-4cacbeca2d83",
 			"key": "SAO_PAULO_ID",
 			"value": "3477",
 			"type": "string"
 		},
 		{
-			"id": "866613ec-a612-46a7-bc03-0a6461f962f4",
+			"id": "255bf1d4-eddb-488c-8db2-c6497f61d074",
 			"key": "OSASCO_ID",
 			"value": "3735",
 			"type": "string"

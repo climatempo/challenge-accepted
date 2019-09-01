@@ -11,13 +11,14 @@ class Dependencias_Model extends CI_Model {
 
     	// Declarando variaveis 
 		$assets = array();
-		$missingFiles = array();
 
-		// Matriz Array dos assets
+		// Array multidimensional para os assets
 		$assets = array(
+			//Pastas 
 		"folders" => array( 1 => array("path" => "node_modules", "exist" => file_exists("node_modules")) ), // pasta do Node_Modules
 
 		"files"	 => array(
+			// Arquivos CSS
 			"bootstrap-css" =>	array("path" => "node_modules/bootstrap/dist/css/bootstrap.min.css", "exist" => file_exists("node_modules/bootstrap/dist/css/bootstrap.min.css") ),
 
 			"animate-css" =>	array("path" => "node_modules/animate.css/animate.min.css", "exist" => file_exists("node_modules/animate.css/animate.min.css") ),
@@ -26,10 +27,10 @@ class Dependencias_Model extends CI_Model {
 
 			"jQuery-UI-css" =>	array("path" => "node_modules/jquery-ui-dist/jquery-ui.structure.min.css", "exist" => file_exists("node_modules/jquery-ui-dist/jquery-ui.structure.min.css") ),
 
-			"jQuery-UI-theme" =>	array("path" => "node_modules/jquery-ui-dist/jquery-ui.theme.min.css", "exist" => file_exists("node_modules/jquery-ui-dist/jquery-ui.theme.min.css") ),
+			"jQuery-UI-theme-css" =>	array("path" => "node_modules/jquery-ui-dist/jquery-ui.theme.min.css", "exist" => file_exists("node_modules/jquery-ui-dist/jquery-ui.theme.min.css") ),
 
-
-			"jQuery" =>	array("path" => "node_modules/jquery/dist/jquery.min.js", "exist" => file_exists("node_modules/jquery/dist/jquery.min.js") ),
+			// Arquivos JS
+			"jQuery-js" =>	array("path" => "node_modules/jquery/dist/jquery.min.js", "exist" => file_exists("node_modules/jquery/dist/jquery.min.js") ),
 
 			"bootstrap-js" =>	array("path" => "node_modules/bootstrap/dist/js/bootstrap.min.js", "exist" => file_exists("node_modules/bootstrap/dist/js/bootstrap.min.js") ),
 

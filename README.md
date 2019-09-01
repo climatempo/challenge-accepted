@@ -6,138 +6,89 @@
 
 ___
 
+## Agradecimentos
 
-## Processo de recrutamento
+Olá equipe climatempo !  
 
-Olá desenvolvedor, pronto para participar do nosso
-processo de recrutamento para vaga de Full-stack (CLT)?
+Gostaria de dizer, que foi um imenso prazer poder estar participando do processo seletivo de vocês, e também foi que uma ótima experiência realizar o teste.
 
-### Sobre a Vaga
-
-- Empresa: Climatempo
-- Cargo: Desenvolvedor Full-stack (CLT);
-- VR e VT;
-- Home Office após período de experiência;
-- Flexibilidade no horário de trabalho para acompanhar eventos de tecnologia;
-- Local: Parque Tecnológico - São José dos Campos (http://www.pqtec.org.br/).
+Espero que vocês gostem, estou aguardando ansiosamente pelo retorno, saiba que seria ótimo poder fazer parte do time de vocês.
 
 
-### Requisitos
+## Projeto
 
-Requisitos para a vaga, bons conhecimentos em:
+Bom, vou falar um pouquinho do teste,
 
-- HTML
-- CSS
-- Javascript
-- NodeJS
-- PHP
-- SQL
-- NoSQL
-- RESTful
+A aplicação foi desenvolvida, de forma responsiva, valorizando o conceito de mobile-first, 
 
-IMPORTANTE:
+Procurei atender corretamente a todas as solicitações do exercício, 
 
-- Residir no vale do paraíba ou nas proximidades.
+Utilizei como base de dados os arquivos .json,
 
+Atribui métodos de validação tanto para o frontend e para o backend,
 
-### O Desafio
+Trabalhei uma forma para que não possa ser passado dados errados para o servidor e tratamento de erros.
 
-Um usuário quer saber como vai ficar o 
-tempo para os próximos dias em Osasco e São Paulo utilizando
-seu smartphone. 
-
-O que esperamos:
- 
- - Uma página responsiva para mobile (Qualquer resolução);
- - Um campo para buscar localidades;
- - Um card para cada dia de previsão de chuva, temperatura e o texto para a localidade buscada;
- - Uma API com endpoints para buscar localidades e previsão fazendo leitura dos JSONs no diretório base;
- - Testes (Pode ser teste de unidade ou funcional).
- 
-Exemplo:
 
 <p align="center">
   <a href="http://www.climatempo.com.br">
-      <img src="http://i.imgur.com/x3z4tYM.png" alt="Climatempo" width="400px"/>
+      <img src="https://i.imgur.com/zYWYNCK.png" alt="Climatempo" width="400px"/>
   </a>
 </p>
 
-**Atenção:**  Não se preocupe em reproduzir o exemplo, use apenas como referência.
- 
-### Dados
+## Ferramentas utilizadas
 
-A API deve fazer a leitura dos dados dos JSONs no diretório base.
- 
-Localidades:
-    
-    base/locales.json
- 
-| Propriedade   | Tipo   | Descrição                           |
-| ------------- |:------:| ------------------------------------|
-| `id`          | Number | Id da localidade                    |
-| `name`        | String | Nome da localidade                  |
-| `state`       | String | Sigla do estado da localidade       |
-| `latitude`    | Number | Latitude do centro da localidade    |
-| `longitude`   | Number | Longitude do centro da localidade   |
- 
- 
-Os dados de previsão estão no JSON:
- 
-    base/weather.json
-    
-**period: Object**
- 
-| Propriedade        | Tipo   | Descrição                                  |
-| ------------------ |:------:| -------------------------------------------|
-| `period.begin`     | String | Data início da busca no formato AAAA-MM-DD |
-| `period.end `      | String | Data fim  da busca no formato AAAA-MM-DD   |
+Utilizei neste projeto:
+Para o Front-end 
+- HTML 5
+- CSS 3 - (Bootstrap 4, animate)
+- Javascript - (jQuery, jQuery UI, toastr)
 
-**locale: Object**
- 
-Os mesmos dados do JSON de localidades.
- 
-**weather: Object**
- 
-| Propriedade                     | Tipo   | Descrição                                  |
-| ------------------------------- |:------:| -------------------------------------------|
-| `weather.date`                  | String | Data da previsão no formato AAAA-MM-DD     |
-| `weather.text`                  | String | Texto sobre a previsão do dia              |
-| `weather.temperature.min`       | Number | Temperatura mínima em graus celsius (°C)   |
-| `weather.temperature.max`       | Number | Temperatura máxima em graus celsius (°C)   |
-| `weather.rain.probability`      | Number | Probabilidade de chuva em porcentagem (%)  |
-| `weather.rain.precipitation`    | Number | Precipitação de chuva em milímetros (mm)   |
+Para o Backend
+- PHP >= 5.3
+- Framework PHP Codeigniter 3
 
-### Avaliação
+Para os dados
+arquivos .json
 
-O que vamos avaliar:
+## Instalação 
 
-- Desempenho;
-- Manutenabilidade;
-- Organização;
-- Boas práticas.
+Extrair a pasta da aplicação para o diretorio do servidor PHP
 
-### Stack
-Para o desafio você deve utilizar qualquer biblioteca ou framework desde que seja em uma das linguagens:
+Como exemplo:
+Para Windows, utilizando XAMPP (apache)
+C:\xampp\htdocs\
 
-- PHP
-- Javascript (NodeJS)
+Para Linux, utilizando Apache
+/var/www/html/
 
-### Comece
+Ou para o diretório root de seu servidor PHP
 
-O processo do desafio deve ser:
+Para as dependências externas, foi desenvolvido um assistente de dependências, para dizer quais dependências o sistema precisa, quais estão faltando e como instala-las.
 
-1. Faça o fork do desafio.
+## Utilização
 
-2. Desenvolva! Você terá **2 dias** a partir da data do envio do desafio.
 
-3. Crie um **PROJECT.md** com a explicação de como devemos executar o projeto e com o máximo de detalhes possível do que foi feito.
+Abra a pagina da aplicação, no computador notebook ou smartphone,
 
-4. Após concluir faça um pull request.
+Clique no campo do "Previsão do Tempo"
 
-5. Envie um e-mail para fullstack@climatempo.com.br com seu **curriculo, pretensão salarial e o link do seu pull request**.
+Digite o nome da cidade e clique em "Pesquisar"
 
+Uma barra de auto completar irá aparecer para as cidades existentes,
+
+Caso a cidade não exista na base de dados, o sistema irá avisar.
+
+As cidades cadastradas são Osasco e São Paulo
+
+
+## Conclusão
+
+Acredito que trabalhar com este projeto foi uma ótima experiência.
+
+Gostaria muito de fazer parte do time de vocês ;) 
+
+Um grande Abraço !
 
 ___
 
-
-Qualquer dúvida entre em contato com nossa equipe.

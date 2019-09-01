@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div id="body">
 		<p>Caso você esteja visualizando esta pagina, é porque estão faltando a instalação de algumas dependências no projeto.</p>
 
-		<p>As seguintes dependências estão faltando a ser instaladas no projeto:</p>
+		<p>As seguintes dependências estão faltando a ser instaladas:</p>
 		<code>
 			<ul>
 				<?php 
@@ -89,6 +89,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<code><b>npm install</b></code>
 
 		<p>Caso você não tenha o NPM instalado no computador, faça o download do Node.js consequentemente o gerenciador de downloads NPM irá acompanhar o pacote, Faça o download neste link <a href="https://nodejs.org/en/" target="_blank">Clique Aqui</a>.</p>	
+		
+		<p>Após instalar as dependências solicitadas, por favor atualize a pagina.</p>
 
 		<p>Caso você tenha qualquer problema para a instalação de dependências do projeto, entre em contato diretamente comigo  <a href="mailto:matheuspavanetti@gmail.com?subject=Problemas%20com%20dependencias%20no%20projeto%20Climatempo&body=Ola%20caro%20Matheus,%20estou%20com%20problemas%20para%20a%20instalacao%20de%20dependencias%20no%20meu%20projeto,%20por%20gentileza,%20poderia%20me%20ajudar%20?">Matheus Medella Pavanetti</a>.</p>
 	</div>

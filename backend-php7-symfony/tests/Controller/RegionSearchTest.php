@@ -16,14 +16,14 @@ class RegionSearchTest extends WebTestCase
         $this->assertObjectHasAttribute('name', $content->regions[0]);
     }
 
-    public function testGetOnlyOne()
-    {
-        $client = static::createClient();
-        $client->request('GET', '/api/v1/regions?name=osasco');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $content = json_decode($client->getResponse()->getContent());
-        $this->assertEquals(count($content->regions), 1);
-    }
+    // public function testGetOnlyOne()
+    // {
+    //     $client = static::createClient();
+    //     $client->request('GET', '/api/v1/regions?name=osasco');
+    //     $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    //     $content = json_decode($client->getResponse()->getContent());
+    //     $this->assertEquals(count($content->regions), 1);
+    // }
 
     public function testNotFoundRegion()
     {

@@ -25,14 +25,20 @@ export default class Weather extends Component {
   getWeather() {
     return new Promise((resolve) => {
       const { text, regions } = this.state;
+
+      if (!regions.length) return;
+
       let region = regions.find((r) => r.name === text);
       region = region || regions.find((c) => c.name.match(new RegExp(text, 'gi'))); // TODO: Fix firefox bug with datalist
+
       WeatherApi.getByLocaleId(region.id).then((resp) => {
         const { weather } = resp.data;
         (weather.weather || []).forEach((w) => {
           w.formatedDate = moment(w.date, 'YYYY-MM-DD').format('DD/MM/YYYY');
         });
+
         this.setState({ weather });
+
         resolve(resp);
       }).catch((err) => {
         window.console.error(err);
@@ -41,8 +47,11 @@ export default class Weather extends Component {
   }
 
   search(value) {
+    const { regions } = this.state;
+
     return new Promise((resolve) => {
       this.setState({ text: value }, () => {
+        if (regions.find((r) => r.name === value)) return;
         if (value && value.length) {
           this.throttle(() => {
             RegionSearchApi.searchByName(value).then((resp) => {

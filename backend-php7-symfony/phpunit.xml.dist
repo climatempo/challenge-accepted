@@ -14,6 +14,10 @@
         <env name="ES_HOST" value=""/>
         <env name="REDIS_HOST" value=""/>
         <env name="REDIS_PORT" value=""/>
+
+        <!-- ###+ nelmio/cors-bundle ### -->
+        <env name="CORS_ALLOW_ORIGIN" value="^https?://localhost(:[0-9]+)?$"/>
+        <!-- ###- nelmio/cors-bundle ### -->
     </php>
 
     <testsuites>

@@ -28,6 +28,7 @@
   - [elasticsearch](https://www.elastic.co/)
   - [redis](https://redis.io/)
   - [phpunit](https://phpunit.de/)
+  - [cors](https://github.com/nelmio/NelmioCorsBundle)
   - [docker](https://www.docker.com/)
   
   

@@ -2,8 +2,6 @@ version: '3.7'
 services:
   redis:
     image: redis:5.0.5-alpine
-    # volumes:
-    #   - ./redis.conf /usr/local/etc/redis/redis.conf
     ulimits:
       memlock:
         soft: -1
@@ -18,13 +16,12 @@ services:
       memlock:
         soft: -1
         hard: -1
-    volumes:
-      - esdata:/usr/share/elasticsearch/data
     networks:
       - esnet
   api:
     build:
       context: .
+    container_name: backendphp
     volumes:
       - ./:/var/www/api
       - ./php.ini:/usr/local/etc/php/php.ini
@@ -34,6 +31,7 @@ services:
       - REDIS_PORT=6379
       - REDIS_PREFIX=ct
       - ES_HOST=http://elasticsearch:9200
+    # command: sh -c "php bin/console elasticsearch:populate"
     networks:
       - web
       - redisnet
@@ -57,12 +55,6 @@ services:
       - api
     depends_on:
       - api
-
-volumes:
-  esdata:
-    driver: local
-  logs:
-    driver: local
 
 networks:
   web:

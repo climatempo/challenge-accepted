@@ -27,7 +27,7 @@ class Weather
             return $weather->locale->id === $localeId;
         });
 
-        return $result ? $result['1'] : [];
+        return array_values($result);
     }
 
 }

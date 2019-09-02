@@ -38,8 +38,12 @@ class WeatherController extends AbstractController
                 $this->redisCache->set($cacheKey, $data, 60); // 60 >> seconds
                 $resp = $data;
             }
+
+            $resp = is_array($resp) ? $resp[0] : $resp;
         } catch (\Exception $e) {
-            $logger->error($e->getMessage());
+            if (!is_null($this->logger)) {
+                $this->logger->error($e->getMessage());
+            }
         }
 
         return $this->json(['weather' => $resp]);

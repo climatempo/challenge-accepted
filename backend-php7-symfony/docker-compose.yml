@@ -1,0 +1,70 @@
+version: '3.7'
+services:
+  redis:
+    image: redis:5.0.5-alpine
+    # volumes:
+    #   - ./redis.conf /usr/local/etc/redis/redis.conf
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    networks:
+      - redisnet
+  elasticsearch:
+    image: elasticsearch:7.3.1
+    environment:
+      - "discovery.type=single-node"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    networks:
+      - esnet
+  api:
+    build:
+      context: .
+    volumes:
+      - ./:/var/www/api
+      - ./php.ini:/usr/local/etc/php/php.ini
+    working_dir: /var/www/api
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PREFIX=ct
+      - ES_HOST=http://elasticsearch:9200
+    networks:
+      - web
+      - redisnet
+      - esnet
+    links:
+      - redis
+      - elasticsearch
+    depends_on:
+      - redis
+      - elasticsearch
+  webserver:
+    image: nginx:1.16.1
+    volumes:
+      - ./:/var/www/api
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - web
+    ports:
+      - 4000:80
+    links:
+      - api
+    depends_on:
+      - api
+
+volumes:
+  esdata:
+    driver: local
+  logs:
+    driver: local
+
+networks:
+  web:
+  redisnet:
+  esnet:

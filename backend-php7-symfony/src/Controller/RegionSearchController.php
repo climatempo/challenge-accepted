@@ -47,7 +47,7 @@ class RegionSearchController extends AbstractController
                 ];
             }, $resp['hits']['hits']);
 
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             if (!is_null($this->logger)) {
                 $this->logger->error($e->getMessage());
             }

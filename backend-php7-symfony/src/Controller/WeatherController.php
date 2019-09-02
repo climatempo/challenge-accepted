@@ -38,7 +38,7 @@ class WeatherController extends AbstractController
                 $this->redisCache->set($cacheKey, $data, 60); // 60 >> seconds
                 $resp = $data;
             }
-        } catch (Exceptiom $e) {
+        } catch (\Exception $e) {
             $logger->error($e->getMessage());
         }
 

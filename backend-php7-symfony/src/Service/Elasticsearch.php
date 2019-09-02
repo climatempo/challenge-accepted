@@ -6,13 +6,14 @@ use Elasticsearch\ClientBuilder;
 
 class Elasticsearch
 {
-    private $client = null;
+    private $client;
 
     function __construct(array $hosts = [])
     {
         if (empty($this->client)) {
             $this->client = ClientBuilder::create()
                 ->setHosts($hosts)
+                ->setRetries(1)
                 ->build();
         }
     }
@@ -25,13 +26,13 @@ class Elasticsearch
         ]);
     }
 
-    public function esBulkSync($resource ,$data)
+    public function esBulkSync($regions, $data)
     {
         $params = [];
 
         foreach ($data as $value) {
             $params['body'][] = [
-                'index' => ['_index' => $resource]
+                'index' => ['_index' => $regions]
             ];
             $params['body'][] = $value;
         };

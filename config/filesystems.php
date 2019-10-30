@@ -48,6 +48,11 @@ return [
             'root' => storage_path('app'),
         ],
 
+        'jsonDatabase' => [
+            'driver' => 'local',
+            'root' => storage_path('app/base'),
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

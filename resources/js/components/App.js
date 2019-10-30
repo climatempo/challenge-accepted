@@ -30,7 +30,7 @@ export default function Application() {
   return (
     <div className={classes.root}>
       
-        <AppBar position="static" style={{backgroundColor: "#1565c0"}}>
+        <AppBar position="fixed" style={{backgroundColor: "#1565c0"}}>
           <Toolbar>
               <img className={classes.img} alt="complex" src="/images/logo-white.png" />
           </Toolbar>

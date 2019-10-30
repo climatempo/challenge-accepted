@@ -6,6 +6,11 @@ import api from '../services/api';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { BallBeat } from 'react-pure-loaders';
+
+
+
+
 class BodyApp extends Component {
 
     constructor(){
@@ -14,7 +19,8 @@ class BodyApp extends Component {
         this.state = {
             search: "",
             city: "",
-            forcast: []
+            forcast: [],
+            loading: false,
         }
 
         this.handleSearch = this.handleSearch.bind(this);
@@ -28,9 +34,11 @@ class BodyApp extends Component {
         });
     };
 
-    async requestSearch(){
 
+    async requestSearch(){
+        this.setState({ loading: true });
         if (this.state.search === "") {
+            this.setState({ loading: false });
             toast.error("Ops.. esse campo não pode ser vazio", {
                 position: toast.POSITION.TOP_RIGHT
             });
@@ -43,14 +51,16 @@ class BodyApp extends Component {
                     toast.error("Essa cidade não está cadastrada em nossos sitemas, por favor pesquise somente por Osasco ou São Paulo", {
                         position: toast.POSITION.TOP_RIGHT
                     });
+                    this.setState({ loading: false });
                     return;
                 } else if (r.data[0].error == 2) {
+                    this.setState({ loading: false });
                     toast.error("Ops.. esse campo não pode ser vazio", {
                         position: toast.POSITION.TOP_RIGHT
                     });
                 }else {
-                    this.setState({city: r.data[0][0] });
-                    this.setState({ forcast: r.data[0][1] });
+                    this.setState({ loading: false });
+                    this.setState({city: r.data[0][0], forcast: r.data[0][1] });
                 }
                 
             });
@@ -66,9 +76,21 @@ class BodyApp extends Component {
                         style= {{marginTop: 80, marginBottom: 30}}
                         placeholder="Perquisar" 
                         value={this.state.search}
-                        onChange={this.handleSearch}
+                        onChange={this.handleSearch}    
                         onRequestSearch={this.requestSearch}
                     />
+                     <Grid
+                        container
+                        direction="column"
+                        justify="center"
+                        alignItems="center"
+                        >
+                        <BallBeat
+                            color={'#123abc'}
+                            loading={this.state.loading}
+                        />
+
+                    </Grid>
                     <CardItem temp={this.state.forcast} city={this.state.city}/>
                 </Container>
             </div>

@@ -75,7 +75,7 @@ export default function CardItem({temp, city}) {
                                     {value.date}
                                 </Typography>
                                 <Typography color="textSecondary" className={classes.textTemp} gutterBottom component="p">
-                                    Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.
+                                   {value.text}
                                 </Typography>
                             
                             </CardContent>
@@ -88,7 +88,7 @@ export default function CardItem({temp, city}) {
                                     <Grid item xs={3}>
                                         <Typography style={{color:"#2196f3"}} gutterBottom component={'span'}>
                                             <Box style={{ fontSize:25}} m={1}>
-                                                20ºC
+                                                {value.temperature.max}ºC
                                             </Box>
                                         </Typography>
                                     </Grid>
@@ -98,7 +98,7 @@ export default function CardItem({temp, city}) {
                                     <Grid item xs={3}>
                                         <Typography style={{color:"#d32f2f"}} gutterBottom component={'span'} >
                                             <Box style={{ fontSize:25}} m={1}>
-                                                10ºC
+                                                {value.temperature.min}ºC
                                             </Box>
                                         </Typography>
                                     </Grid>
@@ -111,7 +111,7 @@ export default function CardItem({temp, city}) {
                                     <Grid item xs={3}>
                                         <Typography  gutterBottom component={'span'}>
                                             <Box style={{ fontSize:25}} m={1}>
-                                                10mm
+                                                {value.rain.precipitation}mm
                                             </Box>
                                         </Typography>
                                     </Grid>
@@ -121,7 +121,7 @@ export default function CardItem({temp, city}) {
                                     <Grid item xs={3}>
                                         <Typography gutterBottom component={'span'}>
                                             <Box style={{ fontSize:25}} m={1}>
-                                                50 %
+                                                {value.rain.probability} %
                                             </Box>
                                         </Typography>
                                     </Grid>

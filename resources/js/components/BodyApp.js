@@ -35,13 +35,15 @@ class BodyApp extends Component {
     };
 
 
-    async requestSearch(){
+    async requestSearch() {
         this.setState({ loading: true });
         if (this.state.search === "") {
             this.setState({ loading: false });
             toast.error("Ops.. esse campo não pode ser vazio", {
                 position: toast.POSITION.TOP_RIGHT
             });
+            
+            return;
         }
 
         await api.get("/api/city/" + this.state.search)
@@ -59,10 +61,13 @@ class BodyApp extends Component {
                         position: toast.POSITION.TOP_RIGHT
                     });
                 }else {
-                    this.setState({ loading: false });
-                    this.setState({city: r.data[0][0], forcast: r.data[0][1] });
+                    this.setState({loading: false, city: r.data[0][0], forcast: r.data[0][1] });
                 }
                 
+            }).catch(() => {
+                toast.error("Serviço indisponível no momento", {
+                    position: toast.POSITION.TOP_RIGHT
+                });
             });
 
     };

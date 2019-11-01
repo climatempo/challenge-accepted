@@ -4,7 +4,7 @@ Descrição do sistema.
  -> Foi implementado uma API com a linguagem de programação PHP e framework Laravel 6.
  Utilizei o scaffolding do laravel para implementar o front-end com ReactJS.
 
- -> Após clonar o projeto, você deverá executar o comando os seguintes comandos: 
+ -> Após clonar o projeto, você deverá executar o comando os seguintes comandos na raiz do projeto: 
     
     composer install
 
@@ -19,7 +19,7 @@ para executar o projeto, o usuário deverá estar na pasta raiz do projeto e dar
 
 php artisan serve. ( Irá executar o servidor embutido do PHP na URL: http://localhost:8000 )
 
-npm run development. ( Irá compilar o front-end ).
+npm run development, ou npm run dev ( Irá compilar o front-end ).
 
 Sobre o sistema
 
@@ -31,6 +31,10 @@ Sobre o sistema
 
 * Dentro pasta storage/app estão os arquivos .JSON onde o laravel utiliza para armazenar arquivos
 dentro da aplicação.
+
+A API possui somente uma rota implementata do tipo GET, onde faz a consulta dos dados.
+
+GET: /api/city/{nome_da_cidade}
 
 
 

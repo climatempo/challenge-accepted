@@ -51,6 +51,7 @@ class LoaderJson extends Model
 
     /**
      * Faço o tratamento da data no vetor aonde eu extraio os dados.
+     * retorna a Matriz com a data Formatada.
      */
     private function DateFix()
     {

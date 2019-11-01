@@ -5,6 +5,7 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use \Exception;
+use \DateTime;
 
 class LoaderJson extends Model
 {
@@ -15,6 +16,7 @@ class LoaderJson extends Model
     public function __construct()
     {
         $this->LoadData();
+        $this->DateFix();
     }
     /**
      * Método privado onde faz a leitura do arquivo JSON.
@@ -45,5 +47,18 @@ class LoaderJson extends Model
             }
         }
         return null;
+    }
+
+    /**
+     * Faço o tratamento da data no vetor aonde eu extraio os dados.
+     */
+    private function DateFix()
+    {
+        for ($i=0; $i < count($this->data); $i++) { 
+          for ($j=0; $j < count($this->data[$i]->weather); $j++) { 
+              $this->data[$i]->weather[$j]->date = date_format(new DateTime($this->data[$i]->weather[$j]->date), 'd/m/Y');
+          }
+        }
+        return $this->data;
     }
 }

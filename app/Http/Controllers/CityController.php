@@ -15,8 +15,6 @@ class CityController extends Controller
      */
     public function show($cityName)
     {
-
-
         /**Validação dos dados */
         if (isset($cityName)) {
             if (empty($cityName)) {
@@ -30,7 +28,7 @@ class CityController extends Controller
         
         /**Executo o método de filtro */
         $dataTemp = $city->FilterDataCityName($cityName);
-        
+
         /** Valido o retorno do método e retorno para aplicação cliente */
         if ($dataTemp == null) {
             $error = ["error" => 1];

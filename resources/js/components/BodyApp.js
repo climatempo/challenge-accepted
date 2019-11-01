@@ -34,7 +34,10 @@ class BodyApp extends Component {
         });
     };
 
-
+    /**
+     * Método JavaScript que realiza o ajax para o backend processar as informações
+     * 
+     */
     async requestSearch() {
         this.setState({ loading: true });
         if (this.state.search === "") {
@@ -48,6 +51,7 @@ class BodyApp extends Component {
 
         await api.get("/api/city/" + this.state.search)
             .then(r => {
+                console.log(r.data[0]);
                 if (r.data[0].error == 1) {
                     
                     toast.error("Essa cidade não está cadastrada em nossos sitemas, por favor pesquise somente por Osasco ou São Paulo", {

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import Autosuggest from 'react-autosuggest';
 
-import { device } from '../../style'
+import { Card } from '../../components';
 
 export const Container = styled.div`
     display: flex;
@@ -10,6 +10,7 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 50px;
 `;
 
 export const Header = styled.div`
@@ -26,3 +27,19 @@ export const Logo = styled.img`
 export const Search = styled(Autosuggest)`
 
 `
+
+export const Title = styled.h3`
+    margin: 20px 0 0 0;
+`
+
+export const WeatherList = styled.div`
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+`;
+
+export const WeatherCard = styled(Card)`
+    
+`;

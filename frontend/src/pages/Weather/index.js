@@ -4,13 +4,19 @@ import isMobile from 'ismobilejs';
 
 import WeatherService from '../../services/weather.service';
 import LocaleService from '../../services/locale.service';
+
 import { 
   Container,
   Header,
   Logo,
-  Search
+  Search,
+  Title,
+  WeatherList,
+  WeatherCard
 } from './styles';
+
 import { Suggestion } from '../../components';
+import Data from './Data'
 
 import { Images } from '../../assets'
 
@@ -20,11 +26,12 @@ export default function Weather() {
   const [name, setName] = useState('');
   const [locales, setLocales] = useState([]);
   const [suggestionId, setSuggestionId] = useState('');
-  const [weathers, setWeathers] = useState([]);
+  const [weather, setWeather] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
       await searchLocales(name);
+      await searchWeather(3735)
     }
 
     fetchData();
@@ -32,19 +39,17 @@ export default function Weather() {
 
   async function searchLocales(name) {
     try {
-      const response = await LocaleService.getLocale(name);
-      
-      setLocales(response.data);
+      const { data } = await LocaleService.getLocale(name);
+      setLocales(data);
     } catch (error) {
       console.log(error);
     }
   }
 
-  async function searchWeater(id) {
+  async function searchWeather(id) {
     try {
-      const response = await WeatherService.getWeather(id);
-      console.log(response.data)
-      // setLocales(response.data);
+      const { data } = await WeatherService.getWeather(id);
+      setWeather(data)
     } catch (error) {
       console.log(error);
     }
@@ -55,12 +60,38 @@ export default function Weather() {
     return e.name
   }
 
-  function handleSuggestionSelected() {
-    searchWeater(suggestionId)
+  function handleSuggestionSelected(e, { suggestion }) {
+    searchWeather(suggestion.id)
   }
 
   function renderSuggestion(suggestion) {
     return <Suggestion suggestion={suggestion}/>;
+  }
+
+  function formattDate(date) {
+    return new Date(date).toLocaleDateString('pt-BR')
+  }
+
+  function renderWeather() {
+    const { locale, weather: weathers } = weather[0]
+    console.log(weather)
+ 
+    return (
+      <>
+        <Title>{`Previsão para ${locale.name}, ${locale.state}`}</Title>
+        <WeatherList>
+          {weathers.map((w, key) => (
+            <WeatherCard 
+              index={key}
+              title={formattDate(w.date)} 
+              subtitle={w.text}
+            >
+              <Data weather={w}/>
+            </WeatherCard>
+          ))}
+        </WeatherList>
+      </>
+    )
   }
 
   return (
@@ -83,6 +114,10 @@ export default function Weather() {
           onChange: (e, { newValue }) => setName(newValue)
         }}
       />
+      {weather && (
+        renderWeather()
+      )} 
+
     </Container>
   );
 }

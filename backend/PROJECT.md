@@ -1,12 +1,8 @@
 # Challenge Clima Tempo
 
-Hey! 
-
-Desafio criado com êxito.
-
 ## To Run
 
-Você pode usar **npm** ou **yarn** para executar a instalação do pacote.
+Você pode usar **npm** ou **yarn** para executar a instalação das dependências.
 
 ## Steps
 
@@ -14,24 +10,72 @@ Você pode usar **npm** ou **yarn** para executar a instalação do pacote.
 
 Faça o clone do projeto 
 
-```bash
-git clone 
+```javascript
+git clone https://github.com/HenryKun55/challenge-accepted
 ```
 
-## Usage
+### 2
 
-```python
-import foobar
+Abra um terminal nas pastas **frontend** e **backend** e execute 
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+```javascript
+yarn install
+
+```
+ou
+
+```javascript
+npm install
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+### 3
 
-Please make sure to update tests as appropriate.
+Após instalar os pacotes, dentro da pasta **backend** execute no terminal
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+```javascript
+yarn dev
+```
+
+ou
+
+```javascript
+npm run dev
+
+```
+
+Pronto, seu servidor está rodando na **_3333_**
+
+
+### 4
+
+Com o servidor rodando, agora abra um terminal na pasta **frontend** e execute
+
+```javascript
+yarn start
+```
+
+ou
+
+```javascript
+npm run start
+
+```
+
+e _voilà_, aproveite para testar =]
+
+## Tests
+
+Foram feitos testes funcionais do **backend**
+
+Para executá-los basta rodar 
+
+```javascript
+yarn test
+```
+ou
+
+```javascript
+npm run test
+```
+
+## Enjoy!

@@ -31,7 +31,6 @@ export default function Weather() {
   useEffect(() => {
     async function fetchData() {
       await searchLocales(name);
-      await searchWeather(3735)
     }
 
     fetchData();

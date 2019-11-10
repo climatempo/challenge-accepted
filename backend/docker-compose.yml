@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  climatempo-api:
+    build: .
+    command: yarn start
+    volumes:
+      - .:/usr/app
+    ports:
+      - '3333:3333'

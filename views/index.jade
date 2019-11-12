@@ -1,0 +1,55 @@
+extends layout
+
+
+block content
+  nav.navbar.navbar-light.bg-light
+    a.navbar-brand 
+      img(src="/images/logo-white.png", alt="logo")
+    form(action="/?").form-inline
+      #custom-search-input
+        .input-group.col-md-12
+          input(name="search").search-query.form-control(type='text', placeholder='Search')
+          span.input-group-btn
+            button.btn.btn-danger(type='submit')
+              span.fa.fa-search
+  
+  .box
+    .container
+      
+      h1
+        | Previsão para #{name}
+      .row
+        for weather in weathers
+          .col-lg-4.col-md-4.col-sm-4.col-xs-12
+            .box-part.text-center
+              .title
+                h6 #{weather.date}
+                p
+                  | #{weather.text}
+              .text
+                .container
+                  .row
+                    .col
+                      h3.text-left
+                        i.fa.fa-long-arrow-up
+                      h3.text-blue
+                        | #{weather.temperature.max}ºC
+                    .col
+                      h3.text-left
+                        i.fa.fa-long-arrow-down
+                      h3.text-red
+                        | #{weather.temperature.min}ºC
+                    .w-100
+                    .col
+                      h3.text-left
+                        i.fa.fa-tint
+                      h3
+                        | #{weather.rain.precipitation}mm
+                    .col
+                      h3.text-left
+                        i.fa.fa-umbrella
+                      h3
+                        | #{weather.rain.probability}%
+                  
+              
+          

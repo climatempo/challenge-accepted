@@ -1,0 +1,107 @@
+body { 
+  background: #d4d4d4; 
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.box-part {
+  border: 1px solid;
+  border-image: radial-gradient(#FFF, #FFF) 1;
+}
+img{
+  width: 130px;
+}
+.col {
+  margin: 5px;
+}
+.fa {
+  margin-right: 15px;
+}
+.text-left {
+  float: left;
+}
+.text-blue {
+  color: #0062cc;
+}
+.text-red {
+  color: red;
+}
+.title {
+  background: #FFF;
+  width: 350px;
+  height: 88px;
+  text-align: left;
+  padding: 20px;
+}
+.text{
+  background: #eeeeee;
+  width: 350px;
+  height: 88px;
+}
+.navbar {
+
+  padding-top: 0px!important;
+  padding-bottom: 0px!important;
+  height: 60px!important;
+
+}
+.input-group {
+  width: 485px!important;
+}
+.search-query{
+  height: 60px!important; 
+}
+#custom-search-input {
+  margin:0;
+  /* margin-top: 10px; */
+  padding: 0;
+}
+
+#custom-search-input .search-query {
+  padding-right: 3px;
+  padding-right: 4px \9;
+  padding-left: 3px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.bg-light {
+  background-color: blue!important;
+  color: white;
+}
+#custom-search-input button {
+  border: 0;
+  background: none;
+  /** belows styles are working good */
+  padding: 7px 0px;
+  margin-top: 11px;
+  position: relative;
+  left: -28px;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color:#295cfb;
+}
+
+.search-query:focus + button {
+  z-index: 3;   
+}
+a{
+  text-decoration:none; 
+  color: #0062cc;
+  border-bottom:2px solid #0062cc;
+}
+.box{
+    padding:60px 0px;
+}
+
+.box-part{
+    background:#FFF;
+    border-radius:0;
+    /* padding:60px 10px; */
+    margin:30px 0px;
+}

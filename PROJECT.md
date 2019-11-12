@@ -16,6 +16,7 @@ Página responsiva que exibe a previsão do tempo para as cidades de Osasco e S�
 Para iniciar o teste entre na pasta tempo e insira o comando:
 
 ```
+npm install
 npm start
 ```
 

@@ -1,0 +1,21 @@
+// Form classes
+.form{
+    position: relative;
+
+    .form-element-container,
+    .form-element-label,
+    .form-element{
+        display: block;  
+        width: 100%;
+        border: none;;
+    }
+    .form-element{
+        padding: $quarter-space;
+    }
+    .form-button{
+        border: none;
+        background-color: transparent;
+        margin: 0px;
+        padding: 0px;;
+    }
+}

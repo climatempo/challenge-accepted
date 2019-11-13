@@ -1,0 +1,12 @@
+// Header component
+.header {
+  width: 100%;
+  height: $menu-height;
+  padding: 0 $half-space;
+  position: relative;;
+
+  .logo{
+    display: block;
+    max-width: 130px;
+  }
+}

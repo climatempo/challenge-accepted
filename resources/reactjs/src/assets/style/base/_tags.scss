@@ -1,0 +1,36 @@
+//
+// Some tag styling
+//
+// Set default font styling for body
+body{
+  font-family: $font-family;
+  font-size: $font-base-size;
+}
+
+// Remove the margins from titles
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0px;
+}
+
+// Remove styles from lists.
+ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+// Remove paragraph margin
+p{
+  margin: 0px;;
+}
+
+// Block images for all
+img {
+    display: block;
+    width: 100%;
+    border-style: none;
+}

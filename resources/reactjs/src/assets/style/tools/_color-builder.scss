@@ -1,0 +1,18 @@
+// Mixin for color classes
+@mixin color-builder($name, $value) {
+
+    // List of classes
+    $class-list: (
+        background: background-color,
+        color: color
+    );
+  
+    // Loop
+    @each $class-name, $css-property in $class-list {
+
+        // Creates CSS Selector
+        .#{$class-name}-#{$name}{
+            #{$css-property}: $value;
+        }
+  }
+};

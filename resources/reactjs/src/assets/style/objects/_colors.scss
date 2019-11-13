@@ -1,0 +1,4 @@
+// Includes a mixin
+@each $name, $value in $colors-map {
+    @include color-builder($name, $value);
+}

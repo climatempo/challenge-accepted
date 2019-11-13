@@ -1,0 +1,29 @@
+// Vars and other stuff
+@import './assets/style/settings/vars';
+
+// Motherfucking mixins
+@import './assets/style/tools/color-builder';
+@import './assets/style/tools/list-builder';
+@import './assets/style/tools/media-query';
+
+
+// Normalize
+@import './assets/style/generic/normalize';
+
+// Base styling
+@import './assets/style/base/tags';
+
+// I use objects in a Atomic CSS fashion, it's a little different from the original ITCSS proposal
+@import './assets/style/objects/colors';
+@import './assets/style/objects/flex';
+@import './assets/style/objects/font';
+@import './assets/style/objects/text';
+@import './assets/style/objects/form';
+
+// Components
+@import './components/App/App.scss';
+@import './components/Header/Header.scss';
+@import './components/SearchForm/SearchForm.scss';
+@import './components/SearchResultList/SearchResultList.scss';
+@import './components/SearchResultItem/SearchResultItem.scss';
+@import './components/OptionList/OptionList.scss';

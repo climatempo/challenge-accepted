@@ -1,0 +1,31 @@
+// APPLICATION VARS
+
+// Color list
+$colors-map: (
+    primary: #1565c0,
+    red: #c62828,
+    gray1: #eeeeee,
+    gray2: #e0e0e0,
+    white: rgba(255, 255, 255, 1),
+    black: rgba(0, 0, 0, 1)
+);
+
+// Font size
+$font-base-size: 16px;
+$font-sizes-array: 30, 23, 20, 18, 17, 16, 14, 13;
+$font-weight-array : 300, 400, 700;
+
+// Font families
+$font-family: 'Open Sans', sans-serif;
+
+// Sizes
+$menu-height: 50px;
+
+// Spacing
+$double-full-space: 80px;
+$full-space: 40px;
+$half-space: 20px;
+$quarter-space: 10px;
+
+// Grid
+$grid-max: 7

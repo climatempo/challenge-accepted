@@ -1,0 +1,13 @@
+// Suggestion list
+.suggestion-list{
+  width: 100%;  
+
+  li{
+    padding: $quarter-space;
+    border: solid 1px #a1a1a1
+  }
+
+  &.is-hidden{
+    display: none;
+  }
+}

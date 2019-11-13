@@ -1,0 +1,14 @@
+// Search result component
+.list-container {
+  width: 100%;
+  max-width: 500px;
+  padding: $full-space;
+
+  h1{
+    margin-bottom: $full-space;
+  }
+}
+.loader{
+  width: 50px;
+  margin-top: 50px;
+}

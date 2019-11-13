@@ -1,0 +1,21 @@
+// Search item component
+
+  .list-item{
+    margin-bottom: 40px; 
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+  }
+  .card-date{
+    padding: $half-space;
+  }
+  .card-data{
+    width: 50%;
+    padding: $half-space;
+
+    img{
+      width: 30px;
+    }
+    span{
+      display: block;
+      width: calc(100% - 50px);
+    }
+  }

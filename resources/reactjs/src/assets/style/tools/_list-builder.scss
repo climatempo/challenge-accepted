@@ -1,0 +1,12 @@
+// Mixin for background color
+@mixin list-builder($list, $name, $property, $sufix) {
+
+    // Loop
+    @each $size in $list {
+
+        // Creates CSS Selector
+        .#{$name}#{$size}{
+            #{$property}: #{$size}#{$sufix};
+        }
+  }
+}

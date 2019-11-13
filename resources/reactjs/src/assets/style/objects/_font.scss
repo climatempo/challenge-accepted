@@ -1,0 +1,15 @@
+// FONT FAMILY
+.font-os{
+    font-family: $font-family;
+}
+
+// FONT STYLE
+.font-italic{
+    font-style: italic;
+}
+
+// FONT SIZE
+@include list-builder($font-sizes-array, 'font-', font-size, 'px');
+
+// FONT WEIGHT
+@include list-builder($font-weight-array, 'font-', font-weight, '');

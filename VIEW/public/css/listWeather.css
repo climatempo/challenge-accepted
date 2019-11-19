@@ -1,0 +1,45 @@
+.bgColorGray {
+    background-color: #E0E0E0;
+}
+
+.cardTitle span {
+    color: #000;
+    font-size: 30px;
+    white-space: normal;
+}
+
+.cardTitle>span:nth-child(1) {
+    margin-left: 43px !important;
+}
+
+.searchBox {
+    width: 50%;
+    margin: 41px;
+}
+
+@media only screen and (max-width: 320px) {
+    .searchBox {
+        width: 100% !important;
+        margin: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .searchBox {
+        width: 100% !important;
+        margin: 0px !important;
+    }
+
+    .cardTitle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cardTitle>span:nth-child(2) {
+        margin-left: 43px !important;
+    }
+}
+
+.ant-input-search-enter-button {
+    background-color: transparent !important;
+}

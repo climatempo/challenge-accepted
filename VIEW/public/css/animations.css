@@ -1,0 +1,95 @@
+/* ************* FADE DROM NONE ************ */
+@-webkit-keyframes fadeInFromNone {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInFromNone {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeInFromNone {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ************* BLINK FADE IN AND OUT ************ */
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+} /* Firefox */
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+} /* Webkit */
+@-ms-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+} /* IE */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+} /* Opera */

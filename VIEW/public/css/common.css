@@ -1,0 +1,275 @@
+/********** Variables ************/
+:root {
+    --primary-color: #57dc35;
+
+    --status-created: #63c2de;
+    --status-washer_accept_the_call: #17a2b8;
+    --status-washer_on_the_way: #f8cb00;
+    --status-washer_arrived: #ffc107;
+    --status-in_service: #20c997;
+    --status-finished: #4dbd74;
+    --status-cancelled: #f86c6b;
+
+    --red: #cf1322;
+    --green: #3f8600;
+}
+
+/********** CSS ************/
+
+html,
+body,
+#root,
+.ant-layout {
+    height: 100%;
+    background-color: #fff !important;
+}
+
+#root .master-container {
+    background: #fff;
+    padding: 10px;
+    display: flow-root;
+}
+
+.row-header {
+    margin-right: 10px;
+}
+
+.row-header h1 {
+    font-size: 20px;
+}
+
+.row-header .row-header-user {
+    text-align: right;
+}
+
+.page-options {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px !important;
+}
+
+.page-options .option {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.item-list {
+    opacity: 0.8;
+}
+
+.item-list:hover {
+    opacity: 1;
+    cursor: pointer;
+    /*box-shadow: #dddddd 0px 0px 2px 0px, #dddddd 0px 0px 2px 0px;*/
+    background: rgba(86, 220, 53, 0.089);
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(0, 0, 0, 0.65) !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(0, 0, 0, 0.65) !important;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(0, 0, 0, 0.65) !important;
+}
+
+.blink {
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -moz-animation: blink normal 1.5s infinite ease-in-out;
+    /* Firefox */
+    -webkit-animation: blink normal 1.5s infinite ease-in-out;
+    /* Webkit */
+    -ms-animation: blink normal 1.5s infinite ease-in-out;
+    /* IE */
+    animation: blink normal 1.5s infinite ease-in-out;
+    /* Opera */
+}
+
+.app-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.app-loading .ant-alert {
+    min-width: 50%;
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/******* ANT *******/
+
+.ant-layout-header {
+    background: #fff;
+    padding: 0;
+}
+
+.ant-layout-header .trigger {
+    font-size: 22px;
+    line-height: 64px;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.ant-layout-sider {
+    border-right: 1px solid #ccc;
+}
+
+.ant-layout-sider .logo {
+    height: 62px;
+    background: url('../images/logo.png') center center no-repeat;
+    background-size: 100%;
+    margin: 16px;
+}
+
+.ant-layout-sider .nav-text {
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.ant-layout-sider-collapsed .nav-text {
+    display: none;
+}
+
+.ant-layout-content {
+    background: #f0f2f5;
+    padding: 10px 10px;
+}
+
+.ant-menu-item .nav-text {
+    font-size: 12px;
+}
+
+.ant-menu-item-divider {
+    margin: 15px 15px !important;
+}
+
+.ant-layout-sider-trigger {
+    display: none;
+}
+
+.ant-col {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.ant-card {
+    font-size: 12px !important;
+}
+
+.ant-card-body {
+    padding: 12px;
+    zoom: 1;
+}
+
+.ant-card-actions>li>span:hover {
+    color: #4fde1f;
+}
+
+.ant-steps {
+    padding: 30px 0;
+    margin-bottom: 20px;
+}
+
+.ant-btn-primary[disabled] {
+    color: #000 !important;
+}
+
+.ant-layout-content {
+    flex: auto;
+    min-height: auto;
+}
+
+.ant-pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.ant-empty {
+    display: initial;
+}
+
+@media only screen and (max-width: 800px) {
+    .ant-layout-sider-collapsed {
+        display: none;
+    }
+
+    .ant-layout-sider {
+        position: absolute;
+        z-index: 10;
+        height: 100%;
+    }
+
+    .ant-layout-header .anticon-menu-fold {
+        position: absolute;
+        z-index: 10;
+        left: 210px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .logo {
+        margin: 10px !important;
+        width: 200px !important;
+    }
+}
+
+.logo {
+    margin: 10px;
+    width: 300px;
+}
+
+.autocomplete-dropdown-container {
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.autocomplete-dropdown-container:empty {
+    display: none;
+}

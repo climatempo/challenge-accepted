@@ -1,0 +1,34 @@
+.card {
+    margin: 30px;
+}
+
+.textCardContent {
+    white-space: normal;
+    font-size: 12px;
+}
+
+.fontSizeUp {
+    margin-left: 10px;
+    font-size: 30px;
+    color: #348BC6;
+}
+
+.fontSizeDown {
+    margin-left: 10px;
+    font-size: 30px;
+    color: #C7362B;
+}
+
+.fontVolumePerc {
+    margin-left: 10px;
+    font-size: 30px;
+    color: #000;
+}
+
+.sizeTextBlock {
+    width: 106px;
+}
+
+.sizeIconBlock {
+    width: 32px;
+}

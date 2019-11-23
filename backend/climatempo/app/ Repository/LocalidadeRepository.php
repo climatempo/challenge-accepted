@@ -4,11 +4,23 @@ namespace App\Repository;
 
 use App\Entities\Localidade;
 
-class LocalidadeRepository extends AbstractRepository
+class LocalidadeRepository
 {
 
     /**
+     * Instância a classe LocalidadeRepository.
+     *
+     * @return LocalidadeRepository
+     */
+    public static function newInstance()
+    {
+        return new LocalidadeRepository();
+    }
+
+    /**
      * Retorna os dados do repositorio.
+     * 
+     * @return array
      */
     public function getLocalidades()
     {

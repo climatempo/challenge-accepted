@@ -20,17 +20,18 @@ class LocalidadeController extends Endpoint
      * @return void
      */
     public function __construct()
-    { 
+    {
         $this->localidadeBO = LocalidadeBO::newInstance();
     }
 
     /**
      * Recupera todas localidades.
+     * 
+     * @return array
      */
     public function getTodasLocalidades()
     {
         $localidades = $this->localidadeBO->getLocalidades();
-
         return $this->toJson($localidades);
     }
 }

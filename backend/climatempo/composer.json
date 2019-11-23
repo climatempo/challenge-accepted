@@ -6,6 +6,8 @@
     "type": "project",
     "require": {
         "php": "^7.2",
+        "fideloper/proxy": "~4.0",
+        "jms/serializer-bundle": "^3.4",
         "laravel/lumen-framework": "^6.0"
     },
     "require-dev": {

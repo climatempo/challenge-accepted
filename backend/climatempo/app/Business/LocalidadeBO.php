@@ -1,13 +1,28 @@
 <?php
 
 namespace App\Business;
+
 use App\Entities\Localidade;
+use App\Repository\LocalidadeRepository;
 
 /**
  * Classe responsável por encapsular as implementações de negócio referente a entidade 'Localidade'.
  */
 class LocalidadeBO extends AbstractBO
 {
+    /**
+     * @var \App\Repository\LocalidadeRepository
+     */
+    private $localidadeRepository;
+
+    /**
+     * Construtor da Classe de negócio.
+     */
+    public function __construct()
+    {
+        $this->localidadeRepository = LocalidadeRepository::newInstance();
+    }
+
     /**
      * Instância a classe Localidade BO.
      *
@@ -19,22 +34,13 @@ class LocalidadeBO extends AbstractBO
     }
 
     /**
-     *  Responsável por regras de negócio.
+     * Responsável por regras de negócio.
+     * 
+     * @return array
      */
     public function getLocalidades()
     {
-        return $this->getLocalidadeRepository()->getLocalidades();
-    }
-
-
-
-    /**
-     * Retorna a instância de 'LocalidadeRepository'.
-     *
-     * @return \App\Repository\LocalidadeRepository
-     */
-    private function getLocalidadeRepository()
-    {
-        return $this->getRepository(Localidade::class);
+        $localidades = $this->localidadeRepository->getLocalidades();
+        return $localidades;
     }
 }

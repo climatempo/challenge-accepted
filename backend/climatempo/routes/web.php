@@ -12,12 +12,17 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return 'API - Clima Tempo';
 });
 
-// Endpoints referente a localidades.
-// No futuro pode se utilizar outros métodos como criar, atualizar, excluir localidade.
-$router->get('/localidades', 'LocalidadeController@getTodasLocalidades');
 
-// Endpoints referente a previsão do tempo.
-$router->get('/previsao-tempo/{id}', 'PrevisaoTempoController@getPrevisaoTempoPorCidade');
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+    // Endpoints referente a localidades.
+    // No futuro pode se utilizar outros métodos como criar, atualizar, excluir localidade.
+    $router->get('/localidades', ['uses' => 'LocalidadeController@getTodasLocalidades']);
+
+
+    // Endpoints referente a previsão do tempo.
+    $router->get('/ufs-por-instituicao/{co_agrupador}', ['uses' => 'UfController@getUfsPorInstituicao']);
+});

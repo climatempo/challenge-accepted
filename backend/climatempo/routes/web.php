@@ -14,3 +14,10 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+// Endpoints referente a localidades.
+// No futuro pode se utilizar outros métodos como criar, atualizar, excluir localidade.
+$router->get('/localidades', 'LocalidadeController@getTodasLocalidades');
+
+// Endpoints referente a previsão do tempo.
+$router->get('/previsao-tempo/{id}', 'PrevisaoTempoController@getPrevisaoTempoPorCidade');

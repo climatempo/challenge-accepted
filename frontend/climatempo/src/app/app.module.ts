@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './layout/layout.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 /**
@@ -22,6 +23,7 @@ import { LayoutModule } from './layout/layout.module';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FlexLayoutModule
   ],
   providers: [
   ],

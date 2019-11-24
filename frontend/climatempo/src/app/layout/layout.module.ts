@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 /**
  * @author Gabriel
@@ -14,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     CommonModule,
     RouterModule,
+    FlexLayoutModule
   ]
 })
 export class LayoutModule {

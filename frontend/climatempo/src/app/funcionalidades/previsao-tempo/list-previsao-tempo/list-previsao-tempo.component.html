@@ -1,9 +1,13 @@
-<div fxLayout="row" fxLayoutAlign=" start center">
+<div fxLayout="row" fxLayoutAlign=" center center">
     <h4>Previsão para {{ previsaoTempo.locale.name }} - {{ previsaoTempo.locale.state }} </h4>
+</div>
+<div fxLayout="row" fxLayoutAlign=" center center">
+    <span>Periodo: {{previsaoTempo.period.begin | date : 'dd/MM/yyyy'}} até
+        {{previsaoTempo.period.end | date : 'dd/MM/yyyy'}}</span>
 </div>
 
 <mat-card class="box-previsao" *ngFor="let clima of previsaoTempo.weather">
-    <mat-card-subtitle>{{clima.date}}</mat-card-subtitle>
+    <mat-card-subtitle>{{clima.date | date : 'dd/MM/yyyy'}}</mat-card-subtitle>
     <div fxLayout="row" fxLayoutAlign="center center">
         <span>{{clima.text}}</span>
     </div>

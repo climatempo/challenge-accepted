@@ -24,5 +24,5 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
 
     // Endpoints referente a previsão do tempo.
-    $router->get('/ufs-por-instituicao/{co_agrupador}', ['uses' => 'UfController@getUfsPorInstituicao']);
+    $router->get('/previsao-tempo-por-cidade/{id}', ['uses' => 'TempoController@getPrevisaoTempoPorCidade']);
 });

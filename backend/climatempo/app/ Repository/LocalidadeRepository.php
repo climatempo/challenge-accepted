@@ -2,11 +2,8 @@
 
 namespace App\Repository;
 
-use App\Entities\Localidade;
-
 class LocalidadeRepository
 {
-
     /**
      * Instância a classe LocalidadeRepository.
      *

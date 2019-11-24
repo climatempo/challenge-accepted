@@ -2,13 +2,12 @@
 
 namespace App\Business;
 
-use App\Entities\Localidade;
 use App\Repository\LocalidadeRepository;
 
 /**
  * Classe responsável por encapsular as implementações de negócio referente a entidade 'Localidade'.
  */
-class LocalidadeBO extends AbstractBO
+class LocalidadeBO
 {
     /**
      * @var \App\Repository\LocalidadeRepository

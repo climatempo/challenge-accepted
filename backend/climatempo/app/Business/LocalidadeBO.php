@@ -39,7 +39,6 @@ class LocalidadeBO
      */
     public function getLocalidades()
     {
-        $localidades = $this->localidadeRepository->getDadosMock();
-        return $localidades;
+        return $this->localidadeRepository->getDadosMock();;
     }
 }

@@ -16,6 +16,4 @@ export class ListPrevisaoTempoComponent implements OnInit {
 
     ngOnInit() {
     }
-
-
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientLocalidadeService } from '../../../client/client-localidade/client-localidade.service';
 import { ClientTempoService } from '../../../client/client-tempo/client-tempo.service';
+import { ClientLocalidadeService } from '../../../client/client-localidade/client-localidade.service';
 
 /**
  * @author Gabriel
@@ -48,6 +48,8 @@ export class FormPrevisaoTempoComponent implements OnInit {
      * @param idCidade 
      */
     public getPrevisaoTempoPorCidade(idCidade): void {
+        this.previsaoTempo = null;
+
         if (idCidade) {
             this.clientTempoService.getPrevisaoTempoPorCidade(idCidade).subscribe(previsaoTempo => {
                 this.previsaoTempo = previsaoTempo

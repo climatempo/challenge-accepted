@@ -9,11 +9,7 @@ import { FuncionalidadesRoutingModule } from './funcionalidades-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   MatButtonModule,
-  MatMenuModule,
-  MatToolbarModule,
-  MatIconModule,
   MatCardModule,
-  MatFormField,
   MatFormFieldModule,
   MatInputModule,
   MatRippleModule

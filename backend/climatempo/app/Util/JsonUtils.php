@@ -16,7 +16,7 @@ class JsonUtils
     private function __construct()
     { }
     /**
-     * Retorna o 'Objeto' serializado em 'json'.
+     * Retorna o obj em 'json'.
      *
      * @param $object
      * @return mixed|string
@@ -25,7 +25,7 @@ class JsonUtils
     {
         $context = new SerializationContext();
         $builder = SerializerBuilder::create();
-  
+
         return $builder->build()->serialize($object, 'json', $context);
     }
 }

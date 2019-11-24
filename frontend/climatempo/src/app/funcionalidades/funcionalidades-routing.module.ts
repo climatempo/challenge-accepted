@@ -10,10 +10,6 @@ const routes: Routes = [
       {
         path: '', redirectTo: '', pathMatch: 'full'
       },
-      // {
-      //   path: 'previsao-do-tempo',
-      //   loadChildren: () => import('./previsao-tempo/previsao-tempo.module').then(module => module.PrevisaoTempoModule),
-      // },
     ]
   }
 ];

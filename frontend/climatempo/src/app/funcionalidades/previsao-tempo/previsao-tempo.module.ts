@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import {
   MatButtonModule,
@@ -12,8 +12,6 @@ import {
   MatRippleModule,
   MatFormFieldModule
 } from '@angular/material';
-
-
 import { ListPrevisaoTempoComponent } from './list-previsao-tempo/list-previsao-tempo.component';
 import { FormPrevisaoTempoComponent } from './form-previsao-tempo/form-previsao-tempo.component';
 

@@ -4,6 +4,7 @@
 Para executar o projeto realize os seguintes comandos nesta pasta.
 
 1 passo - composer install
+
 2 passo - php -S localhost:8000 -t public
 
 Informações importantes:

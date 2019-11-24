@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
  */
 @Component({
     selector: 'list-previsao-tempo',
-    templateUrl: './list-previsao-tempo.component.html'
+    templateUrl: './list-previsao-tempo.component.html',
+    styleUrls: ['./list-previsao-tempo.component.scss']
 })
 export class ListPrevisaoTempoComponent { }

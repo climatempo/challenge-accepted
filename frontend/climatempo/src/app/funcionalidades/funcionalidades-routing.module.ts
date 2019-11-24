@@ -8,12 +8,12 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       {
-        path: '', redirectTo: '/previsao-do-tempo', pathMatch: 'full'
+        path: '', redirectTo: '', pathMatch: 'full'
       },
-      {
-        path: 'previsao-do-tempo',
-        loadChildren: () => import('./previsao-tempo/previsao-tempo.module').then(module => module.PrevisaoTempoModule),
-      },
+      // {
+      //   path: 'previsao-do-tempo',
+      //   loadChildren: () => import('./previsao-tempo/previsao-tempo.module').then(module => module.PrevisaoTempoModule),
+      // },
     ]
   }
 ];

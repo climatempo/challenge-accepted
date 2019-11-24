@@ -1,15 +1,35 @@
-<div fxLayout="row" fxLayoutAlign="center center">
+<div fxLayout="row" fxLayoutAlign=" start center">
     <h4>Previsão para Osasco - SP</h4>
 </div>
 
 <mat-card class="box-previsao">
     <mat-card-subtitle>02/12/2019</mat-card-subtitle>
-    <mat-card-content> Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.</mat-card-content>
-    <div fxLayout="column" fxLayoutAlign="center center">
-        <img src='assets/images/icons/upload.png'> <strong>20°C</strong>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <span>Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.</span>
+    </div>
+    <div class="caixa-temperatura">
+        <div fxLayout="row" fxLayoutAlign="start center" fxFlex="50%">
+            <img src='assets/images/icons/upload.png'>
+            <strong fxFlexOffset="15" class="blue">20°C</strong>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="end center" fxFlex="50%">
+            <img src='assets/images/icons/download.png'>
+            <strong fxFlexOffset="15" class="red">20°C</strong>
+        </div>
     </div>
 
-    <div fxLayout="column" fxLayoutAlign="center center">
-        <img src='assets/images/icons/download.png'> <strong>20°C</strong>
+    <div class="caixa-previsoes">
+        <div fxLayout="row" fxLayoutAlign="start center" fxFlex="50%">
+
+            <img src='assets/images/icons/raindrop-close-up.png'>
+            <strong fxFlexOffset="15">10mm</strong>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="end center" fxFlex="50%">
+            <img src='assets/images/icons/chuva.png'>
+            <strong fxFlexOffset="15">50%</strong>
+        </div>
     </div>
+
 </mat-card>

@@ -1,3 +1,18 @@
 .box-previsao {
-    border: 1px solid #ccc
+    border: 1px solid #ccc;
+    span {
+        font-size: 12px;
+    }
+    .caixa-temperatura {
+        margin-top: 20px;
+    }
+    .caixa-previsoes {
+        margin-top: 30px;
+    }
+    .blue {
+        color: #3490C8;
+    }
+    .red {
+        color: #C72D2D;
+    }
 }

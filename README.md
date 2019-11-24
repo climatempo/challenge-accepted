@@ -4,6 +4,7 @@
 Por favor abrir as seguintes pastas:
 
 1 - backend/climatempo
+
 2 - frontend/climatempo
 
 Tem um Readme em cada projeto para instalação e execução. 

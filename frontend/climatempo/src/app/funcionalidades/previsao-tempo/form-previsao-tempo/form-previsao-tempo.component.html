@@ -1,9 +1,10 @@
 <mat-form-field class="campo-pesquisa">
     <mat-label>Selecione uma cidade</mat-label>
-    <select matNativeControl required>
+    <select matNativeControl required (change)="getPrevisaoTempoPorCidade($event.target.value)">
     <option value=""></option>
-    <option value="saab">Saab</option>
-    <option value="mercedes">Mercedes</option>
-    <option value="audi">Audi</option>
+    <option *ngFor="let localidade of localidades" value="{{localidade.id}}">{{localidade.name}}</option>
   </select>
 </mat-form-field>
+
+
+<list-previsao-tempo *ngIf="previsaoTempo" [previsaoTempo]="previsaoTempo"></list-previsao-tempo>

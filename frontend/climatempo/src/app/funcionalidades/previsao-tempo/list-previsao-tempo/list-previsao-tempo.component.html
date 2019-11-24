@@ -1,21 +1,21 @@
 <div fxLayout="row" fxLayoutAlign=" start center">
-    <h4>Previsão para Osasco - SP</h4>
+    <h4>Previsão para {{ previsaoTempo.locale.name }} - {{ previsaoTempo.locale.state }} </h4>
 </div>
 
-<mat-card class="box-previsao">
-    <mat-card-subtitle>02/12/2019</mat-card-subtitle>
+<mat-card class="box-previsao" *ngFor="let clima of previsaoTempo.weather">
+    <mat-card-subtitle>{{clima.date}}</mat-card-subtitle>
     <div fxLayout="row" fxLayoutAlign="center center">
-        <span>Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.</span>
+        <span>{{clima.text}}</span>
     </div>
     <div class="caixa-temperatura">
         <div fxLayout="row" fxLayoutAlign="start center" fxFlex="50%">
             <img src='assets/images/icons/upload.png'>
-            <strong fxFlexOffset="15" class="blue">20°C</strong>
+            <strong fxFlexOffset="15" class="blue">{{clima.temperature.min}}°C</strong>
         </div>
 
         <div fxLayout="row" fxLayoutAlign="end center" fxFlex="50%">
             <img src='assets/images/icons/download.png'>
-            <strong fxFlexOffset="15" class="red">20°C</strong>
+            <strong fxFlexOffset="15" class="red">{{clima.temperature.max}}°C</strong>
         </div>
     </div>
 
@@ -23,12 +23,12 @@
         <div fxLayout="row" fxLayoutAlign="start center" fxFlex="50%">
 
             <img src='assets/images/icons/raindrop-close-up.png'>
-            <strong fxFlexOffset="15">10mm</strong>
+            <strong fxFlexOffset="15">{{clima.rain.precipitation}}mm</strong>
         </div>
 
         <div fxLayout="row" fxLayoutAlign="end center" fxFlex="50%">
             <img src='assets/images/icons/chuva.png'>
-            <strong fxFlexOffset="15">50%</strong>
+            <strong fxFlexOffset="15">{{clima.rain.probability}}%</strong>
         </div>
     </div>
 

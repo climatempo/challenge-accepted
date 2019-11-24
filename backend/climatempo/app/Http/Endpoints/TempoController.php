@@ -32,7 +32,7 @@ class TempoController extends Endpoint
     public function getPrevisaoTempoPorCidade(int $idCidade)
     {
         if (!empty($idCidade)) {
-            $retorno = $this->tempoBO->getPrevisaoTempoPorCidade($idCidade);
+            $retorno = current($this->tempoBO->getPrevisaoTempoPorCidade($idCidade));
 
             if (empty($retorno)) {
                 $retorno = ['message' => 'Nenhum resultado encontrado!'];

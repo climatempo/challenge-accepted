@@ -10,8 +10,7 @@ Informações importantes:
 
 Versão do Angular:  8.2
 Versão do Material Design: 8.2.3
-
-Qualquer dúvida pode me ligar : 61 981329407
+ 
 
 ## Official Documentation
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.

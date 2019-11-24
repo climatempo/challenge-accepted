@@ -5,12 +5,12 @@ import {LayoutComponent} from './layout/layout.component';
 const routes: Routes = [
   {
     path: '', component: LayoutComponent,
-    loadChildren: () => import('./modulos/modulos.module').then(module => module.PagesModule)
+    loadChildren: () => import('./funcionalidades/funcionalidades.module').then(module => module.FuncionalidadesModule)
   }
 ];
 
 /**
- * @author GF
+ * @author Gabriel
  */
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

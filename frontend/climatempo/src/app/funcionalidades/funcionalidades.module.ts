@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
 import { HomeModule } from './home/home.module';
 import { HomeComponent } from './home/home.component';
-import { ModulosRoutingModule } from './modulos-routing.module';
+import { FuncionalidadesRoutingModule } from './funcionalidades-routing.module';
 
 /**
  * @author Gabriel
@@ -13,9 +11,9 @@ import { ModulosRoutingModule } from './modulos-routing.module';
   declarations: [HomeComponent],
   imports: [
     CommonModule,
-    ModulosRoutingModule,
+    FuncionalidadesRoutingModule,
     HomeModule,
   ]
 })
-export class PagesModule {
+export class FuncionalidadesModule {
 }

@@ -1,0 +1,80 @@
+input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+  
+button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: rgb(97, 97, 97);
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+  
+button:hover {
+    background: #313131;
+}
+
+.search-bar {
+    display: inline-flex;
+    width: 100%;
+}
+
+.search-bar::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.city {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: lightgray;
+}
+
+.card-container {
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    background-color: #efefef;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: inline-block;
+    width: 300px;
+    margin: 5px;
+    
+}
+
+.card-title {
+    background-color: #fff;
+    padding: 5px;
+}
+
+.card-title p {
+    margin: 2px;
+}
+
+.card-body {
+    display: grid;
+}
+
+.card-body-row {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.card-body-item {
+    margin: 10px;
+}

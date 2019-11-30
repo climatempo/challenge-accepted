@@ -1,0 +1,42 @@
+{
+  "name": "challenge-accepted",
+  "version": "0.0.1",
+  "description": "Challenge accepted!",
+  "scripts": {
+    "start": "babel-node src/app",
+    "test": "mocha tests/*.js",
+    "lint": "eslint src --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/climatempo/challenge-accepted.git"
+  },
+  "author": "caiocozza.art@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/climatempo/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/climatempo/challenge-accepted#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "babel-eslint": "^10.0.3",
+    "chai": "^4.2.0",
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "mocha": "^6.2.0",
+    "node-fetch": "^2.6.0",
+    "nyc": "^14.1.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

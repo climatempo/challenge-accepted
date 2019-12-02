@@ -6,6 +6,7 @@
 
 ___
 
+Desenvolvedor: Carlos Melo (carlosmeloads@gmail.com)
 
 ## Pastas
 

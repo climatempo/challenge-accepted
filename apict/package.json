@@ -1,0 +1,36 @@
+{
+  "name": "apict",
+  "version": "1.0.0",
+  "description": "API Clima Tempo",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "apis",
+    "ct"
+  ],
+  "author": "Carlos Melo",
+  "license": "",
+  "homepage": "",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.15.4",
+    "moment": "^2.24.0"
+  },
+  "jshintConfig": {
+    "esversion": 6
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}

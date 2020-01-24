@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon src/index.js",
-    "test": "jasmine",
+    "test": "NODE_ENV=test jasmine",
     "lint": "eslint ."
   },
   "devDependencies": {
@@ -19,7 +19,8 @@
     "jasmine-console-reporter": "^3.1.0",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
-    "pretty-quick": "^2.0.1"
+    "pretty-quick": "^2.0.1",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
     "cors": "^2.8.5",

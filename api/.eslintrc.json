@@ -16,6 +16,9 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "no-console": "off"
+    "no-console": "off",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+    "no-param-reassign": "off",
+    "consistent-return": "off"
   }
 }

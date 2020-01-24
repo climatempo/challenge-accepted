@@ -28,8 +28,9 @@ if (!isTest()) {
 
 app.use(express.json());
 
-// TODO: Routes here
-app.use('/', (req, res, next) => res.send('Hello world!'));
+const weatherRoutes = require('./routes/weatherRoutes');
+
+app.use('/weather', weatherRoutes);
 
 app.use(require('./errors/handler'));
 

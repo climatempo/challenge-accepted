@@ -19,7 +19,7 @@ const CardWeather = ({
   rainPrecipitation,
 }) => {
   return (
-    <React.Fragment>
+    <div className="mb-4">
       <Row className="mt-2">
         <Col className="mx-3 border border-bottom-0 bg-white shadow-sm">
           <Row className="my-2">
@@ -45,7 +45,7 @@ const CardWeather = ({
               </h3>
             </Col>
             <Col xs={4} md={3} className="text-primary">
-              <h3>{maxTemp} ºC</h3>
+              <h3>{maxTemp}ºC</h3>
             </Col>
             <Col xs={2} md={3}>
               <h3>
@@ -53,7 +53,7 @@ const CardWeather = ({
               </h3>
             </Col>
             <Col xs={4} md={3} className="text-danger">
-              <h3>{minTemp} ºC</h3>
+              <h3>{minTemp}ºC</h3>
             </Col>
           </Row>
           <Row className="pt-4 pb-3">
@@ -76,7 +76,7 @@ const CardWeather = ({
           </Row>
         </Col>
       </Row>
-    </React.Fragment>
+    </div>
   );
 };
 

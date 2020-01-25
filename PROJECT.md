@@ -172,7 +172,8 @@ Resultado:
 - Se os arquivos(locales.json e weather.json) mudassem seria necessário adotar outra abordagem de leitura:
   - Ex: load inicial no BD e ficar "escutando" quando houvesse atualizações.
 - Os dados do endpoint de "weather" poderiam ser serializados, ou seja, trazer somente o necessário para o consumo do cliente;
-- Não usei _cache_ dos dados, pois os mesmos estão carregados na memória. Em outros casos, o _cache_ deveria ser feito para evitar operações desnecessárias de consulta ao BD ou em alguns casos API Externas. Claro que analisar a aplicação de _cache_ dos dados envolve verificar a frequência de mudança de dados. Por fim, para _cache_ sugiro utilizar o [Redis](https://redis.io/).
+- Não usei _cache_ dos dados, pois os mesmos estão carregados na memória. Em outros casos, o _cache_ deveria ser feito para evitar operações desnecessárias de consulta ao BD ou em alguns casos API Externas. Claro que analisar a aplicação de _cache_ dos dados envolve verificar a frequência de mudança de dados. Por fim, para _cache_ sugiro utilizar o [Redis](https://redis.io/);
+- Alguns dados de precipitação estavam como `string`. Alterei o tipo para número para estar igual aos demais.
 
 ## Frontend - Climatempo Challenge
 

@@ -13,8 +13,8 @@ const SearchBox = () => {
   };
 
   return (
-    <Row className="bg-white border align-items-center">
-      <Col>
+    <Row className="bg-white border align-items-center justify-content-center">
+      <Col sm={12} md={7}>
         <Form className="mt-3" onSubmit={onSearch}>
           <Row>
             <Col xs={8} md={10} className="pr-0 pl-3">

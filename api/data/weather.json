@@ -93,7 +93,7 @@
         },
         "rain": {
           "probability": 60,
-          "precipitation": "11"
+          "precipitation": 11
         }
       }
     ]

@@ -22,6 +22,7 @@ const App = () => {
     e.preventDefault();
 
     if (!city) {
+      setWeatherResult(null);
       setErrorCode(400);
       return;
     }

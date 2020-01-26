@@ -177,4 +177,42 @@ Resultado:
 
 ## Frontend - Climatempo Challenge
 
-TODO
+O Frontend da aplicação foi desenvolvido utilizando React, Babel 7 e Webpack 4.
+Para desenvolver o frontend, utilizou-se esse _boilerplate_: https://github.com/luisbilecki/react-webpack-boilerplate
+
+<p align="center">
+  <img alt="App" src="https://i.imgur.com/wUk3774.png">
+</p>
+
+### Bibliotecas usadas
+
+| Nome do pacote                                                                     |                                       Descrição                                       |
+| ---------------------------------------------------------------------------------- | :-----------------------------------------------------------------------------------: |
+| [@fortawesome/react-fontawesome](https://github.com/FortAwesome/react-fontawesome) |                    Componentes da biblioteca Font Awesome no React                    |
+| [axios](https://www.npmjs.com/package/axios)                                       |                                     Cliente HTTP                                      |
+| [bootstrap](https://www.npmjs.com/package/bootstrap)                               | Framework HTML, CSS e Javascript para desenvolvimento responsivo e vários componentes |
+| [prop-types](https://www.npmjs.com/package/prop-types)                             |                        Checagem de tipos com React no _props_                         |
+| [react e react-dom](https://github.com/facebook/react)                             |              Biblioteca Javascript para criação de interfaces de usuário              |
+| [react-bootstrap](https://www.npmjs.com/package/react-bootstrap)                   |                          Componentes do Bootstrap 4 no React                          |
+
+### Como rodar?
+
+1. Instale as [dependências necessárias](#requerimentos). Para o Node.js eu recomendo usar o [NVM](https://github.com/nvm-sh/nvm).
+
+2. Instale os pacotes necessários usando:
+
+```bash
+    yarn install
+```
+
+3. Inicie o app usando
+
+```bash
+    yarn start
+```
+
+4. Para verificar o _lint_ do código use:
+
+```bash
+    yarn lint
+```

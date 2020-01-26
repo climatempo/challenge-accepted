@@ -3,7 +3,8 @@
   "env": {
     "browser": true,
     "commonjs": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "ecmaFeatures": {
     "jsx": true,
@@ -30,6 +31,7 @@
     "react/jsx-uses-vars": 1,
     "react/react-in-jsx-scope": 1,
     "no-plusplus": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "import/no-extraneous-dependencies": "off"
   }
 }

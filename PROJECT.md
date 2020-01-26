@@ -211,7 +211,13 @@ Para desenvolver o frontend, utilizou-se esse _boilerplate_: https://github.com/
     yarn start
 ```
 
-4. Para verificar o _lint_ do código use:
+4. Para rodar os testes use:
+
+```bash
+  yarn test
+```
+
+5. Para verificar o _lint_ do código use:
 
 ```bash
     yarn lint

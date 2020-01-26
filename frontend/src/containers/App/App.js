@@ -75,7 +75,9 @@ const App = () => {
         <h1>
           <FontAwesomeIcon icon={faExclamationCircle} />
         </h1>
-        <span className="font-weight-bold">{errorMessage}</span>
+        <span className="font-weight-bold" data-testid="error-message">
+          {errorMessage}
+        </span>
       </div>
     );
   };

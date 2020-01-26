@@ -21,11 +21,16 @@ const SearchBox = ({ onSearchSubmit, onInputChange }) => {
                   placeholder="Digite a cidade..."
                   className="border-0 px-0"
                   onChange={onInputChange}
+                  data-testid="input-city"
                 />
               </Form.Group>
             </Col>
             <Col xs={4} md={2} className="pl-0 pr-3 text-right">
-              <Button variant="outline-none" type="submit">
+              <Button
+                variant="outline-none"
+                type="submit"
+                data-testid="btn-submit"
+              >
                 <FontAwesomeIcon icon={faSearch} />
               </Button>
             </Col>

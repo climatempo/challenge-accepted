@@ -7,7 +7,7 @@ const CardHeader = ({ city }) => {
   return (
     <Row className="my-3">
       <Col>
-        <h4>Previsão para {city}</h4>
+        <h4 data-testid="h4-city">Previsão para {city}</h4>
       </Col>
     </Row>
   );

@@ -1,0 +1,71 @@
+<div class="container-fluid>">
+  <form (submit)="onSubmit()">
+    <div class="input-group">
+      <input type="search" class="form-control" placeholder="" #txtSearch (keyup.enter)="update(txtSearch.value)"
+             (blur)="update(txtSearch.value)" />
+      <div class="input-group-append">
+        <button class="btn btn-secondary" type="button" (click)="onSearch()">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+    </form>
+  
+  <br />
+  <p *ngIf="!previsoes"><em>Loading...</em></p>
+
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let previsao of previsoes">
+      <div class="panel-group">
+        <div class="panel panel-primary">
+          <div class="panel-heading"><h4>Previsão para {{previsao.locale.name}}/{{previsao.locale.state}}</h4></div>
+          <div class="panel-body">
+            <div class="panel-group" *ngFor="let weather of previsao.weather">
+              <div class="panel panel-primary box-shadow card">
+                <div class="panel-heading card">
+                  <p>{{weather.date | date: 'dd/MM/yyyy'}}<br/>
+                  {{weather.text}}</p>
+                </div>
+                <div class="panel-body">
+                  <table class="table table-borderless center">
+                    <tr>
+                      <td><img src="./assets/images/icons/upload.png"/>{{weather.temperature.max}}C</td>
+                      <td><img src="./assets/images/icons/download.png" />{{weather.temperature.min}}C</td>
+                    </tr>
+                    <tr>
+                      <td><img src="./assets/images/icons/umbrella.png" />{{weather.rain.precipitation}}</td>
+                      <td><img src="./assets/images/icons/raindrop-close-up.png" />{{weather.rain.probability}}%</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="panel-footer"></div>
+              </div><br />
+            </div>
+          </div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="weathers">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Temp. (C)</th>
+        <th>Temp. (F)</th>
+        <th>Summary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let weather of weathers">
+        <td>{{ weather.date }}</td>
+        <td>{{ weather.temperatureC }}</td>
+        <td>{{ weather.temperatureF }}</td>
+        <td>{{ weather.summary }}</td>
+      </tr>
+    </tbody>
+  </table>
+  -->
+</div>

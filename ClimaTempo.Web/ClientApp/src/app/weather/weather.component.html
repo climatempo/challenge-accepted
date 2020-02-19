@@ -1,6 +1,5 @@
 <div class="container-fluid>">
-  <form (submit)="onSubmit()">
-    <div class="input-group">
+  <div class="input-group">
       <input type="search" class="form-control" placeholder="" #txtSearch (keyup.enter)="update(txtSearch.value)"
              (blur)="update(txtSearch.value)" />
       <div class="input-group-append">
@@ -9,8 +8,6 @@
         </button>
       </div>
     </div>
-    </form>
-  
   <br />
   <p *ngIf="!previsoes"><em>Loading...</em></p>
 

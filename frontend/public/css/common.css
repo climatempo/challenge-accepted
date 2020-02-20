@@ -1,0 +1,36 @@
+#root,
+.ant-layout,
+.ant-layout-content {
+  height: 100%;
+  background: #fff;
+}
+
+.anticon-spin {
+  display: inline-block;
+  animation: loadingCircle 3s infinite linear;
+}
+
+.ant-layout-content {
+  padding: 20px;
+}
+
+.ant-layout-header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.ant-layout-header .logo {
+  width: 250px;
+  height: 100%;
+  background: url('../images/logo-white.png') center center no-repeat;
+  background-size: 100%;
+}
+
+.loading {
+  width: 60px;
+  height: 60px;
+  background: url('../images/sun-svg.svg') center center no-repeat;
+  background-size: 100%;
+  text-align: center;
+}

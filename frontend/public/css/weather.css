@@ -1,0 +1,50 @@
+.ant-card-head-title {
+  white-space: normal;
+  height: 100px;
+}
+
+.weather-search {
+  margin: 50px 0;
+}
+
+h3 {
+  padding: 20px 0;
+}
+
+.weather-list .weather-card .ant-row .ant-col {
+  height: 30px;
+  margin: 5px 0;
+}
+
+.weather-list .weather-card .weather-card-icon {
+  background-size: 50%;
+}
+
+.weather-list .weather-card .weather-card-info {
+  font-size: large;
+  font-weight: bold;
+}
+
+.weather-card-icon.max {
+  background: url('../images/icons/upload.png') center center no-repeat;
+}
+
+.weather-card-icon.min {
+  background: url('../images/icons/download.png') center center no-repeat;
+}
+
+.weather-card-icon.probability {
+  background: url('../images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png') center center no-repeat;
+}
+
+.weather-card-icon.precipitation {
+  background: url('../images/icons/raindrop-close-up.png') center center no-repeat;
+}
+
+.weather-card-info.max {
+  color: #3992c8;
+}
+
+.weather-card-info.min {
+  color: #cd4b4b;
+}

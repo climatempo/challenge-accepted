@@ -1,0 +1,14 @@
+{
+  "presets": ["env", "stage-0", "react"],
+  "plugins": [
+    [
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
+      }
+    ]
+  ],
+  "sourceMaps": true,
+  "retainLines": true
+}

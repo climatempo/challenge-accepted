@@ -12,7 +12,7 @@ export default function ({ app }, inject) {
   }
 
   const getWeatherByLocale = (localeId) => {
-    return instance.get('weather', {
+    return instance.get('weatherByLocale', {
       query: { localeId }
     })
   }

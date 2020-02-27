@@ -3,35 +3,45 @@
     <div class="search-bar">
       <autocomplete
         :source="getSource"
-        results-property="data"
+        results-property="locales"
         results-display="name"
         results-value="id"
         @selected="selectLocale($event.selectedObject)"
+        @clear="clearLocale"
       />
     </div>
-    <div class="body-content">
-      <h4>Previsão para Osasco - SP</h4>
+    <div v-show="locale" class="body-content">
+      <h4>Previsão para {{ locale }}</h4>
       <div class="card-container">
-        <card />
-        <card />
+        <weather-card
+          v-for="(weather, index) in weathers"
+          :key="index"
+          :date="weather.date"
+          :text="weather.text"
+          :max="weather.temperature.max"
+          :min="weather.temperature.min"
+          :probability="weather.rain.probability"
+          :precipitation="weather.rain.precipitation"
+        />
       </div>
     </div>
+    <h2 class="p-3 text-center" v-show="!locale">Busque uma cidade para ver as previsões</h2>
   </div>
 </template>
 
 <script>
 import Autocomplete from '@/components/Autocomplete'
-import Card from '@/components/Card'
+import WeatherCard from '@/components/WeatherCard'
 
 export default {
   layout: 'mobile',
   components: {
     Autocomplete,
-    Card
+    WeatherCard
   },
   data: () => ({
     locale: null,
-    locales: []
+    weathers: []
   }),
   methods: {
     getSource (input) {
@@ -39,7 +49,14 @@ export default {
     },
     selectLocale (item) {
       this.locale = `${item.name} - ${item.state}`
-      console.log(item)
+      this.$api.getWeatherByLocale(item.id).then((res) => {
+        this.weathers = res.data.weathers[0].weather
+        console.log(res.data.weathers)
+      })
+    },
+    clearLocale () {
+      this.locale = null
+      this.weathers = []
     }
   }
 }

@@ -8,23 +8,23 @@
       <p>{{ text }}</p>
     </template>
 
-    <b-card-body class="">
+    <b-card-body>
       <div class="row">
         <div class="col-6">
           <img src="/images/icons/upload.png" alt="">
-          <span class="text-primary">{{ max }}</span>
+          <span class="text-primary">{{ max }}ºC</span>
         </div>
         <div class="col-6">
           <img src="/images/icons/download.png" alt="">
-          <span class="text-danger">{{ min }}</span>
+          <span class="text-danger">{{ min }}ºC</span>
         </div>
         <div class="col-6 pt-3">
           <img src="/images/icons/raindrop-close-up.png" alt="">
-          <span class="text-dark">{{ water }}</span>
+          <span class="text-dark">{{ precipitation }}mm</span>
         </div>
         <div class="col-6 pt-3">
           <img src="/images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" alt="">
-          <span class="text-dark">{{ rain }}</span>
+          <span class="text-dark">{{ probability }}%</span>
         </div>
       </div>
     </b-card-body>
@@ -33,6 +33,32 @@
 
 <script>
 export default {
+  props: {
+    max: {
+      type: [String, Number],
+      default: ''
+    },
+    min: {
+      type: [String, Number],
+      default: ''
+    },
+    probability: {
+      type: [String, Number],
+      default: ''
+    },
+    precipitation: {
+      type: [String, Number],
+      default: ''
+    },
+    date: {
+      type: String,
+      default: ''
+    },
+    text: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 

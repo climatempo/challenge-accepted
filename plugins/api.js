@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default function ({}, inject) {
+export default function (inject) {
   // Create a custom axios instance
   const instance = axios.create({
     baseURL: `${process.env.BASE_URL}/api`,

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default function (inject) {
+export default function ({ app }, inject) {
   // Create a custom axios instance
   const instance = axios.create({
     baseURL: `${process.env.BASE_URL}/api`,
@@ -11,9 +11,11 @@ export default function (inject) {
     return instance.get('locales')
   }
 
-  const getWeather = () => {
-    return instance.get('weather')
+  const getWeatherByLocale = (localeId) => {
+    return instance.get('weather', {
+      query: { localeId }
+    })
   }
 
-  inject('api', { instance, getLocales, getWeather })
+  inject('api', { instance, getLocales, getWeatherByLocale })
 }

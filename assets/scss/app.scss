@@ -1,0 +1,33 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+.card {
+  border-radius: 3px;
+  box-shadow: 1px 2px 1px 0px rgba(0,0,0,0.4);
+  &-header {
+    background-color: white;
+    border-bottom: none;
+    padding: 12px;
+  }
+  &-body {
+    background-color: #eee;
+  }
+}
+
+.autocomplete {
+  height: 100%;
+  &__box {
+    height: 100%;
+    border: none !important;
+    // flex-direction: row-reverse;
+  }
+  &__icon {
+    height: auto !important;
+  }
+  &__inputs {
+    height: 100%;
+    input {
+      height: 100%;
+    }
+  }
+}

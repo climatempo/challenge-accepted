@@ -3,13 +3,13 @@ const request = require("request");
 const chai = require("chai");
 const expect = chai.expect;
 const { baseUrl } = require('./server')
-const baseLocale = require('../api/base/locales.json');
+const baseWeather = require('../api/base/weather.json');
 
 describe("Teste da entidade locale", function () {
-  it("Deve receber ter o parametro locales", function (done) {
+  it("Deve receber ter o parametro weathers", function (done) {
     request.get(
       {
-        url : `${baseUrl}/locales`
+        url : `${baseUrl}/weather/by-locale?locale_id=${baseWeather[0].locale.id}`
       },
       function(error, response, body){
 
@@ -21,7 +21,7 @@ describe("Teste da entidade locale", function () {
           _body = {};
         }
 
-        _body.should.have.property('locales')
+        _body.should.have.property('weathers')
 
         done();
       }
@@ -31,7 +31,7 @@ describe("Teste da entidade locale", function () {
   it("Deve receber o parametro success como true", function (done) {
     request.get(
       {
-        url : `${baseUrl}/locales`
+        url : `${baseUrl}/weather/by-locale?locale_id=${baseWeather[0].locale.id}`
       },
       function(error, response, body){
 
@@ -52,10 +52,10 @@ describe("Teste da entidade locale", function () {
     );
   });
 
-  it("Deve receber a mesma quantidade de localidades do base/locales.json", function (done) {
+  it("Deve receber a mesma quantidade de weathers do base/weather.json", function (done) {
     request.get(
       {
-        url : `${baseUrl}/locales`
+        url : `${baseUrl}/weather/by-locale?locale_id=${baseWeather[0].locale.id}`
       },
       function(error, response, body){
 
@@ -67,8 +67,8 @@ describe("Teste da entidade locale", function () {
           _body = {};
         }
 
-        if( _body.should.have.property('locales') ){
-          expect(_body.locales.length).is.equal(baseLocale.length);
+        if( _body.should.have.property('weathers') ){
+          expect(_body.weathers[0].weather.length).is.equal(baseWeather[0].weather.length);
         }
 
         done();
@@ -76,10 +76,10 @@ describe("Teste da entidade locale", function () {
     );
   });
 
-  it("Deve receber apenas a locale Osasco", function (done) {
+  it("Deve retornar o success false", function (done) {
     request.get(
       {
-        url : `${baseUrl}/locales?q=Osasco`
+        url : `${baseUrl}/weather/by-locale`
       },
       function(error, response, body){
 
@@ -91,9 +91,8 @@ describe("Teste da entidade locale", function () {
           _body = {};
         }
 
-        if( _body.should.have.property('locales') ){
-          expect(_body.locales.length).is.equal(1);
-          expect(_body.locales[0].name).is.equal("Osasco");
+        if( _body.should.have.property('success') ){
+          expect(_body.success).is.equal(false);
         }
 
         done();

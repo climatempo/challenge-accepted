@@ -13,9 +13,4 @@ app.use('/api', api)
 
 app.listen(port, host)
 
-consola.ready({
-  message: `Server listening on http://${host}:${port}`,
-  badge: true
-})
-
 module.exports.baseUrl = `http://${host}:${port}/api`

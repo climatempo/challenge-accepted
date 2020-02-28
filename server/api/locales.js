@@ -3,7 +3,7 @@ const app = require('express')()
 
 app.get('/', (req, res) => {
   // Filtra as cidades baseado no paremetro q
-  let data = []
+  let data = locales
   if (req.query.q) {
     data = locales.filter((locale) => (
       (new RegExp(req.query.q.toLowerCase())).test(locale.name.toLowerCase())

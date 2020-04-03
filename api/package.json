@@ -2,6 +2,10 @@
 	"name": "climatempo-fullstack-challenge-api",
 	"version": "1.0.0",
 	"license": "MIT",
+	"engines": {
+		"node": "10.x"
+	},
+	"main": "src/index.js",
 	"scripts": {
 		"start": "node src/index.js",
 		"dev": "nodemon src/index.js"

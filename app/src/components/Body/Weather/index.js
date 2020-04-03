@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { parse, format } from 'date-fns';
 
 import {
 	Container,
@@ -17,10 +18,15 @@ import drop from '../../../assets/img/icons/raindrop.png';
 import umbrella from '../../../assets/img/icons/umbrella.png';
 
 export default function Weather({ date, text, temperature, rain }) {
+	const dateFormatted = useMemo(() => {
+		const asDate = parse(date, 'yyyy-MM-dd', new window.Date());
+		return format(asDate, 'dd/MM/yyyy');
+	}, []);
+
 	return (
 		<Container>
 			<Header>
-				<Date>{date}</Date>
+				<Date>{dateFormatted}</Date>
 				<Text>{text}</Text>
 			</Header>
 			<Body>

@@ -15,3 +15,7 @@ export const Title = styled.Text`
 	font-size: 20px;
 	margin-bottom: 16px;
 `;
+
+export const NoMatch = styled.Text`
+	font-size: 14px;
+`;

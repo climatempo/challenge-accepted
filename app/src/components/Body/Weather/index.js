@@ -16,35 +16,32 @@ import min from '../../../assets/img/icons/download.png';
 import drop from '../../../assets/img/icons/raindrop.png';
 import umbrella from '../../../assets/img/icons/umbrella.png';
 
-export default function Weather() {
+export default function Weather({ date, text, temperature, rain }) {
 	return (
 		<Container>
 			<Header>
-				<Date>01/02/2017</Date>
-				<Text>
-					Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a
-					qualquer hora
-				</Text>
+				<Date>{date}</Date>
+				<Text>{text}</Text>
 			</Header>
 			<Body>
 				<Group>
 					<Icon source={max} />
-					<Value maxTemperature>20ºC</Value>
+					<Value maxTemperature>{temperature.max}ºC</Value>
 				</Group>
 
 				<Group>
 					<Icon source={min} />
-					<Value minTemperature>10ºC</Value>
+					<Value minTemperature>{temperature.min}ºC</Value>
 				</Group>
 
 				<Group mt>
 					<Icon source={drop} />
-					<Value>10mm</Value>
+					<Value>{rain.precipitation}mm</Value>
 				</Group>
 
 				<Group mt>
 					<Icon source={umbrella} />
-					<Value>50%</Value>
+					<Value>{rain.probability}%</Value>
 				</Group>
 			</Body>
 		</Container>

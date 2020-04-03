@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
 	border-radius: 4px;
-	box-shadow: 0px 3px 10px #bbb;
+	elevation: 5;
 	margin-bottom: 20px;
 	overflow: hidden;
 `;

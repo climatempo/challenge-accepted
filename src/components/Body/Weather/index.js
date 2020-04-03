@@ -16,35 +16,36 @@ import min from '../../../assets/img/icons/download.png';
 import drop from '../../../assets/img/icons/raindrop.png';
 import umbrella from '../../../assets/img/icons/umbrella.png';
 
-export default function Weather() {
+const dateFormatter = new Intl.DateTimeFormat('pt-BR');
+
+export default function Weather({ date, text, temperature, rain }) {
+	const dateFormatted = dateFormatter.format(new window.Date(date));
+
 	return (
 		<Container>
 			<Header>
-				<Date>01/02/2017</Date>
-				<Text>
-					Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a
-					qualquer hora.
-				</Text>
+				<Date>{dateFormatted}</Date>
+				<Text>{text}</Text>
 			</Header>
 			<Body>
 				<Group>
 					<Icon src={max} alt="Ícone de temperatura máxima" />
-					<Value maxTemperature>20ºC</Value>
+					<Value maxTemperature>{temperature.max}ºC</Value>
 				</Group>
 
 				<Group>
 					<Icon src={min} alt="Ícone de temperatura mínima" />
-					<Value minTemperature>10ºC</Value>
+					<Value minTemperature>{temperature.min}ºC</Value>
 				</Group>
 
 				<Group>
 					<Icon src={drop} alt="Ícone de preciptação" />
-					<Value>10mm</Value>
+					<Value>{rain.precipitation}mm</Value>
 				</Group>
 
 				<Group>
 					<Icon src={umbrella} alt="Ícone de probabilidade" />
-					<Value>50%</Value>
+					<Value>{rain.probability}%</Value>
 				</Group>
 			</Body>
 		</Container>

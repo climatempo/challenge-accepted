@@ -31,7 +31,7 @@ export default function Body() {
 			<Wrapper>
 				{loading ? (
 					<Message>Carregando...</Message>
-				) : weathers === null ? (
+				) : weathers === null || weathers.length === 0 ? (
 					<Message>Nenhum resultado encontrado</Message>
 				) : (
 					<Container>

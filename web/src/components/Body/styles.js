@@ -15,3 +15,12 @@ export const Title = styled.h2`
 	font-weight: normal;
 	margin: 0px;
 `;
+
+export const Message = styled.span`
+	display: block;
+	font-size: 0.875rem;
+	margin: 2rem 0px;
+	padding: 0px 0.5rem;
+	text-align: center;
+	width: 100%;
+`;

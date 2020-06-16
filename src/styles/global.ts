@@ -25,7 +25,8 @@ export default createGlobalStyle`
   body {
     -webkit-font-smoothing: antialiased !important;
     font-family: 'Baloo 2', cursive;
-    background-color: #EEF4FB;
+    background: rgb(170,201,254);
+    background: radial-gradient(circle, rgba(170,201,254,1) 0%, rgba(87,149,253,1) 100%);
     overflow-x: hidden;
   }
 

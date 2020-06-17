@@ -27,6 +27,7 @@ export default createGlobalStyle`
     font-family: 'Baloo 2', cursive;
     background: rgb(170,201,254);
     background: radial-gradient(circle, rgba(170,201,254,1) 0%, rgba(87,149,253,1) 100%);
+    color: #555;
     overflow-x: hidden;
   }
 

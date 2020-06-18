@@ -4,7 +4,7 @@ interface InfoProps {
   bgColor: string;
 }
 
-export const Container = styled.header`
+export const Container = styled.div`
   max-width: 85%;
 
   display: flex;
@@ -15,7 +15,7 @@ export const Container = styled.header`
   background-color: #fff;
   border-radius: 8px;
   margin: auto;
-
+  box-shadow: 0px 2px 8px #1d1c1c33;
   & h3 {
     font-size: 2em;
   }

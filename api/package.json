@@ -5,13 +5,16 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "dev:server": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts"
+    "start": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.6",
     "@types/express": "^4.17.6",
+    "@types/lowdb": "^1.0.9",
     "ts-node-dev": "^1.0.0-pre.49",
     "typescript": "^3.9.5"
   }

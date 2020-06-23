@@ -1,3 +1,7 @@
+app/npm-debug.log*
+app/yarn-debug.log*
+app/yarn-error.log*
+app/.gitignore
 
 ### Cloud9 template
 # Cloud9 IDE - http://c9.io
@@ -228,6 +232,7 @@ coverage
 build/Release
 
 # Dependency directories
+/app/node_modules
 node_modules
 jspm_packages
 

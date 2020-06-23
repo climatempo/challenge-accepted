@@ -6,10 +6,23 @@ const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("../base/locales.json");
 const db = low(adapter);
 
-localesRouter.get("/", (request, response) => {
-  const city = db.find({ id: 3735 }).value();
+// http://localhost:3333/locales/city/Osasco
+localesRouter.get("/city/:name", (request, response) => {
+  const nameCity = request.params.name;
+  const data = db
+    .find({
+      name: nameCity,
+    })
+    .value();
 
-  response.send(city);
+  response.send(data);
+});
+
+// http://localhost:3333/locales/all
+localesRouter.get("/all", (request, response) => {
+  const data = JSON.stringify(db);
+
+  response.send(data);
 });
 
 export default localesRouter;

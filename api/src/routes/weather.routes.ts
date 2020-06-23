@@ -6,17 +6,18 @@ const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("../base/weather.json");
 const db = lowdb(adapter);
 
-weatherRouter.get("/:state", (request, response) => {
-  const state = request.params.state;
-  const post = db
+// http://localhost:3333/weather/city/Osasco
+weatherRouter.get("/city/:name", (request, response) => {
+  const city = request.params.name;
+  const data = db
     .find({
       locale: {
-        state: state,
+        name: city,
       },
     })
     .value();
 
-  response.send(post);
+  response.send(data);
 });
 
 export default weatherRouter;

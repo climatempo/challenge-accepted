@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { AutoComplete } from "antd";
 import api from "../../services/api";
 import { useSelectCity } from "../../store/CitySelect";
-
 import { Container } from "./styles";
 
 function Search() {
@@ -23,8 +22,8 @@ function Search() {
   }, []);
 
   let options = [];
-  citys.forEach((item) => {
-    options.push({ value: item.name });
+  citys.forEach((city) => {
+    options.push({ value: city.name });
   });
 
   function searchCity(e) {

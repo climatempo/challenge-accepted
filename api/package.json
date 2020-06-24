@@ -8,6 +8,7 @@
     "start": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "lowdb": "^1.0.0"
   },

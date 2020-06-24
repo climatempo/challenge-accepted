@@ -1,34 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { AutoComplete } from "antd";
+import api from "../../services/api";
 
 import { Container } from "./styles";
-
-const options = [
-  {
-    value: "Burns Bay Road",
-  },
-  {
-    value: "Downing Street",
-  },
-  {
-    value: "Wall Street",
-  },
-];
 
 function searchCity(e) {
   alert(e);
 }
 
 function Search() {
+  const [citys, setCitys] = useState([]);
+
+  useEffect(() => {
+    const loadCitys = () => {
+      api
+        .get(`locales/all`)
+        .then((response) => setCitys(response.data))
+        .catch((e) => {
+          console.log(e);
+        });
+      // .finally(() => setLoading(false));
+    };
+    loadCitys();
+  }, []);
+
+  let options = [];
+  citys.forEach((item) => {
+    options.push({ value: item.name });
+  });
+
   return (
     <Container>
       <AutoComplete
         style={{
-          width: "80%",
+          width: "100%",
         }}
         options={options}
         onSelect={searchCity}
-        placeholder="busque uma cidade..."
+        placeholder="Busque uma cidade..."
         filterOption={(inputValue, option) =>
           option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
         }

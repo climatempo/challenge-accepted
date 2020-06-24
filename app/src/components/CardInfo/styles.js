@@ -5,6 +5,7 @@ export const Container = styled.div`
   margin: 3% 10%;
   background: #fff;
   max-width: 400px;
+  min-width: 290px;
   border: 1px solid #fff;
   transition: border 0.5s;
   &:hover {
@@ -25,7 +26,7 @@ export const Header = styled.span`
 `;
 
 export const Main = styled.div`
-  display: block;
+  display: flex;
   flex-direction: column;
   align-items: center;
   span {

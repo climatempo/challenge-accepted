@@ -1,18 +1,16 @@
 import React from "react";
-import Header from "./components/Header";
-import Search from "./components/Search";
-import CardInfo from "./components/CardInfo";
 import "antd/dist/antd.css";
 import GlobalStyle from "./styles/global.js";
 import CityProvider from "./store/CitySelect";
+import Main from "./components/Main";
+import Header from "./components/Header/index.js";
 
 function App() {
   return (
     <CityProvider>
       <GlobalStyle />
       <Header />
-      <Search />
-      <CardInfo />
+      <Main />
     </CityProvider>
   );
 }

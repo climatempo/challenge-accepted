@@ -3,7 +3,7 @@ import React, { createContext, useState, useContext } from "react";
 const CityContext = createContext();
 
 export default function CityProvider({ children }) {
-  const [citySelect, setCitySelect] = useState([]);
+  const [citySelect, setCitySelect] = useState("");
 
   return (
     <CityContext.Provider

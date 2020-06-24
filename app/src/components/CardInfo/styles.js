@@ -1,8 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  p {
+    font-size: 20px;
+  }
+`;
+
+export const Card = styled.div`
   padding: 40px;
-  margin: 3% 10%;
+  margin: 20px 20px;
   background: #fff;
   max-width: 400px;
   min-width: 290px;

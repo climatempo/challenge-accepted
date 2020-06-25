@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { WiRaindrop, WiUmbrella } from "react-icons/wi";
 import { GrLinkUp, GrLinkDown } from "react-icons/gr";
 import { useSelectCity } from "../../store/CitySelect";
+import formatData from "../../utils/formatData";
+
 import api from "../../services/api";
 
 import { Container, Header, Main, ItemInfo, Card } from "./styles";
@@ -23,14 +25,13 @@ function CardInfo() {
     loadDataWeather();
   }, [citySelect]);
 
-  console.log(dataWeather);
   return (
     <>
       <Container>
         {dataWeather.map((item) => (
           <Card key={item.date}>
             <Header>
-              <span>{item.date}</span>
+              <span>{formatData(item.date)}</span>
               <p>{item.text}</p>
             </Header>
             <Main>

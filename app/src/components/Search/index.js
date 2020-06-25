@@ -6,7 +6,7 @@ import { Container } from "./styles";
 
 function Search() {
   const [citys, setCitys] = useState([]);
-  const { citySelect, setCitySelect } = useSelectCity("");
+  const { setCitySelect } = useSelectCity("");
 
   useEffect(() => {
     const loadCitys = () => {
@@ -29,7 +29,6 @@ function Search() {
   function searchCity(e) {
     setCitySelect(e);
   }
-  console.log(citySelect);
 
   return (
     <Container>

@@ -22,7 +22,6 @@ function CardInfo() {
         .catch((e) => {
           console.log(e);
         });
-      // .finally(() => setLoading(false));
     };
     loadDataWeather();
   }, [citySelect, setDataWeather]);

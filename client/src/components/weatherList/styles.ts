@@ -1,12 +1,7 @@
 import styled from 'styled-components';
 
-interface PropsData {
-  isActivity: boolean;
-}
-
 export const Container = styled.div`
-  max-width: 85%;
-  margin: 40px auto;
+  margin: 10px auto 40px auto;
   & h4 {
     font-size: 1.3em;
     color: #fff;
@@ -15,27 +10,30 @@ export const Container = styled.div`
 
 export const List = styled.ul``;
 
-export const DayInfo = styled.li<PropsData>`
+export const DayInfo = styled.li`
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   border-radius: 8px;
   padding: 0 15px;
   transition: 0.5s;
   font-weight: 500;
-  background: ${(props) => (props.isActivity ? '#21ddf3' : '#fff')};
+  background: #fff;
   box-shadow: 0px 2px 8px #1d1c1c33;
-
+  transition: .7s ease;
   cursor: pointer;
 
   & + li {
     margin-top: 20px;
   }
 
-  &:hover {
-    background: #eee;
+  & > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .day {
+      width: 100px;
+    }
   }
 
   .temperature {
@@ -62,7 +60,6 @@ export const DayInfo = styled.li<PropsData>`
     align-items: center;
     & img {
       width: 25px;
-      margin-right: 15px;
     }
     & span {
       font-size: 0.8em;

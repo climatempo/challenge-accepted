@@ -15,6 +15,7 @@
       {
         "date": "2017-02-01",
         "text": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "icon": "cloud",
         "temperature": {
           "min": 20,
           "max": 28
@@ -27,6 +28,7 @@
       {
         "date": "2017-02-02",
         "text": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "icon": "sun",
         "temperature": {
           "min": 21,
           "max": 30
@@ -39,6 +41,7 @@
       {
         "date": "2017-02-03",
         "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "icon": "sun",
         "temperature": {
           "min": 22,
           "max": 31
@@ -51,6 +54,7 @@
       {
         "date": "2017-02-04",
         "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "icon": "cloud",
         "temperature": {
           "min": 22,
           "max": 32
@@ -63,6 +67,7 @@
       {
         "date": "2017-02-05",
         "text": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "icon": "sun",
         "temperature": {
           "min": 23,
           "max": 32
@@ -75,6 +80,7 @@
       {
         "date": "2017-02-06",
         "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "icon": "sun",
         "temperature": {
           "min": 22,
           "max": 33
@@ -87,6 +93,7 @@
       {
         "date": "2017-02-07",
         "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "icon": "rain",
         "temperature": {
           "min": 25,
           "max": 30
@@ -114,6 +121,7 @@
       {
         "date": "2017-02-01",
         "text": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "icon": "sun",
         "temperature": {
           "min": 19,
           "max": 27
@@ -126,6 +134,7 @@
       {
         "date": "2017-02-02",
         "text": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "icon": "cloud",
         "temperature": {
           "min": 20,
           "max": 29
@@ -138,6 +147,7 @@
       {
         "date": "2017-02-03",
         "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "icon": "cloud",
         "temperature": {
           "min": 21,
           "max": 30
@@ -150,6 +160,7 @@
       {
         "date": "2017-02-04",
         "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "icon": "sun",
         "temperature": {
           "min": 21,
           "max": 31
@@ -162,6 +173,7 @@
       {
         "date": "2017-02-05",
         "text": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "icon": "cloud",
         "temperature": {
           "min": 22,
           "max": 31
@@ -174,6 +186,7 @@
       {
         "date": "2017-02-06",
         "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "icon": "rain",
         "temperature": {
           "min": 21,
           "max": 32
@@ -186,6 +199,7 @@
       {
         "date": "2017-02-07",
         "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "icon": "rain",
         "temperature": {
           "min": 22,
           "max": 33

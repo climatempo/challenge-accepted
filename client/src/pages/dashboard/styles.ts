@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  padding: 25px;
   .header {
-    max-width: 85%;
-    margin: auto;
+    margin: auto auto 20px auto;
     display: flex;
     justify-content: space-between;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 600;
+    line-height: 21px;
   }
 `;
 

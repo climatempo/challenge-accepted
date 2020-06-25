@@ -5,17 +5,14 @@ interface InfoProps {
 }
 
 export const Container = styled.div`
-  max-width: 85%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   background-color: #fff;
   border-radius: 8px;
   margin: auto;
-  box-shadow: 0px 2px 8px #1d1c1c33;
   & h3 {
     font-size: 2em;
   }
@@ -26,7 +23,8 @@ export const Container = styled.div`
     align-items: center;
 
     & img {
-      width: 100px;
+      /* width: 100px; */
+      height: 100px;
       margin-right: 20px;
     }
 

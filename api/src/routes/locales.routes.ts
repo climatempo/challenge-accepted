@@ -3,7 +3,8 @@ const localesRouter = Router();
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 
-const adapter = new FileSync("../base/locales.json");
+const adapter = new FileSync("./src/base/locales.json");
+
 const db = low(adapter);
 
 // http://localhost:3333/locales/city/Osasco

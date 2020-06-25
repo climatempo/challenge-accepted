@@ -52,11 +52,11 @@ No React, utilizei o ContextAPI para fazer o controle de estado dos dados da apl
 
 **Backend:**
 
-Para simular as operações de busca nos arquivos JSON disponibilizados, utilizei o LowDB que permite ler e escrever em um JSON local. Para o sistema de rotas dentro do Node utilizei o Express.
-
 - [Node.js](https://nodejs.org/en/)
 - [LowDB](https://github.com/typicode/lowdb)
 - [Express](https://expressjs.com/pt-br/)
+
+Para simular as operações de busca nos arquivos JSON disponibilizados, utilizei o LowDB que permite ler e escrever em um JSON local. Para o sistema de rotas dentro do Node utilizei o Express.
 
 ## Screenshots
 
@@ -70,8 +70,8 @@ Para simular as operações de busca nos arquivos JSON disponibilizados, utilize
 ### Mobile App
 
 <p align="center">
-    <img src="./screenshots/app2.png" width="210" margin="20"/>
-    <img src="./screenshots/app3.gif" width="210" margin="20"/>
+    <img src="./screenshots/app2.png" width="210" />
+    <img src="./screenshots/app3.gif" width="210" />
 </p>
 
 © Adeilton Sousa

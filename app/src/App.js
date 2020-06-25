@@ -4,13 +4,16 @@ import GlobalStyle from "./styles/global.js";
 import CityProvider from "./store/CitySelect";
 import Main from "./components/Main";
 import Header from "./components/Header/index.js";
+import WeatherProvider from "./store/DataWeather.js";
 
 function App() {
   return (
     <CityProvider>
-      <GlobalStyle />
-      <Header />
-      <Main />
+      <WeatherProvider>
+        <GlobalStyle />
+        <Header />
+        <Main />
+      </WeatherProvider>
     </CityProvider>
   );
 }

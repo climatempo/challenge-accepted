@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { WiRaindrop, WiUmbrella } from "react-icons/wi";
 import { GrLinkUp, GrLinkDown } from "react-icons/gr";
 import { useSelectCity } from "../../store/CitySelect";
+import { useDataWeather } from "../../store/DataWeather";
+
 import formatData from "../../utils/formatData";
 
 import api from "../../services/api";
@@ -9,7 +11,7 @@ import api from "../../services/api";
 import { Container, Header, Main, ItemInfo, Card } from "./styles";
 
 function CardInfo() {
-  const [dataWeather, setDataWeather] = useState([]);
+  const { dataWeather, setDataWeather } = useDataWeather([]);
   const { citySelect } = useSelectCity("");
 
   useEffect(() => {
@@ -23,7 +25,7 @@ function CardInfo() {
       // .finally(() => setLoading(false));
     };
     loadDataWeather();
-  }, [citySelect]);
+  }, [citySelect, setDataWeather]);
 
   return (
     <>

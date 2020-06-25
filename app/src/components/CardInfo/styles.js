@@ -24,7 +24,7 @@ export const Card = styled.div`
 export const Header = styled.span`
   display: flex;
   flex-direction: column;
-  border-bottom: 3px solid #d4d4d4;
+  border-bottom: 1px solid #24243e;
   margin-bottom: 20px;
 
   span {

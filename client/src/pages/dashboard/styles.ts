@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   padding: 25px;
+  max-width: 1000px;
+  margin: auto;
   .header {
     margin: auto auto 20px auto;
     display: flex;

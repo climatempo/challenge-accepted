@@ -8,7 +8,11 @@ export const Container = styled.div`
   }
 `;
 
-export const List = styled.ul``;
+export const List = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
 
 export const DayInfo = styled.li`
   width: 100%;
@@ -22,8 +26,16 @@ export const DayInfo = styled.li`
   transition: .7s ease;
   cursor: pointer;
 
+  @media(min-width: 768px) {
+    width: 49%;
+    margin: 0 0 20px 0;
+  }
+
   & + li {
     margin-top: 20px;
+    @media(min-width: 768px) {
+      margin: 0 0 20px 0;
+    }
   }
 
   & > div {

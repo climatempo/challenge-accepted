@@ -22,16 +22,19 @@ routes.get("/locales", (request, response) =>
   response.json({ locales: localesData })
 );
 
-// routes.get("/weather", (request, response) =>
-//   response.json({ locales: weatherData })
-// );
-
 routes.get("/weather", (request, response) => {
   const { city } = request.query;
 
   const weatherFiltered = weatherData.find(
-    (item: Weather) => item.locale.name === city
+    (item: Weather) =>
+      item.locale.name.toLowerCase() === String(city).toLowerCase()
   );
+
+  if (!weatherFiltered) {
+    return response
+      .status(400)
+      .json({ message: "Não temos previsões para este local" });
+  }
 
   const weather = weatherFiltered.weather.map(
     (item: Weather, index: number) => ({
@@ -40,7 +43,7 @@ routes.get("/weather", (request, response) => {
     })
   );
 
-  response.json({
+  return response.json({
     locale: weatherFiltered.locale,
     weather,
   });

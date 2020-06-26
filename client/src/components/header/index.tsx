@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 
 import { Container, InputWrapper } from './styles';
 
 import logo from '../../images/logo-white.png';
 import search from '../../images/icons/search.svg';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  handleSearch(data: string): void;
+}
+
+const Header: React.FC<HeaderProps> = ({ handleSearch }) => {
+  const [searchValue, setSearchValue] = useState<string>('');
+
+  const handleSubmit = useCallback(e => {
+    e.preventDefault();
+    if (!searchValue) return false;
+    handleSearch(searchValue);
+  }, [handleSearch, searchValue])
+
   return (
     <Container>
       <img className="logo" src={logo} alt="climatempo logo" />
-      <form className="search">
+      <form onSubmit={handleSubmit} className="search">
         <InputWrapper>
-          <input  />
-          <img className="search-image" src={search} alt="climatempo logo" />
+          <input value={searchValue} onChange={event => setSearchValue(event.target.value)} />
+          <img onClick={handleSubmit} className="search-image" src={search} alt="climatempo logo" />
         </InputWrapper>
       </form>
     </Container>
@@ -20,4 +32,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
- 

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import moment from 'moment';
 
 import api from '../../service/api';
 
@@ -47,9 +46,10 @@ const Dashboard: React.FC = () => {
       }
     }]
   );
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   useEffect(() => {
-    api.get('/weather?city=Osasco').then(response => {
+    api.get('/weather?city=São Paulo').then(response => {
       const { weather, locale } = response.data;
 
       setLocale(locale);
@@ -58,20 +58,32 @@ const Dashboard: React.FC = () => {
 
   }, [setWeather]);
 
-  const handleSearch = useCallback(() => {
+  const handleSearch = useCallback(async (data) => {
+    await api.get(`/weather?city=${data}`).then(response => {
+      const { weather, locale } = response.data;
 
-  }, []);
-
-  console.log('weather', weather);
+      setLocale(locale);
+      setWeather(weather);
+      setErrorMessage('');
+    }).catch(() => {
+      setLocale({} as LocaleData);
+      setWeather([] as WeatherData[]);
+      setErrorMessage('Nenhuma previsão para essa localização!');
+    });
+  }, [setLocale, setWeather, setErrorMessage]);
 
   return (
     <Container>
-      <Header />
+      <Header handleSearch={handleSearch} />
       <Content>
         <div className="header">
-          <h4>Previsões da semana <br />em {locale.name} - {locale.state}</h4>
+          {
+            !errorMessage
+            ? <h4>Previsões da semana <br />em {locale.name} - {locale.state}</h4>
+            : <h4>{errorMessage}</h4>
+          }
         </div>
-        <WeatherList weather={weather} />
+        { !!weather.length && <WeatherList weather={weather} /> }
       </Content>
     </Container>
   );

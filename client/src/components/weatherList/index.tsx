@@ -1,6 +1,4 @@
 import React from 'react';
-import moment from 'moment';
-import 'moment/locale/pt-br';
 
 import WeatherLDetail from '../weatherLDetail';
 
@@ -30,7 +28,7 @@ const WeatherList: React.FC<ComponentProps> = ({ weather }) => {
       <List>
         {
           weather.map(item =>
-            <DayInfo>
+            <DayInfo key={item.date}>
               <WeatherLDetail weather={item} />
             </DayInfo>
           )

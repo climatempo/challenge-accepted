@@ -2,12 +2,13 @@
 
 No terminal va até a pasta server e execute os comandos:
 
-### `yarn install`
-### `yarn dev:install`
+#### `yarn install`
+#### `yarn dev:server`
 
 Em outra aba, execute os seguntes comandos na pasta client:
 
-### `yarn install`
-### `yarn start`
+#### `yarn install`
+#### `yarn start`
 
-No search, só é possivel pesquisar por Osasco e São Paulo
+## Observação
+No search, só é possivel pesquisar por Osasco e São Paulo.

@@ -1,0 +1,85 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  //"parser": [],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "codeFrame": false,
+    "allowImportExportEverywhere": false
+  },
+  "plugins": ["react", "import", "jsx-a11y"],
+  "rules": {
+    "import/extensions": [
+      0,
+      "ignorePackages",
+      {
+        "ignorePackages": true,
+        "pattern": {
+          "<extension>": "ignorePackages"
+        }
+      }
+    ],
+    "includeExports": 0,
+    "no-unused-vars": 0,
+    "no-undef": 0,
+    "import/named": 0,
+    "react/jsx-key": 0,
+    "no-unneeded-ternary": 0,
+    "no-underscore-dangle": 0,
+    "no-shadow": 0,
+    "no-console": 0,
+    "import/order": 0,
+    "default-case": 0,
+    "no-unused-expressions": 0,
+    "jsx-a11y/no-autofocus": 0,
+    "spaced-comment": 0,
+    "react/destructuring-assignment": 0,
+    "react/jsx-wrap-multilines": "off",
+    "react/no-array-index-key": "off",
+    "import/no-named-as-default": 0,
+    "react/button-has-type": 0,
+    "react/prop-types": 0,
+    "eslintimport/extensions": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default-member": 0,
+    "import/no-extraneous-dependencies": 0,
+    "react/display-name": 1,
+    "jsx-a11y/rule-name": 0,
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "import/no-useless-path-segments": [
+      "error",
+      {
+        "noUselessIndex": true
+      }
+    ],
+    "import/no-duplicates": ["error", { "considerQueryString": true }],
+    "global-require": "off",
+    "import/prefer-default-export": "off",
+    "no-return-assign": ["off"],
+    "prefer-promise-reject-errors": ["off"],
+    "react/jsx-one-expression-per-line": ["off"]
+  }
+}

@@ -1,0 +1,6 @@
+export const ActionTypes = {
+  LOADING: 'LOADING',
+  ERROR: 'ERROR',
+  GET_DATAS: 'GET_DATAS',
+  SEARCH_WEATHER: 'SEARCH_WEATHER',
+};

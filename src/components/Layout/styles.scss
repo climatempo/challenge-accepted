@@ -1,0 +1,18 @@
+.bgHeader {
+  background-color: #1565c0;
+  width: 100%;
+  &-logo {
+    max-width: 1200px;
+    padding: 1rem 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    img {
+      max-width: 100px;
+    }
+  }
+}
+.bgContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}

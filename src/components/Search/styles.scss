@@ -1,0 +1,21 @@
+.bgSearch {
+  width: 100%;
+  &-input {
+    max-width: 1200px;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+    display: flex;
+    form {
+      width: 100%;
+      input {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #cfcfcf;
+        transition: 0.3s linear;
+        &:focus {
+          box-shadow: inset 0 0 0.3rem #cce6fc, 0 0 0.7em #cce6fc;
+        }
+      }
+    }
+  }
+}

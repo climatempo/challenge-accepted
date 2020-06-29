@@ -1,0 +1,16 @@
+{
+  "name": "api-simple-climatempo",
+  "version": "1.0.0",
+  "description": "A simple API for the climatempo frontend",
+  "main": "index.js",
+  "repository": "git@github.com:luanribeiros/fetch-weather-forecast.git",
+  "author": "Luan Ribeiro",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "json-server --watch base/weather.json --port 3001"
+  },
+  "dependencies": {
+    "json-server": "^0.16.1"
+  }
+}

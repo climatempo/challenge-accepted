@@ -1,11 +1,14 @@
 import * as express from "express";
 import { Connection } from "typeorm";
+import { LocaleRepository, WeatherRepository } from "./repositories";
 
 export interface IContext {
   captureException(error: Error): void;
   app: express.Application;
   db: {
     connection: Connection;
+    locales: LocaleRepository;
+    weathers: WeatherRepository;
   };
   integrations: {};
 }
@@ -32,6 +35,8 @@ export class Context {
       captureException: () => null,
       db: {
         connection,
+        locales: connection.getCustomRepository(LocaleRepository),
+        weathers: connection.getCustomRepository(WeatherRepository),
       },
       integrations: {},
     };

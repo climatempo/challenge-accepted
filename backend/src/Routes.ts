@@ -1,4 +1,5 @@
 import { Application } from "express";
+import weatherRoute from "./routes/WeatherRoute";
 
 class Routes {
   /**
@@ -8,7 +9,9 @@ class Routes {
    * @memberof Routes
    */
   initRoutes(app: Application): void {
-    console.log("Routes here");
+    app.route("/api/weather/:cityName").get((req, res) => {
+      weatherRoute.getWeather(req, res);
+    });
   }
 }
 

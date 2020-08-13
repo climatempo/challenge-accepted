@@ -10,7 +10,7 @@ export class LocalesTable1597345233818 implements MigrationInterface {
                 "name" TEXT NOT NULL,
                 "state" TEXT NOT NULL,
                 "latitude"  DOUBLE PRECISION NOT NULL,
-                "longitude"  DOUBLE PRECISION NOT NULL,
+                "longitude"  DOUBLE PRECISION NOT NULL
             );
         `, undefined);
     }

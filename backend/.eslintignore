@@ -1,0 +1,3 @@
+build/
+ormconfig.js
+src/migrations

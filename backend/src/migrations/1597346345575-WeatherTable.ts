@@ -12,7 +12,8 @@ export class WeatherTable1597346345575 implements MigrationInterface {
                 "temperature_min"  REAL NOT NULL,
                 "temperature_max"  REAL NOT NULL,
                 "rain_probability"  INT NOT NULL,
-                "rain_precipitation"  INT NOT NULL
+                "rain_precipitation"  INT NOT NULL,
+                UNIQUE(locale_id, date)
             );
         `, undefined);
     }

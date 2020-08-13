@@ -1,4 +1,30 @@
-<h1 align="center">ClimaTempo API</h1>
+<h1 align="center">Desafio ClimaTempo API</h1>
+
+## O desafio foi desenvolvido utilizando os seguintes recursos:
+  
+  DevOps
+    - Docker
+
+  Banco de dados:
+    - TypeORM
+    - PostgreSQL
+
+  HTTP:
+    - Express
+    - Http-status
+
+  Build:
+    - Gulp
+
+  Testes:
+    - Jest
+    - Faker
+    - Supertest
+
+  Organização
+    - Typescript;
+    - Lint
+    - Prettier
 
 ## Primeiros passos
 
@@ -11,8 +37,16 @@
 7. Rode o projeto localmente com `npm run dev`.
 8. Execute os casos de teste com `npm test`.
 9. Execute `mkdir build` e `npm start` para buildar e rodar o projeto.
-10. Você poderá executar o Postman realizando uma chamada GET para o endpoint: http://localhost:8000/api/weather/Osasco
-11. Ao rodar o projeto pela primeira vez, os dados dos arquivos `locales.json` e `weather.json` serão importados para a base de dados postgres.
+10. Ao rodar o projeto pela primeira vez, os dados dos arquivos `locales.json` e `weather.json` serão importados para a base de dados postgreSQL.
 
--------------------------------------
-Daniel Bonfim <daniel.fb88@gmail.com>
+## Endpoints
+Obter os climas da cidade de Osasco: GET - http://localhost:8000/api/weather/Osasco
+Obter as localizações disponíveis: GET - http://localhost:8000/api/locale
+
+
+## Sobre o desenvolvedor:
+  - **Nome:** Daniel Bonfim
+  - **E-mail:** daniel.fb88@gmail.com
+  - **Site:** http://danielbonfim.com.br
+  - **Github:** https://github.com/danielfb88
+  - **LinkedIn:** https://www.linkedin.com/in/daniel-bonfim-b730b739/

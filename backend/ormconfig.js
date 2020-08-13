@@ -9,7 +9,7 @@ module.exports = {
   password: DB_PASSWORD,
   port: DB_PORT,
   username: DB_USERNAME,
-  logging: Boolean(DB_LOGGING),
+  logging: new Boolean(DB_LOGGING),
 
   cli: {
     migrationsDir: "src/migrations",

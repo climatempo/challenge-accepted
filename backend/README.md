@@ -6,8 +6,8 @@
     - Docker
 
   Banco de dados:
-    - TypeORM
     - PostgreSQL
+    - TypeORM
 
   HTTP:
     - Express

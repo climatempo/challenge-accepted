@@ -6,6 +6,8 @@ import { PostgresConnectionOptions } from "typeorm/driver/postgres/PostgresConne
 import App from "../src/App";
 import { Context, IContext } from "../src/Context";
 import { LocaleRepository, WeatherRepository } from "../src/repositories";
+import localeService from "./../src/services/LocaleService";
+import weatherService from "./../src/services/WeatherService";
 
 process.env.TZ = "UTC";
 
@@ -46,6 +48,9 @@ beforeAll(async () => {
     });
 
     Context.createContext({ app: App, connection });
+
+    await localeService.importFileContentToDatabase();
+    await weatherService.importFileContentToDatabase();
   } catch (err) {
     process.stderr.write(`${err}\n${err.stack || ""}\n`);
     // eslint-disable-next-line no-process-exit

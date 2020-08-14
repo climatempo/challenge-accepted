@@ -1,5 +1,4 @@
 import App from "../../src/App";
-import { IContext } from "../../src/Context";
 import { ILocale } from "../../src/types";
 import { makeCtx } from "../helpers";
 const supertest = require("supertest");
@@ -7,11 +6,9 @@ const supertest = require("supertest");
 const app = App;
 const request = supertest;
 
-let ctx: IContext;
-
 describe("Weather Integration tests", () => {
   beforeAll(() => {
-    ctx = makeCtx({});
+    makeCtx({});
   });
 
   describe("GET /api/weather/:cityName", () => {

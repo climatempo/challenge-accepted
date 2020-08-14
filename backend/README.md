@@ -1,32 +1,17 @@
 <h1 align="center">Desafio ClimaTempo API</h1>
 
-## O desafio foi desenvolvido utilizando os seguintes recursos:
+___
+
+### Recursos:
   
-  DevOps
-    - Docker
+- DevOps: Docker
+- Banco de dados: PostgreSQL, TypeORM
+- HTTP: Express, Http-status
+- Build: Gulp
+- Testes: Jest, Faker, Supertest
+- Organização: Typescript, Lint, Prettier
 
-  Banco de dados:
-    - PostgreSQL
-    - TypeORM
-
-  HTTP:
-    - Express
-    - Http-status
-
-  Build:
-    - Gulp
-
-  Testes:
-    - Jest
-    - Faker
-    - Supertest
-
-  Organização
-    - Typescript;
-    - Lint
-    - Prettier
-
-## Primeiros passos
+### Primeiros passos
 
 1. A versão utilizada é Node.js 12
 2. É necessário ter o PostgreSQL 10 ou 11 instalado, ou você pode usar o Docker.
@@ -39,12 +24,12 @@
 9. Execute `mkdir build` e `npm start` para buildar e rodar o projeto.
 10. Ao rodar o projeto pela primeira vez, os dados dos arquivos `locales.json` e `weather.json` serão importados para a base de dados postgreSQL.
 
-## Endpoints
-Obter os climas da cidade de Osasco: GET - http://localhost:8000/api/weather/Osasco
-Obter as localizações disponíveis: GET - http://localhost:8000/api/locale
+### Endpoints
+- Obter os climas da cidade de Osasco: GET - http://localhost:8000/api/weather/Osasco
+- Obter as localizações disponíveis: GET - http://localhost:8000/api/locale
 
 
-## Sobre o desenvolvedor:
+### Desenvolvedor:
   - **Nome:** Daniel Bonfim
   - **E-mail:** daniel.fb88@gmail.com
   - **Site:** http://danielbonfim.com.br

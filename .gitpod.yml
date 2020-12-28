@@ -4,3 +4,7 @@ image:
 tasks:
   - init: 'echo "TODO: Replace with init/build command"'
     command: 'echo "TODO: Replace with command to start project"'
+
+vscode:
+  extensions:
+    - pkief.material-icon-theme@4.4.0:rUeW9VprKCFBXYTvg+AimA==

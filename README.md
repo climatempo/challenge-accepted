@@ -36,11 +36,6 @@ Requisitos para a vaga, bons conhecimentos em:
 - RESTful
 - React JS
 
-IMPORTANTE:
-
-- Residir no vale do paraíba ou nas proximidades.
-
-
 ### O Desafio
 
 Um usuário quer saber como vai ficar o 

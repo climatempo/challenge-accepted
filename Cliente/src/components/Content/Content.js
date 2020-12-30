@@ -1,23 +1,23 @@
-import React,{ useState, useEffect} from 'react';
+import React,{ useState, useEffect} from 'react'
 import { Row, Container } from 'reactstrap'
-import axios from 'axios';
+import axios from 'axios'
 import TimeCard from '../TimeCard/TimeCard'
 
 export default function Content(props) {
-  const [weather, setWeather] = useState([]);
-  const [idCity, setCity] = useState(props.city);
+  const [weather, setWeather] = useState([])
+  const [idCity, setCity] = useState(props.city)
 
   useEffect(() => {
     async function fetchAPI() {
       try{
-        let { data } = await axios.get(`http://localhost:5000/weathers/${idCity}/`);
-        setWeather(data);
+        let { data } = await axios.get(`http://localhost:5000/weathers/${idCity}/`)
+        setWeather(data)
       }catch(error){
         alert("Ocorreu um erro ao buscar os dados da cidade.")
       }
     }
-    fetchAPI();
-  }, [idCity]);
+    fetchAPI()
+  }, [idCity])
 
   return(
     weather === undefined || weather.length === 0 || weather[0].length === null ? 

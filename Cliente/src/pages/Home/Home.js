@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom"
 
 const Home = () => {
 
-  let { city } = useParams();
+  let { city } = useParams()
 
   return (
     <div className="bg-light">

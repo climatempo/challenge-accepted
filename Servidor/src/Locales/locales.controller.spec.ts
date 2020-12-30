@@ -5,10 +5,10 @@ describe('LocalesController Testes', () => {
 
     it('Busca um array com todos os locais.', async () => {
       await request('http://localhost:5000')
-      .get('/locales/all')
-      .expect('Content-Type', /json/)
-      .expect(200)
-    });
+        .get('/locales/all')
+        .expect('Content-Type', /json/)
+        .expect(200)
+    })
 
-  });
-});
+  })
+})

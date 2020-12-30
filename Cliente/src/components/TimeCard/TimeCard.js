@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Row,
   Col,
@@ -42,5 +42,5 @@ export default function TimeCard(props) {
         </CardBody>
       </Card>
       </Row>
-  );
+  )
 }

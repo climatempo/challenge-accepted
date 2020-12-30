@@ -3,8 +3,8 @@ import {
   Get,
   HttpException,
   HttpStatus
-} from '@nestjs/common';
-import { LocalesService } from './locales.service';
+} from '@nestjs/common'
+import { LocalesService } from './locales.service'
 
 @Controller('locales')
 export class LocalesController {
@@ -13,9 +13,9 @@ export class LocalesController {
   @Get('/all')
   public async getAllLocales() {
     try {
-      return this.localesService.getAllLocales();
+      return this.localesService.getAllLocales()
     } catch (error) {
-      throw new HttpException('Error', HttpStatus.BAD_REQUEST);
+      throw new HttpException('Error', HttpStatus.BAD_REQUEST)
     }
   }
 }

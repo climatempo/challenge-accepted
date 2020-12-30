@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Row,
   Col,
@@ -14,5 +14,5 @@ export default function NavBar() {
         </Col>
       </Row>    
     </Container>
-  );
+  )
 }

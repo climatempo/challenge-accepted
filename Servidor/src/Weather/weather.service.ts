@@ -1,20 +1,20 @@
-import { Injectable } from '@nestjs/common';
-import * as weathers from './weather.json';
+import { Injectable } from '@nestjs/common'
+import * as weathers from './weather.json'
 
 @Injectable()
 export class WeatherService {
 
   public async getAllWeather() {
-    return weathers;
+    return weathers
   }
 
   public async getWeatherById(id: number) {
 
     const fillteredWeathers = weathers.filter(val => {
-      return val.locale.id == id;
+      return val.locale.id == id
     })
 
-    return fillteredWeathers;
+    return fillteredWeathers
   }
 
 }

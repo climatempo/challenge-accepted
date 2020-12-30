@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import {
   Row,
   Col,
@@ -7,29 +7,27 @@ import {
   FormGroup,
   Button
 } from 'reactstrap'
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import TextField from '@material-ui/core/TextField';
-import axios from 'axios';
-import { useHistory } from "react-router-dom";
+import Autocomplete from '@material-ui/lab/Autocomplete'
+import TextField from '@material-ui/core/TextField'
+import axios from 'axios'
 
 export default function FormBar() {
-  let history = useHistory();
-  const [city, setCity] = useState("");
-  const [autoCompleteCities, setAutoCompleteCities] = useState([]);
+  const [city, setCity] = useState("")
+  const [autoCompleteCities, setAutoCompleteCities] = useState([])
 
   useEffect(() => {
     async function fetchAPI(){
-      const result = await axios.get('http://localhost:5000/locales/all');
-      setAutoCompleteCities(result.data);
+      const result = await axios.get('http://localhost:5000/locales/all')
+      setAutoCompleteCities(result.data)
     }
-    fetchAPI();
-  }, [city]);
+    fetchAPI()
+  }, [city])
 
   const redirect = () => {
     if(city === "" || city === "null" || city === null || city === undefined){
       window.location.href = '/'
     } else {
-      window.location.href = `/city/${city}`;
+      window.location.href = `/city/${city}`
     } 
   }
 
@@ -44,7 +42,7 @@ export default function FormBar() {
               getOptionLabel={(option) => option.name}
               style={{ width: 250, backgroundColor: '#ffffff' }}
               onChange={(event, newValue) => {
-                newValue === null ? setCity(""): setCity(newValue.id);
+                newValue === null ? setCity(""): setCity(newValue.id)
               }}
               renderInput={(params) => <TextField {...params} label="Cidade"  variant="outlined"/>}/>
               <Button type="button" 
@@ -56,5 +54,5 @@ export default function FormBar() {
         </Col>
       </Row>
     </Container>
-  );
+  )
 }

@@ -1,5 +1,5 @@
 Explicação de como rodar o projeto.
-Caso tenha dúvidas basta acessar o vídeo que gravei explicando : https://youtu.be/-9N9yzOzGQ4
+Caso tenha dúvidas basta acessar o vídeo que gravei explicando: https://youtu.be/-9N9yzOzGQ4
 ___
 
 ## Tecnologias

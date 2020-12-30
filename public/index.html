@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Climatempo</title>
+        <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+        <link rel="stylesheet" href="stylesheets/app.css">
+        <script src="javascripts/jquery-3.5.1.min.js"></script>
+        <script src="javascripts/bootstrap.bundle.min.js"></script>
+        <script src="javascripts/bootstrap-autocomplete.min.js"></script>
+        <script src="javascripts/axios.min.js"></script>
+        <script src="javascripts/moment.min.js"></script>
+        <script src="javascripts/vue.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-dark bg-primary">
+            <a class="navbar-brand brand" href="#">
+                <img src="images/logo.png" height="50" alt="" loading="lazy">
+            </a>
+        </nav>
+
+        <div id="app">
+            <div class="form-group">
+                <input class="form-control basicAutoComplete form-control-lg" 
+                        type="text" data-url="locales" autocomplete="off"
+                        placeholder="Entre com o nome de uma cidade...">
+                <input type="hidden" :value="selectedLocaleId">
+            </div>
+
+            <div class="container" v-if="locale !== undefined">
+                <h1 class="display-4">Previsão para {{ locale.name }} - {{ locale.state }}</h1>
+
+                <div class="card text-center bottom" v-for="forecast in forecasts">
+                    <div class="card-header">
+                        <b>{{ forecast.date.format("DD/MM/YYYY") }}</b>
+                    </div>
+
+                    <div class="card-body">
+                        <p class="card-text">
+                            {{ forecast.text }}
+                        </p>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                                    </svg>
+                                    {{ forecast.temperature.max }} º C
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                                    </svg>
+                                    {{ forecast.temperature.min }} º C
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                                    </svg>
+                                    {{ forecast.rain.precipitation }} mm
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
+                                        <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                                    </svg>
+                                    {{ forecast.rain.probability }} %
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="javascripts/app.js"></script>
+    </body>
+</html>

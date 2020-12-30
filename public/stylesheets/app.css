@@ -1,0 +1,27 @@
+.navbar-brand {
+    margin: 0 auto;
+}
+
+.navbar-collapse {
+    position: absolute;
+    top: 10px;
+}
+
+@media (max-width: 767px) {
+    .navbar-brand {
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 10px;
+    }
+
+    .navbar-collapse {
+        position: inherit;
+    }
+}
+
+.bottom {
+    margin-bottom: 0.5em;
+}

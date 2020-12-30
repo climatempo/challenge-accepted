@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {
-    "dev": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
-  },
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

@@ -1,16 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-import './App.css'
+import './styles/global.css';
 
-import backImg from '../../images/logo.png'
+import api from './services/api';
+
+import Header from './components/Header';
+import LocaleSearch from './components/LocaleSearch';
 
 function App() {
-  return (
-    <>
-      <h1>Hello World</h1>
-      <img src={backImg} width={300} />
-    </>
-  )
+  return <Header />;
 }
 
-export default App
+export default App;

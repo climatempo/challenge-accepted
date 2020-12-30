@@ -1,0 +1,12 @@
+#header-climatempo {
+  width: 100%;
+  height: 50px;
+  background-color: #1565c0;
+}
+
+#header-climatempo img {
+  width: 100%;
+  height: 42%;
+  object-fit: contain;
+  margin-top: 13px;
+}

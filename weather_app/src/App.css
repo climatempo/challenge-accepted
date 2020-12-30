@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;1,300&display=swap');
+
+p, label, body, div{
+  padding: 0;
+  margin: 0;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+}
+
+body{
+  background-color: #E0E0E0;
+}
+
+.Header{
+  width: 100%;
+  font-size: 1em;
+  color: white;
+  background-color: #1565C0;
+  font-weight: 100;
+  text-align: center;
+  padding: 0.1% 0%;
+}
+
+.Search-Bar{
+  width: 100%;
+  display: flex;
+}
+
+.Search-Bar input{
+  width: 80%;
+  font-size: 2em;
+  color: black;
+  float: left;
+  border: none;
+  height: 2.1em;
+  font-family: 'Barlow', sans-serif;
+  padding-left: 3%;
+}
+
+.Search-Bar div{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  font-size: 2em;
+  border: none;
+  background-color: white;
+}
+
+.Main{
+  background-color: #E0E0E0;
+  padding: 0%;
+  padding-bottom: 3%;
+  height: 100%;
+}
+
+.Main h3{
+  margin: 5% 5%;
+  font-size: 1.5em;
+}
+
+.Card{
+  background-color: #EEEEEE;
+  margin: 8% 5% 0% 5%;
+  box-shadow: 0px 1px 4px 1px #888888;
+  display: flex;
+  flex-direction: column;
+}
+
+.Card-Header{
+  width: 96%;
+  background-color: white;
+  padding: 2%;
+  font-size: 1.2em;
+}
+
+.Card-Header label{
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.Card-Header p{
+  margin-top: 2%;
+  font-size: 0.7em;
+}
+
+.Card-Content{
+  background-color: #EEEEEE ;
+  width: 42%;
+  float: left;
+  padding: 4%;
+  font-size: 1.8em;
+  text-align: left;
+}
+
+.temp-max{
+  color: #C62828;
+}
+
+.temp-min{
+  color: #0277BD;
+}
+
+i{
+  padding: 10%;
+}

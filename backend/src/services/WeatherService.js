@@ -34,7 +34,7 @@ export default class WeatherService {
     })
 
     if(!weather)
-      throw new AppError('Dados de clima não encontrados para esta localidade')
+      throw new AppError('Nenhuma previsão encontrada para esta localidade', 404)
 
     return weather
   }

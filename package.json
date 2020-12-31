@@ -1,0 +1,25 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r   <a href=\"http://www.climatempo.com.br\">\r       <img src=\"http://i.imgur.com/Q9lCAMF.png\" alt=\"Climatempo\" width=\"300px\"/>\r   </a>\r </p>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heronluz/challenge-accepted.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heronluz/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/heronluz/challenge-accepted#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}

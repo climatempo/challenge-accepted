@@ -1,0 +1,401 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#gif{
+    position: relative;
+    animation:  fadeIn 2s infinite;
+    background-image: url(images/logo.png);
+    background-size: 60%;
+    margin-top: 0;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 25vh;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#cidade{
+    border: none!important;
+    border-radius: 0!important;
+    border-bottom: 1px solid rgb(175, 175, 175)!important;
+    box-sizing: border-box;
+    height: 3.5em;
+    width: 100%;
+    font-size: 20px;
+    background-image: url(images/icons/search.png);
+    background-position: 97% center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 20px 0px 30px;
+}
+
+#cidade:focus{     
+    outline: none!important; 
+}
+
+.navbar{
+    background-color: #1565c0!important;
+    background-image: url(images/logo-white.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 25px 0px 25px 0px;
+}
+
+#conteudo{
+    position: relative;
+    background-color: #e0e0e0;
+    height: 100%;
+    width: 100%;
+    padding: 20px 30px 20px 30px;
+}
+
+.previsoes{
+    position: relative;
+    background-color: white;
+    height: 60vh;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 6vh;
+    box-shadow: 1px 4px 7px rgb(177, 176, 176);
+}
+
+.dados{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    background-color: #eeeeee;
+    height: 65%;
+    width: 100%;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+
+.maxi{
+    height: 50%;
+    width: 100%;
+}
+
+.imgmax{
+    position: absolute;
+    width: 6%;
+    height : 50%;
+    margin-left: 20px;
+    background-image: url(images/icons/upload.png);
+    background-repeat: repeat-x;
+    background-size: 100% 40%;
+    background-position: center;
+}
+
+.imgprecip{
+    position: absolute;
+    width: 6%;
+    height : 50%;
+    margin-left: 20px;
+    background-image: url(images/icons/raindrop-close-up.png);
+    background-repeat: repeat-x;
+    background-size: 100% 40%;
+    background-position: center;
+}
+
+.precip{
+    height: 50%;
+    width: 100%;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+
+.mini{
+    height: 50%;
+    width: 100%;
+}
+
+.imgmin{
+    position: absolute;
+    width: 6%;
+    height : 50%;
+    margin-left: 20px;
+    background-image: url(images/icons/download.png);
+    background-repeat: repeat-x;
+    background-size: 100% 40%;
+    background-position: center;
+}
+
+.imgproba{
+    position: absolute;
+    width: 6%;
+    height : 50%;
+    margin-left: 20px;
+    background-image: url(images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png);
+    background-repeat: repeat-x;
+    background-size: 100% 40%;
+    background-position: center;
+}
+
+.proba{
+    height: 50%;
+    width: 100%;
+}
+
+.tituloprev{
+    font-size: 1.45em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.data{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 8px 0 0 25px;
+}
+
+.prevcoment{
+    font-size: 0.9em;
+    width: 90%;
+    word-wrap: normal;
+    font-weight: 600;
+    margin: 8px 0 0 25px;
+}
+
+.prevlabels{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    float: right;
+    font-size: 3em;
+    font-weight: 600;
+    margin: 0 30% 0 0;
+    height: 100%;
+    text-align: center;
+}
+
+.blue{
+    color: #0a7bbf;
+}
+
+.red{
+    color: #c62828;
+}
+
+
+@media (orientation: landscape) {
+    .navbar {
+        background-size: 10em 1.6em;
+    }
+
+    #gif{
+        position: relative;
+        animation:  fadeIn 2s infinite;
+        background-image: url(images/logo.png);
+        background-size: 60%;
+        padding: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100vw;
+        margin-top: 2vh;
+        height: 5em;
+    }
+
+    #global{
+        width: 100%;
+        max-width: none;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .previsoes{
+        position: relative;
+        background-color: white;
+        height: 70vh;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 6vh;
+        box-shadow: 1px 4px 7px rgb(177, 176, 176);
+    }
+
+    .dados{
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        background-color: #eeeeee;
+        height: 58%;
+        width: 100%;
+    }
+
+    .prevlabels{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        float: right;
+        font-size: 1.9em;
+        font-weight: 600;
+        margin: 0 30% 0 0;
+        height: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width:1025px) {
+
+    #global{
+        width: 100%;
+        max-width: 70vw;
+        height: auto;
+        min-height: 100vh;    
+    }
+
+    .previsoes{
+        position: relative;
+        background-color: white;
+        height: 55vh;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 6vh;
+        box-shadow: 1px 4px 7px rgb(177, 176, 176);
+    }
+
+    .dados{
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        background-color: #eeeeee;
+        height: 65%;
+        width: 100%;
+    }
+
+    #gif{
+        position: relative;
+        animation:  fadeIn 2s infinite;
+        background-image: url(images/logo.png);
+        background-size: 60%;
+        padding: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin-top: 2vh;
+        height: 7em;
+    }
+
+}
+
+@media (orientation: portrait) {
+    .navbar {
+        background-size: 10em 1.6em;
+    }
+
+    #global{
+        width: 100%;
+        max-width: none;
+        height: auto;
+        min-height: 100vh;    
+    }
+
+    .previsoes{
+        position: relative;
+        background-color: white;
+        height: 45vh;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 6vh;
+        box-shadow: 1px 4px 7px rgb(177, 176, 176);
+    }
+
+    .dados{
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        background-color: #eeeeee;
+        height: 54%;
+        width: 100%;
+    }
+
+    .prevlabels{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        float: right;
+        font-size: 1.6em;
+        font-weight: 600;
+        margin: 0 13% 0 0;
+        height: 100%;
+        text-align: center;
+    }
+
+    .imgmax{
+        position: absolute;
+        width: 10%;
+        height : 50%;
+        margin-left: 20px;
+        background-image: url(images/icons/upload.png);
+        background-repeat: repeat-x;
+        background-size: 100% 40%;
+        background-position: center;
+    }
+    
+    .imgprecip{
+        position: absolute;
+        width: 10%;
+        height : 50%;
+        margin-left: 20px;
+        background-image: url(images/icons/raindrop-close-up.png);
+        background-repeat: repeat-x;
+        background-size: 100% 40%;
+        background-position: center;
+    }
+
+    .imgmin{
+        position: absolute;
+        width: 10%;
+        height : 50%;
+        margin-left: 20px;
+        background-image: url(images/icons/download.png);
+        background-repeat: repeat-x;
+        background-size: 100% 40%;
+        background-position: center;
+    }
+    
+    .imgproba{
+        position: absolute;
+        width: 10%;
+        height : 50%;
+        margin-left: 20px;
+        background-image: url(images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png);
+        background-repeat: repeat-x;
+        background-size: 100% 40%;
+        background-position: center;
+    }
+
+    @media (min-width: 576px){
+        .navbar {
+            background-size: 30vw 40vh!important;
+        }    
+    }
+
+}

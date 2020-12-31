@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desafio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/search.js"></script>
+
+
+    <script>
+
+        $(document).on('keydown', function (event) {
+
+            if (event.keyCode === 13) {
+
+                $("#conteudo").css("display","block");
+                $("#gif").css("display","none");
+                
+                pesquisar();
+
+            }
+
+        });
+
+        function pesquisar() {
+            var valor = $('#cidade').val();
+            $.ajax({
+                method: 'post',
+                url: '/pesquisa',
+                data: JSON.stringify({ valor: valor }),
+                contentType: 'application/json',
+                success: function (data) {
+
+                    searchResult(data);
+
+                }
+
+            })
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="global">
+        <nav class="navbar navbar-expand-sm bg-light"></nav>
+        <input class="form-control" onfocus="limpar()" onblur="mostrar()" onkeydown="limpar()" id="cidade" type="text" placeholder="Busque a cidade desejada..">
+        <div id="gif"></div>
+        <div id="conteudo" style="display: none;">
+        </div>
+    </div>
+</body>
+
+</html>

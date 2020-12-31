@@ -36,7 +36,8 @@
   margin-bottom: 15px;
 }
 
-.weather-card-temperature, .weather-card-rain {
+.weather-card-temperature,
+.weather-card-rain {
   display: inline-flex;
   flex: 1;
   font-size: 18pt;
@@ -46,21 +47,120 @@
   justify-content: space-between;
 }
 
-div.max-temperature, div.min-temperature, div.rain-precipitation, div.rain-probability {
+div.max-temperature,
+div.min-temperature,
+div.rain-precipitation,
+div.rain-probability {
   display: inline-flex;
   align-items: center;
 }
 
-div.max-temperature, div.rain-precipitation {
-  margin-left: 30px;
+@media screen and (max-width: 380px)  {
+  div.max-temperature,
+  div.rain-precipitation {
+    margin-left: 15px;
+  }
+
+  div.min-temperature,
+  div.rain-probability {
+    margin-right: 15px;
+  }
+
+  span.weather-info {
+    padding-left: 20px;
+  }
 }
 
-div.min-temperature, div.rain-probability {
-  margin-right: 30px;
+@media screen and (min-width: 380px) and (max-width: 480px) {
+  div.max-temperature,
+  div.rain-precipitation {
+    margin-left: 30px;
+  }
+
+  div.min-temperature,
+  div.rain-probability {
+    margin-right: 30px;
+  }
+
+  span.weather-info {
+    padding-left: 30px;
+  }
 }
 
-span.weather-info {
-  padding-left: 30px;
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  div.max-temperature,
+  div.rain-precipitation {
+    margin-left: 40px;
+  }
+
+  div.min-temperature,
+  div.rain-probability {
+    margin-right: 40px;
+  }
+
+  span.weather-info {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+  .weather-card-container {
+    width: 380px;
+  }
+
+  div.max-temperature,
+  div.rain-precipitation {
+    margin-left: 20px;
+  }
+
+  div.min-temperature,
+  div.rain-probability {
+    margin-right: 20px;
+  }
+
+  span.weather-info {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+  .weather-card-container {
+    width: 380px;
+  }
+
+  div.max-temperature,
+  div.rain-precipitation {
+    margin-left: 20px;
+  }
+
+  div.min-temperature,
+  div.rain-probability {
+    margin-right: 20px;
+  }
+
+  span.weather-info {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .weather-card-container {
+    width: 380px;
+  }
+
+  div.max-temperature,
+  div.rain-precipitation {
+    margin-left: 40px;
+  }
+
+  div.min-temperature,
+  div.rain-probability {
+    margin-right: 40px;
+  }
+
+  span.weather-info {
+    padding-left: 20px;
+  }
 }
 
 i.thumbnail {
@@ -86,9 +186,9 @@ div.weather-card-rain div.rain-probability i.thumbnail.probability {
 }
 
 div.weather-card-temperature div.max-temperature span.weather-info {
-  color: #c62828
+  color: #c62828;
 }
 
 div.weather-card-temperature div.min-temperature span.weather-info {
-  color: #077abe
+  color: #077abe;
 }

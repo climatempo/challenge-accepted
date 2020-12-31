@@ -12,22 +12,26 @@ div#weather-container div.forecast-info span {
 }
 
 div.weather-cards {
+  display: grid;
   height: 100%;
   padding-top: 13px;
+}
+
+@media screen and (min-width:720px) {
+  div.weather-cards {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  div.weather-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+  }
 }
 
 div.weather-cards div.weather-card-container {
   margin-top: 15px;
   margin-bottom: 15px;
-}
-
-div#weather-not-found {
-  display: flex;
-  flex: 1;
-  margin-top: 40px;
-  justify-content: center;
-}
-
-div#weather-not-found span {
-  font-size: 17pt;
 }

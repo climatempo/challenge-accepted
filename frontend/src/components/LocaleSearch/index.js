@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+
+import WeathersContext from '../../contexts/WeathersContext'
 
 import './styles.css'
 
 export default function LocaleSearch() {
   const [locale, setLocale] = useState('')
+  const { getForecast } = useContext(WeathersContext)
 
-  function searchWeather(locale) {
+  function handleSearchForecast() {
     if (locale) {
-
+      getForecast(locale)
     }
   }
 
@@ -16,12 +19,15 @@ export default function LocaleSearch() {
       <input
         type="text"
         value={locale}
+        onKeyPress={e => {
+          if (e.key === 'Enter') handleSearchForecast()
+        }}
         onChange={e => setLocale(e.target.value)}
       />
       <button
         id="search-icon"
         type="button"
-        onClick={() => searchWeather(locale)}
+        onClick={() => handleSearchForecast()}
       ></button>
     </div>
   )

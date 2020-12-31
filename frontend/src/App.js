@@ -6,15 +6,15 @@ import Header from './components/Header'
 import LocaleSearch from './components/LocaleSearch'
 import WeatherContainer from './components/WeatherContainer'
 
-import WeathersContext from './contexts/WeathersContext'
+import { WeatherProvider } from './contexts/WeathersContext'
 
 function App() {
   return (
-    <WeathersContext.Provider value="">
+    <WeatherProvider>
       <Header />
       <LocaleSearch />
       <WeatherContainer />
-    </WeathersContext.Provider>
+    </WeatherProvider>
   )
 }
 

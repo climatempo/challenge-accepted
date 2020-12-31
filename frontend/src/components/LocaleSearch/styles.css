@@ -19,4 +19,5 @@
   background: url('../../assets/icons/search.png') no-repeat center;
   border: 0;
   padding-right: 60px;
+  cursor: pointer;
 }

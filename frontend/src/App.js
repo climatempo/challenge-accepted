@@ -1,14 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-import './styles/global.css';
+import './styles/global.css'
 
-import api from './services/api';
+import Header from './components/Header'
+import LocaleSearch from './components/LocaleSearch'
+import WeatherContainer from './components/WeatherContainer'
 
-import Header from './components/Header';
-import LocaleSearch from './components/LocaleSearch';
+import WeathersContext from './contexts/WeathersContext'
 
 function App() {
-  return <Header />;
+  return (
+    <WeathersContext.Provider value="">
+      <Header />
+      <LocaleSearch />
+      <WeatherContainer />
+    </WeathersContext.Provider>
+  )
 }
 
-export default App;
+export default App

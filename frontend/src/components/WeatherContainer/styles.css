@@ -1,0 +1,33 @@
+div#weather-container {
+  background-color: #e0e0e0;
+  padding-top: 20px;
+  padding-inline: 15px;
+  height: calc(100vh - 90px);
+  overflow-y: auto;
+}
+
+div#weather-container div.forecast-info span {
+  font-size: 16pt;
+  color: black;
+}
+
+div.weather-cards {
+  height: 100%;
+  padding-top: 13px;
+}
+
+div.weather-cards div.weather-card-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+div#weather-not-found {
+  display: flex;
+  flex: 1;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+div#weather-not-found span {
+  font-size: 17pt;
+}

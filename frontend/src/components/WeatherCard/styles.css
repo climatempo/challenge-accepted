@@ -1,0 +1,94 @@
+.weather-card-container {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #c4c4c4;
+}
+
+.weather-card-block {
+  display: flex;
+}
+
+.description {
+  height: 85px;
+  padding: 15px;
+  flex-direction: column;
+}
+
+.description div.weather-card-date {
+  padding-bottom: 10px;
+}
+
+.description div.weather-card-date span {
+  font-size: 15pt;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  background-color: #eeeeee;
+  padding: 15px;
+  height: 120px;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.weather-card-temperature {
+  margin-bottom: 15px;
+}
+
+.weather-card-temperature, .weather-card-rain {
+  display: inline-flex;
+  flex: 1;
+  font-size: 18pt;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.max-temperature, div.min-temperature, div.rain-precipitation, div.rain-probability {
+  display: inline-flex;
+  align-items: center;
+}
+
+div.max-temperature, div.rain-precipitation {
+  margin-left: 30px;
+}
+
+div.min-temperature, div.rain-probability {
+  margin-right: 30px;
+}
+
+span.weather-info {
+  padding-left: 30px;
+}
+
+i.thumbnail {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+div.weather-card-temperature div.max-temperature i.thumbnail.max {
+  background: url('../../assets/icons/upload.png') no-repeat center;
+}
+
+div.weather-card-temperature div.min-temperature i.thumbnail.min {
+  background: url('../../assets/icons/download.png') no-repeat center;
+}
+
+div.weather-card-rain div.rain-precipitation i.thumbnail.precipitation {
+  background: url('../../assets/icons/raindrop-close-up.png') no-repeat center;
+}
+
+div.weather-card-rain div.rain-probability i.thumbnail.probability {
+  background: url('../../assets/icons/umbrella.png') no-repeat center;
+}
+
+div.weather-card-temperature div.max-temperature span.weather-info {
+  color: #c62828
+}
+
+div.weather-card-temperature div.min-temperature span.weather-info {
+  color: #077abe
+}

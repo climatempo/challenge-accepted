@@ -25,8 +25,8 @@ em seguida executar npm start para rodar o cliente em modo de desenvolvimento na
 
 ### Executar testes unitários.
 
-- O primeiro passo é abrir um terminal e entrar na pasta Cliente.
-- Dentro da Pasta Cliente executar o comando yarn test para que todos os testes sejam feitos.
+- O primeiro passo é abrir um terminal e entrar na pasta Server.
+- Dentro da Pasta Server executar o comando yarn test para que todos os testes sejam feitos.
 
 ### Caso tenha dúvidas basta acessar o VÍDEO que gravei.
 - https://youtu.be/-9N9yzOzGQ4

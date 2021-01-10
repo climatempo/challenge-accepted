@@ -8,7 +8,7 @@
 
 
 # O que foi feito:
--No back-end, foi utilizado o framework Express.
+- No back-end, foi utilizado o framework Express.
 - Foram feitas 3 rotas no back-end. A "localidade.routes", que possui 2 rotas, uma que retorna todas as localidades e outra que retorna a localidade passando o Id da cidade como parâmetro.
 - A "weather.routes", que possui 2 rotas, uma que retorna todas as weathers e outra que retorna a weather passando o nome da cidade como parâmetro.
 - E por último a "routes.js", que é a rota base que vai se encarregar do funcionamento das outras rotas.

@@ -35,7 +35,6 @@ Bons conhecimentos em:
 Desejável:
 
 - GraphQL;
-- Redis;
 - Docker;
 - NoSQL;
 - React Native;
@@ -55,7 +54,6 @@ O que esperamos:
  ##### Backend:
  - Uma API rest ou graphql para obter localidades e dados de previsão;
  - Validação de entradas do usuário;
- - Segurança básica;
  
  Diferenciais:
  
@@ -88,7 +86,7 @@ O que vamos avaliar:
 - Performance de carregamento, busca e renderização;
 - Segurança;
 - Testes;
-- Manutenabilidade;
+- Manutenibilidade;
 - Boas práticas;
 
 Exemplo:

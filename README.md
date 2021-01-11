@@ -83,10 +83,11 @@ O que esperamos:
 
 O que vamos avaliar:
 
-- Performance de carregamento, busca e renderização;
+- Performance de busca e renderização;
 - Segurança;
 - Testes;
 - Manutenibilidade;
+- Usabilidade;
 - Boas práticas;
 
 Exemplo:

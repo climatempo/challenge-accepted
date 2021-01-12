@@ -13,11 +13,9 @@ Olá desenvolvedor, pronto para participar do nosso processo de recrutamento par
 
 ### Sobre a Vaga
 
-- VR e VT;
 - Home Office;
 - Flexibilidade no horário de trabalho;
-- Local: Parque Tecnológico - São José dos Campos (http://www.pqtec.org.br);
-
+- Sede: Parque Tecnológico - São José dos Campos (http://www.pqtec.org.br);
 
 ### Requisitos para a vaga
 

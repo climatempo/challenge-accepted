@@ -9,34 +9,32 @@ ___
 
 ## Processo de recrutamento
 
-Olá desenvolvedor, pronto para participar do nosso
-processo de recrutamento para vaga de Full-stack (CLT)?
+Olá desenvolvedor, pronto para participar do nosso processo de recrutamento para vaga de Full-stack?
 
 ### Sobre a Vaga
 
-- Empresa: Climatempo
-- Cargo: Desenvolvedor Full-stack;
 - Home Office;
-- Flexibilidade no horário de trabalho para acompanhar eventos de tecnologia;
+- Flexibilidade no horário de trabalho;
+- Sede: Parque Tecnológico - São José dos Campos (http://www.pqtec.org.br);
 
-### Requisitos
+### Requisitos para a vaga
 
-Requisitos para a vaga, bons conhecimentos em:
+Bons conhecimentos em:
 
-- HTML
-- CSS
-- Javascript
-- NodeJS
-- PHP
-- SQL
-- NoSQL
-- RESTful
-- React JS
+- Javascript;
+- NodeJS;
+- PHP;
+- SQL;
+- RESTful;
+- ReactJS;
+- HTML;
+- CSS;
 
-IMPORTANTE:
+Desejável:
 
-- Residir no vale do paraíba ou nas proximidades.
-
+- GraphQL;
+- NoSQL;
+- Docker;
 
 ### O Desafio
 
@@ -46,12 +44,49 @@ seu smartphone.
 
 O que esperamos:
  
- - Uma página responsiva para mobile (Qualquer resolução);
- - Um campo para buscar localidades;
- - Um card para cada dia de previsão de chuva, temperatura e o texto para a localidade buscada;
- - Uma API com endpoints para buscar localidades e previsão fazendo leitura dos JSONs no diretório base;
- - Testes (Pode ser teste de unidade ou funcional).
+ ##### Frontend:
+ - Uma página responsiva;
+ - Um campo autocomplete para buscar localidades;
+ - Um card para cada dia de previsão;
+ ##### Backend:
+ - Uma API rest ou graphql para obter localidades e dados de previsão;
+ - Validação de entradas do usuário;
  
+ Diferenciais:
+ 
+ - Utilizar cache;
+ - Utilizar Elasticsearch ou algum outro software de **full-text search** para busca de localidades;
+ - Configurar ambiente docker para rodar a aplicação;
+ 
+ ###### uso de bibliotecas é livre.
+
+### Desafio Extra (opcional)
+  
+  Permita que o usuário selecione em qual unidade de temperatura e chuva (precipitação) ele quer visualizar os dados.
+  
+  ###### Design livre.
+  
+  ##### Conversão dos valores:
+  
+  - Temperatura:
+    - de **°C** pra **°F**: (`valor` * 1.8) + 32
+    - de **°F** pra **°C**: (`valor` - 32) / 1.8
+  - Chuva:
+    - de **mm** pra **inch**: (`valor` / 25.4)
+    - de **inch** pra **mm**: (`valor` * 25.4)
+  
+
+### Avaliação
+
+O que vamos avaliar:
+
+- Performance de busca e renderização;
+- Segurança;
+- Testes;
+- Manutenibilidade;
+- Usabilidade;
+- Boas práticas;
+
 Exemplo:
 
 <p align="center">
@@ -63,8 +98,6 @@ Exemplo:
 **Atenção:**  Não se preocupe em reproduzir o exemplo, use apenas como referência.
  
 ### Dados
-
-A API deve fazer a leitura dos dados dos JSONs no diretório base.
  
 Localidades:
     
@@ -79,7 +112,7 @@ Localidades:
 | `longitude`   | Number | Longitude do centro da localidade   |
  
  
-Os dados de previsão estão no JSON:
+Previsão:
  
     base/weather.json
     
@@ -105,28 +138,13 @@ Os mesmos dados do JSON de localidades.
 | `weather.rain.probability`      | Number | Probabilidade de chuva em porcentagem (%)  |
 | `weather.rain.precipitation`    | Number | Precipitação de chuva em milímetros (mm)   |
 
-### Avaliação
-
-O que vamos avaliar:
-
-- Desempenho;
-- Manutenabilidade;
-- Organização;
-- Boas práticas.
-
-### Stack
-Para o desafio você deve utilizar qualquer biblioteca ou framework desde que seja em uma das linguagens:
-
-- PHP
-- Javascript (NodeJS)
-
 ### Comece
 
 O processo do desafio deve ser:
 
 1. Faça o fork do desafio.
 
-2. Desenvolva! Você terá **2 dias** a partir da data do envio do desafio.
+2. Desenvolva! Você terá **7 dias** a partir da data do envio do desafio.
 
 3. Crie um **PROJECT.md** com a explicação de como devemos executar o projeto e com o máximo de detalhes possível do que foi feito.
 

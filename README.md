@@ -33,9 +33,8 @@ Bons conhecimentos em:
 Desejável:
 
 - GraphQL;
-- Docker;
 - NoSQL;
-- React Native;
+- Docker;
 
 ### O Desafio
 
@@ -46,7 +45,7 @@ seu smartphone.
 O que esperamos:
  
  ##### Frontend:
- - Uma página responsiva (mobile first) ou um APP em React Native;
+ - Uma página responsiva;
  - Um campo autocomplete para buscar localidades;
  - Um card para cada dia de previsão;
  ##### Backend:

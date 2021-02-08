@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+    
+        <title> Climatempo - Challenge </title>
+        
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <link rel="icon" type="image/png" sizes="32x32" href="images/cloudy.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+        <style type="text/css">
+           body{
+               padding: 0 2% 1% 2%;
+           }
+           .navbar{
+                background-color:  #1c1d22;
+                box-shadow: 0 0 0.5em #616161;
+                } 
+            label{
+                font-family: "Tahoma";
+                font-weight: bold;
+                color: #f1f8ff;
+            } 
+            strong{
+                font-family: "Tahoma";
+                font-weight: bold;
+                color: #004983;
+            }
+            input{
+                background-color: #f0f9ff;
+                border-radius: 5px;
+                border: 2px solid white;
+
+            } 
+            button{
+                background-color:#e3f2ff;
+                box-shadow:  0 0 0.1em #004983;
+                border: 2px solid white;
+                border-radius: 5px;
+            }
+            li{
+                font-family: "Tahoma";
+                font-weight: bold;
+            }
+            img{
+                color: white;
+            }
+            #mapid{
+                box-shadow: 0 0 0.45em #424242;              
+            }
+            .card{
+                box-shadow: 0 0 0.3em  #424242;
+            }
+            .card-header{
+                color: #004983;
+                font-family: "Tahoma";
+                font-weight: bold;
+            }
+            .card-body{
+                font-family: "Tahoma";
+                font-size: 75%;
+                text-align:center;
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+        
+        <div class="header">
+
+            <nav class="navbar navbar-light rounded-bottom" style="background-color: #004983;">
+
+                <a class="navbar-brand" href="#">
+                <img src="images/logo-white.png" height="35" class="d-inline-block align-top" alt="">             
+                </a>
+                <label for="city">Como vai estar o tempo em: <input type="text" id="Cidade" placeholder="São Paulo ou Osasco?"> <button type="submit" onclick="searchCity()"> <img src="images/icons/search.png" height="20px" weight="20px"></button> </label>
+                             
+          </nav>
+          
+        <script src="js/scripts.js"></script>
+
+        </div>
+
+        <div class="space1" id="space-2" style="height: 20px;"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p><strong>Locais disponíveis para busca:</strong></p>
+                        <div id="mapid" style="width: 1100px; height: 200px;"></div>
+                            
+                        </div>
+                    </div>                    
+                </div>                              
+            </div>    
+        </div>
+        
+        <div class="space" id="space-2" style="height: 20px;"></div>
+
+        <div class="cards">
+
+            <div class="row"> 
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body"style="height: 5.4rem;">
+                            <p class="card-text" style="color: #004983; font-size: large; text-align:center"> <b>O que esses ícones significam, afinal?</b></p>
+                        </div>
+                        <div class="card-footer" style="background-color: rgba(75, 149, 209, 0.2)">
+                            <ul>
+                                <div class="row">
+                                    <div class="col">
+                                        <li> <img src="images/icons/download.png"> <p id="min-4" style="color: red; font-size: smaller;"><b>Temperatura mínima (°C) </b></p> </li>
+                                        <li> <img src="images/icons/upload.png"> <p id="max-4" style="color: green; font-size: smaller;"><b> Temperatura máxima (°C) </b></p></li>
+                                    </div>
+                                    <div class="col">
+                                        <li> <img src="images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" > 
+                                        <p id="probab-4" style="font-size: smaller;"> <b>Probabilidade de chuva (%)</b> </p>
+                                        </li>
+                                        <li> <img src="images/icons/raindrop-close-up.png" > <p id="precip-4" style=" font-size:smaller;"><b> Preciptação de chuva (mm)</b> </p> </li>
+                                    </div>
+                                </div>                         
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header bg-transparent mx-auto" id="date-1" > DATA 1</div>
+                        <div class="card-body"style="max-width: 18rem;">
+                            <p class="card-text ">INFO</p>
+                        </div>
+                        <div class="card-footer">
+                            <ul>
+                                <div class="row">
+                                    <div class="col">
+                                        <li> <img src="images/icons/download.png"> <p id="min-1" style="color: red;"><b>Mínima</b></p> </li>
+                                        <li> <img src="images/icons/upload.png"> <p id="max-1" style="color: green;"><b>Máxima</b></p> </li>
+                                    </div>
+                                    <div class="col">
+                                        <li> <img src="images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" > 
+                                        <p id="probab-1" style="color:#004983"> Rain </p>
+                                        </li>
+                                        <li> <img src="images/icons/raindrop-close-up.png" > <p id="precip-1" style="color:#004983"> mm </p> </li>
+                                    </div>
+                                </div>                         
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header bg-transparent mx-auto" id="date-2" > DATA 2</div>
+                        <div class="card-body"style="max-width: 18rem;">
+                            <p class="card-text ">INFO</p>
+                        </div>
+                        <div class="card-footer">
+                            <ul>
+                                <div class="row">
+                                    <div class="col">
+                                        <li> <img src="images/icons/download.png"> <p id="min-2" style="color: red;"> <b><b>Mínima</b></b> </p> </li>
+                                        <li> <img src="images/icons/upload.png"> <p id="max-2" style="color: green;"><b>Máxima</b></p> </li>
+                                    </div>
+                                    <div class="col">
+                                        <li> <img src="images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" > 
+                                        <p id="probab-2" style="color:#004983"> Rain </p>
+                                        </li>
+                                        <li> <img src="images/icons/raindrop-close-up.png" > <p id="precip-2 style="color:#004983""> mm </p> </li>
+                                    </div>
+                                </div>                         
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header bg-transparent mx-auto" id="date-3" > DATA 3</div>
+                        <div class="card-body"style="max-width: 18rem;">
+                            <p class="card-text ">INFO</p>
+                        </div>
+                        <div class="card-footer">
+                            <ul>
+                                <div class="row">
+                                    <div class="col">
+                                        <li> <img src="images/icons/download.png"> <p id="min-3" style="color: red;"> <b>Mínima</b> </p> </li>
+                                        <li> <img src="images/icons/upload.png"> <p id="max-3" style="color: green;"><b>Máxima</b></p> </li>
+                                    </div>
+                                    <div class="col">
+                                        <li> <img src="images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" > 
+                                        <p id="probab-3" style="color:#004983"> Rain </p>
+                                        </li>
+                                        <li> <img src="images/icons/raindrop-close-up.png" > <p id="precip-3 style="color:#004983""> mm </p> </li>
+                                    </div>
+                                </div>                         
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class="space" id="space-3" style="height: 10px;"></div>
+
+            <div class="row"> 
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header bg-transparent mx-auto" id="date-4" > DATA 4</div>
+                        <div class="card-body"style="max-width: 18rem;">
+                            <p class="card-text ">INFO</p>
+                        </div>
+                        <div class="card-footer">
+                            <ul>
+                                <div class="row">
+                                    <div class="col">
+                                        <li> <img src="images/icons/download.png"> <p id="min-4" style="color: red;"> <b>Mínima</b> </p> </li>
+                                        <li> <img src="images/icons/upload.png"> <p id="max-4" style="color: green;"><b>Máxima</b></p> </li>
+                                    </div>
+                                    <div class="col">
+                                        <li> <img src="images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" > 
+                                        <p id="probab-4" style="color:#004983"> Rain </p>
+                                        </li>
+                                        <li> <img src="images/icons/raindrop-close-up.png" > <p id="precip-4 style="color:#004983""> mm </p> </li>
+                                    </div>
+                                </div>                         
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header bg-transparent mx-auto" id="date-5" > DATA 5</div>
+                        <div class="card-body"style="max-width: 18rem;">
+                            <p class="card-text ">INFO</p>
+                        </div>
+                        <div class="card-footer">
+                            <ul>
+                                <div class="row">
+                                    <div class="col">
+                                        <li> <img src="images/icons/download.png"> <p id="min-5" style="color: red;"> <b>Mínima</b> </p> </li>
+                                        <li> <img src="images/icons/upload.png"> <p id="max-5" style="color: green;"><b>Máxima</b></p> </li>
+                                    </div>
+                                    <div class="col">
+                                        <li> <img src="images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" > 
+                                        <p id="probab-5" style="color:#004983"> Rain </p>
+                                        </li>
+                                        <li> <img src="images/icons/raindrop-close-up.png" > <p id="precip-5 style="color:#004983""> mm </p> </li>
+                                    </div>
+                                </div>                         
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header bg-transparent mx-auto" id="date-6" > DATA 6</div>
+                        <div class="card-body"style="max-width: 18rem;">
+                            <p class="card-text ">INFO</p>
+                        </div>
+                        <div class="card-footer">
+                            <ul>
+                                <div class="row">
+                                    <div class="col">
+                                        <li> <img src="images/icons/download.png"> <p id="min-6" style="color: red;"> <b>Mínima</b> </p> </li>
+                                        <li> <img src="images/icons/upload.png"> <p id="max-6" style="color: green;"><b>Máxima</b></p> </li>
+                                    </div>
+                                    <div class="col">
+                                        <li> <img src="images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" > 
+                                        <p id="probab-6" style="color:#004983"> Rain </p>
+                                        </li>
+                                        <li> <img src="images/icons/raindrop-close-up.png" > <p id="precip-6 style="color:#004983""> mm </p> </li>
+                                    </div>
+                                </div>                         
+                            </ul>
+                        </div>
+                    </div>
+                </div><div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header bg-transparent mx-auto" id="date-7" > DATA 7</div>
+                        <div class="card-body"style="max-width: 18rem;">
+                            <p class="card-text ">INFO</p>
+                        </div>
+                        <div class="card-footer">
+                            <ul>
+                                <div class="row">
+                                    <div class="col">
+                                        <li> <img src="images/icons/download.png"> <p id="min-7" style="color: red;"> <b>Mínima</b> </p> </li>
+                                        <li> <img src="images/icons/upload.png"> <p id="max-7" style="color: green;"><b>Máxima</b></p> </li>
+                                    </div>
+                                    <div class="col">
+                                        <li> <img src="images/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png" > 
+                                        <p id="probab-7" style="color:#004983"> Rain </p>
+                                        </li>
+                                        <li> <img src="images/icons/raindrop-close-up.png" > <p id="precip-7 style="color:#004983""> mm </p> </li>
+                                    </div>
+                                </div>                         
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </body>
+</html>

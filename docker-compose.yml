@@ -1,0 +1,38 @@
+version: "3.1"
+
+networks:
+  backend:
+  frontend:
+
+services:
+  backend:
+    image: node:14.14
+    container_name: challenge_backend
+    restart: always
+    volumes:
+      - ./backend:/app
+    working_dir: /app
+    ports:
+      - 4000:4000
+    command: bash run-server.sh dev #dev Para subir o container em modo de desenvolvimento.
+    networks:
+      - backend
+      - frontend
+
+  frontend:
+    image: nginx:1.19.3
+    container_name: challenge_frontend
+    environment:
+      BACKEND_PORT: 4000
+    command: /bin/bash -c "envsubst < /etc/nginx/templates > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+    volumes:
+      - ./frontend/build:/usr/share/nginx/html/
+      - ./frontend/nginx/default.conf.template:/etc/nginx/templates/
+    depends_on:
+      - backend
+    ports:
+      - 3000:3000
+    networks:
+      - backend
+      - frontend
+

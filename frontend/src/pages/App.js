@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react'
-import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import theme from '../theme'
-import { ApolloProvider } from '@apollo/client'
+import { ApolloProvider } from '@apollo/client';
 
 import { useApollo } from '../functions/api'
-import '../../styles/globals.css'
+import theme from '../theme'
+import Home from './Home'
 
-function MyApp({ Component, pageProps }) {
-    const apolloClient = useApollo(pageProps.initialApolloState)
+function App() {
+    const apolloClient = useApollo()
 
-    React.useEffect(() => {
+    useEffect(() => {
         // Remove the server-side injected CSS.
         const jssStyles = document.querySelector('#jss-server-side')
         if (jssStyles) {
@@ -23,10 +22,10 @@ function MyApp({ Component, pageProps }) {
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <ApolloProvider client={apolloClient}>
-                <Component {...pageProps} />
+                <Home />
             </ApolloProvider>
         </ThemeProvider>
     )
 }
 
-export default MyApp
+export default App

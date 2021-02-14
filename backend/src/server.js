@@ -7,7 +7,7 @@ function startServer({ typeDefs, resolvers }) {
     const app = express()
     server.applyMiddleware({ app })
 
-    app.get('/', (_, res) => res.redirect('/graphql'))
+    //app.get('/', (_, res) => res.redirect('/graphql'))
     
     const port = 4000
 

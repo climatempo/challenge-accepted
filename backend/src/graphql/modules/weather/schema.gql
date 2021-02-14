@@ -1,0 +1,28 @@
+type Period {
+    begin: String
+    end: String
+}
+
+type Weather {
+    date: String
+    text: String
+    minTemperatureC: Float
+    maxTemperatureC: Float
+    minTemperatureF: Float
+    maxTemperatureF: Float
+    rainProbability: Float
+    rainPrecipitationMM: Float
+    rainPrecipitationInch: Float
+}
+
+type Object {
+    period: Period
+    locale: Locale
+    weather: [Weather]
+    message: String
+}
+
+type Query {
+    forecastAll: [Object]
+    forecast(locale: String): Object
+}

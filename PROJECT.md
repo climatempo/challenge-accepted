@@ -2,7 +2,7 @@
 Para rodar a aplicação basta seguir os passos abaixo:
 
 - Clonar ou baixar a pasta do projeto.
-- Acessar o diretório através do CMD ou abrir o diretório com o VSCode e abrir o terminal interno (Ctrl + '):
+- Acessar o diretório através do CMD ou abrir-lo com o VSCode e abrir o terminal interno (Ctrl + '):
 ```
     cd /diretório/challenge-accepted
 ```
@@ -18,7 +18,7 @@ O projeto foi configurado para rodar com e sem Docker.
 
 ##### Sem Docker: 
 - É preciso ter NodeJS e NPM instalados na máquina.
-- À partir da raiz do diretório challenge-accepted, acesse os diretórios frontend e backend em termianis separados e execute o seguinte comando em ambos para instalar as dependências:
+- À partir da raiz do diretório challenge-accepted, acesse os diretórios frontend e backend em terminais separados e execute o seguinte comando em ambos para instalar as dependências:
 ```
     npm install
 ```

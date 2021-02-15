@@ -43,16 +43,21 @@ function WeatherCard({ data, isCelcius, isMilimeters }) {
                     <Box>
                         <Typography variant="caption" className={classes.label}>Chuva</Typography>
                         <Box my={2} className={classes.rainWrapper}>
-                            <Box style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                            <Box style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                                 <img style={{ opacity: 0.75 }} height={15} src='/icons/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.png' />
                                 <Typography variant="subtitle1" className={classes.rainLabel} style={{ marginLeft: 5 }}> {data.rainProbability}%</Typography>
                             </Box>
-                            <Box style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                            <Box style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                                 <img style={{ opacity: 0.75 }} height={13} src='/icons/raindrop-close-up.png' />
                                 <Typography variant="subtitle1" style={{ marginLeft: 3 }}> {isMilimeters ? `${data.rainPrecipitationMM} mm` : `${data.rainPrecipitationInch} inch`}</Typography>
                             </Box>
                         </Box>
                     </Box>
+                </Box>
+                <Box borderTop={1} borderColor="rgba(0,0,0,0.1)" className={classes.cardFooter}>
+                    <Typography variant="caption" style={{ color: '#707070' }}>
+                        {data.text}
+                    </Typography>
                 </Box>
             </Card>
         </Grid>
@@ -83,7 +88,10 @@ const useStyles = makeStyles(theme => ({
         }
     },
     cardContainer: {
-        padding: 10,
+        paddingTop: 10,
+        paddingLeft: 10,
+        paddingRight: 10,
+        paddingBottom: 0,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -108,6 +116,16 @@ const useStyles = makeStyles(theme => ({
                 },
             },
         }
+    },
+    cardFooter: {
+        width: '100%',
+        height: 'auto',
+        padding: 10,
+        backgroundColor: '#fff',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
     },
     weatherIcon: {
         [theme.breakpoints.down('xs')]: {

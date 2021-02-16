@@ -1,4 +1,4 @@
-Vídeo executando e apresentando a aplicação: [https://youtu.be/9EMyOwdNOQ0](https://youtu.be/9EMyOwdNOQ0)
+Vídeo executando e apresentando a aplicação: [https://youtu.be/9EMyOwdNOQ0](https://youtu.be/9EMyOwdNOQ0){:target="_blank" rel="noopener"}
 
 ## Rodando a aplicação
 Para rodar a aplicação basta seguir os passos abaixo:

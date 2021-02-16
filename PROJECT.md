@@ -22,11 +22,11 @@ O projeto foi configurado para rodar com e sem Docker.
 - É preciso ter NodeJS e NPM instalados na máquina.
 - À partir da raiz do diretório challenge-accepted, acesse os diretórios frontend e backend em terminais separados e execute o seguinte comando em ambos para instalar as dependências:
 ```
-    npm install
+    npm install ou yarn
 ```
 - Após a instalação das dependências basta executar o seguinte comando para iniciar a aplicação e aguardar o navegador se abrir:
 ```
-    npm run dev
+    npm run dev ou yarn dev
 ```
 - Se tudo correu bem será exibido no terminal a seguinte mensagem para cada núcleo de processamento que sua máquina possuir:
 

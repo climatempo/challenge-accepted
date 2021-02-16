@@ -1,0 +1,12 @@
+type Locale {
+    id: Int
+    name: String
+    state: String
+    latitude: Float
+    longitude: Float
+}
+
+type Query {
+    locales: [Locale]
+    locale(id: Int): Locale
+}

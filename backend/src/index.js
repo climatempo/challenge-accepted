@@ -1,5 +1,5 @@
-import startServer from './server'
-import typeDefs from './graphql/typedefs'
-import resolvers from './graphql/resolvers'
+const startServer = require('./server')
+const typeDefs = require('./graphql/typedefs')
+const resolvers = require('./graphql/resolvers')
 
 startServer({ typeDefs, resolvers })

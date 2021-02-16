@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "yarn && npx nodemon --exec babel-node src/index.js -e js,gql",
-    "docker-dev": "npx nodemon --exec babel-node src/index.js -e js,gql"
+    "dev": "npx nodemon src/index.js -e js,gql"
   },
   "keywords": [],
   "author": "",
@@ -17,10 +16,6 @@
     "merge-graphql-schemas": "^1.7.8"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "@babel/node": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
     "nodemon": "^2.0.7"
   }
 }

@@ -1,7 +1,7 @@
-import { fileLoader, mergeResolvers } from 'merge-graphql-schemas'
-import path from 'path'
+const { fileLoader, mergeResolvers } = require('merge-graphql-schemas')
+const path = require('path')
 
 const resolversArray = fileLoader(path.join(__dirname, 'modules', '**', 'resolvers.js'))
 const resolvers = mergeResolvers(resolversArray)
 
-export default resolvers
+module.exports = resolvers

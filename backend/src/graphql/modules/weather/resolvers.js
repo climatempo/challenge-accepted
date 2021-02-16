@@ -1,6 +1,6 @@
-import forecast from './weather.json'
+const forecast = require('./weather.json')
 
-export default {
+module.exports = {
     Query: {
         forecastAll: () => {
             const array = []

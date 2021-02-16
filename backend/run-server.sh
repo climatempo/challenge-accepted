@@ -3,4 +3,4 @@
 yarn
 # yarn global add nodemon
 
-yarn docker-dev
+yarn dev

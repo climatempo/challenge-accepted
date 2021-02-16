@@ -1,5 +1,5 @@
-import { ApolloServer } from 'apollo-server-express'
-import express from 'express'
+const { ApolloServer } = require('apollo-server-express')
+const express = require('express')
 
 function startServer({ typeDefs, resolvers }) {
     const server = new ApolloServer({ typeDefs, resolvers })
@@ -16,4 +16,4 @@ function startServer({ typeDefs, resolvers }) {
     })
 }
 
-export default startServer
+module.exports = startServer

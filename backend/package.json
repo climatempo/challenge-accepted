@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm install && nodemon --exec babel-node src/index.js -e js,gql",
-    "docker-dev": "nodemon --exec babel-node src/index.js -e js,gql"
+    "dev": "yarn && npx nodemon --exec babel-node src/index.js -e js,gql",
+    "docker-dev": "npx nodemon --exec babel-node src/index.js -e js,gql"
   },
   "keywords": [],
   "author": "",

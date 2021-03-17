@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
+import GlobalStyle from "./styles/GlobaStyle";
 
-function App() {
-  return (
-    <div className="App">
-      Hello World!
-    </div>
-  );
-}
+const App = () => (
+  <>
+    <GlobalStyle />
+    <h1>Hello World</h1>
+  </>
+);
 
 export default App;

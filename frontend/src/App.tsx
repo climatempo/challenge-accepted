@@ -1,10 +1,13 @@
 import React from "react";
+import Header from "./components/Header";
+import Search from "./components/SearchInput";
 import GlobalStyle from "./styles/GlobaStyle";
 
 const App = () => (
   <>
     <GlobalStyle />
-    <h1>Hello World</h1>
+    <Header />
+    <Search />
   </>
 );
 

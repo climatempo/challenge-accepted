@@ -11,4 +11,8 @@ export const ResponseDisplay = styled.h3`
   font-size: 24px;
   font-weight: normal;
   margin-bottom: 20px;
+
+  &:only-child {
+    margin: 50px auto;
+  }
 `;

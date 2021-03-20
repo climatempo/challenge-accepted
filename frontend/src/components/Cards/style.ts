@@ -8,7 +8,8 @@ export const CardWrapper = styled.section`
 `;
 
 export const Card = styled.div`
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   background-color: #fff;
   margin-bottom: 40px;
   box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.15);

@@ -4,6 +4,11 @@ import SearchIcon from "../../assets/images/icons/search.png";
 export const SearchWrapper = styled.div`
   width: 100vw;
   position: relative;
+
+  @media (min-width: 1000px) {
+    width: 500px;
+    margin: 20px auto 0;
+  }
 `;
 
 export const SearchInput = styled.input.attrs({

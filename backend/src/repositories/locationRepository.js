@@ -1,19 +1,19 @@
-const { readFile } = require('fs/promises')
+const { readFile } = require("fs/promises");
 class LocationRepository {
   constructor({ file }) {
-    this.file = file
+    this.file = file;
   }
 
   async _currentContent() {
-    return JSON.parse(await readFile(this.file))
+    return JSON.parse(await readFile(this.file));
   }
 
-  async find(locationId) {
-    const all = await this._currentContent()
-    if (!locationId) return all
+  async find(locationName) {
+    const all = await this._currentContent();
+    if (!locationName) return all;
 
-    return all.find(({ id }) => locationId === id)
+    return all.find(({ name }) => locationName === name.toLowerCase());
   }
 }
 
-module.exports = LocationRepository
+module.exports = LocationRepository;

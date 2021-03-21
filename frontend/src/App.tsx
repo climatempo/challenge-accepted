@@ -3,6 +3,7 @@ import Content from "./components/Content";
 import Header from "./components/Header";
 import Search from "./components/SearchInput";
 import GlobalStyle from "./styles/GlobaStyle";
+import { GlobalStorage } from "./context/GlobalContext";
 
 import LocationFetch from "./utils/LocationFetch";
 
@@ -21,12 +22,12 @@ const App = () => {
   }, [locations]);
 
   return (
-    <>
+    <GlobalStorage>
       <GlobalStyle />
       <Header />
       <Search />
       <Content />
-    </>
+    </GlobalStorage>
   );
 };
 

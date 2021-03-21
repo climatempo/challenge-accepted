@@ -41,6 +41,7 @@ export const AutoCompleteItem = styled.li`
   padding: 10px 10px;
   border-bottom: 1px solid #b9b9b9;
   font-style: italic;
+  cursor: pointer;
 `;
 
 export const SearchButton = styled.button`

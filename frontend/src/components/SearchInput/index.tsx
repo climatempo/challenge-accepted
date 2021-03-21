@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   AutoComplete,
   AutoCompleteItem,
@@ -6,23 +6,40 @@ import {
   SearchInput,
   SearchWrapper,
 } from "./style";
-import Uglify from "../../utils/UglifyString";
-
-import weatherFetch from "../../utils/WeatherFetch";
+import { GlobalContext } from "../../context/GlobalContext";
 
 type TLocation = {
   name: string;
-  id: number;
+  id?: number;
+};
+
+type TContextProps = {
+  inputValue: string;
+  setInputValue: (value: string) => void;
+  suggest: string[];
+  setSuggest: (initial: string[] | ((value: string[]) => string[])) => void;
+  searching: boolean;
+  handleSearch: (value: string) => void;
+  Uglify: (value: string) => string;
 };
 
 const Search = () => {
-  const [inputValue, setInputValue] = useState<string>("");
-  const [suggest, setSuggest] = useState<string[]>([]);
-  const [searching, setSearching] = useState<boolean>(false);
-  const [result, setResult] = useState<any>([]);
+  const {
+    inputValue,
+    setInputValue,
+    suggest,
+    setSuggest,
+    searching,
+    handleSearch,
+    Uglify,
+  } = useContext(GlobalContext) as TContextProps;
 
   const autoComplete = (value: string) => {
     const input = value && Uglify(value);
+    if (!input) {
+      setSuggest([]);
+      return;
+    }
     const locations = localStorage.getItem("locations") as string;
     const locationData = JSON.parse(locations);
 
@@ -33,19 +50,10 @@ const Search = () => {
         return setSuggest((old) => old.filter((item) => item !== name));
       }
     });
-    if (!input) setSuggest([]);
   };
 
   const handleChange = (event: any) => {
     setInputValue(event.target.value);
-  };
-
-  const handleSearch = async (value: string) => {
-    setSearching(true);
-    const response = await weatherFetch(Uglify(value));
-    setResult(response);
-    setSearching(false);
-    setInputValue("");
   };
 
   useEffect(() => {
@@ -56,20 +64,19 @@ const Search = () => {
     <SearchWrapper>
       {searching && <p>Buscando...</p>}
       <SearchInput onChange={handleChange} value={inputValue} />
-      {JSON.stringify(result)}
       <AutoComplete>
         {suggest.map((item) => (
           <AutoCompleteItem
             key={item}
-            onClick={() => setInputValue(item) as void}
+            onClick={() => {
+              handleSearch(item);
+            }}
           >
             {item}
           </AutoCompleteItem>
         ))}
       </AutoComplete>
-      <SearchButton
-        onClick={async () => (await handleSearch(inputValue)) as void}
-      />
+      <SearchButton onClick={() => handleSearch(inputValue)} />
     </SearchWrapper>
   );
 };

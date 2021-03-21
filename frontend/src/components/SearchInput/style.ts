@@ -27,6 +27,21 @@ export const SearchInput = styled.input.attrs({
   }
 `;
 
+export const AutoComplete = styled.ul`
+  position: absolute;
+  width: 100%;
+  background-color: #ccc;
+  list-style: none;
+`;
+
+export const AutoCompleteItem = styled.li`
+  width: 100%;
+  color: #777;
+  padding: 10px 10px;
+  border-bottom: 1px solid #b9b9b9;
+  font-style: italic;
+`;
+
 export const SearchButton = styled.button`
   width: 40px;
   height: 40px;

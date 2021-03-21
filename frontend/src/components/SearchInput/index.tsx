@@ -19,7 +19,6 @@ const Search = () => {
     setInputValue,
     suggest,
     setSuggest,
-    searching,
     handleSearch,
     Uglify,
   } = useContext(GlobalContext) as TContextProps;
@@ -52,7 +51,6 @@ const Search = () => {
 
   return (
     <SearchWrapper>
-      {searching && <p>Buscando...</p>}
       <SearchInput onChange={handleChange} value={inputValue} />
       <AutoComplete>
         {suggest.map((item) => (

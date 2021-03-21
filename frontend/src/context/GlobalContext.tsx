@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 import weatherFetch from "../utils/WeatherFetch";
 import Uglify from "../utils/UglifyString";
 
@@ -11,6 +11,7 @@ export type TContextProps = {
   handleSearch: (value: string) => void;
   Uglify: (value: string) => string;
   result: TResult;
+  notFound: boolean;
 };
 
 export type TResult = {
@@ -44,20 +45,24 @@ export const GlobalStorage = ({ children }: any) => {
   const [suggest, setSuggest] = useState<string[]>([]);
   const [searching, setSearching] = useState<boolean>(false);
   const [result, setResult] = useState<any>({});
+  const [notFound, setNotFound] = useState<boolean>(false);
 
   const handleSearch = async (value: string) => {
     setSearching(true);
-    const {
-      weatherLocation: { locale, weather },
-    } = await weatherFetch(Uglify(value));
-    setResult({ locale, weather });
+    const response = await weatherFetch(Uglify(value));
+
+    if (Object.keys(response).length) {
+      const {
+        weatherLocation: { locale, weather },
+      } = response;
+      setResult({ locale, weather });
+      setNotFound(false);
+    } else {
+      setNotFound(true);
+    }
+    setSearching(false);
     setInputValue("");
   };
-
-  useEffect(() => {
-    setSearching(false);
-    console.log(result);
-  }, [result]);
 
   return (
     <GlobalContext.Provider
@@ -70,6 +75,7 @@ export const GlobalStorage = ({ children }: any) => {
         result,
         handleSearch,
         Uglify,
+        notFound,
       }}
     >
       {children}

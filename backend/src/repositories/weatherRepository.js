@@ -12,7 +12,12 @@ class WeatherRepository {
     const all = await this._currentContent();
     if (!weatherId) return all;
     const weatherLocation = all.find(
-      ({ locale }) => weatherId === locale.name.toLowerCase()
+      ({ locale }) =>
+        weatherId ===
+        locale.name
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
     );
     return { weatherLocation };
   }

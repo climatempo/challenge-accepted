@@ -12,7 +12,15 @@ class LocationRepository {
     const all = await this._currentContent();
     if (!locationName) return all;
 
-    return all.find(({ name }) => locationName === name.toLowerCase());
+    return all.find(
+      ({ name }) =>
+        locationName ===
+        name
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .replace(" ", "_")
+    );
   }
 }
 

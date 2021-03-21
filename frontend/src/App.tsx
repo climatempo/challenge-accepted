@@ -4,20 +4,16 @@ import Header from "./components/Header";
 import Search from "./components/SearchInput";
 import GlobalStyle from "./styles/GlobaStyle";
 
+import LocationFetch from "./utils/LocationFetch";
+
 const App = () => {
   const [locations, setLocations] = useState<string>("");
 
-  const fetchLocation = async () => {
-    const url = `http://localhost:8000/location`;
-
-    const response = await fetch(url);
-    const data = await response.json();
-
-    setLocations(JSON.stringify(data));
-  };
-
   useEffect(() => {
-    fetchLocation();
+    (async () => {
+      const data = await LocationFetch();
+      setLocations(JSON.stringify(data));
+    })();
   }, []);
 
   useEffect(() => {

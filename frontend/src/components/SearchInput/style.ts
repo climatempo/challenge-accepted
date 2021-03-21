@@ -30,18 +30,24 @@ export const SearchInput = styled.input.attrs({
 export const AutoComplete = styled.ul`
   position: absolute;
   width: 100%;
-  background-color: #ccc;
   list-style: none;
   top: 60px;
 `;
 
 export const AutoCompleteItem = styled.li`
+  background-color: #ccc;
   width: 100%;
   color: #777;
   padding: 10px 10px;
   border-bottom: 1px solid #b9b9b9;
   font-style: italic;
   cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: #b9b9b9;
+    border-bottom: 1px solid #fff;
+  }
 `;
 
 export const SearchButton = styled.button`

@@ -6,21 +6,11 @@ import {
   SearchInput,
   SearchWrapper,
 } from "./style";
-import { GlobalContext } from "../../context/GlobalContext";
+import { GlobalContext, TContextProps } from "../../context/GlobalContext";
 
 type TLocation = {
   name: string;
   id?: number;
-};
-
-type TContextProps = {
-  inputValue: string;
-  setInputValue: (value: string) => void;
-  suggest: string[];
-  setSuggest: (initial: string[] | ((value: string[]) => string[])) => void;
-  searching: boolean;
-  handleSearch: (value: string) => void;
-  Uglify: (value: string) => string;
 };
 
 const Search = () => {

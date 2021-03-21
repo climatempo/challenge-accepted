@@ -32,6 +32,7 @@ export const AutoComplete = styled.ul`
   width: 100%;
   background-color: #ccc;
   list-style: none;
+  top: 60px;
 `;
 
 export const AutoCompleteItem = styled.li`

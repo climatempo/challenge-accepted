@@ -18,6 +18,7 @@ class WeatherRepository {
           .normalize("NFD")
           .replace(/[\u0300-\u036f]/g, "")
           .toLowerCase()
+          .replace(/\s/g, "_")
     );
     return { weatherLocation };
   }

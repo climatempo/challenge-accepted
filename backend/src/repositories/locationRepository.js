@@ -19,7 +19,7 @@ class LocationRepository {
           .normalize("NFD")
           .replace(/[\u0300-\u036f]/g, "")
           .toLowerCase()
-          .replace(" ", "_")
+          .replace(/\s/g, "_")
     );
   }
 }

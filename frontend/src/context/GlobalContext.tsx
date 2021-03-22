@@ -12,6 +12,10 @@ export type TContextProps = {
   Uglify: (value: string) => string;
   result: TResult;
   notFound: boolean;
+  convertTemperature: boolean
+  convertRain: boolean
+  toggleTemperature: () => void
+  toggleRain: () => void
 };
 
 export type TResult = {
@@ -46,6 +50,8 @@ export const GlobalStorage = ({ children }: any) => {
   const [searching, setSearching] = useState<boolean>(false);
   const [result, setResult] = useState<any>({});
   const [notFound, setNotFound] = useState<boolean>(false);
+  const [convertTemperature, setConvertTemperature] = useState<boolean>(false)
+  const [convertRain, setConvertRain] = useState<boolean>(false)
 
   const handleSearch = async (value: string) => {
     setSearching(true);
@@ -64,6 +70,9 @@ export const GlobalStorage = ({ children }: any) => {
     setInputValue("");
   };
 
+  const toggleTemperature = () => setConvertTemperature(!convertTemperature)
+  const toggleRain = () => setConvertRain(!convertRain)
+
   return (
     <GlobalContext.Provider
       value={{
@@ -76,6 +85,10 @@ export const GlobalStorage = ({ children }: any) => {
         handleSearch,
         Uglify,
         notFound,
+        convertTemperature,
+        convertRain,
+        toggleTemperature,
+        toggleRain
       }}
     >
       {children}

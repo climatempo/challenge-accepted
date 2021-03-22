@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Card,
   CardBody,
@@ -13,7 +13,8 @@ import DownArrow from "../../assets/images/icons/down-arrow.png";
 import UpArrow from "../../assets/images/icons/up-arrow.png";
 import Umbrella from "../../assets/images/icons/umbrella.png";
 import Rain from "../../assets/images/icons/rain.png";
-import { TWeather } from "../../context/GlobalContext";
+import { GlobalContext, TContextProps, TWeather } from "../../context/GlobalContext";
+
 
 type TCardsProps = {
   data: TWeather;
@@ -25,7 +26,16 @@ const COLORS = {
 };
 
 const Cards = ({ data }: TCardsProps) => {
+  const { convertRain, convertTemperature } = useContext(GlobalContext) as TContextProps
   const formattedDate = data.date.split("-").reverse().join("/")
+
+  const convertTemperatureValue = (value: number) => {
+    return Math.round((value * 1.8) + 32)
+  }
+
+  const convertRainValue = (value: number) => {
+    return ((value / 25.4)).toFixed(2)
+  }
 
   return (
     <>
@@ -37,19 +47,29 @@ const Cards = ({ data }: TCardsProps) => {
         <CardBody>
           <TemperatureDisplay color={COLORS.MAX}>
             <IndicatorIcon src={UpArrow} alt="UpArrow icon" />
-            {data.temperature.max}
+            {convertTemperature 
+              ? `${convertTemperatureValue(data.temperature.max)}°F`
+              : `${data.temperature.max}°C`
+            }
           </TemperatureDisplay>
           <TemperatureDisplay color={COLORS.MIN}>
-            <IndicatorIcon src={DownArrow} alt="DownArrow icon" />{" "}
-            {data.temperature.min}
+            <IndicatorIcon src={DownArrow} alt="DownArrow icon" />
+            {convertTemperature 
+              ? `${convertTemperatureValue(data.temperature.min)}°F`
+              : `${data.temperature.min}°C`
+            }
           </TemperatureDisplay>
           <TemperatureDisplay>
             <IndicatorIcon src={Rain} alt="Rain icon" />
-            {data.rain.precipitation}
+            {convertRain 
+              ? `${convertRainValue(data.rain.precipitation)}inch`
+              : `${data.rain.precipitation}mm`
+            }
+            
           </TemperatureDisplay>
           <TemperatureDisplay>
             <IndicatorIcon src={Umbrella} alt="Umbrella icon" />
-            {data.rain.probability}
+            {data.rain.probability}%
           </TemperatureDisplay>
         </CardBody>
       </Card>

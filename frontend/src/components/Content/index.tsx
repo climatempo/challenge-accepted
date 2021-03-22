@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Cards from "../Cards";
 import { ContentWrapper, ResponseDisplay } from "./style";
 import { GlobalContext, TContextProps } from "../../context/GlobalContext";
+import Converter from "../ConverterButton";
 
 const Content = () => {
   const { searching, result, notFound } = useContext(
@@ -23,6 +24,7 @@ const Content = () => {
           <ResponseDisplay>
             Previsão para {result.locale.name} - {result.locale.state}
           </ResponseDisplay>
+          <Converter />
           {result.weather.map((item) => (
             <Cards key={item.date} data={item} />
           ))}

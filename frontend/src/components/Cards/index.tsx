@@ -24,33 +24,37 @@ const COLORS = {
   MIN: "#82B7D7",
 };
 
-const Cards = ({ data }: TCardsProps) => (
-  <>
-    <Card>
-      <CardHeader>
-        <CardTitle>{data.date}</CardTitle>
-        <CardParahraph>{data.text}</CardParahraph>
-      </CardHeader>
-      <CardBody>
-        <TemperatureDisplay color={COLORS.MAX}>
-          <IndicatorIcon src={UpArrow} alt="UpArrow icon" />
-          {data.temperature.max}
-        </TemperatureDisplay>
-        <TemperatureDisplay color={COLORS.MIN}>
-          <IndicatorIcon src={DownArrow} alt="DownArrow icon" />{" "}
-          {data.temperature.min}
-        </TemperatureDisplay>
-        <TemperatureDisplay>
-          <IndicatorIcon src={Rain} alt="Rain icon" />
-          {data.rain.precipitation}
-        </TemperatureDisplay>
-        <TemperatureDisplay>
-          <IndicatorIcon src={Umbrella} alt="Umbrella icon" />
-          {data.rain.probability}
-        </TemperatureDisplay>
-      </CardBody>
-    </Card>
-  </>
-);
+const Cards = ({ data }: TCardsProps) => {
+  const formattedDate = data.date.split("-").reverse().join("/")
+
+  return (
+    <>
+      <Card>
+        <CardHeader>
+          <CardTitle>{formattedDate}</CardTitle>
+          <CardParahraph>{data.text}</CardParahraph>
+        </CardHeader>
+        <CardBody>
+          <TemperatureDisplay color={COLORS.MAX}>
+            <IndicatorIcon src={UpArrow} alt="UpArrow icon" />
+            {data.temperature.max}
+          </TemperatureDisplay>
+          <TemperatureDisplay color={COLORS.MIN}>
+            <IndicatorIcon src={DownArrow} alt="DownArrow icon" />{" "}
+            {data.temperature.min}
+          </TemperatureDisplay>
+          <TemperatureDisplay>
+            <IndicatorIcon src={Rain} alt="Rain icon" />
+            {data.rain.precipitation}
+          </TemperatureDisplay>
+          <TemperatureDisplay>
+            <IndicatorIcon src={Umbrella} alt="Umbrella icon" />
+            {data.rain.probability}
+          </TemperatureDisplay>
+        </CardBody>
+      </Card>
+    </>
+  )
+};
 
 export default Cards;

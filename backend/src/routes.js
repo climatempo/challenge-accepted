@@ -1,33 +1,26 @@
 const locationService = require("./factories/locationFactory").locationInstance();
 const weatherService = require("./factories/weatherFactory").weatherInstance();
 
-module.exports = {
-  "/location:get": async (request, response) => {
+const mapper = {
+  "location": locationService,
+  "weather": weatherService,
+}
+
+const routes = async (request, response, service) => {
     try {
       const { id } = request.queryString;
-      const location = await locationService.find(id);
-      response.write(JSON.stringify(location));
+      const serviceHandler = mapper[service]
+      if (!serviceHandler) {
+        throw new Error('{ message: "Page not found" }')
+      }
+      const responseData = await serviceHandler.find(id);
+      response.write(JSON.stringify(responseData));
     } catch (error) {
       console.log(error);
-      response.write('{ message: "Page not found" }');
+      response.write(error);
     } finally {
       return response.end();
     }
-  },
-  "/weather:get": async (request, response) => {
-    try {
-      const { id } = request.queryString;
-      const weather = await weatherService.find(id);
-      response.write(JSON.stringify(weather));
-    } catch (error) {
-      console.log(error);
-      response.write('{ message: "Page not found" }');
-    } finally {
-      return response.end();
-    }
-  },
-  default: (request, response) => {
-    response.write('{ message: "Page not found" }');
-    response.end();
-  },
-};
+}
+
+module.exports = routes

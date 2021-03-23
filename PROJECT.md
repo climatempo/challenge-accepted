@@ -67,7 +67,7 @@
     ```
       yarn start
     ```
-  - After that you can access the project usign this url http://localhost:8000
+  - After that you can access the project usign this url http://localhost:3000
 
 <br>
 <br>

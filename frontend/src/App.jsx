@@ -1,7 +1,12 @@
+import Header from './components/Header';
+import './styles/global.css';
 
 function App() {
   return (
-    <h1>CLIMATEMPO</h1>
+    <>
+      <Header />
+      <h1>CLIMATEMPO</h1>
+    </>
   );
 }
 

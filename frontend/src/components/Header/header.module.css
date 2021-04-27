@@ -1,0 +1,17 @@
+.container {
+  height: 4rem;
+  background-color: var(--blue-header);
+}
+
+.container > div {
+  max-width: 1120px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container > div > img {
+  height: 100%;
+}

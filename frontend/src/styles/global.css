@@ -6,8 +6,8 @@
 
 :root {
   --white: #fff;
-  --background: #f2f3f5;
-  --gray-line: #dcdde0;
+  --background: #e0e0e0;
+  --gray: #dcdde0;
   --text: #666666;
   --text-highlight: #b3b9ff;
   --title: #2e384d;
@@ -46,4 +46,42 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.containerInput > div {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+}
+
+.containerInput > div > input {
+  width: 90%;
+  height: 2.5rem;
+  padding: 0 1rem;
+  border-color: transparent;
+  outline: none;
+  color: var(--text);
+  border-radius: 4px 0 0 4px;
+}
+
+.containerInput > div > button {
+  width: 10%;
+  height: 2.5rem;
+  background-color: var(--white);
+  border-color: transparent;
+  outline: none;
+  border-radius: 0 4px 4px 0;
+
+  transition: background-color 0.5s;
+}
+
+.containerInput > div > button:hover {
+  background-color: var(--blue-header);
+}
+
+@media(max-width: 800px) {
+  .containerInput > div {
+    padding: 0;
+  }
 }

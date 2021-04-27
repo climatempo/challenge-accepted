@@ -1,11 +1,20 @@
 import Header from './components/Header';
+
+import searchIcon from './assets/search.png';
 import './styles/global.css';
 
 function App() {
   return (
     <>
       <Header />
-      <h1>CLIMATEMPO</h1>
+      <div className="containerInput">
+        <div>
+          <input placeholder="Digite uma localização" />
+          <button type="button">
+            <img src={searchIcon} alt="search icon" />
+          </button>
+        </div>
+      </div>
     </>
   );
 }

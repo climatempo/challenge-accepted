@@ -12,6 +12,14 @@
   justify-content: center;
 }
 
-.container > div > img {
+.container > div > button {
+  height: 100%;
+  width: 227px;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+
+.container > div > button > img {
   height: 100%;
 }

@@ -7,13 +7,15 @@
 :root {
   --white: #fff;
   --background: #e0e0e0;
+  --card-background: #eeeeee;
   --gray: #dcdde0;
   --text: #666666;
+  --black: #000000;
   --text-highlight: #b3b9ff;
   --title: #2e384d;
   --red: #e83f5b;
   --green:#4cd62b;
-  --blue: #5965e0;
+  --blue: #0277bd;
   --blue-dark: #4953b8;
   --blue-header: #1565c0;
 }
@@ -78,6 +80,28 @@ a {
 
 .containerInput > div > button:hover {
   background-color: var(--blue-header);
+}
+
+main {
+  margin: 20px 10px;
+}
+
+main > div {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+main > div > span {
+  color: var(--black);
+  font-size: 1.8rem;
+}
+
+main > div:last-child {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+  row-gap: 4rem;
 }
 
 @media(max-width: 800px) {

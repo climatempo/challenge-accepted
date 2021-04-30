@@ -1,0 +1,58 @@
+.container {
+  background-color: var(--card-background);
+  width: 400px;
+  height: 220px;
+  color: var(--black);
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow:0 1px 2px #555;
+  transition: transform .2s;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.container > .header {
+  background-color: var(--white);
+  padding: 0.8rem 1rem;
+  border-radius: 3px 3px 0 0;
+}
+
+.container > .header > span {
+  font-weight: 600;
+}
+
+.container > .header > p {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  font-size: 0.86rem;
+}
+
+.container > .content {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  padding: 1rem 1rem;
+}
+
+.container > .content > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.container > .content > div > span {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.container > .content > div:first-child > span {
+  color: var(--blue);
+}
+
+.container > .content > div:nth-child(2) > span {
+  color: var(--red);
+}

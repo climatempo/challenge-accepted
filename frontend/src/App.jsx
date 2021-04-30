@@ -2,6 +2,7 @@ import Header from './components/Header';
 
 import searchIcon from './assets/search.png';
 import './styles/global.css';
+import WeatherCard from './components/WeatherCard';
 
 function App() {
   return (
@@ -15,6 +16,18 @@ function App() {
           </button>
         </div>
       </div>
+
+      <main>
+        <div>
+          <span>Previsão para Osasco - SP</span>
+        </div>
+        <div>
+          <WeatherCard />
+          <WeatherCard />
+          <WeatherCard />
+          <WeatherCard />
+        </div>
+      </main>
     </>
   );
 }

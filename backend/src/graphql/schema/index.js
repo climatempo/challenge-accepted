@@ -2,7 +2,7 @@ const { buildSchema } = require('graphql');
 
 module.exports = buildSchema(`
 
-type Location {
+type Locale {
   _id: ID!
   name: String!
   state: String!
@@ -39,7 +39,7 @@ type Weather {
   weather: [WeatherData] 
 }
 
-input LocationInput {
+input LocaleInput {
   name: String!
   state: String!
   latitude: Float!
@@ -75,12 +75,12 @@ input WeatherInput {
 }
 
 type RootQuery {
-  locations: [Location!]!
+  locale: [Locale!]!
   weather: [Weather!]!
 }
 
 type RootMutation {
-  createLocation(locationInput: LocationInput): Location
+  createLocale(localeInput: LocaleInput): Locale
   createWeather(weatherInput: WeatherInput): Weather
 }
 

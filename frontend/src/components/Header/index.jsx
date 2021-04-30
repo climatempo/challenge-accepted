@@ -8,7 +8,7 @@ export default function Header() {
     <header className={styles.container}>
       <div>
         <button type="button">
-          <img onCl src={logo} alt="climatempo logo" />
+          <img src={logo} alt="climatempo logo" />
         </button>
       </div>
     </header>

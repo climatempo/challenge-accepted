@@ -3,6 +3,7 @@ const Weather = require('../../models/weather');
 
 module.exports = {
   locales: () => {
+    console.log(Locale.find());
     return Locale.find().then(locales => {
       return locales.map(locale => {
         return { ...locale._doc }

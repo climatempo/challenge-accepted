@@ -50,14 +50,14 @@ a {
   text-decoration: none;
 }
 
-.containerInput > div {
+.containerInput > form {
   max-width: 800px;
   margin: 0 auto;
   padding: 1rem 0;
   display: flex;
 }
 
-.containerInput > div > input {
+.containerInput > form > input {
   width: 90%;
   height: 2.5rem;
   padding: 0 1rem;
@@ -67,7 +67,7 @@ a {
   border-radius: 4px 0 0 4px;
 }
 
-.containerInput > div > button {
+.containerInput > form > button {
   width: 10%;
   height: 2.5rem;
   background-color: var(--white);
@@ -78,7 +78,7 @@ a {
   transition: background-color 0.5s;
 }
 
-.containerInput > div > button:hover {
+.containerInput > form > button:hover {
   background-color: var(--blue-header);
 }
 

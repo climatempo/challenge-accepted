@@ -6,33 +6,34 @@ import umbrella from '../../assets/umbrella.png';
 import raindrop from '../../assets/raindrop-close-up.png';
 import styles from './weatherCard.module.css';
 
-export default function WeatherCard() {
+export default function WeatherCard(props) {
   return (
-    <div className={styles.container}>
+    <div key={Math.random() * 100} className={styles.container}>
       <div className={styles.header}>
-        <span>01/02/2017</span>
-        <p>
-          Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a
-          qualquer hora.
-        </p>
+        <span>
+          {new Intl.DateTimeFormat('pt-BR').format(
+            new Date(props.weather.date),
+          )}
+        </span>
+        <p>{props.weather.text}</p>
       </div>
 
       <div className={styles.content}>
         <div>
           <img src={arrowUp} alt="arrow up" />
-          <span>20°C</span>
+          <span>{`${props.weather.temperature.max}°C`}</span>
         </div>
         <div>
           <img src={arrowDown} alt="arrow down" />
-          <span>10°C</span>
+          <span>{`${props.weather.temperature.min}°C`}</span>
         </div>
         <div>
           <img src={raindrop} alt="rain drop" />
-          <span>10mm</span>
+          <span>{`${props.weather.rain.precipitation}mm`}</span>
         </div>
         <div>
           <img src={umbrella} alt="umbrella" />
-          <span>50%</span>
+          <span>{`${props.weather.rain.probability}%`}</span>
         </div>
       </div>
     </div>

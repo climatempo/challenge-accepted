@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AutoComplete, Input } from 'antd';
+import { AutoComplete, Input, Button } from 'antd';
 
 import Header from './components/Header';
 
@@ -11,6 +11,9 @@ import WeatherCard from './components/WeatherCard';
 function App() {
   const [locale, setLocale] = useState();
   const [weather, setWeather] = useState();
+
+  const [isTemperatureInCelsius, setIsTempreatureInCelsius] = useState(true);
+  const [isPrecipitationInMM, setIsPrecipitationInMM] = useState(true);
 
   function handleSearch(formData) {
     const searchValue = formData;
@@ -56,11 +59,29 @@ function App() {
           <>
             <div>
               <span>{`Previsão para ${locale.name} - ${locale.state}`}</span>
+              <div>
+                <Button
+                  onClick={() =>
+                    setIsTempreatureInCelsius(!isTemperatureInCelsius)
+                  }
+                >
+                  {`Temperatura em ${isTemperatureInCelsius ? '°F' : '°C'}`}
+                </Button>
+                <Button
+                  onClick={() => setIsPrecipitationInMM(!isPrecipitationInMM)}
+                >
+                  {`Precipitação em ${isPrecipitationInMM ? 'Inch' : 'MM'}`}
+                </Button>
+              </div>
             </div>
             <div>
               {weather.weather.map(weatherItem => (
                 <div key={weatherItem.date}>
-                  <WeatherCard weather={weatherItem} />
+                  <WeatherCard
+                    isCelsius={isTemperatureInCelsius}
+                    isMM={isPrecipitationInMM}
+                    weather={weatherItem}
+                  />
                 </div>
               ))}
             </div>

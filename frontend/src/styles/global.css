@@ -77,11 +77,31 @@ main > div > span {
   font-size: 1.8rem;
 }
 
+main > div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+main > div:first-child > div > button:first-child  {
+  margin-right: 20px;
+}
+
 main > div:last-child {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
   row-gap: 4rem;
+}
+
+@media(max-width: 860px) {
+  main > div:first-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main > div:first-child > div {
+    margin-top: 10px;
+  }
 }
 
 @media(max-width: 800px) {

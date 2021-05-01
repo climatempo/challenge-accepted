@@ -1,7 +1,7 @@
 .container {
   background-color: var(--card-background);
   width: 400px;
-  height: 220px;
+  height: 240px;
   color: var(--black);
   cursor: pointer;
   border-radius: 3px;
@@ -33,7 +33,7 @@
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 3rem;
-  row-gap: 2rem;
+  row-gap: 1.5rem;
   padding: 1rem 1rem;
 }
 

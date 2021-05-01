@@ -8,7 +8,7 @@ import styles from './weatherCard.module.css';
 
 export default function WeatherCard(props) {
   return (
-    <div key={Math.random() * 100} className={styles.container}>
+    <div className={styles.container}>
       <div className={styles.header}>
         <span>
           {new Intl.DateTimeFormat('pt-BR').format(

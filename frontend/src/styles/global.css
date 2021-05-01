@@ -50,37 +50,17 @@ a {
   text-decoration: none;
 }
 
-.containerInput > form {
+.containerInput > div {
   max-width: 800px;
   margin: 0 auto;
   padding: 1rem 0;
   display: flex;
 }
 
-.containerInput > form > input {
-  width: 90%;
-  height: 2.5rem;
-  padding: 0 1rem;
-  border-color: transparent;
-  outline: none;
-  color: var(--text);
-  border-radius: 4px 0 0 4px;
+.containerInput > div > .input {
+  width: 100%;
 }
 
-.containerInput > form > button {
-  width: 10%;
-  height: 2.5rem;
-  background-color: var(--white);
-  border-color: transparent;
-  outline: none;
-  border-radius: 0 4px 4px 0;
-
-  transition: background-color 0.5s;
-}
-
-.containerInput > form > button:hover {
-  background-color: var(--blue-header);
-}
 
 main {
   margin: 20px 10px;

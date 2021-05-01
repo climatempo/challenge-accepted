@@ -1,24 +1,19 @@
-/* eslint-disable no-unused-vars */
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { AutoComplete, Input } from 'antd';
+
 import Header from './components/Header';
 
 import localesJSON from './assets/locales.json';
 import weatherJSON from './assets/weather.json';
-
-import searchIcon from './assets/search.png';
 import './styles/global.css';
 import WeatherCard from './components/WeatherCard';
 
 function App() {
   const [locale, setLocale] = useState();
-  const [search, setSearch] = useState('');
   const [weather, setWeather] = useState();
 
   function handleSearch(formData) {
-    formData.preventDefault();
-
-    const searchValue = formData.target.elements.inputSearch.value;
-
+    const searchValue = formData;
     const findLocale = localesJSON.find(
       localeItem => localeItem.name.toLowerCase() === searchValue.toLowerCase(),
     );
@@ -35,12 +30,25 @@ function App() {
     <>
       <Header />
       <div className="containerInput">
-        <form onSubmit={handleSearch}>
-          <input placeholder="Digite uma localização" name="inputSearch" />
-          <button type="submit">
-            <img src={searchIcon} alt="search icon" />
-          </button>
-        </form>
+        <div>
+          <AutoComplete
+            className="input"
+            options={[{ value: 'Osasco' }, { value: 'São Paulo' }]}
+            filterOption={(inputValue, option) =>
+              option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !==
+              -1
+            }
+            backfill
+          >
+            <Input.Search
+              name="inputSearch"
+              size="large"
+              placeholder="Digite uma localização"
+              enterButton
+              onSearch={e => handleSearch(e)}
+            />
+          </AutoComplete>
+        </div>
       </div>
 
       <main>
@@ -51,7 +59,9 @@ function App() {
             </div>
             <div>
               {weather.weather.map(weatherItem => (
-                <WeatherCard weather={weatherItem} />
+                <div key={weatherItem.date}>
+                  <WeatherCard weather={weatherItem} />
+                </div>
               ))}
             </div>
           </>

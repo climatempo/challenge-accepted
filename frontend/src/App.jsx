@@ -20,6 +20,13 @@ function App() {
     const localeSearched = locales.find(
       localeItem => localeItem.name.toLowerCase() === searchValue.toLowerCase(),
     );
+
+    if (!localeSearched) {
+      setLocale(undefined);
+      setWeather(undefined);
+      return;
+    }
+
     const findLocale = locales.find(
       localeItem => localeItem._id === localeSearched._id,
     );
@@ -106,7 +113,7 @@ function App() {
           </>
         ) : (
           <div>
-            <p>Sem resultados, faça uma nova busca</p>
+            <p>Sem resultados, faça uma nova busca.</p>
           </div>
         )}
       </main>

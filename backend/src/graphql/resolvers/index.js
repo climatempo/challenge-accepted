@@ -13,7 +13,6 @@ module.exports = {
   weathers: async () => {
     try {
       const weathers = await Weather.find();
-      weathers.map(weather => console.log(weather.weather))
       return weathers;
     } catch (err) {
       throw err;

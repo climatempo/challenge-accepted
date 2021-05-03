@@ -6,6 +6,39 @@
 
 ___
 
+## 🎲 Excutando a aplicação
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/tallesv/challenge-accepted
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd challenge-accepted
+
+# Acesse a pasta do backend da aplicação
+$ cd backend
+
+# Instale as dependências do backend
+$ yarn
+
+# Execute a aplicação
+$ yarn dev:server
+
+# O backend inciará na porta:3333 - acesse <http://localhost:3000/graphql>
+
+# Acesse a pasta do frontend da aplicação
+$ cd ../frontend
+
+# Instale as dependências do frontend
+$ yarn
+
+# Execute a aplicação
+$ yarn start
+
+# O frontend inciará na porta:3000 - acesse <http://localhost:3000>
+
+```
+
 
 ## Processo de recrutamento
 

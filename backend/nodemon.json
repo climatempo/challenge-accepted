@@ -1,7 +1,0 @@
-{
-  "env": {
-    "MONGO_USER": "admin",
-    "MONGO_PASSWORD": "admin123",
-    "MONGO_DB": "climatempo"
-  }
-}

@@ -21,6 +21,7 @@
         "prettier"
     ],
     "rules": {
+      "no-underscore-dangle": "off",
       "react/destructuring-assignment": "off",
       "react/prop-types": "off",
       "prettier/prettier": "error",

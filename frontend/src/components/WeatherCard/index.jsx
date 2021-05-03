@@ -20,7 +20,7 @@ export default function WeatherCard(props) {
       <div className={styles.header}>
         <span>
           {new Intl.DateTimeFormat('pt-BR').format(
-            new Date(props.weather.date),
+            new Date(`${props.weather.date} 00:00:00`),
           )}
         </span>
         <p>{props.weather.text}</p>

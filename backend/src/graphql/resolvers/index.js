@@ -36,11 +36,11 @@ module.exports = {
   createWeather: async args => {
     const weather = new Weather({
       period: {
-        begin: new Date(args.weatherInput.period.begin),
-        end: new Date(args.weatherInput.period.end),
+        begin: args.weatherInput.period.begin,
+        end: args.weatherInput.period.end,
       },
-      locale: args.weatherInput.localeId,
-      weather: args.weatherInput.weather.map(weatherItem => ({ ...weatherItem, date: new Date(weatherItem.date) }))
+      locale_id: args.weatherInput.locale_id,
+      weather: args.weatherInput.weather,
     });
     return await weather.save().then(result => {
       console.log(result);

@@ -5,11 +5,11 @@ const Schema = mongoose.Schema;
 const weatherSchema = new Schema({
   period: {
     begin: {
-      type: Date,
+      type: String,
       required: true
     },
     end: {
-      type: Date,
+      type: String,
       required: true
     }
   },
@@ -20,7 +20,7 @@ const weatherSchema = new Schema({
   weather: [
     {
       date: {
-        type: Date,
+        type: String,
       },
       text: {
         type: String,

@@ -41,6 +41,10 @@ O frontend foi feito em react com javascript, também foi utilizado a biblioteca
 
 O backend foi feito utilizando o ambiente nodejs com javascript, utilizando graphql para consulta e criação dos dados de locale e weather, para armazenar os esses dados foi utilizado o banco de dados mongodb. 
 
+Exemplos:
+
+```bash
+
 Locale query:
   query {
     locales {
@@ -182,3 +186,5 @@ Criar weather:
     locale_id
   }
 }
+
+```

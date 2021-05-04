@@ -27,7 +27,7 @@ $ yarn dev:server
 # O backend inciará na porta:3333 - acesse <http://localhost:3000/graphql>
 
 # Acesse a pasta do frontend da aplicação
-$ cd ../frontend
+$ cd frontend
 
 # Instale as dependências do frontend
 $ yarn

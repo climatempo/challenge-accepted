@@ -24,7 +24,7 @@ $ yarn
 # Execute a aplicação
 $ yarn dev:server
 
-# O backend inciará na porta:3333 - acesse <http://localhost:3000/graphql>
+# O backend inciará na porta:3333 - acesse <http://localhost:3333/graphql>
 
 # Acesse a pasta do frontend da aplicação
 $ cd frontend

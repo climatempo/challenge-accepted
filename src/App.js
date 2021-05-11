@@ -1,7 +1,16 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
+import Routes from './routes';
 
 function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <div>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;

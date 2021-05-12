@@ -1,0 +1,52 @@
+.weather-content {
+  background-color: #e0e0e0;
+  width: 100%;
+
+  &__header {
+    background-color: #0189b2;
+
+    img {
+      width: 50%;
+      padding: 4% 0;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__input {
+    .ant-input-affix-wrapper {
+      border: none;
+      &-focused {
+        box-shadow: none;
+      }
+      .ant-input {
+        width: 90% !important;
+        padding: 10px !important;
+      }
+    }
+  }
+
+  &__results {
+    h1 {
+      padding: 5% 2%;
+      font-size: 1.6em;
+      width: 80%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-56%);
+    }
+    .wheater-content__results_box_cards {
+      display: flex;
+      flex-direction: column;
+      max-height: 700px;
+      overflow: auto;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    width: 50%;
+    &__header {
+      background-color: red;
+    }
+  }
+}

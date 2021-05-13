@@ -3,8 +3,8 @@ import path from 'path';
 
 import './Home.scss';
 
-import { Input, AutoComplete } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
+import { AutoComplete } from 'antd';
+// import { SearchOutlined } from '@ant-design/icons';
 
 import Card from '../../components/Card';
 
@@ -216,10 +216,27 @@ const fakeData = [
 ];
 
 export default function Home() {
-  // const onSearch = (value) => {
-  //   console.log(value);
-  // };
+  const [citysToShow, setCitysToShow] = React.useState();
 
+  const onSearch = (value) => {
+    const filteredCitys = fakeData.filter(
+      (city) =>
+        city.locale.name
+          .toLocaleLowerCase()
+          .includes(value.toLocaleLowerCase()) ||
+        city.locale.state
+          .toLocaleLowerCase()
+          .includes(value.toLocaleLowerCase())
+    );
+
+    setCitysToShow(filteredCitys);
+  };
+
+  React.useEffect(() => {
+    if (fakeData.length > 0 && !citysToShow) {
+      setCitysToShow(fakeData);
+    }
+  }, [citysToShow]);
   return (
     <div className="weather-content">
       <div className="weather-content__header">
@@ -229,25 +246,25 @@ export default function Home() {
         />
       </div>
       <div className="weather-content__input">
-        <AutoComplete
-          options={fakeData}
-          filterOption={(inputValue, option) =>
-            option.locale.name
-              .toUpperCase()
-              .indexOf(inputValue.toUpperCase()) !== -1
-          }
-        >
-          <Input
-            size="large"
-            placeholder="Busque por uma cidade..."
-            suffix={<SearchOutlined style={{ fontSize: '24px' }} />}
-          />
+        <AutoComplete style={{ width: '100%' }} onSearch={onSearch}>
+          {citysToShow && citysToShow.length > 0 ? (
+            <>
+              {citysToShow.map((el) => (
+                <AutoComplete.Option
+                  value={`${el.locale.name} - ${el.locale.state}`}
+                  key={el.locale.id}
+                />
+              ))}
+            </>
+          ) : (
+            ''
+          )}
         </AutoComplete>
       </div>
       <div className="weather-content__results">
         <h1>
-          Previsão do tempo para {fakeData[0].locale.name} -{' '}
-          {fakeData[0].locale.state}
+          Previsão do tempo para
+          {fakeData[0].locale.name}- {fakeData[0].locale.state}
         </h1>
         <div className="wheater-content__results_box_cards">
           {fakeData[0].weather.map((w) => (
@@ -258,10 +275,9 @@ export default function Home() {
               max={w.temperature.max}
               prob={w.rain.probability}
               prec={w.rain.precipitation}
+              key={w.date}
             />
           ))}
-          {/* <Card />
-          <Card /> */}
         </div>
       </div>
     </div>

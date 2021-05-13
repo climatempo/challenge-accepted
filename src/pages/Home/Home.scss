@@ -45,8 +45,12 @@
   }
   @media screen and (min-width: 769px) {
     width: 50%;
+    margin-top: 10px !important;
+    margin: auto;
+    border-radius: 5px;
     &__header {
-      background-color: red;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
     }
   }
 }

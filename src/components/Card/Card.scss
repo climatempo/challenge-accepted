@@ -13,11 +13,22 @@
     padding-top: 10px !important;
     padding: 2px 10px;
     border-radius: 5px 5px 0 0;
+    position: relative;
     h3 {
       font-size: 1.7em;
     }
     p {
       font-size: 1.2em;
+    }
+
+    .switchs-units{
+      position: absolute;
+      top: 6%;
+      right: 3%;
+
+      button{
+        margin: 0 5px;
+      }
     }
   }
 

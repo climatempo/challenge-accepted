@@ -263,8 +263,8 @@ export default function Home() {
       </div>
       <div className="weather-content__results">
         <h1>
-          Previsão do tempo para
-          {fakeData[0].locale.name}- {fakeData[0].locale.state}
+          Previsão do tempo para {fakeData[0].locale.name} -{' '}
+          {fakeData[0].locale.state}
         </h1>
         <div className="wheater-content__results_box_cards">
           {fakeData[0].weather.map((w) => (

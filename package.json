@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "sync": "nodemon sync.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
   "dependencies": {
     "apollo-server": "^2.24.0",
     "graphql": "^15.5.0",
+    "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
     "sequelize": "^6.6.2"

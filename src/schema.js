@@ -5,8 +5,18 @@ const typeDefs = gql`
     locales: [Locale!]
   }
 
+  type Mutation {
+    createLocale(
+      id: Int!
+      name: String!
+      state: String!
+      latitude: Float!
+      longitude: Float!
+    ): Locale
+  }
+
   type Locale {
-    id: ID!
+    id: Int!
     name: String!
     state: String!
     latitude: Float!

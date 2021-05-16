@@ -1,6 +1,6 @@
-const server = require('./src/server');
+const server = require('./server');
 
-require('./src/config/dbConnection');
+require('./config/dbConnection');
 
 server.listen().then(({ url }) => {
   console.log(`🚀  Servidor rodando em ${url}`);

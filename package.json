@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
-    "sync": "nodemon sync.js"
+    "start": "node src/app.js",
+    "dev": "nomemon src/app.js",
+    "sync": "nodemon sync.js",
+    "build": ""
   },
   "keywords": [],
   "author": "",
@@ -21,6 +23,7 @@
   },
   "dependencies": {
     "apollo-server": "^2.24.0",
+    "dotenv": "^9.0.2",
     "fs": "*",
     "graphql": "^15.5.0",
     "mysql2": "^2.2.5",

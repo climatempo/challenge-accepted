@@ -1,7 +1,8 @@
 .weather-content {
   background-color: #e0e0e0;
   width: 100%;
-
+  height: 105vh;
+  overflow: hidden;
   &__header {
     background-color: #0189b2;
 
@@ -27,20 +28,12 @@
     }
   }
 
-  &__results {
-    h1 {
-      padding: 5% 2%;
+  .msg-inicio{
+    padding: 50px;
+
+    h1{
       font-size: 1.6em;
-      width: 80%;
-      position: relative;
-      left: 50%;
-      transform: translateX(-56%);
-    }
-    .wheater-content__results_box_cards {
-      display: flex;
-      flex-direction: column;
-      max-height: 700px;
-      overflow: auto;
+      line-height: 1em;
     }
   }
   @media screen and (min-width: 769px) {
@@ -54,3 +47,4 @@
     }
   }
 }
+

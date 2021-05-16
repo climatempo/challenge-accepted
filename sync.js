@@ -1,5 +1,4 @@
 const dbConnection = require('./src/config/dbConnection');
-
 const Locale = require('./src/models/Locale');
 
 async function syncDB() {

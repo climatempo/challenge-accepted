@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "apollo-server": "^2.24.0",
+    "fs": "*",
     "graphql": "^15.5.0",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",

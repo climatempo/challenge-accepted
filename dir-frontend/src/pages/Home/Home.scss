@@ -1,0 +1,50 @@
+.weather-content {
+  background-color: #e0e0e0;
+  width: 100%;
+  height: 105vh;
+  overflow: hidden;
+  &__header {
+    background-color: #0189b2;
+
+    img {
+      width: 50%;
+      padding: 4% 0;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__input {
+    .ant-input-affix-wrapper {
+      border: none;
+      &-focused {
+        box-shadow: none;
+      }
+      .ant-input {
+        width: 90% !important;
+        padding: 10px !important;
+      }
+    }
+  }
+
+  .msg-inicio{
+    padding: 50px;
+
+    h1{
+      font-size: 1.6em;
+      line-height: 1em;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    width: 50%;
+    margin-top: 10px !important;
+    margin: auto;
+    border-radius: 5px;
+    &__header {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+}
+

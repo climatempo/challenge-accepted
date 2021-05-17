@@ -58,6 +58,7 @@ export default function Home() {
     );
     return null;
   }
+
   return (
     <div className="weather-content">
       <div className="weather-content__header">

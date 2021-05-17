@@ -7,8 +7,8 @@ const resolvers = require('./resolvers');
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  introspection: true,
-  playground: true,
+  introspection: false,
+  playground: false,
 });
 
 module.exports = server;

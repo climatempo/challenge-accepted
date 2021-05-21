@@ -144,13 +144,11 @@ O processo do desafio deve ser:
 
 1. Faça o fork do desafio.
 
-2. Desenvolva! Você terá **7 dias** a partir da data do envio do desafio.
+2. Crie um **PROJECT.md** com a explicação de como devemos executar o projeto e com o máximo de detalhes possível do que foi feito.
 
-3. Crie um **PROJECT.md** com a explicação de como devemos executar o projeto e com o máximo de detalhes possível do que foi feito.
+3. Após concluir faça um pull request.
 
-4. Após concluir faça um pull request.
-
-5. Envie um e-mail para fullstack@climatempo.com.br com seu **curriculo, pretensão salarial e o link do seu pull request**.
+4. Envie um e-mail para fullstack@climatempo.com.br com seu **curriculo, pretensão salarial e o link do seu pull request**.
 
 
 ___

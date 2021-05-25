@@ -1,0 +1,24 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/elninocavalcanti10/challenge-accepted.git",
+  "author": "elninocavalcanti10 <acn2011@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/elasticsearch": "^5.0.37",
+    "@types/express": "^4.17.11",
+    "jest": "^27.0.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "elasticsearch": "^16.7.2",
+    "express": "^4.17.1"
+  }
+}

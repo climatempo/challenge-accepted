@@ -5,24 +5,20 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
 function Home({dados}) {
 
-  const [newRepo, setNewRepo] = useState('');
+  const [city, setCity] = useState('');
   const [inputError, setInputError] = useState('');
   const [resultados, setResultados] = useState([]);
-  const [weather, setWeather] = useState([]);
 
   const handleOnSearch = (string, results) => {
-    // onSearch will have as the first callback parameter
-    // the string searched and for the second the results.
     console.log(string, results, 'string', 'results')
   }
 
   const handleOnHover = (result) => {
-    // the item hovered
     console.log(result, 'result')
   }
 
   const handleOnSelect = (item) => {
-    setNewRepo(item);
+    setCity(item);
   }
 
   const handleOnFocus = () => {
@@ -30,23 +26,20 @@ function Home({dados}) {
   }
 
   useEffect(() => {
-    }, [newRepo.name]);
+    }, [city.name]);
 
   async function handleAddRepository(e){
     e.preventDefault();
     
-    // if (!newRepo) {
-    //   setInputError('Digite o nome da Cidade');
-    //   return;
-    // }
+    if (!city) {
+      setInputError('Digite o nome da Cidade');
+      return;
+    }
 
-    await axios.get(`http://localhost:3333/clima/weather/findall?locale=${newRepo.name}`)
+    await axios.get(`http://localhost:3333/clima/weather/findall?locale=${city.name}`)
             .then(response => setResultados(response.data));
     
-    // setWeather(resultados.map(item => item.weather));
-
-    // console.log(weather, 'weather handle')
-
+    setInputError('');
   }
 
   return (

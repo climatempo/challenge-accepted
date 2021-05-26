@@ -1,0 +1,29 @@
+{
+  "name": "forecast-backend",
+  "version": "1.0.0",
+  "description": "Climatempo's technical test",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alecmariano/challenge-accepted.git"
+  },
+  "author": "alec mariano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alecmariano/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/alecmariano/challenge-accepted#readme",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

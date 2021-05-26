@@ -42,8 +42,26 @@
     margin-top: 50px;
 }
 
-.title{
+.topo{
   margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.title{
+}
+.conversorC, .conversorF {
+  border-radius: 5px;
+  border: 0px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  transition: background-color 0.2s ease 0s;
+}
+.conversorC{
+    background: rgb(66 168 3);
+}
+.conversorF{
+  background: rgb(168 3 26);
 }
 
 .card{

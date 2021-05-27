@@ -1,6 +1,10 @@
 ## Projeto
 
 - O projeto foi desenvolvido e contém a Api e o Frontend que consome esta Api.
+- A API E A APLICAÇÃO FRONTEND PODE SER VISTA NOS SEGUINTES LINKS:
+-   Api(Heroku): https://previsao-tempo-acn.herokuapp.com/
+-   Front(Vercel): https://clima-front.vercel.app/
+-   Observação: Para testar a Api do heroku lembre de complemtar a rota com os endpoints da api listados em "Rotas da Api"
 
 ### Pré Requisitos
 
@@ -55,3 +59,5 @@ Foi utilizado a biblioteca react-search-autocomplete e neste input foi consumida
 -   Os botões de conversões de valores converte:
 -   Temparatura
 -   Chuva (Precipitação)
+-   Api(Heroku): https://previsao-tempo-acn.herokuapp.com/
+-   Front(Vercel): https://clima-front.vercel.app/

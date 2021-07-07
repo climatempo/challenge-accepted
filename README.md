@@ -1,157 +1,53 @@
+<h4 align="center">
+<img src=".github/logo.png" width="250px" /><br>
+</h4>
 <p align="center">
-  <a href="http://www.climatempo.com.br">
-      <img src="http://i.imgur.com/Q9lCAMF.png" alt="Climatempo" width="300px"/>
-  </a>
+  <img alt="php" src="https://img.shields.io/badge/php-v7.4.21-orange">
+  <img alt="npm" src="https://img.shields.io/badge/npm-v6.14.13-brightgreen">
+  <img alt="yarn" src="https://img.shields.io/badge/yarn-v1.22.5-9cf">
+  <img alt="react" src="https://img.shields.io/badge/react-%5E17.0.2-blue">
 </p>
 
-___
+<br>
 
+## Instalação
 
-## Processo de recrutamento
+__Requisitos__: docker com docker-compose, node (npm ou yarn)
 
-Olá desenvolvedor, pronto para participar do nosso processo de recrutamento para vaga de Full-stack?
+<br>
 
-### Sobre a Vaga
+### Backend
 
-- Home Office;
-- Flexibilidade no horário de trabalho;
-- Sede: Parque Tecnológico - São José dos Campos (http://www.pqtec.org.br);
+Execute o comando na pasta __backend__ para iniciar o docker:
 
-### Requisitos para a vaga
+<img src=".github/code1.png">
 
-Bons conhecimentos em:
+<br>
 
-- Javascript;
-- NodeJS;
-- PHP;
-- SQL;
-- RESTful;
-- ReactJS;
-- HTML;
-- CSS;
+Iniciado o contêiner, execute o comando para instalar as dependências e bibliotecas utilizadas por meio do composer:
 
-Desejável:
+<img src=".github/code2.png">
 
-- GraphQL;
-- NoSQL;
-- Docker;
+<br>
 
-### O Desafio
+Após seguidos os passos acima no diretório __backend__ do projeto, você poderá acessar a __API__ na url: [localhost:8000](http://localhost:8000)
 
-Um usuário quer saber como vai ficar o 
-tempo para os próximos dias em Osasco e São Paulo utilizando
-seu smartphone. 
+<br>
 
-O que esperamos:
- 
- ##### Frontend:
- - Uma página responsiva;
- - Um campo autocomplete para buscar localidades;
- - Um card para cada dia de previsão;
- ##### Backend:
- - Uma API rest ou graphql para obter localidades e dados de previsão;
- - Validação de entradas do usuário;
- 
- Diferenciais:
- 
- - Utilizar cache;
- - Utilizar Elasticsearch ou algum outro software de **full-text search** para busca de localidades;
- - Configurar ambiente docker para rodar a aplicação;
- 
- ###### uso de bibliotecas é livre.
+### Frontend
 
-### Desafio Extra (opcional)
-  
-  Permita que o usuário selecione em qual unidade de temperatura e chuva (precipitação) ele quer visualizar os dados.
-  
-  ###### Design livre.
-  
-  ##### Conversão dos valores:
-  
-  - Temperatura:
-    - de **°C** pra **°F**: (`valor` * 1.8) + 32
-    - de **°F** pra **°C**: (`valor` - 32) / 1.8
-  - Chuva:
-    - de **mm** pra **inch**: (`valor` / 25.4)
-    - de **inch** pra **mm**: (`valor` * 25.4)
-  
+Agora vamos iniciar a parte visual do projeto, volte no __diretório raíz__ do projeto e entre no diretório __frontend__ e execute o comando abaixo de acordo com seu gerenciador de pacotes node:
 
-### Avaliação
+<img src=".github/code3.png">
 
-O que vamos avaliar:
+<br>
 
-- Performance de busca e renderização;
-- Segurança;
-- Testes;
-- Manutenibilidade;
-- Usabilidade;
-- Boas práticas;
+__P.S.:__ Se o node não abrir automaticamente em seu navegador padrão a página do projeto em React, acesse o link: [localhost:3000](http://localhost:3000)
 
-Exemplo:
+<br>
+<br>
+<br>
 
-<p align="center">
-  <a href="http://www.climatempo.com.br">
-      <img src="http://i.imgur.com/x3z4tYM.png" alt="Climatempo" width="400px"/>
-  </a>
-</p>
+---
 
-**Atenção:**  Não se preocupe em reproduzir o exemplo, use apenas como referência.
- 
-### Dados
- 
-Localidades:
-    
-    base/locales.json
- 
-| Propriedade   | Tipo   | Descrição                           |
-| ------------- |:------:| ------------------------------------|
-| `id`          | Number | Id da localidade                    |
-| `name`        | String | Nome da localidade                  |
-| `state`       | String | Sigla do estado da localidade       |
-| `latitude`    | Number | Latitude do centro da localidade    |
-| `longitude`   | Number | Longitude do centro da localidade   |
- 
- 
-Previsão:
- 
-    base/weather.json
-    
-**period: Object**
- 
-| Propriedade        | Tipo   | Descrição                                  |
-| ------------------ |:------:| -------------------------------------------|
-| `period.begin`     | String | Data início da busca no formato AAAA-MM-DD |
-| `period.end `      | String | Data fim  da busca no formato AAAA-MM-DD   |
-
-**locale: Object**
- 
-Os mesmos dados do JSON de localidades.
- 
-**weather: Object**
- 
-| Propriedade                     | Tipo   | Descrição                                  |
-| ------------------------------- |:------:| -------------------------------------------|
-| `weather.date`                  | String | Data da previsão no formato AAAA-MM-DD     |
-| `weather.text`                  | String | Texto sobre a previsão do dia              |
-| `weather.temperature.min`       | Number | Temperatura mínima em graus celsius (°C)   |
-| `weather.temperature.max`       | Number | Temperatura máxima em graus celsius (°C)   |
-| `weather.rain.probability`      | Number | Probabilidade de chuva em porcentagem (%)  |
-| `weather.rain.precipitation`    | Number | Precipitação de chuva em milímetros (mm)   |
-
-### Comece
-
-O processo do desafio deve ser:
-
-1. Faça o fork do desafio.
-
-2. Crie um **PROJECT.md** com a explicação de como devemos executar o projeto e com o máximo de detalhes possível do que foi feito.
-
-3. Após concluir faça um pull request.
-
-4. Envie um e-mail para fullstack@climatempo.com.br com seu **curriculo, pretensão salarial e o link do seu pull request**.
-
-
-___
-
-
-Qualquer dúvida entre em contato com nossa equipe.
+<p align="center">Feito com ❤️ por <strong>Matheus do Carmo</strong></p>

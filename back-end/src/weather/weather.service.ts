@@ -17,8 +17,24 @@ export class WeatherService {
     return this._weather
   }
 
-  findByLocaleName(name: string) {
-    return this._weather.find(fullWeather => fullWeather.locale.name.toLowerCase().includes(name))
+  findByLocaleNameOrId(name: string, id: number) {
+    let weather;
+
+    if (id) {
+      weather = this._weather.find(fullWeather => fullWeather.locale.id == id)
+      if (weather) {
+        return weather
+      }
+    }
+
+    if (name) {
+      weather = this._weather.find(fullWeather => fullWeather.locale.name.toLowerCase().includes(name))
+      if (weather) {
+        return weather
+      }
+    }
+
+    return 'Nenhum registro encontrado'
   }
 
 }

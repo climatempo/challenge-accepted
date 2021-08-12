@@ -1,16 +1,10 @@
-import { Box, Container, HStack, Stack, Text, VStack } from '@chakra-ui/react'
-import CloudImage from '../../public/assets/icons/waether/cloudy.png'
+import { Box, HStack, Image, Stack, Text, VStack } from '@chakra-ui/react'
+import CloudImage from '../../assets/icons/waether/cloudy.png'
 import React from 'react'
-import Image from 'next/image'
 import { FaArrowDown, FaArrowUp, FaCloudRain, FaPercent } from 'react-icons/fa'
-import { IPeriod, IWeather } from '../../types/interfaces'
+import { IWeather } from '../../types/interfaces'
 
-export interface ICardPrevisaoProps {
-    weather: IWeather
-    period: IPeriod
-}
-
-export const CardPrevisao: React.FC<ICardPrevisaoProps> = ({ period, weather, children }) => {
+export const CardPrevisao: React.FC<{ weather: IWeather }> = ({ weather }) => {
     return (
         <Stack direction="row" justify="space-between" align="center" p="4" shadow="md" spacing="10">
             <VStack textAlign="center" justify="center">

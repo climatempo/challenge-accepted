@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  api:
+    container_name: clima-tempo-api
+    build:
+      context: ./back-end
+      target: development
+    volumes:
+      - ./back-end:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 3001:3001
+      - 9229:9229
+    command: npm run start:dev
+    networks:
+      - clima-tempo
+
+networks:
+  clima-tempo:

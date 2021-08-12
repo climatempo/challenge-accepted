@@ -1,16 +1,23 @@
 import { Box, Heading, HStack, Stack, Text, VStack } from '@chakra-ui/react'
 import Image from 'next/image'
 import CloudImage from '../../public/assets/icons/waether/cloudy.png'
-import React from 'react'
+import React, { FC } from 'react'
 import { FaArrowDown, FaArrowUp, FaCloudRain, FaPercent } from 'react-icons/fa'
+import { IWeather, IPeriod, ILocale } from '../../types/interfaces'
 
-export const FullCard = () => {
+export interface IFullCardProps {
+    weather: IWeather
+    period: IPeriod
+    locale: ILocale
+}
+
+export const FullCard: FC<IFullCardProps> = ({ weather, locale, period, children }) => {
     return (
         <Stack direction="column" p="5" justify="center" shadow="md" spacing="6" maxW="350px">
             <HStack>
                 <Image src={CloudImage} height="75" width="80" />
                 <Heading as="h3" fontSize="xl" textAlign="center" fontWeight="semibold">
-                    Clima agora em <br /> Campo Grande/ MS
+                    Clima agora em <br /> {`${locale.name} - ${locale.state}`}
                 </Heading>
             </HStack>
             <hr />
@@ -18,11 +25,11 @@ export const FullCard = () => {
                 <Text fontWeight="medium">Temperatura</Text>
                 <HStack spacing="5">
                     <HStack>
-                        <Text>20º</Text>
+                        <Text>{weather.temperature?.max}</Text>
                         <FaArrowUp color="red" />
                     </HStack>
                     <HStack>
-                        <Text>30º</Text>
+                        <Text>{weather.temperature?.min}</Text>
                         <FaArrowDown color="blue" />
                     </HStack>
                 </HStack>
@@ -31,17 +38,17 @@ export const FullCard = () => {
                 <Text fontWeight="medium">Chuva</Text>
                 <HStack spacing="5">
                     <HStack>
-                        <Text>20</Text>
+                        <Text>{weather.rain?.probability}</Text>
                         <FaPercent />
                     </HStack>
                     <HStack>
-                        <Text>30º</Text>
+                        <Text>{weather.rain?.precipitation}</Text>
                         <FaCloudRain />
                     </HStack>
                 </HStack>
             </HStack>
             <hr />
-            <Text fontSize="sm">Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.</Text>
+            <Text fontSize="sm">{weather.text}</Text>
         </Stack>
     )
 }

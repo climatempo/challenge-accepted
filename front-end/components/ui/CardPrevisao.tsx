@@ -3,8 +3,14 @@ import CloudImage from '../../public/assets/icons/waether/cloudy.png'
 import React from 'react'
 import Image from 'next/image'
 import { FaArrowDown, FaArrowUp, FaCloudRain, FaPercent } from 'react-icons/fa'
+import { IPeriod, IWeather } from '../../types/interfaces'
 
-export const CardPrevisao = () => {
+export interface ICardPrevisaoProps {
+    weather: IWeather
+    period: IPeriod
+}
+
+export const CardPrevisao: React.FC<ICardPrevisaoProps> = ({ period, weather, children }) => {
     return (
         <Stack direction="row" justify="space-between" align="center" p="4" shadow="md" spacing="10">
             <VStack textAlign="center" justify="center">
@@ -18,11 +24,11 @@ export const CardPrevisao = () => {
                     <Text fontWeight="medium" mr="5">Temperatura</Text>
                     <HStack spacing="5">
                         <HStack>
-                            <Text>20º</Text>
+                            <Text>{weather.temperature?.max}</Text>
                             <FaArrowUp color="red" />
                         </HStack>
                         <HStack>
-                            <Text>30º</Text>
+                            <Text>{weather.temperature?.min}</Text>
                             <FaArrowDown color="blue" />
                         </HStack>
                     </HStack>
@@ -31,11 +37,11 @@ export const CardPrevisao = () => {
                     <Text fontWeight="medium" mr="5">Chuva</Text>
                     <HStack spacing="5">
                         <HStack>
-                            <Text>20</Text>
+                            <Text>{weather.rain?.probability}</Text>
                             <FaPercent />
                         </HStack>
                         <HStack>
-                            <Text>30º</Text>
+                            <Text>{weather.rain?.precipitation}</Text>
                             <FaCloudRain />
                         </HStack>
                     </HStack>

@@ -7,7 +7,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const config = app.get<ConfigService>(ConfigService)
   app.useGlobalPipes(new ValidationPipe());
-  console.log(config.get('SERVER_PORT'));
   await app.listen(config.get('SERVER_PORT'));
 }
 bootstrap();

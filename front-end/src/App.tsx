@@ -10,22 +10,28 @@ import { LocaleContent } from './components/sections/LocaleContent';
 import { ChangeValueUnit } from './components/ui/ChangeValuesUnit';
 import { PreferencesContext } from './providers/preferences';
 
+
 const App = () => {
-  const { data } = useQuery<{ weatherByLocaleNameOrId: IFullWeatherInfo }>(GET_WEATHER_DEFAULT_LOCALE)
-  const [weatherInfo, setWeatherInfo] = React.useState<IFullWeatherInfo>();
 
   const { preferences, setPreferences } = useContext(PreferencesContext)
+  const { data } = useQuery<{ weatherByLocaleNameOrId: IFullWeatherInfo }>(GET_WEATHER_DEFAULT_LOCALE, {
+    variables: {
+      temperatureUnit: preferences.temperatureUnit,
+      rainUnit: preferences.rainUnit
+    }
+  })
+  const [weatherInfo, setWeatherInfo] = React.useState<IFullWeatherInfo>();
 
   useEffect(() => {
     if (data) {
       setWeatherInfo(data.weatherByLocaleNameOrId);
     }
-  }, [data])
+  }, [data, preferences])
 
   return (
     <Router>
       <Header />
-      <ChangeValueUnit></ChangeValueUnit>
+      <ChangeValueUnit variant="page" unitType="temperature"></ChangeValueUnit>
       <Switch>
         <Route exact path="/" >
           {weatherInfo ? <Banner locale={weatherInfo?.locale!} weather={weatherInfo?.weather[0]!} /> : 'Loading...'}

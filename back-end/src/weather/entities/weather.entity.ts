@@ -1,4 +1,4 @@
-import { ObjectType, Field, Int, InterfaceType } from '@nestjs/graphql';
+import { ObjectType, Field, Int, InterfaceType, Float } from '@nestjs/graphql';
 
 @ObjectType()
 export abstract class Temperature {
@@ -12,7 +12,7 @@ export abstract class Temperature {
 export abstract class Rain {
   @Field(type => Int)
   probability: number;
-  @Field(type => Int)
+  @Field(type => Float)
   precipitation: number;
 }
 

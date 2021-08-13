@@ -15,8 +15,8 @@ query GetLocales {
 `
 
 export const GET_WEATHER_DEFAULT_LOCALE = gql`
-query GetFullWeather {
-  weatherByLocaleNameOrId(name: "são paulo", id: 3477) {
+query GetFullWeather( $temperatureUnit: String!, $rainUnit: String! ) {
+  weatherByLocaleNameOrId(name: "são paulo", id: 3477, temperatureUnit: $temperatureUnit, rainUnit: $rainUnit) {
       locale {
           id
           name
@@ -44,8 +44,8 @@ query GetFullWeather {
 
 
 export const GET_WEATHER_BY_LOCALE_OR_ID = gql`
-    query GetFullWeather( $id: Int!, $name: String!) {
-        weatherByLocaleNameOrId( id: $id, name: $name) {
+    query GetFullWeather( $id: Int!, $name: String!, $temperatureUnit: String!, $rainUnit: String!) {
+        weatherByLocaleNameOrId( id: $id, name: $name, temperatureUnit: $temperatureUnit, rainUnit: $rainUnit) {
             locale {
                 id
                 name

@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Container, Grid, Heading, Stack } from '@chakra-ui/react'
 import { IFullWeatherInfo } from '../../types/interfaces'
 import { FullCard } from '../ui/FullCard'
 import { useQuery } from '@apollo/client'
 import { GET_WEATHER_BY_LOCALE_OR_ID } from '../../graphql/queries'
 import { useParams } from 'react-router-dom'
+import { PreferencesContext } from '../../providers/preferences'
 
 const generateCards = ({ locale, weather }: IFullWeatherInfo) => {
     return (
         weather.map((weather, index) => {
             return <FullCard key={index} weather={weather} locale={locale}></FullCard>
         })
-
     )
 }
 
@@ -20,8 +20,15 @@ type LocaleParam = {
 }
 
 export const LocaleContent = () => {
+    const { preferences, setPreferences } = useContext(PreferencesContext)
     let { localeId } = useParams<LocaleParam>();
-    const { data, error } = useQuery<{ weatherByLocaleNameOrId: IFullWeatherInfo }>(GET_WEATHER_BY_LOCALE_OR_ID, { variables: { id: parseInt(localeId), name: '' } })
+    const { data, error } = useQuery<{ weatherByLocaleNameOrId: IFullWeatherInfo }>(GET_WEATHER_BY_LOCALE_OR_ID, {
+        variables: {
+            id: parseInt(localeId), name: '',
+            temperatureUnit: preferences.temperatureUnit,
+            rainUnit: preferences.rainUnit
+        }
+    })
     const [weather, setWeather] = React.useState<IFullWeatherInfo>()
 
     useEffect(() => {

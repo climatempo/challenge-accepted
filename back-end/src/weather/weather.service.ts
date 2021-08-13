@@ -7,34 +7,40 @@ import { Weather } from './entities/weather.entity';
 @Injectable()
 export class WeatherService {
 
-  private _weather: FullWeather[];
-  constructor() {
-    const weatherJson = readFileSync(join(__dirname, '../', 'data/base', 'weather.json'), "utf8")
-    this._weather = <FullWeather[]>JSON.parse(weatherJson)
-  }
 
   findAll() {
-    return this._weather
+    return JSON.parse(readFileSync(join(__dirname, '../', 'data/base', 'weather.json'), "utf8"))
   }
 
-  findByLocaleNameOrId(name: string, id: number) {
-    let weather;
-
+  findByLocaleNameOrId(name: string, id: number, temperatureUnit: string, rainUnit: string): FullWeather | string {
+    const _weather = JSON.parse(readFileSync(join(__dirname, '../', 'data/base', 'weather.json'), "utf8"))
     if (id) {
-      weather = this._weather.find(fullWeather => fullWeather.locale.id == id)
-      if (weather) {
-        return weather
-      }
+      var resultWeather: FullWeather = _weather.find(fullWeather => fullWeather.locale.id == id)
     }
 
     if (name) {
-      weather = this._weather.find(fullWeather => fullWeather.locale.name.toLowerCase().includes(name))
-      if (weather) {
-        return weather
-      }
+      var resultWeather: FullWeather = _weather.find(fullWeather => fullWeather.locale.name.toLowerCase().includes(name))
     }
 
-    return 'Nenhum registro encontrado'
+    if (temperatureUnit === "f") {
+      resultWeather.weather.forEach((weather, index) => {
+        resultWeather.weather[index].temperature.min = Math.floor((weather.temperature.min * 9 / 5) + 32)
+        resultWeather.weather[index].temperature.max = Math.floor((weather.temperature.max * 9 / 5) + 32)
+      })
+
+    }
+
+    if (rainUnit === "inch") {
+      resultWeather.weather.forEach(weather => {
+        const rain = parseFloat((weather.rain.precipitation / 25.4).toFixed(2))
+        weather.rain.precipitation = rain
+      })
+    }
+
+    if (resultWeather) {
+      return resultWeather
+    }
+
   }
 
 }

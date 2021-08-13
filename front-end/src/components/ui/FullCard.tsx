@@ -9,11 +9,11 @@ export interface IFullCardProps {
     locale: ILocale
 }
 
-export const FullCard: FC<IFullCardProps> = ({ weather, locale}) => {
+export const FullCard: FC<IFullCardProps> = ({ weather, locale }) => {
     return (
-        <Stack direction="column" p="5" justify="center" shadow="md" spacing="6" maxW="400px">
+        <Stack direction="column" p="5" justify="center" shadow="md" spacing="6" maxW="400px" borderRadius="md">
             <HStack justifyContent="space-between">
-                <Image src={CloudImage} maxW="85px"  />
+                <Image src={CloudImage} maxW="85px" />
                 <Heading as="h3" fontSize="xl" textAlign="center" fontWeight="semibold">
                     Clima agora em <br /> {`${locale.name} - ${locale.state}`}
                 </Heading>

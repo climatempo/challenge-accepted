@@ -6,7 +6,7 @@ import { ILocale, IWeather } from '../../types/interfaces'
 
 export const Banner: React.FC<{ locale: ILocale, weather: IWeather }> = ({ locale, weather }) => {
     return (
-        <Container maxW="container.xl" mt="16">
+        <Container maxW="container.xl" mt="10">
             <Stack direction={{ base: "column-reverse", lg: "row" }}  align={{base: "center",lg:"stretch"}} spacing="10" justify="space-between">
                 <FullCard locale={locale} weather={weather}></FullCard>
                 <MainBanner></MainBanner>

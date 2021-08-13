@@ -6,7 +6,7 @@ import React from 'react'
 
 export const MainBanner = () => {
     return (
-        <Stack direction={{ base: "column-reverse", md: "row" }} shadow={{ base: 'none', md: "md" }} align="center">
+        <Stack direction={{ base: "column-reverse", md: "row" }} shadow={{ base: 'none', md: "md" }} align="center"  borderRadius="md">
             <Stack direction="column" alignItems={{ base: "center", md: "start" }} p="10" flex="1 1 50%" alignSelf="center" textAlign={{ base: "center", md: "left" }}>
                 <Heading mb="5">Soluções meteorológicas para seu negócio</Heading>
                 <Button leftIcon={<FaCloudSun />}>Saiba Mais</Button>

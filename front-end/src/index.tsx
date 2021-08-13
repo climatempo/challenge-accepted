@@ -4,6 +4,7 @@ import App from './App';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { ChakraProvider } from '@chakra-ui/react';
 import { theme } from './styles/theme/theme';
+import { PreferencesProvider } from './providers/preferences';
 
 export const client = new ApolloClient({
   uri: 'http://localhost:3001/graphql',
@@ -13,11 +14,13 @@ export const client = new ApolloClient({
 
 ReactDOM.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
-      <ChakraProvider theme={theme}>
-        <App />
-      </ ChakraProvider>
-    </ ApolloProvider>
+    <PreferencesProvider>
+      <ApolloProvider client={client}>
+        <ChakraProvider theme={theme}>
+          <App />
+        </ ChakraProvider>
+      </ ApolloProvider>
+    </PreferencesProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

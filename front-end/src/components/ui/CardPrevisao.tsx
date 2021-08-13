@@ -6,7 +6,7 @@ import { IWeather } from '../../types/interfaces'
 
 export const CardPrevisao: React.FC<{ weather: IWeather }> = ({ weather }) => {
     return (
-        <Stack direction="row" justify="space-between" align="center" p="4" shadow="md" spacing="10">
+        <Stack direction="row" justify="space-between" align="center" p="4" shadow="md" spacing="10" borderRadius="md">
             <VStack textAlign="center" justify="center">
                 <Box width={70} height={70}>
                     <Image src={CloudImage} layout="responsive" />

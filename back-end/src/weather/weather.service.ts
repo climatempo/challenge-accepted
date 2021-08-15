@@ -1,15 +1,17 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { FullWeather } from './entities/full-weather.entity';
-import { Weather } from './entities/weather.entity';
 
 @Injectable()
 export class WeatherService {
 
-
   findAll() {
-    return JSON.parse(readFileSync(join(__dirname, '../', 'data/base', 'weather.json'), "utf8"))
+    const _weather = JSON.parse(readFileSync(join(__dirname, '../', 'data/base', 'weather.json'), "utf8"))
+    if (!_weather) {
+      throw new NotFoundException("Nenhum registro foi encontrado")
+    }
+    return _weather
   }
 
   findByLocaleNameOrId(name: string, id: number, temperatureUnit: string, rainUnit: string): FullWeather | string {
@@ -39,6 +41,8 @@ export class WeatherService {
 
     if (resultWeather) {
       return resultWeather
+    } else {
+      throw new NotFoundException("Nenhum registro foi encontrado")
     }
 
   }

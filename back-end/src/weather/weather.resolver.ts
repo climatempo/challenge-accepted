@@ -1,4 +1,4 @@
-import { Resolver, Query, Args, Int, createUnionType } from '@nestjs/graphql';
+import { Resolver, Query, Args, Int } from '@nestjs/graphql';
 import { WeatherService } from './weather.service';
 import { Weather } from './entities/weather.entity';
 import { FullWeather } from './entities/full-weather.entity';
@@ -25,4 +25,3 @@ export class WeatherResolver {
   }
 
 }
- 

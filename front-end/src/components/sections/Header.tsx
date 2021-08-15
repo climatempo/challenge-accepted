@@ -6,7 +6,7 @@ import { ILocale } from '../../types/interfaces'
 import { GET_LOCALES } from '../../graphql/queries'
 import { useQuery } from '@apollo/client'
 import { Link } from 'react-router-dom'
-import { ModalPreferences } from '../ui/ModalPreferences'
+import { ModalPreferences } from '../ui/PreferencesModal'
 
 export const Header = () => {
     const { data } = useQuery<{ weathers: Array<{ locale: ILocale }> }>(GET_LOCALES);

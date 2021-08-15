@@ -1,4 +1,4 @@
-import { ObjectType, Field, Int, ID, Float } from '@nestjs/graphql';
+import { ObjectType, Field } from '@nestjs/graphql';
 
 @ObjectType('Period')
 export class Period {

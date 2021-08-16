@@ -16,7 +16,7 @@ export const CardPrevisao: React.FC<{ weather: IWeather }> = ({ weather }) => {
                 <Box width={70} height={70}>
                     <Image src={CloudImage} layout="responsive" />
                 </Box>
-                <Text fontWeight="semibold">Hoje</Text>
+                <Text fontWeight="semibold">{weather.date}</Text>
             </VStack>
             <Stack direction="column" justify="center">
                 <HStack justify="space-between">

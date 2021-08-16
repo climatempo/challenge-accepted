@@ -58,12 +58,16 @@ Caso os containers estejam rodando normalmente é possível acessar o `front-end
 
 ## Instruções sem Docker
 
-Caso queira executar as aplicações separadamente, primeiro vá até a pasta `back-end` e execute no terminal o comando:
+Caso queira executar as aplicações separadamente, primeiro vá até a pasta `back-end` e execute no terminal os comandos:
 
-> npm run start:dev
+> \> npm install
+>
+> \> npm run start:dev
 
-Para executar a API com NestJs, lembrando que nesse caso precisamos o NodeJs devidamente instalado. Em seguida abra o diretório `front-end` e execute o comando:
+Para executar a API com NestJs, lembrando que nesse caso precisamos o NodeJs devidamente instalado. Em seguida abra o diretório `front-end` e execute os comandos:
 
-> npm run start
+> \> npm install
+>
+> \> npm run start
 
 Para iniciar o servidor com ReactJs. O serviço do React está rodando na porta `3000` no localhost e o servidor NestJs na porta `3001`. Para acessar o graphql playground acesse a URL `http://localhost:3001/graphql`. 

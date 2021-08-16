@@ -1,4 +1,4 @@
-import { Heading, HStack, Image, Stack, Text } from '@chakra-ui/react'
+import { Heading, HStack, Image, Stack, Text, VStack } from '@chakra-ui/react'
 import CloudImage from '../../assets/icons/waether/cloudy.png'
 import React, { FC } from 'react'
 import { FaArrowDown, FaArrowUp, FaCloudRain, FaPercent } from 'react-icons/fa'
@@ -20,9 +20,12 @@ export const FullCard: FC<IFullCardProps> = ({ weather, locale }) => {
         <Stack direction="column" p="5" justify="center" shadow="md" spacing="6" maxW="400px" borderRadius="md">
             <HStack justifyContent="space-between">
                 <Image src={CloudImage} maxW="85px" />
-                <Heading as="h3" fontSize="xl" textAlign="center" fontWeight="semibold">
-                    Clima agora em <br /> {`${locale.name} - ${locale.state}`}
-                </Heading>
+                <VStack>
+                    <Heading as="h3" fontSize="xl" textAlign="center" fontWeight="semibold">
+                        Clima em <br /> {`${locale.name} - ${locale.state}`}
+                    </Heading>
+                    <Text size="sm" mt="0 !important">{weather.date}</Text>
+                </VStack>
             </HStack>
             <hr />
             <HStack justify="space-between">

@@ -6,6 +6,10 @@ import { FullWeather } from './entities/full-weather.entity';
 @Injectable()
 export class WeatherService {
 
+  /**
+   * Função que retorna que retornas todos os registros de weather
+   * @returns Array com todas as informações dos climas de todas as cidades
+   */
   findAll() {
     const _weather = JSON.parse(readFileSync(join(__dirname, '../', 'data/base', 'weather.json'), "utf8"))
     if (!_weather) {
@@ -14,6 +18,14 @@ export class WeatherService {
     return _weather
   }
 
+  /**
+   * 
+   * @param name Nome da cidade
+   * @param id Id da cidade buscada
+   * @param temperatureUnit Unidade que será retornada a temperatura, pode assumir o valor 'c' ou 'f'
+   * @param rainUnit Unidade que será retornada a chuva, pode assumir o valor 'mm' ou 'inch'
+   * @returns As informações completas do clima da Cidade
+   */
   findByLocaleNameOrId(name: string, id: number, temperatureUnit: string, rainUnit: string): FullWeather | string {
     const _weather = JSON.parse(readFileSync(join(__dirname, '../', 'data/base', 'weather.json'), "utf8"))
     if (id) {

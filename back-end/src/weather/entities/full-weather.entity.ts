@@ -1,6 +1,6 @@
 import { Field, ObjectType } from '@nestjs/graphql';
 import { Locale } from 'src/locale/entities/locale.entity';
-import { Period } from 'src/shared/period.entity';
+import { Period } from 'src/weather/entities/period.entity';
 import { Weather } from './weather.entity';
 
 

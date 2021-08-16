@@ -1,157 +1,69 @@
-<p align="center">
-  <a href="http://www.climatempo.com.br">
-      <img src="http://i.imgur.com/Q9lCAMF.png" alt="Climatempo" width="300px"/>
-  </a>
-</p>
+# Introdução
 
-___
-
+Desenvolvido por: **Murilo Esteca Arelhano - UFMS - FACOM**
 
 ## Processo de recrutamento
 
 Olá desenvolvedor, pronto para participar do nosso processo de recrutamento para vaga de Full-stack?
 
-### Sobre a Vaga
+**SIM**
 
-- Home Office;
-- Flexibilidade no horário de trabalho;
-- Sede: Parque Tecnológico - São José dos Campos (http://www.pqtec.org.br);
+## Sobre o App
 
-### Requisitos para a vaga
+Aplicativo single page construído com ReactJs, a aplicação consome os dados do de uma API Graphql construída com Nestjs. Na aplicação encontra-se uma pagina inicial que mostra as informações e uma localidade padrão (São Paulo). No topo encontra-se uma barra de pesquisa que retorna o nome das localidades ao enquanto digita, as cidades são filtradas no front-end para economizar requisições a API. No menu ainda existe um botão descrito "menu" que serve para mudar as preferencias de usuário sobre as unidades de medidas que a API retorna.
 
-Bons conhecimentos em:
+### O que foi feito
 
-- Javascript;
-- NodeJS;
-- PHP;
-- SQL;
-- RESTful;
-- ReactJS;
-- HTML;
-- CSS;
+Primeiro foi construído uma API em GraphQL com NestJs para prover os dados base que foram deixar nos arquivos do projeto, utilizando a estrutura e a padronização do NestJs, depois foi implementado os módulos `weather` e `locale` para retornar o clima completo se um local e os locais para pesquisa das cidades, os métodos estão comentados e os testes até o instante momento estão sendo criados. Em seguida, criei um mockup das telas com Figma para ver o design que e imaginar a responsividade, escolhi o React pela facilidade da implementação e dos recursos de reatividade que podem trazer mais dinamicidade ao site, utilizando a lib ChakraUI para agilizar e padronizar o desenvolvimento da interface, dentro do projeto foram usadas features como estados, ContextAPI, roteamento com react-router e consumo da API através do Apollo que salva os resultados em cache em memória.
 
-Desejável:
+**Design no figma:** https://www.figma.com/file/dNSYEupliIMeqriw43lu9T/Clima-Tmepo-Challanger?node-id=0%3A1
+**As tarefas que realizei estão disponíveis no trello:** https://trello.com/b/bN0wnBXs/clima-tempo-challenge
 
-- GraphQL;
-- NoSQL;
-- Docker;
+### Considerações
 
-### O Desafio
+As escolhas feitas na implementação da aplicação levam em consideração que não conheço a estrutura do clima tempo. Mas em um cenário mais detalhado escolheria melhor o uso das tecnologias.
 
-Um usuário quer saber como vai ficar o 
-tempo para os próximos dias em Osasco e São Paulo utilizando
-seu smartphone. 
+### Tecnologias usadas
 
-O que esperamos:
- 
- ##### Frontend:
- - Uma página responsiva;
- - Um campo autocomplete para buscar localidades;
- - Um card para cada dia de previsão;
- ##### Backend:
- - Uma API rest ou graphql para obter localidades e dados de previsão;
- - Validação de entradas do usuário;
- 
- Diferenciais:
- 
- - Utilizar cache;
- - Utilizar Elasticsearch ou algum outro software de **full-text search** para busca de localidades;
- - Configurar ambiente docker para rodar a aplicação;
- 
- ###### uso de bibliotecas é livre.
+**Back-end**
 
-### Desafio Extra (opcional)
+* NestJs e bibliotecas do NestJs
+* API com GraphQL
+
+**Front-end**
+
+* ReactJs
+* ChakraUI (semelhante a MaterialUI)
+* React Router
+* Apollo Client
+
+# Como iniciar a aplicação
+
+### Requisitos
+
+* Docker e Docker Compose
+* NodeJs (caso queira executar fora do container)
   
-  Permita que o usuário selecione em qual unidade de temperatura e chuva (precipitação) ele quer visualizar os dados.
-  
-  ###### Design livre.
-  
-  ##### Conversão dos valores:
-  
-  - Temperatura:
-    - de **°C** pra **°F**: (`valor` * 1.8) + 32
-    - de **°F** pra **°C**: (`valor` - 32) / 1.8
-  - Chuva:
-    - de **mm** pra **inch**: (`valor` / 25.4)
-    - de **inch** pra **mm**: (`valor` * 25.4)
-  
+## Instruções com Docker
 
-### Avaliação
+Primeiro faço o clone do projeto e abra na pasta raiz do projeto, em seguida abra o terminal na pasta raiz e execute o comando do docker compose:
 
-O que vamos avaliar:
+> docker-compose up -d
 
-- Performance de busca e renderização;
-- Segurança;
-- Testes;
-- Manutenibilidade;
-- Usabilidade;
-- Boas práticas;
+Durante o processo, será realizado o build das imagens do backend e do frontend partindo dos arquivos `Dockerfile` que estão presentes na raiz de ambos os projetos. Após o build o docker compose fica responsável de subir os containers. Verifique se o serviço está rodando pelo CLI do docker ou alguma interface gráfica de sua escolha. Caso esteja no linux, é possível que precisa acessar o host com o IP do container.
 
-Exemplo:
+> docker ps
 
-<p align="center">
-  <a href="http://www.climatempo.com.br">
-      <img src="http://i.imgur.com/x3z4tYM.png" alt="Climatempo" width="400px"/>
-  </a>
-</p>
+Caso os containers estejam rodando normalmente é possível acessar o `front-end` na URL `http://localhost:3000`. Em caso de falha do container da API será exibido um erro de problema na conexão com o servidor na pagina inicial.
 
-**Atenção:**  Não se preocupe em reproduzir o exemplo, use apenas como referência.
- 
-### Dados
- 
-Localidades:
-    
-    base/locales.json
- 
-| Propriedade   | Tipo   | Descrição                           |
-| ------------- |:------:| ------------------------------------|
-| `id`          | Number | Id da localidade                    |
-| `name`        | String | Nome da localidade                  |
-| `state`       | String | Sigla do estado da localidade       |
-| `latitude`    | Number | Latitude do centro da localidade    |
-| `longitude`   | Number | Longitude do centro da localidade   |
- 
- 
-Previsão:
- 
-    base/weather.json
-    
-**period: Object**
- 
-| Propriedade        | Tipo   | Descrição                                  |
-| ------------------ |:------:| -------------------------------------------|
-| `period.begin`     | String | Data início da busca no formato AAAA-MM-DD |
-| `period.end `      | String | Data fim  da busca no formato AAAA-MM-DD   |
+## Instruções sem Docker
 
-**locale: Object**
- 
-Os mesmos dados do JSON de localidades.
- 
-**weather: Object**
- 
-| Propriedade                     | Tipo   | Descrição                                  |
-| ------------------------------- |:------:| -------------------------------------------|
-| `weather.date`                  | String | Data da previsão no formato AAAA-MM-DD     |
-| `weather.text`                  | String | Texto sobre a previsão do dia              |
-| `weather.temperature.min`       | Number | Temperatura mínima em graus celsius (°C)   |
-| `weather.temperature.max`       | Number | Temperatura máxima em graus celsius (°C)   |
-| `weather.rain.probability`      | Number | Probabilidade de chuva em porcentagem (%)  |
-| `weather.rain.precipitation`    | Number | Precipitação de chuva em milímetros (mm)   |
+Caso queira executar as aplicações separadamente, primeiro vá até a pasta `back-end` e execute no terminal o comando:
 
-### Comece
+> npm run start:dev
 
-O processo do desafio deve ser:
+Para executar a API com NestJs, lembrando que nesse caso precisamos o NodeJs devidamente instalado. Em seguida abra o diretório `front-end` e execute o comando:
 
-1. Faça o fork do desafio.
+> npm run start
 
-2. Crie um **PROJECT.md** com a explicação de como devemos executar o projeto e com o máximo de detalhes possível do que foi feito.
-
-3. Após concluir faça um pull request.
-
-4. Envie um e-mail para fullstack@climatempo.com.br com seu **curriculo, pretensão salarial e o link do seu pull request**.
-
-
-___
-
-
-Qualquer dúvida entre em contato com nossa equipe.
+Para iniciar o servidor com ReactJs. O serviço do React está rodando na porta `3000` no localhost e o servidor NestJs na porta `3001`. Para acessar o graphql playground acesse a URL `http://localhost:3001/graphql`. 

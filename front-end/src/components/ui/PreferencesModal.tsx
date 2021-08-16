@@ -2,6 +2,11 @@ import { Button, Heading, HStack, Modal, ModalBody, ModalCloseButton, ModalConte
 import React from 'react'
 import { ChangeValueUnit } from './ChangeValuesUnit'
 
+/**
+ * Utilizada no menu, modal que mostra as preferências do usuário e da a possibilidade ao usuário de alterá-las.
+ * @name PreferencesModal 
+ * @returns Modal que contem funções para modificar as preferencias do usuário
+ */
 export const ModalPreferences: React.FC<{ isOpen: any, onOpen: any, onClose: any }> = ({ isOpen, onOpen, onClose }) => {
   return (
     <>

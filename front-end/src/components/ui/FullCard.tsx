@@ -9,6 +9,12 @@ export interface IFullCardProps {
     locale: ILocale
 }
 
+/**
+ * Card mais completo que exibi um texto de descrição alem da previsão do tempo
+ * @param Weather Informações do tempo de um dia especifico 
+ * @implements {IFullCardProps}
+ * @returns Card com as informações do tempo de um dia especifico
+ */
 export const FullCard: FC<IFullCardProps> = ({ weather, locale }) => {
     return (
         <Stack direction="column" p="5" justify="center" shadow="md" spacing="6" maxW="400px" borderRadius="md">

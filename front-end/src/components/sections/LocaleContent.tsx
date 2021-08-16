@@ -7,18 +7,15 @@ import { GET_WEATHER_BY_LOCALE_OR_ID } from '../../graphql/queries'
 import { useParams } from 'react-router-dom'
 import { PreferencesContext } from '../../providers/preferences'
 
-const generateCards = ({ locale, weather }: IFullWeatherInfo) => {
-    return (
-        weather.map((weather, index) => {
-            return <FullCard key={index} weather={weather} locale={locale}></FullCard>
-        })
-    )
-}
 
 type LocaleParam = {
     localeId: string
 }
 
+/**
+ * Retorna a lista de cards de uma localidade especifica selecionada no campo de busca
+ * @returns Os cards da pesquisa por uma localidade especifica
+ */
 export const LocaleContent = () => {
     const { preferences, setPreferences } = useContext(PreferencesContext)
     let { localeId } = useParams<LocaleParam>();
@@ -37,6 +34,14 @@ export const LocaleContent = () => {
         }
 
     }, [data, error])
+
+    const generateCards = ({ locale, weather }: IFullWeatherInfo) => {
+        return (
+            weather.map((weather, index) => {
+                return <FullCard key={index} weather={weather} locale={locale}></FullCard>
+            })
+        )
+    }
 
     return (
         <Container maxW="container.xl" mt="10">

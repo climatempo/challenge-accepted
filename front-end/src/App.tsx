@@ -49,7 +49,8 @@ const App = () => {
             <Text>{error.message ? error.message : 'Ocorreu um erro interno com o servidor😓, desculpe pelo transtorno.'}</Text>
             <Text>{ }</Text>
           </Container>
-        </>)
+        </>
+      )
     }
     if (weatherInfo) {
       return (
@@ -61,7 +62,7 @@ const App = () => {
     }
   }
 
-  //
+
   return (
     <Router>
       <Header />

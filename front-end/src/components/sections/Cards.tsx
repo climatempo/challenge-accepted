@@ -3,6 +3,11 @@ import { Container, Grid } from '@chakra-ui/react'
 import { CardPrevisao } from '../ui/CardPrevisao'
 import { IWeather } from '../../types/interfaces'
 
+/**
+ * Retorna uma lista de cards com as previsões do tempo dependendo da quantidades de dias que forem passados no parâmetro.
+ * @param Weather Informações de clima da localidade desejada
+ * @returns Vários cards com as informações de clima de todos os dias que foram passados
+ */
 export const Cards: React.FC<{weather: IWeather[]}> = ({ weather }) => {
 
     const generateCards = () => {

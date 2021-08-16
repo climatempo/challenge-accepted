@@ -2,6 +2,11 @@ import { Button, Container, Stack } from '@chakra-ui/react'
 import React, { useContext } from 'react'
 import { PreferencesContext } from '../../providers/preferences'
 
+/**
+ * Utilizado para modificar o context que armazena as preferencias do usuário, retornando as opções para manipulação da context API
+ * @param unitType Representa o tipo de unidade que está querendo alterar, nesse caso, 'chuva' ou 'temperatura' ('rain', 'temperature')
+ * @returns Botões de seleção para alteração do contexto define o tipo de unidade das chuvas ou temperaturas
+ */
 export const ChangeValueUnit: React.FC<{ variant: 'modal' | 'page', unitType: 'temperature' | 'rain' }> = ({ unitType, variant }) => {
 
     const { preferences, setPreferences } = useContext(PreferencesContext)

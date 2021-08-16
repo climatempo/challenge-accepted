@@ -8,6 +8,10 @@ import { useQuery } from '@apollo/client'
 import { Link } from 'react-router-dom'
 import { ModalPreferences } from '../ui/PreferencesModal'
 
+/**
+ * Componente do header do site, com campo de busca e botões de opções
+ * @returns Componente do cabeçalho da página
+ */
 export const Header = () => {
     const { data } = useQuery<{ weathers: Array<{ locale: ILocale }> }>(GET_LOCALES);
     const [locales, setLocales] = React.useState<ILocale[]>()

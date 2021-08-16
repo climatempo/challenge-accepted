@@ -8,6 +8,12 @@ export interface IAutoCompleteSearchProps {
     suggestions: Array<ILocale>,
 }
 
+/**
+ * Utilizado para pesquisar as localidades, o componente de pesquisa de localização de um determinado local, contem um input de pesquisa e uma lista de resultados
+ * que é exibida quando o usuário começa a digitar, que pode ou não exibir resultados dependendo do input do usuário.
+ * @param Suggestions Array com as todas as localidades que serão exibas como sugestão de busca
+ * @returns Componente com input de pesquisa para as localidades
+ */
 export const AutoCompleteSearch: React.FC<IAutoCompleteSearchProps> = ({ suggestions }) => {
     const [searchTerm, setSearchTerm] = useState<string>('')
     const [filteredSuggestions, setFilteredSuggestions] = useState<Array<ILocale>>(suggestions)
@@ -59,7 +65,6 @@ export const AutoCompleteSearch: React.FC<IAutoCompleteSearchProps> = ({ suggest
         }
 
     }
-
 
     return (
         <Container position="relative">

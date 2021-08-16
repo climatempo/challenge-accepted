@@ -11,24 +11,21 @@ services:
     ports:
       - 3001:3001
       - 9229:9229
+    environment:
+      NODE_ENV: development
     command: npm run start:dev
-    networks:
-      -  clima-tempo-network
 
   ui:
     container_name: clima-tempo-ui
     build:
       context: ./front-end
-      target: development
     volumes:
-      - ./front-end:/usr/src/app
-      - /usr/src/app/node_modules
+      - ./front-end:/app
+      - /app/node_modules
     ports:
       - 3000:3000
-    command: npm run start
-    networks:
-      -  clima-tempo-network
-
-networks:
-  clima-tempo-network:
-
+    depends_on:
+      - api
+    environment:
+      NODE_ENV: production
+    command: npm start

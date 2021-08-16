@@ -1,4 +1,4 @@
-import { CacheModule, Module } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { LocaleService } from './locale.service';
 import { LocaleResolver } from './locale.resolver';
 

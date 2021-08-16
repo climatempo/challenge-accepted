@@ -8,6 +8,11 @@ interface IErrorModalProps {
     errorDescribe: string
 }
 
+/**
+ * Utilizado para mostrar mensagens de erro da aplicação que são passadas como parâmetro
+ * @param {IErrorModalProps} props Props para manipulação da modal e informações da descrição e titulo erro
+ * @returns Modal de exibição de erros
+ */
 export const ErrorModal: React.FC<IErrorModalProps> = ({ isOpen, onClose, errorDescribe, errorTitle }) => {
     return (
         <>

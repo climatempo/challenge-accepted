@@ -4,6 +4,11 @@ import React from 'react'
 import { FaArrowDown, FaArrowUp, FaCloudRain, FaPercent } from 'react-icons/fa'
 import { IWeather } from '../../types/interfaces'
 
+/**
+ * Card da previsão do tempo com informações resumidas e mais simplificadas.
+ * @param Weather Informações do tempo de um dia especifico 
+ * @returns Card com as informações do tempo de um dia especifico
+ */
 export const CardPrevisao: React.FC<{ weather: IWeather }> = ({ weather }) => {
     return (
         <Stack direction="row" justify="space-between" align="center" p="4" shadow="md" spacing="10" borderRadius="md">

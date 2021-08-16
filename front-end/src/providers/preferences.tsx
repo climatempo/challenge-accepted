@@ -16,15 +16,19 @@ const DefaultPreferences: Preferences = {
     rainUnit: 'mm'
 }
 
+/**
+ * Contexto de preferências do usuário
+ * @implements {IPreferencesContext} 
+ */
 export const PreferencesContext = React.createContext<IPreferencesContext>({ preferences: DefaultPreferences, setPreferences: () => { } })
 
-export const PreferencesProvider = (props: any) => {
+export const PreferencesProvider: React.FC<{}> = ({ children }) => {
 
     const [preferences, setPreferences] = useState(DefaultPreferences)
-    
+
     return (
         <PreferencesContext.Provider value={{ preferences, setPreferences }}>
-            {props.children}
+            {children}
         </PreferencesContext.Provider>
     )
 }

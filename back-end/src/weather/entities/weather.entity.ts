@@ -1,4 +1,4 @@
-import { ObjectType, Field, Int, InterfaceType, Float } from '@nestjs/graphql';
+import { ObjectType, Field, Int, Float } from '@nestjs/graphql';
 
 @ObjectType()
 export abstract class Temperature {

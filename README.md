@@ -13,28 +13,28 @@ Olá desenvolvedor, pronto para participar do nosso processo de recrutamento par
 
 ### Sobre a Vaga
 
-- Home Office;
-- Flexibilidade no horário de trabalho;
-- Sede: Parque Tecnológico - São José dos Campos (http://www.pqtec.org.br);
+- Home Office
+- Flexibilidade no horário de trabalho
+- Sede: Parque Tecnológico - São José dos Campos (http://www.pqtec.org.br)
 
 ### Requisitos para a vaga
 
 Bons conhecimentos em:
 
-- Javascript;
-- NodeJS;
-- PHP;
-- SQL;
-- RESTful;
-- ReactJS;
-- HTML;
-- CSS;
+- Javascript
+- NodeJS
+- PHP
+- SQL
+- RESTful
+- ReactJS
+- HTML
+- CSS
 
 Desejável:
 
-- GraphQL;
-- NoSQL;
-- Docker;
+- GraphQL
+- NoSQL
+- Docker
 
 ### O Desafio
 
@@ -146,7 +146,7 @@ O processo do desafio deve ser:
 
 2. Crie um **PROJECT.md** com a explicação de como devemos executar o projeto e com o máximo de detalhes possível do que foi feito.
 
-3. Após concluir faça um pull request, preencha o [formulario](https://docs.google.com/forms/d/e/1FAIpQLSfPIwojh04iSxIrrOJSyrMvYcStLpoO3luR11ZxBY_pkWsjGA/viewform)..
+3. Após concluir faça um pull request, preencha o [formulario](https://docs.google.com/forms/d/e/1FAIpQLSfPIwojh04iSxIrrOJSyrMvYcStLpoO3luR11ZxBY_pkWsjGA/viewform)
 
 
 ___

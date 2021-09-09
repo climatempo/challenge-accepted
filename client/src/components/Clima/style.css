@@ -1,0 +1,25 @@
+.iconsBorder {
+  padding-left : 0px;
+  width: 30px;
+  height: 30px;
+  top : 14px;
+}
+
+.labelBorder {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin: 0px
+}
+.header {
+  font-size: 1em !important;
+}
+.meta {
+  font-size: 0.8em !important;
+}
+.inputSearch .input{
+  text-indent: 15px !important;
+  width: 100% !important;
+}
+.ui.icon.input .prompt {
+  border-radius: 0% !important;
+}

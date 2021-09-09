@@ -1,0 +1,9 @@
+{
+  "mongo": {
+    "username": "",
+    "password": "",
+    "server": "localhost",
+    "port": "27017",
+    "database": "climatempo"
+  }
+}

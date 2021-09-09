@@ -119,7 +119,7 @@ const CardClima = (props) => {
                       <Statistic.Group horizontal size='tiny'>
                         <Grid>
                           <Grid.Column width={8}>
-                            <Image src={require('./../../images/icons/upload.png')}
+                            <Image src={require('./../../images/icons/download.png')}
                               className='iconsBorder'
                             />
                           </Grid.Column>

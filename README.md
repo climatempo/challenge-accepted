@@ -3,7 +3,7 @@
 Esse projeto foi criado por [Create React App](https://github.com/facebook/create-react-app).
 
 ![Web](https://github.com/fzsdev/challenge-accepted/blob/master/ex2web.jpg)<br>
-![Smartphone](https://github.com/fzsdev/challenge-accepted/blob/master/ex1smart.jpg) Smartphone
+![Smartphone](https://github.com/fzsdev/challenge-accepted/blob/master/ex1smart.jpg)
 
 
 

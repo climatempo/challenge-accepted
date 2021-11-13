@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'montseratt', sans-serif;
+}
+
+main {
+  height: 100vh;
+}
+
+img {
+  margin: 10px;
+  height: 30px;
+}
+
+.header {
+  margin-top: 0;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #1665c0;
+}
+
+.app {
+  background: #e0e0e0;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search-input {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 75%;
+  padding: 15px;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: rgb(243, 243, 243);
+  border-radius: 5px;
+  color: black;
+  font-size: 20px;
+}
+
+.search-input:focus {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.location-box .location {
+  font-size: 35px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.location-box .date {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  width: 50vh;
+  height: 200px;
+  margin: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  box-shadow: 0px 6px 6px 3px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .temp-now {
+  font-size: 25px;
+}
+.weather-box .condition {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.weather-box .temp-max-min {
+  margin-top: 15px;
+
+  font-size: 18px;
+}
+
+.max-svg {
+  align-self: center;
+  margin-bottom: -8px;
+  height: 25px;
+}
+
+.min-svg {
+  align-self: center;
+  margin-bottom: -8px;
+  height: 25px;
+}
+.humdt-txt {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.humidity-svg {
+  align-self: center;
+  margin-bottom: -8px;
+  height: 20px;
+}
+
+.wind-svg {
+  align-self: center;
+  margin-bottom: -8px;
+  height: 20px;
+}

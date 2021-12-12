@@ -1,0 +1,21 @@
+{
+  "name": "climatempo-api",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "server": "nodemon src/server.js",
+    "dbset": "node src/initDb.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "elasticsearch": "^16.7.2",
+    "express": "^4.17.1",
+    "mongoosastic": "^4.6.0",
+    "mongoose": "^5.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}

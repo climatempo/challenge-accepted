@@ -14,15 +14,12 @@ const WeatherReports = ({
   onChangeMeasures,
 }) => {
   const reportsList =
-    reports.length > 0 ? (
-      reports.map((report) => (
-        <Col lg={4} md={6} className="mb-3 break-fix" key={report.date}>
-          <WeatherReportItem report={report} measures={measures} />
-        </Col>
-      ))
-    ) : (
-      <p>Ainda não há previsões disponíveis para essa localidade.</p>
-    );
+    reports.length > 0 &&
+    reports.map((report) => (
+      <Col lg={4} md={6} className="mb-3 break-fix" key={report.date}>
+        <WeatherReportItem report={report} measures={measures} />
+      </Col>
+    ));
   const reportsTitle = reports.length > 0 && (
     <h1 className="f-light ">
       Previsão para{" "}

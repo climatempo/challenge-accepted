@@ -9,7 +9,7 @@ export interface IWeather {
     weather: Weather[]
 };
 
-type Weather = {
+export type Weather = {
     date: string,
     text: string,
     temperature: {

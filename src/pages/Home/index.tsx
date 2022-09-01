@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SearchIcon from "../../images/icons/search.png";
+import Arrow from "../../images/icons/upload.png";
 import { Header } from "../../components/Header";
 import { WeatherCard } from "../../components/WeatherCard";
 import { ILocale } from "../../types/Locale";
@@ -16,13 +17,13 @@ export const Home = () => {
     const { locales } = api.getLocales<ILocale[]>("locales");
 
     function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
-        let currentValue = event.target.value.replace(/[0-9!@#$%^&*¨()_+\-=\[\]{};':"\\|,.<>\/?]/, '');
+        const currentValue = event.target.value.replace(/[0-9!@#$%^&*¨()_+\-=\[\]{};':"\\|,.<>\/?]/, '')
         setSearch(currentValue);
 
         if (currentValue.length > 0) {
             const newFilter = locales?.filter(value => {
                 return value.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(
-                    currentValue.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+                    search.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
                 );
             });
             setFilterSearch(newFilter);
@@ -54,13 +55,14 @@ export const Home = () => {
                 </C.Search>
                 <C.AutoCompleteArea>
                     {search.length > 0 &&
-                        filterSearch && filterSearch?.length > 0 &&
-                        filterSearch?.map(item => (
+                        filterSearch && filterSearch.length > 0 &&
+                        filterSearch.map(item => (
                             <C.AutocompleteElement
                                 key={item.id}
                                 onClick={() => handleAutocompleteClick(item.id)}
                             >
                                 <span>{item.name}</span>
+                                <img src={Arrow} alt="Arrow icon" />
                             </C.AutocompleteElement>
                         ))
                     }

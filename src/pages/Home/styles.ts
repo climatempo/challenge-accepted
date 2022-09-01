@@ -23,7 +23,6 @@ export const Title = styled.h1`
     }
     @media (max-width: 500px) {
         font-size: 25px;
-        margin-top: 85px;
     }
 `;
 
@@ -47,18 +46,20 @@ export const Input = styled.input`
 
     ::placeholder {
         color: inherit;
-        opacity: 100%;
+        opacity: 50%;
         font-size: 16px;
         font-weight: 100;
     }
 `;
 
 export const SearchLogo = styled.img`
-    height: 55%;
+    width: 16px;
+    height: 16px;
     opacity: 25%;
 `;
 
 export const AutoCompleteArea = styled.div`
+    position: absolute;
     width: 100%;
     z-index: 1;
 `;
@@ -68,11 +69,18 @@ export const AutocompleteElement = styled.div`
     height: 40px;
     background-color: #fff;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     border-top: 1px solid #EEE;
     padding: 0 30px;
     transition: .3s;
     cursor: pointer;
+
+    img {
+        width: 16px;
+        height: 16px;
+        transform: rotate(-45deg);
+    }
 
     &:hover {
         background-color: #F9F9F9;

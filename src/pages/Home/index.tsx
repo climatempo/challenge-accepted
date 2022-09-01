@@ -9,26 +9,21 @@ import { useApi } from "../../hooks/useApi";
 import { IWeather } from "../../types/Weather";
 
 export const Home = () => {
-    const [filterSearch, setFilterSearch] = useState<ILocale[]>();
     const [search, setSearch] = useState('');
     const [weather, setWeather] = useState<IWeather | null>(null);
 
     const api = useApi();
     const { locales } = api.getLocales<ILocale[]>("locales");
 
-    function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
-        const currentValue = event.target.value.replace(/[0-9!@#$%^&*¨()_+\-=\[\]{};':"\\|,.<>\/?]/, '')
-        setSearch(currentValue);
+    console.log("rendezirou");
 
-        if (currentValue.length > 0) {
-            const newFilter = locales?.filter(value => {
-                return value.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(
-                    search.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
-                );
-            });
-            setFilterSearch(newFilter);
-        }
-    };
+    const filteredSearch = search.length > 0 ?
+        locales?.filter(value => {
+            return value.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(
+                search.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+            );
+        }) : [];
+    //assigns the filter directly to the variable instead of useState. Brings optimization and removes unnecessary renders
 
     async function handleAutocompleteClick(id: number) {
         let response = await api.getWeather("weather", id);
@@ -46,7 +41,7 @@ export const Home = () => {
                         placeholder="Busque por uma cidade..."
                         aria-label="Search field"
                         value={search}
-                        onChange={handleInputChange}
+                        onChange={e => setSearch(e.target.value.replace(/[0-9!@#$%^&*¨()_+\-=\[\]{};':"\\|,.<>\/?]/, ''))}
                     />
                     <C.SearchLogo
                         src={SearchIcon}
@@ -55,8 +50,8 @@ export const Home = () => {
                 </C.Search>
                 <C.AutoCompleteArea>
                     {search.length > 0 &&
-                        filterSearch && filterSearch.length > 0 &&
-                        filterSearch.map(item => (
+                        filteredSearch && filteredSearch.length > 0 &&
+                        filteredSearch.map(item => (
                             <C.AutocompleteElement
                                 key={item.id}
                                 onClick={() => handleAutocompleteClick(item.id)}

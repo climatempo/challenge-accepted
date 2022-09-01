@@ -60,8 +60,12 @@ export const SearchLogo = styled.img`
 
 export const AutoCompleteArea = styled.div`
     position: absolute;
-    width: 100%;
+    width: 1170px;
     z-index: 1;
+
+    @media (max-width: 1170px) {
+        width: 100%;
+    }
 `;
 
 export const AutocompleteElement = styled.div`

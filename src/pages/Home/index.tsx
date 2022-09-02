@@ -21,18 +21,18 @@ export const Home = () => {
                 search.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
             );
         }) : [];
-    //assigns the filter directly to variable instead useState. Brings optimization and removes unnecessary renders
+    //assigns the filteredSearch directly to variable instead useState. Brings optimization and removes unnecessary renders
 
     async function handleAutocompleteClick(id: number) {
         let response = await api.getWeather("weather", id);
         response && setWeather(response);
         setSearch('');
-    }
+    };
 
     return (
         <C.Container>
             <Header />
-            <C.Body>
+            <C.SearchArea>
                 <C.Search>
                     <C.Input
                         type="text"
@@ -46,7 +46,9 @@ export const Home = () => {
                         alt="Search icon"
                     />
                 </C.Search>
-                <C.AutoCompleteArea>
+            </C.SearchArea>
+            <C.Body>
+                <C.AutocompleteArea>
                     {search.length > 0 &&
                         filteredSearch && filteredSearch.length > 0 &&
                         filteredSearch.map(item => (
@@ -59,7 +61,7 @@ export const Home = () => {
                             </C.AutocompleteElement>
                         ))
                     }
-                </C.AutoCompleteArea>
+                </C.AutocompleteArea>
                 {weather !== null &&
                     <>
                         <C.Title>Previsão para {weather.locale.name} - {weather.locale.state}</C.Title>

@@ -23,8 +23,8 @@ describe("WeatherCard render elements", () => {
         expect(getByText("Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.")).toBeTruthy();
         expect(getByText("20°C")).toBeTruthy();
         expect(getByText("28°C")).toBeTruthy();
-        expect(getByText("60mm")).toBeTruthy(); expect(getByText("20%")).toBeTruthy();
-
+        expect(getByText("20mm")).toBeTruthy();
+        expect(getByText("60%")).toBeTruthy();
     });
 
     it("Should render icon elements", () => {
@@ -38,7 +38,6 @@ describe("WeatherCard render elements", () => {
 });
 
 describe("Toggle Celsius and Fahrenheit, mm and inch", () => {
-
     it("Should toggle between Celsius to Fahrenheit", async () => {
         const { getByText, findByText } = render(<WeatherCard item={weatherTest} />);
 
@@ -66,18 +65,18 @@ describe("Toggle Celsius and Fahrenheit, mm and inch", () => {
     it("Should toggle between mm to inch", async () => {
         const { getByText, findByText } = render(<WeatherCard item={weatherTest} />);
 
-        let value = getByText("60mm");
+        let value = getByText("20mm");
 
         userEvent.click(value);
 
-        expect(await findByText("2.36inch")).toBeTruthy();
+        expect(await findByText("0.79inch")).toBeTruthy();
 
 
 
-        value = getByText("2.36inch");
+        value = getByText("0.79inch");
 
         userEvent.click(value);
 
-        expect(await findByText("60mm")).toBeTruthy();
+        expect(await findByText("20mm")).toBeTruthy();
     });
 });

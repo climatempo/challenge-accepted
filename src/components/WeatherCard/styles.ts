@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    max-width: 310px;
+    max-width: 400px;
+    width: 100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 `;
 
@@ -42,6 +43,7 @@ export const Min = styled.div`
         filter: brightness(150%);
     }
 `;
+
 export const Max = styled.div`
     height: 30px;
     display: flex;
@@ -58,18 +60,18 @@ export const Probability = styled.div`
     height: 30px;
     display: flex;
     align-items: center;
-    cursor: pointer;
-    transition: .3s;
-
-    &:hover {
-        filter: opacity(60%);
-    }
 `;
 
 export const Precipitation = styled.div`
     height: 30px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        filter: opacity(60%);
+    }
 `;
 
 export const Icon = styled.img`

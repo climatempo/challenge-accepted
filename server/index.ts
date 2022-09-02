@@ -10,7 +10,7 @@ const data = {
 
 const server = jsonServer.create();
 const router = jsonServer.router(data);
-const middlewares = jsonServer.defaults({ Nocors: true })
+const middlewares = jsonServer.defaults({ Nocors: true });
 
 server.use(middlewares);
 server.use(router);

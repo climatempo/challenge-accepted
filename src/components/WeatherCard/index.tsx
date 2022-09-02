@@ -12,12 +12,12 @@ import { mmToInch } from "../../helpers/mmToInch";
 export const WeatherCard = ({ item }: { item: Weather }) => {
     const [min, setMin] = useState('');
     const [max, setMax] = useState('');
-    const [probability, setProbability] = useState('');
+    const [precipitation, setPrecipitation] = useState('');
 
     useEffect(() => {
         setMin(item.temperature.min + "°C");
         setMax(item.temperature.max + "°C");
-        setProbability(item.rain.probability + "mm");
+        setPrecipitation(item.rain.precipitation + "mm");
     }, []);
 
     function handleClick(value: string) {
@@ -29,11 +29,11 @@ export const WeatherCard = ({ item }: { item: Weather }) => {
             value.includes("max") && setMax(item.temperature.max + "°C");
             value.includes("min") && setMin(item.temperature.min + "°C");
         }
-        if (value.includes("prob")) {
-            value.includes("mm") && setProbability(mmToInch(value.replace("mm", "")));
-            value.includes("inch") && setProbability(item.rain.probability + "mm");
+        if (value.includes("prec")) {
+            value.includes("mm") && setPrecipitation(mmToInch(value.replace("mm", "")));
+            value.includes("inch") && setPrecipitation(item.rain.precipitation + "mm");
         }
-    }
+    };
 
     return (
         <C.Container>
@@ -56,21 +56,21 @@ export const WeatherCard = ({ item }: { item: Weather }) => {
                     />
                     <C.Text textColor="#C93838">{min}</C.Text>
                 </C.Min>
-                <C.Probability onClick={() => handleClick(probability + "prob")}>
+                <C.Precipitation onClick={() => handleClick(precipitation + "prec")}>
                     <C.Icon
                         src={Raindrop}
                         alt="Raindrop icon"
                     />
-                    <C.Text textColor="#000">{probability}</C.Text>
-                </C.Probability>
-                <C.Precipitation>
+                    <C.Text textColor="#000">{precipitation}</C.Text>
+                </C.Precipitation>
+                <C.Probability>
                     <C.Icon
                         src={Umbrella}
                         alt="Umbrella icon"
                     />
-                    <C.Text textColor="#000">{item.rain.precipitation}%</C.Text>
-                </C.Precipitation>
+                    <C.Text textColor="#000">{item.rain.probability}%</C.Text>
+                </C.Probability>
             </C.Statistics>
         </C.Container>
     );
-}
+};

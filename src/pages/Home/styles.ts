@@ -26,10 +26,21 @@ export const Title = styled.h1`
     }
 `;
 
-export const Search = styled.div`
+export const SearchArea = styled.div`
     width: 100%;
     height: 55px;
     display: flex;
+    align-items: center;
+    background-color: #FFF;
+`;
+
+export const Search = styled.div`
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
     background-color: #FFF;
     align-items: center;
     padding: 5px 20px;
@@ -58,13 +69,15 @@ export const SearchLogo = styled.img`
     opacity: 25%;
 `;
 
-export const AutoCompleteArea = styled.div`
+export const AutocompleteArea = styled.div`
     position: absolute;
+    top: 135px;
     width: 1170px;
     z-index: 1;
 
     @media (max-width: 1170px) {
         width: 100%;
+        top: 110px;
     }
 `;
 

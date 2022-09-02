@@ -6,7 +6,7 @@ import Umbrella from "../../images/icons/protection-symbol-of-opened-umbrella-si
 import { Weather } from "../../types/Weather";
 import { formatDate } from "../../helpers/formatDate";
 import { celsiusToFahrenheit } from "../../helpers/celsiusToFahrenheit";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { mmToInch } from "../../helpers/mmToInch";
 
 export const WeatherCard = ({ item }: { item: Weather }) => {

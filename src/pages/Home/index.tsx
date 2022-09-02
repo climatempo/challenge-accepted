@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import SearchIcon from "../../images/icons/search.png";
 import Arrow from "../../images/icons/upload.png";
 import { Header } from "../../components/Header";
@@ -15,15 +15,13 @@ export const Home = () => {
     const api = useApi();
     const { locales } = api.getLocales<ILocale[]>("locales");
 
-    console.log("rendezirou");
-
     const filteredSearch = search.length > 0 ?
         locales?.filter(value => {
             return value.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(
                 search.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
             );
         }) : [];
-    //assigns the filter directly to the variable instead of useState. Brings optimization and removes unnecessary renders
+    //assigns the filter directly to variable instead useState. Brings optimization and removes unnecessary renders
 
     async function handleAutocompleteClick(id: number) {
         let response = await api.getWeather("weather", id);

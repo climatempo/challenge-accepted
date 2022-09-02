@@ -128,7 +128,9 @@ export default {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: [
+    "<rootDir>/src/test/setup.ts",
+  ],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
@@ -172,7 +174,7 @@ export default {
   // timers: "real",
 
   // A map from regular expressions to paths to transformers
-  transform: {
+   transform: {
     "^.+\\.(t|j)sx?$": [
       "@swc/jest",
       {
@@ -197,7 +199,7 @@ export default {
         },
       },
     ],
-  }
+  },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [

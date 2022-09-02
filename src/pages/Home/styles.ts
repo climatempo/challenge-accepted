@@ -30,8 +30,8 @@ export const Search = styled.div`
     width: 100%;
     height: 55px;
     display: flex;
-    align-items: center;
     background-color: #FFF;
+    align-items: center;
     padding: 5px 20px;
 `;
 

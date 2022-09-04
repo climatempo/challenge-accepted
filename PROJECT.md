@@ -42,7 +42,9 @@
 
 ### Uma SPA de rota única.
 
-### Na primeira renderização, a aplicação recebe a lista com as localidades, para evitar futuros re-renders desnecessários. ### O campo de busca, só permite entrada de caracteres a-Z, com acentos ou não.
+### Na primeira renderização, a aplicação recebe a lista com as localidades, para evitar futuros re-renders desnecessários.
+
+### O campo de busca, só permite entrada de caracteres a-Z, com acentos ou não.
 
 ### Assim que o usuário digita no input, é sugerido o autocomplete da localidade de acordo com o que foi digitado.
 

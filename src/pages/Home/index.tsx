@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SearchIcon from "../../images/icons/search.png";
 import Arrow from "../../images/icons/upload.png";
 import { Header } from "../../components/Header";
@@ -24,6 +24,7 @@ export const Home = () => {
     //assigns the filteredSearch directly to variable instead useState. Brings optimization and removes unnecessary renders
 
     async function handleAutocompleteClick(id: number) {
+        setWeather(null);
         let response = await api.getWeather("weather", id);
         response && setWeather(response);
         setSearch('');

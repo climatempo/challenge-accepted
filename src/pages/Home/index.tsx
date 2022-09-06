@@ -24,7 +24,7 @@ export const Home = () => {
     //assigns the filteredSearch directly to variable instead useState. Brings optimization and removes unnecessary renders
 
     async function handleAutocompleteClick(id: number) {
-        setWeather(null);
+        weather !== null && setWeather(null);
         let response = await api.getWeather("weather", id);
         response && setWeather(response);
         setSearch('');

@@ -12,6 +12,7 @@ export default function Search(props) {
     const searchCity = (event) =>{
         const value = event.target.value
         setCityName(value)
+        setShowOptions(true)
         api.get(`/locales?filter=${value}`).then((response) => {
             setCities(response.data)
         })

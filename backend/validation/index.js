@@ -1,8 +1,8 @@
 const InvalidParam = require("../customErros/InvalidParam");
 
-function idValidation(id) {
-    if(id == undefined){
-        throw new InvalidParam('id', 'id é obrigatório')
+function idAndCityNameValidation(id, cityName) {
+    if(id == undefined && cityName === ''){
+        throw new InvalidParam('id, cityName', 'informe o id ou o cityName')
     }
 }
 
@@ -27,7 +27,7 @@ function precipitationUnitValidation(precipitationUnit) {
 }
 
 module.exports = {
-    idValidation,
+    idAndCityNameValidation,
     temperatureUnitValidation,
     precipitationUnitValidation
 }

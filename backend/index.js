@@ -7,6 +7,8 @@ const weatherData = JSON.parse(fs.readFileSync(path.join(__dirname,"data","weath
 //add a lib express e definindo a porta
 const express = require("express");
 const cors = require("cors");
+const { idValidation, temperatureUnitValidation, precipitationUnitValidation } = require("./validation");
+const { converterTemperature, converterPrecipitation } = require("./utils/unitConverter");
 const app = express();
 const PORT = 8080;
 
@@ -34,11 +36,15 @@ app.get("/locales", (req, res) => {
     
 });
 
-// /forecast?id=<number>
+// /forecast?id=<number>&temperatureUnit=<C,F>&precipitationUnit=<mm,inch>
 app.get("/forecast", (req, res) => {
-    const id = req.query.id
-    if(id != undefined){
+    const {id, temperatureUnit, precipitationUnit} = req.query
 
+    try {
+        idValidation(id)
+        temperatureUnitValidation(temperatureUnit)
+        precipitationUnitValidation(precipitationUnit)
+    
         let forecast
 
         for(const weatherDataCity of weatherData){
@@ -48,15 +54,35 @@ app.get("/forecast", (req, res) => {
         }
         
         if(forecast != undefined){
+            if(forecast.units.temperature != temperatureUnit){
+                for(const data of forecast.weather){
+                    data.temperature = converterTemperature(
+                        data.temperature, 
+                        forecast.units.temperature, 
+                        temperatureUnit
+                    )
+                }
+                forecast.units.temperature = temperatureUnit
+            }
+            if(forecast.units.precipitation != precipitationUnit){
+                for(const data of forecast.weather){
+                    data.rain.precipitation = converterPrecipitation(
+                        data.rain.precipitation, 
+                        forecast.units.precipitation, 
+                        precipitationUnit
+                    )
+                }
+                forecast.units.precipitation = precipitationUnit
+            }
             res.status(200).json(forecast)
         } else {
             res.status(404).json({
                 error: "Cidade não encontrada"
             })
-        }
-    } else {
+        }    
+    } catch (error) {
         res.status(400).json({
-            error: "id é obrigatório"
+            error: error.message
         })
     }
 });

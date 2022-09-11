@@ -11,6 +11,10 @@
       "latitude": -23.5320,
       "longitude": -46.7920
     },
+    "units": {
+      "temperature": "C", 
+      "precipitation": "mm"
+    },
     "weather": [
       {
         "date": "2017-02-01",
@@ -109,6 +113,10 @@
       "state": "SP",
       "latitude": -23.5480,
       "longitude": -46.6360
+    },
+    "units": {
+      "temperature": "C", 
+      "precipitation": "mm"
     },
     "weather": [
       {

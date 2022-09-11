@@ -8,10 +8,12 @@ export default function Search(props) {
     const [cityName, setCityName ] = useState('');
     const [showOptions, setShowOptions] = useState(false);
     const [cities, setCities] = useState([]);
+    const [selectedCity, setSelectedCity] = useState(undefined)
 
     const searchCity = (event) =>{
         const value = event.target.value
         setCityName(value)
+        setSelectedCity(undefined)
         api.get(`/locales?filter=${value}`).then((response) => {
             setCities(response.data)
         })
@@ -34,7 +36,16 @@ export default function Search(props) {
                     onChange={searchCity}
                     onClick={() => setShowOptions(!showOptions)}    
                 />
-                <img className="Img" src={imgSearch} alt="imagem da lupa" />
+                <img 
+                    className="Img" 
+                    src={imgSearch} 
+                    alt="imagem da lupa" 
+                    onClick={() => {
+                        if(selectedCity !== undefined) {
+                            choiceOptions(selectedCity)
+                        }
+                    }}
+                />
             </div>
 
             {showOptions && (
@@ -43,7 +54,10 @@ export default function Search(props) {
                         return <li 
                             className="OptionsLi"
                             key={city.id} 
-                            onClick={() => choiceOptions(city)}                           
+                            onClick={() => {
+                                choiceOptions(city)
+                                setSelectedCity(city)
+                            }}                          
                         >{city.name}</li>
                     })}
                 </ul>

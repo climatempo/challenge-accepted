@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Card.css";
-import setadown from "../images/icons/setadown.png";
-import setaup from "../images/icons/setaup.png";
-import gota from "../images/icons/raindrop.png";
-import guardaChuva from "../images/icons/umbrella.png";
+import arrowdown from "../images/icons/setadown.png";
+import arrowup from "../images/icons/setaup.png";
+import drop from "../images/icons/raindrop.png";
+import umbrella from "../images/icons/umbrella.png";
 
 
 
@@ -16,12 +16,12 @@ export default function Card(props) {
                     <table>
                         <tbody>
                             <tr className='TxtData'>
-                                <td><img className='Icon' src={setaup} alt="" /><span className='Degree1'>{props.temMax}°C</span></td>
-                                <td><img className='Icon' src={setadown} alt="" /><span className='Degree2'>{props.temMin}°C</span></td>
+                                <td><img className='Icon' src={arrowup} alt="" /><span className='Degree1'>{props.temMax}°{props.temUnit}</span></td>
+                                <td><img className='Icon' src={arrowdown} alt="" /><span className='Degree2'>{props.temMin}°{props.temUnit}</span></td>
                             </tr>
                             <tr className='TxtData'>
-                                <td><img className='Icon' src={gota} alt="" /><span>{props.chuva}mm</span></td>
-                                <td><img className='Icon' src={guardaChuva} alt="" /><span>{props.probabilidade}%</span></td>
+                                <td><img className='Icon' src={drop} alt="" /><span>{props.precipitation.toFixed(1)}{props.precUnit}</span></td>
+                                <td><img className='Icon' src={umbrella} alt="" /><span>{props.probability}%</span></td>
                             </tr>                           
                         </tbody>
                     </table>

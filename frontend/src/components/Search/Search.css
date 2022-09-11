@@ -37,6 +37,7 @@
 
 .Img {
     width: 0.9rem;
+    cursor: pointer;
 }
 
 .Options {

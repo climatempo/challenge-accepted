@@ -4,7 +4,6 @@ class InvalidParam extends Error {
         this.paramName = paramName
 
     }
-
 }
 
 module.exports = InvalidParam

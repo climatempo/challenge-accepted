@@ -9,6 +9,7 @@ const express = require("express");
 const cors = require("cors");
 const { idValidation, temperatureUnitValidation, precipitationUnitValidation } = require("./validation");
 const { converterTemperature, converterPrecipitation } = require("./utils/unitConverter");
+const removeAccent = require("./utils/removeAccent");
 const app = express();
 const PORT = 8080;
 
@@ -21,11 +22,13 @@ app.get("/locales", (req, res) => {
     if(filter != undefined){
 
         const filteredCities = []
+        const unaccentedFilter = removeAccent(filter)
 
         for(const city of locales){
-            const cityUpperCase = city.name.toUpperCase()
+            const unaccentedCityName = removeAccent(city.name)
+            const cityUpperCase = unaccentedCityName.toUpperCase()
 
-            if(cityUpperCase.indexOf(filter.toUpperCase()) != -1){
+            if(cityUpperCase.indexOf(unaccentedFilter.toUpperCase()) != -1){
                 filteredCities.push(city)
             }
         }

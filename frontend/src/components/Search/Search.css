@@ -35,6 +35,11 @@
     outline: none;
 }
 
+.SearchButton {
+    border: none;
+    background-color: transparent;
+}
+
 .Img {
     width: 0.9rem;
     cursor: pointer;

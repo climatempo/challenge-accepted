@@ -23,10 +23,18 @@ export default function App() {
     })
   }
 
+  const getForecastByCityName = (cityName) => {
+    api.get(`/forecast?cityName=${cityName}&temperatureUnit=${temperature}&precipitationUnit=${precipitation}`)
+      .then((response) => {
+      setForecastCity(response.data)
+      setCity(response.data.locale)
+    })
+  }
+
   return (
     <div className='App'>
       <Header/>
-      <Search onSelect={citySelected}/>
+      <Search onSelect={citySelected} onClickSearchButton={getForecastByCityName}/>
         <div>
           <div className='units'>
             <span>Unidade de temperatura:</span>

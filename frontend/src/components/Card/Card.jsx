@@ -20,7 +20,7 @@ export default function Card(props) {
                                 <td><img className='Icon' src={arrowdown} alt="" /><span className='Degree2'>{props.temMin}°{props.temUnit}</span></td>
                             </tr>
                             <tr className='TxtData'>
-                                <td><img className='Icon' src={drop} alt="" /><span>{props.precipitation.toFixed(1)}{props.precUnit}</span></td>
+                                <td><img className='Icon' src={drop} alt="" /><span>{Number(props.precipitation).toFixed(1)}{props.precUnit}</span></td>
                                 <td><img className='Icon' src={umbrella} alt="" /><span>{props.probability}%</span></td>
                             </tr>                           
                         </tbody>

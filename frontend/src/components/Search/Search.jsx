@@ -8,12 +8,10 @@ export default function Search(props) {
     const [cityName, setCityName ] = useState('');
     const [showOptions, setShowOptions] = useState(false);
     const [cities, setCities] = useState([]);
-    const [selectedCity, setSelectedCity] = useState(undefined)
 
     const searchCity = (event) =>{
         const value = event.target.value
         setCityName(value)
-        setSelectedCity(undefined)
         api.get(`/locales?filter=${value}`).then((response) => {
             setCities(response.data)
         })
@@ -36,16 +34,20 @@ export default function Search(props) {
                     onChange={searchCity}
                     onClick={() => setShowOptions(!showOptions)}    
                 />
-                <img 
-                    className="Img" 
-                    src={imgSearch} 
-                    alt="imagem da lupa" 
+                <button 
+                    className="SearchButton"
                     onClick={() => {
-                        if(selectedCity !== undefined) {
-                            choiceOptions(selectedCity)
-                        }
+                        setShowOptions(false)
+                        props.onClickSearchButton(cityName)
                     }}
-                />
+                >
+                    <img 
+                        className="Img" 
+                        src={imgSearch} 
+                        alt="imagem da lupa" 
+                        
+                    />
+                </button>
             </div>
 
             {showOptions && (
@@ -54,10 +56,7 @@ export default function Search(props) {
                         return <li 
                             className="OptionsLi"
                             key={city.id} 
-                            onClick={() => {
-                                choiceOptions(city)
-                                setSelectedCity(city)
-                            }}                          
+                            onClick={() => choiceOptions(city)}                          
                         >{city.name}</li>
                     })}
                 </ul>

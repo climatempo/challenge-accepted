@@ -31,7 +31,7 @@ O backend tem duas rotas que podem ser utilizadas que são elas:
 
 - `/locales?filter=<string>`: rota tipo `GET` que retorna todas as localidades. Essa rota permite um parametro opcional na url chamado `filter`, que filtra as localidades que contenham o texto informado no seu nome.
 
-- `/forecast?id=<number>`: rota tipo `GET` que retorna os dados meteorológicos da cidade selecionada pelo `id` que é um parametro obrigatório na url. Caso o id não seja informado ou não haja previsão para a cidade representada por esse id um erro será retornado.
+- `/forecast?id=<number>&temperatureUnit=<string>&precipitationUnit=<string>`: rota tipo `GET` que retorna os dados meteorológicos da cidade selecionada pelo `id` que é um parametro obrigatório na url. Caso o id não seja informado ou não haja previsão para a cidade representada por esse id um erro será retornado. Parte do desafio extra: obrigatoriamente é necessário passar a unidade de temperatura e precipitação.
 
 ### Como rodar?
 

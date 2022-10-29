@@ -2,15 +2,13 @@ import {
   ChangeEventHandler,
   FormEventHandler,
   useEffect,
-  useState
+  useState,
 } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavigateFunction } from "react-router-dom";
 import mockLocales from "./mock";
 import { Locale } from "./types";
 
-function useSearchBar() {
-  const navigate = useNavigate();
-
+function useSearchBar(navigate?: NavigateFunction) {
   const [isFocused, setIsFocused] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [displaySugestions, setDisplaySugestions] = useState(false);
@@ -21,9 +19,8 @@ function useSearchBar() {
     setSugestions(mockLocales);
   }, []);
 
-
   const handleRouterPush = (id: number) => () => {
-    navigate(`/weather/${id}`);
+    if (navigate) navigate(`/weather/${id}`);
   };
 
   const handleSubmit: FormEventHandler = (e) => {

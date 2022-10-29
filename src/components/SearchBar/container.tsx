@@ -1,4 +1,4 @@
-import { ChangeEventHandler, FormEventHandler, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SearchBar from ".";
 import useSearchBar from "../../modules/hooks/use-search-bar";
 
@@ -13,7 +13,7 @@ function SearchBarContainer() {
     searchValue,
     sugestions,
     displaySugestions,
-  } = useSearchBar();
+  } = useSearchBar(useNavigate());
 
   return (
     <SearchBar

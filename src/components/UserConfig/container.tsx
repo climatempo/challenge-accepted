@@ -1,25 +1,17 @@
 import { useState } from "react";
 import UserConfig from ".";
+import useUserConfig from "../../modules/hooks/use-user-config";
 import { RainUnits, TempUnits } from "./types";
 
-
 function UserConfigContainer() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [tempUnit, setTempUnit] = useState<TempUnits>(TempUnits.celsius);
-  const [rainUnit, setRainUnit] = useState<RainUnits>(RainUnits.mm);
-
-  const handleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const handleTempUnit = (unit: TempUnits) => () => {
-    setTempUnit(unit);
-  };
-
-  const handleRainUnit = (unit: RainUnits) => () => {
-    setRainUnit(unit);
-  };
-
+  const {
+    tempUnit,
+    rainUnit,
+    isDropdownOpen,
+    handleDropdown,
+    handleTempUnit,
+    handleRainUnit,
+  } = useUserConfig();
 
   return (
     <UserConfig

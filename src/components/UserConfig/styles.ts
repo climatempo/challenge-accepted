@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Container from '../Container';
 import ImageCP from '../Image';
+import ButtonCP from '../Button';
 
 interface TempConfigButtonProps {
   isActive?: boolean;
@@ -28,11 +29,7 @@ export const Dropdown = styled(Container)`
   right: 0;
 `;
 
-export const Button = styled.button`
-  background: none;
-  border: none;
-  cursor: pointer;
-
+export const Button = styled(ButtonCP)`
   &:hover {
     opacity: 0.8;
   }
@@ -67,10 +64,19 @@ export const ListItem = styled.li`
   gap: 1.2rem;
 `;
 
-export const Span = styled.span``;
-
 export const Title = styled.h6`
   font-size: 1.4rem;
+`;
+
+export const CloseButton = styled(ButtonCP)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.6rem;
+`;
+
+export const CloseImage = styled(ImageCP)`
+  width: 1.6rem;
 `;
 
 export default Wrapper;

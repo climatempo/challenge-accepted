@@ -1,16 +1,16 @@
 import { ReactNode } from "react";
 import Header from "../../components/Header";
-import Wrapper from "./styles";
+import Wrapper, { ChildrenWrapper } from "./styles";
 
 interface Props {
   children: ReactNode;
 }
 
-function CommonLayout({children}: Props) {
+function CommonLayout({ children }: Props) {
   return (
     <Wrapper>
       <Header />
-      {children}
+      <ChildrenWrapper>{children}</ChildrenWrapper>
     </Wrapper>
   );
 }

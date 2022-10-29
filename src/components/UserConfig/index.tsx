@@ -1,4 +1,4 @@
-import { useState } from "react";
+import Span from "../Span";
 import Wrapper, {
   Button,
   ConfigButton,
@@ -7,37 +7,13 @@ import Wrapper, {
   List,
   ListItem,
   ConfigButtonsWrapper,
-  Span,
   Title,
+  CloseButton,
+  CloseImage,
 } from "./styles";
+import { Props, RainUnits, TempUnits } from "./types";
 
-enum TempUnits {
-  celsius = 0,
-  fahrenheit = 1,
-}
-
-enum RainUnits {
-  mm = 0,
-  inch = 1,
-}
-
-function UserConfig() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [tempUnit, setTempUnit] = useState<TempUnits>(TempUnits.celsius);
-  const [rainUnit, setRainUnit] = useState<RainUnits>(RainUnits.mm);
-
-  const handleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const handleTempUnit = (unit: TempUnits) => () => {
-    setTempUnit(unit);
-  };
-
-  const handleRainUnit = (unit: RainUnits) => () => {
-    setRainUnit(unit);
-  };
-
+function UserConfig({ handleDropdown, handleTempUnit, handleRainUnit, tempUnit, rainUnit, isDropdownOpen }: Props) {
   return (
     <Wrapper>
       <Button onClick={handleDropdown} data-id="cogwheel-button">
@@ -45,6 +21,9 @@ function UserConfig() {
       </Button>
       {isDropdownOpen && (
         <Dropdown data-id="cogwheel-dropdown">
+          <CloseButton onClick={handleDropdown}>
+            <CloseImage src="/icons/close.png" alt="Fechar" />
+          </CloseButton>
           <Title>Unidades de medida</Title>
           <List>
             <ListItem>

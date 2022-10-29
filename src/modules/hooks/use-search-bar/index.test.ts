@@ -1,6 +1,5 @@
-import { renderHook, waitFor } from "@testing-library/react";
+import { renderHook, waitFor, act } from "@testing-library/react";
 import { ChangeEvent, FormEvent } from "react";
-import { act } from "react-dom/test-utils";
 import useSearchBar from ".";
 
 describe("UseSearchBar", () => {
@@ -68,7 +67,7 @@ describe("UseSearchBar", () => {
     it("sets isFocused", () => {
       const {
         result: {
-          current: { handleBlur, isFocused },
+          current: { handleBlur, isFocused, displaySugestions },
         },
       } = renderHook(() => useSearchBar());
 
@@ -78,6 +77,7 @@ describe("UseSearchBar", () => {
 
       waitFor(() => {
         expect(isFocused).toBe(false);
+        expect(displaySugestions).toBe(false);
       });
     });
   });

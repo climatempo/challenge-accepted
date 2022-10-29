@@ -23,7 +23,6 @@ function useSearchBar() {
 
 
   const handleRouterPush = (id: number) => () => {
-    console.log("oi");
     navigate(`/weather/${id}`);
   };
 

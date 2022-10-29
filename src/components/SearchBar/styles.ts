@@ -25,14 +25,21 @@ export const Form = styled.form<StyledProps>`
   transition: ${transition};
 `;
 
-export const Input = styled.input`
+export const Input = styled.input<StyledProps>`
   width: 100%;
   font-size: 1.5rem;
-  color: ${blue};
+  color: ${({ isFocused }) => isFocused ? blue : gray};
   padding: 1rem 1rem 1rem 2.4rem;
   border-radius: ${borderRadius} 0 0 ${borderRadius};
   border: none;
   outline: none;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
 
   &::placeholder {
     color: ${gray};
@@ -42,7 +49,7 @@ export const Input = styled.input`
 export const SearchButton = styled(Button)`
   width: 2.4rem;
   height: 2.4rem;
-  margin: 10px;
+  margin: 10px 16px 10px 10px;
 `;
 
 export const SearchIcon = styled(Image) <StyledProps>`

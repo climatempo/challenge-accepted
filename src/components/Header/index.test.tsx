@@ -8,6 +8,6 @@ describe("Header", () => {
     const docHeader = container.querySelector("[data-id='header']");
 
     expect(container.querySelector("img")).toBeInTheDocument();
-    expect(docHeader).toHaveStyleRule('background', '#1565c0')
+    expect(docHeader).toHaveStyleRule("background", "#344879");
   });
 });

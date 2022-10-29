@@ -1,28 +1,31 @@
-import { FormEvent, FormEventHandler, useState } from "react";
+import { ChangeEventHandler, FormEventHandler, useState } from "react";
 import SearchBar from ".";
+import useSearchBar from "../../modules/hooks/use-search-bar";
 
 function SearchBarContainer() {
-  const [isFocused, setIsFocused] = useState(false);
-
-  const handleSubmit: FormEventHandler = (e: FormEvent) => {
-    e.preventDefault();
-    console.log("Submit");
-  };
-
-  const handleFocus = () => {
-    setIsFocused(true);
-  };
-
-  const handleBlur = () => {
-    setIsFocused(false);
-  };
+  const {
+    handleBlur,
+    handleChange,
+    handleFocus,
+    handleSubmit,
+    handleRouterPush,
+    isFocused,
+    searchValue,
+    sugestions,
+    displaySugestions,
+  } = useSearchBar();
 
   return (
     <SearchBar
       onSubmit={handleSubmit}
       onFocus={handleFocus}
       onBlur={handleBlur}
+      onChange={handleChange}
+      handleRouterPush={handleRouterPush}
+      value={searchValue}
       isFocused={isFocused}
+      displaySugestions={displaySugestions}
+      sugestions={sugestions}
     />
   );
 }

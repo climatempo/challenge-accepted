@@ -1,10 +1,15 @@
 import { fireEvent, render } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import SearchBarContainer from "./container";
 
 describe("SearchBarContainer", () => {
   describe("when the input is focused", () => {
     it("changes form style", () => {
-      const { container } = render(<SearchBarContainer />);
+      const { container } = render(
+        <BrowserRouter>
+          <SearchBarContainer />
+        </BrowserRouter>
+      );
 
       const form = container.querySelector("form");
       const input = container.querySelector("input");
@@ -23,7 +28,11 @@ describe("SearchBarContainer", () => {
     });
 
     it("changes icon style", () => {
-      const { container } = render(<SearchBarContainer />);
+      const { container } = render(
+        <BrowserRouter>
+          <SearchBarContainer />
+        </BrowserRouter>
+      );
 
       const image = container.querySelector("img");
       const input = container.querySelector("input");

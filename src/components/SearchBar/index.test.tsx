@@ -1,5 +1,6 @@
 import { fireEvent, render } from "@testing-library/react";
 import SearchBar from ".";
+import { Locale } from "../../modules/hooks/use-search-bar/types";
 import { Props } from "./types";
 
 describe("SearchBar", () => {
@@ -23,6 +24,11 @@ describe("SearchBar", () => {
         onSubmit: jest.fn(),
         onFocus: jest.fn(),
         onBlur: jest.fn(),
+        onChange: jest.fn(),
+        handleRouterPush: jest.fn(),
+        displaySugestions: false,
+        sugestions: [],
+        value: "",
         isFocused: false,
       };
 
@@ -44,6 +50,11 @@ describe("SearchBar", () => {
         onSubmit: jest.fn(),
         onFocus: jest.fn(),
         onBlur: jest.fn(),
+        onChange: jest.fn(),
+        handleRouterPush: jest.fn(),
+        displaySugestions: false,
+        sugestions: [],
+        value: "",
         isFocused: false,
       };
 

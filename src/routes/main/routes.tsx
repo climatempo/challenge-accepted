@@ -1,15 +1,20 @@
 import Home from "../../pages/Home";
 import NotFound from "../../pages/NotFound";
+import Weather from "../../pages/Weather";
 
 const routes = [
   {
-    path: '/',
+    path: "*",
+    component: <NotFound />,
+  },
+  {
+    path: "/",
     component: <Home />,
   },
   {
-    path: '*',
-    component: <NotFound />,
-  }
+    path: "/weather/:id",
+    component: <Weather />,
+  },
 ];
 
 export default routes;

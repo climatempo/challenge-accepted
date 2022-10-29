@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { blue } from '../../styles/constants';
 import Container from '../Container';
 import ImageCP from '../Image';
 
@@ -10,7 +11,7 @@ const Wrapper = styled(Container)`
   justify-content: space-between;
   width: 100%;
   padding: 1.4rem 2rem;
-  background: #1565c0;
+  background: ${blue};
 `;
 
 export const Image = styled(ImageCP)`

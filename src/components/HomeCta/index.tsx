@@ -1,10 +1,10 @@
-import Wrapper, { Title } from "./styles";
+import Wrapper, { Logo, Title } from "./styles";
 
 function HomeCta() {
   return (
     <Wrapper>
-      
-      <Title>Pesquise um local e obtenha a previsão do tempo</Title>
+      <Logo src="/images/logo.png" alt="Logo Climatempo" />
+      <Title>Pesquise um local e obtenha a previsão do tempo.</Title>
     </Wrapper>
   );
 }

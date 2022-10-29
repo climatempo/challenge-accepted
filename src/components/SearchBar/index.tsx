@@ -1,12 +1,12 @@
-import Wrapper, { Form, Input, SearchButton, SearchIcon } from "./styles";
+import { Form, Input, SearchButton, SearchIcon } from "./styles";
 import { Props } from "./types";
 
-function SearchBar({ onSubmit }: Props) {
+function SearchBar({ onSubmit, onFocus, onBlur, isFocused }: Props) {
   return (
-    <Form onSubmit={onSubmit}>
-      <Input />
+    <Form onSubmit={onSubmit} isFocused={isFocused}>
+      <Input placeholder="Vitória, ES" onFocus={onFocus} onBlur={onBlur} />
       <SearchButton type="submit">
-        <SearchIcon src="/icons/search.png" />
+        <SearchIcon src="/icons/search.png" isFocused={isFocused} />
       </SearchButton>
     </Form>
   );

@@ -41,9 +41,9 @@ export const ConfigButtonsWrapper = styled(Container)`
 `;
 
 export const ConfigButton = styled.button<TempConfigButtonProps>`
-  background: ${({ isActive }) => isActive ? '#1565c0' : 'white'};
-  color: ${({ isActive }) => isActive ? 'white' : '#1565c0'};
-  border: solid 0.2rem #1565c0;
+  background: ${({ isActive }) => isActive ? '#344879' : 'white'};
+  color: ${({ isActive }) => isActive ? 'white' : '#344879'};
+  border: solid 0.2rem #344879;
   border-radius: 1rem;
   padding: 0.6rem 0.8rem;
   cursor: pointer;

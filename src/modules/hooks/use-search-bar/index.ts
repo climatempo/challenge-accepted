@@ -28,7 +28,6 @@ function useSearchBar() {
 
   const handleSubmit: FormEventHandler = (e) => {
     e.preventDefault();
-    console.log("Submit");
   };
 
   const handleSearchSugesstions = (value: string) => {

@@ -1,5 +1,6 @@
 import Home from "../../pages/Home";
 import NotFound from "../../pages/NotFound";
+import Search from "../../pages/Search";
 import Weather from "../../pages/Weather";
 
 const routes = [
@@ -14,6 +15,10 @@ const routes = [
   {
     path: "/weather/:id",
     component: <Weather />,
+  },
+  {
+    path: "/search",
+    component: <Search />,
   },
 ];
 

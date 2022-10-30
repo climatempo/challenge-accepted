@@ -1,6 +1,5 @@
 import { fireEvent, render } from "@testing-library/react";
 import SearchBar from ".";
-import { Locale } from "../../modules/hooks/use-search-bar/types";
 import { Props } from "./types";
 
 describe("SearchBar", () => {

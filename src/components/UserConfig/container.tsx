@@ -1,7 +1,5 @@
-import { useState } from "react";
 import UserConfig from ".";
 import useUserConfig from "../../modules/hooks/use-user-config";
-import { RainUnits, TempUnits } from "./types";
 
 function UserConfigContainer() {
   const {

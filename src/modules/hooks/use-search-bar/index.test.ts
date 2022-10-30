@@ -1,4 +1,4 @@
-import { renderHook, waitFor, act } from "@testing-library/react";
+import { act, renderHook, waitFor } from "@testing-library/react";
 import { ChangeEvent, FormEvent } from "react";
 import useSearchBar from ".";
 
@@ -18,6 +18,37 @@ describe("UseSearchBar", () => {
       handleSubmit(event);
 
       expect(event.preventDefault).toHaveBeenCalled();
+    });
+
+    it("calls navigate with the correct path", () => {
+      const navigate = jest.fn();
+      const {
+        result: {
+          current: { handleSubmit, handleChange },
+        },
+      } = renderHook(() => useSearchBar(navigate));
+
+      const submitEvent = {
+        target: {
+          value: "test",
+        },
+        preventDefault: jest.fn(),
+      } as unknown as FormEvent;
+
+      const changeEvent = {
+        target: {
+          value: "test",
+        },
+      } as unknown as ChangeEvent<HTMLInputElement>;
+
+      act(() => {
+        handleChange(changeEvent);
+        handleSubmit(submitEvent);
+      });
+
+      waitFor(() => {
+        expect(navigate).toHaveBeenCalledWith("/search?query=test");
+      });
     });
   });
 

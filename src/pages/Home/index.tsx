@@ -5,8 +5,8 @@ import Wrapper from "./styles";
 function Home() {
   return (
     <Wrapper>
-      <HomeCta data-id="home-cta" />
-      <SearchBarContainer data-id="search-container" />
+      <HomeCta />
+      <SearchBarContainer />
     </Wrapper>
   );
 }

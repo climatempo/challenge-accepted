@@ -1,3 +1,4 @@
+import { RainUnits, TempUnits } from "../../modules/types/config";
 import Span from "../Span";
 import Wrapper, {
   Button,
@@ -11,7 +12,7 @@ import Wrapper, {
   CloseButton,
   CloseImage,
 } from "./styles";
-import { Props, RainUnits, TempUnits } from "./types";
+import { Props } from "./types";
 
 function UserConfig({ handleDropdown, handleTempUnit, handleRainUnit, tempUnit, rainUnit, isDropdownOpen }: Props) {
   return (

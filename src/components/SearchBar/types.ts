@@ -1,5 +1,5 @@
 import { ChangeEventHandler, FocusEventHandler, FormEventHandler } from "react";
-import { Locale } from "../../modules/hooks/use-search-bar/types";
+import { Locale } from "../../modules/types/data";
 
 export interface Props {
   onSubmit: FormEventHandler<HTMLFormElement>;

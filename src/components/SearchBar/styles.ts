@@ -66,13 +66,12 @@ export const SearchIcon = styled(Image)<StyledProps>`
 export const Sugestions = styled.ul`
   position: absolute;
   top: 5rem;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96%;
   display: flex;
   flex-direction: column;
-  list-style: none;
   background-color: white;
-  border-radius: ${sugestionsborderRadius};
   border: 1px solid ${blue};
   max-height: 20rem;
   overflow-y: auto;
@@ -87,21 +86,10 @@ export const Sugestions = styled.ul`
 
   &::-webkit-scrollbar-thumb {
     background: ${blue};
-    border-radius: 5px ${sugestionsborderRadius} ${sugestionsborderRadius} 5px;
   }
 `;
 
-export const Sugestion = styled.li`
-  &:first-child {
-    border-top-left-radius: ${sugestionsborderRadius};
-    border-top-right-radius: ${sugestionsborderRadius};
-  }
-
-  &:last-child {
-    border-bottom-left-radius: ${sugestionsborderRadius};
-    border-bottom-right-radius: ${sugestionsborderRadius};
-  }
-`;
+export const Sugestion = styled.li``;
 
 export const SugestionButton = styled(Button)`
   display: flex;
@@ -110,8 +98,6 @@ export const SugestionButton = styled(Button)`
   width: 100%;
   height: 100%;
   transition: color 0.1s ease-in-out;
-  border-top-left-radius: ${sugestionsborderRadius};
-  border-top-right-radius: ${sugestionsborderRadius};
 
   &:hover {
     color: ${blue};

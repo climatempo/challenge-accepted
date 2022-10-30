@@ -2,11 +2,11 @@ import {
   ChangeEventHandler,
   FormEventHandler,
   useEffect,
-  useState,
+  useState
 } from "react";
 import { NavigateFunction } from "react-router-dom";
+import { Locale } from "../../types/data";
 import mockLocales from "./mock";
-import { Locale } from "./types";
 
 function useSearchBar(navigate?: NavigateFunction) {
   const [isFocused, setIsFocused] = useState(false);
@@ -25,6 +25,7 @@ function useSearchBar(navigate?: NavigateFunction) {
 
   const handleSubmit: FormEventHandler = (e) => {
     e.preventDefault();
+    if (navigate) navigate(`/search?query=${searchValue}`);
   };
 
   const handleSearchSugesstions = (value: string) => {

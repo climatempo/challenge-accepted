@@ -50,7 +50,6 @@ export const ConfigButton = styled.button<TempConfigButtonProps>`
 `;
 
 export const List = styled.ul`
-  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;

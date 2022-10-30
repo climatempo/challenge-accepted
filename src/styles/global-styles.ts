@@ -15,6 +15,11 @@ const GlobalStyle = createGlobalStyle`
   html, body, div#root {
     height: 100vh;
     width: 100vw;
+    overflow-x: auto;
+  }
+
+  ul {
+    list-style: none;
   }
 `;
 

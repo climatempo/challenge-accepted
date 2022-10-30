@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { RainUnits, TempUnits } from "../../../components/UserConfig/types";
+import { RainUnits, TempUnits } from "../../types/config";
 
 function useUserConfig() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);

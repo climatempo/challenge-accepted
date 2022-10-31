@@ -12,7 +12,6 @@ describe("WeatherTitle", () => {
 
     expect(container.querySelector("h1")).toBeInTheDocument();
     expect(getByText("Previsão para São Paulo - SP")).toBeInTheDocument();
-    expect(getByAltText("Voltar")).toBeInTheDocument();
     expect(getByAltText("Início")).toBeInTheDocument();
   });
 });

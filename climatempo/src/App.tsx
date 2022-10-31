@@ -1,17 +1,19 @@
 import React from "react";
 import "./App.css";
 import styled from "styled-components";
+import logo from "./assets/logo-white.png";
+import iconClimate from "./assets/iconClimate.png";
 
 function App() {
   return (
     <Container>
       <PaperLogo>
-        <IconLogo />
-        <Img />
+        <IconLogo src={logo} alt="logo" />
+        <Img src={iconClimate} />
       </PaperLogo>
       <ContainerForm>
         <Title>LOGIN</Title>
-        <InputName />
+        <InputName placeholder="Digite seu nome..." />
         <Button>Entrar</Button>
       </ContainerForm>
     </Container>
@@ -30,11 +32,21 @@ const PaperLogo = styled.div`
   height: 100vh;
   background: #04a1cc;
   border-radius: 0px 50px 50px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
-const IconLogo = styled.img``;
+const IconLogo = styled.img`
+  width: 272px;
+`;
 
-const Img = styled.img``;
+const Img = styled.img`
+  width: 254px;
+  height: 252px;
+  margin-top: 15px;
+`;
 
 const ContainerForm = styled.div`
   width: 50%;
@@ -46,6 +58,7 @@ const ContainerForm = styled.div`
 `;
 
 const Title = styled.h1`
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -62,6 +75,7 @@ const InputName = styled.input`
   border-radius: 10px;
   outline: none;
   color: gray;
+  font-family: "Roboto", sans-serif;
 `;
 
 const Button = styled.button`
@@ -72,6 +86,8 @@ const Button = styled.button`
   color: #ffffff;
   border: none;
   border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
   cursor: pointer;
 
   :hover {

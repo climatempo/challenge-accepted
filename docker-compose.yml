@@ -1,12 +1,14 @@
 version: '3.8'
 
 services:
-  challenge-front:
+  front:
     image: node:18.12.0-alpine
     working_dir: /usr/app
     user: node
     restart: always
     volumes:
-      - ./:/usr/app
-      - ./src:/usr/app/src
+      - ./front:/usr/app
+      - ./front/src:/usr/app/src
+    ports:
+      - 5173:5173
     command: sh -c "yarn && yarn dev"

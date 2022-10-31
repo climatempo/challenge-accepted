@@ -1,9 +1,9 @@
-export enum TempUnits {
-  celsius = 0,
-  fahrenheit = 1,
+export enum TempUnit {
+  Celsius = 0,
+  Fahrenheit = 1,
 }
 
-export enum RainUnits {
-  mm = 0,
-  inch = 1,
+export enum RainUnit {
+  Mm = 0,
+  Inch = 1,
 }

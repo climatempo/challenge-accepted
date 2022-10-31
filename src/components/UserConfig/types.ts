@@ -1,11 +1,11 @@
 import { MouseEventHandler } from "react";
-import { RainUnits, TempUnits } from "../../modules/types/config";
+import { RainUnit, TempUnit } from "../../modules/types/config";
 
 export interface Props {
   handleDropdown: MouseEventHandler<HTMLButtonElement>;
-  handleTempUnit: (unit: TempUnits) => MouseEventHandler<HTMLButtonElement>;
-  handleRainUnit: (unit: RainUnits) => MouseEventHandler<HTMLButtonElement>;
-  tempUnit: TempUnits;
-  rainUnit: RainUnits;
+  handleTempUnit: (unit: TempUnit) => MouseEventHandler<HTMLButtonElement>;
+  handleRainUnit: (unit: RainUnit) => MouseEventHandler<HTMLButtonElement>;
+  tempUnit: TempUnit;
+  rainUnit: RainUnit;
   isDropdownOpen: boolean;
 }

@@ -1,31 +1,30 @@
-import { useState } from "react";
-import { RainUnits, TempUnits } from "../../types/config";
+import { Dispatch, SetStateAction, useState } from "react";
+import { RainUnit, TempUnit } from "../../types/config";
 
-function useUserConfig() {
+function useUserConfig(
+  setTempUnit: Dispatch<SetStateAction<TempUnit>>,
+  setRainUnit: Dispatch<SetStateAction<RainUnit>>
+) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [tempUnit, setTempUnit] = useState<TempUnits>(TempUnits.celsius);
-  const [rainUnit, setRainUnit] = useState<RainUnits>(RainUnits.mm);
 
   const handleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleTempUnit = (unit: TempUnits) => () => {
+  const handleTempUnit = (unit: TempUnit) => () => {
     setTempUnit(unit);
   };
 
-  const handleRainUnit = (unit: RainUnits) => () => {
+  const handleRainUnit = (unit: RainUnit) => () => {
     setRainUnit(unit);
   };
 
   return {
     isDropdownOpen,
     handleDropdown,
-    tempUnit,
     handleTempUnit,
-    rainUnit,
     handleRainUnit,
-  }
+  };
 }
 
 export default useUserConfig;

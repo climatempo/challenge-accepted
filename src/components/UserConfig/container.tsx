@@ -1,15 +1,12 @@
 import UserConfig from ".";
+import { useConfigContext } from "../../modules/contexts/config";
 import useUserConfig from "../../modules/hooks/use-user-config";
 
 function UserConfigContainer() {
-  const {
-    tempUnit,
-    rainUnit,
-    isDropdownOpen,
-    handleDropdown,
-    handleTempUnit,
-    handleRainUnit,
-  } = useUserConfig();
+  const { tempUnit, rainUnit, setTempUnit, setRainUnit } = useConfigContext();
+
+  const { isDropdownOpen, handleDropdown, handleTempUnit, handleRainUnit } =
+    useUserConfig(setTempUnit, setRainUnit);
 
   return (
     <UserConfig

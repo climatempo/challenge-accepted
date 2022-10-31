@@ -4,11 +4,14 @@ import useUserConfig from ".";
 describe("useUserConfig", () => {
   describe("handleDropdown", () => {
     it("sets isDropdownOpen", () => {
+      const setRainUnit = jest.fn();
+      const setTempUnit = jest.fn();
+
       const {
         result: {
           current: { handleDropdown, isDropdownOpen },
         },
-      } = renderHook(() => useUserConfig());
+      } = renderHook(() => useUserConfig(setTempUnit, setRainUnit));
 
       act(() => {
         handleDropdown();
@@ -21,41 +24,43 @@ describe("useUserConfig", () => {
   });
 
   describe("handleTempUnit", () => {
-    it("sets tempUnit", () => {
+    it("calls setTempUnit", () => {
+      const setRainUnit = jest.fn();
+      const setTempUnit = jest.fn();
+
       const {
         result: {
-          current: { handleTempUnit, tempUnit },
+          current: { handleTempUnit },
         },
-      } = renderHook(() => useUserConfig());
-
-      expect(tempUnit).toBe(0);
+      } = renderHook(() => useUserConfig(setTempUnit, setRainUnit));
 
       act(() => {
         handleTempUnit(1);
       });
 
       waitFor(() => {
-        expect(tempUnit).toBe(1);
+        expect(setTempUnit).toHaveBeenCalledWith(1);
       });
     });
   });
 
   describe("handleRainUnit", () => {
-    it("sets rainUnit", () => {
+    it("calls setRainUnit", () => {
+      const setRainUnit = jest.fn();
+      const setTempUnit = jest.fn();
+
       const {
         result: {
-          current: { handleRainUnit, rainUnit },
+          current: { handleRainUnit },
         },
-      } = renderHook(() => useUserConfig());
-
-      expect(rainUnit).toBe(0);
+      } = renderHook(() => useUserConfig(setTempUnit, setTempUnit));
 
       act(() => {
         handleRainUnit(1);
       });
 
       waitFor(() => {
-        expect(rainUnit).toBe(1);
+        expect(setRainUnit).toHaveBeenCalledWith(1);
       });
     });
   });

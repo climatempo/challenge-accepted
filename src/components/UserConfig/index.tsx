@@ -1,4 +1,4 @@
-import { RainUnits, TempUnits } from "../../modules/types/config";
+import { RainUnit, TempUnit } from "../../modules/types/config";
 import Span from "../Span";
 import Wrapper, {
   Button,
@@ -31,14 +31,14 @@ function UserConfig({ handleDropdown, handleTempUnit, handleRainUnit, tempUnit, 
               <Span>Temperatura</Span>
               <ConfigButtonsWrapper>
                 <ConfigButton
-                  onClick={handleTempUnit(TempUnits.celsius)}
-                  isActive={tempUnit === TempUnits.celsius}
+                  onClick={handleTempUnit(TempUnit.Celsius)}
+                  isActive={tempUnit === TempUnit.Celsius}
                 >
                   °C
                 </ConfigButton>
                 <ConfigButton
-                  onClick={handleTempUnit(TempUnits.fahrenheit)}
-                  isActive={tempUnit === TempUnits.fahrenheit}
+                  onClick={handleTempUnit(TempUnit.Fahrenheit)}
+                  isActive={tempUnit === TempUnit.Fahrenheit}
                 >
                   °F
                 </ConfigButton>
@@ -48,14 +48,14 @@ function UserConfig({ handleDropdown, handleTempUnit, handleRainUnit, tempUnit, 
               <Span>Chuva</Span>
               <ConfigButtonsWrapper>
                 <ConfigButton
-                  onClick={handleRainUnit(RainUnits.mm)}
-                  isActive={rainUnit === RainUnits.mm}
+                  onClick={handleRainUnit(RainUnit.Mm)}
+                  isActive={rainUnit === RainUnit.Mm}
                 >
                   mm
                 </ConfigButton>
                 <ConfigButton
-                  onClick={handleRainUnit(RainUnits.inch)}
-                  isActive={rainUnit === RainUnits.inch}
+                  onClick={handleRainUnit(RainUnit.Inch)}
+                  isActive={rainUnit === RainUnit.Inch}
                 >
                   inch
                 </ConfigButton>

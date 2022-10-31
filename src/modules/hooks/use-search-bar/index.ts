@@ -1,13 +1,15 @@
 import { ChangeEventHandler, FormEventHandler, useState } from "react";
 import { NavigateFunction } from "react-router-dom";
 import removeSpecialChars from "../../removeSpecialChars";
+import fetchLocales from "../../services/fetchLocales";
 import { Locale } from "../../types/data";
 
-function useSearchBar(navigate?: NavigateFunction, locales?: Locale[] | null) {
+function useSearchBar(navigate?: NavigateFunction) {
   const [isFocused, setIsFocused] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [displaySugestions, setDisplaySugestions] = useState(false);
   const [sugestionsToDisplay, setSugestionsToDisplay] = useState<Locale[]>([]);
+  const [locales, setLocales] = useState<Locale[] | null>(null);
 
   const handleRouterPush = (id: number) => () => {
     if (navigate) navigate(`/weather/${id}`);
@@ -23,6 +25,8 @@ function useSearchBar(navigate?: NavigateFunction, locales?: Locale[] | null) {
   };
 
   const handleSearchSugesstions = (value: string) => {
+    fetchLocales(setLocales);
+
     if (!locales) return;
 
     const formattedValue = removeSpecialChars(value);

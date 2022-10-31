@@ -2,7 +2,6 @@ import CommonLayout from "./layouts/Common";
 import GlobalStyle from "./styles/global-styles";
 import { BrowserRouter } from "react-router-dom";
 import MainRoutes from "./routes/main";
-import { DataContextProvider } from "./modules/contexts/data";
 import { ConfigContextProvider } from "./modules/contexts/config";
 
 function App() {
@@ -10,13 +9,11 @@ function App() {
     <>
       <GlobalStyle />
       <ConfigContextProvider>
-        <CommonLayout>
-          <DataContextProvider>
-            <BrowserRouter>
-              <MainRoutes />
-            </BrowserRouter>
-          </DataContextProvider>
-        </CommonLayout>
+        <BrowserRouter>
+          <CommonLayout>
+            <MainRoutes />
+          </CommonLayout>
+        </BrowserRouter>
       </ConfigContextProvider>
     </>
   );

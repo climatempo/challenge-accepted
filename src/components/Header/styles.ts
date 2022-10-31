@@ -19,6 +19,6 @@ export const Image = styled(ImageCP)`
   height: 2.4rem;
 `;
 
-export const Anchor = styled.a``;
+export const Anchor = styled(Link)``;
 
 export default Wrapper;

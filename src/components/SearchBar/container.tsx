@@ -1,11 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import SearchBar from ".";
-import useDataContext from "../../modules/contexts/data";
 import useSearchBar from "../../modules/hooks/use-search-bar";
 
 function SearchBarContainer() {
-  const { locales } = useDataContext()
-
   const {
     handleBlur,
     handleChange,
@@ -16,7 +13,7 @@ function SearchBarContainer() {
     searchValue,
     sugestions,
     displaySugestions,
-  } = useSearchBar(useNavigate(), locales);
+  } = useSearchBar(useNavigate());
 
   return (
     <SearchBar

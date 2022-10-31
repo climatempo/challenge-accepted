@@ -1,20 +1,14 @@
-import removeSpecialChars from "../../removeSpecialChars";
+import { useEffect, useState } from "react";
+import fetchLocales from "../../services/fetchLocales";
 import { Locale } from "../../types/data";
 
-function useSearchResult(searchParams?: URLSearchParams, locales?: Locale[] | null) {
+function useSearchResult(searchParams?: URLSearchParams) {
   const searchValue = searchParams?.get("query") || "";
+  const [results, setResults] = useState<Locale[] | null>(null);
 
-  const searchResults = locales?.filter(({ name, state }) => {
-    const formattedName = removeSpecialChars(`${name} - ${state}`);
-    return formattedName.includes(searchValue.toLowerCase());
-  });
-
-  const filteredLocales = locales?.filter(({ name, state }) => {
-    const formattedName = removeSpecialChars(`${name} - ${state}`);
-    return !formattedName.includes(searchValue.toLowerCase());
-  })
-
-  const results = searchResults?.concat(filteredLocales || []);
+  useEffect(() => {
+    fetchLocales(setResults, searchValue);
+  }, [searchValue]);
 
   return {
     searchValue,

@@ -1,9 +1,10 @@
+import WeatherContainer from "../../components/WeatherContainer";
 import Wrapper from "./styles";
 
 function Weather() {
   return (
     <Wrapper>
-      weather
+      <WeatherContainer />
     </Wrapper>
   );
 }

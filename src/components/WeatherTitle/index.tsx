@@ -2,13 +2,13 @@ import HomeAnchor from "../HomeAnchor";
 import Wrapper, { Title } from "./styles";
 import { Props } from "./types";
 
-function SearchResultTitle({ searchValue }: Props) {
+function WeatherTitle({ locale }: Props) {
   return (
     <Wrapper>
       <HomeAnchor />
-      <Title>Você buscou por: {searchValue}</Title>
+      <Title>Previsão para {locale}</Title>
     </Wrapper>
   );
 }
 
-export default SearchResultTitle;
+export default WeatherTitle;

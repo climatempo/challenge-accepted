@@ -3,10 +3,10 @@ import Image from ".";
 
 describe('Image', () => {
   it('renders correctly', () => {
-    render(<Image src="test" alt="test" />);
+    const { container } = render(<Image src="test" alt="test" />);
 
-    expect(document.querySelector('img')).toBeInTheDocument();
-    expect(document.querySelector('img')).toHaveAttribute('src', 'test');
-    expect(document.querySelector('img')).toHaveAttribute('alt', 'test');
+    expect(container.querySelector('img')).toBeInTheDocument();
+    expect(container.querySelector('img')).toHaveAttribute('src', 'test');
+    expect(container.querySelector('img')).toHaveAttribute('alt', 'test');
   });
 })

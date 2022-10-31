@@ -3,9 +3,12 @@ import Container from '.';
 
 describe("Container", () => {
   it("renders correctly", () => {
-    render(<Container>test</Container>);
+    const { container } = render(<Container>test</Container>);
 
-    expect(document.querySelector("div")).toBeInTheDocument();
-    expect(document.querySelector("div")).toHaveTextContent("test");
+    expect(container.querySelector("div")).toBeInTheDocument();
+    expect(container.querySelector("div")).toHaveTextContent("test");
+    expect(container.querySelector("div")).toHaveStyleRule("padding", "0");
+    expect(container.querySelector("div")).toHaveStyleRule("margin", "0");
+    expect(container.querySelector("div")).toHaveStyleRule("box-sizing", "border-box");
   });
 });

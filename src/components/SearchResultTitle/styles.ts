@@ -3,6 +3,9 @@ import { blue } from "../../styles/constants";
 import Container from "../Container";
 
 const Wrapper = styled(Container)`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   width: fit-content;
 `;
 

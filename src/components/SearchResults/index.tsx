@@ -4,7 +4,7 @@ import { Props } from "./types";
 function SearchResults({ results }: Props) {
   return (
     <Wrapper>
-      <Title>Aqui estão alguns resultados:</Title>
+      <Title>{results ? "Aqui estão alguns resultados:" : "Infelizmente não encontramos o que você procurou."}</Title>
       <Results>
         {results?.map(({ id, name, state }) => (
           <Result key={id}>

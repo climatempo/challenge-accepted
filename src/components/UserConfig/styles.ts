@@ -22,7 +22,7 @@ export const Dropdown = styled(Container)`
   align-items: center;
   gap: 1.2rem;
   background: white;
-  padding: 2rem;
+  padding: 20px;
   border-radius: 0.4rem;
   box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
   top: 32px;
@@ -45,7 +45,7 @@ export const ConfigButton = styled.button<TempConfigButtonProps>`
   color: ${({ isActive }) => isActive ? 'white' : '#344879'};
   border: solid 0.2rem #344879;
   border-radius: 1rem;
-  padding: 0.6rem 0.8rem;
+  padding: 6px 8px;
   cursor: pointer;
 `;
 
@@ -71,7 +71,7 @@ export const CloseButton = styled(ButtonCP)`
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0.6rem;
+  padding: 6px;
 `;
 
 export const CloseImage = styled(ImageCP)`

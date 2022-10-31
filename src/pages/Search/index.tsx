@@ -1,11 +1,11 @@
+import PageWrapper from "../../components/PageWrapper";
 import SearchResultContainer from "../../components/SearchResultContainer";
-import Wrapper from "./styles";
 
 function Search() {
   return (
-    <Wrapper>
+    <PageWrapper>
       <SearchResultContainer />
-    </Wrapper>
+    </PageWrapper>
   );
 }
 

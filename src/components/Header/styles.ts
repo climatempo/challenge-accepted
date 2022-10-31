@@ -11,7 +11,7 @@ const Wrapper = styled(Container)`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 1.4rem 2rem;
+  padding: 14px 20px;
   background: ${blue};
 `;
 

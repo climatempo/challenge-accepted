@@ -12,7 +12,7 @@ const Wrapper = styled(Container)`
 
 export const ChildrenWrapper = styled(Container)`
   width: min(100%, 1140px);
-  padding: 2rem;
+  padding: 20px;
   height: 100%;
 `;
 

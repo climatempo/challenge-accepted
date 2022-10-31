@@ -1,4 +1,4 @@
-export interface Props {
+export interface ContainerProps {
   data: {
     date: string;
     text: string;
@@ -11,4 +11,21 @@ export interface Props {
       precipitation: string | number;
     };
   };
+}
+
+export interface CardProps {
+  date: string;
+  text: string;
+  temperature: {
+    min: number | string;
+    max: number | string;
+  };
+  rain: {
+    probability: string;
+    precipitation: string | number;
+  };
+}
+
+export interface StyledProps {
+  color?: string;
 }

@@ -6,7 +6,7 @@ const Wrapper = styled(Container)`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding-top: 2rem;
+  padding-top: 20px;
 `;
 
 export default Wrapper;

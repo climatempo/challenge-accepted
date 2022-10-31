@@ -1,11 +1,11 @@
+import PageWrapper from "../../components/PageWrapper";
 import WeatherContainer from "../../components/WeatherContainer";
-import Wrapper from "./styles";
 
 function Weather() {
   return (
-    <Wrapper>
+    <PageWrapper>
       <WeatherContainer />
-    </Wrapper>
+    </PageWrapper>
   );
 }
 

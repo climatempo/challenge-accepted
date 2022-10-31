@@ -34,7 +34,7 @@ export const Input = styled.input<StyledProps>`
   width: 100%;
   font-size: 1.5rem;
   color: ${({ isFocused }) => (isFocused ? blue : gray)};
-  padding: 1rem 1rem 1rem 2.4rem;
+  padding: 10px 10px 10px 24px;
   border-radius: ${borderRadius} 0 0 ${borderRadius};
   border: none;
   outline: none;
@@ -94,7 +94,7 @@ export const Sugestion = styled.li``;
 export const SugestionButton = styled(Button)`
   display: flex;
   font-size: 1.5rem;
-  padding: 0.8rem 2.4rem;
+  padding: 8px 24px;
   width: 100%;
   height: 100%;
   transition: color 0.1s ease-in-out;
@@ -104,10 +104,10 @@ export const SugestionButton = styled(Button)`
   }
 
   &:first-child {
-    padding-top: 1.5rem;
+    padding-top: 15px;
   }
 
   &:last-child {
-    padding-bottom: 1.5rem;
+    padding-bottom: 15px;
   }
   `;

@@ -6,7 +6,7 @@ const Wrapper = styled.ul`
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
-  padding-bottom: 2rem;
+  padding-bottom: 20px;
 `;
 
 export default Wrapper;

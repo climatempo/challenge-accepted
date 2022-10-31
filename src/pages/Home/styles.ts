@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import Container from '../../components/Container';
+import PageWrapper from '../../components/PageWrapper';
 
-const Wrapper = styled(Container)`
+const Wrapper = styled(PageWrapper)`
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  height: 100%;
   align-items: center;
   justify-content: center;
 `;

@@ -5,7 +5,7 @@ const Wrapper = styled(Container)`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-top: 2rem;
+  padding-top: 20px;
   height: 100%;
 `;
 

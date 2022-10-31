@@ -1,4 +1,9 @@
-import { ChangeEventHandler, FormEventHandler, useState } from "react";
+import {
+  ChangeEventHandler,
+  FormEventHandler,
+  useEffect,
+  useState,
+} from "react";
 import { NavigateFunction } from "react-router-dom";
 import removeSpecialChars from "../../removeSpecialChars";
 import fetchLocales from "../../services/fetchLocales";
@@ -10,6 +15,11 @@ function useSearchBar(navigate?: NavigateFunction) {
   const [displaySugestions, setDisplaySugestions] = useState(false);
   const [sugestionsToDisplay, setSugestionsToDisplay] = useState<Locale[]>([]);
   const [locales, setLocales] = useState<Locale[] | null>(null);
+
+  useEffect(() => {
+    const formattedSearchValue = removeSpecialChars(searchValue);
+    if (formattedSearchValue) fetchLocales(setLocales, searchValue);
+  }, [searchValue]);
 
   const handleRouterPush = (id: number) => () => {
     if (navigate) navigate(`/weather/${id}`);
@@ -25,8 +35,6 @@ function useSearchBar(navigate?: NavigateFunction) {
   };
 
   const handleSearchSugesstions = (value: string) => {
-    fetchLocales(setLocales);
-
     if (!locales) return;
 
     const formattedValue = removeSpecialChars(value);

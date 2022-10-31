@@ -6,11 +6,9 @@ import { locales } from "../mock";
 
 async function fetchLocales(
   setLocales: Dispatch<SetStateAction<Locale[] | null>>,
-  searchValue?: string
+  searchValue: string
 ) {
-  const formattedSearchValue = removeSpecialChars(searchValue || "");
-
-  if (!formattedSearchValue) return;
+  const formattedSearchValue = removeSpecialChars(searchValue);
 
   // const { data } = await api.get("/locales", {
   //   params: {

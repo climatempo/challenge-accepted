@@ -7,7 +7,7 @@ describe("SearchResults", () => {
   it("renders correctly", () => {
     const { getByText } = render(<SearchResults results={[]} />);
 
-    expect(getByText("Aqui estão alguns resultados")).toBeInTheDocument();
+    expect(getByText("Aqui estão alguns resultados:")).toBeInTheDocument();
   });
 
   it("renders correctly with results", () => {
@@ -30,7 +30,7 @@ describe("SearchResults", () => {
       </BrowserRouter>
     );
 
-    expect(getByText("Aqui estão alguns resultados")).toBeInTheDocument();
+    expect(getByText("Aqui estão alguns resultados:")).toBeInTheDocument();
     expect(getByText("São Paulo - SP")).toBeInTheDocument();
     expect(getByText("Rio de Janeiro - RJ")).toBeInTheDocument();
   });

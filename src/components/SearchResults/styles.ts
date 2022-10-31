@@ -28,7 +28,7 @@ export const Result = styled.li`
 `;
 
 export const Anchor = styled(Link)`
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 `;
 
 export default Wrapper;

@@ -15,7 +15,7 @@ export const locales = [
   },
 ];
 
-export const weather = [
+export const weathers = [
   {
     period: {
       begin: "2017-02-01",

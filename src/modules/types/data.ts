@@ -10,7 +10,7 @@ export type Weather = {
   period: {
     begin: string;
     end: string;
-  }
+  };
   locale: Locale;
   weather: {
     date: string;
@@ -21,7 +21,7 @@ export type Weather = {
     };
     rain: {
       probability: number;
-      precipitation: number;
-    }
+      precipitation: number | string;
+    };
   }[];
-}
+};

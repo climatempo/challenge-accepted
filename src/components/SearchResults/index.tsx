@@ -4,9 +4,9 @@ import { Props } from "./types";
 function SearchResults({ results }: Props) {
   return (
     <Wrapper>
-      <Title>Aqui estão alguns resultados</Title>
+      <Title>Aqui estão alguns resultados:</Title>
       <Results>
-        {results.map(({ id, name, state }) => (
+        {results?.map(({ id, name, state }) => (
           <Result key={id}>
             <Anchor to={`/weather/${id}`}>{`${name} - ${state}`}</Anchor>
           </Result>

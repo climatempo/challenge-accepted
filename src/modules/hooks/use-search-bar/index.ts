@@ -1,23 +1,13 @@
-import {
-  ChangeEventHandler,
-  FormEventHandler,
-  useEffect,
-  useState
-} from "react";
+import { ChangeEventHandler, FormEventHandler, useState } from "react";
 import { NavigateFunction } from "react-router-dom";
+import removeSpecialChars from "../../removeSpecialChars";
 import { Locale } from "../../types/data";
-import mockLocales from "./mock";
 
-function useSearchBar(navigate?: NavigateFunction) {
+function useSearchBar(navigate?: NavigateFunction, locales?: Locale[] | null) {
   const [isFocused, setIsFocused] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [displaySugestions, setDisplaySugestions] = useState(false);
-  const [sugestions, setSugestions] = useState<Locale[]>([]);
   const [sugestionsToDisplay, setSugestionsToDisplay] = useState<Locale[]>([]);
-
-  useEffect(() => {
-    setSugestions(mockLocales);
-  }, []);
 
   const handleRouterPush = (id: number) => () => {
     if (navigate) navigate(`/weather/${id}`);
@@ -29,16 +19,18 @@ function useSearchBar(navigate?: NavigateFunction) {
   };
 
   const handleSearchSugesstions = (value: string) => {
-    const trimmedValue = value.trim();
+    if (!locales) return;
 
-    const filteredSugestions = sugestions.filter(({ name }) =>
-      name.toLowerCase().includes(trimmedValue.toLowerCase())
-    );
+    const formattedValue = removeSpecialChars(value);
 
-    if (filteredSugestions.length && trimmedValue) {
+    const filteredSugestions = locales.filter(({ name, state }) => {
+      const formattedName = removeSpecialChars(`${name} - ${state}`);
+      return formattedName.includes(formattedValue.toLowerCase());
+    });
+
+    if (filteredSugestions.length && formattedValue) {
       setSugestionsToDisplay(filteredSugestions);
       setDisplaySugestions(true);
-
       return;
     }
 

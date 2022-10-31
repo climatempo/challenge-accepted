@@ -7,7 +7,7 @@ function setupData(
   setLocales: Dispatch<React.SetStateAction<Locale[] | null>>
 ) {
   setWeathers(weathers);
-  setLocales(locales)
+  setLocales(locales);
 }
 
 export default setupData;

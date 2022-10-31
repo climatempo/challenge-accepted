@@ -15,7 +15,11 @@ function useSearchBar(navigate?: NavigateFunction, locales?: Locale[] | null) {
 
   const handleSubmit: FormEventHandler = (e) => {
     e.preventDefault();
-    if (navigate) navigate(`/search?query=${searchValue}`);
+
+    const trimmedSearchValue = searchValue.trim();
+
+    if (navigate && trimmedSearchValue)
+      navigate(`/search?query=${searchValue}`);
   };
 
   const handleSearchSugesstions = (value: string) => {

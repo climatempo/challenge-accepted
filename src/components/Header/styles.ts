@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { blue } from '../../styles/constants';
 import Container from '../Container';
@@ -17,5 +18,7 @@ const Wrapper = styled(Container)`
 export const Image = styled(ImageCP)`
   height: 2.4rem;
 `;
+
+export const Anchor = styled.a``;
 
 export default Wrapper;

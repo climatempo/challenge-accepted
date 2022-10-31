@@ -1,10 +1,12 @@
 import UserConfigContainer from "../UserConfig/container";
-import Wrapper, { Image } from "./styles";
+import Wrapper, { Anchor, Image } from "./styles";
 
 function Header() {
   return (
     <Wrapper data-id="header">
-      <Image src="/images/logo-white.png" alt="Logo Climatempo" />
+      <Anchor href="/">
+        <Image src="/images/logo-white.png" alt="Logo Climatempo" />
+      </Anchor>
       <UserConfigContainer />
     </Wrapper>
   );

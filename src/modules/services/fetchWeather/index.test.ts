@@ -1,5 +1,4 @@
 import fetchWeather from ".";
-import fetchLocales from "../fetchLocales";
 
 describe("fetchWeather", () => {
   it("calls setWeather", () => {

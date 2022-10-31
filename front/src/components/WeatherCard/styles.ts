@@ -45,14 +45,15 @@ export const CardBodyWrapper = styled(Container)`
 
 export const CardBody = styled.ul`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem 4rem;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 20px 40px;
 `;
 
 export const BodyItem = styled.li`
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: fit-content;
 `;
 
 export const Icon = styled(Image)`
@@ -62,7 +63,6 @@ export const Icon = styled(Image)`
 export const ItemText = styled(Span)<StyledProps>`
   font-size: 2rem;
   color: ${({ color }) => (color ? color : null)};
-  white-space: nowrap;
 `;
 
 export default Wrapper;

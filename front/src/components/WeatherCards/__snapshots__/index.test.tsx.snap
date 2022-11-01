@@ -1,0 +1,700 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherCards renders correctly 1`] = `
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: min(100%,30rem);
+  box-shadow: 0 1rem 1rem 0.2rem rgba(0,0,0,0.2);
+  margin: 2rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 20px;
+}
+
+.c3 {
+  font-size: 1.6rem;
+}
+
+.c4 {
+  font-size: 1.4rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+  background: #e3e3e3;
+}
+
+.c7 {
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  grid-gap: 20px 40px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c9 {
+  width: 2rem;
+}
+
+.c10 {
+  font-size: 2rem;
+  color: #2086c3;
+}
+
+.c11 {
+  font-size: 2rem;
+  color: #cd4b4b;
+}
+
+.c12 {
+  font-size: 2rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+<div>
+  <ul
+    class="c0"
+  >
+    <li
+      class="c1"
+    >
+      <section
+        class="c2"
+      >
+        <h3
+          class="c3"
+        >
+          31/01/2017
+        </h3>
+        <span
+          class=" c4"
+        >
+          Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.
+        </span>
+      </section>
+      <div
+        class="c5 c6"
+      >
+        <ul
+          class="c7"
+        >
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowup.png"
+            />
+            <span
+              class=" c10"
+              color="#2086c3"
+            >
+              82 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowdown.png"
+            />
+            <span
+              class=" c11"
+              color="#cd4b4b"
+            >
+              68 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/raindrop.png"
+            />
+            <span
+              class=" c12"
+            >
+              0.79 inch
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/umbrella.png"
+            />
+            <span
+              class=" c12"
+            >
+              60%
+            </span>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li
+      class="c1"
+    >
+      <section
+        class="c2"
+      >
+        <h3
+          class="c3"
+        >
+          01/02/2017
+        </h3>
+        <span
+          class=" c4"
+        >
+          Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.
+        </span>
+      </section>
+      <div
+        class="c5 c6"
+      >
+        <ul
+          class="c7"
+        >
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowup.png"
+            />
+            <span
+              class=" c10"
+              color="#2086c3"
+            >
+              86 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowdown.png"
+            />
+            <span
+              class=" c11"
+              color="#cd4b4b"
+            >
+              70 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/raindrop.png"
+            />
+            <span
+              class=" c12"
+            >
+              0.39 inch
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/umbrella.png"
+            />
+            <span
+              class=" c12"
+            >
+              60%
+            </span>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li
+      class="c1"
+    >
+      <section
+        class="c2"
+      >
+        <h3
+          class="c3"
+        >
+          02/02/2017
+        </h3>
+        <span
+          class=" c4"
+        >
+          Sol com algumas nuvens. Chove rápido durante o dia e à noite.
+        </span>
+      </section>
+      <div
+        class="c5 c6"
+      >
+        <ul
+          class="c7"
+        >
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowup.png"
+            />
+            <span
+              class=" c10"
+              color="#2086c3"
+            >
+              88 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowdown.png"
+            />
+            <span
+              class=" c11"
+              color="#cd4b4b"
+            >
+              72 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/raindrop.png"
+            />
+            <span
+              class=" c12"
+            >
+              0.59 inch
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/umbrella.png"
+            />
+            <span
+              class=" c12"
+            >
+              60%
+            </span>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li
+      class="c1"
+    >
+      <section
+        class="c2"
+      >
+        <h3
+          class="c3"
+        >
+          03/02/2017
+        </h3>
+        <span
+          class=" c4"
+        >
+          Sol com algumas nuvens. Chove rápido durante o dia e à noite.
+        </span>
+      </section>
+      <div
+        class="c5 c6"
+      >
+        <ul
+          class="c7"
+        >
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowup.png"
+            />
+            <span
+              class=" c10"
+              color="#2086c3"
+            >
+              90 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowdown.png"
+            />
+            <span
+              class=" c11"
+              color="#cd4b4b"
+            >
+              72 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/raindrop.png"
+            />
+            <span
+              class=" c12"
+            >
+              0.63 inch
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/umbrella.png"
+            />
+            <span
+              class=" c12"
+            >
+              60%
+            </span>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li
+      class="c1"
+    >
+      <section
+        class="c2"
+      >
+        <h3
+          class="c3"
+        >
+          04/02/2017
+        </h3>
+        <span
+          class=" c4"
+        >
+          Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.
+        </span>
+      </section>
+      <div
+        class="c5 c6"
+      >
+        <ul
+          class="c7"
+        >
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowup.png"
+            />
+            <span
+              class=" c10"
+              color="#2086c3"
+            >
+              90 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowdown.png"
+            />
+            <span
+              class=" c11"
+              color="#cd4b4b"
+            >
+              73 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/raindrop.png"
+            />
+            <span
+              class=" c12"
+            >
+              0.75 inch
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/umbrella.png"
+            />
+            <span
+              class=" c12"
+            >
+              67%
+            </span>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li
+      class="c1"
+    >
+      <section
+        class="c2"
+      >
+        <h3
+          class="c3"
+        >
+          05/02/2017
+        </h3>
+        <span
+          class=" c4"
+        >
+          Sol com algumas nuvens. Chove rápido durante o dia e à noite.
+        </span>
+      </section>
+      <div
+        class="c5 c6"
+      >
+        <ul
+          class="c7"
+        >
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowup.png"
+            />
+            <span
+              class=" c10"
+              color="#2086c3"
+            >
+              91 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowdown.png"
+            />
+            <span
+              class=" c11"
+              color="#cd4b4b"
+            >
+              72 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/raindrop.png"
+            />
+            <span
+              class=" c12"
+            >
+              0.31 inch
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/umbrella.png"
+            />
+            <span
+              class=" c12"
+            >
+              60%
+            </span>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li
+      class="c1"
+    >
+      <section
+        class="c2"
+      >
+        <h3
+          class="c3"
+        >
+          06/02/2017
+        </h3>
+        <span
+          class=" c4"
+        >
+          Sol com algumas nuvens. Chove rápido durante o dia e à noite.
+        </span>
+      </section>
+      <div
+        class="c5 c6"
+      >
+        <ul
+          class="c7"
+        >
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowup.png"
+            />
+            <span
+              class=" c10"
+              color="#2086c3"
+            >
+              86 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/arrowdown.png"
+            />
+            <span
+              class=" c11"
+              color="#cd4b4b"
+            >
+              77 °F
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/raindrop.png"
+            />
+            <span
+              class=" c12"
+            >
+              0.43 inch
+            </span>
+          </li>
+          <li
+            class="c8"
+          >
+            <img
+              class=" c9"
+              src="/icons/umbrella.png"
+            />
+            <span
+              class=" c12"
+            >
+              60%
+            </span>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

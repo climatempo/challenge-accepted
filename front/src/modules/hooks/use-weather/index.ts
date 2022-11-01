@@ -9,7 +9,9 @@ function useWeather(id?: string) {
     if (id) fetchWeather(setWeather, id);
   }, [id]);
 
-  const locale = weather ? `${weather.locale.name} - ${weather.locale.state}` : "";
+  const locale = weather
+    ? `${weather.locale.name} - ${weather.locale.state}`
+    : "";
 
   return { locale, weather };
 }

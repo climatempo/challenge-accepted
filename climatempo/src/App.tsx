@@ -74,6 +74,7 @@ const InputName = styled.input`
   border: 1px solid #047ab2;
   border-radius: 10px;
   outline: none;
+  font-size: 24px;
   color: gray;
   font-family: "Roboto", sans-serif;
 `;

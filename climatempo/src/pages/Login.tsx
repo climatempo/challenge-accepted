@@ -2,8 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../assets/logo-white.png";
 import iconClimate from "../assets/iconClimate.png";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
+  function click() {
+    navigate("/Home");
+  }
+
   return (
     <Container>
       <PaperLogo>
@@ -13,7 +20,7 @@ function Login() {
       <ContainerForm>
         <Title>LOGIN</Title>
         <InputName placeholder="Digite seu nome..." />
-        <Button>Entrar</Button>
+        <Button onClick={() => click()}>Entrar</Button>
       </ContainerForm>
     </Container>
   );

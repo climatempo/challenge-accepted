@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Header from "../components/Header/Header";
 import imgClimate from "../assets/weather.png";
+import iconSearch from "../assets/icons/search.png";
 
 function Home() {
   //const [local, setLocal] = useState("");
@@ -13,7 +14,7 @@ function Home() {
         <Search>
           <Img src={imgClimate} alt="ImgClimate" />
           <TitleSearch>Informe a localidade</TitleSearch>
-          <InputSearch placeholder="Localidade..." />
+          <InputSearch maxLength={23} type="text" placeholder="Localidade..." />
         </Search>
         <ContainerCards>
           <TitleClimate>Previsão</TitleClimate>
@@ -71,6 +72,9 @@ const InputSearch = styled.input`
   font-size: 24px;
   color: gray;
   font-family: "Roboto", sans-serif;
+  background-image: url(${iconSearch});
+  background-repeat: no-repeat;
+  background-position: 95%;
 `;
 
 const TitleSearch = styled.h1`

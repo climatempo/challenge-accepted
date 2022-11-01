@@ -6,8 +6,11 @@ import { locales } from "../mock";
 
 async function fetchLocales(
   setLocales: Dispatch<SetStateAction<Locale[] | null>>,
-  searchValue: string
+  searchValue: string,
+  setIsLoading?: Dispatch<SetStateAction<boolean>>
 ) {
+  if (setIsLoading) setIsLoading(true);
+
   const formattedSearchValue = removeSpecialChars(searchValue);
 
   // const { data } = await api.get("/locales", {
@@ -21,7 +24,10 @@ async function fetchLocales(
     return formattedName.includes(formattedSearchValue);
   });
 
-  if (filteredLocales.length) setLocales(filteredLocales);
+  setTimeout(() => {
+    if (setIsLoading) setIsLoading(false);
+    if (filteredLocales.length) setLocales(filteredLocales);
+  }, 1000);
 }
 
 export default fetchLocales;

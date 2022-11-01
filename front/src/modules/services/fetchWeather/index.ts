@@ -5,7 +5,8 @@ import { weathers } from "../mock";
 
 async function fetchWeather(
   setWeather: Dispatch<SetStateAction<Weather | null>>,
-  id: string
+  id: string,
+  setIsLoading?: Dispatch<SetStateAction<boolean>>
 ) {
   // const { data } = await api.get("/weather", {
   //   params: {
@@ -15,7 +16,10 @@ async function fetchWeather(
 
   const weather = weathers.find(({ locale }) => String(locale.id) === id);
 
-  if (weather) setWeather(weather);
+  setTimeout(() => {
+    if (weather) setWeather(weather);
+    if (setIsLoading) setIsLoading(false);
+  }, 2000);
 }
 
 export default fetchWeather;

@@ -21,6 +21,26 @@ function useSearchBar(navigate?: NavigateFunction) {
     if (formattedSearchValue) fetchLocales(setLocales, searchValue);
   }, [searchValue]);
 
+  useEffect(() => {
+    if (locales) {
+      const formattedValue = removeSpecialChars(searchValue);
+
+      const filteredSugestions = locales.filter(({ name, state }) => {
+        const formattedName = removeSpecialChars(`${name} - ${state}`);
+        return formattedName.includes(formattedValue.toLowerCase());
+      });
+
+      if (filteredSugestions.length && formattedValue) {
+        setSugestionsToDisplay(filteredSugestions);
+        setDisplaySugestions(true);
+        return;
+      }
+
+      setSugestionsToDisplay([]);
+      setDisplaySugestions(false);
+    }
+  }, [locales]);
+
   const handleRouterPush = (id: number) => () => {
     if (navigate) navigate(`/weather/${id}`);
   };
@@ -34,31 +54,10 @@ function useSearchBar(navigate?: NavigateFunction) {
       navigate(`/search?query=${searchValue}`);
   };
 
-  const handleSearchSugesstions = (value: string) => {
-    if (!locales) return;
-
-    const formattedValue = removeSpecialChars(value);
-
-    const filteredSugestions = locales.filter(({ name, state }) => {
-      const formattedName = removeSpecialChars(`${name} - ${state}`);
-      return formattedName.includes(formattedValue.toLowerCase());
-    });
-
-    if (filteredSugestions.length && formattedValue) {
-      setSugestionsToDisplay(filteredSugestions);
-      setDisplaySugestions(true);
-      return;
-    }
-
-    setSugestionsToDisplay([]);
-    setDisplaySugestions(false);
-  };
-
   const handleChange: ChangeEventHandler<HTMLInputElement> = ({
     target: { value },
   }) => {
     setSearchValue(value);
-    handleSearchSugesstions(value);
   };
 
   const handleFocus = () => {

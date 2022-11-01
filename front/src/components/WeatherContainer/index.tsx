@@ -1,23 +1,37 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useWeather from "../../modules/hooks/use-weather";
 import WeatherTitle from "../WeatherTitle";
 import WeatherCards from "../WeatherCards";
 import Wrapper from "./styles";
+import Loading from "../Loading";
+import { useEffect } from "react";
 
 function WeatherContainer() {
   const { id } = useParams();
-  const { weather, locale } = useWeather(id);
+  const navigate = useNavigate();
+  const { weather, locale, isLoading } = useWeather(id);
 
-  return (
-    <Wrapper>
-      {weather && (
+  useEffect(() => {
+    if (!weather && !isLoading) navigate("/");
+  }, [weather, isLoading]);
+
+  const render = () => {
+    if (isLoading) {
+      return <Loading />;
+    }
+
+    if (weather) {
+      return (
         <>
           <WeatherTitle locale={locale} />
           <WeatherCards weather={weather} />
         </>
-      )}
-    </Wrapper>
-  );
+      );
+    }
+    return null;
+  };
+
+  return <Wrapper>{render()}</Wrapper>;
 }
 
 export default WeatherContainer;

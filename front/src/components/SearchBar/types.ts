@@ -3,7 +3,7 @@ import { Locale } from "../../modules/types/data";
 
 export interface Props {
   onSubmit: FormEventHandler<HTMLFormElement>;
-  onFocus: FocusEventHandler<HTMLInputElement | HTMLButtonElement>;
+  onFocus: FocusEventHandler<HTMLInputElement>;
   onBlur: FocusEventHandler<HTMLInputElement>;
   onChange: ChangeEventHandler<HTMLInputElement>;
   handleRouterPush: (id: number) => () => void;
@@ -13,7 +13,10 @@ export interface Props {
   sugestions: Locale[];
 }
 
-export interface StyledProps {
-  isFocused?: boolean;
+export interface InputProps {
   onFocus?: FocusEventHandler<HTMLInputElement>;
+}
+
+export interface StyledProps {
+  isFocused: boolean;
 }

@@ -29,7 +29,6 @@ function SearchBar({
         debounceTimeout={500}
         onBlur={onBlur}
         onChange={onChange}
-        isFocused={isFocused}
         value={value}
       />
       <SearchButton type="submit">

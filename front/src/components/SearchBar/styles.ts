@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { blue, gray } from "../../styles/constants";
 import Button from "../Button";
 import Image from "../Image";
-import { StyledProps } from "./types";
+import { InputProps, StyledProps } from "./types";
 import { DebounceInput } from "react-debounce-input";
 
 const borderRadius = "26px";
@@ -30,14 +30,18 @@ export const Form = styled.form<StyledProps>`
   transition: ${transition};
 `;
 
-export const Input = styled(DebounceInput)<StyledProps>`
+export const Input = styled(DebounceInput)<InputProps>`
   width: 100%;
   font-size: 1.5rem;
-  color: ${({ isFocused }) => (isFocused ? blue : gray)};
+  color: ${gray};
   padding: 10px 10px 10px 24px;
   border-radius: ${borderRadius} 0 0 ${borderRadius};
   border: none;
   outline: none;
+
+  &:focus {
+    color: ${blue};
+  }
 
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
@@ -51,7 +55,7 @@ export const Input = styled(DebounceInput)<StyledProps>`
   }
 `;
 
-export const SearchButton = styled(Button)<StyledProps>`
+export const SearchButton = styled(Button)`
   width: 2.4rem;
   height: 2.4rem;
   margin: 10px 16px 10px 10px;
@@ -91,7 +95,7 @@ export const Sugestions = styled.ul`
 
 export const Sugestion = styled.li``;
 
-export const SugestionButton = styled(Button)<StyledProps>`
+export const SugestionButton = styled(Button)`
   display: flex;
   font-size: 1.5rem;
   padding: 8px 24px;

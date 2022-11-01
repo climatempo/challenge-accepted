@@ -20,7 +20,7 @@ Configuração do usuário:
 
 **Docker:**
 
-Para rodar localmente via Docker, basta executar o seguinte comando na raiz do repositório:
+Para rodar localmente via Docker, basta executar o seguinte comando na raíz do repositório:
 
 ```bash
 docker-compose up
@@ -34,7 +34,7 @@ O front já deve está sendo executado em http://localhost:5173 e consumindo o b
 
 **Sem o Docker:**
 
-Para rodar localmente sem o Docker, será necessário o Node 18.12.0 (lts/hydrogen), caso tenha o NVM, execute os seguintes comandos a partir da raiz do repositório:
+Para rodar localmente sem o Docker, será necessário o Node 18.12.0 (lts/hydrogen), caso tenha o NVM, execute os seguintes comandos a partir da raíz do repositório:
 
 ```bash
 nvm install

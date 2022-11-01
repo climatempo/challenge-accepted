@@ -51,7 +51,7 @@ export const Input = styled(DebounceInput)<StyledProps>`
   }
 `;
 
-export const SearchButton = styled(Button)`
+export const SearchButton = styled(Button)<StyledProps>`
   width: 2.4rem;
   height: 2.4rem;
   margin: 10px 16px 10px 10px;
@@ -91,7 +91,7 @@ export const Sugestions = styled.ul`
 
 export const Sugestion = styled.li``;
 
-export const SugestionButton = styled(Button)`
+export const SugestionButton = styled(Button)<StyledProps>`
   display: flex;
   font-size: 1.5rem;
   padding: 8px 24px;

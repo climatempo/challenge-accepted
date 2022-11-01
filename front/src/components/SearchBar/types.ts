@@ -3,7 +3,7 @@ import { Locale } from "../../modules/types/data";
 
 export interface Props {
   onSubmit: FormEventHandler<HTMLFormElement>;
-  onFocus: FocusEventHandler<HTMLInputElement>;
+  onFocus: FocusEventHandler<HTMLInputElement | HTMLButtonElement>;
   onBlur: FocusEventHandler<HTMLInputElement>;
   onChange: ChangeEventHandler<HTMLInputElement>;
   handleRouterPush: (id: number) => () => void;
@@ -14,6 +14,6 @@ export interface Props {
 }
 
 export interface StyledProps {
-  isFocused: boolean;
+  isFocused?: boolean;
   onFocus?: FocusEventHandler<HTMLInputElement>;
 }

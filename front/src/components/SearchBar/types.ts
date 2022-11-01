@@ -15,4 +15,5 @@ export interface Props {
 
 export interface StyledProps {
   isFocused: boolean;
+  onFocus?: FocusEventHandler<HTMLInputElement>;
 }

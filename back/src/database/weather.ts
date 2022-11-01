@@ -197,6 +197,45 @@ const weathers = [
       },
     ],
   },
+  {
+    period: {
+      begin: "2022-02-01",
+      end: "2022-02-02",
+    },
+    locale: {
+      id: 3357,
+      name: "Vitória",
+      state: "ES",
+      latitude: -23.548,
+      longitude: -46.636,
+    },
+    weather: [
+      {
+        date: "2022-02-01",
+        text: "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        temperature: {
+          min: 19,
+          max: 27,
+        },
+        rain: {
+          probability: 60,
+          precipitation: 20,
+        },
+      },
+      {
+        date: "2022-02-02",
+        text: "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        temperature: {
+          min: 20,
+          max: 29,
+        },
+        rain: {
+          probability: 60,
+          precipitation: 15,
+        },
+      },
+    ],
+  },
 ];
 
 export default weathers;

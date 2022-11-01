@@ -25,13 +25,8 @@ function useSearchBar(navigate?: NavigateFunction) {
     if (locales) {
       const formattedValue = removeSpecialChars(searchValue);
 
-      const filteredSugestions = locales.filter(({ name, state }) => {
-        const formattedName = removeSpecialChars(`${name} - ${state}`);
-        return formattedName.includes(formattedValue.toLowerCase());
-      });
-
-      if (filteredSugestions.length && formattedValue) {
-        setSugestionsToDisplay(filteredSugestions);
+      if (locales.length && formattedValue) {
+        setSugestionsToDisplay(locales);
         setDisplaySugestions(true);
         return;
       }
@@ -39,7 +34,7 @@ function useSearchBar(navigate?: NavigateFunction) {
       setSugestionsToDisplay([]);
       setDisplaySugestions(false);
     }
-  }, [locales]);
+  }, [locales, searchValue]);
 
   const handleRouterPush = (id: number) => () => {
     if (navigate) navigate(`/weather/${id}`);

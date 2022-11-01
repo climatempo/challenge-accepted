@@ -13,6 +13,13 @@ const locales = [
     latitude: -23.548,
     longitude: -46.636,
   },
+  {
+    id: 3357,
+    name: "Vitória",
+    state: "ES",
+    latitude: -23.848,
+    longitude: -42.636,
+  },
 ];
 
 export default locales;

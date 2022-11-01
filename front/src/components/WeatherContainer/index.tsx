@@ -15,23 +15,18 @@ function WeatherContainer() {
     if (!weather && !isLoading) navigate("/");
   }, [weather, isLoading]);
 
-  const render = () => {
-    if (isLoading) {
-      return <Loading />;
-    }
-
-    if (weather) {
-      return (
+  return (
+    <Wrapper>
+      {isLoading ? (
+        <Loading />
+      ) : weather ? (
         <>
           <WeatherTitle locale={locale} />
           <WeatherCards weather={weather} />
         </>
-      );
-    }
-    return null;
-  };
-
-  return <Wrapper>{render()}</Wrapper>;
+      ) : null}
+    </Wrapper>
+  );
 }
 
 export default WeatherContainer;

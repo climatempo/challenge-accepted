@@ -3,9 +3,9 @@ import { blue, gray } from "../../styles/constants";
 import Button from "../Button";
 import Image from "../Image";
 import { StyledProps } from "./types";
+import { DebounceInput } from "react-debounce-input";
 
 const borderRadius = "26px";
-const sugestionsborderRadius = "14px";
 
 const blueColorFilter =
   "invert(27%) sepia(9%) saturate(3432%) hue-rotate(185deg) brightness(94%) contrast(91%)";
@@ -30,7 +30,7 @@ export const Form = styled.form<StyledProps>`
   transition: ${transition};
 `;
 
-export const Input = styled.input<StyledProps>`
+export const Input = styled(DebounceInput)<StyledProps>`
   width: 100%;
   font-size: 1.5rem;
   color: ${({ isFocused }) => (isFocused ? blue : gray)};
@@ -110,4 +110,4 @@ export const SugestionButton = styled(Button)`
   &:last-child {
     padding-bottom: 15px;
   }
-  `;
+`;

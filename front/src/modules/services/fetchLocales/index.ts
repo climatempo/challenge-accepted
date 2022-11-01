@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import removeSpecialChars from "../../removeSpecialChars";
 import { Locale } from "../../types/data";
 import { locales } from "../mock";
-// import api from "../api";
+import api from "../api";
 
 async function fetchLocales(
   setLocales: Dispatch<SetStateAction<Locale[] | null>>,
@@ -11,23 +11,19 @@ async function fetchLocales(
 ) {
   if (setIsLoading) setIsLoading(true);
 
-  const formattedSearchValue = removeSpecialChars(searchValue);
+  try {
+    const { data } = await api.get("locales", {
+      params: {
+        query: searchValue ? searchValue : "",
+      }
+    })
 
-  // const { data } = await api.get("/locales", {
-  //   params: {
-  //     query: searchValue ? searchValue : "",
-  //   }
-  // })
-
-  const filteredLocales = locales.filter(({ name, state }) => {
-    const formattedName = removeSpecialChars(`${name} - ${state}`);
-    return formattedName.includes(formattedSearchValue);
-  });
-
-  setTimeout(() => {
+    if (data.length) setLocales(data);
     if (setIsLoading) setIsLoading(false);
-    if (filteredLocales.length) setLocales(filteredLocales);
-  }, 1000);
+  } catch {
+    setLocales(null);
+    if (setIsLoading) setIsLoading(false);
+  }
 }
 
 export default fetchLocales;

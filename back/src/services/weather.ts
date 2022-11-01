@@ -29,8 +29,8 @@ type Weather = {
 }
 
 class WeatherService {
-  getWeather(id: string) {
-    const data = weathers.find((item: Weather) => item.locale.id === Number(id));
+  getWeather(id: number) {
+    const data = weathers.find((item: Weather) => item.locale.id === id);
     return data;
   }
 }

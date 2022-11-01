@@ -1,4 +1,3 @@
-import { Router, useNavigate } from "react-router-dom";
 import {
   Form,
   Input,
@@ -21,14 +20,13 @@ function SearchBar({
   value,
   isFocused,
 }: Props) {
-
-
   return (
     <Form onSubmit={onSubmit} isFocused={isFocused}>
       <Input
         type="search"
         placeholder="Vitória - ES"
         onFocus={onFocus}
+        debounceTimeout={500}
         onBlur={onBlur}
         onChange={onChange}
         isFocused={isFocused}

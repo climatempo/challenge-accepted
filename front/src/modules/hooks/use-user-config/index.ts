@@ -12,10 +12,12 @@ function useUserConfig(
   };
 
   const handleTempUnit = (unit: TempUnit) => () => {
+    localStorage.setItem("tempUnit", JSON.stringify(unit));
     setTempUnit(unit);
   };
 
   const handleRainUnit = (unit: RainUnit) => () => {
+    localStorage.setItem("rainUnit", JSON.stringify(unit));
     setRainUnit(unit);
   };
 

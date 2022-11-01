@@ -5,8 +5,11 @@ import { ConfigContextState, Props } from "./types";
 const ConfigContext = createContext({} as ConfigContextState);
 
 export function ConfigContextProvider({ children }: Props) {
-  const [rainUnit, setRainUnit] = useState(RainUnit.Mm);
-  const [tempUnit, setTempUnit] = useState(TempUnit.Celsius);
+  const storedRainUnit = Number(localStorage.getItem("rainUnit"));
+  const storedTempUnit = Number(localStorage.getItem("tempUnit"));
+
+  const [rainUnit, setRainUnit] = useState(storedRainUnit || RainUnit.Mm);
+  const [tempUnit, setTempUnit] = useState(storedTempUnit || TempUnit.Celsius);
 
   const state = useMemo(
     () => ({

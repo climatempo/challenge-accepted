@@ -23,4 +23,4 @@ services:
       - ./back/src:/usr/app/src
     ports:
       - 3000:3000
-    command: sh -c "yarn && yarn dev"
+    command: sh -c "yarn && yarn serve"

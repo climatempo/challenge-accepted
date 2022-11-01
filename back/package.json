@@ -1,8 +1,8 @@
 {
   "main": "src/index.ts",
+  "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.ts",
-    "build": "rm -rf build/ && prettier --write src/ && tsc"
+    "serve": "nodemon src/index.ts"
   },
   "dependencies": {
     "@types/cors": "^2.8.12",

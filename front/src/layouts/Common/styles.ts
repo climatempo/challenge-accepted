@@ -8,6 +8,7 @@ const Wrapper = styled(Container)`
   width: 100%;
   height: 100%;
   flex-direction: column;
+  overflow-y: auto;
 `;
 
 export const ChildrenWrapper = styled(Container)`

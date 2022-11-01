@@ -2,3 +2,8 @@ Dockerfile*
 docker-compose*
 .dockerignore
 
+front/node_modules
+front/coverage
+front/.gitignore
+
+back/node_modules

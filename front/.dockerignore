@@ -1,7 +1,0 @@
-node_modules
-coverage
-Dockerfile*
-docker-compose*
-.dockerignore
-.gitignore
-

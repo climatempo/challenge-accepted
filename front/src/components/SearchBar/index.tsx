@@ -26,7 +26,7 @@ function SearchBar({
         type="search"
         placeholder="Vitória - ES"
         onFocus={onFocus}
-        debounceTimeout={500}
+        debounceTimeout={300}
         onBlur={onBlur}
         onChange={onChange}
         value={value}

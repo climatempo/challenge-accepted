@@ -2,11 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../../assets/logo-white.png";
 
-function Header() {
+type TypeHeader = {
+  exit: () => void;
+};
+
+function Header({ exit }: TypeHeader) {
   return (
     <Container>
       <Logo src={logo} alt="logo" />
-      <ButtonExit>Sair</ButtonExit>
+      <ButtonExit onClick={exit}>Sair</ButtonExit>
     </Container>
   );
 }

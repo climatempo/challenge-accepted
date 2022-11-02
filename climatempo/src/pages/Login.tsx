@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../assets/logo-white.png";
 import iconClimate from "../assets/iconClimate.png";
 import { useNavigate } from "react-router-dom";
+import Modal from "../components/Modal/Modal";
 
 function Login() {
+  const [name, setName] = useState("");
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   function click() {
-    navigate("/Home");
+    if (name.length === 0) {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 3000);
+    } else {
+      navigate("/Home");
+      setName("");
+    }
   }
 
   return (
@@ -19,9 +30,19 @@ function Login() {
       </PaperLogo>
       <ContainerForm>
         <Title>LOGIN</Title>
-        <InputName placeholder="Digite seu nome..." />
+        <InputName
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Digite seu nome..."
+        />
         <Button onClick={() => click()}>Entrar</Button>
       </ContainerForm>
+      {error && (
+        <Modal
+          exit={() => setError(false)}
+          text="Preencha seu 'nome' para efetuar o Login."
+        />
+      )}
     </Container>
   );
 }

@@ -7,6 +7,31 @@ import iconSearch from "../assets/icons/search.png";
 import iconLocation from "../assets/icons/location.svg";
 import { useNavigate } from "react-router-dom";
 import Card from "../components/Card/Card";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <Circle
+      className={className}
+      style={{ ...style, display: "block", background: "black" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <Circle
+      className={className}
+      style={{ ...style, display: "block", background: "black" }}
+      onClick={onClick}
+    />
+  );
+}
 
 function Home() {
   const [options, setOptions] = useState([]);
@@ -19,6 +44,16 @@ function Home() {
   function clickExit() {
     navigate("/");
   }
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
 
   useEffect(() => {
     const load = async () => {
@@ -88,7 +123,24 @@ function Home() {
         </Search>
         <ContainerCards>
           <TitleClimate>Previsão</TitleClimate>
-          <BodyCards>{!!climate.length && <Card />}</BodyCards>
+          <BodyCards>
+            {!!climate.length && (
+              <Slider {...settings}>
+                {climate.map((clima, id) => (
+                  <div key={id}>
+                    <Card
+                      date={clima.date}
+                      text={clima.text}
+                      temperaturaMin={clima.temperature.min}
+                      temperaturaMax={clima.temperature.max}
+                      probability={clima.rain.probability}
+                      precipitation={clima.rain.precipitation}
+                    />
+                  </div>
+                ))}
+              </Slider>
+            )}
+          </BodyCards>
         </ContainerCards>
       </Body>
     </Container>
@@ -211,6 +263,7 @@ const TitleSearch = styled.h1`
 `;
 
 const TitleClimate = styled.h1`
+  margin-top: 11%;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -219,6 +272,15 @@ const TitleClimate = styled.h1`
   color: #047ab2;
 `;
 
-const BodyCards = styled.div``;
+const BodyCards = styled.div`
+  width: 55%;
+  height: 100%;
+  margin-top: 2%;
+  align-items: center;
+`;
+
+const Circle = styled.div`
+  border-radius: 100%;
+`;
 
 export default Home;

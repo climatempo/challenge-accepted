@@ -3,32 +3,48 @@ import styled from "styled-components";
 //import iconArrowTop from "../assets/icons/upload.png";
 //import iconArrowBottom from "../assets/icons/download.png";
 
-function Card() {
+type TypeCard = {
+  date: string;
+  text: string;
+  temperaturaMin: number;
+  temperaturaMax: number;
+  probability: number;
+  precipitation: number;
+};
+
+function Card({
+  date,
+  text,
+  temperaturaMin,
+  temperaturaMax,
+  probability,
+  precipitation,
+}: TypeCard) {
   return (
     <Container>
       <Header>
-        <Date>17/02/2022</Date>
-        <Description>texto de exeeeeeeeeemplooooo</Description>
+        <Date>{date}</Date>
+        <Description>{text}</Description>
       </Header>
       <Body>
         <Column>
           <Row>
             <Icon />
-            <Number>20</Number>
+            <Number>{temperaturaMin}</Number>
           </Row>
           <Row>
             <Icon />
-            <Number>20</Number>
+            <Number>{probability}</Number>
           </Row>
         </Column>
         <Column>
           <Row>
             <Icon />
-            <Number>20</Number>
+            <Number>{temperaturaMax}</Number>
           </Row>
           <Row>
             <Icon />
-            <Number>20</Number>
+            <Number>{precipitation}</Number>
           </Row>
         </Column>
       </Body>
@@ -52,6 +68,7 @@ const Header = styled.div`
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 const Date = styled.div`
@@ -66,13 +83,14 @@ const Date = styled.div`
 `;
 
 const Description = styled.p`
+  width: 80%;
   margin-bottom: 10px;
   margin-left: 10px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 14px;
   color: #ffffff;
 `;
 

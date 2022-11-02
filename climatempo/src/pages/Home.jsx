@@ -6,11 +6,14 @@ import imgClimate from "../assets/weather.png";
 import iconSearch from "../assets/icons/search.png";
 import iconLocation from "../assets/icons/location.svg";
 import { useNavigate } from "react-router-dom";
+import Card from "../components/Card/Card";
 
 function Home() {
   const [options, setOptions] = useState([]);
+  const [climate, setClimate] = useState([]);
   const [text, setText] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const [card, setCard] = useState(false);
   const navigate = useNavigate();
 
   function clickExit() {
@@ -29,6 +32,16 @@ function Home() {
   const onSuggestHandler = (text) => {
     setText(text);
     setSuggestions([]);
+    setCard(true);
+    const loadData = async () => {
+      const response = await axios.get("./weather.json");
+      const dataClimate = response.data;
+      const filterArray = dataClimate.filter(function (obj) {
+        return obj.locale.name === text;
+      });
+      setClimate(filterArray[0].weather);
+    };
+    loadData();
   };
 
   const onChangeHandle = (text) => {
@@ -43,8 +56,6 @@ function Home() {
     setSuggestions(matches);
     setText(text);
   };
-
-  console.log(suggestions);
 
   return (
     <Container>
@@ -77,6 +88,7 @@ function Home() {
         </Search>
         <ContainerCards>
           <TitleClimate>Previsão</TitleClimate>
+          <BodyCards>{!!climate.length && <Card />}</BodyCards>
         </ContainerCards>
       </Body>
     </Container>
@@ -112,6 +124,7 @@ const ContainerCards = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
 `;
 
@@ -167,6 +180,11 @@ const ContainerSuggestions = styled.div`
   width: 350px;
   height: 40px;
   border-bottom: 1px solid #ffffff;
+
+  :hover {
+    background: rgba(4, 161, 204, 0.2);
+  }
+  cursor: pointer;
 `;
 
 const Suggestions = styled.p`
@@ -200,5 +218,7 @@ const TitleClimate = styled.h1`
   line-height: 29px;
   color: #047ab2;
 `;
+
+const BodyCards = styled.div``;
 
 export default Home;

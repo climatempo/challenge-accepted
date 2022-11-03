@@ -4,9 +4,11 @@ import logo from "../assets/logo-white.png";
 import iconClimate from "../assets/iconClimate.png";
 import { useNavigate } from "react-router-dom";
 import Modal from "../components/Modal/Modal";
+import { useHook } from "../context/state";
 
 function Login() {
-  const [name, setName] = useState("");
+  const { userContext } = useHook();
+  const { name, setName } = userContext;
   const [error, setError] = useState(false);
   const navigate = useNavigate();
 

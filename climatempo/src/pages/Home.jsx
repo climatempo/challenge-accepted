@@ -10,6 +10,7 @@ import Card from "../components/Card/Card";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Url } from "../api/server";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -57,9 +58,8 @@ function Home() {
 
   useEffect(() => {
     const load = async () => {
-      const response = await axios.get("./locales.json");
-      //console.log(response.data);
-      setOptions(response.data);
+      const response = await axios.get(Url);
+      setOptions(response.data[0].locales);
     };
     load();
   }, []);
@@ -68,8 +68,8 @@ function Home() {
     setText(text);
     setSuggestions([]);
     const loadData = async () => {
-      const response = await axios.get("./weather.json");
-      const dataClimate = response.data;
+      const response = await axios.get(Url);
+      const dataClimate = response.data[1].data;
       const filterArray = dataClimate.filter(function (obj) {
         return obj.locale.name === text;
       });

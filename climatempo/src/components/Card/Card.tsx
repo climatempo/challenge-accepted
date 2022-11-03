@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-//import iconArrowTop from "../assets/icons/upload.png";
-//import iconArrowBottom from "../assets/icons/download.png";
+import max from "../../assets/icons/max.png";
+import min from "../../assets/icons/min.png";
+import probabilityIcon from "../../assets/icons/probability.png";
+import precipitationIcon from "../../assets/icons/precipitation.png";
 
 type TypeCard = {
   date: string;
@@ -29,22 +31,34 @@ function Card({
       <Body>
         <Column>
           <Row>
-            <Icon />
-            <Number>{temperaturaMin}</Number>
+            <Icon src={max} alt="max" />
+            <Row>
+              <Number>{temperaturaMax}</Number>
+              <Number>°C</Number>
+            </Row>
           </Row>
           <Row>
-            <Icon />
-            <Number>{probability}</Number>
+            <Icon src={probabilityIcon} alt="probability" />
+            <Row>
+              <Number>{precipitation}</Number>
+              <Number>mm</Number>
+            </Row>
           </Row>
         </Column>
         <Column>
           <Row>
-            <Icon />
-            <Number>{temperaturaMax}</Number>
+            <Icon src={min} alt="min" />
+            <Row>
+              <Number>{temperaturaMin}</Number>
+              <Number>°C</Number>
+            </Row>
           </Row>
           <Row>
-            <Icon />
-            <Number>{precipitation}</Number>
+            <Icon src={precipitationIcon} alt="precipitation" />
+            <Row>
+              <Number>{probability}</Number>
+              <Number>%</Number>
+            </Row>
           </Row>
         </Column>
       </Body>
@@ -59,6 +73,16 @@ const Container = styled.div`
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 888px) {
+    width: 346px;
+    height: 230px;
+  }
+
+  @media (max-width: 468px) {
+    width: 274px;
+    height: 220px;
+  }
 `;
 
 const Header = styled.div`
@@ -69,6 +93,16 @@ const Header = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 888px) {
+    width: 346px;
+    height: 80px;
+  }
+
+  @media (max-width: 468px) {
+    width: 274px;
+    height: 160px;
+  }
 `;
 
 const Date = styled.div`
@@ -80,6 +114,14 @@ const Date = styled.div`
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
+
+  @media (max-width: 888px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 468px) {
+    font-size: 16px;
+  }
 `;
 
 const Description = styled.p`
@@ -110,6 +152,16 @@ const Column = styled.div`
 const Icon = styled.img`
   width: 25px;
   height: 25px;
+
+  @media (max-width: 868px) {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: 468px) {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const Row = styled.div`
@@ -128,6 +180,14 @@ const Number = styled.p`
   font-size: 24px;
   line-height: 29px;
   color: #000000;
+
+  @media (max-width: 868px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 468px) {
+    font-size: 18px;
+  }
 `;
 
 export default Card;

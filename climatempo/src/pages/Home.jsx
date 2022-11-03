@@ -16,7 +16,7 @@ function SampleNextArrow(props) {
   return (
     <Circle
       className={className}
-      style={{ ...style, display: "block", background: "black" }}
+      style={{ ...style, display: "block", background: "gray" }}
       onClick={onClick}
     />
   );
@@ -27,7 +27,7 @@ function SamplePrevArrow(props) {
   return (
     <Circle
       className={className}
-      style={{ ...style, display: "block", background: "black" }}
+      style={{ ...style, display: "block", background: "gray" }}
       onClick={onClick}
     />
   );
@@ -92,6 +92,8 @@ function Home() {
     setText(text);
   };
 
+  console.log(climate);
+
   return (
     <Container>
       <Header exit={() => clickExit()} />
@@ -129,7 +131,9 @@ function Home() {
                 {climate.map((clima, id) => (
                   <div key={id}>
                     <Card
-                      date={clima.date}
+                      date={new Date(clima.date).toLocaleDateString("pt-BR", {
+                        timeZone: "UTC",
+                      })}
                       text={clima.text}
                       temperaturaMin={clima.temperature.min}
                       temperaturaMax={clima.temperature.max}
@@ -152,6 +156,14 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 868px) {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
 `;
 
 const Body = styled.div`
@@ -160,6 +172,10 @@ const Body = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media (max-width: 868px) {
+    flex-direction: column;
+  }
 `;
 
 const Search = styled.div`
@@ -183,6 +199,12 @@ const ContainerCards = styled.div`
 const Img = styled.img`
   width: 171px;
   height: 172px;
+
+  @media (max-width: 888px) {
+    width: 101px;
+    height: 102px;
+    margin-top: 10%;
+  }
 `;
 
 const InputSearch = styled.input`
@@ -199,6 +221,12 @@ const InputSearch = styled.input`
   background-image: url(${iconSearch});
   background-repeat: no-repeat;
   background-position: 95%;
+
+  @media (max-width: 888px) {
+    width: 280px;
+    height: 50px;
+    font-size: 18px;
+  }
 `;
 
 const Paper = styled.div`
@@ -211,6 +239,22 @@ const Paper = styled.div`
   background-color: rgba(4, 161, 204, 0.3);
   border-radius: 0px 0px 10px 10px;
   padding: 10px;
+
+  @media (max-width: 868px) {
+    width: 280px;
+    height: 110px;
+    top: 51%;
+    z-index: 1;
+    background-color: rgba(4, 161, 204)
+  }
+
+  @media (max-width: 468px) {
+    width: 280px;
+    height: 140px;
+    top: 44%;
+    z-index: 1;
+    background-color: rgba(4, 161, 204)
+  }
 `;
 
 const TextPaper = styled.p`
@@ -221,6 +265,10 @@ const TextPaper = styled.p`
   font-weight: bold;
   color: #000000;
   border-bottom: 1px solid #ffffff;
+
+  @media (max-width: 868px) {
+    width: 100%;
+  }
 `;
 
 const ContainerSuggestions = styled.div`
@@ -237,6 +285,10 @@ const ContainerSuggestions = styled.div`
     background: rgba(4, 161, 204, 0.2);
   }
   cursor: pointer;
+
+  @media (max-width: 868px) {
+    width: 100%;
+  }
 `;
 
 const Suggestions = styled.p`
@@ -246,6 +298,10 @@ const Suggestions = styled.p`
   line-height: 48px;
   color: #04a1cc;
   cursor: pointer;
+
+  @media (max-width: 868px) {
+    color: #ffffff;
+  }
 `;
 
 const IconSugestions = styled.img`
@@ -270,13 +326,29 @@ const TitleClimate = styled.h1`
   font-size: 24px;
   line-height: 29px;
   color: #047ab2;
+
+  @media (max-width: 868px) {
+    display: none;
+  }
 `;
 
 const BodyCards = styled.div`
-  width: 55%;
+  width: 51.4%;
   height: 100%;
   margin-top: 2%;
   align-items: center;
+
+  @media (max-width: 868px) {
+    width: 139%;
+    height: 100%;
+    margin-top: 10%;
+  }
+
+  @media (max-width: 468px) {
+    width: 143%;
+    height: 150%;
+    margin-top: 10%;
+  }
 `;
 
 const Circle = styled.div`

@@ -30,6 +30,11 @@ const Container = styled.div`
 const Logo = styled.img`
   width: 188px;
   height: 28px;
+
+  @media (max-width: 888px) {
+    width: 144px;
+    height: 18px;
+  }
 `;
 
 const ButtonExit = styled.button`
@@ -46,6 +51,21 @@ const ButtonExit = styled.button`
   line-height: 29px;
   /* identical to box height */
   color: #047ab2;
+
+  :hover {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+  }
+
+  @media (max-width: 888px) {
+    width: 70px;
+    height: 25px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export default Header;

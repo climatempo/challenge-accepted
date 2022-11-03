@@ -38,11 +38,11 @@ function Home() {
   const [climate, setClimate] = useState([]);
   const [text, setText] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  const [card, setCard] = useState(false);
   const navigate = useNavigate();
 
   function clickExit() {
     navigate("/");
+    localStorage.removeItem("current_user");
   }
 
   var settings = {
@@ -67,7 +67,6 @@ function Home() {
   const onSuggestHandler = (text) => {
     setText(text);
     setSuggestions([]);
-    setCard(true);
     const loadData = async () => {
       const response = await axios.get("./weather.json");
       const dataClimate = response.data;

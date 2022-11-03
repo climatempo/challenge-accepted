@@ -19,6 +19,7 @@ function Login() {
     } else {
       navigate("/Home");
       setName("");
+      localStorage.setItem("current_user", "autenticado");
     }
   }
 

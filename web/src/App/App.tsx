@@ -1,4 +1,3 @@
-import './App.style.css';
 import Header from '../Components/Header';
 import { useAppSelector } from '../hooks';
 

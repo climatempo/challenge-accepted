@@ -1,0 +1,6330 @@
+[
+  {
+    "idlocale": 8797,
+    "idcity": 152,
+    "capital": false,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "MG",
+    "city": "Juiz de Fora",
+    "region": "SE",
+    "seaside": false,
+    "latitude": -21.764,
+    "longitude": -43.35,
+    "tourist": false,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 200,
+    "instant": {
+      "temperature": 25,
+      "icon": "2",
+      "condition": "Muitas nuvens",
+      "humidity": 79,
+      "sensation": 25,
+      "windVelocity": 20,
+      "pressure": 1011,
+      "date": "2022-11-26 10:00:00"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 15,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 20,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 94,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:20"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 25,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 26
+        },
+        "humidity": {
+          "min": 93,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:20"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 20,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 96,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:21"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 25,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 21
+        },
+        "humidity": {
+          "min": 91,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:22"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 15,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 85,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:23"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 81,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:23"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 96,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:24"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde. À noite o tempo fica aberto.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 9,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 80,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:25"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 16,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 71,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:25"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 72,
+          "max": 98
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:26"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com aumento de nuvens ao longo do dia. À noite ocorrem pancadas de chuva.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 16,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 15
+        },
+        "humidity": {
+          "min": 69,
+          "max": 98
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:26"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens e chuva passageira durante o dia. À noite o tempo fica firme.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 3,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 68,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:27"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 1,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 81,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:28"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 82,
+          "max": 97
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:28"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "N",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 48,
+          "max": 97
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:29"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol o dia todo. Muitas nuvens e pancadas de chuva de manhã e à noite.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 8600,
+    "idcity": 3664,
+    "capital": false,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "MG",
+    "city": "Chácara",
+    "region": "SE",
+    "seaside": false,
+    "latitude": -21.672,
+    "longitude": -43.222,
+    "tourist": false,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 200,
+    "instant": {
+      "temperature": 19,
+      "icon": "4r",
+      "condition": "Pancada de chuva",
+      "humidity": 97,
+      "sensation": 19,
+      "windVelocity": 20,
+      "pressure": 1011,
+      "date": "2022-11-26 10:58:25"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 14,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 9,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 94,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:00",
+          "afternoon": "18:19"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 25,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 26
+        },
+        "humidity": {
+          "min": 93,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:00",
+          "afternoon": "18:20"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 7,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 96,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:00",
+          "afternoon": "18:20"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 25,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 21
+        },
+        "humidity": {
+          "min": 91,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:00",
+          "afternoon": "18:21"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 10,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 85,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:00",
+          "afternoon": "18:22"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 81,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:22"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 96,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:23"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde. À noite o tempo fica aberto.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 9,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 80,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:24"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 18,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 71,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:24"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 72,
+          "max": 98
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:25"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com aumento de nuvens ao longo do dia. À noite ocorrem pancadas de chuva.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 16,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 15
+        },
+        "humidity": {
+          "min": 69,
+          "max": 98
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:26"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens e chuva passageira durante o dia. À noite o tempo fica firme.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 68,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:01",
+          "afternoon": "18:26"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 1,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 81,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:27"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 82,
+          "max": 97
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:28"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "N",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 48,
+          "max": 97
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:28"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol o dia todo. Muitas nuvens e pancadas de chuva de manhã e à noite.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 3735,
+    "idcity": 499,
+    "capital": false,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "SP",
+    "city": "Osasco",
+    "region": "SE",
+    "seaside": false,
+    "latitude": -23.532,
+    "longitude": -46.792,
+    "tourist": false,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 200,
+    "instant": {
+      "temperature": 21,
+      "icon": "2",
+      "condition": "Alguma nebulosidade",
+      "humidity": 69,
+      "sensation": 21,
+      "windVelocity": 9,
+      "pressure": 1013,
+      "date": "2022-11-26 10:00:00"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 15,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "SE",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 61,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:37"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 14,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 88,
+          "max": 93
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:38"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 16,
+          "probability": 83
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 87,
+          "max": 95
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:38"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 10,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 74,
+          "max": 95
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:39"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 15,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 33,
+          "max": 93
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:40"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 32
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "N",
+          "velocity": 16
+        },
+        "humidity": {
+          "min": 33,
+          "max": 77
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:40"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 20,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 12,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 12
+        },
+        "humidity": {
+          "min": 39,
+          "max": 77
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:41"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens e chuva passageira durante o dia. À noite o tempo fica firme.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 31
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "SSE",
+          "velocity": 12
+        },
+        "humidity": {
+          "min": 64,
+          "max": 86
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:42"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 21,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 11,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "SSE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 67,
+          "max": 88
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:42"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 20,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "SE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 66,
+          "max": 92
+        },
+        "sun": {
+          "morning": "05:12",
+          "afternoon": "18:43"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 12
+        },
+        "humidity": {
+          "min": 63,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:12",
+          "afternoon": "18:44"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com aumento de nuvens ao longo do dia. À noite ocorrem pancadas de chuva.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 13
+        },
+        "humidity": {
+          "min": 60,
+          "max": 93
+        },
+        "sun": {
+          "morning": "05:12",
+          "afternoon": "18:44"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 52,
+          "max": 87
+        },
+        "sun": {
+          "morning": "05:12",
+          "afternoon": "18:45"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com aumento de nuvens ao longo do dia. À noite ocorrem pancadas de chuva.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "N",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 52,
+          "max": 83
+        },
+        "sun": {
+          "morning": "05:12",
+          "afternoon": "18:46"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde. À noite o tempo fica aberto.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "NNW",
+          "velocity": 16
+        },
+        "humidity": {
+          "min": 35,
+          "max": 83
+        },
+        "sun": {
+          "morning": "05:13",
+          "afternoon": "18:46"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 3477,
+    "idcity": 558,
+    "capital": true,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "SP",
+    "city": "São Paulo",
+    "region": "SE",
+    "seaside": false,
+    "latitude": -23.548,
+    "longitude": -46.636,
+    "tourist": true,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 400,
+    "instant": {
+      "temperature": 21,
+      "icon": "2",
+      "condition": "Alguma nebulosidade",
+      "humidity": 60,
+      "sensation": 21,
+      "windVelocity": 9,
+      "pressure": 1013,
+      "date": "2022-11-26 10:00:00"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 14,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "SE",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 61,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:36"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 16,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 10,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 88,
+          "max": 93
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:37"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 15,
+          "probability": 83
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 87,
+          "max": 95
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:38"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 20,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 74,
+          "max": 95
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:38"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 20,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 33,
+          "max": 93
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:39"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 32
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "N",
+          "velocity": 16
+        },
+        "humidity": {
+          "min": 33,
+          "max": 77
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:40"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 20,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 13,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 12
+        },
+        "humidity": {
+          "min": 39,
+          "max": 77
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:41"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens e chuva passageira durante o dia. À noite o tempo fica firme.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 31
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "SSE",
+          "velocity": 12
+        },
+        "humidity": {
+          "min": 64,
+          "max": 86
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:41"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 21,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 12,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "SSE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 67,
+          "max": 88
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:42"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 20,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "SE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 66,
+          "max": 92
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:43"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 12
+        },
+        "humidity": {
+          "min": 63,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:43"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com aumento de nuvens ao longo do dia. À noite ocorrem pancadas de chuva.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 13
+        },
+        "humidity": {
+          "min": 60,
+          "max": 93
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:44"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 7,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 52,
+          "max": 87
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "18:45"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com aumento de nuvens ao longo do dia. À noite ocorrem pancadas de chuva.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "N",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 52,
+          "max": 83
+        },
+        "sun": {
+          "morning": "05:12",
+          "afternoon": "18:45"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde. À noite o tempo fica aberto.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "NNW",
+          "velocity": 16
+        },
+        "humidity": {
+          "min": 35,
+          "max": 83
+        },
+        "sun": {
+          "morning": "05:12",
+          "afternoon": "18:46"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 8050,
+    "idcity": 60,
+    "capital": true,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "CE",
+    "city": "Fortaleza",
+    "region": "NE",
+    "seaside": true,
+    "latitude": -3.717,
+    "longitude": -38.543,
+    "tourist": true,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 400,
+    "instant": {
+      "temperature": 31,
+      "icon": "2",
+      "condition": "Nuvens esparsas",
+      "humidity": 59,
+      "sensation": 34,
+      "windVelocity": 26,
+      "pressure": 1011,
+      "date": "2022-11-26 10:00:00"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 24,
+          "max": 32
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 27
+        },
+        "humidity": {
+          "min": 86,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:11",
+          "afternoon": "17:31"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 32
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 30
+        },
+        "humidity": {
+          "min": 86,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:12",
+          "afternoon": "17:31"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde. À noite o tempo fica aberto.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 32
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 29
+        },
+        "humidity": {
+          "min": 85,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:12",
+          "afternoon": "17:31"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde. À noite o tempo fica aberto.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 32
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 26
+        },
+        "humidity": {
+          "min": 85,
+          "max": 90
+        },
+        "sun": {
+          "morning": "05:12",
+          "afternoon": "17:32"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 31
+        },
+        "rain": {
+          "precipitation": 7,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 27
+        },
+        "humidity": {
+          "min": 85,
+          "max": 89
+        },
+        "sun": {
+          "morning": "05:12",
+          "afternoon": "17:32"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 29
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 32
+        },
+        "humidity": {
+          "min": 84,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:13",
+          "afternoon": "17:33"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com muitas nuvens durante o dia e períodos de céu nublado. Noite com muitas nuvens.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 29
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 31
+        },
+        "humidity": {
+          "min": 85,
+          "max": 90
+        },
+        "sun": {
+          "morning": "05:13",
+          "afternoon": "17:33"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 33
+        },
+        "humidity": {
+          "min": 84,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:13",
+          "afternoon": "17:34"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 33
+        },
+        "humidity": {
+          "min": 86,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:14",
+          "afternoon": "17:34"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 33
+        },
+        "humidity": {
+          "min": 84,
+          "max": 90
+        },
+        "sun": {
+          "morning": "05:14",
+          "afternoon": "17:34"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 29
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 35
+        },
+        "humidity": {
+          "min": 83,
+          "max": 88
+        },
+        "sun": {
+          "morning": "05:15",
+          "afternoon": "17:35"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol, com chuva de manhã e diminuição de nuvens à tarde. Noite com pouca nebulosidade.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 31
+        },
+        "rain": {
+          "precipitation": 1,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 35
+        },
+        "humidity": {
+          "min": 84,
+          "max": 89
+        },
+        "sun": {
+          "morning": "05:15",
+          "afternoon": "17:35"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 31
+        },
+        "rain": {
+          "precipitation": 1,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 32
+        },
+        "humidity": {
+          "min": 85,
+          "max": 93
+        },
+        "sun": {
+          "morning": "05:15",
+          "afternoon": "17:36"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 1,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 32
+        },
+        "humidity": {
+          "min": 85,
+          "max": 90
+        },
+        "sun": {
+          "morning": "05:16",
+          "afternoon": "17:36"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 30
+        },
+        "humidity": {
+          "min": 76,
+          "max": 89
+        },
+        "sun": {
+          "morning": "05:16",
+          "afternoon": "17:37"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Baixa probabilidade",
+        "description": "Nublado com aberturas de sol à  tarde. Pode garoar de manhã e à noite.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 5446,
+    "idcity": 780,
+    "capital": false,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "RS",
+    "city": "Gramado",
+    "region": "S",
+    "seaside": false,
+    "latitude": -29.379,
+    "longitude": -50.874,
+    "tourist": true,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 200,
+    "instant": {
+      "temperature": 23,
+      "icon": "4r",
+      "condition": "Pancada de chuva",
+      "humidity": 66,
+      "sensation": 23,
+      "windVelocity": 17,
+      "pressure": 1020,
+      "date": "2022-11-26 10:59:23"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 13,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 15
+        },
+        "humidity": {
+          "min": 61,
+          "max": 97
+        },
+        "sun": {
+          "morning": "05:16",
+          "afternoon": "19:05"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 16,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 57,
+          "max": 95
+        },
+        "sun": {
+          "morning": "05:16",
+          "afternoon": "19:06"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens e chuva passageira durante o dia. À noite o tempo fica firme.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 14,
+          "max": 27
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 56,
+          "max": 93
+        },
+        "sun": {
+          "morning": "05:16",
+          "afternoon": "19:07"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com aumento de nuvens ao longo do dia. À noite ocorrem pancadas de chuva.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 13,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 9,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 64,
+          "max": 95
+        },
+        "sun": {
+          "morning": "05:15",
+          "afternoon": "19:07"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 16,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 12,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 21
+        },
+        "humidity": {
+          "min": 76,
+          "max": 93
+        },
+        "sun": {
+          "morning": "05:15",
+          "afternoon": "19:08"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "WNW",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 87,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:15",
+          "afternoon": "19:09"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "WNW",
+          "velocity": 12
+        },
+        "humidity": {
+          "min": 80,
+          "max": 98
+        },
+        "sun": {
+          "morning": "05:15",
+          "afternoon": "19:10"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 15,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 12
+        },
+        "humidity": {
+          "min": 68,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:15",
+          "afternoon": "19:11"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol, com chuva de manhã e diminuição de nuvens à tarde. Noite com pouca nebulosidade.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 13,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 13
+        },
+        "humidity": {
+          "min": 52,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:15",
+          "afternoon": "19:11"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 13,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 15
+        },
+        "humidity": {
+          "min": 50,
+          "max": 90
+        },
+        "sun": {
+          "morning": "05:15",
+          "afternoon": "19:12"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde. À noite o tempo fica aberto.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 13,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 63,
+          "max": 93
+        },
+        "sun": {
+          "morning": "05:15",
+          "afternoon": "19:13"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 14,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 1,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 61,
+          "max": 92
+        },
+        "sun": {
+          "morning": "05:16",
+          "afternoon": "19:14"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 51,
+          "max": 86
+        },
+        "sun": {
+          "morning": "05:16",
+          "afternoon": "19:14"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 27
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "NNW",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 47,
+          "max": 86
+        },
+        "sun": {
+          "morning": "05:16",
+          "afternoon": "19:15"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 29
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "S",
+          "velocity": 13
+        },
+        "humidity": {
+          "min": 69,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:16",
+          "afternoon": "19:16"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com muitas nuvens durante o dia e períodos de céu nublado. Noite com muitas nuvens.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 7136,
+    "idcity": 2018,
+    "capital": false,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "PE",
+    "city": "Porto de Galinhas",
+    "region": "NE",
+    "seaside": false,
+    "latitude": -8.5,
+    "longitude": -35.017,
+    "tourist": true,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 200,
+    "instant": {
+      "temperature": 28,
+      "icon": "2",
+      "condition": "Poucas nuvens",
+      "humidity": 89,
+      "sensation": 32,
+      "windVelocity": 21,
+      "pressure": 1013,
+      "date": "2022-11-26 11:01:36"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 24,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 24
+        },
+        "humidity": {
+          "min": 83,
+          "max": 92
+        },
+        "sun": {
+          "morning": "04:50",
+          "afternoon": "17:24"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol o dia todo. Muitas nuvens e pancadas de chuva de manhã e à noite.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 10,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 84,
+          "max": 87
+        },
+        "sun": {
+          "morning": "04:50",
+          "afternoon": "17:24"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 10,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 24
+        },
+        "humidity": {
+          "min": 84,
+          "max": 89
+        },
+        "sun": {
+          "morning": "04:50",
+          "afternoon": "17:25"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 16,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 24
+        },
+        "humidity": {
+          "min": 80,
+          "max": 89
+        },
+        "sun": {
+          "morning": "04:50",
+          "afternoon": "17:25"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 12,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 24
+        },
+        "humidity": {
+          "min": 80,
+          "max": 87
+        },
+        "sun": {
+          "morning": "04:51",
+          "afternoon": "17:26"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 29
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 26
+        },
+        "humidity": {
+          "min": 83,
+          "max": 88
+        },
+        "sun": {
+          "morning": "04:51",
+          "afternoon": "17:26"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 24
+        },
+        "humidity": {
+          "min": 82,
+          "max": 90
+        },
+        "sun": {
+          "morning": "04:51",
+          "afternoon": "17:27"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com muitas nuvens durante o dia e períodos de céu nublado. Noite com muitas nuvens.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 23
+        },
+        "humidity": {
+          "min": 82,
+          "max": 88
+        },
+        "sun": {
+          "morning": "04:51",
+          "afternoon": "17:27"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com muitas nuvens durante o dia e períodos de céu nublado. Noite com muitas nuvens.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 26,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 23
+        },
+        "humidity": {
+          "min": 83,
+          "max": 91
+        },
+        "sun": {
+          "morning": "04:52",
+          "afternoon": "17:28"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com muitas nuvens durante o dia e períodos de céu nublado. Noite com muitas nuvens.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 21
+        },
+        "humidity": {
+          "min": 83,
+          "max": 89
+        },
+        "sun": {
+          "morning": "04:52",
+          "afternoon": "17:28"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 26,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 24
+        },
+        "humidity": {
+          "min": 82,
+          "max": 92
+        },
+        "sun": {
+          "morning": "04:52",
+          "afternoon": "17:29"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 24
+        },
+        "humidity": {
+          "min": 85,
+          "max": 94
+        },
+        "sun": {
+          "morning": "04:53",
+          "afternoon": "17:29"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 23
+        },
+        "humidity": {
+          "min": 83,
+          "max": 93
+        },
+        "sun": {
+          "morning": "04:53",
+          "afternoon": "17:30"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 85,
+          "max": 90
+        },
+        "sun": {
+          "morning": "04:53",
+          "afternoon": "17:30"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com muitas nuvens durante o dia e períodos de céu nublado. Noite com muitas nuvens.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 24
+        },
+        "humidity": {
+          "min": 72,
+          "max": 87
+        },
+        "sun": {
+          "morning": "04:54",
+          "afternoon": "17:31"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 5959,
+    "idcity": 321,
+    "capital": true,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "RJ",
+    "city": "Rio de Janeiro",
+    "region": "SE",
+    "seaside": true,
+    "latitude": -22.903,
+    "longitude": -43.208,
+    "tourist": true,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 400,
+    "instant": {
+      "temperature": 26,
+      "icon": "2",
+      "condition": "Nuvens esparsas",
+      "humidity": 70,
+      "sensation": 27,
+      "windVelocity": 6,
+      "pressure": 1013,
+      "date": "2022-11-26 10:00:00"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 19,
+          "max": 29
+        },
+        "rain": {
+          "precipitation": 10,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 24
+        },
+        "humidity": {
+          "min": 85,
+          "max": 94
+        },
+        "sun": {
+          "morning": "04:58",
+          "afternoon": "18:21"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 20,
+          "max": 27
+        },
+        "rain": {
+          "precipitation": 20,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 31
+        },
+        "humidity": {
+          "min": 83,
+          "max": 97
+        },
+        "sun": {
+          "morning": "04:58",
+          "afternoon": "18:22"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 21,
+          "max": 27
+        },
+        "rain": {
+          "precipitation": 25,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 29
+        },
+        "humidity": {
+          "min": 74,
+          "max": 91
+        },
+        "sun": {
+          "morning": "04:58",
+          "afternoon": "18:23"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 21,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 15,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 30
+        },
+        "humidity": {
+          "min": 67,
+          "max": 93
+        },
+        "sun": {
+          "morning": "04:58",
+          "afternoon": "18:23"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 20,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 10,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 27
+        },
+        "humidity": {
+          "min": 62,
+          "max": 87
+        },
+        "sun": {
+          "morning": "04:58",
+          "afternoon": "18:24"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 31
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 60,
+          "max": 80
+        },
+        "sun": {
+          "morning": "04:58",
+          "afternoon": "18:25"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 7,
+          "probability": 80
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 21
+        },
+        "humidity": {
+          "min": 60,
+          "max": 76
+        },
+        "sun": {
+          "morning": "04:58",
+          "afternoon": "18:26"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde. À noite o tempo fica aberto.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 60,
+          "max": 75
+        },
+        "sun": {
+          "morning": "04:58",
+          "afternoon": "18:26"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com aumento de nuvens ao longo do dia. À noite ocorrem pancadas de chuva.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 12,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 66,
+          "max": 83
+        },
+        "sun": {
+          "morning": "04:58",
+          "afternoon": "18:27"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 16
+        },
+        "humidity": {
+          "min": 63,
+          "max": 80
+        },
+        "sun": {
+          "morning": "04:59",
+          "afternoon": "18:28"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 29
+        },
+        "rain": {
+          "precipitation": 16,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 16
+        },
+        "humidity": {
+          "min": 60,
+          "max": 78
+        },
+        "sun": {
+          "morning": "04:59",
+          "afternoon": "18:28"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens e chuva passageira durante o dia. À noite o tempo fica firme.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 29
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 61,
+          "max": 77
+        },
+        "sun": {
+          "morning": "04:59",
+          "afternoon": "18:29"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 1,
+          "probability": 83
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 23
+        },
+        "humidity": {
+          "min": 64,
+          "max": 79
+        },
+        "sun": {
+          "morning": "04:59",
+          "afternoon": "18:30"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 63,
+          "max": 77
+        },
+        "sun": {
+          "morning": "04:59",
+          "afternoon": "18:30"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol, com chuva de manhã e diminuição de nuvens à tarde. Noite com pouca nebulosidade.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 9,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 42,
+          "max": 78
+        },
+        "sun": {
+          "morning": "05:00",
+          "afternoon": "18:31"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol o dia todo. Muitas nuvens e pancadas de chuva de manhã e à noite.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 6731,
+    "idcity": 271,
+    "capital": true,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "PR",
+    "city": "Curitiba",
+    "region": "S",
+    "seaside": false,
+    "latitude": -25.428,
+    "longitude": -49.273,
+    "tourist": true,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 400,
+    "instant": {
+      "temperature": 17,
+      "icon": "3",
+      "condition": "Chuvisco",
+      "humidity": 94,
+      "sensation": 17,
+      "windVelocity": 9,
+      "pressure": 1017,
+      "date": "2022-11-26 10:00:00"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 15,
+          "max": 21
+        },
+        "rain": {
+          "precipitation": 25,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 90,
+          "max": 97
+        },
+        "sun": {
+          "morning": "05:18",
+          "afternoon": "18:50"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 15,
+          "max": 20
+        },
+        "rain": {
+          "precipitation": 30,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 24
+        },
+        "humidity": {
+          "min": 91,
+          "max": 97
+        },
+        "sun": {
+          "morning": "05:17",
+          "afternoon": "18:51"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Chuvoso durante o dia e à noite.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 15,
+          "max": 19
+        },
+        "rain": {
+          "precipitation": 50,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 87,
+          "max": 95
+        },
+        "sun": {
+          "morning": "05:17",
+          "afternoon": "18:52"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Chuvoso durante o dia e à noite.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 15,
+          "max": 20
+        },
+        "rain": {
+          "precipitation": 60,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 94,
+          "max": 98
+        },
+        "sun": {
+          "morning": "05:17",
+          "afternoon": "18:53"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Chuvoso durante o dia e à noite.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 21
+        },
+        "rain": {
+          "precipitation": 40,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 78,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:17",
+          "afternoon": "18:53"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 29
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNW",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 43,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:17",
+          "afternoon": "18:54"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "SE",
+          "velocity": 6
+        },
+        "humidity": {
+          "min": 54,
+          "max": 89
+        },
+        "sun": {
+          "morning": "05:17",
+          "afternoon": "18:55"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 20,
+          "max": 27
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 16
+        },
+        "humidity": {
+          "min": 68,
+          "max": 94
+        },
+        "sun": {
+          "morning": "05:17",
+          "afternoon": "18:56"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 1,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 65,
+          "max": 95
+        },
+        "sun": {
+          "morning": "05:17",
+          "afternoon": "18:56"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 15,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 11,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 70,
+          "max": 96
+        },
+        "sun": {
+          "morning": "05:18",
+          "afternoon": "18:57"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens e chuva passageira durante o dia. À noite o tempo fica firme.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 14,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 72,
+          "max": 96
+        },
+        "sun": {
+          "morning": "05:18",
+          "afternoon": "18:58"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 73,
+          "max": 95
+        },
+        "sun": {
+          "morning": "05:18",
+          "afternoon": "18:58"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde. À noite o tempo fica aberto.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 73,
+          "max": 96
+        },
+        "sun": {
+          "morning": "05:18",
+          "afternoon": "18:59"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol, com chuva de manhã e diminuição de nuvens à tarde. Noite com pouca nebulosidade.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 83
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 51,
+          "max": 96
+        },
+        "sun": {
+          "morning": "05:18",
+          "afternoon": "19:00"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NW",
+          "velocity": 13
+        },
+        "humidity": {
+          "min": 47,
+          "max": 96
+        },
+        "sun": {
+          "morning": "05:19",
+          "afternoon": "19:00"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 6288,
+    "idcity": 770,
+    "capital": false,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "RJ",
+    "city": "Arraial do Cabo",
+    "region": "SE",
+    "seaside": true,
+    "latitude": -22.87,
+    "longitude": -42.028,
+    "tourist": false,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 200,
+    "instant": {
+      "temperature": 26,
+      "icon": "2",
+      "condition": "Poucas nuvens",
+      "humidity": 65,
+      "sensation": 27,
+      "windVelocity": 26,
+      "pressure": 1014,
+      "date": "2022-11-26 10:00:00"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 18,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 20,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 45
+        },
+        "humidity": {
+          "min": 87,
+          "max": 99
+        },
+        "sun": {
+          "morning": "04:53",
+          "afternoon": "18:17"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 30,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 52
+        },
+        "humidity": {
+          "min": 89,
+          "max": 96
+        },
+        "sun": {
+          "morning": "04:53",
+          "afternoon": "18:17"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens a nublado com chuva no fim da manhã. Tarde e noite chuvosas.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 30,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 44
+        },
+        "humidity": {
+          "min": 88,
+          "max": 97
+        },
+        "sun": {
+          "morning": "04:53",
+          "afternoon": "18:18"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Chuvoso durante o dia e à noite.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 15,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 48
+        },
+        "humidity": {
+          "min": 93,
+          "max": 96
+        },
+        "sun": {
+          "morning": "04:53",
+          "afternoon": "18:19"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 48
+        },
+        "humidity": {
+          "min": 92,
+          "max": 96
+        },
+        "sun": {
+          "morning": "04:53",
+          "afternoon": "18:19"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 44
+        },
+        "humidity": {
+          "min": 93,
+          "max": 96
+        },
+        "sun": {
+          "morning": "04:53",
+          "afternoon": "18:20"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 46
+        },
+        "humidity": {
+          "min": 86,
+          "max": 95
+        },
+        "sun": {
+          "morning": "04:54",
+          "afternoon": "18:21"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 10,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 38
+        },
+        "humidity": {
+          "min": 89,
+          "max": 93
+        },
+        "sun": {
+          "morning": "04:54",
+          "afternoon": "18:21"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 15,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 33
+        },
+        "humidity": {
+          "min": 90,
+          "max": 94
+        },
+        "sun": {
+          "morning": "04:54",
+          "afternoon": "18:22"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 80
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 35
+        },
+        "humidity": {
+          "min": 85,
+          "max": 95
+        },
+        "sun": {
+          "morning": "04:54",
+          "afternoon": "18:23"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 27
+        },
+        "rain": {
+          "precipitation": 15,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 34
+        },
+        "humidity": {
+          "min": 88,
+          "max": 93
+        },
+        "sun": {
+          "morning": "04:54",
+          "afternoon": "18:23"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens e chuva passageira durante o dia. À noite o tempo fica firme.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 60
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 29
+        },
+        "humidity": {
+          "min": 92,
+          "max": 95
+        },
+        "sun": {
+          "morning": "04:54",
+          "afternoon": "18:24"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 1,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 32
+        },
+        "humidity": {
+          "min": 91,
+          "max": 93
+        },
+        "sun": {
+          "morning": "04:54",
+          "afternoon": "18:25"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 21,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 3,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 36
+        },
+        "humidity": {
+          "min": 87,
+          "max": 93
+        },
+        "sun": {
+          "morning": "04:55",
+          "afternoon": "18:25"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 21,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 39
+        },
+        "humidity": {
+          "min": 78,
+          "max": 92
+        },
+        "sun": {
+          "morning": "04:55",
+          "afternoon": "18:26"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol, com chuva de manhã e diminuição de nuvens à tarde. Noite com pouca nebulosidade.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 5864,
+    "idcity": 334,
+    "capital": true,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "RN",
+    "city": "Natal",
+    "region": "NE",
+    "seaside": true,
+    "latitude": -5.795,
+    "longitude": -35.209,
+    "tourist": true,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 400,
+    "instant": {
+      "temperature": 29,
+      "icon": "2",
+      "condition": "Nuvens esparsas",
+      "humidity": 66,
+      "sensation": 32,
+      "windVelocity": 22,
+      "pressure": 1012,
+      "date": "2022-11-26 10:00:00"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 24,
+          "max": 31
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 57,
+          "max": 88
+        },
+        "sun": {
+          "morning": "04:55",
+          "afternoon": "17:21"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol, com chuva de manhã e diminuição de nuvens à tarde. Noite com pouca nebulosidade.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 56,
+          "max": 86
+        },
+        "sun": {
+          "morning": "04:55",
+          "afternoon": "17:21"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 31
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 57,
+          "max": 87
+        },
+        "sun": {
+          "morning": "04:55",
+          "afternoon": "17:21"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 31
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 57,
+          "max": 85
+        },
+        "sun": {
+          "morning": "04:56",
+          "afternoon": "17:22"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens e chuva passageira durante o dia. À noite o tempo fica firme.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 32
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 55,
+          "max": 82
+        },
+        "sun": {
+          "morning": "04:56",
+          "afternoon": "17:22"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 57,
+          "max": 84
+        },
+        "sun": {
+          "morning": "04:56",
+          "afternoon": "17:23"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 29
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 58,
+          "max": 85
+        },
+        "sun": {
+          "morning": "04:56",
+          "afternoon": "17:23"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 21
+        },
+        "humidity": {
+          "min": 57,
+          "max": 86
+        },
+        "sun": {
+          "morning": "04:57",
+          "afternoon": "17:24"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 21
+        },
+        "humidity": {
+          "min": 58,
+          "max": 87
+        },
+        "sun": {
+          "morning": "04:57",
+          "afternoon": "17:24"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 21
+        },
+        "humidity": {
+          "min": 56,
+          "max": 84
+        },
+        "sun": {
+          "morning": "04:57",
+          "afternoon": "17:25"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 58,
+          "max": 84
+        },
+        "sun": {
+          "morning": "04:58",
+          "afternoon": "17:25"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 21
+        },
+        "humidity": {
+          "min": 56,
+          "max": 86
+        },
+        "sun": {
+          "morning": "04:58",
+          "afternoon": "17:26"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 57,
+          "max": 84
+        },
+        "sun": {
+          "morning": "04:58",
+          "afternoon": "17:26"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 56,
+          "max": 86
+        },
+        "sun": {
+          "morning": "04:59",
+          "afternoon": "17:26"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com muitas nuvens durante o dia e períodos de céu nublado. Noite com muitas nuvens.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 25,
+          "max": 30
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 51,
+          "max": 85
+        },
+        "sun": {
+          "morning": "04:59",
+          "afternoon": "17:27"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com muitas nuvens durante o dia e períodos de céu nublado. Noite com muitas nuvens.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 4458,
+    "idcity": 420,
+    "capital": false,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "SP",
+    "city": "Campos do Jordão",
+    "region": "SE",
+    "seaside": false,
+    "latitude": -22.739,
+    "longitude": -45.591,
+    "tourist": true,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 200,
+    "instant": {
+      "temperature": 20,
+      "icon": "4",
+      "condition": "Pancada de chuva",
+      "humidity": 89,
+      "sensation": 20,
+      "windVelocity": 16,
+      "pressure": 1013,
+      "date": "2022-11-26 11:02:25"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 11,
+          "max": 21
+        },
+        "rain": {
+          "precipitation": 15,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "SE",
+          "velocity": 15
+        },
+        "humidity": {
+          "min": 86,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:31"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 12,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 20,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 22
+        },
+        "humidity": {
+          "min": 96,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:31"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 13,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 25,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 91,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:32"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 13,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 20,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 12
+        },
+        "humidity": {
+          "min": 81,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:33"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 14,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 20,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "N",
+          "velocity": 13
+        },
+        "humidity": {
+          "min": 55,
+          "max": 98
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:33"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 0,
+          "probability": 0
+        },
+        "wind": {
+          "compass": "N",
+          "velocity": 15
+        },
+        "humidity": {
+          "min": 51,
+          "max": 94
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:34"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com algumas nuvens. Não chove.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 16,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 12,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "N",
+          "velocity": 13
+        },
+        "humidity": {
+          "min": 58,
+          "max": 97
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:35"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 27
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNW",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 66,
+          "max": 98
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:35"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com aumento de nuvens ao longo do dia. À noite ocorrem pancadas de chuva.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 14,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "SE",
+          "velocity": 8
+        },
+        "humidity": {
+          "min": 84,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:36"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 16,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 10
+        },
+        "humidity": {
+          "min": 80,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:37"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde. À noite o tempo fica aberto.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 12
+        },
+        "humidity": {
+          "min": 73,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:09",
+          "afternoon": "18:37"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 16,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 13
+        },
+        "humidity": {
+          "min": 74,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:09",
+          "afternoon": "18:38"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 16,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 3,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 60,
+          "max": 96
+        },
+        "sun": {
+          "morning": "05:09",
+          "afternoon": "18:39"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 15,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "N",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 71,
+          "max": 97
+        },
+        "sun": {
+          "morning": "05:09",
+          "afternoon": "18:39"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 15,
+          "max": 23
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "NNW",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 44,
+          "max": 95
+        },
+        "sun": {
+          "morning": "05:09",
+          "afternoon": "18:40"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com aumento de nuvens ao longo do dia. À noite ocorrem pancadas de chuva.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 6879,
+    "idcity": 107,
+    "capital": false,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "MG",
+    "city": "Belo Horizonte",
+    "region": "SE",
+    "seaside": false,
+    "latitude": -19.921,
+    "longitude": -43.938,
+    "tourist": false,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 200,
+    "instant": {
+      "temperature": 24,
+      "icon": "2",
+      "condition": "Muitas nuvens",
+      "humidity": 65,
+      "sensation": 24,
+      "windVelocity": 11,
+      "pressure": 1009,
+      "date": "2022-11-26 10:00:00"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 15,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 15,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 15
+        },
+        "humidity": {
+          "min": 62,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:06",
+          "afternoon": "18:19"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 15,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 12,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 73,
+          "max": 89
+        },
+        "sun": {
+          "morning": "05:06",
+          "afternoon": "18:19"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 16,
+          "max": 27
+        },
+        "rain": {
+          "precipitation": 10,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 68,
+          "max": 90
+        },
+        "sun": {
+          "morning": "05:06",
+          "afternoon": "18:20"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 15,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 68,
+          "max": 90
+        },
+        "sun": {
+          "morning": "05:07",
+          "afternoon": "18:21"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 15,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 15
+        },
+        "humidity": {
+          "min": 65,
+          "max": 92
+        },
+        "sun": {
+          "morning": "05:07",
+          "afternoon": "18:21"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 20,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 4,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 62,
+          "max": 90
+        },
+        "sun": {
+          "morning": "05:07",
+          "afternoon": "18:22"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 16
+        },
+        "humidity": {
+          "min": 72,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:07",
+          "afternoon": "18:23"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 20,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 11,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 70,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:07",
+          "afternoon": "18:23"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens e chuva passageira durante o dia. À noite o tempo fica firme.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 67,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:07",
+          "afternoon": "18:24"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 24
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 16
+        },
+        "humidity": {
+          "min": 80,
+          "max": 89
+        },
+        "sun": {
+          "morning": "05:07",
+          "afternoon": "18:25"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Não há probabilidade",
+        "description": "Sol com aumento de nuvens ao longo do dia. À noite ocorrem pancadas de chuva.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 19,
+          "max": 21
+        },
+        "rain": {
+          "precipitation": 22,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 15
+        },
+        "humidity": {
+          "min": 74,
+          "max": 95
+        },
+        "sun": {
+          "morning": "05:07",
+          "afternoon": "18:25"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 21
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 15
+        },
+        "humidity": {
+          "min": 71,
+          "max": 94
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:26"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 18,
+          "max": 21
+        },
+        "rain": {
+          "precipitation": 3,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 64,
+          "max": 89
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:26"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 5,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 17
+        },
+        "humidity": {
+          "min": 62,
+          "max": 96
+        },
+        "sun": {
+          "morning": "05:08",
+          "afternoon": "18:27"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde. À noite o tempo fica aberto.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 17,
+          "max": 22
+        },
+        "rain": {
+          "precipitation": 14,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 46,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:09",
+          "afternoon": "18:28"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "date": "2022-12-10"
+      }
+    ]
+  },
+  {
+    "idlocale": 6280,
+    "idcity": 769,
+    "capital": false,
+    "idcountry": 7,
+    "ac": "BR",
+    "country": "Brasil",
+    "uf": "RJ",
+    "city": "Angra dos Reis",
+    "region": "SE",
+    "seaside": true,
+    "latitude": -23.007,
+    "longitude": -44.318,
+    "tourist": true,
+    "agricultural": false,
+    "base": "cities",
+    "searchPoints": 200,
+    "instant": {
+      "temperature": 25,
+      "icon": "4r",
+      "condition": "Pancada de chuva",
+      "humidity": 99,
+      "sensation": 25,
+      "windVelocity": 25,
+      "pressure": 1013,
+      "date": "2022-11-26 10:55:00"
+    },
+    "weathers": [
+      {
+        "temperature": {
+          "min": 21,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 16,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 97,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:26"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-26"
+      },
+      {
+        "temperature": {
+          "min": 20,
+          "max": 27
+        },
+        "rain": {
+          "precipitation": 30,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 34
+        },
+        "humidity": {
+          "min": 99,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:27"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-27"
+      },
+      {
+        "temperature": {
+          "min": 21,
+          "max": 27
+        },
+        "rain": {
+          "precipitation": 25,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 26
+        },
+        "humidity": {
+          "min": 98,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:27"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-28"
+      },
+      {
+        "temperature": {
+          "min": 21,
+          "max": 28
+        },
+        "rain": {
+          "precipitation": 20,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "E",
+          "velocity": 23
+        },
+        "humidity": {
+          "min": 94,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:28"
+        },
+        "moon": [
+          "Nova"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-11-29"
+      },
+      {
+        "temperature": {
+          "min": 21,
+          "max": 29
+        },
+        "rain": {
+          "precipitation": 9,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 80,
+          "max": 98
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:29"
+        },
+        "moon": [
+          "Nova - 11:37",
+          "Crescente - 11:38"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-11-30"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 2,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NE",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 74,
+          "max": 93
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:29"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-01"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 9,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 19
+        },
+        "humidity": {
+          "min": 72,
+          "max": 90
+        },
+        "sun": {
+          "morning": "05:02",
+          "afternoon": "18:30"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-02"
+      },
+      {
+        "temperature": {
+          "min": 24,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 8,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 13
+        },
+        "humidity": {
+          "min": 75,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:03",
+          "afternoon": "18:31"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-03"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 15,
+          "probability": 83
+        },
+        "wind": {
+          "compass": "S",
+          "velocity": 8
+        },
+        "humidity": {
+          "min": 92,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:03",
+          "afternoon": "18:32"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Média probabilidade",
+        "description": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+        "date": "2022-12-04"
+      },
+      {
+        "temperature": {
+          "min": 22,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 9,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "SE",
+          "velocity": 8
+        },
+        "humidity": {
+          "min": 89,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:03",
+          "afternoon": "18:32"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-05"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 13,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ESE",
+          "velocity": 9
+        },
+        "humidity": {
+          "min": 80,
+          "max": 100
+        },
+        "sun": {
+          "morning": "05:03",
+          "afternoon": "18:33"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens e chuva passageira durante o dia. À noite o tempo fica firme.",
+        "date": "2022-12-06"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 6,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 18
+        },
+        "humidity": {
+          "min": 76,
+          "max": 99
+        },
+        "sun": {
+          "morning": "05:03",
+          "afternoon": "18:34"
+        },
+        "moon": [
+          "Crescente"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-07"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 26
+        },
+        "rain": {
+          "precipitation": 3,
+          "probability": 83
+        },
+        "wind": {
+          "compass": "ENE",
+          "velocity": 20
+        },
+        "humidity": {
+          "min": 78,
+          "max": 96
+        },
+        "sun": {
+          "morning": "05:03",
+          "afternoon": "18:34"
+        },
+        "moon": [
+          "Crescente - 01:08",
+          "Cheia - 01:09"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-08"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 7,
+          "probability": 90
+        },
+        "wind": {
+          "compass": "NNE",
+          "velocity": 23
+        },
+        "humidity": {
+          "min": 71,
+          "max": 89
+        },
+        "sun": {
+          "morning": "05:04",
+          "afternoon": "18:35"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
+        "date": "2022-12-09"
+      },
+      {
+        "temperature": {
+          "min": 23,
+          "max": 25
+        },
+        "rain": {
+          "precipitation": 9,
+          "probability": 67
+        },
+        "wind": {
+          "compass": "N",
+          "velocity": 14
+        },
+        "humidity": {
+          "min": 52,
+          "max": 91
+        },
+        "sun": {
+          "morning": "05:04",
+          "afternoon": "18:35"
+        },
+        "moon": [
+          "Cheia"
+        ],
+        "rainbow": "Alta probabilidade",
+        "description": "Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
+        "date": "2022-12-10"
+      }
+    ]
+  }
+]

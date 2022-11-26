@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import routes from './Routes/root.route';
+import Indexer from './Indexer/Indexer.indexer';
 
 const app = express();
 
@@ -9,3 +10,5 @@ app.use(cors());
 app.use(routes);
 
 app.listen(80);
+
+new Indexer().execute();

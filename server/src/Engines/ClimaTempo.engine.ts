@@ -1,70 +1,8 @@
 import fetch from 'node-fetch';
-
-type Locale = {
-    "id": number,
-    "name": string,
-    "uf": string,
-    "city": number,
-    "region": string,
-    "acronym": string
-}
-
-type DetailedLocale = {
-    idlocale: number,
-    idcity: number,
-    capital: boolean,
-    idcountry: number,
-    ac: string,
-    country: string,
-    uf: string,
-    city: string,
-    region: string,
-    seaside: false,
-    latitude: number,
-    longitude: number,
-    tourist: boolean,
-    agricultural: boolean,
-    base: string,
-    searchPoints: number
-}
-
-type Weather = {
-    temperature: number,
-    icon: string,
-    condition: string,
-    humidity: number,
-    sensation: number,
-    windVelocity: number,
-    pressure: number,
-    date: string
-}
-
-type DetailedWeather = {
-    moon: string[],
-    rainbow: string,
-    description: string,
-    date: string,
-    temperature: {
-        min: number,
-        max: number
-    },
-    rain: {
-        precipitation: number,
-        probability: number
-    },
-    wind: {
-        compass: string,
-        velocity: number
-    },
-    humidity: {
-        min: number,
-        max: number
-    },
-    sun: {
-        morning: string,
-        afternoon: string
-    }
-}
+import DailyWeatherModel from '../Models/DailyWeather.model';
+import InstantWeatherModel from '../Models/InstantWeather.model';
+import LocaleModel from '../Models/Locale.model';
+import DetailedLocaleModel from '../Models/DetailedLocale.model';
 
 /**
  * This is a web scrapper engine to get the weather info I wanted to from any city.
@@ -73,7 +11,7 @@ type DetailedWeather = {
 class ClimaTempoEngine {
     static baseUrl = 'https://www.climatempo.com.br';
 
-    async detailedWeatherCollectionByCityCode(code: number): Promise<DetailedWeather[]> {
+    async detailedWeatherCollectionByCityCode(code: number): Promise<DailyWeatherModel[]> {
         return await fetch(`${ ClimaTempoEngine.baseUrl }/previsao-do-tempo/15-dias/cidade/${ code }`)
             .then(res => res.text())
             .then(data => {
@@ -113,25 +51,41 @@ class ClimaTempoEngine {
                             moon: moon.map(line => line.slice(0, line.indexOf('<')).replace('\n-', ' -').trim()),
                             rainbow: this.partOf(list[5], 'title', '"', '"'),
                             description: this.partOf(data, '<p', '>', '</p>').trim(),
-                            date: date.toISOString().slice(0, 10)
-                        } as DetailedWeather;
+                            date: date.toISOString().slice(0, 10),
+                            idcity: code
+                        } as DailyWeatherModel;
                 });
+            }).then(data => {
+                if(!data || data.length != 15)
+                    return Promise.reject('Invalid response.');
+                return data;
             });
     }
 
-    async weatherByCityId(id: number): Promise<Weather> {
+    async weatherByCityId(id: number): Promise<InstantWeatherModel> {
         return await fetch(`${ ClimaTempoEngine.baseUrl }/json/myclimatempo/user/weatherNow?idlocale=${id}`)
             .then(res => res.json())
-            .then(data => data[0].data[0].weather[0] as Weather)
+            .then(data => {
+                if(!data[0].data)
+                    Promise.reject('Invalid response.');
+                return {
+                    idlocale: id,
+                ...data[0].data[0].weather[0]
+                } as InstantWeatherModel;
+            });
     }
 
-    async cityInfoById(id: number): Promise<Locale> {
+    async cityInfoById(id: number): Promise<LocaleModel> {
         return await fetch(`${ ClimaTempoEngine.baseUrl }/json/myclimatempo/user/weatherNow?idlocale=${id}`)
             .then(res => res.json())
-            .then(data => data[0].data[0].locale as Locale)
+            .then(data => {
+                if(!data[0].data)
+                    Promise.reject('Invalid response.');
+                return data[0].data[0].locale as LocaleModel;
+            });
     }
 
-    async citiesFromSearchByName(name: string): Promise<DetailedLocale[]> {
+    async citiesFromSearchByName(name: string): Promise<DetailedLocaleModel[]> {
         const body = new URLSearchParams();
         body.append('name', name);
 
@@ -140,10 +94,10 @@ class ClimaTempoEngine {
             body
         })
             .then(res => res.json())
-            .then(data => data[0].response.data as DetailedLocale[])
+            .then(data => data[0].response.data as DetailedLocaleModel[])
             .catch(err => {
                 console.log(err);
-                return [] as DetailedLocale[];
+                return [] as DetailedLocaleModel[];
             });
     }
 

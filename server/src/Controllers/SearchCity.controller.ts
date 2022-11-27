@@ -15,10 +15,11 @@ async function SearchCityController(request: Request<{ name: string }>, response
     new ElasticEngine().client.search({
         index: 'locale',
         query: {
-            fuzzy: {
+            match_phrase: {
                 city: name
             },
-        }
+        },
+        size: 100
     }).then(({hits: { hits }}) => {
         if(hits.length > 0) {
             response.json(hits.map(hit => hit._source as DetailedLocaleModel))

@@ -15,7 +15,7 @@ class ClimaTempoEngine {
         return await fetch(`${ ClimaTempoEngine.baseUrl }/previsao-do-tempo/15-dias/cidade/${ code }`)
             .then(res => res.text())
             .then(data => {
-                return data.split('<section')
+                const weathers = data.split('<section')
                     .filter(data => data.startsWith(' class="accordion-card'))
                     .map((data, index) => {
                         const list = data.slice(data.indexOf('wrapper-variables-cards')).split('variable-card')
@@ -55,6 +55,9 @@ class ClimaTempoEngine {
                             idcity: code
                         } as DailyWeatherModel;
                 });
+                if(weathers.reduce((isValid: boolean, weather) => weather.description.length > 5 ? isValid : false, true))
+                    return weathers;
+                return Promise.reject('Invalid response.');
             }).then(data => {
                 if(!data || data.length != 15)
                     return Promise.reject('Invalid response.');
@@ -67,7 +70,7 @@ class ClimaTempoEngine {
             .then(res => res.json())
             .then(data => {
                 if(!data[0].data)
-                    Promise.reject('Invalid response.');
+                    return Promise.reject('Invalid response.');
                 return {
                     idlocale: id,
                 ...data[0].data[0].weather[0]
@@ -80,7 +83,7 @@ class ClimaTempoEngine {
             .then(res => res.json())
             .then(data => {
                 if(!data[0].data)
-                    Promise.reject('Invalid response.');
+                    return Promise.reject('Invalid response.');
                 return data[0].data[0].locale as LocaleModel;
             });
     }

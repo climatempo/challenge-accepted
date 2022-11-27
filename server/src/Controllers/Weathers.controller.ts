@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import ClimaTempoEngine from '../Engines/ClimaTempo.engine';
 import ElasticEngine from '../Engines/Elastic.engine';
-import DailyWeatherModel from '../Models/DailyWeather.model';
+import DailyWeatherModel, { ofElastic } from '../Models/DailyWeather.model';
 import DailyWeatherIndexer from '../Indexer/DailyWeather.indexer';
 
 function WeathersController(request: Request<{ code: number }>, response: Response) {
@@ -25,7 +25,7 @@ function WeathersController(request: Request<{ code: number }>, response: Respon
         size: 15
     }).then(({ hits: { hits } }) => {
         if(hits.length > 14) {
-            response.json(hits.map(hit => hit._source as DailyWeatherModel).reverse())
+            response.json(hits.map(hit => ofElastic(hit._source) as DailyWeatherModel).reverse())
             return true;
         }
         return false;

@@ -5,7 +5,7 @@ type ThemeState = {
 }
 
 const initialState = {
-    value: 'light'
+    value: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 } as ThemeState;
 
 const theme = createSlice({
@@ -13,7 +13,7 @@ const theme = createSlice({
     initialState,
     reducers: {
         switchTheme: state => {
-            state.value = state.value == 'light' ? 'dark' : 'light';
+            state.value = state.value === 'light' ? 'dark' : 'light';
         },
         setTheme: (state, action: PayloadAction<string>) => {
             state.value = action.payload;

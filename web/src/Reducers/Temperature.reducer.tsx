@@ -5,7 +5,7 @@ type TemperatureState = {
 }
 
 const initialState = {
-    value: 'c'
+    value: localStorage.getItem('temperature') == 'f' ? 'f' : 'c'
 } as TemperatureState;
 
 const temperature = createSlice({
@@ -14,15 +14,15 @@ const temperature = createSlice({
     reducers: {
         switchTemperature: state => {
             state.value = state.value === 'c' ? 'f' : 'c';
-            // state.convert = state.value === 'c' ? (from) => (from * 1.8) + 32 : (from) => from;
+            localStorage.setItem('temperature', state.value);
         },
         setFahrenheit: state => {
             state.value = 'f';
-            // state.convert = (from) => (from * 1.8) + 32;
+            localStorage.setItem('temperature', 'f');
         },
         setCelsius: state => {
             state.value = 'c';
-            // state.convert = (from) => from;
+            localStorage.setItem('temperature', 'c');
         }
     }
 });

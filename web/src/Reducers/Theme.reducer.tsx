@@ -5,7 +5,13 @@ type ThemeState = {
 }
 
 const initialState = {
-    value: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    value: (localStorage.getItem('theme') === 'dark'
+        ? 'dark'
+        : (localStorage.getItem('theme') === 'light'
+            ? 'light'
+            : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        )
+    )
 } as ThemeState;
 
 const theme = createSlice({
@@ -14,9 +20,11 @@ const theme = createSlice({
     reducers: {
         switchTheme: state => {
             state.value = state.value === 'light' ? 'dark' : 'light';
+            localStorage.setItem('theme', state.value);
         },
         setTheme: (state, action: PayloadAction<string>) => {
             state.value = action.payload;
+            localStorage.setItem('theme', action.payload);
         }
     }
 });

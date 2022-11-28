@@ -5,7 +5,7 @@ type PrecipitationState = {
 }
 
 const initialState = {
-    value: 'mm'
+    value: localStorage.getItem('precipitation') == 'inch' ? 'inch' : 'mm'
 } as PrecipitationState;
 
 const precipitation = createSlice({
@@ -14,15 +14,15 @@ const precipitation = createSlice({
     reducers: {
         switchPrecipitation: state => {
             state.value = state.value === 'mm' ? 'inch' : 'mm';
-            // state.convert = state.value === 'mm' ? (value) => value / 25.4 : (value) => value;
+            localStorage.setItem('precipitation', state.value);
         },
         setInch: state => {
             state.value = 'inch';
-            // state.convert = (value) => value / 25.4;
+            localStorage.setItem('precipitation', 'inch');
         },
         setMM: state => {
             state.value = 'mm';
-            // state.convert = (value) => value;
+            localStorage.setItem('precipitation', 'mm');
         }
     }
 });

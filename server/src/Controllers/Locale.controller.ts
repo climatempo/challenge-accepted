@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import ClimaTempoEngine from '../Engines/ClimaTempo.engine';
+import ClimaTempoEngine from '../Engines/ClimaTempo/ClimaTempo.engine';
 
 function LocaleController(request: Request<{ id: number }>, response: Response) {
     const id = request.params.id > 0 ? request.params.id : 0;

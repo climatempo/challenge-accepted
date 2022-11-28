@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import SearchCityController from '../Controllers/SearchCity.controller';
+import SearchCityController from '../Controllers/Search.controller';
 import PingPongController from '../Controllers/PingPong.controller';
 import city from './City.route';
 

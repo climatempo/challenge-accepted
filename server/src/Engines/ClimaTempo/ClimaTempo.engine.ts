@@ -1,8 +1,8 @@
 import fetch from 'node-fetch';
-import DailyWeatherModel from '../Models/DailyWeather.model';
-import InstantWeatherModel from '../Models/InstantWeather.model';
-import LocaleModel from '../Models/Locale.model';
-import DetailedLocaleModel from '../Models/DetailedLocale.model';
+import DailyWeatherModel from '../../Models/DailyWeather.model';
+import InstantWeatherModel from '../../Models/InstantWeather.model';
+import LocaleModel from '../../Models/Locale.model';
+import DetailedLocaleModel from '../../Models/DetailedLocale.model';
 
 /**
  * This is a web scrapper engine to get the weather info I wanted to from any city.

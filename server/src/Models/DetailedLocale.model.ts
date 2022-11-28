@@ -8,7 +8,7 @@ type DetailedLocaleModel = {
     uf: string,
     city: string,
     region: string,
-    seaside: false,
+    seaside: boolean,
     latitude: number,
     longitude: number,
     tourist: boolean,

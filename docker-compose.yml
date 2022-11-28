@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.5.2
+    container_name: ct-elastic
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - ELASTIC_PASSWORD=DrrW*t2Wr7rFuKYV!rHV
+      - ELASTIC_USER=elastic
+      - xpack.security.authc.token.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - http.cors.enabled=true
+      - http.cors.allow-origin=https://tauri.localhost
+      - http.cors.allow-headers=X-Requested-With,Content-Type,Content-Length,Authorization
+    ports:
+      - 9200:9200
+  server:
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile
+    container_name: ct-server
+    environment:
+      - ELASTIC_HOST=http://elastic:9200
+      - ELASTIC_PASSWORD=DrrW*t2Wr7rFuKYV!rHV
+      - ELASTIC_USER=elastic
+    ports:
+      - "4000:4000"
+    depends_on:
+      - elastic
+  web:
+    container_name: ct-web
+    build:
+      context: ./web
+      dockerfile: ./Dockerfile
+    depends_on:
+      - server
+      - elastic
+    ports:
+      - "3000:3000"

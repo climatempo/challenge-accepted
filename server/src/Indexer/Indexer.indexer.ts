@@ -37,10 +37,13 @@ class Indexer {
                 weather => [{ index: { _index: 'daily-weather' } }, toElastic(weather)]
             )
         });
+
+        console.log('Dummy data indexed.');
     }
 
     createIndex = async (index: string, request: IndicesCreateRequest) => {
         if(!await this.elastic.indices.exists({index})) {
+            console.log(`Created index ${index} on elastic.`);
             await this.elastic.indices.create(request);
             this.dumpDummy = true;
         }

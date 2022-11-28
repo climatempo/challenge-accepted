@@ -1,11 +1,11 @@
 {
-  "name": "clima-tempo-challenge",
+  "name": "clima-tempo",
   "version": "0.0.1",
   "description": "Confira todas as previsões de temperaturas pelo país agora e daqui a 7 dias (plano gratuito)!",
   "main": "src/index.ts",
   "private": true,
   "scripts": {
-    "buld": "tsc",
+    "build": "tsc",
     "start:dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

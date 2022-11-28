@@ -1,29 +1,15 @@
 import { Client } from '@elastic/elasticsearch';
-import { readFileSync } from 'fs';
 
 class ElasticEngine {
     private static elastic: Client;
 
     client = ElasticEngine.elastic ? ElasticEngine.elastic : ElasticEngine.elastic = new Client({
-        node: 'https://localhost:9200',
+        node: process.env.ELASTIC_HOST,
         auth: {
-            username: 'elastic',
-            password: process.env.ES_PASSWORD ? process.env.ES_PASSWORD : ''
-        },
-        tls: {
-            ca: this.elasticCA(),
-            rejectUnauthorized: false
+            username: process.env.ELASTIC_USER || 'elastic',
+            password: process.env.ELASTIC_PASSWORD || 'DontUseMe'
         }
     });
-
-    private elasticCA() {
-        try {
-            return readFileSync('./dockerca.crt');
-        }catch(e) {
-            console.error(e);
-            return new Buffer('');
-        }
-    }
 }
 
 export default ElasticEngine;

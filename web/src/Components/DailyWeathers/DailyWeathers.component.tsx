@@ -47,7 +47,7 @@ function DailyWeathers() {
         if(!locale)
             return;
         setLoading(true);
-        fetch(`http://localhost/city/${ locale.idcity }/weathers`)
+        fetch(`http://localhost:4000/city/${ locale.idcity }/weathers`)
             .then(response => {
                 setLoading(false);
                 if(response.status === 404) {

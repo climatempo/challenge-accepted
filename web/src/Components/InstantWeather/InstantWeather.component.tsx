@@ -27,7 +27,7 @@ function InstantWeather() {
         if(!locale)
             return;
         setLoading(true);
-        fetch(`http://localhost/city/${ locale.idlocale }/now`)
+        fetch(`http://localhost:4000/city/${ locale.idlocale }/now`)
             .then(response => {
                 setLoading(false);
                 if(response.status === 404) {

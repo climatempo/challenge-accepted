@@ -19,7 +19,7 @@ function SearchBar() {
         if(input.length < 3 || input.length > 100)
             return;
 
-        fetch(`http://localhost/search/${input}`)
+        fetch(`http://localhost:4000/search/${input}`)
             .then(response => response.json())
             .then(setOptions)
             .catch(err => {

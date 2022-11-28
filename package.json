@@ -1,0 +1,10 @@
+{
+  "name": "clima-tempo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "docker": "docker-compose up",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  }
+}

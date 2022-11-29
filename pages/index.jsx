@@ -1,17 +1,18 @@
 import Head from "next/head"
 import Image from "next/image"
 import Deck from "components/Deck"
+import useSWR from "swr"
+
 import logo from "public/images/logo-white.png"
+import weather from "data/weather.json"
 import styles from "styles/Home.module.scss"
 
-const weather = {
-  date: "2017-02-01",
-  text: "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
-  temperature: { min: 20, max: 28 },
-  rain: { probability: 60, precipitation: 20 },
-}
-
 export default function Home() {
+  const fetcher = (url) => fetch(url).then((res) => res.json())
+  const { data, error } = useSWR("/api/staticdata", fetcher)
+  // console.log("data: ", data)
+  const weather = data
+
   return (
     <div className={styles.container}>
       <Head>

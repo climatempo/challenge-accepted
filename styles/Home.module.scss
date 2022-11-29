@@ -5,18 +5,24 @@
 }
 
 $climatempo-primary-color: hsl(211.93, 80.28%, 41.76%);
+$ratio: 6;
 
 .nav {
   @extend %flex-center;
-  // justify-content: space-between;
   height: 10vh;
   width: 100vw;
   background-color: $climatempo-primary-color;
 }
 
 .image_container {
+  @extend %flex-center;
   position: relative;
-  width: 50%;
+  width: calc(1202px / $ratio);
+  height: calc(170px / $ratio);
+}
+
+.menu {
+  color: white;
 }
 
 .main {

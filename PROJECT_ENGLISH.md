@@ -1,3 +1,5 @@
+[![Test](https://github.com/laravieira/climatempo-challenge/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/laravieira/climatempo-challenge/actions/workflows/test.yml)
+
 ## Challenge resolution
 ###### [Versão em português](PROJECT.md)
 

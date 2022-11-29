@@ -5,7 +5,7 @@ type PrecipitationState = {
 }
 
 const initialState = {
-    value: localStorage.getItem('precipitation') == 'inch' ? 'inch' : 'mm'
+    value: localStorage.getItem('precipitation') === 'inch' ? 'inch' : 'mm'
 } as PrecipitationState;
 
 const precipitation = createSlice({

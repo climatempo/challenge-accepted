@@ -4,7 +4,15 @@
   "private": true,
   "scripts": {
     "docker": "docker-compose up",
-    "start": "react-scripts start",
-    "test": "react-scripts test"
+    "install:web": "cd web && npm install",
+    "install:server": "cd server && npm install",
+    "postinstall": "concurrently \"npm run install:server\" \"npm run install:web\"",
+    "start:web": "cd web && npm start",
+    "start:server": "cd server && npm start",
+    "start": "concurrently \"npm run start:server\" \"npm run start:web\"",
+    "test": "cd server && npm run test"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   }
 }

@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "build": "tsc",
-    "start:dev": "nodemon",
+    "start": "nodemon",
     "test": "jest"
   },
   "keywords": [
@@ -33,6 +33,7 @@
     "@elastic/elasticsearch": "^8.5.0",
     "@types/cors": "^2.8.12",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "node-fetch": "^2.6.7"
   }

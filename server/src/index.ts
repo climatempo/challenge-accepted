@@ -3,6 +3,9 @@ import cors from 'cors';
 import routes from './Routes/root.route';
 import Indexer from './Indexer/Indexer.indexer';
 import EventEmitter from 'events';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 EventEmitter.defaultMaxListeners = 100;
 
@@ -13,10 +16,7 @@ app.use(cors());
 app.use(routes);
 
 
-console.log('Waiting 12s for Elastic to load...');
-setTimeout(() => {
-    app.listen(process.env.PORT || 4000);
+app.listen(process.env.PORT || 4000);
 
-    new Indexer().execute();
-    console.log(`Service available on port ${process.env.PORT || 4000}`);
-}, 12000);
+new Indexer().execute();
+console.log(`Service available on port ${process.env.PORT || 4000}`);

@@ -3,7 +3,7 @@ import { ReactNode, useEffect, useState } from 'react';
 import { CircularProgress, Typography } from '@mui/material';
 import { useSnackbar } from 'notistack';
 
-type InstantWeather = {
+type InstantWeatherModel = {
     idlocale: number,
     temperature: number,
     icon: string,
@@ -18,10 +18,9 @@ type InstantWeather = {
 function InstantWeather() {
     const locale = useAppSelector(state => state.locale.value);
     const tempUnity = useAppSelector(state => state.temperature.value);
-    const [weather, setWeather] = useState<InstantWeather>();
+    const [weather, setWeather] = useState<InstantWeatherModel>();
     const [loading, setLoading] = useState<boolean>(true);
     const { enqueueSnackbar: notify } = useSnackbar();
-    let fetchBlock = false;
 
     useEffect(() => {
         if(!locale)
@@ -37,11 +36,9 @@ function InstantWeather() {
             })
             .then(weather => setWeather(weather))
             .catch(err => {
-                fetchBlock = true;
                 setLoading(false);
                 console.error(err);
                 notify('Alguma coisa deu errado.', { variant: 'error'});
-                setTimeout(() => fetchBlock = false, 2000);
             });
     }, [locale]);
 
@@ -69,7 +66,7 @@ function InstantWeather() {
         </div>;
     }
 
-    function renderContent(weather: InstantWeather) {
+    function renderContent(weather: InstantWeatherModel) {
         const { temperature, windVelocity, pressure, sensation, humidity, condition } = weather;
         return <>
             <div className="flex flex-col sm:flex-row items-center sm:items-end gap-x-4">

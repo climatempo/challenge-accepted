@@ -31,6 +31,7 @@ npm start
 ```
 
 ### How to run tests
+Vá para o diretório raiz do desafio e execute:
 ```shell
 npm install
 npm run test

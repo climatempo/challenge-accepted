@@ -22,7 +22,7 @@ Set the following environment variables
 * `ELASTIC_USER=[elastic user]`
 * `ELASTIC_PASSWORD=[elastic password]`
 
-You can create a `.env` file on the `/server` folder to declare these variables.
+You can create a `.env` file on the `/server` folder to declare these variables in.
 
 Go to challenge root and type:
 ```shell
@@ -31,6 +31,7 @@ npm start
 ```
 
 ### How to run tests
+Go to challenge root and type:
 ```shell
 npm install
 npm run test

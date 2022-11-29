@@ -5,7 +5,7 @@ type TemperatureState = {
 }
 
 const initialState = {
-    value: localStorage.getItem('temperature') == 'f' ? 'f' : 'c'
+    value: localStorage.getItem('temperature') === 'f' ? 'f' : 'c'
 } as TemperatureState;
 
 const temperature = createSlice({

@@ -41,7 +41,6 @@ function DailyWeathers() {
     const [weathers, setWeathers] = useState<DailyWeather[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const { enqueueSnackbar: notify } = useSnackbar();
-    let fetchBlock = false;
 
     useEffect(() => {
         if(!locale)
@@ -57,11 +56,9 @@ function DailyWeathers() {
             })
             .then(weathers => setWeathers(weathers))
             .catch(err => {
-                fetchBlock = true;
                 console.error(err);
                 setLoading(false);
                 notify('Alguma coisa deu errado.', { variant: 'error'});
-                setTimeout(() => fetchBlock = false, 2000);
             });
     }, [locale]);
 

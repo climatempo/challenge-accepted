@@ -15,6 +15,11 @@ services:
       - http.cors.allow-headers=X-Requested-With,Content-Type,Content-Length,Authorization
     ports:
       - 9200:9200
+    healthcheck:
+      test: curl -u elastic:DrrW*t2Wr7rFuKYV!rHV -s -f http://elastic:9200 || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 50
   server:
     build:
       context: ./server
@@ -27,14 +32,15 @@ services:
     ports:
       - "4000:4000"
     depends_on:
-      - elastic
+      elastic:
+        condition: service_healthy
   web:
     container_name: ct-web
     build:
       context: ./web
       dockerfile: ./Dockerfile
     depends_on:
-      - server
-      - elastic
+      elastic:
+        condition: service_healthy
     ports:
       - "3000:3000"

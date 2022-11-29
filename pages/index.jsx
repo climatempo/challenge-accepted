@@ -1,6 +1,8 @@
 import Head from "next/head"
 import Image from "next/image"
 import Card from "components/Card"
+import logo from "public/images/logo-white.png"
+import bars from "public/images/bars-solid.svg"
 import styles from "styles/Home.module.scss"
 
 export default function Home() {
@@ -15,7 +17,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav></nav>
+      <nav className={styles.nav}>
+        <div className={styles.image_container}>
+          <Image
+            src={logo}
+            width="1202"
+            height="170"
+            layout="responsive"
+            alt="logo"
+          />
+        </div>
+        <div className="styles.menu"></div>
+      </nav>
 
       <main className={styles.main}>
         <div className={styles.grid}>

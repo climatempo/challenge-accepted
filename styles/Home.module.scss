@@ -4,8 +4,19 @@
   align-items: center;
 }
 
-.container {
-  padding: 0 2rem;
+$climatempo-primary-color: hsl(211.93, 80.28%, 41.76%);
+
+.nav {
+  @extend %flex-center;
+  // justify-content: space-between;
+  height: 10vh;
+  width: 100vw;
+  background-color: $climatempo-primary-color;
+}
+
+.image_container {
+  position: relative;
+  width: 50%;
 }
 
 .main {
@@ -24,38 +35,8 @@
 }
 
 .footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
   flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
 }
 
 .code {
@@ -68,11 +49,10 @@
 }
 
 .grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-center;
   flex-wrap: wrap;
   max-width: 800px;
+  flex-direction: column;
 }
 
 .card:hover,
@@ -98,22 +78,26 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
+  .nav {
+    .image_container {
+    }
+  }
   .grid {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   .card,
+//   .footer {
+//     border-color: #222;
+//   }
+//   .code {
+//     background: #111;
+//   }
+//   .logo img {
+//     filter: invert(1);
+//   }
+// }

@@ -1,6 +1,6 @@
 import Head from "next/head"
 import Image from "next/image"
-import Card from "components/Card"
+import Deck from "components/Deck"
 import logo from "public/images/logo-white.png"
 import styles from "styles/Home.module.scss"
 
@@ -31,10 +31,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          <Card {...weather}></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
+          <Deck {...weather}></Deck>
         </div>
       </main>
 

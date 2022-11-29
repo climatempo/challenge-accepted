@@ -15,6 +15,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <nav></nav>
+
       <main className={styles.main}>
         <div className={styles.grid}>
           <Card></Card>

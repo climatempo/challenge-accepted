@@ -4,6 +4,13 @@ import Card from "components/Card"
 import logo from "public/images/logo-white.png"
 import styles from "styles/Home.module.scss"
 
+const weather = {
+  date: "2017-02-01",
+  text: "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
+  temperature: { min: 20, max: 28 },
+  rain: { probability: 60, precipitation: 20 },
+}
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -24,7 +31,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          <Card></Card>
+          <Card {...weather}></Card>
           <Card></Card>
           <Card></Card>
           <Card></Card>

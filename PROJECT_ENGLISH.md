@@ -1,6 +1,8 @@
 ## Challenge resolution
 ###### [Versão em português](PROJECT.md)
 
+[![Video](https://img.youtube.com/vi/1B_0Zs2_3VA/0.jpg)](https://www.youtube.com/watch?v=1B_0Zs2_3VA)
+
 ### How to run using Docker
 Go to the challenge root source and run:
 ```shell

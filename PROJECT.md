@@ -1,6 +1,8 @@
 ## Resolução do Desafio
 ###### [English version](/PROJECT_ENGLISH.md)
 
+[![Video](https://img.youtube.com/vi/1B_0Zs2_3VA/0.jpg)](https://www.youtube.com/watch?v=1B_0Zs2_3VA)
+
 ### Como executar usando o Docker
 Vá para o diretório raiz do desafio e execute:
 ```shell

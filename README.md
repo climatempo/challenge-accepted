@@ -7,6 +7,12 @@
 ___
 
 
+[![Video](https://img.youtube.com/vi/1B_0Zs2_3VA/0.jpg)](https://www.youtube.com/watch?v=1B_0Zs2_3VA)
+
+
+___
+
+
 ## Processo de recrutamento
 
 Olá desenvolvedor, pronto para participar do nosso processo de recrutamento para vaga de Full-stack?

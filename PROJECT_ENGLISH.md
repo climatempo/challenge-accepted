@@ -3,6 +3,25 @@
 
 [![Video](https://img.youtube.com/vi/1B_0Zs2_3VA/0.jpg)](https://www.youtube.com/watch?v=1B_0Zs2_3VA)
 
+### Checklist
+- [x] HTML5/CSS3/Javascript
+- [x] React.js/Typescript/ES-6/JSX
+- [x] Node.js/Typescript/REST API
+- [x] Docker
+- [x] Responsiveness
+- [x] Dynamic auto complete search
+- [x] 1 card for each daily weather provision
+- [x] FE/BE User input validation
+- [x] Cache (to save customization)
+- [x] Use of Elasticsearch as db
+- [x] Jest unit tests on BE
+- [x] Good code/design practices
+- [x] Accessibility ready page
+- [x] Real updated data usage
+- [x] Improved search performance with client filtering
+- [ ] Get you a coffee
+- [ ] Make your bed
+
 ### How to run using Docker
 Go to the challenge root source and run:
 ```shell
@@ -140,7 +159,7 @@ pressure: number # The current atmospheric pressure
 date: string # The date and time of this weather info
 ```
 
-###### [Daily Weather info](server/src/Models/InstantWeather.model.ts)
+###### [Daily Weather info](server/src/Models/DailyWeather.model.ts)
 ```yaml
 idcity: number # The city's code
 moon: string[] # The day's list of moons

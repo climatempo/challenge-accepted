@@ -3,6 +3,25 @@
 
 [![Video](https://img.youtube.com/vi/1B_0Zs2_3VA/0.jpg)](https://www.youtube.com/watch?v=1B_0Zs2_3VA)
 
+### Checklist
+- [x] HTML5/CSS3/Javascript
+- [x] React.js/Typescript/ES-6/JSX
+- [x] API Node.js/Typescript/REST
+- [x] Docker
+- [x] Responsividade
+- [x] Pesquisa autocompleta dinâmica
+- [x] 1 cartão para cada provisão meteorológica diária
+- [x] FE/BE Validação de entrada do usuário
+- [x] Cache (para salvar a personalização)
+- [x] Uso do Elasticsearch como banco de dados
+- [x] Testes unitários com Jest no BE
+- [x] Boas práticas de código/design
+- [x] Página com acessibilidade
+- [x] Uso de dados reais atualizados
+- [x] Desempenho de pesquisa aprimorado com filtragem no cliente
+- [ ] Te faz um café
+- [ ] Arruma sua cama
+
 ### Como executar usando o Docker
 Vá para o diretório raiz do desafio e execute:
 ```shell
@@ -18,8 +37,8 @@ npm run docker
 - [`http://localhost:4000`](http://localhost:4000) -> API REST
 - [`http://localhost:9200`](http://localhost:9200) -> Elasticsearch
 
-### How to run locally
-###### Requirements
+### Como executar localmente
+###### Requisitos
 * Elastic search ^8 instalado sem TLS
 * Node.js ^19 instalado
 * npm ^8 instalado
@@ -41,14 +60,14 @@ npm start
 - [`http://localhost:3000`](http://localhost:3000) -> Página web
 - [`http://localhost:4000`](http://localhost:4000) -> API REST
 
-### How to run tests
+### Como executar testes
 Vá para o diretório raiz do desafio e execute:
 ```shell
 npm install
 npm run test
 ```
 
-## Approach
+## Abordagem
 #### Server
 Primeiro comecei a entender os [dados fictícios](base) oferecidos no repositório. Como os dados estavam muito desatualizados comecei a pesquisar se os dados estavam disponíveis publicamente, descubro a [API Clima Tempo Advisor](https://advisor.climatempo.com.br/), que permitia apenas a busca limitada de uma cidade por token por 24hs.
 
@@ -140,7 +159,7 @@ pressão: number # A pressão atmosférica atual
 date: string # A data e hora desta informação meteorológica
 ```
 
-###### [Informações meteorológicas diárias](server/src/Models/InstantWeather.model.ts)
+###### [Informações meteorológicas diárias](server/src/Models/DailyWeather.model.ts)
 ```yaml
 idcity: number # Código da cidade
 moon: string[] # Lista de luas do dia

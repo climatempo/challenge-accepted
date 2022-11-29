@@ -18,17 +18,25 @@ function Card(props) {
     <div className={style.card}>
       <h3>{date}</h3>
       <p>{text}</p>
-      <Image src={upArrow} alt="temperatura máxima" width="32" height="32" />
-      <span className="max_temp">{temperature.max}ºC</span>
+      <div className={style.stats}>
+        <Image src={upArrow} alt="temperatura máxima" width="32" height="32" />
+        <span className={style.max_temp}>{temperature.max}ºC</span>
 
-      <Image src={downArrow} alt="temperatura mínima" width="32" height="32" />
-      <span className="min_temp">{temperature.min}ºC</span>
+        <Image
+          src={downArrow}
+          alt="temperatura mínima"
+          width="32"
+          height="32"
+        />
+        <span className={style.min_temp}>{temperature.min}ºC</span>
+      </div>
+      <div className={style.stats}>
+        <Image src={raindrop} alt="temperatura máxima" width="32" height="32" />
+        <span className="precipitation">{rain.precipitation}mm</span>
 
-      <Image src={raindrop} alt="temperatura máxima" width="32" height="32" />
-      <span className="precipitation">{rain.precipitation}mm</span>
-
-      <Image src={umbrella} alt="temperatura máxima" width="32" height="32" />
-      <span className="probability">{rain.probability}%</span>
+        <Image src={umbrella} alt="temperatura máxima" width="32" height="32" />
+        <span className="probability">{rain.probability}%</span>
+      </div>
     </div>
   )
 }

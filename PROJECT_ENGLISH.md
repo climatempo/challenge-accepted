@@ -13,6 +13,11 @@ or, if you have npm available
 npm run docker
 ```
 
+##### Endpoints:
+- [`http://localhost:3000`](http://localhost:3000) -> Página web
+- [`http://localhost:4000`](http://localhost:4000) -> API REST
+- [`http://localhost:9200`](http://localhost:9200) -> Elasticsearch
+
 ### How to run locally
 ###### Requirements
 * Elastic search ^8 running without TLS
@@ -31,6 +36,10 @@ Go to challenge root and type:
 npm install
 npm start
 ```
+
+##### Endpoints:
+- [`http://localhost:3000`](http://localhost:3000) -> Página web
+- [`http://localhost:4000`](http://localhost:4000) -> API REST
 
 ### How to run tests
 Go to challenge root and type:

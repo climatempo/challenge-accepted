@@ -7,11 +7,17 @@
 ___
 
 
-[![Video](https://img.youtube.com/vi/1B_0Zs2_3VA/0.jpg)](https://www.youtube.com/watch?v=1B_0Zs2_3VA)
-
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=1B_0Zs2_3VA">
+      <img src="https://img.youtube.com/vi/1B_0Zs2_3VA/0.jpg" alt="Video" width="600px"/>
+  </a>
+</p>
 
 ___
 
+Instruções
+- [English version](PROJECT_ENGLISH.md)
+- [Versão em português](PROJECT.md)
 
 ## Processo de recrutamento
 

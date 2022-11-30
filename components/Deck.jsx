@@ -1,4 +1,4 @@
-import React, { use, useState } from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import Card from "./Card"
 
@@ -101,7 +101,7 @@ function Deck(props) {
   }
 
   const deckOfCards = weather.map((props, index) => (
-    <Card {...props} key={index} />
+    <Card {...props} isCelsius={isCelsius} isMetric={isMetric} key={index} />
   ))
 
   return <>{deckOfCards}</>

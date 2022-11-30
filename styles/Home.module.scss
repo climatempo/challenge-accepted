@@ -41,7 +41,6 @@ $ratio: 6;
 .grid {
   @extend %flex-center;
   flex-wrap: wrap;
-  max-width: 1200px;
   flex-direction: column;
 }
 

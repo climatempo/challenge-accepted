@@ -1,0 +1,21 @@
+.wrapper {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 15vh;
+  :not(:focus) {
+    visibility: hidden;
+  }
+}
+
+.input {
+  width: 90vw;
+  height: 10vh;
+  text-align: center;
+  font-size: 1.3rem;
+  background-color: rgba($color: white, $alpha: 0.96);
+  border: 1px solid lightblue;
+}

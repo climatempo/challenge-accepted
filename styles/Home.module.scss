@@ -9,9 +9,29 @@ $ratio: 6;
 
 .nav {
   @extend %flex-center;
+  justify-content: space-between;
   height: 10vh;
   width: 100vw;
   background-color: $climatempo-primary-color;
+  padding: 0 40px;
+}
+
+.search {
+  position: relative;
+  &:hover {
+    border: 1px solid white;
+    padding: 2px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+  }
+  cursor: pointer;
+}
+
+.icon_container {
+  @extend %flex-center;
+  width: 50px;
+  height: 50px;
 }
 
 .image_container {

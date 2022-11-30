@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 import Head from "next/head"
 import Image from "next/image"
@@ -8,13 +8,14 @@ import { autoCompleteData } from "data/testData.js"
 import jsonData from "data/weather.json"
 
 import logo from "public/images/logo-white.png"
+import search from "public/images/icons/search.png"
+import menu from "public/images/icons/menu.png"
 import styles from "styles/Home.module.scss"
 
 // HOME --------------------------------
 
 export default function Home() {
   const data = jsonData
-  console.log("data: ", data[0].weather)
 
   const weather = data[0].weather
 
@@ -28,6 +29,13 @@ export default function Home() {
     setVolume(!isMetric)
   }
 
+  useEffect(() => {
+    const input = document.querySelector("#input")
+    input.focus()
+    const searchButton = document.querySelector("#search")
+    searchButton.addEventListener("click", () => {})
+  })
+
   return (
     <div className={styles.container}>
       <Head>
@@ -40,9 +48,21 @@ export default function Home() {
       </Head>
 
       <nav className={styles.nav}>
+        <div id="search" className={styles.icon_container}>
+          {" "}
+          <Image
+            className={styles.search}
+            src={search}
+            alt="lupa"
+            width="30"
+            height="30"
+          />
+        </div>
+
         <div className={styles.image_container}>
           <Image src={logo} layout="fill" alt="logo" />
         </div>
+        <Image src={menu} alt="barras de menu" width="30" height="30" />
       </nav>
 
       <main className={styles.main}>

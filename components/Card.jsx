@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { number, PropTypes, string } from "prop-types"
 import style from "styles/components/Card.module.scss"
 import upArrow from "public/images/icons/up-arrow.png"
 import downArrow from "public/images/icons/down-arrow.png"
@@ -62,19 +61,6 @@ function Card(props) {
       </div>
     </div>
   )
-}
-
-Card.propTypes = {
-  date: string,
-  text: string,
-  temperature: PropTypes.shape({
-    min: number,
-    max: number,
-  }),
-  rain: PropTypes.shape({
-    probability: number,
-    precipitation: number,
-  }),
 }
 
 export default Card

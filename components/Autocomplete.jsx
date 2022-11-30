@@ -1,4 +1,5 @@
 import { useState } from "react"
+import style from "styles/components/Autocomplete.module.scss"
 
 const AutoComplete = ({ data }) => {
   const [suggestions, setSuggestions] = useState([])
@@ -68,12 +69,13 @@ const AutoComplete = ({ data }) => {
   }
 
   return (
-    <div className="autocomplete">
+    <div id="input" className={style.wrapper}>
       <input
         type="text"
         value={value}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
+        className={style.input}
       />
       {suggestionsActive && <Suggestions />}
     </div>

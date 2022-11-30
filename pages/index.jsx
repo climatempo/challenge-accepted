@@ -1,18 +1,11 @@
 import Head from "next/head"
 import Image from "next/image"
 import Deck from "components/Deck"
-import useSWR from "swr"
 
 import logo from "public/images/logo-white.png"
-import weather from "data/weather.json"
 import styles from "styles/Home.module.scss"
 
 export default function Home() {
-  const fetcher = (url) => fetch(url).then((res) => res.json())
-  const { data, error } = useSWR("/api/staticdata", fetcher)
-  // console.log("data: ", data)
-  const weather = data
-
   return (
     <div className={styles.container}>
       <Head>
@@ -32,7 +25,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          <Deck {...weather}></Deck>
+          <Deck></Deck>
         </div>
       </main>
 

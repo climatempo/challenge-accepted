@@ -22,11 +22,8 @@ $ratio: 6;
 }
 
 .main {
-  @extend %flex-center;
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  flex-direction: column;
+  background-color: hsl(0, 0, 95%);
 }
 
 .footer {
@@ -44,7 +41,7 @@ $ratio: 6;
 .grid {
   @extend %flex-center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1200px;
   flex-direction: column;
 }
 
@@ -54,10 +51,6 @@ $ratio: 6;
 }
 
 @media (min-width: 600px) {
-  .nav {
-    .image_container {
-    }
-  }
   .grid {
     width: 100%;
     flex-direction: row;

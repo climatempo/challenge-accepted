@@ -100,18 +100,11 @@ function Deck(props) {
     setVolume(!isMetric)
   }
 
-  const deckOfCards = weather.map((props) => (
-    <Card {...props} key={props.date} />
+  const deckOfCards = weather.map((props, index) => (
+    <Card {...props} key={index} />
   ))
 
-  return (
-    <div>
-      <div>
-        <input type="to" name="" id="" />
-      </div>
-      {deckOfCards}
-    </div>
-  )
+  return <>{deckOfCards}</>
 }
 
 Deck.propTypes = {}

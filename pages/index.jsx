@@ -16,8 +16,14 @@ import styles from "styles/Home.module.scss"
 // HOME --------------------------------
 
 export default function Home() {
-  const weather = weatherData[0].weather
-  const locale = weatherData[0].locale
+  const [city, setCity] = useState(0)
+
+  const chooseCity = (index) => {
+    setCity(index)
+  }
+
+  const weather = weatherData[city].weather
+  const locale = weatherData[city].locale
 
   const [isCelsius, setCelsius] = useState(true)
   const handleDegree = () => {
@@ -32,7 +38,6 @@ export default function Home() {
   const cityNames = locales.map((locale) => {
     return locale.name
   })
-  console.log("cityNames: ", cityNames)
 
   return (
     <div className={styles.container}>
@@ -65,7 +70,7 @@ export default function Home() {
       <CityInfo locale={locale} />
 
       <main className={styles.main}>
-        <AutoComplete data={cityNames} />
+        <AutoComplete data={cityNames} chooseCity={chooseCity} />
         <div className={styles.grid}>
           <Deck isCelsius={isCelsius} isMetric={isMetric} weather={weather} />
         </div>

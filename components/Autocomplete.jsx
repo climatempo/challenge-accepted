@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import styles from "styles/components/Autocomplete.module.scss"
 
-const AutoComplete = ({ data }) => {
+const AutoComplete = ({ data, chooseCity }) => {
   const [suggestions, setSuggestions] = useState([])
   const [suggestionIndex, setSuggestionIndex] = useState(0)
   const [suggestionsActive, setSuggestionsActive] = useState(false)
@@ -12,7 +12,12 @@ const AutoComplete = ({ data }) => {
     setValue(query)
     if (query.length >= 1) {
       const filterSuggestions = data.filter(
-        (suggestion) => suggestion.toLowerCase().indexOf(query) > -1
+        (suggestion) =>
+          suggestion
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/\p{Diacritic}/gu, "")
+            .indexOf(query) > -1
       )
       setSuggestions(filterSuggestions)
       setSuggestionsActive(true)
@@ -32,15 +37,13 @@ const AutoComplete = ({ data }) => {
 
   const handleClick = (e) => {
     setSuggestions([])
-    setValue(e.target.innerText)
+    chooseCity(parseInt(e.target.index))
     setSuggestionsActive(false)
   }
 
   const handleKeyDown = (e) => {
     // UP ARROW
     if (e.keyCode === 38) {
-      console.log("suggestionIndex: ", suggestionIndex)
-
       if (suggestionIndex === 0) {
         return
       }
@@ -59,7 +62,8 @@ const AutoComplete = ({ data }) => {
     // ENTER
     else if (e.keyCode === 13) {
       setValue(suggestions[suggestionIndex])
-      setSuggestionIndex(0)
+      chooseCity(suggestionIndex)
+      // setSuggestionIndex(0)
       setSuggestionsActive(false)
     }
   }
@@ -75,6 +79,7 @@ const AutoComplete = ({ data }) => {
                 ${index === suggestionIndex ? styles.active : ""}
                 `}
               key={index}
+              index={index}
               onClick={handleClick}
               onMouseOver={(e) => {
                 e.target.classList.add(`${styles.active}`)

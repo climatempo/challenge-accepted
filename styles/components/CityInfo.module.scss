@@ -8,16 +8,14 @@
   background-color: white;
 }
 
-.city_name {
-  margin: 0 0 20px 0;
-}
-
 .title {
   margin: 0;
-
-  display: inline-block;
   font-size: 2rem;
   color: $climatempo-primary-color;
+}
+
+.city_name {
+  margin: 0 0 20px 0;
 }
 
 .gps {

@@ -7,6 +7,8 @@ const AutoComplete = ({ data }) => {
   const [suggestionsActive, setSuggestionsActive] = useState(false)
   const [value, setValue] = useState("")
 
+  const cityNames = Object.keys(data)
+
   const handleChange = (e) => {
     const query = e.target.value.toLowerCase()
     setValue(query)
@@ -39,6 +41,8 @@ const AutoComplete = ({ data }) => {
   const handleKeyDown = (e) => {
     // UP ARROW
     if (e.keyCode === 38) {
+      console.log("suggestionIndex: ", suggestionIndex)
+
       if (suggestionIndex === 0) {
         return
       }
@@ -46,8 +50,11 @@ const AutoComplete = ({ data }) => {
     }
     // DOWN ARROW
     else if (e.keyCode === 40) {
-      if (suggestionIndex - 1 === suggestions.length) {
-        return
+      console.log("suggestionIndex: ", suggestionIndex)
+      console.log("suggestions: ", suggestions)
+
+      if (suggestionIndex === suggestions.length - 1) {
+        setSuggestionIndex(0)
       }
       setSuggestionIndex(suggestionIndex + 1)
     }
@@ -61,13 +68,22 @@ const AutoComplete = ({ data }) => {
 
   const Suggestions = () => {
     return (
-      <ul className="suggestions">
+      <ul className={styles.suggestions}>
         {suggestions.map((suggestion, index) => {
           return (
             <li
-              className={index === suggestionIndex ? "active" : ""}
+              className={`
+                ${styles.item}
+                ${index === suggestionIndex ? styles.active : ""}
+                `}
               key={index}
               onClick={handleClick}
+              onMouseOver={(e) => {
+                e.target.classList.add(`${styles.active}`)
+              }}
+              onMouseOut={(e) => {
+                e.target.classList.remove(`${styles.active}`)
+              }}
             >
               {suggestion}
             </li>
@@ -87,10 +103,7 @@ const AutoComplete = ({ data }) => {
         className={styles.input}
         id="input"
       />
-      <p className={styles.suggestions}>
-        {" "}
-        {suggestionsActive && <Suggestions />}
-      </p>
+      {suggestionsActive && <Suggestions />}
     </div>
   )
 }

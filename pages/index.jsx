@@ -4,7 +4,8 @@ import Head from "next/head"
 import Image from "next/image"
 import Deck from "components/Deck"
 import AutoComplete from "components/Autocomplete"
-import { autoCompleteData } from "data/testData.js"
+import autoCompleteData from "data/testData.json"
+import locales from "data/locales.json"
 import jsonData from "data/weather.json"
 
 import logo from "public/images/logo-white.png"
@@ -15,6 +16,7 @@ import styles from "styles/Home.module.scss"
 // HOME --------------------------------
 
 export default function Home() {
+  console.log("autoCompleteData: ", autoCompleteData)
   const data = jsonData
 
   const weather = data[0].weather
@@ -28,6 +30,11 @@ export default function Home() {
   const handleVolume = () => {
     setVolume(!isMetric)
   }
+
+  const cityNames = locales.map((locale) => {
+    return locale.name
+  })
+  console.log("cityNames: ", cityNames)
 
   return (
     <div className={styles.container}>
@@ -59,7 +66,7 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <AutoComplete data={autoCompleteData} />
+        <AutoComplete data={cityNames} />
         <div className={styles.grid}>
           <Deck isCelsius={isCelsius} isMetric={isMetric} weather={weather} />
         </div>

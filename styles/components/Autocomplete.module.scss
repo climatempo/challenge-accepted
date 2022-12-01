@@ -3,14 +3,17 @@
   flex-direction: column;
   z-index: 2;
   display: flex;
-  justify-content: top;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   padding: 5vh 0;
-  width: 90vw;
-  height: 80vh;
-  margin: 0 5vw;
+  width: 96vw;
+  height: 200vh;
+  margin: 0 2vw;
   &:focus-within {
     background-color: rgba($color: white, $alpha: 0.9);
+    .suggestions {
+      visibility: visible;
+    }
   }
 }
 
@@ -33,7 +36,16 @@
 }
 
 .suggestions {
+  visibility: hidden;
   font-size: 2rem;
   color: gray;
-  text-decoration: none;
+  list-style-type: none;
+}
+
+.item:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: hsl(211.93, 80.28%, 41.76%);
 }

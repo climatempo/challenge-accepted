@@ -1,21 +1,39 @@
 .wrapper {
   position: absolute;
+  flex-direction: column;
   z-index: 2;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 15vh;
-  :not(:focus) {
-    visibility: hidden;
+  justify-content: top;
+  align-items: flex-start;
+  padding: 5vh 0;
+  width: 90vw;
+  height: 80vh;
+  margin: 0 5vw;
+  &:focus-within {
+    background-color: rgba($color: white, $alpha: 0.9);
   }
 }
 
 .input {
-  width: 90vw;
-  height: 10vh;
+  position: relative;
+  left: -51vw;
+  top: 10vh;
+  width: 0vw;
+  height: 0vh;
   text-align: center;
   font-size: 1.3rem;
-  background-color: rgba($color: white, $alpha: 0.96);
+  background-color: white;
   border: 1px solid lightblue;
+  &:focus-within {
+    top: 0;
+    left: 0;
+    width: 90vw;
+    height: 10vh;
+  }
+}
+
+.suggestions {
+  font-size: 2rem;
+  color: gray;
+  text-decoration: none;
 }

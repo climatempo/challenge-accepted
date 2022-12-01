@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 import Head from "next/head"
 import Image from "next/image"
@@ -28,13 +28,6 @@ export default function Home() {
   const handleVolume = () => {
     setVolume(!isMetric)
   }
-
-  useEffect(() => {
-    const input = document.querySelector("#input")
-    input.focus()
-    const searchButton = document.querySelector("#search")
-    searchButton.addEventListener("click", () => {})
-  })
 
   return (
     <div className={styles.container}>

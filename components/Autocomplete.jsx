@@ -1,5 +1,5 @@
-import { useState } from "react"
-import style from "styles/components/Autocomplete.module.scss"
+import { useState, useEffect } from "react"
+import styles from "styles/components/Autocomplete.module.scss"
 
 const AutoComplete = ({ data }) => {
   const [suggestions, setSuggestions] = useState([])
@@ -20,6 +20,15 @@ const AutoComplete = ({ data }) => {
       setSuggestionsActive(false)
     }
   }
+
+  useEffect(() => {
+    const searchButton = document.querySelector("#search")
+    searchButton.addEventListener("click", (e) => {
+      e.preventDefault()
+      const input = document.querySelector("#input")
+      input.focus()
+    })
+  })
 
   const handleClick = (e) => {
     setSuggestions([])
@@ -69,15 +78,19 @@ const AutoComplete = ({ data }) => {
   }
 
   return (
-    <div id="input" className={style.wrapper}>
+    <div className={styles.wrapper}>
       <input
         type="text"
         value={value}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
-        className={style.input}
+        className={styles.input}
+        id="input"
       />
-      {suggestionsActive && <Suggestions />}
+      <p className={styles.suggestions}>
+        {" "}
+        {suggestionsActive && <Suggestions />}
+      </p>
     </div>
   )
 }

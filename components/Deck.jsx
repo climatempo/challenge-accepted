@@ -1,4 +1,3 @@
-import PropTypes from "prop-types"
 import Card from "./Card"
 
 function Deck(props) {
@@ -10,7 +9,5 @@ function Deck(props) {
 
   return <>{deckOfCards}</>
 }
-
-Deck.propTypes = {}
 
 export default Deck

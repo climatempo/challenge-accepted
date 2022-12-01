@@ -7,8 +7,6 @@ const AutoComplete = ({ data }) => {
   const [suggestionsActive, setSuggestionsActive] = useState(false)
   const [value, setValue] = useState("")
 
-  const cityNames = Object.keys(data)
-
   const handleChange = (e) => {
     const query = e.target.value.toLowerCase()
     setValue(query)

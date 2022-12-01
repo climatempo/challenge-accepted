@@ -2,11 +2,11 @@ import React, { useState } from "react"
 
 import Head from "next/head"
 import Image from "next/image"
+import CityInfo from "components/CityInfo"
 import Deck from "components/Deck"
 import AutoComplete from "components/Autocomplete"
-import autoCompleteData from "data/testData.json"
 import locales from "data/locales.json"
-import jsonData from "data/weather.json"
+import weatherData from "data/weather.json"
 
 import logo from "public/images/logo-white.png"
 import search from "public/images/icons/search.png"
@@ -16,10 +16,8 @@ import styles from "styles/Home.module.scss"
 // HOME --------------------------------
 
 export default function Home() {
-  console.log("autoCompleteData: ", autoCompleteData)
-  const data = jsonData
-
-  const weather = data[0].weather
+  const weather = weatherData[0].weather
+  const locale = weatherData[0].locale
 
   const [isCelsius, setCelsius] = useState(true)
   const handleDegree = () => {
@@ -46,7 +44,6 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <nav className={styles.nav}>
         <div id="search" className={styles.icon_container}>
           {" "}
@@ -65,13 +62,14 @@ export default function Home() {
         <Image src={menu} alt="barras de menu" width="30" height="30" />
       </nav>
 
+      <CityInfo locale={locale} />
+
       <main className={styles.main}>
         <AutoComplete data={cityNames} />
         <div className={styles.grid}>
           <Deck isCelsius={isCelsius} isMetric={isMetric} weather={weather} />
         </div>
       </main>
-
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

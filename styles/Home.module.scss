@@ -1,11 +1,4 @@
-%flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-$climatempo-primary-color: hsl(211.93, 80.28%, 41.76%);
-$ratio: 6;
+@use "styles/abstracts/index" as *;
 
 .nav {
   @extend %flex-center;

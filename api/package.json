@@ -1,15 +1,17 @@
 {
-   "name": "challenge-climatempo-backend",
+   "name": "challenge-climatempo-api",
    "version": "1.0.0",
-   "description": "",
+   "description": " ",
    "main": "index.ts",
    "scripts": {
       "build": "tsc",
       "start": "node build/index.ts",
       "dev": "ts-node-dev --ignore-watch node_modules src/index.ts"
    },
-   "keywords": [],
-   "author": "",
+   "keywords": [
+      "Climate API"
+   ],
+   "author": "Tayanne Novais @tayhsn",
    "license": "ISC",
    "devDependencies": {
       "@types/cors": "^2.8.12",
@@ -17,7 +19,6 @@
       "ts-node-dev": "^2.0.0"
    },
    "dependencies": {
-      "axios": "^1.2.0",
       "cors": "^2.8.5",
       "express": "^4.18.2",
       "graphql": "^16.6.0"

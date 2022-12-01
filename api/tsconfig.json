@@ -8,7 +8,6 @@
       "strictNullChecks": false,
       "incremental": true,
       "esModuleInterop": true,
-      "rootDir": "src",
       "outDir": "dist"
    },
    "include": ["src/"]

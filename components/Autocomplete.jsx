@@ -51,20 +51,22 @@ const AutoComplete = ({ data, chooseCity }) => {
     }
     // DOWN ARROW
     else if (e.keyCode === 40) {
-      console.log("suggestionIndex: ", suggestionIndex)
-      console.log("suggestions: ", suggestions)
-
       if (suggestionIndex === suggestions.length - 1) {
-        setSuggestionIndex(0)
+        return
       }
       setSuggestionIndex(suggestionIndex + 1)
     }
     // ENTER
     else if (e.keyCode === 13) {
       setValue(suggestions[suggestionIndex])
+      console.log("suggestionIndex: ", suggestionIndex)
       chooseCity(suggestionIndex)
-      // setSuggestionIndex(0)
+      setSuggestionIndex(0)
       setSuggestionsActive(false)
+
+      // hide search bar
+      const input = document.querySelector("#input")
+      input.blur()
     }
   }
 

@@ -1,10 +1,14 @@
-import { ChakraProvider } from '@chakra-ui/react';
-import { Home } from './pages/Home';
+import { ThemeProvider } from 'styled-components';
+import { Home } from './pages/home';
+import { GlobalStyle } from './styles/global';
+import { theme } from './styles/theme/default';
 
 export function App() {
    return (
-      <ChakraProvider>
+      <ThemeProvider theme={theme}>
+         <GlobalStyle />
+
          <Home />
-      </ChakraProvider>
+      </ThemeProvider>
    );
 }

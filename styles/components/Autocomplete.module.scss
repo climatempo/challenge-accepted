@@ -9,34 +9,27 @@
   width: 96vw;
   height: 200vh;
   margin: 0 2vw;
-  &:focus-within {
-    background-color: rgba($color: white, $alpha: 0.9);
-    .suggestions {
-      visibility: visible;
-    }
-  }
+  background-color: rgba($color: white, $alpha: 0.9);
 }
 
 .input {
+  visibility: inherit;
   position: relative;
-  left: -51vw;
-  top: 10vh;
-  width: 0vw;
-  height: 0vh;
   text-align: center;
   font-size: 1.3rem;
   background-color: white;
   border: 1px solid lightblue;
-  &:focus-within {
-    top: 0;
-    left: 0;
-    width: 90vw;
-    height: 10vh;
-  }
+  top: 0;
+  left: 0;
+  width: 90vw;
+  height: 10vh;
+  border-radius: 30px;
+  color: hsl(0, 0, 35%);
+  font-size: 1.5rem;
 }
 
 .suggestions {
-  visibility: hidden;
+  visibility: inherit;
   font-size: 2rem;
   color: gray;
   list-style-type: none;
@@ -48,4 +41,8 @@
 
 .active {
   color: hsl(211.93, 80.28%, 41.76%);
+}
+
+.hidden {
+  visibility: hidden;
 }

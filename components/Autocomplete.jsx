@@ -1,12 +1,80 @@
 import { useState, useEffect } from "react"
+import debounce from "utils/debounce"
 import styles from "styles/components/Autocomplete.module.scss"
 
 const AutoComplete = ({ data, chooseCity }) => {
   const [suggestions, setSuggestions] = useState([])
-  const [suggestionIndex, setSuggestionIndex] = useState(0)
-  const [suggestionsActive, setSuggestionsActive] = useState(false)
+  const [selected, setSelected] = useState(-1)
   const [value, setValue] = useState("")
+  let time
 
+  useEffect(() => {
+    // CONFIGURA LUPA PARA ABRIR A BUSCA
+    const searchButton = document.querySelector("#search")
+    searchButton.addEventListener("click", () => {
+      openSearch()
+    })
+  })
+
+  function resetSelection() {
+    setSuggestions([])
+    setSelected(-1)
+  }
+
+  function hideSearch() {
+    const wrapper = document.querySelector(`.${styles.wrapper}`)
+    wrapper.classList.add(`${styles.hidden}`)
+    setValue("")
+    input.blur()
+  }
+
+  function openSearch() {
+    resetSelection()
+    const wrapper = document.querySelector(`.${styles.wrapper}`)
+    wrapper.classList.remove(`${styles.hidden}`)
+    const input = document.querySelector("#input")
+    input.focus()
+  }
+
+  // CONFIGURA NAVEGAÇÃO POR TECLADO
+  const handleKeyDown = (e) => {
+    // UP ARROW
+    if (e.keyCode === 38) {
+      if (selected <= 0) {
+        return
+      }
+      setSelected(selected - 1)
+    }
+    // DOWN ARROW
+    else if (e.keyCode === 40) {
+      if (selected === suggestions.length - 1) {
+        return
+      }
+      setSelected(selected + 1)
+    }
+    // ENTER
+    else if (e.keyCode === 13) {
+      setValue(suggestions[selected])
+
+      if (selected != -1) {
+        chooseCity(selected)
+      }
+      hideSearch()
+    } else if (e.keyCode === 27) {
+      hideSearch()
+    }
+  }
+
+  // CONFIGURA SELEÇÃO POR CLICK
+  function handleClick(e) {
+    const index = e.target.getAttribute("index")
+    console.log("index: ", index)
+    setSelected(index)
+    selected != -1 ? chooseCity(selected) : false
+    hideSearch()
+  }
+
+  // CONFIGURA COMPORTAMENTO DE ENTRADA DE TEXTO NO INPUT
   const handleChange = (e) => {
     const query = e.target.value.toLowerCase()
     setValue(query)
@@ -20,55 +88,12 @@ const AutoComplete = ({ data, chooseCity }) => {
             .indexOf(query) > -1
       )
       setSuggestions(filterSuggestions)
-      setSuggestionsActive(true)
     } else {
-      setSuggestionsActive(false)
+      resetSelection()
     }
   }
 
-  useEffect(() => {
-    const searchButton = document.querySelector("#search")
-    searchButton.addEventListener("click", (e) => {
-      e.preventDefault()
-      const input = document.querySelector("#input")
-      input.focus()
-    })
-  })
-
-  const handleClick = (e) => {
-    setSuggestions([])
-    chooseCity(parseInt(e.target.index))
-    setSuggestionsActive(false)
-  }
-
-  const handleKeyDown = (e) => {
-    // UP ARROW
-    if (e.keyCode === 38) {
-      if (suggestionIndex === 0) {
-        return
-      }
-      setSuggestionIndex(suggestionIndex - 1)
-    }
-    // DOWN ARROW
-    else if (e.keyCode === 40) {
-      if (suggestionIndex === suggestions.length - 1) {
-        return
-      }
-      setSuggestionIndex(suggestionIndex + 1)
-    }
-    // ENTER
-    else if (e.keyCode === 13) {
-      setValue(suggestions[suggestionIndex])
-      console.log("suggestionIndex: ", suggestionIndex)
-      chooseCity(suggestionIndex)
-      setSuggestionIndex(0)
-      setSuggestionsActive(false)
-
-      // hide search bar
-      const input = document.querySelector("#input")
-      input.blur()
-    }
-  }
+  const updateSearchText = debounce(handleChange)
 
   const Suggestions = () => {
     return (
@@ -78,13 +103,16 @@ const AutoComplete = ({ data, chooseCity }) => {
             <li
               className={`
                 ${styles.item}
-                ${index === suggestionIndex ? styles.active : ""}
+                ${index === selected ? styles.active : ""}
                 `}
               key={index}
               index={index}
-              onClick={handleClick}
+              onClick={(e) => {
+                handleClick(e)
+              }}
               onMouseOver={(e) => {
                 e.target.classList.add(`${styles.active}`)
+                setSelected(e.target.getAttribute("index"))
               }}
               onMouseOut={(e) => {
                 e.target.classList.remove(`${styles.active}`)
@@ -108,7 +136,7 @@ const AutoComplete = ({ data, chooseCity }) => {
         className={styles.input}
         id="input"
       />
-      {suggestionsActive && <Suggestions />}
+      {<Suggestions />}
     </div>
   )
 }

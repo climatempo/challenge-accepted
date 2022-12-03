@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react"
-
 import Head from "next/head"
 import Image from "next/image"
-import CityInfo from "components/CityInfo"
-import Deck from "components/Deck"
-import AutoComplete from "components/Autocomplete"
+
+import { AutoComplete, CityInfo, Deck, Menu } from "components"
+
 import locales from "data/locales.json"
 import weatherData from "data/weather.json"
 
@@ -18,6 +17,8 @@ import styles from "styles/Home.module.scss"
 export default function Home() {
   const [city, setCity] = useState(0)
   const [searchOpen, setSearchOpen] = useState(false)
+  const [isCelsius, setCelsius] = useState(true)
+  const [isMetric, setMetric] = useState(true)
 
   const chooseCity = (index) => {
     setCity(index)
@@ -30,12 +31,10 @@ export default function Home() {
   const weather = weatherData[city].weather
   const locale = weatherData[city].locale
 
-  const [isCelsius, setCelsius] = useState(true)
   const handleDegree = () => {
     setCelsius(!isCelsius)
   }
 
-  const [isMetric, setMetric] = useState(true)
   const handleVolume = () => {
     setVolume(!isMetric)
   }

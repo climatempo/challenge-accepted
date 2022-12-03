@@ -10,7 +10,9 @@
     "start:web": "cd web && npm start",
     "start:server": "cd server && npm start",
     "start": "concurrently \"npm run start:server\" \"npm run start:web\"",
-    "test": "cd server && npm run test"
+    "test:web": "cd web && npm run test",
+    "test:server": "cd server && npm run test",
+    "test": "npm run test:web && npm run tes:server"
   },
   "devDependencies": {
     "concurrently": "^7.6.0"

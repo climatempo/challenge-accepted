@@ -16,7 +16,7 @@
 - [x] FE/BE User input validation
 - [x] Cache (to save customization)
 - [x] Use of Elasticsearch as db
-- [x] Jest unit tests on BE
+- [x] Jest unit tests
 - [x] Good code/design practices
 - [x] Accessibility ready page
 - [x] Real updated data usage
@@ -67,6 +67,14 @@ Go to challenge root and type:
 ```shell
 npm install
 npm run test
+```
+To test just server, use:
+```shell
+npm run test:server
+```
+To test just web, use:
+```shell
+npm run test:web
 ```
 
 ## Approach

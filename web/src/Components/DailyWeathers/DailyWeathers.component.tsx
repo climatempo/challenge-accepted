@@ -6,7 +6,7 @@ import { useSnackbar } from 'notistack';
 // @ts-ignore
 import { WiThermometer, WiSunset, WiStrongWind, WiSunrise, WiWindDeg, WiRaindrop, WiRaindrops, WiUmbrella, WiThermometerExterior } from 'weather-icons-react';
 
-type DailyWeather = {
+export type DailyWeather = {
     idcity: number,
     moon: string[],
     rainbow: string,

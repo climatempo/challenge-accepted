@@ -3,7 +3,7 @@ import { ReactNode, useEffect, useState } from 'react';
 import { CircularProgress, Typography } from '@mui/material';
 import { useSnackbar } from 'notistack';
 
-type InstantWeatherModel = {
+export type InstantWeatherModel = {
     idlocale: number,
     temperature: number,
     icon: string,

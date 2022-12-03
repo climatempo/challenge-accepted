@@ -12,7 +12,6 @@ function SearchBar() {
     const server = useServerAddress();
     let fetchBlock = false;
 
-    console.log(process.env)
     function fetchSearch(event: FormEvent) {
         if(fetchBlock)
             return;

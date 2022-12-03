@@ -16,7 +16,7 @@
 - [x] FE/BE Validação de entrada do usuário
 - [x] Cache (para salvar a personalização)
 - [x] Uso do Elasticsearch como banco de dados
-- [x] Testes unitários com Jest no BE
+- [x] Testes unitários com Jest
 - [x] Boas práticas de código/design
 - [x] Página com acessibilidade
 - [x] Uso de dados reais atualizados
@@ -68,6 +68,15 @@ Vá para o diretório raiz do desafio e execute:
 npm install
 npm run test
 ```
+Para testar somente servidor, use:
+```shell
+npm run test:server
+```
+Para testar somente web, use:
+```shell
+npm run test:web
+```
+
 
 ## Abordagem
 #### Server

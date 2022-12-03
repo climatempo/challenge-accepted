@@ -9,7 +9,7 @@ const initialState = {
         ? 'dark'
         : (localStorage.getItem('theme') === 'light'
             ? 'light'
-            : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
         )
     )
 } as ThemeState;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Empty component 1`] = `
+<div
+  className="flex flex-col justify-center items-center pt-8 pb-16 sm:py-20 text-center gap-8"
+>
+  <h2
+    className="MuiTypography-root MuiTypography-h2 hidden md:block css-1sra7t5-MuiTypography-root"
+  >
+    Clima Tempo Challenge
+  </h2>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 hidden md:block css-2ulfj5-MuiTypography-root"
+  >
+    Use a barra de pesquisa para achar sua cidade.
+  </h6>
+  <h4
+    className="MuiTypography-root MuiTypography-h4 md:hidden css-5lbw0b-MuiTypography-root"
+  >
+    Clima Tempo
+    <br />
+    Challenge
+  </h4>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 md:hidden css-2ulfj5-MuiTypography-root"
+  >
+    Use a barra de pesquisa para achar sua cidade.
+  </h6>
+</div>
+`;

@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container 1`] = `
+<div
+  className="mt-8 sm:mt-16 py-6 px-8 relative transition-all mx-auto max-w-[1024px] w-full gap-16"
+>
+  <div
+    className="flex flex-col justify-center items-center pt-8 pb-16 sm:py-20 text-center gap-8"
+  >
+    <h2
+      className="MuiTypography-root MuiTypography-h2 hidden md:block css-1sra7t5-MuiTypography-root"
+    >
+      Clima Tempo Challenge
+    </h2>
+    <h6
+      className="MuiTypography-root MuiTypography-h6 hidden md:block css-2ulfj5-MuiTypography-root"
+    >
+      Use a barra de pesquisa para achar sua cidade.
+    </h6>
+    <h4
+      className="MuiTypography-root MuiTypography-h4 md:hidden css-5lbw0b-MuiTypography-root"
+    >
+      Clima Tempo
+      <br />
+      Challenge
+    </h4>
+    <h6
+      className="MuiTypography-root MuiTypography-h6 md:hidden css-2ulfj5-MuiTypography-root"
+    >
+      Use a barra de pesquisa para achar sua cidade.
+    </h6>
+  </div>
+</div>
+`;
+
+exports[`Container 2`] = `
+<div
+  className="mt-8 sm:mt-16 py-6 px-8 relative transition-all mx-auto max-w-[1024px] w-full gap-16"
+>
+  <div
+    className="flex gap-10 items-center max-w-[720px] mx-auto flex-col lg:flex-row"
+  >
+    <span
+      className="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary mx-auto css-18lrjg1-MuiCircularProgress-root"
+      role="progressbar"
+      style={
+        Object {
+          "height": 40,
+          "width": 40,
+        }
+      }
+    >
+      <svg
+        className="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+          cx={44}
+          cy={44}
+          fill="none"
+          r={20.2}
+          strokeWidth={3.6}
+          style={Object {}}
+        />
+      </svg>
+    </span>
+  </div>
+  <div
+    className="mt-24 flex flex-col"
+  >
+    <span
+      className="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary mx-auto css-18lrjg1-MuiCircularProgress-root"
+      role="progressbar"
+      style={
+        Object {
+          "height": 40,
+          "width": 40,
+        }
+      }
+    >
+      <svg
+        className="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+          cx={44}
+          cy={44}
+          fill="none"
+          r={20.2}
+          strokeWidth={3.6}
+          style={Object {}}
+        />
+      </svg>
+    </span>
+  </div>
+</div>
+`;

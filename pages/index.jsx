@@ -23,11 +23,8 @@ export default function Home() {
     setCity(index)
   }
 
-  function openSearch() {
-    const wrapper = document.querySelector(`.${styles.wrapper}`)
-    wrapper.classList.remove(`${styles.hidden}`)
-    const input = document.querySelector("#input")
-    input.focus()
+  function handleSearchBar() {
+    setSearchOpen(!searchOpen)
   }
 
   const weather = weatherData[city].weather
@@ -63,7 +60,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className={styles.nav}>
-        <div id="search" onClick={openSearch} className={styles.icon_container}>
+        <div
+          id="search"
+          onClick={handleSearchBar}
+          className={styles.icon_container}
+        >
           {" "}
           <Image
             className={styles.search}
@@ -86,7 +87,8 @@ export default function Home() {
         <AutoComplete
           data={cityNames}
           chooseCity={chooseCity}
-          isOpened={searchOpen}
+          isOpen={searchOpen}
+          setIsOpen={setSearchOpen}
         />
         <div className={styles.grid}>
           <Deck isCelsius={isCelsius} isMetric={isMetric} weather={weather} />

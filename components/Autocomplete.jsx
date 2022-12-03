@@ -1,37 +1,39 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import debounce from "utils/useDebounce"
 import styles from "styles/components/Autocomplete.module.scss"
 
-const AutoComplete = ({ data, chooseCity, isOpened }) => {
+const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
   const [suggestions, setSuggestions] = useState([])
   const [selected, setSelected] = useState(-1)
   const [displayValue, setDisplayValue] = useState("")
+  const inputRef = useRef()
 
+  // Se o painel de busca for aberto o foco vai para a barra, e vice-versa
+  useEffect(() => {
+    isOpen ? inputRef.current.focus() : inputRef.current.blur()
+  }, [isOpen])
+
+  // Configura entrada de texto
   function handleChange(e) {
-    const value = e.target.value.toLowerCase()
-    setDisplayValue(value)
+    // pega o texto digitado e guarda
+    const query = e.target.value.toLowerCase()
+    setDisplayValue(query)
   }
 
+  // Pega o que é digitado e guarda na var debounced
   const debouncedValue = debounce(displayValue)
 
+  // Observa mudanças na var debounced, e busca sugestões quando o cliente para de digitar
   useEffect(() => {
-    if (displayValue != "") {
+    if (debouncedValue != "") {
       setSuggestions(findSuggestion(data, debouncedValue))
     } else {
       resetSelection()
     }
-  }, [debouncedValue])
+  }, [debouncedValue, data])
 
-  // CONFIGURA COMPORTAMENTO DE ENTRADA DE TEXTO NO INPUT
-  function handleChange(e) {
-    // pega o texto digitado
-    const query = e.target.value.toLowerCase()
-    setDisplayValue(query)
-    console.log("typing")
-  }
-
+  // Função de busca de sugestões com a query digitada
   const findSuggestion = (data, query) => {
-    console.log("searching")
     const filterSuggestions = data.filter(
       (suggestion) =>
         suggestion
@@ -49,13 +51,10 @@ const AutoComplete = ({ data, chooseCity, isOpened }) => {
   }
 
   function hideSearch() {
-    const wrapper = document.querySelector(`.${styles.wrapper}`)
-    wrapper.classList.add(`${styles.hidden}`)
-    setDisplayValue("")
-    input.blur()
+    setIsOpen(false)
   }
 
-  // CONFIGURA NAVEGAÇÃO POR TECLADO
+  // Configura navegação por teclado
   const handleKeyDown = (e) => {
     // UP ARROW
     if (e.keyCode === 38) {
@@ -84,16 +83,14 @@ const AutoComplete = ({ data, chooseCity, isOpened }) => {
     }
   }
 
-  // CONFIGURA SELEÇÃO POR CLICK
+  // Configura seleção por click
   function handleClick(e) {
     const index = e.target.getAttribute("index")
-    console.log("index: ", index)
+
     setSelected(index)
     selected != -1 ? chooseCity(selected) : false
     hideSearch()
   }
-
-  const updateSuggestions = debounce((handleChange) => {})
 
   const Suggestions = () => {
     return (
@@ -127,7 +124,7 @@ const AutoComplete = ({ data, chooseCity, isOpened }) => {
   }
 
   return (
-    <div className={`${styles.wrapper} ${isOpened ? styles.hidden : ""}`}>
+    <div className={`${styles.wrapper} ${isOpen ? "" : styles.hidden}`}>
       <input
         type="search"
         value={displayValue}
@@ -135,7 +132,7 @@ const AutoComplete = ({ data, chooseCity, isOpened }) => {
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         className={styles.input}
-        id="input"
+        ref={inputRef}
       />
       {<Suggestions />}
     </div>

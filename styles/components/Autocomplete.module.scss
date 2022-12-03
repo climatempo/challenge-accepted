@@ -1,3 +1,5 @@
+@use "styles/abstracts/index" as *;
+
 .wrapper {
   position: absolute;
   flex-direction: column;
@@ -26,6 +28,13 @@
   border-radius: 30px;
   color: hsl(0, 0, 35%);
   font-size: 1.5rem;
+
+  &::-webkit-search-cancel-button {
+    position: relative;
+    right: 8%;
+    scale: 2;
+    cursor: pointer;
+  }
 }
 
 .suggestions {
@@ -40,7 +49,7 @@
 }
 
 .active {
-  color: hsl(211.93, 80.28%, 41.76%);
+  color: $climatempo-primary-color;
 }
 
 .hidden {

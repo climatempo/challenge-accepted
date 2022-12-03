@@ -1,4 +1,4 @@
-import { useAppSelector } from '../../hooks';
+import { useAppSelector, useServerAddress } from '../../hooks';
 import { ReactNode, useEffect, useState } from 'react';
 import { CircularProgress, Typography } from '@mui/material';
 import { useSnackbar } from 'notistack';
@@ -21,12 +21,13 @@ function InstantWeather() {
     const [weather, setWeather] = useState<InstantWeatherModel>();
     const [loading, setLoading] = useState<boolean>(true);
     const { enqueueSnackbar: notify } = useSnackbar();
+    const server = useServerAddress();
 
     useEffect(() => {
         if(!locale)
             return;
         setLoading(true);
-        fetch(`http://localhost:4000/city/${ locale.idlocale }/now`)
+        fetch(`${ server }/city/${ locale.idlocale }/now`)
             .then(response => {
                 setLoading(false);
                 if(response.status === 404) {
@@ -40,7 +41,7 @@ function InstantWeather() {
                 console.error(err);
                 notify('Alguma coisa deu errado.', { variant: 'error'});
             });
-    }, [locale]);
+    }, [locale, notify, server]);
 
     function renderSubInfo(caption: string, info: string|number, unity: ReactNode) {
         return <div className="text-center sm:text-left">

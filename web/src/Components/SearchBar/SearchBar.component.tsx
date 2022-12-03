@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from 'react';
 import { Autocomplete, Box, TextField } from '@mui/material';
-import { useAppDispatch, useAppSelector } from '../../hooks';
+import { useAppDispatch, useAppSelector, useServerAddress } from '../../hooks';
 import { DetailedLocale, setLocale } from '../../Reducers/Locale.reducer';
 import { useSnackbar } from 'notistack';
 
@@ -9,8 +9,10 @@ function SearchBar() {
     const pageLocale = useAppSelector(state => state.locale.value);
     const { enqueueSnackbar: notify } = useSnackbar();
     const dispatch = useAppDispatch();
+    const server = useServerAddress();
     let fetchBlock = false;
 
+    console.log(process.env)
     function fetchSearch(event: FormEvent) {
         if(fetchBlock)
             return;
@@ -19,7 +21,7 @@ function SearchBar() {
         if(input.length < 3 || input.length > 100)
             return;
 
-        fetch(`http://localhost:4000/search/${input}`)
+        fetch(`${ server }/search/${input}`)
             .then(response => response.json())
             .then(setOptions)
             .catch(err => {

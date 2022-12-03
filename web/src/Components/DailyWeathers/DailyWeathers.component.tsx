@@ -1,4 +1,4 @@
-import { useAppSelector } from '../../hooks';
+import { useAppSelector, useServerAddress } from '../../hooks';
 import { useEffect, useState } from 'react';
 import { CircularProgress, Divider, Typography } from '@mui/material';
 import SubInfo from '../SubInfo';
@@ -41,12 +41,13 @@ function DailyWeathers() {
     const [weathers, setWeathers] = useState<DailyWeather[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const { enqueueSnackbar: notify } = useSnackbar();
+    const server = useServerAddress();
 
     useEffect(() => {
         if(!locale)
             return;
         setLoading(true);
-        fetch(`http://localhost:4000/city/${ locale.idcity }/weathers`)
+        fetch(`${ server }/city/${ locale.idcity }/weathers`)
             .then(response => {
                 setLoading(false);
                 if(response.status === 404) {
@@ -60,7 +61,7 @@ function DailyWeathers() {
                 setLoading(false);
                 notify('Alguma coisa deu errado.', { variant: 'error'});
             });
-    }, [locale]);
+    }, [locale, notify, server]);
 
     function renderDate(weather: DailyWeather) {
         const date = weather.date.split('-');

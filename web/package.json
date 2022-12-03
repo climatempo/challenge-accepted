@@ -1,8 +1,12 @@
 {
-   "name": "challenge-climatempo-frontend",
+   "name": "challenge-climatempo-web",
    "private": true,
    "version": "0.0.0",
    "type": "module",
+   "keywords": [
+      "Climate Web"
+   ],
+   "author": "Tayanne Novais @tayhsn",
    "scripts": {
       "dev": "vite",
       "build": "tsc && vite build",

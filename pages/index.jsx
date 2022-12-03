@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import Head from "next/head"
 import Image from "next/image"
@@ -17,9 +17,17 @@ import styles from "styles/Home.module.scss"
 
 export default function Home() {
   const [city, setCity] = useState(0)
+  const [searchOpen, setSearchOpen] = useState(false)
 
   const chooseCity = (index) => {
     setCity(index)
+  }
+
+  function openSearch() {
+    const wrapper = document.querySelector(`.${styles.wrapper}`)
+    wrapper.classList.remove(`${styles.hidden}`)
+    const input = document.querySelector("#input")
+    input.focus()
   }
 
   const weather = weatherData[city].weather
@@ -39,6 +47,11 @@ export default function Home() {
     return locale.name
   })
 
+  useEffect(() => {
+    const searchButton = document.querySelector("#search")
+    searchButton
+  })
+
   return (
     <div className={styles.container}>
       <Head>
@@ -50,7 +63,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className={styles.nav}>
-        <div id="search" className={styles.icon_container}>
+        <div id="search" onClick={openSearch} className={styles.icon_container}>
           {" "}
           <Image
             className={styles.search}
@@ -70,7 +83,11 @@ export default function Home() {
       <CityInfo locale={locale} />
 
       <main className={styles.main}>
-        <AutoComplete data={cityNames} chooseCity={chooseCity} />
+        <AutoComplete
+          data={cityNames}
+          chooseCity={chooseCity}
+          isOpened={searchOpen}
+        />
         <div className={styles.grid}>
           <Deck isCelsius={isCelsius} isMetric={isMetric} weather={weather} />
         </div>

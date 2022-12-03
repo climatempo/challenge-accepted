@@ -1,20 +1,47 @@
 import { useState, useEffect } from "react"
-import debounce from "utils/debounce"
+import debounce from "utils/useDebounce"
 import styles from "styles/components/Autocomplete.module.scss"
 
-const AutoComplete = ({ data, chooseCity }) => {
+const AutoComplete = ({ data, chooseCity, isOpened }) => {
   const [suggestions, setSuggestions] = useState([])
   const [selected, setSelected] = useState(-1)
-  const [value, setValue] = useState("")
-  let time
+  const [displayValue, setDisplayValue] = useState("")
+
+  function handleChange(e) {
+    const value = e.target.value.toLowerCase()
+    setDisplayValue(value)
+  }
+
+  const debouncedValue = debounce(displayValue)
 
   useEffect(() => {
-    // CONFIGURA LUPA PARA ABRIR A BUSCA
-    const searchButton = document.querySelector("#search")
-    searchButton.addEventListener("click", () => {
-      openSearch()
-    })
-  })
+    if (displayValue != "") {
+      setSuggestions(findSuggestion(data, debouncedValue))
+    } else {
+      resetSelection()
+    }
+  }, [debouncedValue])
+
+  // CONFIGURA COMPORTAMENTO DE ENTRADA DE TEXTO NO INPUT
+  function handleChange(e) {
+    // pega o texto digitado
+    const query = e.target.value.toLowerCase()
+    setDisplayValue(query)
+    console.log("typing")
+  }
+
+  const findSuggestion = (data, query) => {
+    console.log("searching")
+    const filterSuggestions = data.filter(
+      (suggestion) =>
+        suggestion
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/\p{Diacritic}/gu, "")
+          .indexOf(query) > -1
+    )
+    return filterSuggestions
+  }
 
   function resetSelection() {
     setSuggestions([])
@@ -24,16 +51,8 @@ const AutoComplete = ({ data, chooseCity }) => {
   function hideSearch() {
     const wrapper = document.querySelector(`.${styles.wrapper}`)
     wrapper.classList.add(`${styles.hidden}`)
-    setValue("")
+    setDisplayValue("")
     input.blur()
-  }
-
-  function openSearch() {
-    resetSelection()
-    const wrapper = document.querySelector(`.${styles.wrapper}`)
-    wrapper.classList.remove(`${styles.hidden}`)
-    const input = document.querySelector("#input")
-    input.focus()
   }
 
   // CONFIGURA NAVEGAÇÃO POR TECLADO
@@ -54,7 +73,7 @@ const AutoComplete = ({ data, chooseCity }) => {
     }
     // ENTER
     else if (e.keyCode === 13) {
-      setValue(suggestions[selected])
+      setDisplayValue(suggestions[selected])
 
       if (selected != -1) {
         chooseCity(selected)
@@ -74,26 +93,7 @@ const AutoComplete = ({ data, chooseCity }) => {
     hideSearch()
   }
 
-  // CONFIGURA COMPORTAMENTO DE ENTRADA DE TEXTO NO INPUT
-  const handleChange = (e) => {
-    const query = e.target.value.toLowerCase()
-    setValue(query)
-    if (query.length >= 1) {
-      const filterSuggestions = data.filter(
-        (suggestion) =>
-          suggestion
-            .toLowerCase()
-            .normalize("NFD")
-            .replace(/\p{Diacritic}/gu, "")
-            .indexOf(query) > -1
-      )
-      setSuggestions(filterSuggestions)
-    } else {
-      resetSelection()
-    }
-  }
-
-  const updateSearchText = debounce(handleChange)
+  const updateSuggestions = debounce((handleChange) => {})
 
   const Suggestions = () => {
     return (
@@ -127,10 +127,11 @@ const AutoComplete = ({ data, chooseCity }) => {
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${isOpened ? styles.hidden : ""}`}>
       <input
-        type="text"
-        value={value}
+        type="search"
+        value={displayValue}
+        onFocus={resetSelection}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         className={styles.input}

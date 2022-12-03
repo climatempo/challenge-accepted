@@ -8,6 +8,8 @@ export const ContentContainer = styled.main`
    align-items: center;
    justify-content: space-around;
 
+   padding: 0 2rem;
+
    h1 {
       color: ${({ theme }) => theme.colors['base-title']};
       font-size: ${({ theme }) => theme.textSizes['title-l']};

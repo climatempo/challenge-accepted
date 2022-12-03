@@ -1,15 +1,22 @@
 import { ArrowDown, ArrowUp, Drop } from 'phosphor-react';
+import { Weather } from '~/contexts/DataContext';
+import { dateFormatter } from '~/utils/dateFormatter';
 import { IconContainer, InfoCardContainer, Tags, WeatherInfos } from './styles';
 
-export const InfoCard = () => {
+interface InfoCardProps {
+   weather: Weather;
+}
+
+export const InfoCard = ({ weather }: InfoCardProps) => {
+   const { date, text, rain, temperature } = weather;
+
+   const formattedDate = dateFormatter(date);
+
    return (
       <InfoCardContainer>
-         <h2>01 de Janeiro de 2023</h2>
+         <h2>{formattedDate}</h2>
 
-         <h3>
-            Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva
-            a qualquer hora.
-         </h3>
+         <h3>{text}</h3>
 
          <WeatherInfos>
             <div>
@@ -18,11 +25,11 @@ export const InfoCard = () => {
                <span>
                   <IconContainer>
                      <ArrowDown color='#0380CC' />
-                     17º
+                     {temperature.min}º
                   </IconContainer>
                   <IconContainer>
                      <ArrowUp color='#E2251A' />
-                     20º
+                     {temperature.max}º
                   </IconContainer>
                </span>
             </div>
@@ -33,7 +40,7 @@ export const InfoCard = () => {
                <span>
                   <IconContainer>
                      <Drop color='#0380CC' weight='fill' />
-                     25mm - 67%
+                     {rain.precipitation}mm - {rain.probability}%
                   </IconContainer>
                </span>
             </div>

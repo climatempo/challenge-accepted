@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const InputFormContainer = styled.form`
+export const SearchFormContainer = styled.form`
    width: 100%;
 
    margin: 2rem 1rem;
@@ -39,9 +39,14 @@ export const InputFormContainer = styled.form`
 
       border-radius: 5px;
 
+      &:disabled {
+         opacity: 0.7;
+         cursor: not-allowed;
+      }
+
       transition: background-color 0.2s;
 
-      &:hover {
+      &:not(:disabled):hover {
          background-color: ${({ theme }) => theme.colors['base-hover']};
       }
    }

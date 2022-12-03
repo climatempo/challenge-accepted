@@ -89,7 +89,7 @@ export const mockupData = [
             },
             rain: {
                probability: 60,
-               precipitation: '11',
+               precipitation: 11,
             },
          },
       ],
@@ -172,7 +172,7 @@ export const mockupData = [
             },
             rain: {
                probability: 60,
-               precipitation: '8',
+               precipitation: 8,
             },
          },
          {

@@ -46,13 +46,10 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
   }
 
   function resetSelection() {
+    setDisplayValue("")
     setSuggestions([])
     setSelected(-1)
   }
-
-  // function resetInput() {
-  //   setDisplayValue("")
-  // }
 
   function hideSearch() {
     resetSelection()
@@ -135,9 +132,6 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
         type="search"
         value={displayValue}
         onFocus={resetSelection}
-        onBlur={() => {
-          setDisplayValue("")
-        }}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         className={styles.input}

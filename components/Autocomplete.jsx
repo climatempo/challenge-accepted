@@ -8,7 +8,7 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
   const [displayValue, setDisplayValue] = useState("")
   const inputRef = useRef()
 
-  // Se o painel de busca for aberto o foco vai para a barra, e vice-versa
+  // Observa abertura do painel de busca e seta foco na barra
   useEffect(() => {
     isOpen ? inputRef.current.focus() : inputRef.current.blur()
   }, [isOpen])
@@ -20,10 +20,10 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
     setDisplayValue(query)
   }
 
-  // Pega o que é digitado e guarda na var debounced
+  // Pega o que é digitado, e quando o cliente para de digitar faz o debounce, e guarda na var debounced
   const debouncedValue = debounce(displayValue)
 
-  // Observa mudanças na var debounced, e busca sugestões quando o cliente para de digitar
+  // Observa mudanças na var debounced, e busca sugestões
   useEffect(() => {
     if (debouncedValue != "") {
       setSuggestions(findSuggestion(data, debouncedValue))
@@ -50,30 +50,33 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
     setSelected(-1)
   }
 
+  // function resetInput() {
+  //   setDisplayValue("")
+  // }
+
   function hideSearch() {
+    resetSelection()
     setIsOpen(false)
   }
 
   // Configura navegação por teclado
   const handleKeyDown = (e) => {
-    // UP ARROW
+    // Seta para cima
     if (e.keyCode === 38) {
       if (selected <= 0) {
         return
       }
       setSelected(selected - 1)
     }
-    // DOWN ARROW
+    // Seta para baixo
     else if (e.keyCode === 40) {
       if (selected === suggestions.length - 1) {
         return
       }
       setSelected(selected + 1)
     }
-    // ENTER
+    // Enter
     else if (e.keyCode === 13) {
-      setDisplayValue(suggestions[selected])
-
       if (selected != -1) {
         chooseCity(selected)
       }
@@ -86,8 +89,11 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
   // Configura seleção por click
   function handleClick(e) {
     const index = e.target.getAttribute("index")
+    console.log("index: ", index)
 
+    // TODO: FIX BUG: Não seta a variável em mobile - em desk está funcionando
     setSelected(index)
+    console.log("selected: ", selected)
     selected != -1 ? chooseCity(selected) : false
     hideSearch()
   }
@@ -102,7 +108,7 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
                 ${styles.item}
                 ${index === selected ? styles.active : ""}
                 `}
-              key={index}
+              key={suggestion}
               index={index}
               onClick={(e) => {
                 handleClick(e)
@@ -129,12 +135,15 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
         type="search"
         value={displayValue}
         onFocus={resetSelection}
+        onBlur={() => {
+          setDisplayValue("")
+        }}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         className={styles.input}
         ref={inputRef}
       />
-      {<Suggestions />}
+      <Suggestions />
     </div>
   )
 }

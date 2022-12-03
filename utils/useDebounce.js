@@ -13,7 +13,6 @@ function useDebounce(value, delay = 350) {
     }
   }, [value, delay])
 
-  console.log("debouncedValue: ", debouncedValue)
   return debouncedValue
 }
 

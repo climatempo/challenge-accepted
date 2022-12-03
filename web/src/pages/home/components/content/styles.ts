@@ -10,8 +10,16 @@ export const ContentContainer = styled.main`
 
    padding: 0 2rem;
 
+   color: ${({ theme }) => theme.colors['base-title']};
+
+   > span {
+      background-color: ${({ theme }) => theme.colors['base-error']};
+
+      padding: 1rem;
+      border-radius: 5px;
+   }
+
    h1 {
-      color: ${({ theme }) => theme.colors['base-title']};
       font-size: ${({ theme }) => theme.textSizes['title-l']};
 
       margin-bottom: 1rem;

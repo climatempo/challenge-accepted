@@ -16,7 +16,7 @@ export const InfoCard = ({ weather }: InfoCardProps) => {
       <InfoCardContainer>
          <h2>{formattedDate}</h2>
 
-         <h3>{text}</h3>
+         <p>{text}</p>
 
          <WeatherInfos>
             <div>

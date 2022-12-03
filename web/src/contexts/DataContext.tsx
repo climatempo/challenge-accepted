@@ -2,6 +2,7 @@ import axios from 'axios';
 import {
    createContext,
    ReactNode,
+   useCallback,
    useContext,
    useEffect,
    useState,
@@ -26,7 +27,7 @@ export interface Weather {
 }
 
 interface DataContextType {
-   error: string | undefined;
+   error: boolean | undefined;
    locale: string | undefined;
    weather: Weather[] | undefined;
    searchCity: (data: SearchFormData) => void;
@@ -42,32 +43,36 @@ export const DataContextProvider = ({ children }: ContextProviderProps) => {
    const [search, setSearch] = useState<SearchFormData>();
    const [weather, setWeather] = useState<Weather[] | undefined>([]);
    const [locale, setLocale] = useState<string | undefined>(undefined);
-   const [error, setError] = useState('');
+   const [error, setError] = useState(false);
 
    const searchCity = (data: SearchFormData) => {
       setSearch(data);
+      setError(false);
    };
 
-   const getWeatherByCity = async () => {
-      const response = await axios
-         .post('http://localhost:3000/locale', { city: search?.city })
-         .then((res) => res.data);
+   const getWeatherByCity = useCallback(
+      async (city: string) => {
+         const response = await axios
+            .post('http://localhost:3000/locale', { city })
+            .then((res) => res.data)
+            .catch((error) => console.log(error));
 
-      if (response.length === 0) {
-         setError(
-            `OPS! Não conseguimos encontrar a previsão para: ${search?.city}. 😩`
-         );
-         return;
-      }
+         if (!response) {
+            setError(true);
+            setSearch(undefined);
+            return;
+         }
 
-      const cityName = `${response.name}, ${response.state}`;
+         const cityName = `${response.name}, ${response.state}`;
 
-      setLocale(cityName);
-      setWeather(response.weather);
-   };
+         setLocale(cityName);
+         setWeather(response.weather);
+      },
+      [search]
+   );
 
    useEffect(() => {
-      search && getWeatherByCity();
+      search && getWeatherByCity(search.city);
    }, [search]);
 
    return (

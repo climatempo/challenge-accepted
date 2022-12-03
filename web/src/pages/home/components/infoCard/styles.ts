@@ -18,8 +18,9 @@ export const InfoCardContainer = styled.article`
       font-size: ${({ theme }) => theme.textSizes['title-m']};
    }
 
-   h3 {
+   p {
       font-size: ${({ theme }) => theme.textSizes['text-l']};
+      font-weight: 400;
    }
 `;
 

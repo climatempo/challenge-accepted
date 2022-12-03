@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useData } from '~/contexts/DataContext';
 import { InfoCard } from '../infoCard';
 import { SearchForm } from '../searchForm';
@@ -11,7 +12,10 @@ export const Content = () => {
          <SearchForm />
 
          {error ? (
-            <h1>{error}</h1>
+            <span>
+               OPS! Não conseguimos encontrar a previsão. 😩 Tente novamente com
+               outra cidade!
+            </span>
          ) : locale ? (
             <>
                <h1>Previsão para: {locale}</h1>
@@ -23,7 +27,7 @@ export const Content = () => {
                </CardsContainer>
             </>
          ) : (
-            <h1>Pesquise uma cidade para obter sua previsão</h1>
+            <h1>Pesquise uma cidade para obter a previsão.</h1>
          )}
       </ContentContainer>
    );

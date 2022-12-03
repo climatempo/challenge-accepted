@@ -3,19 +3,20 @@ import { useData } from '~/contexts/DataContext';
 import { BannerContainer } from './styles';
 
 export const Banner = () => {
-   const { locale } = useData();
+   const { error, locale } = useData();
+
    return (
       <BannerContainer>
          <p>Clima e Previsão do Tempo</p>
          <span>
-            {locale ? (
+            {!error && locale ? (
                <>
                   <CloudSun size={24} />
                   <p>{locale}</p>
                </>
             ) : (
                <>
-                  <CircleWavyWarning size={24} color='#FFE269' />
+                  <CircleWavyWarning size={26} color='#FFE269' />
                   <p>Busque uma cidade</p>
                </>
             )}

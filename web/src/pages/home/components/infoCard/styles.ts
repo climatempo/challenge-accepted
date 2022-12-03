@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const InfoCardContainer = styled.article`
    width: 20rem;
 
-   margin: 2rem 1rem;
    padding: 2rem;
 
    display: flex;
@@ -59,6 +58,8 @@ export const Tags = styled.span<TagsProps>`
    align-items: center;
    gap: 0.5rem;
 
+   font-size: ${({ theme }) => theme.textSizes['text-s']};
+
    &::before {
       content: '';
       width: 0.5rem;
@@ -73,4 +74,6 @@ export const IconContainer = styled.span`
    display: flex;
    align-items: center;
    gap: 0.5rem;
+
+   font-size: ${({ theme }) => theme.textSizes['text-l']};
 `;

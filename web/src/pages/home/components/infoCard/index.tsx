@@ -13,7 +13,7 @@ export const InfoCard = () => {
 
          <WeatherInfos>
             <div>
-               <Tags tagColor='red'>Temperatura</Tags>
+               <Tags tagColor='red'>TEMPERATURA</Tags>
 
                <span>
                   <IconContainer>
@@ -28,7 +28,7 @@ export const InfoCard = () => {
             </div>
 
             <div>
-               <Tags tagColor='gray'>Chuva</Tags>
+               <Tags tagColor='gray'>CHUVA</Tags>
 
                <span>
                   <IconContainer>

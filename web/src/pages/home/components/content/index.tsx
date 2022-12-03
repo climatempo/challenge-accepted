@@ -1,6 +1,7 @@
+import { mockupData } from '~/mock/data';
 import { InfoCard } from '../infoCard';
 import { InputForm } from '../inputForm';
-import { ContentContainer } from './styles';
+import { CardsContainer, ContentContainer } from './styles';
 
 export const Content = () => {
    return (
@@ -9,7 +10,12 @@ export const Content = () => {
 
          <h1>Previsão para: Osasco, SP</h1>
 
-         <InfoCard />
+         <CardsContainer>
+            <InfoCard />
+            <InfoCard />
+            <InfoCard />
+            <InfoCard />
+         </CardsContainer>
       </ContentContainer>
    );
 };

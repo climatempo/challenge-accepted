@@ -10,14 +10,15 @@ Teste técnico para Desenvolvedor Full Stack na Climatempo, empresa de serviços
 
 ### O Projeto
 
--  [Protótipo da interface](https://www.figma.com/file/t9fJqD8uh0yuXEeHvKsgm1/Layout---Climatempo-app?node-id=0%3A1&t=KzGQzecOwTi9SJlK-1).
+-  [Protótipo da interface](https://www.figma.com/file/t9fJqD8uh0yuXEeHvKsgm1/Layout---Climatempo-app?node-id=0%3A1&t=KzGQzecOwTi9SJlK-1) no Figma.
+
+-  [Documentação da API](https://documenter.getpostman.com/view/14419670/2s8YzMXQhT) no Postman.
 
 #### Tecnologias utilizadas
 
 -  Typescript
--  Node.js, Express.js
--  React.js, ChakraUI, Phosphor-react
--  GraphQL
+-  Node.js, Express.js, Cors
+-  React.js, Styled-components, Phosphor-react, Zod, React-hook-form, Axios
 
 ### O Desafio
 

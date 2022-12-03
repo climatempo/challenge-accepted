@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {
    createContext,
    ReactNode,
@@ -47,25 +48,22 @@ export const DataContextProvider = ({ children }: ContextProviderProps) => {
       setSearch(data);
    };
 
-   const getWeatherByCity = () => {
-      const response = mockupData.filter(
-         (data) => data.name.toLowerCase() === search?.city.toLowerCase()
-      );
-
-      console.log(response);
+   const getWeatherByCity = async () => {
+      const response = await axios
+         .post('http://localhost:3000/locale', { city: search?.city })
+         .then((res) => res.data);
 
       if (response.length === 0) {
          setError(
-            `OPS! Não conseguimos encontrar a previsão para essa cidade. 😩
-                  Nossa equipe irá adiciona-lá em breve. 🥰`
+            `OPS! Não conseguimos encontrar a previsão para: ${search?.city}. 😩`
          );
          return;
       }
 
-      const cityName = `${response[0].name}, ${response[0].state}`;
+      const cityName = `${response.name}, ${response.state}`;
 
       setLocale(cityName);
-      setWeather(response[0].weather);
+      setWeather(response.weather);
    };
 
    useEffect(() => {

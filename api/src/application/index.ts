@@ -1,5 +1,5 @@
 import { Request, Response, Router } from 'express';
-import { getCityWeather } from '../infra';
+import { getWeatherByLocale } from '../infra';
 
 export const router = Router();
 
@@ -7,17 +7,17 @@ router.get('/', (req: Request, res: Response) => {
    res.send('API alive');
 });
 
-router.get('/weather/:city', (req: Request, res: Response) => {
+router.post('/locale', (req: Request, res: Response) => {
    try {
-      const { city } = req.params;
+      const { city } = req.body;
 
       if (!city) {
-         res.status(500).send(
-            'É necessário informar a cidade para obter a previsão!'
-         );
+         return res
+            .status(500)
+            .send('É necessário informar a cidade para obter a previsão!');
       }
 
-      const data = getCityWeather(city);
+      const data = getWeatherByLocale(city);
 
       res.send(data);
    } catch (error) {

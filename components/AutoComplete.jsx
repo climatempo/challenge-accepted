@@ -86,12 +86,7 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
   // Configura seleção por click
   function handleClick(e) {
     const index = e.target.getAttribute("index")
-    console.log("index: ", index)
-
-    // TODO: FIX BUG: Não seta a variável em mobile - em desk está funcionando
-    setSelected(index)
-    console.log("selected: ", selected)
-    selected != -1 ? chooseCity(selected) : false
+    chooseCity(index)
     hideSearch()
   }
 

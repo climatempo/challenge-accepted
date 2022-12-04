@@ -18,19 +18,19 @@ export const useServerAddress: () => ServerAddress = () => {
   return {
     server,
     search: (name: string) => process.env.REACT_APP_WORKER_HOST
-      ? `${ server }/?search=${ name }`
+      ? `${ server }?search=${ name }`
       : `${ server }/search/${ name }`,
     locale: (idlocale: number) => process.env.REACT_APP_WORKER_HOST
-      ? `${ server }/?locale=${ idlocale }`
+      ? `${ server }?locale=${ idlocale }`
       : `${ server }/city/${ idlocale }`,
     instant: (idlocale: number) => process.env.REACT_APP_WORKER_HOST
-      ? `${ server }/?instant=${ idlocale }`
+      ? `${ server }?instant=${ idlocale }`
       : `${ server }/city/${ idlocale }/now`,
     weather: (idcode: number) => process.env.REACT_APP_WORKER_HOST
-      ? `${ server }/?weather=${ idcode }`
+      ? `${ server }?weather=${ idcode }`
       : `${ server }/city/${ idcode }/weather`,
     weathers: (idcode: number) => process.env.REACT_APP_WORKER_HOST
-      ? `${ server }/?weathers=${ idcode }`
+      ? `${ server }?weathers=${ idcode }`
       : `${ server }/city/${ idcode }/weathers`,
   };
 };

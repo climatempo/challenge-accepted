@@ -22,7 +22,7 @@ App Web que exibe a previsão do tempo por cidade pesquisada, consumindo os dado
 
 -  Responsividade Mobile, Tablet e Desktop
 -  Tratamento de erro caso não obtenha os dados da cidade pesquisada
--  O usuário pode escolher visualizar a temperatura em Celsius ou Fahrenhein (padrão é Celsius) e a precipitação da chuva em Milímetros ou Polegadas (padrão é Milímitros)
+-  O usuário pode escolher visualizar a temperatura em Celsius ou Fahrenheit (padrão é Celsius) e a precipitação da chuva em Milímetros ou Polegadas (padrão é Milímitros)
 
 #### Melhorias futuras
 

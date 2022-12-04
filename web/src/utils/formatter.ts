@@ -5,7 +5,7 @@ export const dateFormatter = (date: string) =>
       year: 'numeric',
    }).format(new Date(date));
 
-export const fahrenheinFormatter = (temp: number): string =>
+export const fahrenheitFormatter = (temp: number): string =>
    (temp * 1.8 + 32).toFixed(0);
 
 export const inchFormatter = (volume: number): string =>

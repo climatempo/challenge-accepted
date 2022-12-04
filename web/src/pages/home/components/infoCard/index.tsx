@@ -2,7 +2,7 @@ import { ArrowDown, ArrowUp, Drop } from 'phosphor-react';
 import { useData, Weather } from '~/contexts/DataContext';
 import {
    dateFormatter,
-   fahrenheinFormatter,
+   fahrenheitFormatter,
    inchFormatter,
 } from '~/utils/formatter';
 import { IconContainer, InfoCardContainer, Tags, WeatherInfos } from './styles';
@@ -23,13 +23,13 @@ export const InfoCard = ({ weather }: InfoCardProps) => {
          : `${inchFormatter(rain.precipitation)} inches`;
 
    const minTemperature =
-      degreeUnit === 'fahrenhein'
-         ? fahrenheinFormatter(temperature.min)
+      degreeUnit === 'fahrenheit'
+         ? fahrenheitFormatter(temperature.min)
          : temperature.min;
 
    const maxTemperature =
-      degreeUnit === 'fahrenhein'
-         ? fahrenheinFormatter(temperature.max)
+      degreeUnit === 'fahrenheit'
+         ? fahrenheitFormatter(temperature.max)
          : temperature.max;
 
    return (

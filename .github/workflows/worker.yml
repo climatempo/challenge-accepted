@@ -21,10 +21,10 @@ jobs:
         run: npm run build
 
       - name: Include node modules on lambda package
-        run: mv node_modules dist/node_modules
+        run: mv node_modules build/node_modules
 
       - name: Create lambda package
-        run: (cd dist && zip -r ../function.zip .)
+        run: (cd build && zip -r ../function.zip .)
 
       - name: Deploy to AWS
         uses: appleboy/lambda-action@master

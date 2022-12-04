@@ -24,7 +24,7 @@ jobs:
         run: mv node_modules build/node_modules
 
       - name: Create lambda package
-        run: (cd build && zip -r ../function.zip .)
+        run: (cd build && zip -r ../function.zip . && cd ..)
 
       - name: Deploy to AWS
         uses: appleboy/lambda-action@master

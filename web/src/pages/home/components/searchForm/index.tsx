@@ -48,9 +48,15 @@ export const SearchForm = () => {
          <input
             id='search'
             type='text'
+            list='locale-option'
             placeholder='Busque por uma cidade'
             {...register('city')}
          />
+
+         <datalist id='locale-option'>
+            <option value='Osasco' />
+            <option value='São Paulo' />
+         </datalist>
 
          <SearchButton aria-label='Buscar' disabled={isSubmitDisabled}>
             <MagnifyingGlass />

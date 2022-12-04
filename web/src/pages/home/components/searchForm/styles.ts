@@ -25,6 +25,10 @@ export const SearchFormContainer = styled.form`
       &::placeholder {
          color: ${({ theme }) => theme.colors['base-label']};
       }
+
+      &::-webkit-calendar-picker-indicator {
+         display: none !important;
+      }
    }
 `;
 

@@ -1,3 +1,5 @@
+@use "styles/abstracts/variables" as *;
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -20,7 +22,7 @@
   width: 26px;
   height: 26px;
   border-radius: 100%;
-  background-color: gray;
+  background-color: $climatempo-dark-color;
 }
 
 .check {

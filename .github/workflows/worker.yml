@@ -24,7 +24,7 @@ jobs:
         run: mv node_modules build/node_modules
 
       - name: Create lambda package
-        run: (cd build && zip -r ../function.zip . && cd ..)
+        run: (cd build && zip -r ../function.zip .)
 
       - name: Deploy to AWS
         uses: appleboy/lambda-action@master
@@ -33,4 +33,4 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: fetchWeather
-          zip_file: function.zip
+          zip_file: worker/function.zip

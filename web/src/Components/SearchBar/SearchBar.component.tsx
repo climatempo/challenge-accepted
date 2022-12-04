@@ -51,7 +51,6 @@ function SearchBar() {
             return;
         setTimeout(() => {
             const selected = (event.target as HTMLInputElement).value;
-            console.log(selected);
             const locale = options.filter(
                 locale => locale.city + ', ' + locale.uf.toUpperCase() === selected
             )[0];

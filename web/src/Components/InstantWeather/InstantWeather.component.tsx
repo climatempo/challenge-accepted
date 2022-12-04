@@ -22,15 +22,17 @@ function InstantWeather() {
     const [loading, setLoading] = useState<boolean>(true);
     const { enqueueSnackbar: notify } = useSnackbar();
     const { instant } = useServerAddress();
+    let lastLocale: any|undefined;
 
     useEffect(() => {
-        if(!locale)
+        if(!locale || lastLocale && lastLocale === locale)
             return;
+        lastLocale = locale;
         setLoading(true);
         fetch(instant(locale.idlocale))
             .then(response => {
                 setLoading(false);
-                if(response.status === 404) {
+                if(response.status === 404 || response.status === 500) {
                     notify('Não temos o clima dessa cidade.', { variant: 'info' });
                     return undefined;
                 }else return response.json();
@@ -41,7 +43,7 @@ function InstantWeather() {
                 console.error(err);
                 notify('Alguma coisa deu errado.', { variant: 'error'});
             });
-    }, [locale, notify, instant]);
+    }, [locale]);
 
     function renderSubInfo(caption: string, info: string|number, unity: ReactNode) {
         return <div className="text-center sm:text-left">

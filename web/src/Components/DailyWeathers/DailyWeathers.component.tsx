@@ -42,15 +42,17 @@ function DailyWeathers() {
     const [loading, setLoading] = useState<boolean>(true);
     const { enqueueSnackbar: notify } = useSnackbar();
     const { weathers: weathersURL } = useServerAddress();
+    let lastLocale: any|undefined;
 
     useEffect(() => {
-        if(!locale)
+        if(!locale || lastLocale && lastLocale === locale)
             return;
+        lastLocale = locale;
         setLoading(true);
         fetch(weathersURL(locale.idcity))
             .then(response => {
                 setLoading(false);
-                if(response.status === 404) {
+                if(response.status === 404 || response.status === 500) {
                     notify('Não temos o clima dessa cidade.', { variant: 'info'});
                     return [];
                 }else return response.json();
@@ -61,7 +63,7 @@ function DailyWeathers() {
                 setLoading(false);
                 notify('Alguma coisa deu errado.', { variant: 'error'});
             });
-    }, [locale, notify, weathersURL]);
+    }, [locale]);
 
     function renderDate(weather: DailyWeather) {
         const date = weather.date.split('-');

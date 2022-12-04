@@ -16,15 +16,14 @@ export default function Menu(props) {
         width="30"
         height="30"
       />
-      {/* <menu className={styles.menu}>
+      <menu className={styles.menu}>
         <Image
           className={styles.close}
           src={close}
           alt="barras de menu"
-          width="30"
-          height="30"
+          width="20"
+          height="20"
         />
-
         <li className={styles.toggle}>
           <label className={styles.label} htmlFor="temperature">
             <input
@@ -34,6 +33,10 @@ export default function Menu(props) {
               id="temperature"
               onChange={handleTemperature}
             />
+          </label>
+        </li>
+        <li className={styles.toggle}>
+          <label className={styles.label} htmlFor="temperature">
             <input
               className={styles.check}
               type="checkbox"
@@ -43,7 +46,7 @@ export default function Menu(props) {
             />
           </label>
         </li>
-      </menu> */}
+      </menu>
     </div>
   )
 }

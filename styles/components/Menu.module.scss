@@ -1,11 +1,9 @@
 @use "styles/abstracts/index" as *;
 
-.icon {
-  scale: 1.2;
-}
-
 .menu {
+  visibility: hidden;
   @extend %flex-center;
+  flex-direction: column;
   position: fixed;
   margin: 0;
   padding: 0;
@@ -29,12 +27,17 @@
 }
 
 .toggle {
+  @extend %flex-center;
+  justify-content: space-around;
   list-style-type: none;
+  background-color: $climatempo-primary-color;
+  width: 90%;
+  height: 20%;
+  margin: 10px 0;
+  border-radius: 10px;
 }
 
 .label {
-  width: 300px;
-  height: 150px;
   background-color: red;
 }
 

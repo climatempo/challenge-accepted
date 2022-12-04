@@ -75,7 +75,9 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
     // Enter
     else if (e.keyCode === 13) {
       if (selected != -1) {
-        chooseCity(selected)
+        const cityName = suggestions[selected]
+        const cityIndex = data.indexOf(cityName)
+        chooseCity(cityIndex)
       }
       hideSearch()
     } else if (e.keyCode === 27) {
@@ -85,8 +87,9 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
 
   // Configura seleção por click
   function handleClick(e) {
-    const index = e.target.getAttribute("index")
-    chooseCity(index)
+    const cityName = e.target.textContent
+    const cityIndex = data.indexOf(cityName)
+    chooseCity(cityIndex)
     hideSearch()
   }
 

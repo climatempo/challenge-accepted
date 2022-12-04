@@ -9,7 +9,6 @@ import weatherData from "data/weather.json"
 
 import logo from "public/images/logo-white.png"
 import search from "public/images/icons/search.png"
-import menu from "public/images/icons/menu.png"
 import styles from "styles/Home.module.scss"
 
 // HOME --------------------------------
@@ -17,8 +16,8 @@ import styles from "styles/Home.module.scss"
 export default function Home() {
   const [city, setCity] = useState(0)
   const [searchOpen, setSearchOpen] = useState(false)
-  const [isCelsius, setCelsius] = useState(true)
-  const [isMetric, setMetric] = useState(true)
+  const [isCelsius, setTemperature] = useState(true)
+  const [isMetric, setVolume] = useState(true)
 
   const chooseCity = (index) => {
     setCity(index)
@@ -31,8 +30,8 @@ export default function Home() {
   const weather = weatherData[city].weather
   const locale = weatherData[city].locale
 
-  const handleDegree = () => {
-    setCelsius(!isCelsius)
+  const handleTemperature = () => {
+    setTemperature(!isCelsius)
   }
 
   const handleVolume = () => {
@@ -58,6 +57,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <nav className={styles.nav}>
         <div
           id="search"
@@ -77,7 +77,10 @@ export default function Home() {
         <div className={styles.image_container}>
           <Image src={logo} layout="fill" alt="logo" />
         </div>
-        <Image src={menu} alt="barras de menu" width="30" height="30" />
+        <Menu
+          handleVolume={handleVolume}
+          handleTemperature={handleTemperature}
+        />
       </nav>
 
       <CityInfo locale={locale} />

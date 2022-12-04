@@ -1,14 +1,5 @@
 @use "styles/abstracts/index" as *;
 
-.nav {
-  @extend %flex-center;
-  justify-content: space-between;
-  height: 10vh;
-  width: 100vw;
-  background-color: $climatempo-primary-color;
-  padding: 0 40px;
-}
-
 .search {
   position: relative;
   &:hover {
@@ -19,6 +10,15 @@
     height: 40px;
   }
   cursor: pointer;
+}
+
+.nav {
+  @extend %flex-center;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100vw;
+  background-color: $climatempo-primary-color;
+  padding: 0 40px;
 }
 
 .icon_container {

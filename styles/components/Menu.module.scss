@@ -1,19 +1,27 @@
 @use "styles/abstracts/index" as *;
 
 .menu {
-  visibility: hidden;
   @extend %flex-center;
   flex-direction: column;
   position: fixed;
+  width: 60vw;
+  height: 50vh;
+
   margin: 0;
   padding: 0;
   top: 10px;
   right: 10px;
-  width: 30vw;
-  height: 40vh;
+
   background-color: white;
   box-shadow: -4px 4px 4px 4px rgba($color: #000000, $alpha: 0.1);
   border-radius: 10px;
+}
+
+.icon {
+  cursor: pointer;
+  &:hover {
+    scale: 1.2;
+  }
 }
 
 .close {
@@ -47,5 +55,5 @@
 }
 
 .hidden {
-  visibility: none;
+  visibility: hidden;
 }

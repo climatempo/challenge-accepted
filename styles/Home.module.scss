@@ -18,10 +18,10 @@
   height: 10vh;
   width: 100vw;
   background-color: $climatempo-primary-color;
-  padding: 0 40px;
+  padding: 0 10px;
 
-  @media (max-width: 400px) {
-    padding: 0 10px;
+  @include larger-than-mobile {
+    padding: 0 40px;
   }
 }
 
@@ -34,8 +34,11 @@
 .image_container {
   @extend %flex-center;
   position: relative;
-  width: calc(1202px / $ratio);
-  height: calc(170px / $ratio);
+  width: calc(1202px / 7);
+  height: calc(170px / 7);
+  @include larger-than-mobile {
+    scale: 1.1;
+  }
 }
 
 .main {
@@ -58,17 +61,10 @@
 .grid {
   @extend %flex-center;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .logo {
   height: 1em;
   margin-left: 0.5rem;
-}
-
-@media (min-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: row;
-  }
 }

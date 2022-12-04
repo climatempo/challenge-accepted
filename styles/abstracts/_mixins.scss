@@ -3,3 +3,9 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin larger-than-mobile {
+  @media (min-width: 399px) {
+    @content;
+  }
+}

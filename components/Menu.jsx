@@ -32,8 +32,11 @@ export default function Menu(props) {
           height="20"
           onClick={handleOpen}
         />
+        <h4 className={styles.description}>Escala de Temperatura</h4>
         <li className={styles.toggle}>
-          <label className={styles.label} htmlFor="temperature">
+          <span className={styles.option}>ºF</span>
+          <label className={styles.slider} htmlFor="temperature">
+            <span className={styles.button}></span>
             <input
               className={styles.check}
               type="checkbox"
@@ -42,9 +45,14 @@ export default function Menu(props) {
               onChange={handleTemperature}
             />
           </label>
+          <span className={styles.option}>ºC</span>
         </li>
+        <h4 className={styles.description}>Escala de Volume</h4>
         <li className={styles.toggle}>
-          <label className={styles.label} htmlFor="temperature">
+          <span className={styles.option}>inch</span>
+
+          <label className={styles.slider} htmlFor="volume">
+            <span className={styles.button}></span>
             <input
               className={styles.check}
               type="checkbox"
@@ -53,6 +61,7 @@ export default function Menu(props) {
               onChange={handleVolume}
             />
           </label>
+          <span className={styles.option}>mm</span>
         </li>
       </menu>
     </div>

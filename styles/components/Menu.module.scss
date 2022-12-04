@@ -1,11 +1,12 @@
 @use "styles/abstracts/index" as *;
+$checked: false;
 
 .menu {
   @extend %flex-center;
   flex-direction: column;
   position: fixed;
-  width: 60vw;
-  height: 50vh;
+  width: 300px;
+  height: 250px;
 
   margin: 0;
   padding: 0;
@@ -45,15 +46,42 @@
   border-radius: 10px;
 }
 
-.label {
-  background-color: red;
+.slider {
+  position: absolute;
+  cursor: pointer;
+
+  width: 60px;
+  height: 34px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.button {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background-color: gray;
 }
 
 .check {
-  //   position: absolute;
-  cursor: pointer;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.check:checked + .button {
+  transform: translateX(26px);
 }
 
-.hidden {
-  visibility: hidden;
+.option {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bolder;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin: 2px 0;
 }

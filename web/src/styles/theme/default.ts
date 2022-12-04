@@ -15,6 +15,7 @@ export const theme = {
       'base-title': '#404040',
       'base-text': '#707070',
       'base-error': '#F8D7DB',
+      'base-selected': '#3FBF00',
 
       'brand-blue-light': '#2980CD',
       'brand-blue-dark': '#004983',

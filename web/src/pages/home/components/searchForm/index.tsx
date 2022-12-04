@@ -1,9 +1,16 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { MagnifyingGlass } from 'phosphor-react';
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import { DotsThreeVertical, MagnifyingGlass } from 'phosphor-react';
 import { useForm } from 'react-hook-form';
 import * as zod from 'zod';
+
 import { useData } from '~/contexts/DataContext';
-import { SearchFormContainer } from './styles';
+import { Menu } from '~/pages/home/components/searchForm/components/menu';
+import {
+   ButtonMenuContainer,
+   SearchButton,
+   SearchFormContainer,
+} from './styles';
 
 const searchFormValidationSchema = zod.object({
    city: zod.string().min(1, 'Informe o nome da cidade'),
@@ -45,10 +52,20 @@ export const SearchForm = () => {
             {...register('city')}
          />
 
-         <button aria-label='Buscar' disabled={isSubmitDisabled}>
+         <SearchButton aria-label='Buscar' disabled={isSubmitDisabled}>
             <MagnifyingGlass />
             Buscar
-         </button>
+         </SearchButton>
+
+         <DropdownMenu.Root>
+            <DropdownMenu.Trigger asChild>
+               <ButtonMenuContainer aria-label='Abrir opções de visualização'>
+                  <DotsThreeVertical size={32} weight='bold' />
+               </ButtonMenuContainer>
+            </DropdownMenu.Trigger>
+
+            <Menu />
+         </DropdownMenu.Root>
       </SearchFormContainer>
    );
 };

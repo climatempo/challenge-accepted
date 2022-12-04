@@ -26,28 +26,34 @@ export const SearchFormContainer = styled.form`
          color: ${({ theme }) => theme.colors['base-label']};
       }
    }
+`;
 
-   button {
-      display: flex;
-      gap: 0.5rem;
+const BaseButton = styled.button`
+   background-color: ${({ theme }) => theme.colors['base-button']};
 
-      padding: 1rem;
+   color: ${({ theme }) => theme.colors['base-white']};
 
-      background-color: ${({ theme }) => theme.colors['base-button']};
+   border-radius: 5px;
+`;
 
-      color: ${({ theme }) => theme.colors['base-white']};
+export const SearchButton = styled(BaseButton)`
+   display: flex;
+   gap: 0.5rem;
 
-      border-radius: 5px;
+   padding: 1rem;
 
-      &:disabled {
-         opacity: 0.7;
-         cursor: not-allowed;
-      }
-
-      transition: background-color 0.2s;
-
-      &:not(:disabled):hover {
-         background-color: ${({ theme }) => theme.colors['base-hover']};
-      }
+   &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
    }
+
+   transition: background-color 0.2s;
+
+   &:not(:disabled):hover {
+      background-color: ${({ theme }) => theme.colors['base-hover']};
+   }
+`;
+
+export const ButtonMenuContainer = styled(BaseButton)`
+   padding: 0.3rem 0;
 `;

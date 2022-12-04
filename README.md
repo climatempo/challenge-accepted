@@ -18,7 +18,7 @@ Teste técnico para Desenvolvedor Full Stack na Climatempo, empresa de serviços
 
 -  Typescript
 -  Node.js, Express.js, Cors
--  React.js, Styled-components, Phosphor-react, Zod, React-hook-form, Axios
+-  React.js, Styled-components, RadixUI, Phosphor-react, Zod, React-hook-form, Axios
 
 ### O Desafio
 

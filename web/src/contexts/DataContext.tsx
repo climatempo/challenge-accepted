@@ -5,9 +5,10 @@ import {
    useCallback,
    useContext,
    useEffect,
+   useReducer,
    useState,
 } from 'react';
-import { mockupData } from '~/mock/data';
+import { converterReducer } from '~/reducers/reducer';
 
 interface SearchFormData {
    city: string;
@@ -28,9 +29,16 @@ export interface Weather {
 
 interface DataContextType {
    error: boolean | undefined;
+
    locale: string | undefined;
    weather: Weather[] | undefined;
    searchCity: (data: SearchFormData) => void;
+
+   degreeUnit: string;
+   changeDegreeUnit: (degree: string) => void;
+
+   precipitationUnit: string;
+   changePrecipitationUnit: (unit: string) => void;
 }
 
 export const DataContext = createContext({} as DataContextType);
@@ -40,10 +48,14 @@ interface ContextProviderProps {
 }
 
 export const DataContextProvider = ({ children }: ContextProviderProps) => {
-   const [search, setSearch] = useState<SearchFormData>();
-   const [weather, setWeather] = useState<Weather[] | undefined>([]);
-   const [locale, setLocale] = useState<string | undefined>(undefined);
    const [error, setError] = useState(false);
+
+   const [search, setSearch] = useState<SearchFormData>();
+   const [weather, setWeather] = useState<Weather[] | undefined>();
+   const [locale, setLocale] = useState<string | undefined>();
+
+   const [degreeUnit, setDegreeUnit] = useState('celsius');
+   const [precipitationUnit, setPrecipitationUnit] = useState('mm');
 
    const searchCity = (data: SearchFormData) => {
       setSearch(data);
@@ -75,8 +87,27 @@ export const DataContextProvider = ({ children }: ContextProviderProps) => {
       search && getWeatherByCity(search.city);
    }, [search]);
 
+   const changeDegreeUnit = (degree: string) => {
+      setDegreeUnit(degree);
+   };
+
+   const changePrecipitationUnit = (unit: string) => {
+      setPrecipitationUnit(unit);
+   };
+
    return (
-      <DataContext.Provider value={{ error, locale, weather, searchCity }}>
+      <DataContext.Provider
+         value={{
+            error,
+            locale,
+            weather,
+            searchCity,
+            degreeUnit,
+            changeDegreeUnit,
+            precipitationUnit,
+            changePrecipitationUnit,
+         }}
+      >
          {children}
       </DataContext.Provider>
    );

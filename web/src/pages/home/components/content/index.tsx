@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useData } from '~/contexts/DataContext';
 import { InfoCard } from '../infoCard';
 import { SearchForm } from '../searchForm';
@@ -13,8 +12,8 @@ export const Content = () => {
 
          {error ? (
             <span>
-               OPS! Não conseguimos encontrar a previsão. 😩 Tente novamente com
-               outra cidade!
+               OPS! Não conseguimos encontrar a previsão. 😩 <br /> Tente
+               novamente com outra cidade!
             </span>
          ) : locale ? (
             <>

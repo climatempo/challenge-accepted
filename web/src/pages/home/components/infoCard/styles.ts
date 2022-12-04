@@ -20,7 +20,6 @@ export const InfoCardContainer = styled.article`
 
    p {
       font-size: ${({ theme }) => theme.textSizes['text-l']};
-      font-weight: 400;
    }
 `;
 

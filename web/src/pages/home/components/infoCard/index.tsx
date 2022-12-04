@@ -1,6 +1,10 @@
 import { ArrowDown, ArrowUp, Drop } from 'phosphor-react';
-import { Weather } from '~/contexts/DataContext';
-import { dateFormatter } from '~/utils/dateFormatter';
+import { useData, Weather } from '~/contexts/DataContext';
+import {
+   dateFormatter,
+   fahrenheinFormatter,
+   inchFormatter,
+} from '~/utils/formatter';
 import { IconContainer, InfoCardContainer, Tags, WeatherInfos } from './styles';
 
 interface InfoCardProps {
@@ -9,8 +13,24 @@ interface InfoCardProps {
 
 export const InfoCard = ({ weather }: InfoCardProps) => {
    const { date, text, rain, temperature } = weather;
+   const { degreeUnit, precipitationUnit } = useData();
 
    const formattedDate = dateFormatter(date);
+
+   const precipitation =
+      precipitationUnit === 'mm'
+         ? `${rain.precipitation} mm`
+         : `${inchFormatter(rain.precipitation)} inches`;
+
+   const minTemperature =
+      degreeUnit === 'fahrenhein'
+         ? fahrenheinFormatter(temperature.min)
+         : temperature.min;
+
+   const maxTemperature =
+      degreeUnit === 'fahrenhein'
+         ? fahrenheinFormatter(temperature.max)
+         : temperature.max;
 
    return (
       <InfoCardContainer>
@@ -24,12 +44,12 @@ export const InfoCard = ({ weather }: InfoCardProps) => {
 
                <span>
                   <IconContainer>
-                     <ArrowDown color='#0380CC' />
-                     {temperature.min}º
+                     <ArrowDown color='#0380CC' weight='bold' />
+                     {minTemperature}º
                   </IconContainer>
                   <IconContainer>
                      <ArrowUp color='#E2251A' />
-                     {temperature.max}º
+                     {maxTemperature}º
                   </IconContainer>
                </span>
             </div>
@@ -40,7 +60,7 @@ export const InfoCard = ({ weather }: InfoCardProps) => {
                <span>
                   <IconContainer>
                      <Drop color='#0380CC' weight='fill' />
-                     {rain.precipitation}mm - {rain.probability}%
+                     {precipitation} - {rain.probability}%
                   </IconContainer>
                </span>
             </div>

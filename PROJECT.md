@@ -12,7 +12,7 @@ Primeiro, instalamos as dependências do backend e iniciamos o servidor da API
 ```bash
 cd api/ # entra na pasta api
 
-npm install && npm run dev # instala as depedências e inicia o servidor
+npm install && npm run dev # instala as depedências e inicia o servidor do backend
 ```
 
 Depois, instalamos as dependências do frontend e iniciamos um servidor para visualizar a página web
@@ -20,5 +20,5 @@ Depois, instalamos as dependências do frontend e iniciamos um servidor para vis
 ```bash
 cd .. && cd web/ # volta uma pasta e entra na pasta web
 
-npm install && npm run dev # instala as depedências e inicia um servidor web
+npm install && npm run dev # instala as depedências e inicia o servidor web
 ```

@@ -17,6 +17,8 @@ export const ContentContainer = styled.main`
 
       padding: 1rem;
       border-radius: 5px;
+
+      text-align: center;
    }
 
    h1 {

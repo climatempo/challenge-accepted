@@ -9,8 +9,14 @@ export default function Menu(props) {
   const { handleTemperature, handleVolume } = props
   return (
     <div className={styles.container}>
-      <Image src={menu} alt="barras de menu" width="30" height="30" />
-      <menu className={styles.menu}>
+      <Image
+        className={styles.icon}
+        src={menu}
+        alt="barras de menu"
+        width="30"
+        height="30"
+      />
+      {/* <menu className={styles.menu}>
         <Image
           className={styles.close}
           src={close}
@@ -37,7 +43,7 @@ export default function Menu(props) {
             />
           </label>
         </li>
-      </menu>
+      </menu> */}
     </div>
   )
 }

@@ -1,5 +1,9 @@
 @use "styles/abstracts/index" as *;
 
+.icon {
+  scale: 1.2;
+}
+
 .menu {
   @extend %flex-center;
   position: fixed;

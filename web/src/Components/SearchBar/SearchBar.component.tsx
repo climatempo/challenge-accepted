@@ -9,7 +9,7 @@ function SearchBar() {
     const pageLocale = useAppSelector(state => state.locale.value);
     const { enqueueSnackbar: notify } = useSnackbar();
     const dispatch = useAppDispatch();
-    const server = useServerAddress();
+    const { search } = useServerAddress();
     let fetchBlock = false;
 
     function fetchSearch(event: FormEvent) {
@@ -20,7 +20,7 @@ function SearchBar() {
         if(input.length < 3 || input.length > 100)
             return;
 
-        fetch(`${ server }/search/${input}`)
+        fetch(search(input))
             .then(response => response.json())
             .then(setOptions)
             .catch(err => {

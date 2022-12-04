@@ -41,13 +41,13 @@ function DailyWeathers() {
     const [weathers, setWeathers] = useState<DailyWeather[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const { enqueueSnackbar: notify } = useSnackbar();
-    const server = useServerAddress();
+    const { weathers: weathersURL } = useServerAddress();
 
     useEffect(() => {
         if(!locale)
             return;
         setLoading(true);
-        fetch(`${ server }/city/${ locale.idcity }/weathers`)
+        fetch(weathersURL(locale.idcity))
             .then(response => {
                 setLoading(false);
                 if(response.status === 404) {
@@ -61,7 +61,7 @@ function DailyWeathers() {
                 setLoading(false);
                 notify('Alguma coisa deu errado.', { variant: 'error'});
             });
-    }, [locale, notify, server]);
+    }, [locale, notify, weathersURL]);
 
     function renderDate(weather: DailyWeather) {
         const date = weather.date.split('-');

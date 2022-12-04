@@ -21,13 +21,13 @@ function InstantWeather() {
     const [weather, setWeather] = useState<InstantWeatherModel>();
     const [loading, setLoading] = useState<boolean>(true);
     const { enqueueSnackbar: notify } = useSnackbar();
-    const server = useServerAddress();
+    const { instant } = useServerAddress();
 
     useEffect(() => {
         if(!locale)
             return;
         setLoading(true);
-        fetch(`${ server }/city/${ locale.idlocale }/now`)
+        fetch(instant(locale.idlocale))
             .then(response => {
                 setLoading(false);
                 if(response.status === 404) {
@@ -41,7 +41,7 @@ function InstantWeather() {
                 console.error(err);
                 notify('Alguma coisa deu errado.', { variant: 'error'});
             });
-    }, [locale, notify, server]);
+    }, [locale, notify, instant]);
 
     function renderSubInfo(caption: string, info: string|number, unity: ReactNode) {
         return <div className="text-center sm:text-left">

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Image from "next/image"
+import Toggle from "./Toggle"
 
 import menu from "public/images/icons/menu.png"
 import close from "public/images/icons/close.png"
@@ -34,34 +35,15 @@ export default function Menu(props) {
         />
         <h4 className={styles.description}>Escala de Temperatura</h4>
         <li className={styles.toggle}>
-          <span className={styles.option}>ºF</span>
-          <label className={styles.slider} htmlFor="temperature">
-            <span className={styles.button}></span>
-            <input
-              className={styles.check}
-              type="checkbox"
-              name="toggle"
-              id="temperature"
-              onChange={handleTemperature}
-            />
-          </label>
           <span className={styles.option}>ºC</span>
+          <Toggle id="temperature" handler={handleTemperature} />
+          <span className={styles.option}>ºF</span>
         </li>
         <h4 className={styles.description}>Escala de Volume</h4>
         <li className={styles.toggle}>
-          <span className={styles.option}>inch</span>
-
-          <label className={styles.slider} htmlFor="volume">
-            <span className={styles.button}></span>
-            <input
-              className={styles.check}
-              type="checkbox"
-              name="toggle"
-              id="volume"
-              onChange={handleVolume}
-            />
-          </label>
           <span className={styles.option}>mm</span>
+          <Toggle id="volume" handler={handleVolume} />
+          <span className={styles.option}>inch</span>
         </li>
       </menu>
     </div>

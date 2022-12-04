@@ -1,0 +1,35 @@
+.slider {
+  position: absolute;
+  cursor: pointer;
+
+  width: 60px;
+  height: 34px;
+  border-radius: 15px;
+  background-color: white;
+  &:hover {
+    .button {
+      opacity: 0.9;
+    }
+  }
+}
+
+.button {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background-color: gray;
+}
+
+.check {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  &:checked {
+    + .button {
+      transform: translateX(26px);
+    }
+  }
+}

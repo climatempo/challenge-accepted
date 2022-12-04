@@ -1,5 +1,4 @@
 @use "styles/abstracts/index" as *;
-$checked: false;
 
 .menu {
   @extend %flex-center;
@@ -44,35 +43,6 @@ $checked: false;
   height: 20%;
   margin: 10px 0;
   border-radius: 10px;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-
-  width: 60px;
-  height: 34px;
-  border-radius: 15px;
-  background-color: white;
-}
-
-.button {
-  position: absolute;
-  left: 4px;
-  bottom: 4px;
-  width: 26px;
-  height: 26px;
-  border-radius: 100%;
-  background-color: gray;
-}
-
-.check {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.check:checked + .button {
-  transform: translateX(26px);
 }
 
 .option {

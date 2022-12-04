@@ -6,6 +6,7 @@
    "keywords": [
       "Climate Web"
    ],
+   "description": "Web App que exibe previsão do tempo",
    "author": "Tayanne Novais @tayhsn",
    "scripts": {
       "dev": "vite",

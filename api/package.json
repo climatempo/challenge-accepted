@@ -1,7 +1,7 @@
 {
    "name": "challenge-climatempo-api",
    "version": "1.0.0",
-   "description": " ",
+   "description": "API que fornece dados de previsão do tempo",
    "main": "index.ts",
    "scripts": {
       "build": "tsc",

@@ -12,5 +12,6 @@ export const HeaderContainer = styled.header`
 
    img {
       width: 8rem;
+      height: fit-content;
    }
 `;

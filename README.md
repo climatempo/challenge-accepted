@@ -10,9 +10,25 @@ Teste técnico para Desenvolvedor Full Stack na Climatempo, empresa de serviços
 
 ### O Projeto
 
+App Web que exibe a previsão do tempo por cidade pesquisada, consumindo os dados através da API.
+
+-  Análise Lighthouse: 100% Acessível | 100% Boas práticas | 100% SEO
+
 -  [Protótipo da interface](https://www.figma.com/file/t9fJqD8uh0yuXEeHvKsgm1/Layout---Climatempo-app?node-id=0%3A1&t=KzGQzecOwTi9SJlK-1) no Figma.
 
 -  [Documentação da API](https://documenter.getpostman.com/view/14419670/2s8YzMXQhT) no Postman.
+
+#### Funcionalidades
+
+-  Responsividade Mobile, Tablet e Desktop
+-  Tratamento de erro caso não obtenha os dados da cidade pesquisada
+-  O usuário pode escolher visualizar a temperatura em Celsius ou Fahrenhein (padrão é Celsius) e a precipitação da chuva em Milímetros ou Polegadas (padrão é Milímitros)
+
+#### Melhorias futuras
+
+-  Integrar uma API Pública para obter mais dados
+-  Adicionar testes unitários na API e na WEB
+-  Melhorar a performace da aplicação
 
 #### Tecnologias utilizadas
 

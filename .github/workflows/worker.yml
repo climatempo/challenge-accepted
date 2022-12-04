@@ -15,7 +15,7 @@ jobs:
         run: cd worker && npm install
 
       - name: Build
-        run: npm build
+        run: npm run build
 
       - name: Include node modules on lambda package
         run: mv node_modules dist/node_modules

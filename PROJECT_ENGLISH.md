@@ -1,4 +1,6 @@
 [![Test](https://github.com/laravieira/climatempo-challenge/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/laravieira/climatempo-challenge/actions/workflows/test.yml)
+[![AWS Worker](https://github.com/laravieira/climatempo-challenge/actions/workflows/worker.yml/badge.svg)](https://github.com/laravieira/climatempo-challenge/actions/workflows/worker.yml)
+![CloudFlare Pages Weather](https://img.shields.io/endpoint?url=https://cloudflare-pages-badges.laravieira.workers.dev/?projectName=weather)
 
 ## Challenge resolution
 ###### [Versão em português](PROJECT.md)

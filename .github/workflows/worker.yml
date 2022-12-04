@@ -1,4 +1,4 @@
-name: Deploy Lambda Worker
+name: AWS Worker
 
 on:
   push:

@@ -1,0 +1,33 @@
+name: Deploy Lambda Worker
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: cd worker && npm install
+
+      - name: Build
+        run: npm build
+
+      - name: Include node modules on lambda package
+        run: mv node_modules dist/node_modules
+
+      - name: Create lambda package
+        run: (cd dist && zip -r ../function.zip .)
+
+      - name: Deploy to AWS
+        uses: appleboy/lambda-action@master
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: ${{ secrets.AWS_REGION }}
+          function_name: fetchWeather
+          zip_file: function.zip

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Instant Weather component 1`] = `
+exports[`Instant WeatherController component 1`] = `
 <div
   className="flex gap-10 items-center max-w-[720px] mx-auto flex-col lg:flex-row"
 >

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Daily Weather component 1`] = `
+exports[`Daily WeatherController component 1`] = `
 <div
   className="mt-24 flex flex-col"
 >

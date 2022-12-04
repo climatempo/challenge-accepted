@@ -5,7 +5,7 @@ import store from '../../store';
 import { SnackbarProvider } from 'notistack';
 import InstantWeather from './index';
 
-test("Instant Weather component", () => {
+test("Instant WeatherController component", () => {
   const reduxStore = store;
 
   const weather = renderer.create(

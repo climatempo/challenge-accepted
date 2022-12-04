@@ -1,0 +1,5 @@
+{
+  "resource": "/search/cha",
+  "path": "/API/PATH",
+  "httpMethod": "POST"
+}

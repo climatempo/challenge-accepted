@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from '../../store';
 import { SnackbarProvider } from 'notistack';
 
-test("Daily Weather component", () => {
+test("Daily WeatherController component", () => {
   const reduxStore = store;
 
   const weathers = renderer.create(

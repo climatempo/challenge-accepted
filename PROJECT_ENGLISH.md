@@ -156,7 +156,7 @@ base: string # Looks like city's collection name
 searchPoints: number # How likely its desired
 ```
 
-###### [Instant Weather info](server/src/Models/InstantWeather.model.ts)
+###### [Instant WeatherController info](server/src/Models/InstantWeather.model.ts)
 ```yaml
 idlocale: number # The city's id
 temperature: number # The current temperature
@@ -169,12 +169,12 @@ pressure: number # The current atmospheric pressure
 date: string # The date and time of this weather info
 ```
 
-###### [Daily Weather info](server/src/Models/DailyWeather.model.ts)
+###### [Daily WeatherController info](server/src/Models/DailyWeather.model.ts)
 ```yaml
 idcity: number # The city's code
 moon: string[] # The day's list of moons
 rainbow: string # The description of probability of a rainbow
-description: string # The day's Weather resume
+description: string # The day's WeatherController resume
 date: string # The day's date
 temperature:
   min: number # The day's minimum temperature

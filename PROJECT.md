@@ -39,7 +39,7 @@ O site em sua página inicial parece assim:
 ### Loom explicando o projeto
 
 Gravei um pequeno video explicando o projeto e mostrando ele em ação.
-![Video explicativo](https://www.loom.com/share/e72f84f14d05467894f216dec7e10743)
+(https://www.loom.com/share/e72f84f14d05467894f216dec7e10743)
 
 ## Index
 

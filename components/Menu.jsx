@@ -28,7 +28,7 @@ export default function Menu(props) {
         <Image
           className={styles.close}
           src={close}
-          alt="barras de menu"
+          alt="icone de x"
           width="20"
           height="20"
           onClick={handleOpen}

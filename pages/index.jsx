@@ -42,11 +42,6 @@ export default function Home() {
     return locale.name
   })
 
-  useEffect(() => {
-    const searchButton = document.querySelector("#search")
-    searchButton
-  })
-
   return (
     <div className={styles.container}>
       <Head>
@@ -92,9 +87,8 @@ export default function Home() {
           isOpen={searchOpen}
           setIsOpen={setSearchOpen}
         />
-        <div className={styles.grid}>
-          <Deck isCelsius={isCelsius} isMetric={isMetric} weather={weather} />
-        </div>
+
+        <Deck isCelsius={isCelsius} isMetric={isMetric} weather={weather} />
       </main>
       <footer className={styles.footer}>
         <a

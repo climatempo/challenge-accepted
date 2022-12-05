@@ -18,6 +18,7 @@
     "sass": "^1.56.1"
   },
   "devDependencies": {
-    "cypress": "^11.2.0"
+    "cypress": "^11.2.0",
+    "cypress-real-events": "^1.7.4"
   }
 }

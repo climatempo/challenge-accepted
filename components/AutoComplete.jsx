@@ -95,7 +95,7 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
 
   const Suggestions = () => {
     return (
-      <ul className={styles.suggestions}>
+      <ul data-test-id="suggestions_list" className={styles.suggestions}>
         {suggestions.map((suggestion, index) => {
           return (
             <li
@@ -104,7 +104,6 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
                 ${index === selected ? styles.active : ""}
                 `}
               key={suggestion}
-              index={index}
               onClick={(e) => {
                 handleClick(e)
               }}
@@ -125,8 +124,12 @@ const AutoComplete = ({ data, chooseCity, isOpen, setIsOpen }) => {
   }
 
   return (
-    <div className={`${styles.wrapper} ${isOpen ? "" : styles.hidden}`}>
+    <div
+      data-test-id="suggestions_panel"
+      className={`${styles.wrapper} ${isOpen ? "" : styles.hidden}`}
+    >
       <input
+        data-test-id="search_bar"
         type="search"
         value={displayValue}
         onFocus={resetSelection}

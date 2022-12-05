@@ -1,3 +1,4 @@
+import styles from "styles/components/Deck.module.scss"
 import Card from "./Card"
 
 function Deck(props) {
@@ -7,7 +8,11 @@ function Deck(props) {
     <Card {...props} isCelsius={isCelsius} isMetric={isMetric} key={index} />
   ))
 
-  return <>{deckOfCards}</>
+  return (
+    <div data-test-id="deck" className={styles.grid}>
+      {deckOfCards}
+    </div>
+  )
 }
 
 export default Deck

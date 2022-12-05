@@ -1,0 +1,6 @@
+@use "styles/abstracts/index" as *;
+
+.grid {
+  @extend %flex-center;
+  flex-wrap: wrap;
+}

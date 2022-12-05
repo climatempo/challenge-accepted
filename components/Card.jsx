@@ -8,11 +8,11 @@ import raindrop from "public/images/icons/raindrop.png"
 function Card(props) {
   const {
     date = "0000-00-00",
-    text,
+    text = "Como está o clima lá fora?",
     temperature = { min: 0, max: 0 },
     rain = { probability: 0, precipitation: 0 },
-    isCelsius,
-    isMetric,
+    isCelsius = true,
+    isMetric = true,
   } = props
 
   const normalDate = date.split("-").reverse().join("/")

@@ -26,15 +26,20 @@
 
 > Este site é resultado de um desafio para a vaga FrontEnd da contratadora Hypesoft, para o cliente Climatempo.
 
-## Live Version
+## Versão Online
 
 Se quiser ver a versão em tempo real, aqui está o link:
 [Live Version](https://challenge-accepted-ozywryjlu-phfdonda.vercel.app/)
 
-### Screenshots of the project
+### Screenshots do projeto
 
 O site em sua página inicial parece assim:
 ![screenshot](public/images/mobile.png)
+
+### Loom explicando o projeto
+
+Gravei um pequeno video explicando o projeto e mostrando ele em ação.
+![Video explicativo](https://www.loom.com/share/e72f84f14d05467894f216dec7e10743)
 
 ## Index
 

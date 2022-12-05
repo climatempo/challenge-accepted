@@ -29,19 +29,14 @@
 ## Live Version
 
 Se quiser ver a versão em tempo real, aqui está o link:
-[Live Version]()
+[Live Version](https://challenge-accepted-ozywryjlu-phfdonda.vercel.app/)
 
 ### Screenshots of the project
 
-The original form of GetNinjas looks like this:
-![original-form](./public/images/original-form.png)
-
-The initial page looks like this:
+O site em sua página inicial parece assim:
 ![screenshot](public/images/mobile.png)
 
-<!-- TABLE OF CONTENTS -->
-
-## Table of Contents
+## Index
 
 - [Sobre o projeto](#sobre-o-projeto)
   - [Restrições](#restrições)

@@ -64,7 +64,6 @@ export default function Home() {
           onClick={handleSearchBar}
           className={styles.icon_container}
         >
-          {" "}
           <Image
             className={styles.search}
             src={search}
@@ -77,6 +76,7 @@ export default function Home() {
         <div className={styles.image_container}>
           <Image src={logo} layout="fill" alt="logo" />
         </div>
+
         <Menu
           handleVolume={handleVolume}
           handleTemperature={handleTemperature}

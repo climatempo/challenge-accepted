@@ -40,7 +40,7 @@ O site em sua página inicial parece assim:
 
 - [Sobre o projeto](#sobre-o-projeto)
   - [Restrições](#restrições)
-  - [Objectives](#objectives)
+  - [Objetivos](#objetivos)
   - [Instalação](#instalação)
   - [Feito com](#feito-com)
   - [Testando](#testando)

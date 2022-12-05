@@ -26,14 +26,10 @@
 
 > Este site é resultado de um desafio para a vaga FrontEnd da contratadora Hypesoft, para o cliente Climatempo.
 
-![screenshot](public/images/mobile.png)
-
 ## Live Version
 
 Se quiser ver a versão em tempo real, aqui está o link:
-[Live Version](https://getninjas-challenge.herokuapp.com/)
-
-This is an app deployed in Heroku, so please wait up to 30 seconds for it to load the first time.
+[Live Version]()
 
 ### Screenshots of the project
 
@@ -41,109 +37,93 @@ The original form of GetNinjas looks like this:
 ![original-form](./public/images/original-form.png)
 
 The initial page looks like this:
-![main-page](./public/images/getninjas-frontpage.png)
+![screenshot](public/images/mobile.png)
 
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
 
-- [About the Project](#about-the-project)
-  - [Restrictions](#restrictions)
+- [Sobre o projeto](#sobre-o-projeto)
+  - [Restrições](#restrições)
   - [Objectives](#objectives)
-  - [Installation](#installation)
-  - [Instructions](#instructions)
-  - [Built With](#built-with)
-  - [Testing](#testing)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+  - [Instalação](#instalação)
+  - [Feito com](#feito-com)
+  - [Testando](#testando)
+- [Contato](#contato)
 
-<!-- ABOUT THE PROJECT -->
+## Sobre o Projeto
 
-## About The Project
+Esse é um requisito para contratação na vaga
 
-This is a challenge requested as part of a hiring process.
+### Restrições
 
-### Restrictions
+1. O que se espera:
 
-1. I am allowed to use:
+- Uma página responsiva;
+- Um campo autocomplete para buscar localidades;
+- Um card para cada dia de previsão;
 
-- ES6 Javascript
-- Linters, both for JS as well as for CSS
-- Task runners/builders such as Webpack, Gulp, Grunt and such.
+2. Desafio Extra:
 
-2. I am NOT allowed to use:
+- Permita que o usuário selecione em qual unidade de temperatura e chuva (precipitação) ele quer visualizar os dados.
 
-- JS Frameworks - React, Angular, Vue, you name it.
-- Utility libraries - Underscore, Lodash, etc.
-- CSS Frameworks - Bootstrap, Less, MaterializeCSS, and so on.
+Conversão dos valores:
+Temperatura:
 
-3. I AM allowed to use SCSS or SASS, but I have to give a good explanation about the real necessity of it.
-4. Test frameworks are allowed.
+> de °C pra °F: (valor _ 1.8) + 32
+> de °F pra °C: (valor - 32) / 1.8
+> Chuva:
+> de mm pra inch: (valor / 25.4)
+> de inch pra mm: (valor _ 25.4)
 
-### Objectives
+### Objetivos
 
-1. The objective of this test is to evaluate the code's:
+1. O objetivo deste teste é avaliar:
 
-- organization;
-- semantic;
-- full use of features of HTML, CSS and Vanilla JavaScript;
-- pattern usage;
-- code performance;
-- JavaScript testing.
+- Performance de busca e renderização;
+- Segurança;
+- Testes;
+- Manutenibilidade;
+- Usabilidade;
+- Boas práticas;
 
-2. I must create a server using Node.js to serve the fields.json file that is in the root folder as an API. I AM allowed to use Express.
-3. I don't have to copy the whole [given page](https://www.getninjas.com.br/moda-e-beleza/cabeleireiros), only the request form. The fields must be dynamically assembled acording to the content of the fields.json file.
-4. Every form field that has the `required: true` must show a warning message if the user tries to go forward without filling it. The message should be "Este campo é requerido".
-5. All fields with type "enumerable" are to be of type `select`. This is basically every one, except for one textarea and four input fields at the end.
-6. The form does not need to make a POST request.
-7. GetNinjas have a culture of unit and integration testing. One of these two forms of testing is mandatory.
-8. I can create a route for the HTML form.
+2. Não era necessário reproduzir o exemplo exatamente, apenas utilizá-lo como referência.
 
-## Installation
+## Instalação
 
-Node.js and npm (Node Package Manager) are needed to run this project. Follow these steps to install it:
-[Node - Installation Guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+Este projeto necessita de Node.js e npm instalados na máquina. Siga estes passos para instalá-los: [Node - Installation Guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-You can download the [repo](https://github.com/phfdonda/frontend-challenge/archive/master.zip) or clone (paste on the terminal) `git@github.com:phfdonda/frontend-challenge.git` using SSH or `https://github.com/phfdonda/frontend-challenge.git` using HTTPS.
+Você pode baixa o código [repo](https://github.com/phfdonda/challenge-accepted/archive/heads/master.zip) ou cloná-lo colando o seguinte código no terminal `git clone git@github.com:phfdonda/challenge-accepted.git` usando SSH ou `git clone https://github.com/phfdonda/challenge-accepted.git` usando HTTPS.
 
-Open the terminal and cd to the path where you download the project. It should be something like: `User/<folder>/frontend-challenge/`. After that, run `npm install` to install all dependencies.
+Abra o terminal e cd para a pasta desejada onde instalou o projeto, algo assim: `User/<folder>/frontend-challenge/`. Depois disso, rode `npm install` para instalar todas as dependências.
 
-If you're using yarn and encounter a problem with yarn packages, run `yarn install --check-files`.
+Este projeto não requeria que um banco de dados fosse instalado, então é bem simples. É um projeto Next, então por padrão a porta para acessá-lo é a 3000. Digite no seu terminal `npm start`. No navegador, digite `http://localhost:3000`.
 
-This project didn't require a database set-up, so it is pretty much simple. By default the port is set to 3000. Run in your terminal `npm start`. In your browser url bar, type `localhost:3000`.
+Aproveite!!!
 
-Enjoy!!
+### Feito com
 
-### Built With
-
-- Pug for HTML
-- Vanilla Javascript
-- Pure CSS (no pre-processors)
-- Express
+- Next.js
+- SCSS para estilização
 - VsCode
-- Nightwatch for testing.
-- Stickler for linting.
+- Cypress para testes.
 
-## Testing
+## Testando
 
-For testing I used the package `Nightwatch` for integration testing.
+Para testar utilizei o `Cypress` para testes e2e. Escolhi este método ao invés de unitário porque ele vai testar mais componentes ao mesmo tempo, mesmo que não com toda a precisão. O teste e2e também é ótimo como documentação e demonstração de funcionamento de um site, o que é bem o propósito deste projeto.
 
-For the test to work the server must be online. For you to run tests on the project yourself, cd into the project root folder and run `npm start`. In another terminal window, run `npm test`.
+O Cypress trabalha melhor com Chrome, então é bom que use este navegador.
 
-I didn't have time enough to do a thorough battery of tests, but I hope the amount here is enough to show some of my knowledge about integration testing.
+Para testar você deve primeiro colocar o servidor online, digitando `npm run dev`. Então pode rodar o teste, digitando no terminal `npm test`.
 
-<!-- CONTACT -->
+Isto deve abrir uma janela no Chrome. Os testes rodam ao vivo, e são em intuitivos.
 
-## Contact
+Não deu para testar o projeto inteiramente, mas espero que seja o suficiente para demonstrar conhecimentos.
+
+## Contato
 
 Pedro Henrique Ferreira Donda
 
 Github - [@phfhdonda](https://github.com/phfdonda)
 
 LinkedIn - [PedroDonda](https://www.linkedin.com/in/pedro-donda-808621bb/)
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## Acknowledgements
-
-- [GetNinjas](https://www.getninjas.com.br/)

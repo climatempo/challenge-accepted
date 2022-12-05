@@ -17,6 +17,7 @@ export default function Menu(props) {
   return (
     <div className={styles.container}>
       <Image
+        data-test-id="menu_icon"
         className={styles.icon}
         src={menu}
         alt="barras de menu"
@@ -24,8 +25,12 @@ export default function Menu(props) {
         height="30"
         onClick={handleOpen}
       />
-      <menu className={`${styles.menu} ${isSettingsOpen ? "" : styles.hidden}`}>
+      <menu
+        data-test-id="menu"
+        className={`${styles.menu} ${isSettingsOpen ? "" : styles.hidden}`}
+      >
         <Image
+          data-test-id="close_icon"
           className={styles.close}
           src={close}
           alt="icone de x"
@@ -34,13 +39,13 @@ export default function Menu(props) {
           onClick={handleOpen}
         />
         <h4 className={styles.description}>Escala de Temperatura</h4>
-        <li className={styles.toggle}>
+        <li data-test-id="toggle_temperature" className={styles.toggle}>
           <span className={styles.option}>ºC</span>
           <Toggle id="temperature" handler={handleTemperature} />
           <span className={styles.option}>ºF</span>
         </li>
         <h4 className={styles.description}>Escala de Volume</h4>
-        <li className={styles.toggle}>
+        <li data-test-id="toggle_volume" className={styles.toggle}>
           <span className={styles.option}>mm</span>
           <Toggle id="volume" handler={handleVolume} />
           <span className={styles.option}>inch</span>

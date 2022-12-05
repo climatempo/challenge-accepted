@@ -173,4 +173,46 @@ describe("Testing Home", () => {
         .and("not.contain", "20ºC")
     })
   })
+
+  context("Testing Settings Menu", () => {
+    beforeEach(() => {
+      cy.get("[data-test-id='deck']").children().first().as("first_card")
+      cy.get("[data-test-id='menu']").as("menu")
+      cy.get("[data-test-id='menu_icon']").as("menu_icon")
+      cy.get("[data-test-id='close_icon']").as("close_icon")
+      cy.get("[data-test-id='toggle_temperature']").as("toggle_temperature")
+      cy.get("[data-test-id='toggle_volume']").as("toggle_volume")
+    })
+
+    it("Should open when clicking on menu button", () => {
+      cy.get("@menu").should("not.be.visible")
+      cy.get("@menu_icon").click()
+
+      cy.get("@menu").should("be.visible")
+    })
+
+    it("Should change temperature when toggle temperature button is clicked", () => {
+      // São Paulo is still selected, with 27ºC max and 19ºC min
+      cy.get("@first_card").should("contain", "27ºC").and("contain", "19ºC")
+
+      cy.get("@toggle_temperature").click()
+
+      cy.get("@first_card")
+        .and("contain", "81ºF")
+        .and("contain", "66ºF")
+        .and("not.contain", "27ºC")
+        .and("not.contain", "19ºC")
+    })
+
+    it("Should change volume when toggle volume button is clicked", () => {
+      // São Paulo is still selected, with 27ºC max and 19ºC min
+      cy.get("@first_card").should("contain", "20mm")
+
+      cy.get("@toggle_volume").click()
+
+      cy.get("@first_card")
+        .should("contain", "0.79inch")
+        .and("not.contain", "20mm")
+    })
+  })
 })

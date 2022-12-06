@@ -20,6 +20,8 @@ Web App que exibe dados de previsão do tempo por cidade pesquisada, consumindo 
 
 -  [Documentação da API](https://documenter.getpostman.com/view/14419670/2s8YzMXQhT) no Postman.
 
+-  Docker imagens: `tayhsn/climateapp` e `tayhsn/climateapi`
+
 #### Funcionalidades
 
 -  Responsividade Mobile, Tablet e Desktop

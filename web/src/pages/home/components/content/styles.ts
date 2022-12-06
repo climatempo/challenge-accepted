@@ -23,9 +23,23 @@ export const ContentContainer = styled.main`
 
    h1 {
       font-size: ${({ theme }) => theme.textSizes['title-l']};
-
-      margin-bottom: 1rem;
    }
+`;
+
+export const TitleContainer = styled.div`
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+
+   margin-bottom: 1rem;
+`;
+
+export const ButtonMenuContainer = styled.button`
+   background-color: ${({ theme }) => theme.colors['brand-blue-light']};
+
+   color: ${({ theme }) => theme.colors['base-white']};
+
+   border-radius: 5px;
 `;
 
 export const CardsContainer = styled.div`

@@ -5,10 +5,9 @@ import {
    useCallback,
    useContext,
    useEffect,
-   useReducer,
    useState,
 } from 'react';
-import { converterReducer } from '~/reducers/reducer';
+import { LOCAL_URL } from '~/constants/urls';
 
 interface SearchFormData {
    city: string;
@@ -65,7 +64,29 @@ export const DataContextProvider = ({ children }: ContextProviderProps) => {
    const getWeatherByCity = useCallback(
       async (city: string) => {
          const response = await axios
-            .post('http://localhost:3000/locale', { city })
+            .get(`${LOCAL_URL}/weather`, { params: { city } })
+            .then((res) => res.data)
+            .catch((error) => console.log(error));
+
+         if (!response) {
+            setError(true);
+            setSearch(undefined);
+            return;
+         }
+
+         setWeather(response.weather);
+      },
+      [search]
+   );
+
+   useEffect(() => {
+      search && getWeatherByCity(search.city);
+   }, [search]);
+
+   const getSearchedLocale = useCallback(
+      async (search: string) => {
+         const response = await axios
+            .get(`${LOCAL_URL}/locale`, { params: { search } })
             .then((res) => res.data)
             .catch((error) => console.log(error));
 
@@ -78,13 +99,12 @@ export const DataContextProvider = ({ children }: ContextProviderProps) => {
          const cityName = `${response.name}, ${response.state}`;
 
          setLocale(cityName);
-         setWeather(response.weather);
       },
       [search]
    );
 
    useEffect(() => {
-      search && getWeatherByCity(search.city);
+      search && getSearchedLocale(search.city);
    }, [search]);
 
    const changeDegreeUnit = (degree: string) => {

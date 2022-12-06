@@ -32,19 +32,17 @@ export const SearchFormContainer = styled.form`
    }
 `;
 
-const BaseButton = styled.button`
+export const SearchButton = styled.button`
+   display: flex;
+   gap: 0.5rem;
+
+   padding: 1rem;
+
    background-color: ${({ theme }) => theme.colors['base-button']};
 
    color: ${({ theme }) => theme.colors['base-white']};
 
    border-radius: 5px;
-`;
-
-export const SearchButton = styled(BaseButton)`
-   display: flex;
-   gap: 0.5rem;
-
-   padding: 1rem;
 
    &:disabled {
       opacity: 0.7;
@@ -56,8 +54,4 @@ export const SearchButton = styled(BaseButton)`
    &:not(:disabled):hover {
       background-color: ${({ theme }) => theme.colors['base-hover']};
    }
-`;
-
-export const ButtonMenuContainer = styled(BaseButton)`
-   padding: 0.3rem 0;
 `;

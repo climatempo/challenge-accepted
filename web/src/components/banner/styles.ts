@@ -11,6 +11,8 @@ export const BannerContainer = styled.div`
    align-items: center;
    justify-content: space-around;
 
+   padding: 1rem;
+
    span {
       display: flex;
       align-items: center;

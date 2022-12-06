@@ -1,9 +1,13 @@
-export const mockupData = [
+export const weather = [
    {
-      id: 3735,
-      name: 'Osasco',
-      state: 'SP',
-      coord: {
+      period: {
+         begin: '2017-02-01',
+         end: '2017-02-07',
+      },
+      locale: {
+         id: 3735,
+         name: 'Osasco',
+         state: 'SP',
          latitude: -23.532,
          longitude: -46.792,
       },
@@ -95,10 +99,14 @@ export const mockupData = [
       ],
    },
    {
-      id: 3477,
-      name: 'São Paulo',
-      state: 'SP',
-      coord: {
+      period: {
+         begin: '2017-02-01',
+         end: '2017-02-07',
+      },
+      locale: {
+         id: 3477,
+         name: 'São Paulo',
+         state: 'SP',
          latitude: -23.548,
          longitude: -46.636,
       },

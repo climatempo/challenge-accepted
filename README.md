@@ -10,9 +10,11 @@ Teste técnico para Desenvolvedor Full Stack na Climatempo, empresa de serviços
 
 ### O Projeto
 
-App Web que exibe a previsão do tempo por cidade pesquisada, consumindo os dados através da API.
+Web App que exibe dados de previsão do tempo por cidade pesquisada, consumindo os dados através de API RESTful.
 
--  Análise Lighthouse: 100% Acessível | 100% Boas práticas | 100% SEO
+-  Análise Lighthouse: 100% Performace | 100% Acessibilidade | 100% Boas práticas | 100% SEO
+
+![Demonstration](./_assets/demo.png)
 
 -  [Protótipo da interface](https://www.figma.com/file/t9fJqD8uh0yuXEeHvKsgm1/Layout---Climatempo-app?node-id=0%3A1&t=KzGQzecOwTi9SJlK-1) no Figma.
 
@@ -22,19 +24,24 @@ App Web que exibe a previsão do tempo por cidade pesquisada, consumindo os dado
 
 -  Responsividade Mobile, Tablet e Desktop
 -  Tratamento de erro caso não obtenha os dados da cidade pesquisada
--  O usuário pode escolher visualizar a temperatura em Celsius ou Fahrenheit (padrão é Celsius) e a precipitação da chuva em Milímetros ou Polegadas (padrão é Milímitros)
+-  O usuário pode escolher visualizar a temperatura em Celsius ou Fahrenheit (padrão é Celsius) e a precipitação da chuva em Milímetros ou Polegadas (padrão é Milímetros)
 
 #### Melhorias futuras
 
--  Integrar uma API Pública para obter mais dados
--  Adicionar testes unitários na API e na WEB
--  Melhorar a performace da aplicação
+-  Persistir os dados no MongoDB
+-  Implementar ElasticSearch para autocompletar a pesquisa
+-  Adicionar API GraphQL
+-  Implementar testes unitários
 
 #### Tecnologias utilizadas
 
 -  Typescript
 -  Node.js, Express.js, Cors
 -  React.js, Styled-components, RadixUI, Phosphor-react, Zod, React-hook-form, Axios
+
+## Rodando a aplicação
+
+Para informações detalhadas de como rodar o app, leia [PROJECT.md](./PROJECT.md)
 
 ### O Desafio
 

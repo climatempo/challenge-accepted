@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"typeRoots": [
+			"./src/@types",
+			"./node_modules/@types"
+		],
+		"moduleResolution": "node",
+		"resolveJsonModule": true
+	},
+	"include": ["**/*.ts", "**/**.json"]
+}

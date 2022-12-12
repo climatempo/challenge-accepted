@@ -160,9 +160,6 @@ dist/
 # Flycheck
 flycheck_*.el
 
-# server auth directory
-/server/
-
 # projectiles files
 .projectile
 
@@ -440,6 +437,10 @@ test-results/
 ### Composer template
 composer.phar
 /vendor/
+
+package-lock.json
+
+.vscode
 
 # Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file

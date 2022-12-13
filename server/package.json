@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"eslint . --ext .ts && cd src/ && ts-node-dev --respawn index.ts\" \"cd ../client &&  npm start\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "client": "cd ../client &&  npm start",
     "server": "eslint . --ext .ts && cd src/ && ts-node-dev --respawn index.ts",
     "debug:server": "eslint . --ext .ts && cd src/ && ts-node-dev --files --transpile-only --respawn --inspect=4321 index.ts",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix"
+    "lint:server": "eslint . --ext .ts",
+    "lint:server:fix": "eslint . --ext .ts --fix",
+    "lint:client": "cd ../client && npm run lint",
+    "lint:client:fix": "cd ../client && npm run lint:fix"
   },
   "author": "Christhian Rezende Vieira",
   "license": "ISC",

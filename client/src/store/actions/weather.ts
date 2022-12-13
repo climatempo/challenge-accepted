@@ -2,7 +2,7 @@ import * as actionTypes from '../actionTypes';
 
 export function getLocales() {
 	return async dispatch => {
-		const res = await fetch('http://localhost:8001/locales');
+		const res = await fetch('/locales');
 		const json = await res.json();
 		const action = {
 			type: actionTypes.GET_LOCALES,

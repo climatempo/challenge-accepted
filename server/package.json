@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "eslint . --ext .ts && cd src/ && ts-node-dev --respawn index.ts",
-    "debug": "eslint . --ext .ts && cd src/ && ts-node-dev --files --transpile-only --respawn --inspect=4321 index.ts",
+    "start": "concurrently \"eslint . --ext .ts && cd src/ && ts-node-dev --respawn index.ts\" \"cd ../client &&  npm start\"",
+    "client": "cd ../client &&  npm start",
+    "server": "eslint . --ext .ts && cd src/ && ts-node-dev --respawn index.ts",
+    "debug:server": "eslint . --ext .ts && cd src/ && ts-node-dev --files --transpile-only --respawn --inspect=4321 index.ts",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix"
   },
@@ -18,6 +20,7 @@
     "@types/express": "^4.17.14",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
+    "concurrently": "^7.6.0",
     "eslint": "^8.29.0",
     "ts-node-dev": "^2.0.0"
   },

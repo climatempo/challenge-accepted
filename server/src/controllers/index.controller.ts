@@ -3,9 +3,20 @@ import BadRequestError from '../errors/badRequestError.error';
 import indexService from '../services/index.service';
 
 class indexController {
+	public async getAllLocales(req: Request, res: Response): Promise<Response> {
+
+		try {
+			const locales = indexService.getAllLocales();
+			return res.status(200).send({ message: 'Locales searched successfully', locales, });
+		} catch (e) {
+			if (e instanceof BadRequestError)
+				return res.status(e.status).send({ message: e.message, locales: null, });
+		}
+	}
+
 	public async getLocaleByName(req: Request, res: Response): Promise<Response> {
 
-		const { name, } = req.query;
+		const { name, } = req.params;
 
 		try {
 			const locale = indexService.getLocaleByName(name ? name.toString() : null);

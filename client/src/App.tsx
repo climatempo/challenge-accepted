@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
+import styled from 'styled-components';
 import './App.css';
+import Header from './components/Header';
+import Weather from './components/Weather';
+import store from './store/index';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+	render() {
+		return (
+			<div className="App">
+				<Provider store={store}>
+					<Header />
+					<Title>Previsão para Osasco - SP</Title>
+					<Weather />
+				</Provider>
+			</div>
+		);
+	}
 }
+
+const Title = styled.h1`
+	margin: 1em;
+	font-size: 1.8em;
+	color: white;
+`;
 
 export default App;

@@ -1,17 +1,16 @@
 
 import BadRequestError from '../errors/badRequestError.error';
 import LocaleInterface from '../interfaces/locale.interface';
-import PeriodInterface from '../interfaces/period.interface';
-import WeatherInterface from '../interfaces/weather.interface';
+import WeatherDetailsInterface from '../interfaces/weatherDetails.interface';
 import getJson from '../utils/getJson';
 
-interface WeatherDetailsInterface {
-	period: PeriodInterface;
-	locale: LocaleInterface;
-	weather: WeatherInterface[];
-}
-
 class IndexService {
+	public getAllLocales(): LocaleInterface[] {
+		const locales = getJson('../../../base/locales.json') as LocaleInterface[];
+
+		return locales;
+	}
+
 	public getLocaleByName(name: string | null): LocaleInterface {
 		if (!name)
 			throw new BadRequestError('name query cannot be null');

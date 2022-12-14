@@ -112,6 +112,7 @@ const DivHeader = styled.div`
 	gap: 1em;
 	background-color: ${props => props.theme.glassBackground};
 	backdrop-filter: blur(7px);
+	box-shadow: ${props => props.theme.glassBoxShadow};
 
 	@media (max-width: ${device.extraSmall}) {
 		justify-content: center;
@@ -172,6 +173,7 @@ const autoSuggestTheme = {
 		borderRadius: '.3em',
 		top: '31px',
 		overflowY: 'auto',
+		boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
 	},
 	suggestionsContainerOpen: {
 		padding: '.05em',

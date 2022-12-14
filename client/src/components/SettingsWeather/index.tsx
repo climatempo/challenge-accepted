@@ -78,6 +78,7 @@ const SettingsWeatherDiv = styled.div`
 	padding: .2em;
 	align-items: center;
 	justify-content: center;
+	box-shadow: ${props => props.theme.glassBoxShadow};
 	z-index: 2;
 `;
 
@@ -113,6 +114,7 @@ const SettingsContainer = styled.div`
 	padding: 1em;
 	background-color: ${props => props.theme.white};
 	border-radius: ${props => props.theme.glassRadius} !important;
+	box-shadow: ${props => props.theme.glassBoxShadow};
 `;
 
 const RadioContainer = styled.div`

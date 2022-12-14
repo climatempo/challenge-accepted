@@ -87,6 +87,7 @@ const Card = styled.div`
 	background-color: ${props => props.theme.glassBackground};
 	backdrop-filter: blur(7px);
 	max-width: 400px;
+	box-shadow: ${props => props.theme.glassBoxShadow};
 `;
 
 const Text = styled.p`

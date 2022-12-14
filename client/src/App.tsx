@@ -1,6 +1,5 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Weather from './components/Weather';

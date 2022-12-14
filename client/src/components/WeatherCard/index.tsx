@@ -1,4 +1,3 @@
-import {  BeachAccessRounded, NorthRounded, OpacityRounded, SouthRounded } from '@mui/icons-material';
 import React from 'react';
 import styled from 'styled-components';
 import { WeatherInterface } from '../../store/types';
@@ -140,26 +139,6 @@ const MaxDegree = styled.span`
 	font-size: 2em !important;
 	color: red;
 	text-shadow: 1px 2px 0px rgba(0,0,0,0.2);
-`;
-
-const SouthArrowIcon = styled(SouthRounded)`
-	font-size: 2.5em !important;
-	color: ${props => props.theme.white};
-`;
-
-const NorthArrowIcon = styled(NorthRounded)`
-	font-size: 2.5em !important;
-	color: ${props => props.theme.white};
-`;
-
-const OpacityIcon = styled(OpacityRounded)`
-	font-size: 3em !important;
-	color: ${props => props.theme.white};
-`;
-
-const UmbrellaIcon = styled(BeachAccessRounded)`
-	font-size: 3em !important;
-	color: ${props => props.theme.white};
 `;
 
 type Props = {

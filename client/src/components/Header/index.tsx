@@ -10,8 +10,6 @@ import './index.css';
 import { LocationOnRounded } from '@mui/icons-material';
 import { LocaleInterface, WeatherDetailsInterface } from '../../store/types';
 
-const sugg = [{ text: 'São Paulo', }, { text: 'Osasco', }, { text: 'Sao jose', }, { text: 'soa', }];
-
 class Header extends React.Component<Props, State> {
 
 	constructor(props) {

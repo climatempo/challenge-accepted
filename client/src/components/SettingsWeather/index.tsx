@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import MoreHoriz from '@mui/icons-material/MoreHoriz';
 import { setRain, setTemperature } from '../../store/actions/settings';
 import { connect } from 'react-redux';
-import device from '../../styles/device';
 
 class SettingsWeather extends React.Component<Props, State> {
 

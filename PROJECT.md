@@ -135,7 +135,7 @@ Para debugar o backend, vá até a pasta /server e execute
   <img width="100%" src="https://github.com/christhian12rv/challenge-accepted/blob/master/img/tela_inicial.png" alt="Tela Inicial">
   <img width="100%" src="https://github.com/christhian12rv/challenge-accepted/blob/master/img/previsao.png" alt="Previsão">
   <img width="100%" src="https://github.com/christhian12rv/challenge-accepted/blob/master/img/configuracoes.png" alt="Configurações">
-  <img width="100%" height="500px" src="https://github.com/christhian12rv/challenge-accepted/blob/master/img/mobile.png" alt="Mobile">
+  <img height="100%" src="https://github.com/christhian12rv/challenge-accepted/blob/master/img/mobile.png" alt="Mobile">
 </p>
 
 ## Explicação do projeto

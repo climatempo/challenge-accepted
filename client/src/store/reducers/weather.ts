@@ -4,6 +4,7 @@ import { AnyAction } from '@reduxjs/toolkit';
 
 const INITIAL_STATE: LocaleState = {
 	locales: [],
+	weatherDetails: null,
 };
 
 export default function weather(state: LocaleState | undefined = INITIAL_STATE, action: LocaleAction | AnyAction): LocaleState {
@@ -13,6 +14,12 @@ export default function weather(state: LocaleState | undefined = INITIAL_STATE, 
 			...state,
 			locales: action.locales,
 		};		
+	
+	case actionTypes.GET_WEATHER_DETAILS:
+		return {
+			...state,
+			weatherDetails: action.weatherDetails,
+		};
 	}	
 
 	return state;

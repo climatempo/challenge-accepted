@@ -1,1 +1,4 @@
 export const GET_LOCALES = 'GET_LOCALES';
+export const GET_WEATHER_DETAILS = 'GET_WEATHER_DETAILS';
+export const SET_TEMPERATURE = 'SET_TEMPERATURE';
+export const SET_RAIN = 'SET_RAIN';

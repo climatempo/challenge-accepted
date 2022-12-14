@@ -5,33 +5,25 @@ import WeatherDetailsInterface from '../interfaces/weatherDetails.interface';
 import getJson from '../utils/getJson';
 
 class IndexService {
-	public getAllLocales(): LocaleInterface[] {
-		const locales = getJson('../../../base/locales.json') as LocaleInterface[];
-
-		return locales;
-	}
-
-	public getLocaleByName(name: string | null): LocaleInterface {
+	public getLocales(name: string | null): LocaleInterface[] {
+		const locales = getJson('../base/locales.json') as LocaleInterface[];
 		if (!name)
-			throw new BadRequestError('name query cannot be null');
+			return locales;
 
-		const locales = getJson('../../../base/locales.json') as LocaleInterface[];
+		const nameNormalize = name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+		const localesLikeName = locales.filter(l => {
+			const lNormalize = l.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+			return lNormalize.includes(nameNormalize);
+		});
 
-		const locale = locales.filter(l => (
-			l.name.localeCompare(name.toString(), 'en', { sensitivity: 'base', }) == 0)
-		)[0] || null;
-		
-		if (locale === null)
-			throw new BadRequestError(`Locale with ${name} not found`);
-
-		return locale;
+		return localesLikeName;
 	}
 
-	public getWeatherByLocale(localeName : string | null): WeatherDetailsInterface {
+	public getWeatherByLocaleName(localeName : string | null): WeatherDetailsInterface {
 		if (!localeName)
 			throw new BadRequestError('Locale name query cannot be null');
 
-		const WeatherDetailsArr = getJson('../../../base/weather.json') as WeatherDetailsInterface[];
+		const WeatherDetailsArr = getJson('../base/weather.json') as WeatherDetailsInterface[];
 
 		const WeatherDetails = WeatherDetailsArr.filter(a => (
 			a.locale.name.localeCompare(localeName.toString(), 'en', { sensitivity: 'base', }) == 0

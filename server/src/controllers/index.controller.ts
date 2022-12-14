@@ -1,39 +1,36 @@
 import { Request, Response } from 'express';
+import logger from '../config/logger';
 import BadRequestError from '../errors/badRequestError.error';
 import indexService from '../services/index.service';
 
 class indexController {
-	public async getAllLocales(req: Request, res: Response): Promise<Response> {
+	public async getLocales(req: Request, res: Response): Promise<Response> {
+		logger.info(`Calling ${req.originalUrl}`);
+
+		const { name, } = req.query;
 
 		try {
-			const locales = indexService.getAllLocales();
+			const locales = indexService.getLocales(name ? name.toString() : null);
+			logger.info('Locales searched successfully');
 			return res.status(200).send({ message: 'Locales searched successfully', locales, });
 		} catch (e) {
+			logger.info(e.message);
 			if (e instanceof BadRequestError)
 				return res.status(e.status).send({ message: e.message, locales: null, });
 		}
 	}
 
-	public async getLocaleByName(req: Request, res: Response): Promise<Response> {
+	public async getWeatherByLocaleName(req: Request, res: Response): Promise<Response> {
+		logger.info(`Calling ${req.originalUrl}`);
 
-		const { name, } = req.params;
-
-		try {
-			const locale = indexService.getLocaleByName(name ? name.toString() : null);
-			return res.status(200).send({ message: 'Locale searched successfully', locale, });
-		} catch (e) {
-			if (e instanceof BadRequestError)
-				return res.status(e.status).send({ message: e.message, locale: null, });
-		}
-	}
-
-	public async getWeatherByLocale(req: Request, res: Response): Promise<Response> {
 		const { localeName, } = req.query;
 
 		try {
-			const weatherDetails = indexService.getWeatherByLocale(localeName ? localeName.toString() : null);
+			const weatherDetails = indexService.getWeatherByLocaleName(localeName ? localeName.toString() : null);
+			logger.info('Weather searched successfully');
 			return res.status(200).send({ message: 'Weather searched successfully', weatherDetails, });
 		} catch (e) {
+			logger.info(e.message);
 			if (e instanceof BadRequestError)
 				return res.status(e.status).send({ message: e.message, weatherDetails: null, });
 		}

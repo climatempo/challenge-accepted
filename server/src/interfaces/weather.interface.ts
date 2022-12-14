@@ -1,5 +1,5 @@
 interface WeatherInterface {
-	date: Date;
+	date: string;
 	text: string;
 	temperature: {
 		min: number;

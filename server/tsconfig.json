@@ -9,5 +9,5 @@
 		"moduleResolution": "node",
 		"resolveJsonModule": true
 	},
-	"include": ["**/*.ts", "**/**.json"]
+	"include": ["**/*.ts", "**/**.json", "src/jest.config.js"]
 }

@@ -1,3 +1,3 @@
 import App from './app';
 
-new App().getApp();
+export default new App().getApp();

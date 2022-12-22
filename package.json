@@ -1,0 +1,24 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "climatempo-challenge",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KayanHendges/challenge-accepted.git"
+  },
+  "author": "Kayan Hendges",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KayanHendges/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/KayanHendges/challenge-accepted#readme"
+}

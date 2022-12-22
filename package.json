@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "climatempo-challenge",
   "main": "index.js",
+  "private": "true",
   "workspaces": {
     "packages": [
       "packages/*"

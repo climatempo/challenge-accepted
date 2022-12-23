@@ -9,3 +9,28 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
+
+model Locale {
+  id        Int      @id @map("_id")
+  name      String   @unique
+  state     String
+  latitude  Int
+  longitude Int
+  Weater    Weater[]
+
+  @@map("locales")
+}
+
+model Weater {
+  id             Int      @id @map("_id")
+  localeId       Int      @map("locale_id")
+  locale         Locale   @relation(fields: [localeId], references: [id])
+  date           DateTime
+  text           String
+  temperatureMin Int      @map("temperature_min")
+  temperatureMax Int      @map("temperature_max")
+  probability    Int
+  precipitation  Int
+  modified       DateTime @updatedAt
+  created        DateTime @default(now())
+}

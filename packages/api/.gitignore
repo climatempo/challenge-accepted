@@ -36,3 +36,4 @@ lerna-debug.log*
 
 # Docker
 /data
+/esdata

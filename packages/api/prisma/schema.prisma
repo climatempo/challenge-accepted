@@ -10,21 +10,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Locale {
-  id        Int      @id @map("_id")
-  name      String   @unique
-  state     String
-  latitude  Int
-  longitude Int
-  Weater    Weater[]
-
-  @@map("locales")
-}
-
 model Weater {
   id             Int      @id @map("_id")
-  localeId       Int      @map("locale_id")
-  locale         Locale   @relation(fields: [localeId], references: [id])
+  localeId       String   @map("locale_id")
   date           DateTime
   text           String
   temperatureMin Int      @map("temperature_min")

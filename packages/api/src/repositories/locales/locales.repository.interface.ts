@@ -6,6 +6,7 @@ export interface ListLocalesParams extends ListParams<Locale> {
 }
 
 export interface ILocalesRepository {
-  list(params: ListLocalesParams): Promise<ListRepositoryResponse<Locale>>;
   create(data: Locale): Promise<Locale>;
+  list(params: ListLocalesParams): Promise<ListRepositoryResponse<Locale>>;
+  find(name: string): Promise<Locale | null>;
 }

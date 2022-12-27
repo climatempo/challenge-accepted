@@ -13,7 +13,18 @@ export class LocalesService implements ILocalesService {
   ) {}
 
   async create(data: CreateLocaleDTO): Promise<Locale> {
+    const localeAlreadyExits = await this.localesRepository
+      .find(data.name)
+      .catch((err) => {
+        if (err?.message?.includes('index_not_found')) return null;
+        throw Error(err);
+      });
+
+    console.log({ localeAlreadyExits });
+
+    if (localeAlreadyExits) throw new Error('Locale already exists');
     const locale = new Locale(data);
+
     return await this.localesRepository.create(locale);
   }
 

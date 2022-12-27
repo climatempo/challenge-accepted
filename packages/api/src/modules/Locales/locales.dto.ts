@@ -2,13 +2,6 @@ import { IsString, IsNotEmpty, IsOptional, IsNumber } from 'class-validator';
 import { Locale } from '../../entities/Locale';
 import { PaginationAndSortDTO } from '../../utils/dto/global.dto';
 
-export class ListLocaleDTO extends PaginationAndSortDTO<Locale> {
-  @IsString()
-  @IsNotEmpty()
-  @IsOptional()
-  name: string;
-}
-
 export class CreateLocaleDTO {
   @IsString()
   @IsNotEmpty()
@@ -23,4 +16,11 @@ export class CreateLocaleDTO {
 
   @IsNumber()
   longitude: number;
+}
+
+export class ListLocaleDTO extends PaginationAndSortDTO<Locale> {
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  name: string;
 }

@@ -10,8 +10,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Weater {
-  id             Int      @id @map("_id")
+model Weather {
+  id             String   @id @default(uuid()) @map("_id")
   localeId       String   @map("locale_id")
   date           DateTime
   text           String
@@ -21,4 +21,6 @@ model Weater {
   precipitation  Int
   modified       DateTime @updatedAt
   created        DateTime @default(now())
+
+  @@map("weathers")
 }

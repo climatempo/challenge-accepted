@@ -5,7 +5,7 @@ export type OrderParam<T> = Record<keyof T, OrderBy>;
 export interface ListParams<T> {
   page?: number;
   pageLimit?: number;
-  orderBy: OrderBy<T>;
+  orderBy?: OrderBy<T>;
 }
 
 interface ListRepositoryResponse<T> {

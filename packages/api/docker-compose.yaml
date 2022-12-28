@@ -1,20 +1,15 @@
 version: '3'
 name: "climatempo"
 services:
-  mongo:
-    image: mongo:latest
-    restart: always
-    env_file: .env
+  mongodb:
+    image: prismagraphql/mongo-single-replica:4.4.3-bionic
     environment:
-      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
-      MONGO_INITDB_DATABASE: ${MONGO_DB}
-    volumes:
-      - ./data/mongo:/data/db
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: prisma
+      INIT_WAIT_SEC: 3
     ports:
       - 27017:27017
-    networks:
-      - default
+
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.5.0
     container_name: elasticsearch
@@ -40,7 +35,9 @@ services:
       - elasticsearch
     networks:
       - elastic
-
+      
 networks:
   elastic:
+    driver: bridge
+  mongo-network:
     driver: bridge

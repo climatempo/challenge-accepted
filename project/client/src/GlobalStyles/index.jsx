@@ -23,8 +23,14 @@ export default createGlobalStyle`
         --color-blue-200:  #1565C0;
         --color-red-100:   #CA3A3A;
 
+        --secondary-text-color:  #828282;
+
 
         font-size: 62.5%;
+    }
+
+    body {
+        background-color: var(--primary-color);
     }
  
 `

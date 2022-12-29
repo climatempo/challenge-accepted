@@ -19,7 +19,10 @@ export default createGlobalStyle`
     :root {
         --primary-color: #E0E0E0;
         --secondary-color: #fff;
-        
+        --color-blue-100:  #2B8BC6;
+        --color-blue-200:  #1565C0;
+        --color-red-100:   #CA3A3A;
+
 
         font-size: 62.5%;
     }

@@ -1,14 +1,15 @@
-import Header from "../../components/Header"
-import SearchBar from "../../components/SearchBar"
+import Card from "../../components/Card"
+import MainLayout from "../../layouts/MainLayout"
 
 import * as S from "./styles"
 
 const Home = () => {
 	return (
-		<S.Container>
-			<Header />
-			<SearchBar />
-		</S.Container>
+		<MainLayout>
+			<S.Container>
+				<Card />
+			</S.Container>
+		</MainLayout>
 	)
 }
 

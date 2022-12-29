@@ -20,8 +20,6 @@ export class LocalesService implements ILocalesService {
         throw Error(err);
       });
 
-    console.log({ localeAlreadyExits });
-
     if (localeAlreadyExits) throw new Error('Locale already exists');
     const locale = new Locale(data);
 

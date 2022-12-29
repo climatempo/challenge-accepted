@@ -36,16 +36,13 @@ export class CreateWeatherDTO {
 export class ListWeatherDTO extends PaginationAndSortDTO<Weather> {
   @IsString()
   @IsNotEmpty()
-  @IsOptional()
   locale: string;
 
   @IsDate()
-  @IsOptional()
-  begins?: Date;
+  begins: Date;
 
   @IsDate()
-  @IsOptional()
-  ends?: Date;
+  ends: Date;
 
   @IsString()
   @IsNotEmpty()

@@ -3,6 +3,7 @@ import { ListResponse } from '../../../types';
 import { Weather } from '../../entities/Weather';
 import { ILocalesRepository } from '../../repositories/locales/locales.repository.interface';
 import { IWeatherRepository } from '../../repositories/weather/weather.repository.interface';
+import { ListWeatherResponse } from './types';
 import { CreateWeatherDTO, ListWeatherDTO } from './weather.dto';
 import { IWeatherService } from './weather.service.interface';
 
@@ -31,25 +32,25 @@ export class weatherService implements IWeatherService {
     page,
     pageSize,
     locale,
-    ...paramsDTO
-  }: ListWeatherDTO): Promise<ListResponse<Weather>> {
+    begins,
+    ends,
+    ...params
+  }: ListWeatherDTO): Promise<ListWeatherResponse> {
     const foundLocale = await this.localesRepository.find(locale);
 
     if (!foundLocale) throw new Error(`Locale ${locale} does not exist`);
 
-    const params = { ...paramsDTO, localeId: foundLocale.id };
+    const weather = await this.weatherRepository.list({
+      page,
+      orderBy,
+      params: {
+        ...params,
+        localeId: foundLocale.id,
+        date: { gte: begins, lte: ends },
+      },
+      pageLimit: pageSize,
+    });
 
-    const promiseWeather = () =>
-      this.weatherRepository.list({
-        page,
-        orderBy,
-        params,
-        pageLimit: pageSize,
-      });
-
-    const promiseCount = () => this.weatherRepository.count(params);
-
-    const [list, count] = await Promise.all([promiseWeather(), promiseCount()]);
-    return { list, count, page, pageSize };
+    return { locale: foundLocale, period: { begins, ends }, weather };
   }
 }

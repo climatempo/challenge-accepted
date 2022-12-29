@@ -2,8 +2,8 @@ import { Locale } from '../../entities/Locale';
 import { Weather } from '../../entities/Weather';
 
 export interface Period {
-  begins?: string;
-  ends?: string;
+  begins?: Date;
+  ends?: Date;
 }
 
 interface Temperature {
@@ -19,5 +19,5 @@ interface Rain {
 interface ListWeatherResponse {
   period: Period;
   locale: Locale;
-  weather: Weather;
+  weather: Weather[];
 }

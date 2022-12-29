@@ -3,7 +3,9 @@ import { Weather } from '../../entities/Weather';
 import { Weather as WeatherRepository } from '@prisma/client';
 
 export interface ListWeatherParams extends ListParams<Weather> {
-  params?: Partial<WeatherRepository>;
+  params?: Omit<Partial<WeatherRepository>, 'date'> & {
+    date?: Date | { gte?: Date; lte?: Date };
+  };
 }
 
 export interface IWeatherRepository {

@@ -13,7 +13,6 @@ export default createGlobalStyle`
             cursor: pointer;
         }
 
-        font-family: 'Roboto', sans-serif;
     }
 
     :root {
@@ -23,10 +22,12 @@ export default createGlobalStyle`
         --color-blue-200:  #1565C0;
         --color-red-100:   #CA3A3A;
 
+        --primary-text-color: #000;
         --secondary-text-color:  #828282;
 
 
         font-size: 62.5%;
+        font-family: 'Roboto', sans-serif;
     }
 
     body {

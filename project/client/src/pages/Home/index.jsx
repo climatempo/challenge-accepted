@@ -7,6 +7,7 @@ const Home = () => {
 	return (
 		<MainLayout>
 			<S.Container>
+				<h1>Previsão para São Paulo - SP</h1>
 				<Card />
 			</S.Container>
 		</MainLayout>

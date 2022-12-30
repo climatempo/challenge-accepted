@@ -6,19 +6,24 @@ import { UmbrellaFill } from "@styled-icons/bootstrap/UmbrellaFill"
 
 export const Container = styled.div`
 	width: 100%;
-	height: 100%;
-	background-color: var(--secondary-color);
+	height: auto;
 	border-radius: 0.5rem;
 	box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
+		max-width: 40rem;
+	}
 `
 
 export const UpperContainer = styled.div`
 	width: 100%;
-	/* height: 100%; */
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	gap: 0.8rem;
 	padding: 1rem;
+	border-radius: 0.5rem 0.5rem 0 0;
+	background-color: var(--secondary-color);
 
 	font-size: 1.7rem;
 `
@@ -38,14 +43,13 @@ export const WeatherDescription = styled.p`
 
 export const LowerContainer = styled.div`
 	width: 100%;
-	/* height: 100%; */
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	gap: 1.5rem;
 	padding: 1rem;
-	background-color: var(--primary-color);
 `
 export const Temperature = styled.div`
 	width: 100%;

@@ -6,12 +6,16 @@ import * as S from "./styles"
 const Home = () => {
 	return (
 		<MainLayout>
-			<S.Container>
+			<S.Wrapper>
 				<h1>Previsão para São Paulo - SP</h1>
-				<Card />
-				<Card />
-				<Card />
-			</S.Container>
+				<S.Container>
+					<Card />
+					<Card />
+					<Card />
+					<Card />
+					<Card />
+				</S.Container>
+			</S.Wrapper>
 		</MainLayout>
 	)
 }

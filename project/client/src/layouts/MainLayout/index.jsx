@@ -5,11 +5,13 @@ import * as S from "./styles"
 
 const MainLayout = ({ children }) => {
 	return (
-		<S.Container>
-			<Header />
-			<SearchBar />
+		<S.Main>
+			<S.Container>
+				<Header />
+				<SearchBar />
+			</S.Container>
 			{children}
-		</S.Container>
+		</S.Main>
 	)
 }
 

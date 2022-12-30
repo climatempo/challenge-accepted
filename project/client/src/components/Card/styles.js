@@ -6,7 +6,7 @@ import { UmbrellaFill } from "@styled-icons/bootstrap/UmbrellaFill"
 
 export const Container = styled.div`
 	width: 100%;
-	height: auto;
+	height: 100%;
 	background-color: var(--secondary-color);
 	border-radius: 0.5rem;
 	box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const UpperContainer = styled.div`
 	width: 100%;
-	height: 100%;
+	/* height: 100%; */
 	display: flex;
 	flex-direction: column;
 	gap: 0.8rem;
@@ -38,7 +38,7 @@ export const WeatherDescription = styled.p`
 
 export const LowerContainer = styled.div`
 	width: 100%;
-	height: 100%;
+	/* height: 100%; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

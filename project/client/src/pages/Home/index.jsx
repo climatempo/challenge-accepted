@@ -9,6 +9,8 @@ const Home = () => {
 			<S.Container>
 				<h1>Previsão para São Paulo - SP</h1>
 				<Card />
+				<Card />
+				<Card />
 			</S.Container>
 		</MainLayout>
 	)

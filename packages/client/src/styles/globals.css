@@ -36,8 +36,8 @@ body {
 }
 
 body {
-  color: #262626;
-  background: #fafafa;
+  color: var(--gray-900);
+  background: var(--white);
 }
 
 a {

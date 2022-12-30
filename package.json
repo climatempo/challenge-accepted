@@ -10,7 +10,8 @@
     ]
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"yarn workspace @challenge-accepted/client dev\" \"yarn workspace @challenge-accepted/api start:dev\""
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/KayanHendges/challenge-accepted/issues"
   },
-  "homepage": "https://github.com/KayanHendges/challenge-accepted#readme"
+  "homepage": "https://github.com/KayanHendges/challenge-accepted#readme",
+  "dependencies": {
+    "axios": "^1.2.2",
+    "concurrently": "^7.6.0"
+  }
 }

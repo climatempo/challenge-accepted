@@ -17,6 +17,7 @@ async function bootstrap() {
       transformOptions: { enableImplicitConversion: true },
     }),
   );
+  app.enableCors();
   await app.listen(3333, () => {
     Logger.log('listening at ' + 3333);
   });

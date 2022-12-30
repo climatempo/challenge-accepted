@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "@challenge-accepted/api",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -77,5 +77,8 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "prisma": {
+    "seed": "ts-node ./prisma/seeds"
   }
 }

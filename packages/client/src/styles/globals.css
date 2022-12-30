@@ -21,6 +21,9 @@
   --blue-900: #1e3a8a;
 
   --black: #171717;
+
+  --red: #be123c;
+  --green: #34d399;
 }
 
 * {
@@ -37,7 +40,7 @@ body {
 
 body {
   color: var(--gray-900);
-  background: var(--white);
+  background: var(--gray-200);
 }
 
 a {
@@ -48,5 +51,17 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
   }
 }

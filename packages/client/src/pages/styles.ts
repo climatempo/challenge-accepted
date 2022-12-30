@@ -19,6 +19,8 @@ export const Container = styled.div<ContainerProps>`
   width: 100%;
   flex: ${({ rootPage }) => (rootPage ? 0 : 1)};
 
+  overflow: hidden;
+
   display: flex;
   flex-direction: column;
   justify-content: center;

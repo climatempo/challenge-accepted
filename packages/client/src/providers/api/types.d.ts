@@ -25,3 +25,31 @@ interface ApiListResponse<T = any> {
   pageSize: number;
   count: number;
 }
+
+interface Weather {
+  id: string;
+  localeId: string;
+  date: string;
+  text: string;
+  temperatureMin: number;
+  temperatureMax: number;
+  probability: number;
+  precipitation: number;
+}
+
+interface Period {
+  begins: string;
+  ends: string;
+}
+
+interface ApiWeatherRequest {
+  locale: string;
+  begins: Date | Datetime;
+  ends: Date | Datetime;
+}
+
+interface ApiWeatherResponse {
+  locale: Locale;
+  period: Period;
+  weather: Weather[];
+}

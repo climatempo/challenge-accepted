@@ -4,11 +4,20 @@ services:
   mongodb:
     image: prismagraphql/mongo-single-replica:4.4.3-bionic
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: prisma
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DB}
       INIT_WAIT_SEC: 3
     ports:
       - 27017:27017
+
+  redis:
+    container_name: cache
+    image: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - redis:/data
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.5.0
@@ -35,7 +44,11 @@ services:
       - elasticsearch
     networks:
       - elastic
-      
+
+volumes:
+  redis:
+    driver: local
+
 networks:
   elastic:
     driver: bridge

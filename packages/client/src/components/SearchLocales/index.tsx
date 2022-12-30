@@ -33,7 +33,7 @@ export default function SearchLocales({ rootPage, routeTransitionMs }: Props) {
     debounce(async (value: string) => {
       setLoading(true);
       const { list } = await listLocales(
-        search.length ? { params: { name: value } } : {}
+        value.length ? { params: { name: value } } : {}
       );
 
       setLocales(list.map((it) => concatCityState(it)));
@@ -47,7 +47,7 @@ export default function SearchLocales({ rootPage, routeTransitionMs }: Props) {
 
   return (
     <Wrapper rootPage={rootPage} transitionMs={routeTransitionMs}>
-      {rootPage && <Typography>Bom dia!</Typography>}
+      {rootPage && <Typography variant="h1">Bom dia!</Typography>}
       <Autocomplete
         loading={loading}
         options={locales}

@@ -33,7 +33,7 @@ export class CreateWeatherDTO {
   precipitation: number;
 }
 
-export class ListWeatherDTO extends PaginationAndSortDTO<Weather> {
+export class ListWeatherDTO {
   @IsString()
   @IsNotEmpty()
   locale: string;

@@ -18,8 +18,6 @@ export class ElasticLocalesRepository implements ILocalesRepository {
 
   async create(data: Locale): Promise<Locale> {
     const { _id } = await this.elasticService.create(this.index, data);
-    console.log({ _id });
-    console.log(data.id);
     return { ...data, id: _id };
   }
 

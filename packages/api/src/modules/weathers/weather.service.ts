@@ -21,16 +21,11 @@ export class weatherService implements IWeatherService {
 
     if (!foundLocale) throw new Error(`Locale ${locale} does not exist`);
 
-    console.log({ foundLocale });
-
     const weather = new Weather({ ...data, localeId: foundLocale.id });
     return await this.weatherRepository.create(weather);
   }
 
   async listByLocale({
-    orderBy,
-    page,
-    pageSize,
     locale,
     begins,
     ends,
@@ -40,15 +35,14 @@ export class weatherService implements IWeatherService {
 
     if (!foundLocale) throw new Error(`Locale ${locale} does not exist`);
 
+    ends.setDate(ends.getDate() + 1);
     const weather = await this.weatherRepository.list({
-      page,
-      orderBy,
+      orderBy: { date: 'asc' },
       params: {
         ...params,
         localeId: foundLocale.id,
         date: { gte: begins, lte: ends },
       },
-      pageLimit: pageSize,
     });
 
     return { locale: foundLocale, period: { begins, ends }, weather };

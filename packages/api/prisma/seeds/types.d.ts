@@ -9,6 +9,16 @@ export interface ApiLocale {
   longitude: number;
 }
 
+export interface ApiWeather {
+  locale: string;
+  date: Date;
+  text: string;
+  temperatureMin: number;
+  temperatureMax: number;
+  probability: number;
+  precipitation: number;
+}
+
 export interface SeedCity {
   codigo_ibge: number;
   nome: strin;

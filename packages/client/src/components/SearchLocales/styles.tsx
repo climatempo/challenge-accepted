@@ -16,7 +16,8 @@ export const Wrapper = styled.div<WrapperProps>`
   align-items: center;
 
   padding: 2rem;
-  border-bottom: 2px solid var(--gray-300);
+  border-bottom: 1px solid var(--gray-400);
+  background-color: var(--white);
 
   transition: ${({ transitionMs = 400 }) => transitionMs}ms;
 `;

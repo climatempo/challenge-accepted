@@ -22,15 +22,18 @@
     "eslint-config-next": "13.1.1",
     "immer": "^9.0.16",
     "lodash": "^4.17.21",
+    "luxon": "^3.2.0",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
     "react-use-flexsearch": "^0.1.1",
     "styled-components": "^5.3.6",
     "typescript": "4.9.4"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.191",
+    "@types/luxon": "^3.1.0",
     "@types/styled-components": "^5.1.26"
   }
 }

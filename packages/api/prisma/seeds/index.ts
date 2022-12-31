@@ -124,26 +124,20 @@ async function runSeeds() {
             return weather;
           });
 
-      const promises: Promise<ApiWeather>[] = [];
-
-      locales.forEach((locale) =>
-        mockWeather(locale).forEach((weather) =>
-          promises.push(saveWeather(weather)),
-        ),
-      );
-
-      for (const index in promises) {
-        console.log(`[${index}/${promises.length}] inserindo previsões`);
-        await promises[index];
+      for (const index in locales) {
+        const locale = locales[index];
+        const weatherList = mockWeather(locale);
+        console.log(
+          `[${Number(index) + 1}/${locales.length}] inserindo previsões de ${
+            locale.name
+          } - ${locale.state}`,
+        );
+        await Promise.all(weatherList.map((weather) => saveWeather(weather)));
       }
     };
 
     const locales = await seedLocales(api);
-    console.log('Esfriando api, aguarde...');
-    await new Promise<void>((resolve) =>
-      setTimeout(() => resolve(), 30 * 1000),
-    );
-    const weather = await seedWeather(locales, api);
+    await seedWeather(locales, api);
   } catch (error) {
     console.log(error);
   }

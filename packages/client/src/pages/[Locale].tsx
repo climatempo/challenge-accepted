@@ -33,7 +33,7 @@ export default function Locale({ locale, period, weather }: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
   try {
     const localeParam = ctx?.params?.Locale || "";
     const locale = Array.isArray(localeParam) ? localeParam[0] : localeParam;
@@ -44,7 +44,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
         notFound: true,
       };
     const begins = DateTime.fromJSDate(new Date()).startOf("day");
-    const ends = DateTime.fromJSDate(new Date()).endOf("day").plus({ days: 6 });
+    const ends = DateTime.fromJSDate(new Date()).endOf("day").plus({ days: 4 });
 
     const props = await getWeathers({
       locale,

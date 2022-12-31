@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
 
   overflow-y: scroll;
   padding: 1rem;
+  padding-bottom: 2rem;
   gap: 1rem;
 
   transition: 1s;

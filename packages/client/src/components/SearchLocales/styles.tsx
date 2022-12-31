@@ -14,10 +14,17 @@ export const Wrapper = styled.div<WrapperProps>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 
   padding: 2rem;
   border-bottom: 1px solid var(--gray-400);
   background-color: var(--white);
 
   transition: ${({ transitionMs = 400 }) => transitionMs}ms;
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
 `;

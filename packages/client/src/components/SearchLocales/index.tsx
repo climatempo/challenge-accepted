@@ -1,11 +1,11 @@
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import { useEffect, useRef, useState } from "react";
-import { Wrapper } from "./styles";
+import { Image, Wrapper } from "./styles";
 import { debounce } from "lodash";
 import { useRouter } from "next/router";
 import { listLocales } from "../../providers/api";
-import { Typography } from "@mui/material";
+import { CircularProgress, Typography } from "@mui/material";
 
 type Props = {
   rootPage: boolean;
@@ -31,7 +31,6 @@ export default function SearchLocales({ rootPage, routeTransitionMs }: Props) {
 
   const filterMatchingOptionsRef = useRef(
     debounce(async (value: string) => {
-      setLoading(true);
       const { list } = await listLocales(
         value.length ? { params: { name: value } } : {}
       );
@@ -42,24 +41,28 @@ export default function SearchLocales({ rootPage, routeTransitionMs }: Props) {
   );
 
   useEffect(() => {
+    setLoading(true);
     filterMatchingOptionsRef.current(search);
   }, [search]);
 
   return (
     <Wrapper rootPage={rootPage} transitionMs={routeTransitionMs}>
-      {rootPage && <Typography variant="h1">Bom dia!</Typography>}
+      {/*eslint-disable-next-line @next/next/no-img-element*/}
+      {rootPage && <Image src="logo.png" alt="Climatempo" />}
       <Autocomplete
         loading={loading}
         options={locales}
+        loadingText="Buscando cidades..."
+        noOptionsText="Nenhuma cidade encontrada"
+        inputValue={search}
+        onInputChange={(_, value) => setSearch(value)}
         sx={{
           width: "100%",
         }}
-        inputValue={search}
         onChange={(_, value) => {
           if (value) router.push(value.split(" - ").shift() || "");
           else router.push("/");
         }}
-        onInputChange={(_, value) => setSearch(value)}
         renderInput={(params) => <TextField {...params} label={"Cidade"} />}
       />
     </Wrapper>

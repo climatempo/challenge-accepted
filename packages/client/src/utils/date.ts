@@ -1,4 +1,5 @@
 import { DateTime } from "luxon";
+import { capitalizeFirstLetter } from "./string";
 
 export const translateDate = (strDate: string): string => {
   const today = DateTime.fromJSDate(new Date());
@@ -8,7 +9,7 @@ export const translateDate = (strDate: string): string => {
   if (date.minus({ day: 1 }).startOf("day").equals(today.startOf("day")))
     return "Amanhã";
 
-  return date.weekdayLong;
+  return capitalizeFirstLetter(date.weekdayLong);
 };
 
 export const shortDate = (strDate: string): string => {

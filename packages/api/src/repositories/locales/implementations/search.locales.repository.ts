@@ -30,7 +30,7 @@ export class ElasticLocalesRepository implements ILocalesRepository {
     const {
       hits: { hits, total },
     } = await this.elasticService.search(this.index, {
-      ...(name ? { query: { match: { name } } } : {}),
+      ...(name ? { query: { match_bool_prefix: { name } } } : {}),
       page,
       pageLimit,
       orderBy,
@@ -47,7 +47,7 @@ export class ElasticLocalesRepository implements ILocalesRepository {
     const {
       hits: { hits },
     } = await this.elasticService.search(this.index, {
-      query: { term: { 'name.keyword': { value: name } } },
+      query: { match_phrase: { name } },
     });
     const hit = hits.length ? hits[0] : null;
 

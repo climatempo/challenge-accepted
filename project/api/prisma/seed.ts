@@ -19,7 +19,7 @@ const main = async () => {
 
 	const weather = [
 		{
-			date: "2017-02-01",
+			date: new Date("2017-02-01"),
 			conditionText:
 				"Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
 			minTemperature: 20,
@@ -29,7 +29,7 @@ const main = async () => {
 			localeId: 1,
 		},
 		{
-			date: "2017-02-02",
+			date: new Date("2017-02-02"),
 			conditionText:
 				"Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
 			minTemperature: 21,
@@ -39,7 +39,7 @@ const main = async () => {
 			localeId: 1,
 		},
 		{
-			date: "2017-02-03",
+			date: new Date("2017-02-03"),
 			conditionText:
 				"Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
 			minTemperature: 22,
@@ -49,7 +49,7 @@ const main = async () => {
 			localeId: 1,
 		},
 		{
-			date: "2017-02-04",
+			date: new Date("2017-02-04"),
 			conditionText:
 				"Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
 			minTemperature: 22,
@@ -59,7 +59,7 @@ const main = async () => {
 			localeId: 1,
 		},
 		{
-			date: "2017-02-05",
+			date: new Date("2017-02-05"),
 			conditionText:
 				"Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
 			minTemperature: 23,
@@ -69,7 +69,7 @@ const main = async () => {
 			localeId: 1,
 		},
 		{
-			date: "2017-02-06",
+			date: new Date("2017-02-06"),
 			conditionText:
 				"Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
 			minTemperature: 22,
@@ -79,7 +79,7 @@ const main = async () => {
 			localeId: 1,
 		},
 		{
-			date: "2017-02-07",
+			date: new Date("2017-02-07"),
 			conditionText:
 				"Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
 			minTemperature: 25,
@@ -90,7 +90,7 @@ const main = async () => {
 		},
 
 		{
-			date: "2017-02-01",
+			date: new Date("2017-02-01"),
 			conditionText:
 				"Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
 			minTemperature: 19,
@@ -100,7 +100,7 @@ const main = async () => {
 			localeId: 2,
 		},
 		{
-			date: "2017-02-02",
+			date: new Date("2017-02-02"),
 			conditionText:
 				"Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora.",
 			minTemperature: 20,
@@ -110,7 +110,7 @@ const main = async () => {
 			localeId: 2,
 		},
 		{
-			date: "2017-02-03",
+			date: new Date("2017-02-03"),
 			conditionText:
 				"Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
 			minTemperature: 21,
@@ -120,7 +120,7 @@ const main = async () => {
 			localeId: 2,
 		},
 		{
-			date: "2017-02-04",
+			date: new Date("2017-02-04"),
 			conditionText:
 				"Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
 			minTemperature: 21,
@@ -130,7 +130,7 @@ const main = async () => {
 			localeId: 2,
 		},
 		{
-			date: "2017-02-05",
+			date: new Date("2017-02-05"),
 			conditionText:
 				"Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite.",
 			minTemperature: 22,
@@ -140,7 +140,7 @@ const main = async () => {
 			localeId: 2,
 		},
 		{
-			date: "2017-02-06",
+			date: new Date("2017-02-06"),
 			conditionText:
 				"Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
 			minTemperature: 21,
@@ -150,7 +150,7 @@ const main = async () => {
 			localeId: 2,
 		},
 		{
-			date: "2017-02-07",
+			date: new Date("2017-02-07"),
 			conditionText:
 				"Sol com algumas nuvens. Chove rápido durante o dia e à noite.",
 			minTemperature: 22,
@@ -161,8 +161,8 @@ const main = async () => {
 		},
 	]
 
-	prisma.locale.createMany({ data: locales })
-	prisma.weather.createMany({ data: weather })
+	await prisma.locale.createMany({ data: locales })
+	await prisma.weather.createMany({ data: weather })
 }
 
 main()

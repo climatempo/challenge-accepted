@@ -10,4 +10,16 @@ export const Header = styled.header`
 		height: 100%;
 		object-fit: contain;
 	}
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+		height: 7rem;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+
+		img {
+			width: 16rem;
+			height: 100%;
+		}
+	}
 `

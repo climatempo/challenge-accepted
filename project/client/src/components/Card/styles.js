@@ -3,6 +3,15 @@ import { ArrowUp } from "@styled-icons/bootstrap/ArrowUp"
 import { ArrowDown } from "@styled-icons/bootstrap/ArrowDown"
 import { Drop } from "@styled-icons/entypo/Drop"
 import { UmbrellaFill } from "@styled-icons/bootstrap/UmbrellaFill"
+import { CalendarDateFill } from "@styled-icons/bootstrap/CalendarDateFill"
+
+// Icons
+export const UpArrowIcon = styled(ArrowUp)``
+export const DownArrowIcon = styled(ArrowDown)``
+export const DropIcon = styled(Drop)``
+export const UmbrellaIcon = styled(UmbrellaFill)``
+
+// ***
 
 export const Container = styled.div`
 	width: 100%;
@@ -12,6 +21,10 @@ export const Container = styled.div`
 
 	@media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
 		max-width: 40rem;
+	}
+
+	${UpArrowIcon}, ${DownArrowIcon}, ${DropIcon}, ${UmbrellaIcon} {
+		height: 100%;
 	}
 `
 
@@ -61,7 +74,7 @@ export const Rain = styled(Temperature)``
 
 export const Wrapper = styled.div`
 	width: 100%;
-	height: 5rem;
+	max-height: 5rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -81,19 +94,4 @@ export const MaxTemperature = styled.p`
 
 export const MinTemperature = styled.p`
 	color: var(--color-blue-100);
-`
-
-export const UpArrowIcon = styled(ArrowUp)`
-	height: 100%;
-`
-
-export const DownArrowIcon = styled(ArrowDown)`
-	height: 100%;
-`
-export const DropIcon = styled(Drop)`
-	height: 100%;
-`
-
-export const UmbrellaIcon = styled(UmbrellaFill)`
-	height: 100%;
 `

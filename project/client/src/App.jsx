@@ -1,3 +1,6 @@
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+
 import GlobalStyles from "./GlobalStyles"
 import AppProvider from "./providers"
 import Router from "./Router"
@@ -7,6 +10,7 @@ const App = () => {
 		<AppProvider>
 			<GlobalStyles />
 			<Router />
+			<ToastContainer />
 		</AppProvider>
 	)
 }

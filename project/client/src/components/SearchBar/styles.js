@@ -56,9 +56,6 @@ export const SearchResults = styled.div`
 	left: 0;
 	overflow-y: auto;
 	border-radius: 0 0 0.5rem 0.5rem;
-	box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
-	/* background-color: var(--secondary-color); */
-	background-color: red;
 
 	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
 		top: 4rem;
@@ -67,14 +64,17 @@ export const SearchResults = styled.div`
 
 export const Result = styled.div`
 	width: 100%;
-	height: 3rem;
-	padding: 0.5rem 1rem;
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	padding: 0 1rem;
 	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-	background-color: #f5f5f5;
+	background-color: var(--color-gray-100);
+	cursor: pointer;
 
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 
 	:hover {
-		background-color: #f1f1f1;
+		background-color: var(--color-gray-200);
 	}
 `

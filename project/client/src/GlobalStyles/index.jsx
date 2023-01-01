@@ -21,6 +21,8 @@ export default createGlobalStyle`
         --color-blue-100:  #2B8BC6;
         --color-blue-200:  #1565C0;
         --color-red-100:   #CA3A3A;
+        --color-gray-100:  #f5f5f5;
+        --color-gray-200:  #e0e0e0;
 
         --primary-text-color: #000;
         --secondary-text-color:  #828282;

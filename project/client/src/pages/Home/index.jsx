@@ -7,6 +7,7 @@ import Card from "../../components/Card"
 import MainLayout from "../../layouts/MainLayout"
 
 import * as S from "./styles"
+import Loading from "../../components/Loading"
 
 const Home = () => {
 	const { weather, setWeather, getWeather, locale, setLocale } =
@@ -27,34 +28,38 @@ const Home = () => {
 	}, [])
 	return (
 		<MainLayout>
-			<S.Wrapper>
-				<h1>
-					Previsão para {locale?.name} - {locale?.state}
-				</h1>
-				<S.Container>
-					{weather?.map(
-						({
-							id,
-							date,
-							conditionText,
-							maxTemperature,
-							minTemperature,
-							rainPrecipitation,
-							rainProbability,
-						}) => (
-							<Card
-								key={id}
-								date={date}
-								text={conditionText}
-								maxTemp={maxTemperature}
-								minTemp={minTemperature}
-								rainPrecipitation={rainPrecipitation}
-								rainProbability={rainProbability}
-							/>
-						)
-					)}
-				</S.Container>
-			</S.Wrapper>
+			{weather.length ? (
+				<S.Wrapper>
+					<h1>
+						Previsão para {locale?.name} - {locale?.state}
+					</h1>
+					<S.Container>
+						{weather?.map(
+							({
+								id,
+								date,
+								conditionText,
+								maxTemperature,
+								minTemperature,
+								rainPrecipitation,
+								rainProbability,
+							}) => (
+								<Card
+									key={id}
+									date={date}
+									text={conditionText}
+									maxTemp={maxTemperature}
+									minTemp={minTemperature}
+									rainPrecipitation={rainPrecipitation}
+									rainProbability={rainProbability}
+								/>
+							)
+						)}
+					</S.Container>
+				</S.Wrapper>
+			) : (
+				<Loading width="10rem" height="10rem" />
+			)}
 		</MainLayout>
 	)
 }

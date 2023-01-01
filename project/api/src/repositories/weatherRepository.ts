@@ -27,6 +27,13 @@ const getWeatherByLocaleId = async (
 			maxTemperature: true,
 			rainProbability: true,
 			rainPrecipitation: true,
+			locale: {
+				select: {
+					id: true,
+					name: true,
+					state: true,
+				},
+			},
 		},
 	})
 

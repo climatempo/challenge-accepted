@@ -1,6 +1,7 @@
 import { Period } from "@/types/weatherTypes"
+
+import { localesService } from "@/services"
 import { weatherRepository } from "@/repositories"
-import localesService from "./localesService"
 
 const getWeatherByLocaleId = async (localeId: number, period: Period) => {
 	const { startDate, endDate } = period

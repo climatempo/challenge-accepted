@@ -1,3 +1,4 @@
-import localesSchema from "./localesSchema"
+import localesSchema from "./localesSchemas"
+import weatherSchema from "./weatherSchemas"
 
-export { localesSchema }
+export { localesSchema, weatherSchema }

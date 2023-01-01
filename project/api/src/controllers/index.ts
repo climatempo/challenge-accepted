@@ -1,3 +1,4 @@
 import localesController from "./localesController"
+import weatherController from "./weatherController"
 
-export { localesController }
+export { localesController, weatherController }

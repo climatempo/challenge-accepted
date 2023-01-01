@@ -1,9 +1,17 @@
-class AppError extends Error {
+class AppError {
+	public readonly code: number
 	public readonly message: string
-	public readonly statusCode: number
-	constructor(message: string, statusCode = 400) {
-		super(message)
+
+	constructor(code: number, message: string) {
+		this.code = code
 		this.message = message
-		this.statusCode = statusCode
 	}
 }
+
+class NotFoundError extends AppError {
+	constructor(message: string) {
+		super(404, message)
+	}
+}
+
+export { AppError, NotFoundError }

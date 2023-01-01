@@ -14,6 +14,7 @@
 		"seed": "ts-node prisma/seed.ts"
 	},
 	"dependencies": {
+		"@joi/date": "^2.1.0",
 		"@prisma/client": "^4.8.0",
 		"cors": "^2.8.5",
 		"express": "^4.18.2",

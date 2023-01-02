@@ -16,14 +16,14 @@ export class PrismaWeatherRepository implements IWeatherRepository {
   async list({
     orderBy,
     page,
-    pageLimit,
+    pageSize,
     params: where,
   }: ListWeatherParams): Promise<WeatherRepository[]> {
     return this.prismaService.weather.findMany({
       where,
       orderBy,
-      take: pageLimit,
-      ...(pageLimit && page ? { skip: (page - 1) * pageLimit } : {}),
+      take: pageSize,
+      ...(pageSize && page ? { skip: (page - 1) * pageSize } : {}),
     });
   }
 

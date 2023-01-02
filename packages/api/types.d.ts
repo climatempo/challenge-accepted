@@ -4,7 +4,7 @@ export type OrderParam<T> = Record<keyof T, OrderBy>;
 
 export interface ListParams<T> {
   page?: number;
-  pageLimit?: number;
+  pageSize?: number;
   orderBy?: OrderBy<T>;
 }
 

@@ -12,20 +12,22 @@ export class ElasticService<T = any> {
     {
       query,
       page = 1,
-      pageLimit,
+      pageSize,
       orderBy,
     }: {
       query?: QueryDslQueryContainer;
       page?: number;
-      pageLimit?: number;
+      pageSize?: number;
       orderBy?: OrderParam<T>;
     },
   ) {
     return await this.esService.search<T>({
       index,
       body: {
-        ...(query ? { query } : {}),
-        ...(pageLimit ? { size: pageLimit, from: (page - 1) * pageLimit } : {}),
+        ...(query ? { query } : { query: { match_all: {} } }),
+        ...(pageSize
+          ? { size: pageSize, from: (page - 1) * pageSize }
+          : { size: 10000 }),
         ...(orderBy ? { sort: orderBy } : {}),
       },
     });

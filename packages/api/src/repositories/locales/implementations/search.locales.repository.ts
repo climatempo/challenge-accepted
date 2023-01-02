@@ -24,7 +24,7 @@ export class ElasticLocalesRepository implements ILocalesRepository {
   async list({
     name,
     page,
-    pageLimit,
+    pageSize,
     orderBy,
   }: ListLocalesParams): Promise<ListRepositoryResponse<Locale>> {
     const {
@@ -32,7 +32,7 @@ export class ElasticLocalesRepository implements ILocalesRepository {
     } = await this.elasticService.search(this.index, {
       ...(name ? { query: { match_bool_prefix: { name } } } : {}),
       page,
-      pageLimit,
+      pageSize,
       orderBy,
     });
     return {

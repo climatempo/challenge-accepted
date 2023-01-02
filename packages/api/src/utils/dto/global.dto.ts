@@ -13,7 +13,7 @@ export class PaginationAndSortDTO<T> {
   @IsOptional()
   @IsInt()
   @IsPositive()
-  @Max(1000)
+  @Max(10000)
   @Type(() => Number)
   public pageSize = 100;
 

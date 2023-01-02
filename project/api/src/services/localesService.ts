@@ -8,7 +8,7 @@ const getLocales = async (query: string) => {
 
 const validateLocaleId = async (localeId: number) => {
 	const locale = await queryFactory.getById(localeId, "Locale")
-	if (!locale.id) throw new NotFoundError("Locale not found")
+	if (!locale) throw new NotFoundError("Locale not found")
 	return locale
 }
 

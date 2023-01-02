@@ -4,6 +4,10 @@
   "description": "climatempo-challenge",
   "main": "index.js",
   "private": "true",
+  "engines" : { 
+    "npm" : ">=8.19.2",
+    "node" : ">=17 <18.22.1"
+  },
   "workspaces": {
     "packages": [
       "packages/*"

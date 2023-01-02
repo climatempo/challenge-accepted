@@ -66,7 +66,7 @@ export default function WeatherCard({
           </Box>
           <Box>
             <BsUmbrella size={28} />
-            <NumberLabel variant="h4">{probability}%</NumberLabel>
+            <NumberLabel variant="h5">{probability}%</NumberLabel>
           </Box>
         </CardRow>
       </CardBody>

@@ -1,14 +1,29 @@
-import { Typography } from "@mui/material";
+import { Skeleton, Typography } from "@mui/material";
 import { DateTime } from "luxon";
-import { GetServerSideProps, GetStaticProps } from "next";
+import { GetServerSideProps, GetStaticPaths, GetStaticProps } from "next";
+import { useRouter } from "next/router";
 import WeatherCard from "../components/Cards/WeatherCard";
-import { getWeathers } from "../providers/api";
+import { getWeathers, listLocales } from "../providers/api";
 import { ApiWeatherResponse } from "../providers/api/types";
-import { CardsContainer, Wrapper } from "./locale.styles";
+import { CardsContainer, Placeholder, Wrapper } from "../styles/locale.styles";
 
 type Props = ApiWeatherResponse;
 
-export default function Locale({ locale, period, weather }: Props) {
+export default function locale({ locale, period, weather }: Props) {
+  const opa = true;
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { isFallback } = useRouter();
+  if (isFallback)
+    return (
+      <Wrapper>
+        <CardsContainer>
+          {Array.from({ length: 6 }).map((_, index) => {
+            return <Placeholder key={index} />;
+          })}
+        </CardsContainer>
+      </Wrapper>
+    );
+
   const title = weather.length
     ? `Previsões para ${locale.name} - ${locale.state}`
     : `Nenhuma previsão para ${locale.name} - ${locale.state}`;
@@ -33,9 +48,16 @@ export default function Locale({ locale, period, weather }: Props) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: true,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
   try {
-    const localeParam = ctx?.params?.Locale || "";
+    const localeParam = ctx?.params?.locale || "";
     const locale = Array.isArray(localeParam) ? localeParam[0] : localeParam;
 
     if (!locale)
@@ -43,6 +65,17 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         redirect: "/",
         notFound: true,
       };
+
+    const revalidateConfig = Number(process.env.REVALIDATE_PAGES) || 60 * 60;
+
+    const now = DateTime.fromJSDate(new Date());
+    const endDayRemaining = Math.round(
+      now.endOf("day").diff(now, ["seconds"]).toObject()?.seconds ||
+        revalidateConfig
+    );
+
+    const revalidate =
+      revalidateConfig > endDayRemaining ? endDayRemaining : revalidateConfig;
     const begins = DateTime.fromJSDate(new Date()).startOf("day");
     const ends = DateTime.fromJSDate(new Date()).endOf("day").plus({ days: 4 });
 
@@ -54,8 +87,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
     return {
       props,
+      revalidate,
     };
   } catch (error) {
+    console.log({ error });
     return { redirect: "/", notFound: true };
   }
 };

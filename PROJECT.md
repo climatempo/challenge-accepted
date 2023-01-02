@@ -1,7 +1,10 @@
-v<h1 align="center">
+<div align="center">
+  <img width="250px" src="http://i.imgur.com/Q9lCAMF.png">
+</div>
+<h1 align="center">
 ClimaTempo Project
 </br>
-<a href="http://i.imgur.com/Q9lCAMF.png" target="_blank"> ><img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" alt="Version"><
+<a href="https://climatempo-project.vercel.app/" target="_blank"> ><img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" alt="Version"><
 </a>
 
 </h1>
@@ -49,9 +52,9 @@ GET /locates
 
 #### Request:
 
-| Query    | Type     | Description                    |
-| :------- | :------- | :----------------------------- |
-| `search` | `string` | **min length: 3** **Required** |
+| Query    | Type     | Description                  |
+| :------- | :------- | :--------------------------- |
+| `search` | `string` | `min length: 3` **Required** |
 
 #### Response:
 
@@ -81,10 +84,10 @@ GET /weather/:id
 | :-------- | :------- | :----------- |
 | `id`      | `number` | **Required** |
 
-| Query       | Type     | Description                         |
-| :---------- | :------- | :---------------------------------- |
-| `startDate` | `string` | **Format: YYYY-MM-DD** **Required** |
-| `endDate`   | `string` | **Format: YYYY-MM-DD** **Required** |
+| Query       | Type     | Description                       |
+| :---------- | :------- | :-------------------------------- |
+| `startDate` | `string` | `Format: YYYY-MM-DD` **Required** |
+| `endDate`   | `string` | `Format: YYYY-MM-DD` **Required** |
 
 #### Response:
 

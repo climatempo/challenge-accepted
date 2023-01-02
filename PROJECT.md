@@ -1,6 +1,7 @@
 <div align="center">
-  <img width="250px" src="http://i.imgur.com/Q9lCAMF.png">
+  <img width="550px" src="http://i.imgur.com/Q9lCAMF.png">
 </div>
+</br>
 <h1 align="center">
 ClimaTempo Project
 </br>

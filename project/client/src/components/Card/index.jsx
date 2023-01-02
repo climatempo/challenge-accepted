@@ -1,3 +1,5 @@
+import { formatDate } from "../../utils/dateUtils"
+
 import * as S from "./styles"
 
 const Card = ({
@@ -11,7 +13,7 @@ const Card = ({
 	return (
 		<S.Container>
 			<S.UpperContainer>
-				<S.Date>{date}</S.Date>
+				<S.Date>{formatDate(date)}</S.Date>
 				<S.WeatherDescription>{text}</S.WeatherDescription>
 			</S.UpperContainer>
 			<S.LowerContainer>

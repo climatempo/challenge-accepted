@@ -11,7 +11,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"yarn workspace @challenge-accepted/client dev\" \"yarn workspace @challenge-accepted/api start:dev\""
+    "dev": "concurrently \"yarn workspace @challenge-accepted/client dev\" \"yarn workspace @challenge-accepted/api start:dev\"",
+    "build": "concurrently \"yarn workspace @challenge-accepted/client build\" \"yarn workspace @challenge-accepted/api build\"",
+    "start": "concurrently \"yarn workspace @challenge-accepted/client start\" \"yarn workspace @challenge-accepted/api start:prod\""
   },
   "repository": {
     "type": "git",

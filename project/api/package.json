@@ -5,10 +5,13 @@
 	"author": "Lucas Alves <contato.lucasalv@gmail.com>",
 	"license": "MIT",
 	"scripts": {
+		"prisma:deploy": "prisma migrate deploy",
+		"prisma:seed": "prisma db seed",
 		"build": "babel src --extensions '.js,.ts' --out-dir build --no-copy-ignored",
+		"prestart": "npm run prisma:deploy && npm run prisma:seed",
 		"start": "node build/server.js",
 		"dev": "tsnd --transpile-only --respawn --ignore-watch node_modules --exit-child --cls --rs -r dotenv/config -r tsconfig-paths/register src/server.ts",
-		"test": "jest"
+		"test": "jest --verbose"
 	},
 	"prisma": {
 		"seed": "ts-node prisma/seed.ts"
@@ -19,8 +22,7 @@
 		"cors": "^2.8.5",
 		"express": "^4.18.2",
 		"express-async-errors": "^3.1.1",
-		"joi": "^17.7.0",
-		"ts-node": "^10.9.1"
+		"joi": "^17.7.0"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.20.7",
@@ -36,6 +38,7 @@
 		"jest": "^29.3.1",
 		"prisma": "^4.8.0",
 		"ts-jest": "^29.0.3",
+		"ts-node": "^10.9.1",
 		"ts-node-dev": "^2.0.0",
 		"tsconfig-paths": "^4.1.1",
 		"typescript": "^4.9.4"

@@ -1,0 +1,44 @@
+version: "3"
+services:
+    postgres-db:
+        image: postgres
+        container_name: postgres-db
+        restart: always
+        ports:
+            - "1234:5432"
+        env_file:
+            - ./api/.env
+        volumes:
+            - volume_db:/var/lib/postgresql/data
+
+    climatempo-api:
+        container_name: climatempo-api
+        build: ./api
+        ports:
+            - 5000:5000
+        depends_on:
+            - postgres-db
+        env_file:
+            - ./api/.env
+
+    climatempo-client:
+        container_name: climatempo-client
+        build: ./client
+        volumes:
+            - build_react:/var/www/html
+
+    nginx:
+        container_name: nginx
+        build: ./nginx
+        ports:
+            - 8080:80
+        volumes:
+            - build_react:/var/www/html
+        depends_on:
+            - postgres-db
+            - climatempo-api
+            - climatempo-client
+
+volumes:
+    volume_db:
+    build_react:

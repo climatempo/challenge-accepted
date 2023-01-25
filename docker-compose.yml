@@ -8,3 +8,17 @@ networks:
       driver: default
       config:
         - subnet: 172.16.238.0/24
+
+services:
+  frontend:
+    container_name: climatempo-frontend
+    build: ./app/frontend
+    ports:
+      - 3000:3000
+    working_dir: /app-frontend
+    depends_on:
+      - backend
+    networks:
+      - climatempo_network
+    external_links:
+      - backend

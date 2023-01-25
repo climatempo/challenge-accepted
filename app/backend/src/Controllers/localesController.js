@@ -10,6 +10,13 @@ class LocalesController {
     const allLocales = await this._localeServices.getAllLocales();
     res.status(statusCodes.OK).json(allLocales);
   };
+
+  getLocaleByName = async ({ params }, res) => {
+    const localeByName = await this._localeServices.getLocaleByName(
+      params.name
+    );
+    res.status(statusCodes.OK).json(localeByName);
+  };
 }
 
 module.exports = LocalesController;

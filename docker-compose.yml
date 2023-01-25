@@ -22,3 +22,20 @@ services:
       - climatempo_network
     external_links:
       - backend
+
+  backend:
+    container_name: climatempo-backend
+    build: ./app/backend
+    ports:
+      - 3001:3001
+    working_dir: /app-backend
+    depends_on:
+      - database
+    environment:
+      - JWT_SECRET=clima_top_secret_tempo
+      - PORT=3001
+    restart: always
+    networks:
+      - climatempo_network
+    external_links:
+      - frontend

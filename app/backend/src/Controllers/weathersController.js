@@ -12,6 +12,15 @@ class WeathersController {
     const allWeathers = await this._weathersServices.getAllWeathers();
     res.status(statusCodes.OK).json(allWeathers);
   };
+
+  getWeatherByLocale = async ({ query }, res) => {
+    if (query.name) {
+      const weatherByLocale = await this._weathersServices.getWeatherByLocale(
+        query.name
+      );
+      res.status(statusCodes.OK).json(weatherByLocale);
+    }
+  };
 }
 
 module.exports = WeathersController;

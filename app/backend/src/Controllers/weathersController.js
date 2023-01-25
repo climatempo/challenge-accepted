@@ -7,19 +7,19 @@ class WeathersController {
     this._weathersServices = new WeathersServices();
   }
 
-  getAllWeathers = async ({ query }, res, next) => {
-    if (query.name) return next();
+  getAllWeathers = async (_req, res) => {
     const allWeathers = await this._weathersServices.getAllWeathers();
     res.status(statusCodes.OK).json(allWeathers);
   };
 
-  getWeatherByLocale = async ({ query }, res) => {
-    if (query.name) {
+  getWeatherByLocale = async ({ query }, res, next) => {
+    if (query.locale) {
       const weatherByLocale = await this._weathersServices.getWeatherByLocale(
-        query.name
+        query.locale
       );
-      res.status(statusCodes.OK).json(weatherByLocale);
+      return res.status(statusCodes.OK).json(weatherByLocale);
     }
+    next()
   };
 }
 

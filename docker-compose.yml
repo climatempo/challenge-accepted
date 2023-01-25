@@ -29,8 +29,6 @@ services:
     ports:
       - 3001:3001
     working_dir: /app-backend
-    depends_on:
-      - database
     environment:
       - JWT_SECRET=clima_top_secret_tempo
       - PORT=3001

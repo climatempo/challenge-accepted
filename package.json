@@ -1,0 +1,21 @@
+{
+  "name": "challenge-accepted",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker-compose up -d",
+    "stop": "docker-compose down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leonardoozx/challenge-accepted.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leonardoozx/challenge-accepted/issues"
+  },
+  "homepage": "https://github.com/Leonardoozx/challenge-accepted#readme"
+}

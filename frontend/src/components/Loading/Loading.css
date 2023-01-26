@@ -1,0 +1,18 @@
+.containerLoading {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+};
+
+.containerLoading .loader {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    border: 5px solid transparent;  
+    border-top-color: var(--blue);
+    box-sizing: border-box;
+    background: transparent;
+    animation: loading 1s linear infinite;
+};

@@ -8,6 +8,7 @@ import Header from "./components/Header/Header";
 import NameCity from "./components/NameCity/NameCity";
 import api from "./services/api";
 import dayjs from 'dayjs';
+import Loading from "./components/Loading/Loading"
 
 
 export default function App() {

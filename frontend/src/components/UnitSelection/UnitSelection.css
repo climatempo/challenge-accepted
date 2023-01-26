@@ -1,0 +1,6 @@
+.Selection {
+    margin: 0 1.5rem ;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--black);
+}

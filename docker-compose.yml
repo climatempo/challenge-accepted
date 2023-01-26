@@ -2,8 +2,7 @@ version: '3.1'
 
 networks:
   climatempo_network:
-    driver:
-      bridge
+    driver: bridge
     ipam:
       driver: default
       config:
@@ -16,6 +15,9 @@ services:
     ports:
       - 3000:3000
     working_dir: /app-frontend
+    environment:
+      - REACT_APP_JWT_SECRET=clima_top_secret_tempo
+      - REACT_APP_BASE_ENDPOINT=http://localhost:3001
     depends_on:
       - backend
     networks:

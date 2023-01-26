@@ -1,5 +1,6 @@
 .Content2 {
     font-weight: bold;
+    color: var(--white);
 }
 
 /*============= RESPONSIVE CONFIG =============*/
@@ -67,7 +68,7 @@
         text-align: start;
         padding: 1rem;
         font-size: 0.8rem;
-        background-color: var(--grey);
+        background-color: var(--lighter-blue);
         border-radius: 0px 0px 8px 8px;
         padding: 1.2rem;
         word-spacing: 1px;
@@ -146,7 +147,7 @@
         padding: 1rem;
         font-size: 0.9rem;
         line-height: 1.2rem;
-        background-color: var(--grey);
+        background-color: var(--lighter-blue);
         border-radius: 0px 8px 8px 0px;
         max-width: 60%;
         align-items: center;

@@ -2,11 +2,11 @@
 :root {
   --black: #000;
   --white: #fff;
-  --blue-500: #184479;
-  --grey: #dadada;
+  --blue-500: #144272;
+  --grey: #DCDCDC;
   --red: #AA0000;
   --blue: #007FFF;
-  --darker-grey: #cfcece;
+  --lighter-blue: #2C74B3;
 }
 
 * {
@@ -53,6 +53,6 @@ table {
 /*==== CSS INDEX ====*/
 
 body {
-background-color: var(--white);
+background-color: var(--grey);
 font-family: Arial, Helvetica, sans-serif;
 }

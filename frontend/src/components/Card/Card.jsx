@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Card.css";
-import arrowdown from "../images/icons/setadown.png";
-import arrowup from "../images/icons/setaup.png";
+import arrowdown from "../images/icons/arrowdown.png";
+import arrowup from "../images/icons/search.png";
 import drop from "../images/icons/raindrop.png";
 import umbrella from "../images/icons/umbrella.png";
 

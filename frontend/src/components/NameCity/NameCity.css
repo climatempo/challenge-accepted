@@ -1,0 +1,19 @@
+.NameCity {
+    height: 3rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.NameCity .clearSearch {
+    border: none;
+    background-color: transparent;
+    color: var(--black);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}

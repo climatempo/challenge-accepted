@@ -7,10 +7,12 @@ const jwtVerifier = async ({ headers }, res, next) => {
   const { authorization } = headers;
 
   try {
-    jwt.verify(authorization, JWT_SECRET)
+    jwt.verify(authorization, JWT_SECRET);
     next();
   } catch (err) {
-    res.status(statusCodes.UNAUTHORIZED).json({ message: 'Unauthorized request, you need a valid token' });
+    res
+      .status(statusCodes.UNAUTHORIZED)
+      .json({ message: 'Unauthorized request, you need a valid token' });
   }
 
   // if the key exists and it's equal to the .env jwt_secret one, it go to the next middleware

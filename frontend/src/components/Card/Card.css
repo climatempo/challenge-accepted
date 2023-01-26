@@ -1,0 +1,155 @@
+.Content2 {
+    font-weight: bold;
+}
+
+/*============= RESPONSIVE CONFIG =============*/
+@media screen and (max-width: 500px){
+    .Card {
+        width: 80%;
+        height: 11rem;
+        background-color: var(--grey);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        min-width: 300px; 
+        margin-bottom: 1rem;
+    }
+    
+    .Content {
+        display: flex;
+        background-color: var(--white);
+        flex: 2;
+        align-items: center;
+        border-radius: 8px 8px 0px 0px ;
+        padding: 0.4rem;
+    }
+    
+    .Date {
+        display: flex;
+        flex: 1;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin-left: 0.3rem;
+        margin-right: -1rem;
+    }
+    
+    .Data {
+        display: flex;
+        flex: 3;
+        justify-content: center;
+        font-weight: bold;
+    }
+    
+    .TxtData{
+        font-size: 0.9rem;
+        line-height: 2.3rem;
+    }
+    
+    .Icon {
+        width: 2rem;
+        padding: 0rem 0.5rem ;
+        margin-left: 0.5rem;
+    }
+
+    .Degree1{
+        color: var(--red);
+    }
+
+    .Degree2{
+        color: var(--blue);
+    }
+    
+    .Content2 {
+        display: flex;
+        flex:1;
+        text-align: start;
+        padding: 1rem;
+        font-size: 0.8rem;
+        background-color: var(--grey);
+        border-radius: 0px 0px 8px 8px;
+        padding: 1.2rem;
+        word-spacing: 1px;
+        line-height: 0.9rem;
+    }
+}
+
+/*============= CONFIG WEB =============*/
+
+@media screen and (min-width:500px) {
+    .Card {
+        width: 90%;
+        height: 7rem;
+        background-color: var(--grey);
+        border-radius: 25px;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        min-width: 650px;
+        max-width: 900px;
+        margin-bottom: 1rem;
+    }
+    
+    .Content {
+        display: flex;
+        background-color: var(--white);
+        flex: 1;
+        align-items: center;
+        border-radius: 8px 0px 0px 8px;
+        min-width: 40%;
+        max-width: 60%;
+        font-size: 0.95rem;
+        padding: 0.4rem;
+    }
+    
+    .Date {
+        display: flex;
+        flex: 1;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin-left: 0.5rem;
+    }
+    
+    .Data {
+        display: flex;
+        flex: 3;
+        justify-content: space-between;
+        font-weight: bold;
+    }
+    
+    .TxtData {
+        padding: 1rem;
+        font-size: 0.9;
+        line-height: 2.5rem;
+    }
+    
+    .Icon {
+        width: 1.3rem;
+        padding: 0 0.3rem;
+        margin-left: 0.5rem;
+    }
+
+    .Degree1 {
+        color: var(--red);
+    }
+
+    .Degree2 {
+        color: var(--blue);
+    }
+    
+    .Content2 {
+        display: flex;
+        flex:1;
+        text-align: start;
+        padding: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        background-color: var(--grey);
+        border-radius: 0px 8px 8px 0px;
+        max-width: 60%;
+        align-items: center;
+        padding: 1.2rem;
+    }
+}

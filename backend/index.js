@@ -4,7 +4,7 @@ const cors = require("cors");
 const LocaleController = require("./controllers/LocaleController");
 const ForecastController = require("./controllers/ForecastController");
 const app = express();
-const port = process.env.PORT || 3001;
+const PORT = 8080;
 
 app.use(cors())
 
@@ -16,5 +16,5 @@ app.get("/locales", LocaleController.getLocales);
 app.get("/forecast", ForecastController.getForecast);
 
 app.listen(PORT, () => {
-    console.log(`Server on port ${port}`)
+    console.log(`Server on port ${PORT}`)
 });

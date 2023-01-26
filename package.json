@@ -2,10 +2,10 @@
   "name": "challenge-accepted",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "start": "docker-compose up -d",
-    "stop": "docker-compose down"
+    "stop": "docker-compose down",
+    "start": "docker-compose up -d"
   },
   "repository": {
     "type": "git",

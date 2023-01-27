@@ -1,3 +1,4 @@
 [build]
-publish = "build/static/"
+
 command = "npm run build"
+publish = "build/static"

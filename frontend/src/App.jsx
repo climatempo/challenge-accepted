@@ -47,43 +47,26 @@ export default function App() {
       })
   }
 
-  useEffect(() => {
-    if (optionCityId === 0) return;
-   
-    const fetchForecast = async () => {
-      setLoading(true);
-      try {
-        const response = await api.get(`/forecast?id=${optionCityId}&temperatureUnit=${temperature}&precipitationUnit=${precipitation}`)
-        setForecastCity(response.data);
-        setCity(response.data.locale);
-        setLoading(false);
-      } catch (err) {
-        console.log(err);
-        setLoading(false);
-      }
+  const fetchForecast = async () => {
+    setLoading(true);
+    try {
+      const response = await api.get(`/forecast?cityName=${optionCityName}&temperatureUnit=${temperature}&precipitationUnit=${precipitation}&id=${optionCityId}`)
+      setForecastCity(response.data);
+      setCity(response.data.locale);
+      setLoading(false);
+    } catch (err) {
+      console.log(err);
+      setLoading(false);
     }
+  }
+
+  useEffect(() => {
+    if (optionCityId === 0 || optionCityName === '') return;
 
     fetchForecast();
 
   }, [precipitation, optionCityId, temperature, setLoading, setForecastCity, setCity])
 
-  useEffect(() => {
-    if (optionCityName === '') return;
-    const fetchForecast = async () => {
-      setLoading(true);
-      try {
-        const response = await api.get(`/forecast?cityName=${optionCityName}&temperatureUnit=${temperature}&precipitationUnit=${precipitation}`)
-        setForecastCity(response.data);
-        setCity(response.data.locale);
-        setLoading(false);
-      } catch (err) {
-        console.log(err);
-        setLoading(false);
-      }
-    }
-    fetchForecast();
-    
-  }, [precipitation, optionCityName, temperature, setLoading, setForecastCity, setCity])
 
   const handleClearSearch = () => {
     setForecastCity({})

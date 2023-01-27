@@ -67,24 +67,25 @@ export default function App() {
 
     fetchForecast();
 
-  }, [temperature])
+  }, [precipitation, optionCityName, temperature])
 
   useEffect(() => {
     if (optionCityName === '') return;
     const fetchForecast = async () => {
       setLoading(true);
       try {
-      const response = await api.get(`/forecast?cityName=${optionCityName}&temperatureUnit=${temperature}&precipitationUnit=${precipitation}`)
-      setForecastCity(response.data);
-      setCity(response.data.locale);
-      setLoading(false);
+        const response = await api.get(`/forecast?cityName=${optionCityName}&temperatureUnit=${temperature}&precipitationUnit=${precipitation}`)
+        setForecastCity(response.data);
+        setCity(response.data.locale);
+        setLoading(false);
       } catch (err) {
         console.log(err);
         setLoading(false);
       }
     }
     fetchForecast();
-  }, [precipitation])
+    // vou dar uma olhada pera ai
+  }, [precipitation, optionCityName, temperature])
 
   const handleClearSearch = () => {
     setForecastCity({})

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://www.climatempo.com.br">
-      <img src="./frontend/src/components/images/Layout.png" alt="Climatempo" width="500px"/>
+      <img src="./Prototype/Layout.png" alt="Climatempo" width="500px"/>
   </a>
 </p>
 
@@ -29,10 +29,10 @@ The following components were created:
 - Display of card for each day's forecast
 - API REST/Restful with good HTTP practices for obtaining location and forecast data
 - User input validation
-- Cache
 
-## Differentiators
+## differentials
 - Possibility for user to select temperature and precipitation unit
+- Cache
 
 ## Setting up the project
 ### To set up the project, you will need to have NodeJS installed in your machine.

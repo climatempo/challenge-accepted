@@ -4,7 +4,7 @@
   </a>
 </p>
 
-## Weather Forecast Project
+## Challenge - Accepted
 This project aims to provide a weather forecast for the cities of Osasco and São Paulo, using smartphone access.
 
 ## Technologies used

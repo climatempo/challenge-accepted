@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-
 import useLocalStorage from "use-local-storage";
 import "./App.css";
 import Card from "./components/Card/Card";
@@ -19,7 +18,6 @@ export default function App() {
   const [optionCityId, setOptionCityId] = useState(0)
   const [optionCityName, setOptionCityName] = useState('')
   const [loading, setLoading] = useState(false)
-
 
   const citySelected = (option) => {
     if (!option) return;

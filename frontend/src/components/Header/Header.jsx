@@ -20,6 +20,9 @@ export default function Header({ setTemperature, setPrecipitation}) {
                 {openPopover && (
                     <div className='popoverSettings'>
                         <div className="headerPopover">
+                            <h6>
+                                Unidades de medida
+                            </h6>
                             <button className="buttonClose" onClick={() => setOpenPopover(false)}>
                                 <FiX />
                             </button>
@@ -31,7 +34,7 @@ export default function Header({ setTemperature, setPrecipitation}) {
                                 <UnitSelection options={['C', 'F']} onSelect={setTemperature} />
                             </div>
                             <div className='units'>
-                                <span>Precipitação:</span>
+                                <span>Chuva:</span>
                                 <UnitSelection options={['mm', 'inch']} onSelect={setPrecipitation} />
                             </div>
                         </div>

@@ -84,13 +84,14 @@ export default function App() {
       }
     }
     fetchForecast();
-    // vou dar uma olhada pera ai
+    
   }, [precipitation, optionCityName, temperature, setLoading, setForecastCity, setCity])
 
   const handleClearSearch = () => {
     setForecastCity({})
     setCity('')
   }
+  
   return (
     <div className='App'>
       <Header setPrecipitation={setPrecipitation} setTemperature={setTemperature} />

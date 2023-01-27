@@ -11,5 +11,5 @@
         "src": "/(.*)",
         "dest": "backend/index.js"
     }
-]
+ ]
 }

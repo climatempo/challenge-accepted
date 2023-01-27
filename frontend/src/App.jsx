@@ -67,7 +67,7 @@ export default function App() {
 
     fetchForecast();
 
-  }, [precipitation, optionCityName, temperature, setLoading, setForecastCity, setCity])
+  }, [precipitation, optionCityId, temperature, setLoading, setForecastCity, setCity])
 
   useEffect(() => {
     if (optionCityName === '') return;

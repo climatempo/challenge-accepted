@@ -67,7 +67,7 @@ export default function App() {
 
     fetchForecast();
 
-  }, [precipitation, optionCityName, temperature])
+  }, [precipitation, optionCityName, temperature, setLoading, setForecastCity, setCity])
 
   useEffect(() => {
     if (optionCityName === '') return;
@@ -85,7 +85,7 @@ export default function App() {
     }
     fetchForecast();
     // vou dar uma olhada pera ai
-  }, [precipitation, optionCityName, temperature])
+  }, [precipitation, optionCityName, temperature, setLoading, setForecastCity, setCity])
 
   const handleClearSearch = () => {
     setForecastCity({})

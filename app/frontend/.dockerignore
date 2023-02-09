@@ -1,5 +1,3 @@
-.env*
-
 # since when running 'npm i' will generate the files below, I don't think it's necessaire to copy them
 node_modules
 package-lock.json

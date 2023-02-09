@@ -7,6 +7,8 @@ import { useState } from 'react';
 //    anythingYouWant: '',
 // }
 
+// const [genericState, setGenericState] = useGenericState({INITIAL_STATE});
+
 // <input name={anythingYouWant} value={genericState.anythingYouWant} onChange={setGenericState} />
 
 function useGenericState(initial_state) {

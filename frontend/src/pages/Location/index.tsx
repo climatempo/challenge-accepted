@@ -18,8 +18,6 @@ export function LocationInfo() {
 
   if (isError) return <Error />;
 
-  console.log(data);
-
   return (
     <Container
       maxW={"70rem"}

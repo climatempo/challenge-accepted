@@ -38,7 +38,7 @@ export const Card = ({
           <Heading fontSize={"xl"} fontWeight={"semibold"}>
             {Intl.DateTimeFormat("pt-br", {
               weekday: "long",
-            }).format(date)}
+            }).format(date.setUTCHours(4))}
           </Heading>
 
           <Heading fontSize={"xl"} fontWeight={"semibold"}>

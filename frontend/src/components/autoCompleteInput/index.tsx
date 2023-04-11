@@ -48,7 +48,7 @@ export const AutocompleteInput = ({
     highlightedIndex,
     getItemProps,
   } = useCombobox({
-    items: items.map((item) => item.name + " - " + item.state),
+    items: items?.map((item) => item.name + " - " + item.state),
     onSelectedItemChange: handleSelectedItemChange,
     stateReducer: handleKeyDown as any,
   });

@@ -13,6 +13,7 @@ COPY ./vite.config.ts ./vite.config.ts
 COPY ./public ./public
 COPY ./src ./src
 COPY ./index.html ./index.html
+COPY .env .env
 
 RUN yarn build
 

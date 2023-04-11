@@ -6,15 +6,15 @@ Devido à falta de dados disponíveis, busquei maneiras de adicionar mais inform
 
 ### [front-end](https://clima.thiagomarques.me)
 
-### [api](https://api-clima.thiagomarques.me)
+### [api](https://api-clima.thiagomarques.me/locale/overview)
 
 ## api routes
 
-| path                   | description                                       |
-| ---------------------- | ------------------------------------------------- |
-| /locales/search/:busca | retorna os resultados da busca por nome de cidade |
-| /locales/overview      | retorna todas as cidades disponíveis              |
-| /forecast/:localeId    | retorna a previsao para a cidade                  |
+| path                  | description                                       |
+| --------------------- | ------------------------------------------------- |
+| /locale/search/:busca | retorna os resultados da busca por nome de cidade |
+| /locale/overview      | retorna todas as cidades disponíveis              |
+| /forecast/:localeId   | retorna a previsao para a cidade                  |
 
 # Tecnologias utilizadas:
 

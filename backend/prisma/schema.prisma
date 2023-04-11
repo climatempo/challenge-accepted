@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model locale {
+  id        Int    @id
+  name      String
+  state     String
+  latitude  Float?
+  longitude Float?
+
+  forecasts forecast[]
+
+  @@map("locale")
+}
+
+model forecast {
+  id           String   @id @default(uuid())
+  period_begin DateTime
+  period_end   DateTime
+
+  localeId Int?
+  locale   locale? @relation(fields: [localeId], references: [id])
+
+  weather weather[]
+
+  @@map("forecast")
+}
+
+model weather {
+  id Int @id @default(autoincrement())
+
+  date               DateTime
+  text               String
+  temperature_max    Int
+  temperature_min    Int
+  rain_precipitation Int
+  rain_probability   Int
+
+  forecastId String
+  forecast   forecast @relation(fields: [forecastId], references: [id])
+
+  @@map("weather")
+}

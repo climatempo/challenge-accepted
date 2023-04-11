@@ -1,0 +1,53 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:13
+    restart: always
+    container_name: database
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: climatempo
+    volumes:
+      - database-volume:/var/lib/postgresql/data
+
+  elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.2
+    container_name: elastic
+    restart: always
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      - discovery.type=single-node
+      - cluster.name=climatempo
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    volumes:
+      - elastic-volume:/usr/share/elasticsearch/data
+
+  backend:
+    image: zpato/clima-backend:latest
+    container_name: backend
+    restart: always
+    ports:
+      - 3000:3000
+    environment:
+      - DATABASE_URL=postgresql://docker:docker@db:5432
+      - ELASTICSEARCH_URL=http://elastic:9200
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      - VITE_API_URL=http://backend:3000
+
+volumes:
+  database-volume:
+  elastic-volume:

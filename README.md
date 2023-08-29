@@ -1,155 +1,70 @@
-<p align="center">
-  <a href="http://www.climatempo.com.br">
-      <img src="http://i.imgur.com/Q9lCAMF.png" alt="Climatempo" width="300px"/>
-  </a>
-</p>
+# Getting Started with Create React App
 
-___
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-## Processo de recrutamento
+In the project directory, you can run:
 
-Olá desenvolvedor, pronto para participar do nosso processo de recrutamento para vaga de Full-stack?
+### `npm start`
 
-### Sobre a Vaga
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- Home Office
-- Flexibilidade no horário de trabalho
-- Sede: Parque Tecnológico - São José dos Campos (http://www.pqtec.org.br)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### Requisitos para a vaga
+### `npm test`
 
-Bons conhecimentos em:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Javascript
-- NodeJS
-- PHP
-- SQL
-- RESTful
-- ReactJS
-- HTML
-- CSS
+### `npm run build`
 
-Desejável:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- GraphQL
-- NoSQL
-- Docker
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### O Desafio
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Um usuário quer saber como vai ficar o 
-tempo para os próximos dias em Osasco e São Paulo utilizando
-seu smartphone. 
+### `npm run eject`
 
-O que esperamos:
- 
- ##### Frontend:
- - Uma página responsiva;
- - Um campo autocomplete para buscar localidades;
- - Um card para cada dia de previsão;
- ##### Backend:
- - Uma API rest ou graphql para obter localidades e dados de previsão;
- - Validação de entradas do usuário;
- 
- Diferenciais:
- 
- - Utilizar cache;
- - Utilizar Elasticsearch ou algum outro software de **full-text search** para busca de localidades;
- - Configurar ambiente docker para rodar a aplicação;
- 
- ###### uso de bibliotecas é livre.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Desafio Extra (opcional)
-  
-  Permita que o usuário selecione em qual unidade de temperatura e chuva (precipitação) ele quer visualizar os dados.
-  
-  ###### Design livre.
-  
-  ##### Conversão dos valores:
-  
-  - Temperatura:
-    - de **°C** pra **°F**: (`valor` * 1.8) + 32
-    - de **°F** pra **°C**: (`valor` - 32) / 1.8
-  - Chuva:
-    - de **mm** pra **inch**: (`valor` / 25.4)
-    - de **inch** pra **mm**: (`valor` * 25.4)
-  
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Avaliação
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-O que vamos avaliar:
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-- Performance de busca e renderização;
-- Segurança;
-- Testes;
-- Manutenibilidade;
-- Usabilidade;
-- Boas práticas;
+## Learn More
 
-Exemplo:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-<p align="center">
-  <a href="http://www.climatempo.com.br">
-      <img src="http://i.imgur.com/x3z4tYM.png" alt="Climatempo" width="400px"/>
-  </a>
-</p>
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-**Atenção:**  Não se preocupe em reproduzir o exemplo, use apenas como referência.
- 
-### Dados
- 
-Localidades:
-    
-    base/locales.json
- 
-| Propriedade   | Tipo   | Descrição                           |
-| ------------- |:------:| ------------------------------------|
-| `id`          | Number | Id da localidade                    |
-| `name`        | String | Nome da localidade                  |
-| `state`       | String | Sigla do estado da localidade       |
-| `latitude`    | Number | Latitude do centro da localidade    |
-| `longitude`   | Number | Longitude do centro da localidade   |
- 
- 
-Previsão:
- 
-    base/weather.json
-    
-**period: Object**
- 
-| Propriedade        | Tipo   | Descrição                                  |
-| ------------------ |:------:| -------------------------------------------|
-| `period.begin`     | String | Data início da busca no formato AAAA-MM-DD |
-| `period.end `      | String | Data fim  da busca no formato AAAA-MM-DD   |
+### Code Splitting
 
-**locale: Object**
- 
-Os mesmos dados do JSON de localidades.
- 
-**weather: Object**
- 
-| Propriedade                     | Tipo   | Descrição                                  |
-| ------------------------------- |:------:| -------------------------------------------|
-| `weather.date`                  | String | Data da previsão no formato AAAA-MM-DD     |
-| `weather.text`                  | String | Texto sobre a previsão do dia              |
-| `weather.temperature.min`       | Number | Temperatura mínima em graus celsius (°C)   |
-| `weather.temperature.max`       | Number | Temperatura máxima em graus celsius (°C)   |
-| `weather.rain.probability`      | Number | Probabilidade de chuva em porcentagem (%)  |
-| `weather.rain.precipitation`    | Number | Precipitação de chuva em milímetros (mm)   |
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Comece
+### Analyzing the Bundle Size
 
-O processo do desafio deve ser:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-1. Faça o fork do desafio.
+### Making a Progressive Web App
 
-2. Crie um **PROJECT.md** com a explicação de como devemos executar o projeto e com o máximo de detalhes possível do que foi feito.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-3. Após concluir faça um pull request, preencha o [formulario](https://docs.google.com/forms/d/e/1FAIpQLSfPIwojh04iSxIrrOJSyrMvYcStLpoO3luR11ZxBY_pkWsjGA/viewform)
+### Advanced Configuration
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-___
+### Deployment
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-Qualquer dúvida entre em contato com nossa equipe.
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -7,15 +7,11 @@ function LocationAutocomplete({ onLocationSelect }) {
   const availableLocations = [
     'Osasco, SP, Brasil',
     'São Paulo, SP, Brasil',
-    'Campinas, SP, Brasil',
-    'São José dos Campos, SP, Brasil',
-    // Outras localidades...
   ];
 
   const handleInputChange = async(event) => {
     const newSearchTerm = event.target.value;
     setSearchTerm(newSearchTerm);
-    console.log('aqui');
     try {
       const response = await fetch(`https://climatempo-talent.rj.r.appspot.com/autocomplete_city?user_input=${newSearchTerm}`);
       const data = await response.json();
@@ -34,14 +30,13 @@ function LocationAutocomplete({ onLocationSelect }) {
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Digite uma localidade..."
+    <div className="container">
+      <input className="form-control me-2" type="text" placeholder="Digite sua cidade"
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <ul>
+      <button className="btn btn-primary" type="button">Pesquisar</button>
+      <ul className="list-group">
         {suggestions.map((suggestion, index) => (
           <li key={index} onClick={() => onLocationSelect(suggestion)}>
             {suggestion}

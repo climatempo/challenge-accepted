@@ -1,30 +1,34 @@
 import React from 'react';
 
 function UnitSelection({ selectedTemperatureUnit, selectedRainUnit, onUnitChange }) {
-  const handleUnitChange = (event) => {
-    onUnitChange(event.target.name, event.target.value);
-  };
-
   return (
-    <div>
-      <label>
-        Unidade de Temperatura:
-        <select name="temperature" value={selectedTemperatureUnit} onChange={handleUnitChange}>
-          <option value="celsius">°C</option>
-          <option value="fahrenheit">°F</option>
-        </select>
-      </label>
-      
-      <label>
-        Unidade de Chuva:
-        <select name="rain" value={selectedRainUnit} onChange={handleUnitChange}>
-          <option value="mm">mm</option>
-          <option value="inch">inch</option>
-        </select>
-      </label>
+    <div className="d-flex justify-content-end mb-3">
+      <button
+        className={`btn btn-outline-secondary me-2 ${selectedTemperatureUnit === 'C' ? 'active' : ''}`}
+        onClick={() => onUnitChange('temperature', 'C')}
+      >
+        °C
+      </button>
+      <button
+        className={`btn btn-outline-secondary ${selectedTemperatureUnit === 'F' ? 'active' : ''}`}
+        onClick={() => onUnitChange('temperature', 'F')}
+      >
+        °F
+      </button>
+      <button
+        className={`btn btn-outline-secondary ms-3 ${selectedRainUnit === 'mm' ? 'active' : ''}`}
+        onClick={() => onUnitChange('rain', 'mm')}
+      >
+        mm
+      </button>
+      <button
+        className={`btn btn-outline-secondary ${selectedRainUnit === 'inch' ? 'active' : ''}`}
+        onClick={() => onUnitChange('rain', 'inch')}
+      >
+        inch
+      </button>
     </div>
   );
 }
 
 export default UnitSelection;
-

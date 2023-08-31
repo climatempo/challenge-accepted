@@ -3,7 +3,7 @@ import UnitSelection from './components/UnitSelection';
 import LocationAutocomplete from './components/LocationAutocomplete';
 import WeatherCard from './components/WeatherCard';
 import './App.css';
-
+import logoImage from './logo-white.png';
  
 function App() {
   const [selectedTemperatureUnit, setSelectedTemperatureUnit] = useState('celsius');
@@ -33,8 +33,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Bem vindo!</h1>
-      <LocationAutocomplete onLocationSelect={(selectedLocation) => console.log('Selected Location:', selectedLocation)} />
+      <nav className="navbar navbar-expand-md custom-bg-color">
+      <div className="conteiner-fluid d-flex justify-content-center align-items-center">
+          <a href="#" className="brand-logo center">
+            <img src={logoImage} alt="Logo" className="logo-image" />
+          </a>
+            </div>
+          </nav>
       <UnitSelection
         selectedTemperatureUnit={selectedTemperatureUnit}
         selectedRainUnit={selectedRainUnit}
@@ -46,6 +51,12 @@ function App() {
           }
         }}
       />
+      <main className='container'>
+        <div className='jumbotron'>
+        <h1>Verifique agora a previsão do tempo da sua cidade!</h1>
+        <p className='lead'>Digite o nome da sua cidade no campo abaixo em seguida clique em <strong>Pesquisar</strong></p>
+        </div>
+      </main>
       {selectedCity ? (
       <div className="weather-cards">
         {forecastData.map((forecast, index) => (

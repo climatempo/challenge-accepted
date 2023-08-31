@@ -3,7 +3,8 @@ import React from 'react';
 function WeatherCard({ locale, weather, selectedTemperatureUnit, selectedRainUnit }) {
   return (
     <div className="weather-card">
-      <h3>{`${locale.name}, ${locale.state}`}</h3>
+      <div class="card-body">
+      <h3 class='card-title'>{`${locale.name}, ${locale.state}`}</h3>
       {weather.map((day, index) => (
         <div key={index}>
           <p>Data: {day.date}</p>
@@ -15,6 +16,7 @@ function WeatherCard({ locale, weather, selectedTemperatureUnit, selectedRainUni
           <hr />
         </div>
       ))}
+    </div>
     </div>
   );
 }

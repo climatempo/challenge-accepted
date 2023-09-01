@@ -31,6 +31,7 @@ function LocationAutocomplete({ onLocationSelect }) {
 
   return (
     <div className="container">
+      <div className="row mb-4">
       <input className="form-control me-2" type="text" placeholder="Digite sua cidade"
         value={searchTerm}
         onChange={handleInputChange}
@@ -43,6 +44,7 @@ function LocationAutocomplete({ onLocationSelect }) {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }

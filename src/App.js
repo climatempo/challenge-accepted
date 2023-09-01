@@ -10,25 +10,43 @@ function App() {
   const [selectedRainUnit, setSelectedRainUnit] = useState('mm');
   const [forecastData, setForecastData] = useState([]);
   const [selectedCity, setSelectedCity] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleLocationSelect = (selectedLocation) => {
+  const handleLocationSelect = async (selectedLocation) => {
     setSelectedCity(selectedLocation); // Atualizar o estado com a cidade escolhida
-    fetchForecastData(selectedLocation.id); // Buscar dados da previsão do tempo para a cidade
+    setError(null); // Limpar erros
+    setLoading(true); // Mostrar indicador de carregamento
+
+    try {
+      const response = await fetch(`https://climatempo-talent.rj.r.appspot.com/weatherforecast?city_id=${selectedLocation.id}&unit_temperature=${selectedTemperatureUnit}&unit_precipitation=${selectedRainUnit}`);
+      if (!response.ok) {
+        throw new Error('Erro ao buscar dados da previsão do tempo.');
+      }
+      const data = await response.json();
+      setForecastData(data);
+    } catch (error) {
+      setError(error.message || 'Erro desconhecido');
+    } finally {
+      setLoading(false); // Esconder indicador de carregamento
+    }
   };
 
   useEffect(() => {
-    async function fetchForecastData() {
+    async function fetchInitialForecastData() {
       try {
-        const response = await fetch(`https://climatempo-talent.rj.r.appspot.com/weatherforecast?city_id=3735&unit_temperature=${selectedTemperatureUnit}&unit_precipitation=${selectedRainUnit}`);
+        const response = await fetch(`https://climatempo-talent.rj.r.appspot.com/weatherforecast?city_id=${selectedLocation.id}&unit_temperature=${selectedTemperatureUnit}&unit_precipitation=${selectedRainUnit}`);
+        if (!response.ok) {
+          throw new Error('Erro ao buscar dados da previsão do tempo.');
+        }
         const data = await response.json();
-        console.log(data);
         setForecastData(data);
       } catch (error) {
-        console.error('Error fetching forecast data:', error);
+        setError(error.message || 'Erro desconhecido');
       }
     }
 
-    fetchForecastData();
+    fetchInitialForecastData();
   }, [selectedTemperatureUnit, selectedRainUnit]);
 
   return (
@@ -57,7 +75,11 @@ function App() {
         <p className='lead'>Digite o nome da sua cidade no campo abaixo em seguida clique em <strong>Pesquisar</strong></p>
         </div>
       </main>
-      {selectedCity ? (
+      {loading ? (
+        <p>Carregando...</p>
+      ) : error ? (
+        <p>Erro: {error}</p>
+      ):selectedCity ? (
       <div className="weather-cards">
         {forecastData.map((forecast, index) => (
           <WeatherCard

@@ -31,20 +31,15 @@ function LocationAutocomplete({ onLocationSelect }) {
 
   return (
     <div className="container">
-      <div className="row mb-4">
       <input className="form-control me-2" type="text" placeholder="Digite sua cidade"
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <button className="btn btn-primary" type="button">Pesquisar</button>
-      <ul className="list-group">
-        {suggestions.map((suggestion, index) => (
-          <li key={index} onClick={() => onLocationSelect(suggestion)}>
-            {suggestion}
-          </li>
-        ))}
-      </ul>
-    </div>
+      <button className="btn btn-primary mb-3" type="button" onClick={() =>{
+        if (suggestions.length === 1){
+          onLocationSelect(suggestions[0]);
+        }
+      }}>Pesquisar</button>
     </div>
   );
 }

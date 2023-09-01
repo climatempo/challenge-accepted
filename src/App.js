@@ -13,41 +13,31 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleLocationSelect = async (selectedLocation) => {
-    setSelectedCity(selectedLocation); // Atualizar o estado com a cidade escolhida
-    setError(null); // Limpar erros
-    setLoading(true); // Mostrar indicador de carregamento
-
+  useEffect(() => {
+    async function fetchInitialForecastData() {
     try {
-      const response = await fetch(`https://climatempo-talent.rj.r.appspot.com/weatherforecast?city_id=${selectedLocation.id}&unit_temperature=${selectedTemperatureUnit}&unit_precipitation=${selectedRainUnit}`);
+      if(selectedCity) {
+      setLoading(true);
+      const response = await fetch(`https://climatempo-talent.rj.r.appspot.com/weatherforecast?city_id=${selectedCity.id}&unit_temperature=${selectedTemperatureUnit}&unit_precipitation=${selectedRainUnit}`);
       if (!response.ok) {
         throw new Error('Erro ao buscar dados da previsão do tempo.');
       }
       const data = await response.json();
       setForecastData(data);
+    }
     } catch (error) {
       setError(error.message || 'Erro desconhecido');
     } finally {
       setLoading(false); // Esconder indicador de carregamento
     }
-  };
-
-  useEffect(() => {
-    async function fetchInitialForecastData() {
-      try {
-        const response = await fetch(`https://climatempo-talent.rj.r.appspot.com/weatherforecast?city_id=${selectedLocation.id}&unit_temperature=${selectedTemperatureUnit}&unit_precipitation=${selectedRainUnit}`);
-        if (!response.ok) {
-          throw new Error('Erro ao buscar dados da previsão do tempo.');
-        }
-        const data = await response.json();
-        setForecastData(data);
-      } catch (error) {
-        setError(error.message || 'Erro desconhecido');
-      }
-    }
-
+  }
     fetchInitialForecastData();
-  }, [selectedTemperatureUnit, selectedRainUnit]);
+  }, [selectedCity, selectedTemperatureUnit, selectedRainUnit]);
+
+  const handleLocationSelect = (selectedLocation) => {
+    setSelectedCity(selectedLocation); // Atualizar o estado com a cidade escolhida
+    setError(null); // Limpar erros
+  };
 
   return (
     <div className="App">
@@ -75,6 +65,7 @@ function App() {
         <p className='lead'>Digite o nome da sua cidade no campo abaixo em seguida clique em <strong>Pesquisar</strong></p>
         </div>
       </main>
+      <LocationAutocomplete onLocationSelect={handleLocationSelect} />
       {loading ? (
         <p>Carregando...</p>
       ) : error ? (
@@ -91,9 +82,7 @@ function App() {
           />
         ))}
       </div>
-      ): (
-        <LocationAutocomplete onLocationSelect={handleLocationSelect} />
-      )}
+      ): null}
     </div>
   );
 }

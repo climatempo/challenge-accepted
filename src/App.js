@@ -66,11 +66,7 @@ function App() {
         </div>
       </main>
       <LocationAutocomplete onLocationSelect={handleLocationSelect} />
-      {loading ? (
-        <p>Carregando...</p>
-      ) : error ? (
-        <p>Erro: {error}</p>
-      ):selectedCity ? (
+      {selectedCity ? (
       <div className="weather-cards">
         {forecastData.map((forecast, index) => (
           <WeatherCard

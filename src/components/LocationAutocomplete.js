@@ -4,6 +4,7 @@ function LocationAutocomplete({ onLocationSelect }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [selectedCity, setSelectedCity] = useState(null);
+  const [isSuggestionsOpen, setIsSuggestionsOpen] = useState(false);
 
   const handleInputChange = async(event) => {
     const newSearchTerm = event.target.value;
@@ -20,6 +21,7 @@ function LocationAutocomplete({ onLocationSelect }) {
         name: result.name,
       }));
       setSuggestions(filteredSuggestions);
+      setIsSuggestionsOpen(newSearchTerm.trim() !== "");
 
     } catch (error) {
       console.error('Error fetching city:', error);
@@ -29,6 +31,7 @@ function LocationAutocomplete({ onLocationSelect }) {
   const handleCitySelect = (city) => {
     setSelectedCity(city);
     onLocationSelect(city); // Chamamos a função onLocationSelect com a cidade selecionada
+    setIsSuggestionsOpen(false);
   };
 
   return (
@@ -38,12 +41,15 @@ function LocationAutocomplete({ onLocationSelect }) {
         value={searchTerm}
         onChange={handleInputChange}
       />
+      <div class="d-grid gap-2 col-6 mx-auto">
       <button className="btn btn-primary mb-3" type="button" onClick={() =>{
         if (suggestions.length === 1){
           handleCitySelect(suggestions[0]);
         }
       }}>Pesquisar</button>
     </div>
+    </div>
+    {isSuggestionsOpen && suggestions.length > 0 && (
     <ul className="list-group">
         {suggestions.map((suggestion) => (
           <li
@@ -55,6 +61,7 @@ function LocationAutocomplete({ onLocationSelect }) {
           </li>
         ))}
       </ul>
+    )}
     </div>
   );
 }

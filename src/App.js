@@ -43,7 +43,7 @@ function App() {
     <div className="App">
       <nav className="navbar navbar-expand-md custom-bg-color">
       <div className="conteiner-fluid d-flex justify-content-center align-items-center">
-          <a href="#" className="brand-logo center">
+          <a href="#" className="brand-logo">
             <img src={logoImage} alt="Logo" className="logo-image" />
           </a>
             </div>

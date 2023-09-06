@@ -10,20 +10,20 @@ function WeatherCard({ locale, weather, selectedTemperatureUnit, selectedRainUni
             {weather.map((day, index) => (
               <div key={index}>
                 <div className="card-header">
-                  <p>Data: {day.date}</p>
+                  <p><strong>Data: {day.date}</strong></p>
                 </div>
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item">
-                    Temperatura Máxima: {day.temperature.max}{selectedTemperatureUnit}
+                  <i className="fas fa-arrow-up text-danger"></i> Temperatura Máxima: {day.temperature.max}°{selectedTemperatureUnit}
                   </li>
                   <li className="list-group-item">
-                    Temperatura Mínima: {day.temperature.min}{selectedTemperatureUnit}
+                  <i className="fas fa-arrow-down text-primary"></i> Temperatura Mínima: {day.temperature.min}°{selectedTemperatureUnit}
                   </li>
                   <li className="list-group-item">
-                    Probabilidade de Chuva: {day.rain.probability}%
+                  <i className="fas fa-tint text-info"></i> Probabilidade de Chuva: {day.rain.probability}%
                   </li>
                   <li className="list-group-item">
-                    Quantidade de Chuva: {day.rain.precipitation}{selectedRainUnit}
+                  <i className="fas fa-umbrella text-success"></i> Quantidade de Chuva: {day.rain.precipitation}{selectedRainUnit}
                   </li>
                   <li className="list-group-item">Descrição: {day.text}</li>
                 </ul>

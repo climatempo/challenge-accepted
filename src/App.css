@@ -1,0 +1,77 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('./unsplash.jpg'); /* Substitua pelo nome da sua imagem */
+  background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.unit-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.weather-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.weather-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  text-align: left;
+  background-color: #f5f5f5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.weather-card h3 {
+  margin-top: 0;
+  margin-left: 70px;
+}
+
+.weather-card p {
+  margin: 5px 0;
+}
+
+.form-floating {
+  padding: 200px;
+}
+
+.form-select{
+  padding: 200px;
+}
+
+.logo-image {
+  width: 150px; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  padding: 5px; /* Adiciona um pouco de espaço em volta da imagem */
+}
+
+.custom-bg-color{
+  background-color: #279EFF;
+}
+
+.jumbotron{
+  background-color: #fff6f4;
+  border-radius: 10px;
+}
+
+
